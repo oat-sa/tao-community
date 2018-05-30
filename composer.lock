@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "55103a0a9cfa117fdb5c2405081fa866",
+    "content-hash": "dbeb8425ceee49c282783e093c390880",
     "packages": [
         {
             "name": "clearfw/clearfw",
@@ -3399,16 +3399,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "v17.4.0",
+            "version": "v17.4.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "9f9703540a46b759040106bc65e03efb12b0324e"
+                "reference": "c2366aa2403291f79071b8339317027b2d4be938"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/9f9703540a46b759040106bc65e03efb12b0324e",
-                "reference": "9f9703540a46b759040106bc65e03efb12b0324e",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/c2366aa2403291f79071b8339317027b2d4be938",
+                "reference": "c2366aa2403291f79071b8339317027b2d4be938",
                 "shasum": ""
             },
             "require": {
@@ -3441,7 +3441,6 @@
                     "includes/globalHelpers.php"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0-only"
             ],
@@ -3482,11 +3481,16 @@
             "description": "TAO core extension ",
             "homepage": "http://www.taotesting.com",
             "keywords": [
-                "OAT",
-                "TAO",
-                "computer-based-assessment"
+                "computer-based-assessment",
+                "oat",
+                "tao"
             ],
-            "time": "2018-02-23T14:49:57+00:00"
+            "support": {
+                "forum": "http://forum.taotesting.com",
+                "issues": "http://forge.taotesting.com",
+                "source": "https://github.com/oat-sa/tao-core/tree/v17.4.0.1"
+            },
+            "time": "2018-05-30T08:03:38+00:00"
         },
         {
             "name": "paragonie/random_compat",
