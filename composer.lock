@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "15d50d9c69b510757bf1afde19f29786",
+    "content-hash": "3d701840a015cfb2ed24c4dfa8417769",
     "packages": [
         {
             "name": "clearfw/clearfw",
@@ -2169,16 +2169,16 @@
         },
         {
             "name": "oat-sa/extension-tao-lti",
-            "version": "v6.1.1",
+            "version": "v6.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-lti.git",
-                "reference": "a5861e303e4e6fdd080b9766e742640854a53213"
+                "reference": "cdd9fa534187d1cebada5658195007c983726d51"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-lti/zipball/a5861e303e4e6fdd080b9766e742640854a53213",
-                "reference": "a5861e303e4e6fdd080b9766e742640854a53213",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-lti/zipball/cdd9fa534187d1cebada5658195007c983726d51",
+                "reference": "cdd9fa534187d1cebada5658195007c983726d51",
                 "shasum": ""
             },
             "require": {
@@ -2239,20 +2239,20 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2018-04-20T12:38:51+00:00"
+            "time": "2018-06-06T15:12:34+00:00"
         },
         {
             "name": "oat-sa/extension-tao-ltideliveryprovider",
-            "version": "v6.2.0",
+            "version": "v6.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-ltideliveryprovider.git",
-                "reference": "b24f82fe9e406d09bf628cf85e1261365235606a"
+                "reference": "dceac3517368e184f391c2dd8374db2fe9b68364"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-ltideliveryprovider/zipball/b24f82fe9e406d09bf628cf85e1261365235606a",
-                "reference": "b24f82fe9e406d09bf628cf85e1261365235606a",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-ltideliveryprovider/zipball/dceac3517368e184f391c2dd8374db2fe9b68364",
+                "reference": "dceac3517368e184f391c2dd8374db2fe9b68364",
                 "shasum": ""
             },
             "require": {
@@ -2313,7 +2313,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2018-05-04T16:41:12+00:00"
+            "time": "2018-06-06T15:11:29+00:00"
         },
         {
             "name": "oat-sa/extension-tao-mediamanager",
@@ -3620,23 +3620,24 @@
         },
         {
             "name": "paragonie/random_compat",
-            "version": "v2.0.12",
+            "version": "v2.99.99.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "258c89a6b97de7dfaf5b8c7607d0478e236b04fb"
+                "reference": "35469243ebbb9be5086cff57538cac6da2c36852"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/258c89a6b97de7dfaf5b8c7607d0478e236b04fb",
-                "reference": "258c89a6b97de7dfaf5b8c7607d0478e236b04fb",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/35469243ebbb9be5086cff57538cac6da2c36852",
+                "reference": "35469243ebbb9be5086cff57538cac6da2c36852",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.2.0"
+                "php": "^7"
             },
             "require-dev": {
-                "phpunit/phpunit": "4.*|5.*"
+                "phpunit/phpunit": "4.*|5.*",
+                "vimeo/psalm": "^1"
             },
             "suggest": {
                 "ext-libsodium": "Provides a modern crypto API that can be used to generate random bytes."
@@ -3661,10 +3662,11 @@
             "description": "PHP 5.x polyfill for random_bytes() and random_int() from PHP 7",
             "keywords": [
                 "csprng",
+                "polyfill",
                 "pseudorandom",
                 "random"
             ],
-            "time": "2018-04-04T21:24:14+00:00"
+            "time": "2018-06-06T05:12:00+00:00"
         },
         {
             "name": "pear/archive_tar",
