@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dbeb8425ceee49c282783e093c390880",
+    "content-hash": "a7914a90a360feee1882ef80d320ee24",
     "packages": [
         {
             "name": "clearfw/clearfw",
@@ -383,12 +383,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "9315e61c4c525167fbcc963c38ef136f691c99e9"
+                "reference": "de23082f09b907ecc1593dd35fbdc49a392c50eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/9315e61c4c525167fbcc963c38ef136f691c99e9",
-                "reference": "9315e61c4c525167fbcc963c38ef136f691c99e9",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/de23082f09b907ecc1593dd35fbdc49a392c50eb",
+                "reference": "de23082f09b907ecc1593dd35fbdc49a392c50eb",
                 "shasum": ""
             },
             "require": {
@@ -446,7 +446,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2017-07-22T20:45:23+00:00"
+            "time": "2018-04-02T10:40:57+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -521,16 +521,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/lexer.git",
-                "reference": "cc709ba91eee09540091ad5a5f2616727662e41b"
+                "reference": "c0970c7889bfd33504c4fa54f35451c27897381d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/lexer/zipball/cc709ba91eee09540091ad5a5f2616727662e41b",
-                "reference": "cc709ba91eee09540091ad5a5f2616727662e41b",
+                "url": "https://api.github.com/repos/doctrine/lexer/zipball/c0970c7889bfd33504c4fa54f35451c27897381d",
+                "reference": "c0970c7889bfd33504c4fa54f35451c27897381d",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.5"
             },
             "type": "library",
             "extra": {
@@ -567,7 +570,7 @@
                 "lexer",
                 "parser"
             ],
-            "time": "2017-07-24T09:37:08+00:00"
+            "time": "2018-05-14T15:49:16+00:00"
         },
         {
             "name": "easyrdf/easyrdf",
@@ -749,12 +752,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/promises.git",
-                "reference": "0940c910fd14a68bd24a8b7c4a5528415a479c42"
+                "reference": "136531aa4e42f9b1971a47fb0faf60da00d2fefa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/0940c910fd14a68bd24a8b7c4a5528415a479c42",
-                "reference": "0940c910fd14a68bd24a8b7c4a5528415a479c42",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/136531aa4e42f9b1971a47fb0faf60da00d2fefa",
+                "reference": "136531aa4e42f9b1971a47fb0faf60da00d2fefa",
                 "shasum": ""
             },
             "require": {
@@ -792,7 +795,7 @@
             "keywords": [
                 "promise"
             ],
-            "time": "2018-02-28T07:24:33+00:00"
+            "time": "2018-03-25T01:26:01+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -972,12 +975,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "1ce7cc142d906ba58dc54c82915d355a9191c8a8"
+                "reference": "a3c156f4d428a1c51684afd835c08e9a3381b6bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/1ce7cc142d906ba58dc54c82915d355a9191c8a8",
-                "reference": "1ce7cc142d906ba58dc54c82915d355a9191c8a8",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/a3c156f4d428a1c51684afd835c08e9a3381b6bf",
+                "reference": "a3c156f4d428a1c51684afd835c08e9a3381b6bf",
                 "shasum": ""
             },
             "require": {
@@ -1048,7 +1051,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2018-03-01T10:27:04+00:00"
+            "time": "2018-06-16T11:51:52+00:00"
         },
         {
             "name": "naneau/semver",
@@ -1426,16 +1429,16 @@
         },
         {
             "name": "oat-sa/extension-tao-delivery",
-            "version": "v9.2.2",
+            "version": "v9.2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-delivery.git",
-                "reference": "aad0926dfc4ae30fe9babb5944ebc77cc25b7f7d"
+                "reference": "12c6e03c8c358af7ca8c4211e204a02a9a1c6c05"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-delivery/zipball/aad0926dfc4ae30fe9babb5944ebc77cc25b7f7d",
-                "reference": "aad0926dfc4ae30fe9babb5944ebc77cc25b7f7d",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-delivery/zipball/12c6e03c8c358af7ca8c4211e204a02a9a1c6c05",
+                "reference": "12c6e03c8c358af7ca8c4211e204a02a9a1c6c05",
                 "shasum": ""
             },
             "require": {
@@ -1495,20 +1498,20 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2018-05-21T15:19:10+00:00"
+            "time": "2018-06-14T15:58:39+00:00"
         },
         {
             "name": "oat-sa/extension-tao-delivery-rdf",
-            "version": "v4.6.0",
+            "version": "v4.6.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-delivery-rdf.git",
-                "reference": "7d3deebc09826f6fa9d2b4a5772888d9440739cb"
+                "reference": "ad912717d6ac3b5169b5b6254976a8c16557b07f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-delivery-rdf/zipball/7d3deebc09826f6fa9d2b4a5772888d9440739cb",
-                "reference": "7d3deebc09826f6fa9d2b4a5772888d9440739cb",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-delivery-rdf/zipball/ad912717d6ac3b5169b5b6254976a8c16557b07f",
+                "reference": "ad912717d6ac3b5169b5b6254976a8c16557b07f",
                 "shasum": ""
             },
             "require": {
@@ -1538,7 +1541,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2018-02-23T14:56:57+00:00"
+            "time": "2018-06-14T15:28:17+00:00"
         },
         {
             "name": "oat-sa/extension-tao-eventlog",
@@ -2566,16 +2569,16 @@
         },
         {
             "name": "oat-sa/extension-tao-proctoring",
-            "version": "v8.5.2",
+            "version": "v8.5.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-proctoring.git",
-                "reference": "1c2b44e04f8ccb4cdec0e5b8326bab0e2e29fe18"
+                "reference": "e07d34c438f98f73e1a3a6993460eaaa54f08536"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-proctoring/zipball/1c2b44e04f8ccb4cdec0e5b8326bab0e2e29fe18",
-                "reference": "1c2b44e04f8ccb4cdec0e5b8326bab0e2e29fe18",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-proctoring/zipball/e07d34c438f98f73e1a3a6993460eaaa54f08536",
+                "reference": "e07d34c438f98f73e1a3a6993460eaaa54f08536",
                 "shasum": ""
             },
             "require": {
@@ -2605,7 +2608,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2018-02-28T13:17:17+00:00"
+            "time": "2018-06-14T15:43:28+00:00"
         },
         {
             "name": "oat-sa/extension-tao-revision",
@@ -2822,16 +2825,16 @@
         },
         {
             "name": "oat-sa/extension-tao-testqti",
-            "version": "v23.2.3",
+            "version": "v23.2.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "10eee6f0b429a7ffed959dba6f76532bc00cf47d"
+                "reference": "fc0d125a294751761e148d37fa3fc11c7fde8bb3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/10eee6f0b429a7ffed959dba6f76532bc00cf47d",
-                "reference": "10eee6f0b429a7ffed959dba6f76532bc00cf47d",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/fc0d125a294751761e148d37fa3fc11c7fde8bb3",
+                "reference": "fc0d125a294751761e148d37fa3fc11c7fde8bb3",
                 "shasum": ""
             },
             "require": {
@@ -2896,7 +2899,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2018-03-22T12:52:00+00:00"
+            "time": "2018-06-14T15:42:46+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testtaker",
@@ -4067,12 +4070,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPMailer/PHPMailer.git",
-                "reference": "4fd620776848f480f71354f7424c260ec2e4f92d"
+                "reference": "7f7baf5436870c0c391a2220a9843c47915a3896"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/4fd620776848f480f71354f7424c260ec2e4f92d",
-                "reference": "4fd620776848f480f71354f7424c260ec2e4f92d",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/7f7baf5436870c0c391a2220a9843c47915a3896",
+                "reference": "7f7baf5436870c0c391a2220a9843c47915a3896",
                 "shasum": ""
             },
             "require": {
@@ -4125,7 +4128,7 @@
                 }
             ],
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
-            "time": "2018-03-21T13:39:59+00:00"
+            "time": "2018-06-11T14:32:06+00:00"
         },
         {
             "name": "pimple/pimple",
@@ -4133,12 +4136,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silexphp/Pimple.git",
-                "reference": "9aaff1cb2f24988bd5d23a20f1578da118360525"
+                "reference": "21e3e0dc89183c96fad7f12e09e1d345558e9a56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/9aaff1cb2f24988bd5d23a20f1578da118360525",
-                "reference": "9aaff1cb2f24988bd5d23a20f1578da118360525",
+                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/21e3e0dc89183c96fad7f12e09e1d345558e9a56",
+                "reference": "21e3e0dc89183c96fad7f12e09e1d345558e9a56",
                 "shasum": ""
             },
             "require": {
@@ -4170,12 +4173,12 @@
                 }
             ],
             "description": "Pimple, a simple Dependency Injection Container",
-            "homepage": "http://pimple.sensiolabs.org",
+            "homepage": "https://pimple.symfony.com",
             "keywords": [
                 "container",
                 "dependency injection"
             ],
-            "time": "2018-02-09T15:35:40+00:00"
+            "time": "2018-04-20T06:17:25+00:00"
         },
         {
             "name": "psr/container",
@@ -4282,12 +4285,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d"
+                "reference": "3490ba5925e6dcbe6de950c5c6b8dce9f6e96eda"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
-                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/3490ba5925e6dcbe6de950c5c6b8dce9f6e96eda",
+                "reference": "3490ba5925e6dcbe6de950c5c6b8dce9f6e96eda",
                 "shasum": ""
             },
             "require": {
@@ -4321,7 +4324,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2016-10-10T12:19:37+00:00"
+            "time": "2018-04-03T15:59:15+00:00"
         },
         {
             "name": "qtism/qtism",
@@ -4435,12 +4438,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/slimphp/Slim.git",
-                "reference": "d0d9655a66c61e5fd25fdbdc2fc80a6e37af469c"
+                "reference": "0803c9ed901db504a42b1f163850b6d5c7c4694a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/slimphp/Slim/zipball/d0d9655a66c61e5fd25fdbdc2fc80a6e37af469c",
-                "reference": "d0d9655a66c61e5fd25fdbdc2fc80a6e37af469c",
+                "url": "https://api.github.com/repos/slimphp/Slim/zipball/0803c9ed901db504a42b1f163850b6d5c7c4694a",
+                "reference": "0803c9ed901db504a42b1f163850b6d5c7c4694a",
                 "shasum": ""
             },
             "require": {
@@ -4498,7 +4501,65 @@
                 "micro",
                 "router"
             ],
-            "time": "2018-02-14T16:32:04+00:00"
+            "time": "2018-05-07T14:35:12+00:00"
+        },
+        {
+            "name": "symfony/polyfill-ctype",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-ctype.git",
+                "reference": "9d31bef82d2e9b033f335d60b96611757f98c605"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/9d31bef82d2e9b033f335d60b96611757f98c605",
+                "reference": "9d31bef82d2e9b033f335d60b96611757f98c605",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "suggest": {
+                "ext-ctype": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.8-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Ctype\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                },
+                {
+                    "name": "Gert de Pagter",
+                    "email": "BackEndTea@gmail.com"
+                }
+            ],
+            "description": "Symfony polyfill for ctype functions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "ctype",
+                "polyfill",
+                "portable"
+            ],
+            "time": "2018-05-17T18:32:56+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -4506,16 +4567,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "6af42631dcf89e9c616242c900d6c52bd53bd1bb"
+                "reference": "c5010cc1692ce1fa328b1fb666961eb3d4a85bb0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/6af42631dcf89e9c616242c900d6c52bd53bd1bb",
-                "reference": "6af42631dcf89e9c616242c900d6c52bd53bd1bb",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/c5010cc1692ce1fa328b1fb666961eb3d4a85bb0",
+                "reference": "c5010cc1692ce1fa328b1fb666961eb3d4a85bb0",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.5.9|>=7.0.8"
+                "php": "^5.5.9|>=7.0.8",
+                "symfony/polyfill-ctype": "~1.8"
             },
             "conflict": {
                 "symfony/console": "<3.4"
@@ -4556,7 +4618,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2018-02-16T09:50:28+00:00"
+            "time": "2018-05-03T23:18:14+00:00"
         },
         {
             "name": "zendframework/zend-servicemanager",
