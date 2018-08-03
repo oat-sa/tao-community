@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3de749713c700cfff510b849cae7372d",
+    "content-hash": "ee864c8ff231e6ff169a16bfaceb5be3",
     "packages": [
         {
             "name": "clearfw/clearfw",
@@ -2243,16 +2243,16 @@
         },
         {
             "name": "oat-sa/extension-tao-ltideliveryprovider",
-            "version": "v6.5.0",
+            "version": "v6.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-ltideliveryprovider.git",
-                "reference": "05444447106664c3a085a2dd165a84e5a6f1e5ff"
+                "reference": "c24b4628751d609066725972c010d437709aab5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-ltideliveryprovider/zipball/05444447106664c3a085a2dd165a84e5a6f1e5ff",
-                "reference": "05444447106664c3a085a2dd165a84e5a6f1e5ff",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-ltideliveryprovider/zipball/c24b4628751d609066725972c010d437709aab5e",
+                "reference": "c24b4628751d609066725972c010d437709aab5e",
                 "shasum": ""
             },
             "require": {
@@ -2313,7 +2313,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2018-07-27T12:55:49+00:00"
+            "time": "2018-08-03T15:18:16+00:00"
         },
         {
             "name": "oat-sa/extension-tao-mediamanager",
@@ -4889,5 +4889,8 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "platform-overrides": {
+        "php": "7.0.31"
+    }
 }

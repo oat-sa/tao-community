@@ -4,7 +4,10 @@
   "require-dev": {
   },
   "config": {
-    "preferred-install": "dist"
+    "preferred-install": "dist",
+    "platform": {
+      "php": "7.0.31"
+    }
   },
   "support": {
     "issues": "http://forge.taotesting.com",
@@ -50,7 +53,7 @@
     "oat-sa/extension-tao-outcomelti": "~3.1.7",
     "oat-sa/extension-tao-delivery": "~10.0.0",
     "oat-sa/extension-tao-lti": "~6.3.1",
-    "oat-sa/extension-tao-ltideliveryprovider": "~6.5.0",
+    "oat-sa/extension-tao-ltideliveryprovider": "~6.5.1",
     "oat-sa/extension-tao-revision": "~4.1.2",
     "oat-sa/extension-tao-mediamanager": "~2.8.2",
     "oat-sa/extension-pcisample": "~2.3.3",
