@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5fc6a3cc156654c18b405b4ead29d106",
+    "content-hash": "fa7234f927a7de9da1176d4832479e66",
     "packages": [
         {
             "name": "clearfw/clearfw",
@@ -791,15 +791,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "b309ed9ad49331e5bf90a86e175286498190a3da"
+                "reference": "9799bbcb90ed2df488adb0924169163156483e52"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/b309ed9ad49331e5bf90a86e175286498190a3da",
-                "reference": "b309ed9ad49331e5bf90a86e175286498190a3da",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/9799bbcb90ed2df488adb0924169163156483e52",
+                "reference": "9799bbcb90ed2df488adb0924169163156483e52",
                 "shasum": ""
             },
             "require": {
+                "ext-json": "*",
                 "guzzlehttp/promises": "^1.0",
                 "guzzlehttp/psr7": "^1.4",
                 "php": ">=5.5"
@@ -848,7 +849,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2018-11-21T17:36:52+00:00"
+            "time": "2018-12-07T08:18:25+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -907,24 +908,27 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "18fa36860bbb2133b259233b9aaa0efb85277dd9"
+                "reference": "5e61346ab1e1ca7d01d2f633bad9574d35717781"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/18fa36860bbb2133b259233b9aaa0efb85277dd9",
-                "reference": "18fa36860bbb2133b259233b9aaa0efb85277dd9",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/5e61346ab1e1ca7d01d2f633bad9574d35717781",
+                "reference": "5e61346ab1e1ca7d01d2f633bad9574d35717781",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.4.0",
                 "psr/http-message": "~1.0",
-                "ralouphie/getallheaders": "^2.0.5"
+                "ralouphie/getallheaders": "^2.0.5 || ^3.0.0"
             },
             "provide": {
                 "psr/http-message-implementation": "1.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "~4.8.36 || ^5.7.27 || ^6.5.8"
+            },
+            "suggest": {
+                "zendframework/zend-httphandlerrunner": "Emit PSR-7 responses"
             },
             "type": "library",
             "extra": {
@@ -966,7 +970,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2018-11-19T17:50:46+00:00"
+            "time": "2018-12-07T15:04:46+00:00"
         },
         {
             "name": "imsglobal/lti",
@@ -1081,12 +1085,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "635e9fc5fac055654f6b19733b976ae35aeb862f"
+                "reference": "2528dbeee5cebc5066625da1487486b9e22c0706"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/635e9fc5fac055654f6b19733b976ae35aeb862f",
-                "reference": "635e9fc5fac055654f6b19733b976ae35aeb862f",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/2528dbeee5cebc5066625da1487486b9e22c0706",
+                "reference": "2528dbeee5cebc5066625da1487486b9e22c0706",
                 "shasum": ""
             },
             "require": {
@@ -1157,7 +1161,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2018-11-13T16:41:02+00:00"
+            "time": "2018-12-09T20:53:18+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -1165,12 +1169,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "bb3771b9483435227770a670a5d6312c62edbeed"
+                "reference": "68f536105f1e4fe439ccabac105bb1c90dee8b92"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/bb3771b9483435227770a670a5d6312c62edbeed",
-                "reference": "bb3771b9483435227770a670a5d6312c62edbeed",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/68f536105f1e4fe439ccabac105bb1c90dee8b92",
+                "reference": "68f536105f1e4fe439ccabac105bb1c90dee8b92",
                 "shasum": ""
             },
             "require": {
@@ -1235,7 +1239,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2018-11-13T20:35:15+00:00"
+            "time": "2018-12-11T10:11:11+00:00"
         },
         {
             "name": "naneau/semver",
@@ -2976,16 +2980,16 @@
         },
         {
             "name": "oat-sa/extension-tao-testqti",
-            "version": "v29.2.0.1",
+            "version": "v29.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "24e2ac2286e02492ac12569d872b2b9de425d559"
+                "reference": "c75112e2e9a7d9372ad97fbef7d56f0dc55ff1eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/24e2ac2286e02492ac12569d872b2b9de425d559",
-                "reference": "24e2ac2286e02492ac12569d872b2b9de425d559",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/c75112e2e9a7d9372ad97fbef7d56f0dc55ff1eb",
+                "reference": "c75112e2e9a7d9372ad97fbef7d56f0dc55ff1eb",
                 "shasum": ""
             },
             "require": {
@@ -3050,7 +3054,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2018-12-03T10:28:23+00:00"
+            "time": "2018-12-19T14:02:04+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
@@ -4267,12 +4271,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/slimphp/Slim.git",
-                "reference": "25da5eb7acf878e14d774add16c7c43c313afcd0"
+                "reference": "a5a2da92d24c2c30384ff89d90008327f9040cb8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/slimphp/Slim/zipball/25da5eb7acf878e14d774add16c7c43c313afcd0",
-                "reference": "25da5eb7acf878e14d774add16c7c43c313afcd0",
+                "url": "https://api.github.com/repos/slimphp/Slim/zipball/a5a2da92d24c2c30384ff89d90008327f9040cb8",
+                "reference": "a5a2da92d24c2c30384ff89d90008327f9040cb8",
                 "shasum": ""
             },
             "require": {
@@ -4330,7 +4334,7 @@
                 "micro",
                 "router"
             ],
-            "time": "2018-11-02T10:29:40+00:00"
+            "time": "2018-11-27T19:20:54+00:00"
         },
         {
             "name": "zendframework/zend-servicemanager",
