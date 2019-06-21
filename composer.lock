@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dbc163cd51e44080183bcf48683938c6",
+    "content-hash": "bf3e38a697dcc50af937a6d0b3b9d591",
     "packages": [
         {
             "name": "clearfw/clearfw",
@@ -516,66 +516,6 @@
             "time": "2017-07-22T12:18:28+00:00"
         },
         {
-            "name": "doctrine/lexer",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/lexer.git",
-                "reference": "ee614dd93a88d2f1f72fa98bba8cfc584ee02763"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/lexer/zipball/ee614dd93a88d2f1f72fa98bba8cfc584ee02763",
-                "reference": "ee614dd93a88d2f1f72fa98bba8cfc584ee02763",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.5"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Doctrine\\Common\\Lexer\\": "lib/Doctrine/Common/Lexer"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Roman Borschel",
-                    "email": "roman@code-factory.org"
-                },
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com"
-                },
-                {
-                    "name": "Johannes Schmitt",
-                    "email": "schmittjoh@gmail.com"
-                }
-            ],
-            "description": "PHP Doctrine Lexer parser library that can be used in Top-Down, Recursive Descent Parsers.",
-            "homepage": "https://www.doctrine-project.org/projects/lexer.html",
-            "keywords": [
-                "annotations",
-                "docblock",
-                "lexer",
-                "parser",
-                "php"
-            ],
-            "time": "2019-05-24T18:15:21+00:00"
-        },
-        {
             "name": "easyrdf/easyrdf",
             "version": "0.9.x-dev",
             "source": {
@@ -857,19 +797,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/promises.git",
-                "reference": "926eaa3ff73cde2becf652b785831bcb7618568a"
+                "reference": "e6d006f1ced100d81755966f09625d71ce6a7dca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/926eaa3ff73cde2becf652b785831bcb7618568a",
-                "reference": "926eaa3ff73cde2becf652b785831bcb7618568a",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/e6d006f1ced100d81755966f09625d71ce6a7dca",
+                "reference": "e6d006f1ced100d81755966f09625d71ce6a7dca",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5.0"
+                "php": ">=5.6"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.8.36"
+                "phpunit/phpunit": "^5.7.27 || ^7.5"
             },
             "type": "library",
             "extra": {
@@ -900,7 +840,7 @@
             "keywords": [
                 "promise"
             ],
-            "time": "2018-10-30T00:20:04+00:00"
+            "time": "2019-06-11T17:44:31+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -908,12 +848,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "5ce1cec1a26c5d2ccd259157f58a32b7facd545a"
+                "reference": "e113254d23b24c548f0b4d8f671828c4eeb876d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/5ce1cec1a26c5d2ccd259157f58a32b7facd545a",
-                "reference": "5ce1cec1a26c5d2ccd259157f58a32b7facd545a",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/e113254d23b24c548f0b4d8f671828c4eeb876d2",
+                "reference": "e113254d23b24c548f0b4d8f671828c4eeb876d2",
                 "shasum": ""
             },
             "require": {
@@ -934,7 +874,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.5-dev"
+                    "dev-master": "1.6-dev"
                 }
             },
             "autoload": {
@@ -971,7 +911,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2019-06-06T09:22:35+00:00"
+            "time": "2019-06-17T23:10:01+00:00"
         },
         {
             "name": "imsglobal/lti",
@@ -1086,12 +1026,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "92d93308510d4aa439df85786991a2255723c0bc"
+                "reference": "741e9792d5f4efa1453513cb3adf6cf767090b82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/92d93308510d4aa439df85786991a2255723c0bc",
-                "reference": "92d93308510d4aa439df85786991a2255723c0bc",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/741e9792d5f4efa1453513cb3adf6cf767090b82",
+                "reference": "741e9792d5f4efa1453513cb3adf6cf767090b82",
                 "shasum": ""
             },
             "require": {
@@ -1162,7 +1102,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2019-05-21T13:11:03+00:00"
+            "time": "2019-06-20T20:52:55+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -1647,16 +1587,16 @@
         },
         {
             "name": "oat-sa/extension-tao-delivery",
-            "version": "v13.1.0",
+            "version": "v13.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-delivery.git",
-                "reference": "435204c8be7abf0931ef90eb0e23a11adf8106c9"
+                "reference": "a406d0c6d72ad442a14ab2f0d856cade130cca41"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-delivery/zipball/435204c8be7abf0931ef90eb0e23a11adf8106c9",
-                "reference": "435204c8be7abf0931ef90eb0e23a11adf8106c9",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-delivery/zipball/a406d0c6d72ad442a14ab2f0d856cade130cca41",
+                "reference": "a406d0c6d72ad442a14ab2f0d856cade130cca41",
                 "shasum": ""
             },
             "require": {
@@ -1716,7 +1656,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2019-06-07T09:14:10+00:00"
+            "time": "2019-06-21T08:41:48+00:00"
         },
         {
             "name": "oat-sa/extension-tao-delivery-rdf",
@@ -2103,16 +2043,16 @@
         },
         {
             "name": "oat-sa/extension-tao-itemqti",
-            "version": "v20.2.0",
+            "version": "v20.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti.git",
-                "reference": "ef67a921a23ab636a2fb17956f9304428ca22286"
+                "reference": "d6570cebffc18e8b0b7de44fdf04a7cea69a6622"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/ef67a921a23ab636a2fb17956f9304428ca22286",
-                "reference": "ef67a921a23ab636a2fb17956f9304428ca22286",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/d6570cebffc18e8b0b7de44fdf04a7cea69a6622",
+                "reference": "d6570cebffc18e8b0b7de44fdf04a7cea69a6622",
                 "shasum": ""
             },
             "require": {
@@ -2175,7 +2115,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2019-06-07T09:27:46+00:00"
+            "time": "2019-06-21T09:30:05+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pci",
@@ -2787,16 +2727,16 @@
         },
         {
             "name": "oat-sa/extension-tao-proctoring",
-            "version": "v14.1.0",
+            "version": "v15.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-proctoring.git",
-                "reference": "2db077a103ebf8db850166a1294c62e61bdd8d84"
+                "reference": "2c8ad7335a318de52d05f35c240119e7990ba485"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-proctoring/zipball/2db077a103ebf8db850166a1294c62e61bdd8d84",
-                "reference": "2db077a103ebf8db850166a1294c62e61bdd8d84",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-proctoring/zipball/2c8ad7335a318de52d05f35c240119e7990ba485",
+                "reference": "2c8ad7335a318de52d05f35c240119e7990ba485",
                 "shasum": ""
             },
             "require": {
@@ -2827,7 +2767,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2019-06-07T09:11:29+00:00"
+            "time": "2019-06-21T08:24:37+00:00"
         },
         {
             "name": "oat-sa/extension-tao-revision",
@@ -3045,16 +2985,16 @@
         },
         {
             "name": "oat-sa/extension-tao-testqti",
-            "version": "v33.6.1",
+            "version": "v33.7.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "f20894c2bd75666f005d35b73240bf56e97df904"
+                "reference": "de0a36ee16f7002b18927d34879a531cb6dab2f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/f20894c2bd75666f005d35b73240bf56e97df904",
-                "reference": "f20894c2bd75666f005d35b73240bf56e97df904",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/de0a36ee16f7002b18927d34879a531cb6dab2f6",
+                "reference": "de0a36ee16f7002b18927d34879a531cb6dab2f6",
                 "shasum": ""
             },
             "require": {
@@ -3119,7 +3059,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2019-06-07T09:29:29+00:00"
+            "time": "2019-06-21T09:21:14+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
@@ -3242,16 +3182,16 @@
         },
         {
             "name": "oat-sa/generis",
-            "version": "v11.4.2",
+            "version": "v11.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/generis.git",
-                "reference": "b26b8a9ffbbaba7f9d56820df7465cba7858d361"
+                "reference": "6596a534b10cf0921e710369119ee01d1beaadbf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/generis/zipball/b26b8a9ffbbaba7f9d56820df7465cba7858d361",
-                "reference": "b26b8a9ffbbaba7f9d56820df7465cba7858d361",
+                "url": "https://api.github.com/repos/oat-sa/generis/zipball/6596a534b10cf0921e710369119ee01d1beaadbf",
+                "reference": "6596a534b10cf0921e710369119ee01d1beaadbf",
                 "shasum": ""
             },
             "require": {
@@ -3337,7 +3277,7 @@
                 "computer-based-assessment",
                 "doctrine-dbal"
             ],
-            "time": "2019-06-07T08:42:24+00:00"
+            "time": "2019-06-21T08:43:23+00:00"
         },
         {
             "name": "oat-sa/jig",
@@ -3676,16 +3616,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "v36.2.3",
+            "version": "v37.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "18df80e939505dc7df1b6dcbffee9ceeab115a5f"
+                "reference": "d850022128c3a187b9abd2a05586dd0519f496a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/18df80e939505dc7df1b6dcbffee9ceeab115a5f",
-                "reference": "18df80e939505dc7df1b6dcbffee9ceeab115a5f",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/d850022128c3a187b9abd2a05586dd0519f496a8",
+                "reference": "d850022128c3a187b9abd2a05586dd0519f496a8",
                 "shasum": ""
             },
             "require": {
@@ -3771,7 +3711,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2019-06-07T09:02:38+00:00"
+            "time": "2019-06-21T08:53:52+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -4349,12 +4289,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/slimphp/Slim.git",
-                "reference": "ec989397f491845fef604e3502c02aca869f8b8f"
+                "reference": "dd9c65ec16aba555e351887a086c22f15ecfc3bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/slimphp/Slim/zipball/ec989397f491845fef604e3502c02aca869f8b8f",
-                "reference": "ec989397f491845fef604e3502c02aca869f8b8f",
+                "url": "https://api.github.com/repos/slimphp/Slim/zipball/dd9c65ec16aba555e351887a086c22f15ecfc3bf",
+                "reference": "dd9c65ec16aba555e351887a086c22f15ecfc3bf",
                 "shasum": ""
             },
             "require": {
@@ -4415,7 +4355,7 @@
                 "micro",
                 "router"
             ],
-            "time": "2019-06-06T01:08:01+00:00"
+            "time": "2019-06-13T15:32:36+00:00"
         },
         {
             "name": "symfony/lock",
@@ -4423,12 +4363,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/lock.git",
-                "reference": "b6cfccd6563f2c0474788dd5e9842e2994807de8"
+                "reference": "a622dbcc5d0dc92c9d080b5fd54a7009a9195c00"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/lock/zipball/b6cfccd6563f2c0474788dd5e9842e2994807de8",
-                "reference": "b6cfccd6563f2c0474788dd5e9842e2994807de8",
+                "url": "https://api.github.com/repos/symfony/lock/zipball/a622dbcc5d0dc92c9d080b5fd54a7009a9195c00",
+                "reference": "a622dbcc5d0dc92c9d080b5fd54a7009a9195c00",
                 "shasum": ""
             },
             "require": {
@@ -4477,7 +4417,7 @@
                 "redlock",
                 "semaphore"
             ],
-            "time": "2019-01-16T09:39:14+00:00"
+            "time": "2019-06-17T14:13:35+00:00"
         },
         {
             "name": "symfony/polyfill-php70",
