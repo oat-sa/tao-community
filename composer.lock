@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bf3e38a697dcc50af937a6d0b3b9d591",
+    "content-hash": "dac605156ec71b3e808920f4dc543d1b",
     "packages": [
         {
             "name": "clearfw/clearfw",
@@ -514,6 +514,66 @@
                 "string"
             ],
             "time": "2017-07-22T12:18:28+00:00"
+        },
+        {
+            "name": "doctrine/lexer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/lexer.git",
+                "reference": "4ab6ea7c838ccb340883fd78915af079949cc64d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/lexer/zipball/4ab6ea7c838ccb340883fd78915af079949cc64d",
+                "reference": "4ab6ea7c838ccb340883fd78915af079949cc64d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Common\\Lexer\\": "lib/Doctrine/Common/Lexer"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                }
+            ],
+            "description": "PHP Doctrine Lexer parser library that can be used in Top-Down, Recursive Descent Parsers.",
+            "homepage": "https://www.doctrine-project.org/projects/lexer.html",
+            "keywords": [
+                "annotations",
+                "docblock",
+                "lexer",
+                "parser",
+                "php"
+            ],
+            "time": "2018-10-21T19:22:05+00:00"
         },
         {
             "name": "easyrdf/easyrdf",
@@ -2043,16 +2103,16 @@
         },
         {
             "name": "oat-sa/extension-tao-itemqti",
-            "version": "v20.2.4",
+            "version": "v20.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti.git",
-                "reference": "d6570cebffc18e8b0b7de44fdf04a7cea69a6622"
+                "reference": "2b5a0a8cc59991cf3dfde9645dcb7c9487e2fa38"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/d6570cebffc18e8b0b7de44fdf04a7cea69a6622",
-                "reference": "d6570cebffc18e8b0b7de44fdf04a7cea69a6622",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/2b5a0a8cc59991cf3dfde9645dcb7c9487e2fa38",
+                "reference": "2b5a0a8cc59991cf3dfde9645dcb7c9487e2fa38",
                 "shasum": ""
             },
             "require": {
@@ -2115,7 +2175,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2019-06-21T09:30:05+00:00"
+            "time": "2019-06-24T10:03:14+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pci",
