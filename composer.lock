@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "59c68217a4e15bd801d4cde49c78d9dd",
+    "content-hash": "b5e40a8e56eb95247c9fe5f7cfc7ec10",
     "packages": [
         {
             "name": "clearfw/clearfw",
@@ -517,16 +517,16 @@
         },
         {
             "name": "doctrine/lexer",
-            "version": "1.0.x-dev",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/lexer.git",
-                "reference": "1febd6c3ef84253d7c815bed85fc622ad207a9f8"
+                "reference": "4ab6ea7c838ccb340883fd78915af079949cc64d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/lexer/zipball/1febd6c3ef84253d7c815bed85fc622ad207a9f8",
-                "reference": "1febd6c3ef84253d7c815bed85fc622ad207a9f8",
+                "url": "https://api.github.com/repos/doctrine/lexer/zipball/4ab6ea7c838ccb340883fd78915af079949cc64d",
+                "reference": "4ab6ea7c838ccb340883fd78915af079949cc64d",
                 "shasum": ""
             },
             "require": {
@@ -573,7 +573,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2019-06-08T11:03:04+00:00"
+            "time": "2018-10-21T19:22:05+00:00"
         },
         {
             "name": "easyrdf/easyrdf",
@@ -1375,15 +1375,15 @@
             "authors": [
                 {
                     "name": "Erin Millard",
+                    "role": "original author",
                     "email": "ezzatron@gmail.com",
-                    "homepage": "http://ezzatron.com/",
-                    "role": "original author"
+                    "homepage": "http://ezzatron.com/"
                 },
                 {
                     "name": "OAT SA",
+                    "role": "forkers",
                     "email": "contact@taotesting.com",
-                    "homepage": "https://taotestingg.com",
-                    "role": "forkers"
+                    "homepage": "https://taotestingg.com"
                 }
             ],
             "description": "NPM integration for Composer packages.",
@@ -2454,16 +2454,16 @@
         },
         {
             "name": "oat-sa/extension-tao-outcome",
-            "version": "v9.2.1",
+            "version": "v9.2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-outcome.git",
-                "reference": "5e5b2ddd2dd25719d85969c8a1fdf6d3f33b2dba"
+                "reference": "7b8341ade28ea7073dc48cb3215cc20ef1502365"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-outcome/zipball/5e5b2ddd2dd25719d85969c8a1fdf6d3f33b2dba",
-                "reference": "5e5b2ddd2dd25719d85969c8a1fdf6d3f33b2dba",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-outcome/zipball/7b8341ade28ea7073dc48cb3215cc20ef1502365",
+                "reference": "7b8341ade28ea7073dc48cb3215cc20ef1502365",
                 "shasum": ""
             },
             "require": {
@@ -2523,7 +2523,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2019-07-05T08:37:25+00:00"
+            "time": "2019-08-05T14:19:00+00:00"
         },
         {
             "name": "oat-sa/extension-tao-outcomekeyvalue",
@@ -2670,16 +2670,16 @@
         },
         {
             "name": "oat-sa/extension-tao-outcomerds",
-            "version": "v6.0.2",
+            "version": "v6.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-outcomerds.git",
-                "reference": "210eae0e3e6605efb1781b376e5e05fe8d34d2ae"
+                "reference": "9868d7324aa71281c5d6e8ada3192edbaf536c24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-outcomerds/zipball/210eae0e3e6605efb1781b376e5e05fe8d34d2ae",
-                "reference": "210eae0e3e6605efb1781b376e5e05fe8d34d2ae",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-outcomerds/zipball/9868d7324aa71281c5d6e8ada3192edbaf536c24",
+                "reference": "9868d7324aa71281c5d6e8ada3192edbaf536c24",
                 "shasum": ""
             },
             "require": {
@@ -2709,7 +2709,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2019-07-05T08:50:49+00:00"
+            "time": "2019-08-02T10:47:26+00:00"
         },
         {
             "name": "oat-sa/extension-tao-outcomeui",
@@ -3041,6 +3041,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
+            "abandoned": true,
             "time": "2019-03-15T09:37:14+00:00"
         },
         {
@@ -3242,16 +3243,16 @@
         },
         {
             "name": "oat-sa/generis",
-            "version": "v11.6.0",
+            "version": "v11.6.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/generis.git",
-                "reference": "6268547dc5c633ea5f39469355a4b187a2dd286f"
+                "reference": "aea502688a6278a28175f16d986d1515dd558641"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/generis/zipball/6268547dc5c633ea5f39469355a4b187a2dd286f",
-                "reference": "6268547dc5c633ea5f39469355a4b187a2dd286f",
+                "url": "https://api.github.com/repos/oat-sa/generis/zipball/aea502688a6278a28175f16d986d1515dd558641",
+                "reference": "aea502688a6278a28175f16d986d1515dd558641",
                 "shasum": ""
             },
             "require": {
@@ -3337,7 +3338,7 @@
                 "computer-based-assessment",
                 "doctrine-dbal"
             ],
-            "time": "2019-07-05T09:02:25+00:00"
+            "time": "2019-08-05T14:27:39+00:00"
         },
         {
             "name": "oat-sa/jig",
