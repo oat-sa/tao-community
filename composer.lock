@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1b2201216b87ad65ee24073d2207ad79",
+    "content-hash": "fc5e930976a74c43dc6972708aa9c898",
     "packages": [
         {
             "name": "clearfw/clearfw",
@@ -410,16 +410,16 @@
         },
         {
             "name": "doctrine/lexer",
-            "version": "1.0.x-dev",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/lexer.git",
-                "reference": "1febd6c3ef84253d7c815bed85fc622ad207a9f8"
+                "reference": "3cab40356d8f30a0bb9d817ed4c33c097a4f0edf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/lexer/zipball/1febd6c3ef84253d7c815bed85fc622ad207a9f8",
-                "reference": "1febd6c3ef84253d7c815bed85fc622ad207a9f8",
+                "url": "https://api.github.com/repos/doctrine/lexer/zipball/3cab40356d8f30a0bb9d817ed4c33c097a4f0edf",
+                "reference": "3cab40356d8f30a0bb9d817ed4c33c097a4f0edf",
                 "shasum": ""
             },
             "require": {
@@ -466,7 +466,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2019-06-08T11:03:04+00:00"
+            "time": "2018-09-01T01:23:47+00:00"
         },
         {
             "name": "easyrdf/easyrdf",
@@ -508,14 +508,14 @@
             "authors": [
                 {
                     "name": "Nicholas Humfrey",
-                    "role": "Developer",
                     "email": "njh@aelius.com",
-                    "homepage": "http://www.aelius.com/njh/"
+                    "homepage": "http://www.aelius.com/njh/",
+                    "role": "Developer"
                 },
                 {
                     "name": "Alexey Zakhlestin",
-                    "role": "Developer",
-                    "email": "indeyets@gmail.com"
+                    "email": "indeyets@gmail.com",
+                    "role": "Developer"
                 }
             ],
             "description": "EasyRdf is a PHP library designed to make it easy to consume and produce RDF.",
@@ -1168,9 +1168,9 @@
             "authors": [
                 {
                     "name": "Maurice Fonk",
-                    "role": "developer",
                     "email": "maurice@naneau.net",
-                    "homepage": "http://mauricefonk.com"
+                    "homepage": "http://mauricefonk.com",
+                    "role": "developer"
                 }
             ],
             "description": "A decent, standards-compliant, Semantic Versioning (SemVer) parser and library",
@@ -1378,16 +1378,16 @@
         },
         {
             "name": "oat-sa/extension-tao-clientdiag",
-            "version": "v6.0.3",
+            "version": "v6.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-clientdiag.git",
-                "reference": "0ddaa1be2061234dbd4a5e8e4e894e4dfbd09fcd"
+                "reference": "959a32f10e68a5dcbb1eee06cea0d874c19aba5a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-clientdiag/zipball/0ddaa1be2061234dbd4a5e8e4e894e4dfbd09fcd",
-                "reference": "0ddaa1be2061234dbd4a5e8e4e894e4dfbd09fcd",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-clientdiag/zipball/959a32f10e68a5dcbb1eee06cea0d874c19aba5a",
+                "reference": "959a32f10e68a5dcbb1eee06cea0d874c19aba5a",
                 "shasum": ""
             },
             "require": {
@@ -1418,7 +1418,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2019-07-05T09:08:00+00:00"
+            "time": "2019-08-20T14:15:01+00:00"
         },
         {
             "name": "oat-sa/extension-tao-community",
@@ -3481,9 +3481,9 @@
                 },
                 {
                     "name": "Jérôme Bogaerts",
+                    "role": "Developer",
                     "email": "jerome@taotesting.com",
-                    "homepage": "http://www.taotesting.com",
-                    "role": "Developer"
+                    "homepage": "http://www.taotesting.com"
                 }
             ],
             "description": "QTI Software Module Library for TAO",
@@ -4581,8 +4581,5 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": [],
-    "platform-overrides": {
-        "php": "7.1.30"
-    }
+    "platform-dev": []
 }
