@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9ee77e60bf2ea71da99594014589c2af",
+    "content-hash": "586a52992ae0a47b6a3e9db410b1b3d3",
     "packages": [
         {
             "name": "clearfw/clearfw",
@@ -410,28 +410,30 @@
         },
         {
             "name": "doctrine/lexer",
-            "version": "1.0.x-dev",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/lexer.git",
-                "reference": "1febd6c3ef84253d7c815bed85fc622ad207a9f8"
+                "reference": "6c4b4c3432406c73a4979b7e56efbffb0462ef64"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/lexer/zipball/1febd6c3ef84253d7c815bed85fc622ad207a9f8",
-                "reference": "1febd6c3ef84253d7c815bed85fc622ad207a9f8",
+                "url": "https://api.github.com/repos/doctrine/lexer/zipball/6c4b4c3432406c73a4979b7e56efbffb0462ef64",
+                "reference": "6c4b4c3432406c73a4979b7e56efbffb0462ef64",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.2"
+                "php": "^7.2"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.5"
+                "doctrine/coding-standard": "^6.0",
+                "phpstan/phpstan": "^0.11.8",
+                "phpunit/phpunit": "^8.2"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.2.x-dev"
                 }
             },
             "autoload": {
@@ -445,12 +447,12 @@
             ],
             "authors": [
                 {
-                    "name": "Roman Borschel",
-                    "email": "roman@code-factory.org"
-                },
-                {
                     "name": "Guilherme Blanco",
                     "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
                 },
                 {
                     "name": "Johannes Schmitt",
@@ -466,7 +468,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2019-06-08T11:03:04+00:00"
+            "time": "2019-07-30T19:38:35+00:00"
         },
         {
             "name": "easyrdf/easyrdf",
@@ -1378,16 +1380,16 @@
         },
         {
             "name": "oat-sa/extension-tao-clientdiag",
-            "version": "v6.0.3",
+            "version": "v6.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-clientdiag.git",
-                "reference": "0ddaa1be2061234dbd4a5e8e4e894e4dfbd09fcd"
+                "reference": "959a32f10e68a5dcbb1eee06cea0d874c19aba5a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-clientdiag/zipball/0ddaa1be2061234dbd4a5e8e4e894e4dfbd09fcd",
-                "reference": "0ddaa1be2061234dbd4a5e8e4e894e4dfbd09fcd",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-clientdiag/zipball/959a32f10e68a5dcbb1eee06cea0d874c19aba5a",
+                "reference": "959a32f10e68a5dcbb1eee06cea0d874c19aba5a",
                 "shasum": ""
             },
             "require": {
@@ -1418,24 +1420,24 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2019-07-05T09:08:00+00:00"
+            "time": "2019-08-20T14:15:01+00:00"
         },
         {
             "name": "oat-sa/extension-tao-community",
-            "version": "v6.4.2",
+            "version": "v6.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-community.git",
-                "reference": "ad57d47454d2c91ef19a5e96ad5798fa5ef600e2"
+                "reference": "7217a96d41b9aa640699fbd2dea52da3e4121693"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-community/zipball/ad57d47454d2c91ef19a5e96ad5798fa5ef600e2",
-                "reference": "ad57d47454d2c91ef19a5e96ad5798fa5ef600e2",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-community/zipball/7217a96d41b9aa640699fbd2dea52da3e4121693",
+                "reference": "7217a96d41b9aa640699fbd2dea52da3e4121693",
                 "shasum": ""
             },
             "require": {
-                "oat-sa/extension-tao-delivery-rdf": ">=8.4.0||dev-develop",
+                "oat-sa/extension-tao-delivery-rdf": ">=8.5.0||dev-develop",
                 "oat-sa/oatbox-extension-installer": "~1.1||dev-master"
             },
             "type": "tao-extension",
@@ -1493,7 +1495,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2019-08-16T09:41:03+00:00"
+            "time": "2019-08-21T11:12:02+00:00"
         },
         {
             "name": "oat-sa/extension-tao-dac-simple",
@@ -1613,16 +1615,16 @@
         },
         {
             "name": "oat-sa/extension-tao-delivery-rdf",
-            "version": "v8.4.0",
+            "version": "v8.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-delivery-rdf.git",
-                "reference": "68457b5bfd971ef38a11e2ee2ab819620a6a3874"
+                "reference": "0596812639a311da36b90bfe3e25cf174b4b9141"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-delivery-rdf/zipball/68457b5bfd971ef38a11e2ee2ab819620a6a3874",
-                "reference": "68457b5bfd971ef38a11e2ee2ab819620a6a3874",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-delivery-rdf/zipball/0596812639a311da36b90bfe3e25cf174b4b9141",
+                "reference": "0596812639a311da36b90bfe3e25cf174b4b9141",
                 "shasum": ""
             },
             "require": {
@@ -1652,7 +1654,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2019-08-16T09:19:24+00:00"
+            "time": "2019-08-21T10:58:52+00:00"
         },
         {
             "name": "oat-sa/extension-tao-eventlog",
