@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fc5e930976a74c43dc6972708aa9c898",
+    "content-hash": "06515fa5510fa10748a46b9315fdbcaf",
     "packages": [
         {
             "name": "clearfw/clearfw",
@@ -173,12 +173,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "17ec59c730888541191c63927791523be09fe3f7"
+                "reference": "c29471b93a163e79674d1928ec996916f509178c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/17ec59c730888541191c63927791523be09fe3f7",
-                "reference": "17ec59c730888541191c63927791523be09fe3f7",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/c29471b93a163e79674d1928ec996916f509178c",
+                "reference": "c29471b93a163e79674d1928ec996916f509178c",
                 "shasum": ""
             },
             "require": {
@@ -214,16 +214,16 @@
             ],
             "authors": [
                 {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
                     "name": "Roman Borschel",
                     "email": "roman@code-factory.org"
                 },
                 {
                     "name": "Benjamin Eberlei",
                     "email": "kontakt@beberlei.de"
-                },
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com"
                 },
                 {
                     "name": "Jonathan Wage",
@@ -248,7 +248,7 @@
                 "riak",
                 "xcache"
             ],
-            "time": "2019-05-24T17:46:08+00:00"
+            "time": "2019-08-13T13:45:33+00:00"
         },
         {
             "name": "doctrine/dbal",
@@ -414,24 +414,26 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/lexer.git",
-                "reference": "3cab40356d8f30a0bb9d817ed4c33c097a4f0edf"
+                "reference": "6c4b4c3432406c73a4979b7e56efbffb0462ef64"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/lexer/zipball/3cab40356d8f30a0bb9d817ed4c33c097a4f0edf",
-                "reference": "3cab40356d8f30a0bb9d817ed4c33c097a4f0edf",
+                "url": "https://api.github.com/repos/doctrine/lexer/zipball/6c4b4c3432406c73a4979b7e56efbffb0462ef64",
+                "reference": "6c4b4c3432406c73a4979b7e56efbffb0462ef64",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.2"
+                "php": "^7.2"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.5"
+                "doctrine/coding-standard": "^6.0",
+                "phpstan/phpstan": "^0.11.8",
+                "phpunit/phpunit": "^8.2"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.2.x-dev"
                 }
             },
             "autoload": {
@@ -445,12 +447,12 @@
             ],
             "authors": [
                 {
-                    "name": "Roman Borschel",
-                    "email": "roman@code-factory.org"
-                },
-                {
                     "name": "Guilherme Blanco",
                     "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
                 },
                 {
                     "name": "Johannes Schmitt",
@@ -466,7 +468,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2018-09-01T01:23:47+00:00"
+            "time": "2019-07-30T19:38:35+00:00"
         },
         {
             "name": "easyrdf/easyrdf",
@@ -684,12 +686,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "ca2892a8c2778c1821899fd2c79932e3b895f2ad"
+                "reference": "61494bf259393e972f60ff34476dd55ab90cb4a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/ca2892a8c2778c1821899fd2c79932e3b895f2ad",
-                "reference": "ca2892a8c2778c1821899fd2c79932e3b895f2ad",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/61494bf259393e972f60ff34476dd55ab90cb4a8",
+                "reference": "61494bf259393e972f60ff34476dd55ab90cb4a8",
                 "shasum": ""
             },
             "require": {
@@ -742,7 +744,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2019-05-12T12:35:22+00:00"
+            "time": "2019-08-13T11:06:12+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -801,12 +803,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "239400de7a173fe9901b9ac7c06497751f00727a"
+                "reference": "2595b33c1c924889b474d324f3d719fa40b6954e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/239400de7a173fe9901b9ac7c06497751f00727a",
-                "reference": "239400de7a173fe9901b9ac7c06497751f00727a",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/2595b33c1c924889b474d324f3d719fa40b6954e",
+                "reference": "2595b33c1c924889b474d324f3d719fa40b6954e",
                 "shasum": ""
             },
             "require": {
@@ -864,7 +866,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2019-07-01T23:21:34+00:00"
+            "time": "2019-08-13T16:05:52+00:00"
         },
         {
             "name": "imsglobal/lti",
@@ -979,12 +981,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "c8834a9fea0d5ba34003d9ef69e1fa9f6eaedd7d"
+                "reference": "ab890a40bf594452a9db57905b2a29b8adee24de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/c8834a9fea0d5ba34003d9ef69e1fa9f6eaedd7d",
-                "reference": "c8834a9fea0d5ba34003d9ef69e1fa9f6eaedd7d",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/ab890a40bf594452a9db57905b2a29b8adee24de",
+                "reference": "ab890a40bf594452a9db57905b2a29b8adee24de",
                 "shasum": ""
             },
             "require": {
@@ -1055,7 +1057,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2019-07-29T07:48:12+00:00"
+            "time": "2019-08-14T12:56:11+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -1063,12 +1065,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "17cbfb8b9ccf56c03a32cb72d4a5ec466961eaa3"
+                "reference": "1b5341b08b1e54db0a3b6449683465d1d5bc4db8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/17cbfb8b9ccf56c03a32cb72d4a5ec466961eaa3",
-                "reference": "17cbfb8b9ccf56c03a32cb72d4a5ec466961eaa3",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/1b5341b08b1e54db0a3b6449683465d1d5bc4db8",
+                "reference": "1b5341b08b1e54db0a3b6449683465d1d5bc4db8",
                 "shasum": ""
             },
             "require": {
@@ -1133,7 +1135,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2019-07-06T13:03:00+00:00"
+            "time": "2019-08-16T10:54:42+00:00"
         },
         {
             "name": "naneau/semver",
@@ -3167,16 +3169,16 @@
         },
         {
             "name": "oat-sa/generis",
-            "version": "v12.1.0",
+            "version": "v12.1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/generis.git",
-                "reference": "4c00e56d73f92967eff83bc4ff8cc13d811600de"
+                "reference": "50ee51d2ae3a2076d8f0da54ab367f6ca374f2bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/generis/zipball/4c00e56d73f92967eff83bc4ff8cc13d811600de",
-                "reference": "4c00e56d73f92967eff83bc4ff8cc13d811600de",
+                "url": "https://api.github.com/repos/oat-sa/generis/zipball/50ee51d2ae3a2076d8f0da54ab367f6ca374f2bd",
+                "reference": "50ee51d2ae3a2076d8f0da54ab367f6ca374f2bd",
                 "shasum": ""
             },
             "require": {
@@ -3264,7 +3266,7 @@
                 "computer-based-assessment",
                 "doctrine-dbal"
             ],
-            "time": "2019-08-02T09:24:18+00:00"
+            "time": "2019-08-23T06:36:32+00:00"
         },
         {
             "name": "oat-sa/jig",
@@ -3603,16 +3605,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "v38.3.2",
+            "version": "v38.3.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "5a9ee69df1139a62aac83f4be60f450754615afd"
+                "reference": "678102f38e9b8428e592435d789615092303b6dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/5a9ee69df1139a62aac83f4be60f450754615afd",
-                "reference": "5a9ee69df1139a62aac83f4be60f450754615afd",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/678102f38e9b8428e592435d789615092303b6dd",
+                "reference": "678102f38e9b8428e592435d789615092303b6dd",
                 "shasum": ""
             },
             "require": {
@@ -3699,7 +3701,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2019-08-02T09:34:18+00:00"
+            "time": "2019-08-23T06:36:40+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -4277,12 +4279,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/slimphp/Slim.git",
-                "reference": "fcf84fb25d9cd78dd53063dc48ad280a01b5f0e0"
+                "reference": "200c6143f15baa477601879b64ab2326847aac0b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/slimphp/Slim/zipball/fcf84fb25d9cd78dd53063dc48ad280a01b5f0e0",
-                "reference": "fcf84fb25d9cd78dd53063dc48ad280a01b5f0e0",
+                "url": "https://api.github.com/repos/slimphp/Slim/zipball/200c6143f15baa477601879b64ab2326847aac0b",
+                "reference": "200c6143f15baa477601879b64ab2326847aac0b",
                 "shasum": ""
             },
             "require": {
@@ -4343,7 +4345,7 @@
                 "micro",
                 "router"
             ],
-            "time": "2019-07-29T14:44:37+00:00"
+            "time": "2019-08-20T18:46:05+00:00"
         },
         {
             "name": "symfony/dotenv",
@@ -4351,12 +4353,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dotenv.git",
-                "reference": "804e9e16d14e2f79a15a5330d223d306109490ea"
+                "reference": "9426b9d615729061317e0eca080ade8c76e0cd40"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dotenv/zipball/804e9e16d14e2f79a15a5330d223d306109490ea",
-                "reference": "804e9e16d14e2f79a15a5330d223d306109490ea",
+                "url": "https://api.github.com/repos/symfony/dotenv/zipball/9426b9d615729061317e0eca080ade8c76e0cd40",
+                "reference": "9426b9d615729061317e0eca080ade8c76e0cd40",
                 "shasum": ""
             },
             "require": {
@@ -4400,7 +4402,7 @@
                 "env",
                 "environment"
             ],
-            "time": "2019-07-31T18:51:46+00:00"
+            "time": "2019-08-06T07:27:26+00:00"
         },
         {
             "name": "symfony/lock",
@@ -4408,12 +4410,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/lock.git",
-                "reference": "ac3f20ce0f70adee03b3eb94e361b7d2d6c33ce9"
+                "reference": "e434629a79538238cce74ef62fa870b149e1b3b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/lock/zipball/ac3f20ce0f70adee03b3eb94e361b7d2d6c33ce9",
-                "reference": "ac3f20ce0f70adee03b3eb94e361b7d2d6c33ce9",
+                "url": "https://api.github.com/repos/symfony/lock/zipball/e434629a79538238cce74ef62fa870b149e1b3b8",
+                "reference": "e434629a79538238cce74ef62fa870b149e1b3b8",
                 "shasum": ""
             },
             "require": {
@@ -4462,7 +4464,7 @@
                 "redlock",
                 "semaphore"
             ],
-            "time": "2019-08-01T23:40:18+00:00"
+            "time": "2019-08-14T11:59:53+00:00"
         },
         {
             "name": "symfony/polyfill-php70",
@@ -4470,12 +4472,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php70.git",
-                "reference": "bc4858fb611bda58719124ca079baff854149c89"
+                "reference": "54b4c428a0054e254223797d2713c31e08610831"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php70/zipball/bc4858fb611bda58719124ca079baff854149c89",
-                "reference": "bc4858fb611bda58719124ca079baff854149c89",
+                "url": "https://api.github.com/repos/symfony/polyfill-php70/zipball/54b4c428a0054e254223797d2713c31e08610831",
+                "reference": "54b4c428a0054e254223797d2713c31e08610831",
                 "shasum": ""
             },
             "require": {
@@ -4485,7 +4487,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.11-dev"
+                    "dev-master": "1.12-dev"
                 }
             },
             "autoload": {
@@ -4521,7 +4523,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2019-02-06T07:57:58+00:00"
+            "time": "2019-08-06T08:03:45+00:00"
         },
         {
             "name": "zendframework/zend-servicemanager",
