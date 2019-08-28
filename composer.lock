@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a928819c564d156a28ce24f935489b3d",
+    "content-hash": "5540cb27ef31b11ea96080e1a9d51687",
     "packages": [
         {
             "name": "clearfw/clearfw",
@@ -517,16 +517,16 @@
         },
         {
             "name": "doctrine/lexer",
-            "version": "1.0.x-dev",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/lexer.git",
-                "reference": "1febd6c3ef84253d7c815bed85fc622ad207a9f8"
+                "reference": "4ab6ea7c838ccb340883fd78915af079949cc64d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/lexer/zipball/1febd6c3ef84253d7c815bed85fc622ad207a9f8",
-                "reference": "1febd6c3ef84253d7c815bed85fc622ad207a9f8",
+                "url": "https://api.github.com/repos/doctrine/lexer/zipball/4ab6ea7c838ccb340883fd78915af079949cc64d",
+                "reference": "4ab6ea7c838ccb340883fd78915af079949cc64d",
                 "shasum": ""
             },
             "require": {
@@ -573,7 +573,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2019-06-08T11:03:04+00:00"
+            "time": "2018-10-21T19:22:05+00:00"
         },
         {
             "name": "easyrdf/easyrdf",
@@ -615,14 +615,14 @@
             "authors": [
                 {
                     "name": "Nicholas Humfrey",
-                    "role": "Developer",
                     "email": "njh@aelius.com",
-                    "homepage": "http://www.aelius.com/njh/"
+                    "homepage": "http://www.aelius.com/njh/",
+                    "role": "Developer"
                 },
                 {
                     "name": "Alexey Zakhlestin",
-                    "role": "Developer",
-                    "email": "indeyets@gmail.com"
+                    "email": "indeyets@gmail.com",
+                    "role": "Developer"
                 }
             ],
             "description": "EasyRdf is a PHP library designed to make it easy to consume and produce RDF.",
@@ -1275,9 +1275,9 @@
             "authors": [
                 {
                     "name": "Maurice Fonk",
-                    "role": "developer",
                     "email": "maurice@naneau.net",
-                    "homepage": "http://mauricefonk.com"
+                    "homepage": "http://mauricefonk.com",
+                    "role": "developer"
                 }
             ],
             "description": "A decent, standards-compliant, Semantic Versioning (SemVer) parser and library",
@@ -1421,16 +1421,16 @@
         },
         {
             "name": "oat-sa/extension-tao-clientdiag",
-            "version": "v5.0.3",
+            "version": "v5.0.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-clientdiag.git",
-                "reference": "4108ec41cdc6b613e3faf11bd313ea076a0e6b6e"
+                "reference": "e09493d2d16d27de2e97e4e5a2ed5b40d9dc7548"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-clientdiag/zipball/4108ec41cdc6b613e3faf11bd313ea076a0e6b6e",
-                "reference": "4108ec41cdc6b613e3faf11bd313ea076a0e6b6e",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-clientdiag/zipball/e09493d2d16d27de2e97e4e5a2ed5b40d9dc7548",
+                "reference": "e09493d2d16d27de2e97e4e5a2ed5b40d9dc7548",
                 "shasum": ""
             },
             "require": {
@@ -1461,7 +1461,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2019-05-02T16:37:27+00:00"
+            "time": "2019-08-28T12:39:38+00:00"
         },
         {
             "name": "oat-sa/extension-tao-community",
@@ -3428,9 +3428,9 @@
                 },
                 {
                     "name": "Ivan Klimchuk",
-                    "role": "Developer",
                     "email": "ivan@klimchuk.com",
-                    "homepage": "http://klimchuk.com"
+                    "homepage": "http://klimchuk.com",
+                    "role": "Developer"
                 }
             ],
             "description": "Classes for manipulate dates and intervals with microseconds precision",
@@ -3543,9 +3543,9 @@
                 },
                 {
                     "name": "Joel Bout",
-                    "role": "Developer",
                     "email": "joel@taotesting.com",
-                    "homepage": "http://www.taotesting.com"
+                    "homepage": "http://www.taotesting.com",
+                    "role": "Developer"
                 }
             ],
             "description": "Library to connect the taoTests engine to a computer adaptive test",
