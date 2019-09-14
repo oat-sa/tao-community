@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "61635adc61afce72ff229bde78cbdd47",
+    "content-hash": "230e9771cca836c851b0023bcd3fb708",
     "packages": [
         {
             "name": "clearfw/clearfw",
@@ -686,12 +686,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "61494bf259393e972f60ff34476dd55ab90cb4a8"
+                "reference": "a7010cc9b52ecfa00051bb26e4ae025958fe9851"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/61494bf259393e972f60ff34476dd55ab90cb4a8",
-                "reference": "61494bf259393e972f60ff34476dd55ab90cb4a8",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/a7010cc9b52ecfa00051bb26e4ae025958fe9851",
+                "reference": "a7010cc9b52ecfa00051bb26e4ae025958fe9851",
                 "shasum": ""
             },
             "require": {
@@ -744,7 +744,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2019-08-13T11:06:12+00:00"
+            "time": "2019-08-23T22:16:30+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -981,12 +981,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "ab890a40bf594452a9db57905b2a29b8adee24de"
+                "reference": "b604def3fc47186c45647546f312441ba1072659"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/ab890a40bf594452a9db57905b2a29b8adee24de",
-                "reference": "ab890a40bf594452a9db57905b2a29b8adee24de",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/b604def3fc47186c45647546f312441ba1072659",
+                "reference": "b604def3fc47186c45647546f312441ba1072659",
                 "shasum": ""
             },
             "require": {
@@ -1057,7 +1057,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2019-08-14T12:56:11+00:00"
+            "time": "2019-09-05T10:53:29+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -1065,12 +1065,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "1b5341b08b1e54db0a3b6449683465d1d5bc4db8"
+                "reference": "bd95e23bd212a96d75f4e6b2a105063a91fa1971"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/1b5341b08b1e54db0a3b6449683465d1d5bc4db8",
-                "reference": "1b5341b08b1e54db0a3b6449683465d1d5bc4db8",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/bd95e23bd212a96d75f4e6b2a105063a91fa1971",
+                "reference": "bd95e23bd212a96d75f4e6b2a105063a91fa1971",
                 "shasum": ""
             },
             "require": {
@@ -1135,7 +1135,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2019-08-16T10:54:42+00:00"
+            "time": "2019-09-09T11:53:32+00:00"
         },
         {
             "name": "naneau/semver",
@@ -1270,15 +1270,15 @@
             "authors": [
                 {
                     "name": "Erin Millard",
-                    "role": "original author",
                     "email": "ezzatron@gmail.com",
-                    "homepage": "http://ezzatron.com/"
+                    "homepage": "http://ezzatron.com/",
+                    "role": "original author"
                 },
                 {
                     "name": "OAT SA",
-                    "role": "forkers",
                     "email": "contact@taotesting.com",
-                    "homepage": "https://taotestingg.com"
+                    "homepage": "https://taotestingg.com",
+                    "role": "forkers"
                 }
             ],
             "description": "NPM integration for Composer packages.",
@@ -3540,9 +3540,9 @@
                 },
                 {
                     "name": "Joel Bout",
+                    "role": "Developer",
                     "email": "joel@taotesting.com",
-                    "homepage": "http://www.taotesting.com",
-                    "role": "Developer"
+                    "homepage": "http://www.taotesting.com"
                 }
             ],
             "description": "Library to connect the taoTests engine to a computer adaptive test",
@@ -3608,16 +3608,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "v38.9.2",
+            "version": "v38.9.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "d71df2a2acfbdc1fe84a5dae75dbedad770bbe38"
+                "reference": "7af2de7dbc847635dc531388ea6376ce0e064644"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/d71df2a2acfbdc1fe84a5dae75dbedad770bbe38",
-                "reference": "d71df2a2acfbdc1fe84a5dae75dbedad770bbe38",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/7af2de7dbc847635dc531388ea6376ce0e064644",
+                "reference": "7af2de7dbc847635dc531388ea6376ce0e064644",
                 "shasum": ""
             },
             "require": {
@@ -3704,7 +3704,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2019-08-21T09:10:38+00:00"
+            "time": "2019-09-14T13:47:27+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -3909,12 +3909,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/http-message.git",
-                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363"
+                "reference": "efd67d1dc14a7ef4fc4e518e7dee91c271d524e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-message/zipball/f6561bf28d520154e4b0ec72be95418abe6d9363",
-                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/efd67d1dc14a7ef4fc4e518e7dee91c271d524e4",
+                "reference": "efd67d1dc14a7ef4fc4e518e7dee91c271d524e4",
                 "shasum": ""
             },
             "require": {
@@ -3951,7 +3951,7 @@
                 "request",
                 "response"
             ],
-            "time": "2016-08-06T14:39:51+00:00"
+            "time": "2019-08-29T13:16:46+00:00"
         },
         {
             "name": "psr/log",
@@ -4413,12 +4413,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/lock.git",
-                "reference": "e434629a79538238cce74ef62fa870b149e1b3b8"
+                "reference": "2bfaf564567c35e1da2aa5e9ea7a771e915dfa76"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/lock/zipball/e434629a79538238cce74ef62fa870b149e1b3b8",
-                "reference": "e434629a79538238cce74ef62fa870b149e1b3b8",
+                "url": "https://api.github.com/repos/symfony/lock/zipball/2bfaf564567c35e1da2aa5e9ea7a771e915dfa76",
+                "reference": "2bfaf564567c35e1da2aa5e9ea7a771e915dfa76",
                 "shasum": ""
             },
             "require": {
@@ -4467,7 +4467,7 @@
                 "redlock",
                 "semaphore"
             ],
-            "time": "2019-08-14T11:59:53+00:00"
+            "time": "2019-09-02T14:34:19+00:00"
         },
         {
             "name": "symfony/polyfill-php70",
