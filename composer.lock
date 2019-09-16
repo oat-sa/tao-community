@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "230e9771cca836c851b0023bcd3fb708",
+    "content-hash": "69f1ed23dfd5c75f84b1018ae70ebf06",
     "packages": [
         {
             "name": "clearfw/clearfw",
@@ -510,14 +510,14 @@
             "authors": [
                 {
                     "name": "Nicholas Humfrey",
-                    "role": "Developer",
                     "email": "njh@aelius.com",
-                    "homepage": "http://www.aelius.com/njh/"
+                    "homepage": "http://www.aelius.com/njh/",
+                    "role": "Developer"
                 },
                 {
                     "name": "Alexey Zakhlestin",
-                    "role": "Developer",
-                    "email": "indeyets@gmail.com"
+                    "email": "indeyets@gmail.com",
+                    "role": "Developer"
                 }
             ],
             "description": "EasyRdf is a PHP library designed to make it easy to consume and produce RDF.",
@@ -1170,9 +1170,9 @@
             "authors": [
                 {
                     "name": "Maurice Fonk",
-                    "role": "developer",
                     "email": "maurice@naneau.net",
-                    "homepage": "http://mauricefonk.com"
+                    "homepage": "http://mauricefonk.com",
+                    "role": "developer"
                 }
             ],
             "description": "A decent, standards-compliant, Semantic Versioning (SemVer) parser and library",
@@ -1270,15 +1270,15 @@
             "authors": [
                 {
                     "name": "Erin Millard",
+                    "role": "original author",
                     "email": "ezzatron@gmail.com",
-                    "homepage": "http://ezzatron.com/",
-                    "role": "original author"
+                    "homepage": "http://ezzatron.com/"
                 },
                 {
                     "name": "OAT SA",
+                    "role": "forkers",
                     "email": "contact@taotesting.com",
-                    "homepage": "https://taotestingg.com",
-                    "role": "forkers"
+                    "homepage": "https://taotestingg.com"
                 }
             ],
             "description": "NPM integration for Composer packages.",
@@ -3486,9 +3486,9 @@
                 },
                 {
                     "name": "Jérôme Bogaerts",
+                    "role": "Developer",
                     "email": "jerome@taotesting.com",
-                    "homepage": "http://www.taotesting.com",
-                    "role": "Developer"
+                    "homepage": "http://www.taotesting.com"
                 }
             ],
             "description": "QTI Software Module Library for TAO",
@@ -3540,9 +3540,9 @@
                 },
                 {
                     "name": "Joel Bout",
-                    "role": "Developer",
                     "email": "joel@taotesting.com",
-                    "homepage": "http://www.taotesting.com"
+                    "homepage": "http://www.taotesting.com",
+                    "role": "Developer"
                 }
             ],
             "description": "Library to connect the taoTests engine to a computer adaptive test",
@@ -3608,16 +3608,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "v38.9.3",
+            "version": "v38.9.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "7af2de7dbc847635dc531388ea6376ce0e064644"
+                "reference": "247230bdc3cbb8894e84bd2041867993879858d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/7af2de7dbc847635dc531388ea6376ce0e064644",
-                "reference": "7af2de7dbc847635dc531388ea6376ce0e064644",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/247230bdc3cbb8894e84bd2041867993879858d9",
+                "reference": "247230bdc3cbb8894e84bd2041867993879858d9",
                 "shasum": ""
             },
             "require": {
@@ -3704,7 +3704,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2019-09-14T13:47:27+00:00"
+            "time": "2019-09-16T12:42:25+00:00"
         },
         {
             "name": "paragonie/random_compat",
