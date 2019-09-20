@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9e7cac6c4a0aacb8f72b49e6c7987c82",
+    "content-hash": "a25f7f09e5c17931806329cf3430f602",
     "packages": [
         {
             "name": "clearfw/clearfw",
@@ -2713,16 +2713,16 @@
         },
         {
             "name": "oat-sa/extension-tao-outcomeui",
-            "version": "v7.11.0.2",
+            "version": "v7.11.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-outcomeui.git",
-                "reference": "1bc693e8afc51effbd112be28f978cace79bc5bd"
+                "reference": "24740322b6ec8db35f96d27b7b5528c2c411cfb0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-outcomeui/zipball/1bc693e8afc51effbd112be28f978cace79bc5bd",
-                "reference": "1bc693e8afc51effbd112be28f978cace79bc5bd",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-outcomeui/zipball/24740322b6ec8db35f96d27b7b5528c2c411cfb0",
+                "reference": "24740322b6ec8db35f96d27b7b5528c2c411cfb0",
                 "shasum": ""
             },
             "require": {
@@ -2783,7 +2783,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2019-08-29T10:53:21+00:00"
+            "time": "2019-09-19T17:10:29+00:00"
         },
         {
             "name": "oat-sa/extension-tao-proctoring",
@@ -3677,16 +3677,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "v37.8.2",
+            "version": "v37.8.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "0d25806e1ad239812022ee7dac9bbcf660aa5314"
+                "reference": "1c8c9d663752e12bb8593231589d3fb08e6807c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/0d25806e1ad239812022ee7dac9bbcf660aa5314",
-                "reference": "0d25806e1ad239812022ee7dac9bbcf660aa5314",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/1c8c9d663752e12bb8593231589d3fb08e6807c5",
+                "reference": "1c8c9d663752e12bb8593231589d3fb08e6807c5",
                 "shasum": ""
             },
             "require": {
@@ -3772,7 +3772,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2019-07-05T09:31:29+00:00"
+            "time": "2019-09-19T17:11:27+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -4106,9 +4106,9 @@
                 },
                 {
                     "name": "Jérôme Bogaerts",
+                    "role": "Developer",
                     "email": "jerome@taotesting.com",
-                    "homepage": "http://www.taotesting.com",
-                    "role": "Developer"
+                    "homepage": "http://www.taotesting.com"
                 }
             ],
             "description": "OAT QTI Software Module Library",
@@ -4599,6 +4599,6 @@
     "platform": [],
     "platform-dev": [],
     "platform-overrides": {
-        "php": "7.0.31"
+        "php": "7.1"
     }
 }
