@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8fd097ad3e4698cbc024000e538a8cbb",
+    "content-hash": "3f5c6bcecbb83b5f4b9f1bfc3d58bdf9",
     "packages": [
         {
             "name": "clearfw/clearfw",
@@ -2003,16 +2003,16 @@
         },
         {
             "name": "oat-sa/extension-tao-itemqti",
-            "version": "v21.3.11",
+            "version": "v21.3.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti.git",
-                "reference": "c81d47964669bae133ec0422f1bb4c1a1a5da57a"
+                "reference": "0873b866c8e4eea844ed393bfdf7f7186cb52d42"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/c81d47964669bae133ec0422f1bb4c1a1a5da57a",
-                "reference": "c81d47964669bae133ec0422f1bb4c1a1a5da57a",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/0873b866c8e4eea844ed393bfdf7f7186cb52d42",
+                "reference": "0873b866c8e4eea844ed393bfdf7f7186cb52d42",
                 "shasum": ""
             },
             "require": {
@@ -2082,7 +2082,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2019-09-27T08:32:30+00:00"
+            "time": "2019-09-30T11:30:27+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pci",
@@ -2963,16 +2963,16 @@
         },
         {
             "name": "oat-sa/extension-tao-testqti",
-            "version": "v34.14.1",
+            "version": "v34.14.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "12ea2f38444001b8f836094d021f1b751007e752"
+                "reference": "275290a66cb139a3915337f2e15e20e551f04990"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/12ea2f38444001b8f836094d021f1b751007e752",
-                "reference": "12ea2f38444001b8f836094d021f1b751007e752",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/275290a66cb139a3915337f2e15e20e551f04990",
+                "reference": "275290a66cb139a3915337f2e15e20e551f04990",
                 "shasum": ""
             },
             "require": {
@@ -3044,7 +3044,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2019-09-27T08:32:47+00:00"
+            "time": "2019-09-30T11:26:17+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
@@ -4037,9 +4037,9 @@
                 },
                 {
                     "name": "Jérôme Bogaerts",
-                    "role": "Developer",
                     "email": "jerome@taotesting.com",
-                    "homepage": "http://www.taotesting.com"
+                    "homepage": "http://www.taotesting.com",
+                    "role": "Developer"
                 }
             ],
             "description": "OAT QTI Software Module Library",
@@ -4277,23 +4277,20 @@
         },
         {
             "name": "slim/slim",
-            "version": "3.x-dev",
+            "version": "3.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/slimphp/Slim.git",
-                "reference": "200c6143f15baa477601879b64ab2326847aac0b"
+                "reference": "eaee12ef8d0750db62b8c548016d82fb33addb6b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/slimphp/Slim/zipball/200c6143f15baa477601879b64ab2326847aac0b",
-                "reference": "200c6143f15baa477601879b64ab2326847aac0b",
+                "url": "https://api.github.com/repos/slimphp/Slim/zipball/eaee12ef8d0750db62b8c548016d82fb33addb6b",
+                "reference": "eaee12ef8d0750db62b8c548016d82fb33addb6b",
                 "shasum": ""
             },
             "require": {
                 "container-interop/container-interop": "^1.2",
-                "ext-json": "*",
-                "ext-libxml": "*",
-                "ext-simplexml": "*",
                 "nikic/fast-route": "^1.0",
                 "php": ">=5.5.0",
                 "pimple/pimple": "^3.0",
@@ -4319,24 +4316,24 @@
             ],
             "authors": [
                 {
-                    "name": "Josh Lockhart",
-                    "email": "hello@joshlockhart.com",
-                    "homepage": "https://joshlockhart.com"
-                },
-                {
-                    "name": "Andrew Smith",
-                    "email": "a.smith@silentworks.co.uk",
-                    "homepage": "http://silentworks.co.uk"
-                },
-                {
                     "name": "Rob Allen",
                     "email": "rob@akrabat.com",
                     "homepage": "http://akrabat.com"
                 },
                 {
+                    "name": "Josh Lockhart",
+                    "email": "hello@joshlockhart.com",
+                    "homepage": "https://joshlockhart.com"
+                },
+                {
                     "name": "Gabriel Manricks",
                     "email": "gmanricks@me.com",
                     "homepage": "http://gabrielmanricks.com"
+                },
+                {
+                    "name": "Andrew Smith",
+                    "email": "a.smith@silentworks.co.uk",
+                    "homepage": "http://silentworks.co.uk"
                 }
             ],
             "description": "Slim is a PHP micro framework that helps you quickly write simple yet powerful web applications and APIs",
@@ -4347,7 +4344,7 @@
                 "micro",
                 "router"
             ],
-            "time": "2019-08-20T18:46:05+00:00"
+            "time": "2019-04-16T16:47:29+00:00"
         },
         {
             "name": "symfony/dotenv",
