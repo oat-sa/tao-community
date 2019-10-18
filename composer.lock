@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3f5c6bcecbb83b5f4b9f1bfc3d58bdf9",
+    "content-hash": "1f00f6c722fa4bea5346db5fc3311213",
     "packages": [
         {
             "name": "clearfw/clearfw",
@@ -410,16 +410,16 @@
         },
         {
             "name": "doctrine/lexer",
-            "version": "1.0.x-dev",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/lexer.git",
-                "reference": "1febd6c3ef84253d7c815bed85fc622ad207a9f8"
+                "reference": "4ab6ea7c838ccb340883fd78915af079949cc64d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/lexer/zipball/1febd6c3ef84253d7c815bed85fc622ad207a9f8",
-                "reference": "1febd6c3ef84253d7c815bed85fc622ad207a9f8",
+                "url": "https://api.github.com/repos/doctrine/lexer/zipball/4ab6ea7c838ccb340883fd78915af079949cc64d",
+                "reference": "4ab6ea7c838ccb340883fd78915af079949cc64d",
                 "shasum": ""
             },
             "require": {
@@ -466,7 +466,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2019-06-08T11:03:04+00:00"
+            "time": "2018-10-21T19:22:05+00:00"
         },
         {
             "name": "easyrdf/easyrdf",
@@ -508,14 +508,14 @@
             "authors": [
                 {
                     "name": "Nicholas Humfrey",
-                    "role": "Developer",
                     "email": "njh@aelius.com",
-                    "homepage": "http://www.aelius.com/njh/"
+                    "homepage": "http://www.aelius.com/njh/",
+                    "role": "Developer"
                 },
                 {
                     "name": "Alexey Zakhlestin",
-                    "role": "Developer",
-                    "email": "indeyets@gmail.com"
+                    "email": "indeyets@gmail.com",
+                    "role": "Developer"
                 }
             ],
             "description": "EasyRdf is a PHP library designed to make it easy to consume and produce RDF.",
@@ -1168,9 +1168,9 @@
             "authors": [
                 {
                     "name": "Maurice Fonk",
-                    "role": "developer",
                     "email": "maurice@naneau.net",
-                    "homepage": "http://mauricefonk.com"
+                    "homepage": "http://mauricefonk.com",
+                    "role": "developer"
                 }
             ],
             "description": "A decent, standards-compliant, Semantic Versioning (SemVer) parser and library",
@@ -2963,16 +2963,16 @@
         },
         {
             "name": "oat-sa/extension-tao-testqti",
-            "version": "v34.14.2",
+            "version": "v34.14.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "275290a66cb139a3915337f2e15e20e551f04990"
+                "reference": "4554c1102c4339ec2738257b835abe04861f432c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/275290a66cb139a3915337f2e15e20e551f04990",
-                "reference": "275290a66cb139a3915337f2e15e20e551f04990",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/4554c1102c4339ec2738257b835abe04861f432c",
+                "reference": "4554c1102c4339ec2738257b835abe04861f432c",
                 "shasum": ""
             },
             "require": {
@@ -3044,7 +3044,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2019-09-30T11:26:17+00:00"
+            "time": "2019-10-18T16:45:58+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
