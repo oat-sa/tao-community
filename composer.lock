@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e047e3bf99a83c38359db87bb94ff6a5",
+    "content-hash": "3d4a349112bbb44f12e90a0a23f03108",
     "packages": [
         {
             "name": "clearfw/clearfw",
@@ -173,12 +173,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "c29471b93a163e79674d1928ec996916f509178c"
+                "reference": "090ec91febc44aeb9d80f4e8b7091f8e013e667a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/c29471b93a163e79674d1928ec996916f509178c",
-                "reference": "c29471b93a163e79674d1928ec996916f509178c",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/090ec91febc44aeb9d80f4e8b7091f8e013e667a",
+                "reference": "090ec91febc44aeb9d80f4e8b7091f8e013e667a",
                 "shasum": ""
             },
             "require": {
@@ -245,10 +245,9 @@
                 "memcached",
                 "php",
                 "redis",
-                "riak",
                 "xcache"
             ],
-            "time": "2019-08-13T13:45:33+00:00"
+            "time": "2019-11-12T10:40:18+00:00"
         },
         {
             "name": "doctrine/dbal",
@@ -338,12 +337,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/event-manager.git",
-                "reference": "e05ae70c633f3ada0f699b4628a2995b5dec1c26"
+                "reference": "37b7882d2b9e6aed5a766ac43450db462abd5ee9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/event-manager/zipball/e05ae70c633f3ada0f699b4628a2995b5dec1c26",
-                "reference": "e05ae70c633f3ada0f699b4628a2995b5dec1c26",
+                "url": "https://api.github.com/repos/doctrine/event-manager/zipball/37b7882d2b9e6aed5a766ac43450db462abd5ee9",
+                "reference": "37b7882d2b9e6aed5a766ac43450db462abd5ee9",
                 "shasum": ""
             },
             "require": {
@@ -373,16 +372,16 @@
             ],
             "authors": [
                 {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
                     "name": "Roman Borschel",
                     "email": "roman@code-factory.org"
                 },
                 {
                     "name": "Benjamin Eberlei",
                     "email": "kontakt@beberlei.de"
-                },
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com"
                 },
                 {
                     "name": "Jonathan Wage",
@@ -406,7 +405,7 @@
                 "event system",
                 "events"
             ],
-            "time": "2019-05-24T18:17:40+00:00"
+            "time": "2019-11-11T02:01:24+00:00"
         },
         {
             "name": "doctrine/lexer",
@@ -979,12 +978,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "1fb37c6d6418561ddd69d263fad3faafaac39ba9"
+                "reference": "b494919b0fe5c0aeecebb50dcad5cecfa243881c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/1fb37c6d6418561ddd69d263fad3faafaac39ba9",
-                "reference": "1fb37c6d6418561ddd69d263fad3faafaac39ba9",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/b494919b0fe5c0aeecebb50dcad5cecfa243881c",
+                "reference": "b494919b0fe5c0aeecebb50dcad5cecfa243881c",
                 "shasum": ""
             },
             "require": {
@@ -1055,7 +1054,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2019-10-30T13:22:49+00:00"
+            "time": "2019-11-06T21:36:32+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -1063,12 +1062,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "bd95e23bd212a96d75f4e6b2a105063a91fa1971"
+                "reference": "65f1f304d4e68759970a5c663ad2ae46faa47013"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/bd95e23bd212a96d75f4e6b2a105063a91fa1971",
-                "reference": "bd95e23bd212a96d75f4e6b2a105063a91fa1971",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/65f1f304d4e68759970a5c663ad2ae46faa47013",
+                "reference": "65f1f304d4e68759970a5c663ad2ae46faa47013",
                 "shasum": ""
             },
             "require": {
@@ -1133,7 +1132,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2019-09-09T11:53:32+00:00"
+            "time": "2019-11-11T17:21:38+00:00"
         },
         {
             "name": "naneau/semver",
@@ -1268,15 +1267,15 @@
             "authors": [
                 {
                     "name": "Erin Millard",
-                    "role": "original author",
                     "email": "ezzatron@gmail.com",
-                    "homepage": "http://ezzatron.com/"
+                    "homepage": "http://ezzatron.com/",
+                    "role": "original author"
                 },
                 {
                     "name": "OAT SA",
-                    "role": "forkers",
                     "email": "contact@taotesting.com",
-                    "homepage": "https://taotestingg.com"
+                    "homepage": "https://taotestingg.com",
+                    "role": "forkers"
                 }
             ],
             "description": "NPM integration for Composer packages.",
@@ -2003,16 +2002,16 @@
         },
         {
             "name": "oat-sa/extension-tao-itemqti",
-            "version": "v22.0.4",
+            "version": "v22.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti.git",
-                "reference": "2d6efadf472292d64eaa0c5e40fbf5ba0dbfcda0"
+                "reference": "bdf781b523a4f465cd569d459eb5c64c4528d910"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/2d6efadf472292d64eaa0c5e40fbf5ba0dbfcda0",
-                "reference": "2d6efadf472292d64eaa0c5e40fbf5ba0dbfcda0",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/bdf781b523a4f465cd569d459eb5c64c4528d910",
+                "reference": "bdf781b523a4f465cd569d459eb5c64c4528d910",
                 "shasum": ""
             },
             "require": {
@@ -2082,20 +2081,20 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2019-11-06T07:54:26+00:00"
+            "time": "2019-11-12T12:59:49+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pci",
-            "version": "v6.0.2",
+            "version": "v6.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti-pci.git",
-                "reference": "8aeb11740ba4e70efe296685505ab17dfba2dd2f"
+                "reference": "6e7caacc5763921b3470fba2ede401e95016d60e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti-pci/zipball/8aeb11740ba4e70efe296685505ab17dfba2dd2f",
-                "reference": "8aeb11740ba4e70efe296685505ab17dfba2dd2f",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti-pci/zipball/6e7caacc5763921b3470fba2ede401e95016d60e",
+                "reference": "6e7caacc5763921b3470fba2ede401e95016d60e",
                 "shasum": ""
             },
             "require": {
@@ -2124,7 +2123,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2019-11-05T13:23:10+00:00"
+            "time": "2019-11-12T15:48:39+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pic",
@@ -4355,12 +4354,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dotenv.git",
-                "reference": "fc63980d8dc4eb82e45ea68e7eca7b071b9b48be"
+                "reference": "1a9cad0daa3d0726124d7bec2419591ed0f03bc3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dotenv/zipball/fc63980d8dc4eb82e45ea68e7eca7b071b9b48be",
-                "reference": "fc63980d8dc4eb82e45ea68e7eca7b071b9b48be",
+                "url": "https://api.github.com/repos/symfony/dotenv/zipball/1a9cad0daa3d0726124d7bec2419591ed0f03bc3",
+                "reference": "1a9cad0daa3d0726124d7bec2419591ed0f03bc3",
                 "shasum": ""
             },
             "require": {
@@ -4404,7 +4403,7 @@
                 "env",
                 "environment"
             ],
-            "time": "2019-10-22T15:44:54+00:00"
+            "time": "2019-11-12T14:51:11+00:00"
         },
         {
             "name": "symfony/lock",
