@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2afcf113450a949bd78ccf0e5584eebf",
+    "content-hash": "58d9d4ec9de7045f09b4a59834a2f0b7",
     "packages": [
         {
             "name": "clearfw/clearfw",
@@ -508,14 +508,14 @@
             "authors": [
                 {
                     "name": "Nicholas Humfrey",
-                    "role": "Developer",
                     "email": "njh@aelius.com",
-                    "homepage": "http://www.aelius.com/njh/"
+                    "homepage": "http://www.aelius.com/njh/",
+                    "role": "Developer"
                 },
                 {
                     "name": "Alexey Zakhlestin",
-                    "role": "Developer",
-                    "email": "indeyets@gmail.com"
+                    "email": "indeyets@gmail.com",
+                    "role": "Developer"
                 }
             ],
             "description": "EasyRdf is a PHP library designed to make it easy to consume and produce RDF.",
@@ -1168,9 +1168,9 @@
             "authors": [
                 {
                     "name": "Maurice Fonk",
-                    "role": "developer",
                     "email": "maurice@naneau.net",
-                    "homepage": "http://mauricefonk.com"
+                    "homepage": "http://mauricefonk.com",
+                    "role": "developer"
                 }
             ],
             "description": "A decent, standards-compliant, Semantic Versioning (SemVer) parser and library",
@@ -1540,16 +1540,16 @@
         },
         {
             "name": "oat-sa/extension-tao-delivery",
-            "version": "v14.2.2",
+            "version": "v14.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-delivery.git",
-                "reference": "32c9ee6922d8f270eebd2636fe4382c9d4d0939c"
+                "reference": "dd5a250151bde68061c42b2d77c45d7c7447b2e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-delivery/zipball/32c9ee6922d8f270eebd2636fe4382c9d4d0939c",
-                "reference": "32c9ee6922d8f270eebd2636fe4382c9d4d0939c",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-delivery/zipball/dd5a250151bde68061c42b2d77c45d7c7447b2e3",
+                "reference": "dd5a250151bde68061c42b2d77c45d7c7447b2e3",
                 "shasum": ""
             },
             "require": {
@@ -1609,7 +1609,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2019-11-05T13:02:17+00:00"
+            "time": "2019-11-19T12:41:37+00:00"
         },
         {
             "name": "oat-sa/extension-tao-delivery-rdf",
@@ -2244,16 +2244,16 @@
         },
         {
             "name": "oat-sa/extension-tao-ltideliveryprovider",
-            "version": "v10.0.1",
+            "version": "v10.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-ltideliveryprovider.git",
-                "reference": "b9180a69bbdb3fb11ef2d97c5a8609b5e5b61cd4"
+                "reference": "e8d7a863253b7eeabd58437e7d46457aaff18d72"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-ltideliveryprovider/zipball/b9180a69bbdb3fb11ef2d97c5a8609b5e5b61cd4",
-                "reference": "b9180a69bbdb3fb11ef2d97c5a8609b5e5b61cd4",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-ltideliveryprovider/zipball/e8d7a863253b7eeabd58437e7d46457aaff18d72",
+                "reference": "e8d7a863253b7eeabd58437e7d46457aaff18d72",
                 "shasum": ""
             },
             "require": {
@@ -2314,7 +2314,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2019-11-05T12:49:13+00:00"
+            "time": "2019-11-19T14:00:42+00:00"
         },
         {
             "name": "oat-sa/extension-tao-mediamanager",
@@ -3424,9 +3424,9 @@
                 },
                 {
                     "name": "Ivan Klimchuk",
-                    "role": "Developer",
                     "email": "ivan@klimchuk.com",
-                    "homepage": "http://klimchuk.com"
+                    "homepage": "http://klimchuk.com",
+                    "role": "Developer"
                 }
             ],
             "description": "Classes for manipulate dates and intervals with microseconds precision",
@@ -3539,9 +3539,9 @@
                 },
                 {
                     "name": "Joel Bout",
-                    "role": "Developer",
                     "email": "joel@taotesting.com",
-                    "homepage": "http://www.taotesting.com"
+                    "homepage": "http://www.taotesting.com",
+                    "role": "Developer"
                 }
             ],
             "description": "Library to connect the taoTests engine to a computer adaptive test",
@@ -3607,16 +3607,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "v39.3.6",
+            "version": "v39.4.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "07c51008e825b0f278fc3e06616d8b5c8a63f979"
+                "reference": "cad16543d2ec8f6b08fef53bca4b5f6b83bf7734"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/07c51008e825b0f278fc3e06616d8b5c8a63f979",
-                "reference": "07c51008e825b0f278fc3e06616d8b5c8a63f979",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/cad16543d2ec8f6b08fef53bca4b5f6b83bf7734",
+                "reference": "cad16543d2ec8f6b08fef53bca4b5f6b83bf7734",
                 "shasum": ""
             },
             "require": {
@@ -3703,7 +3703,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2019-11-08T10:46:30+00:00"
+            "time": "2019-11-19T13:27:14+00:00"
         },
         {
             "name": "paragonie/random_compat",
