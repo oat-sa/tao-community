@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "58d9d4ec9de7045f09b4a59834a2f0b7",
+    "content-hash": "2ee9c098ed1c30f85ba5db296c2b873e",
     "packages": [
         {
             "name": "clearfw/clearfw",
@@ -97,6 +97,7 @@
             ],
             "description": "Promoting the interoperability of container objects (DIC, SL, etc.)",
             "homepage": "https://github.com/container-interop/container-interop",
+            "abandoned": "psr/container",
             "time": "2017-02-14T19:40:03+00:00"
         },
         {
@@ -173,12 +174,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "c29471b93a163e79674d1928ec996916f509178c"
+                "reference": "382e7f4db9a12dc6c19431743a2b096041bcdd62"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/c29471b93a163e79674d1928ec996916f509178c",
-                "reference": "c29471b93a163e79674d1928ec996916f509178c",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/382e7f4db9a12dc6c19431743a2b096041bcdd62",
+                "reference": "382e7f4db9a12dc6c19431743a2b096041bcdd62",
                 "shasum": ""
             },
             "require": {
@@ -245,10 +246,9 @@
                 "memcached",
                 "php",
                 "redis",
-                "riak",
                 "xcache"
             ],
-            "time": "2019-08-13T13:45:33+00:00"
+            "time": "2019-11-29T15:36:20+00:00"
         },
         {
             "name": "doctrine/dbal",
@@ -338,12 +338,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/event-manager.git",
-                "reference": "e05ae70c633f3ada0f699b4628a2995b5dec1c26"
+                "reference": "37b7882d2b9e6aed5a766ac43450db462abd5ee9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/event-manager/zipball/e05ae70c633f3ada0f699b4628a2995b5dec1c26",
-                "reference": "e05ae70c633f3ada0f699b4628a2995b5dec1c26",
+                "url": "https://api.github.com/repos/doctrine/event-manager/zipball/37b7882d2b9e6aed5a766ac43450db462abd5ee9",
+                "reference": "37b7882d2b9e6aed5a766ac43450db462abd5ee9",
                 "shasum": ""
             },
             "require": {
@@ -373,16 +373,16 @@
             ],
             "authors": [
                 {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
                     "name": "Roman Borschel",
                     "email": "roman@code-factory.org"
                 },
                 {
                     "name": "Benjamin Eberlei",
                     "email": "kontakt@beberlei.de"
-                },
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com"
                 },
                 {
                     "name": "Jonathan Wage",
@@ -406,20 +406,20 @@
                 "event system",
                 "events"
             ],
-            "time": "2019-05-24T18:17:40+00:00"
+            "time": "2019-11-11T02:01:24+00:00"
         },
         {
             "name": "doctrine/lexer",
-            "version": "1.0.x-dev",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/lexer.git",
-                "reference": "1febd6c3ef84253d7c815bed85fc622ad207a9f8"
+                "reference": "4ab6ea7c838ccb340883fd78915af079949cc64d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/lexer/zipball/1febd6c3ef84253d7c815bed85fc622ad207a9f8",
-                "reference": "1febd6c3ef84253d7c815bed85fc622ad207a9f8",
+                "url": "https://api.github.com/repos/doctrine/lexer/zipball/4ab6ea7c838ccb340883fd78915af079949cc64d",
+                "reference": "4ab6ea7c838ccb340883fd78915af079949cc64d",
                 "shasum": ""
             },
             "require": {
@@ -466,7 +466,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2019-06-08T11:03:04+00:00"
+            "time": "2018-10-21T19:22:05+00:00"
         },
         {
             "name": "easyrdf/easyrdf",
@@ -684,12 +684,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "df36d8dae3979cf927d5bbbed6f0427f39aadfec"
+                "reference": "dd23412b4a6d45f11f0ea116a2108920f1a97ac8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/df36d8dae3979cf927d5bbbed6f0427f39aadfec",
-                "reference": "df36d8dae3979cf927d5bbbed6f0427f39aadfec",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/dd23412b4a6d45f11f0ea116a2108920f1a97ac8",
+                "reference": "dd23412b4a6d45f11f0ea116a2108920f1a97ac8",
                 "shasum": ""
             },
             "require": {
@@ -742,7 +742,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2019-10-30T11:22:04+00:00"
+            "time": "2019-12-03T09:24:32+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -3607,16 +3607,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "v39.4.0.1",
+            "version": "v39.4.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "cad16543d2ec8f6b08fef53bca4b5f6b83bf7734"
+                "reference": "89ec5082b9c821dcb92a97203b83b0a64a6bc3ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/cad16543d2ec8f6b08fef53bca4b5f6b83bf7734",
-                "reference": "cad16543d2ec8f6b08fef53bca4b5f6b83bf7734",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/89ec5082b9c821dcb92a97203b83b0a64a6bc3ed",
+                "reference": "89ec5082b9c821dcb92a97203b83b0a64a6bc3ed",
                 "shasum": ""
             },
             "require": {
@@ -3703,7 +3703,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2019-11-19T13:27:14+00:00"
+            "time": "2019-12-03T15:01:13+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -4355,12 +4355,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dotenv.git",
-                "reference": "fc63980d8dc4eb82e45ea68e7eca7b071b9b48be"
+                "reference": "7abe2c6d7d232cf5a88e79a57479876b35704a01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dotenv/zipball/fc63980d8dc4eb82e45ea68e7eca7b071b9b48be",
-                "reference": "fc63980d8dc4eb82e45ea68e7eca7b071b9b48be",
+                "url": "https://api.github.com/repos/symfony/dotenv/zipball/7abe2c6d7d232cf5a88e79a57479876b35704a01",
+                "reference": "7abe2c6d7d232cf5a88e79a57479876b35704a01",
                 "shasum": ""
             },
             "require": {
@@ -4404,7 +4404,7 @@
                 "env",
                 "environment"
             ],
-            "time": "2019-10-22T15:44:54+00:00"
+            "time": "2019-11-23T14:53:46+00:00"
         },
         {
             "name": "symfony/lock",
