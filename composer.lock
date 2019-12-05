@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "58d9d4ec9de7045f09b4a59834a2f0b7",
+    "content-hash": "de740ee6a090f5448d2b6664853e1308",
     "packages": [
         {
             "name": "clearfw/clearfw",
@@ -97,6 +97,7 @@
             ],
             "description": "Promoting the interoperability of container objects (DIC, SL, etc.)",
             "homepage": "https://github.com/container-interop/container-interop",
+            "abandoned": "psr/container",
             "time": "2017-02-14T19:40:03+00:00"
         },
         {
@@ -1268,15 +1269,15 @@
             "authors": [
                 {
                     "name": "Erin Millard",
+                    "role": "original author",
                     "email": "ezzatron@gmail.com",
-                    "homepage": "http://ezzatron.com/",
-                    "role": "original author"
+                    "homepage": "http://ezzatron.com/"
                 },
                 {
                     "name": "OAT SA",
+                    "role": "forkers",
                     "email": "contact@taotesting.com",
-                    "homepage": "https://taotestingg.com",
-                    "role": "forkers"
+                    "homepage": "https://taotestingg.com"
                 }
             ],
             "description": "NPM integration for Composer packages.",
@@ -2003,16 +2004,16 @@
         },
         {
             "name": "oat-sa/extension-tao-itemqti",
-            "version": "v22.0.4",
+            "version": "v22.0.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti.git",
-                "reference": "2d6efadf472292d64eaa0c5e40fbf5ba0dbfcda0"
+                "reference": "acb49eeea71a634c9c35ca41b0b070613109dd6d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/2d6efadf472292d64eaa0c5e40fbf5ba0dbfcda0",
-                "reference": "2d6efadf472292d64eaa0c5e40fbf5ba0dbfcda0",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/acb49eeea71a634c9c35ca41b0b070613109dd6d",
+                "reference": "acb49eeea71a634c9c35ca41b0b070613109dd6d",
                 "shasum": ""
             },
             "require": {
@@ -2082,7 +2083,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2019-11-06T07:54:26+00:00"
+            "time": "2019-12-05T15:41:18+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pci",
