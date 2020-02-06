@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "6b7f4efe803e76456353003d009b9b1a",
+    "content-hash": "c5d227f0060562dadf6a3db26f4360e2",
     "packages": [
         {
             "name": "clearfw/clearfw",
@@ -1139,9 +1139,9 @@
             "authors": [
                 {
                     "name": "Maurice Fonk",
-                    "role": "developer",
                     "email": "maurice@naneau.net",
-                    "homepage": "http://mauricefonk.com"
+                    "homepage": "http://mauricefonk.com",
+                    "role": "developer"
                 }
             ],
             "description": "A decent, standards-compliant, Semantic Versioning (SemVer) parser and library",
@@ -1584,16 +1584,16 @@
         },
         {
             "name": "oat-sa/extension-tao-delivery-rdf",
-            "version": "v10.2.0",
+            "version": "v10.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-delivery-rdf.git",
-                "reference": "7d43185579869cdb30f954cd86af97dab45d4734"
+                "reference": "4282cf2ff8a9e60f1f7c7bbce6a6551c1c24561d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-delivery-rdf/zipball/7d43185579869cdb30f954cd86af97dab45d4734",
-                "reference": "7d43185579869cdb30f954cd86af97dab45d4734",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-delivery-rdf/zipball/4282cf2ff8a9e60f1f7c7bbce6a6551c1c24561d",
+                "reference": "4282cf2ff8a9e60f1f7c7bbce6a6551c1c24561d",
                 "shasum": ""
             },
             "require": {
@@ -1623,7 +1623,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2020-01-31T10:20:48+00:00"
+            "time": "2020-02-06T13:34:27+00:00"
         },
         {
             "name": "oat-sa/extension-tao-eventlog",
@@ -3389,9 +3389,9 @@
                 },
                 {
                     "name": "Joel Bout",
-                    "role": "Developer",
                     "email": "joel@taotesting.com",
-                    "homepage": "http://www.taotesting.com"
+                    "homepage": "http://www.taotesting.com",
+                    "role": "Developer"
                 }
             ],
             "description": "Library to connect the taoTests engine to a computer adaptive test",
