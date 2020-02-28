@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fc0077aaa02f43f4b568b9c2dbb34a20",
+    "content-hash": "a3dcee140c6a0ac6624039825729ac9c",
     "packages": [
         {
             "name": "clearfw/clearfw",
@@ -875,6 +875,7 @@
             "keywords": [
                 "LTI"
             ],
+            "abandoned": true,
             "time": "2016-09-18T04:22:22+00:00"
         },
         {
@@ -1139,9 +1140,9 @@
             "authors": [
                 {
                     "name": "Maurice Fonk",
+                    "role": "developer",
                     "email": "maurice@naneau.net",
-                    "homepage": "http://mauricefonk.com",
-                    "role": "developer"
+                    "homepage": "http://mauricefonk.com"
                 }
             ],
             "description": "A decent, standards-compliant, Semantic Versioning (SemVer) parser and library",
@@ -2813,16 +2814,16 @@
         },
         {
             "name": "oat-sa/extension-tao-testqti",
-            "version": "v35.10.2",
+            "version": "v35.10.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "6567c0758bb1773ac73d6e65a1328ebf219ad58a"
+                "reference": "99e5865381e116dc2d6daf4d97916180522bc9c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/6567c0758bb1773ac73d6e65a1328ebf219ad58a",
-                "reference": "6567c0758bb1773ac73d6e65a1328ebf219ad58a",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/99e5865381e116dc2d6daf4d97916180522bc9c2",
+                "reference": "99e5865381e116dc2d6daf4d97916180522bc9c2",
                 "shasum": ""
             },
             "require": {
@@ -2894,7 +2895,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2020-02-14T10:40:03+00:00"
+            "time": "2020-02-28T10:36:42+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
@@ -3390,9 +3391,9 @@
                 },
                 {
                     "name": "Joel Bout",
+                    "role": "Developer",
                     "email": "joel@taotesting.com",
-                    "homepage": "http://www.taotesting.com",
-                    "role": "Developer"
+                    "homepage": "http://www.taotesting.com"
                 }
             ],
             "description": "Library to connect the taoTests engine to a computer adaptive test",
