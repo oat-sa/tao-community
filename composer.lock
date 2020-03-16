@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "778fd5824a95a42f42eaffc135d12970",
+    "content-hash": "5991d5749b18dc0c9a888b256af28c63",
     "packages": [
         {
             "name": "clearfw/clearfw",
@@ -1024,6 +1024,16 @@
                 "s3",
                 "sftp",
                 "storage"
+            ],
+            "funding": [
+                {
+                    "url": "https://github.com/frankdejonge",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/league/flysystem",
+                    "type": "tidelift"
+                }
             ],
             "time": "2020-03-08T18:53:20+00:00"
         },
@@ -2590,16 +2600,16 @@
         },
         {
             "name": "oat-sa/extension-tao-proctoring",
-            "version": "v19.0.0",
+            "version": "v19.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-proctoring.git",
-                "reference": "c9a2f2e81d3d74324d8264d3365a247f1e13d025"
+                "reference": "1018f982666632ed8a0dc155ab0f29bec491ea44"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-proctoring/zipball/c9a2f2e81d3d74324d8264d3365a247f1e13d025",
-                "reference": "c9a2f2e81d3d74324d8264d3365a247f1e13d025",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-proctoring/zipball/1018f982666632ed8a0dc155ab0f29bec491ea44",
+                "reference": "1018f982666632ed8a0dc155ab0f29bec491ea44",
                 "shasum": ""
             },
             "require": {
@@ -2630,7 +2640,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2020-02-28T09:50:21+00:00"
+            "time": "2020-03-13T10:17:49+00:00"
         },
         {
             "name": "oat-sa/extension-tao-revision",
@@ -2813,16 +2823,16 @@
         },
         {
             "name": "oat-sa/extension-tao-testqti",
-            "version": "v36.1.1",
+            "version": "v36.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "5ac912bf2b1c6816bf88b4e4bc7bfce32a8b12d6"
+                "reference": "31d2a03f853388e6b0e64235ab28bc5e6abbcdf8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/5ac912bf2b1c6816bf88b4e4bc7bfce32a8b12d6",
-                "reference": "5ac912bf2b1c6816bf88b4e4bc7bfce32a8b12d6",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/31d2a03f853388e6b0e64235ab28bc5e6abbcdf8",
+                "reference": "31d2a03f853388e6b0e64235ab28bc5e6abbcdf8",
                 "shasum": ""
             },
             "require": {
@@ -2894,7 +2904,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2020-03-13T09:42:10+00:00"
+            "time": "2020-03-13T10:22:55+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
@@ -4341,6 +4351,20 @@
                 "env",
                 "environment"
             ],
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-02-29T10:04:02+00:00"
         },
         {
@@ -4581,5 +4605,6 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }
