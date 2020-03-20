@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a68d7583f36b0278063270b87d896ec8",
+    "content-hash": "e60da294c77361618b99aa397978beee",
     "packages": [
         {
             "name": "clearfw/clearfw",
@@ -905,6 +905,7 @@
             "keywords": [
                 "LTI"
             ],
+            "abandoned": true,
             "time": "2016-09-18T04:22:22+00:00"
         },
         {
@@ -1269,15 +1270,15 @@
             "authors": [
                 {
                     "name": "Erin Millard",
-                    "role": "original author",
                     "email": "ezzatron@gmail.com",
-                    "homepage": "http://ezzatron.com/"
+                    "homepage": "http://ezzatron.com/",
+                    "role": "original author"
                 },
                 {
                     "name": "OAT SA",
-                    "role": "forkers",
                     "email": "contact@taotesting.com",
-                    "homepage": "https://taotestingg.com"
+                    "homepage": "https://taotestingg.com",
+                    "role": "forkers"
                 }
             ],
             "description": "NPM integration for Composer packages.",
@@ -2698,16 +2699,16 @@
         },
         {
             "name": "oat-sa/extension-tao-proctoring",
-            "version": "v18.1.0",
+            "version": "v18.1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-proctoring.git",
-                "reference": "1bc1741db6bea02f2851967065841eb627534f04"
+                "reference": "a90718f1459c4c87f44a61b49cda2b69c15a08b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-proctoring/zipball/1bc1741db6bea02f2851967065841eb627534f04",
-                "reference": "1bc1741db6bea02f2851967065841eb627534f04",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-proctoring/zipball/a90718f1459c4c87f44a61b49cda2b69c15a08b6",
+                "reference": "a90718f1459c4c87f44a61b49cda2b69c15a08b6",
                 "shasum": ""
             },
             "require": {
@@ -2738,7 +2739,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2019-11-08T10:14:09+00:00"
+            "time": "2020-03-20T09:52:37+00:00"
         },
         {
             "name": "oat-sa/extension-tao-revision",
@@ -2964,16 +2965,16 @@
         },
         {
             "name": "oat-sa/extension-tao-testqti",
-            "version": "v35.1.1.1",
+            "version": "v35.1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "64df90b3e54f6ed64aeec33a2d346f296e03e6d7"
+                "reference": "21ed420c00ead10366632705f7447c037631034b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/64df90b3e54f6ed64aeec33a2d346f296e03e6d7",
-                "reference": "64df90b3e54f6ed64aeec33a2d346f296e03e6d7",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/21ed420c00ead10366632705f7447c037631034b",
+                "reference": "21ed420c00ead10366632705f7447c037631034b",
                 "shasum": ""
             },
             "require": {
@@ -3045,7 +3046,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2020-01-28T11:02:58+00:00"
+            "time": "2020-03-20T09:52:26+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
