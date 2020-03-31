@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a0c84faeb0577de8d5dd1bba1e11efca",
+    "content-hash": "db75ec09f00de8bc710a426154f79e9e",
     "packages": [
         {
             "name": "clearfw/clearfw",
@@ -1026,6 +1026,12 @@
                 "s3",
                 "sftp",
                 "storage"
+            ],
+            "funding": [
+                {
+                    "url": "https://offset.earth/frankdejonge",
+                    "type": "other"
+                }
             ],
             "time": "2020-03-17T18:58:12+00:00"
         },
@@ -2592,16 +2598,16 @@
         },
         {
             "name": "oat-sa/extension-tao-proctoring",
-            "version": "v19.3.1",
+            "version": "v19.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-proctoring.git",
-                "reference": "bd3c24973fe842a76c5906ba83776a7292699be4"
+                "reference": "dcef1812c8af4af18dff88a60e9f2b0e3cfbbaa2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-proctoring/zipball/bd3c24973fe842a76c5906ba83776a7292699be4",
-                "reference": "bd3c24973fe842a76c5906ba83776a7292699be4",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-proctoring/zipball/dcef1812c8af4af18dff88a60e9f2b0e3cfbbaa2",
+                "reference": "dcef1812c8af4af18dff88a60e9f2b0e3cfbbaa2",
                 "shasum": ""
             },
             "require": {
@@ -2632,7 +2638,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2020-03-27T11:01:59+00:00"
+            "time": "2020-03-31T15:24:53+00:00"
         },
         {
             "name": "oat-sa/extension-tao-revision",
@@ -2815,16 +2821,16 @@
         },
         {
             "name": "oat-sa/extension-tao-testqti",
-            "version": "v36.6.3",
+            "version": "v36.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "83e76988c65b4496aafc2898a0b62411cbe318dc"
+                "reference": "947e01d851420d18f7bde6bdf99641b8a7a28b9e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/83e76988c65b4496aafc2898a0b62411cbe318dc",
-                "reference": "83e76988c65b4496aafc2898a0b62411cbe318dc",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/947e01d851420d18f7bde6bdf99641b8a7a28b9e",
+                "reference": "947e01d851420d18f7bde6bdf99641b8a7a28b9e",
                 "shasum": ""
             },
             "require": {
@@ -2896,7 +2902,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2020-03-27T10:26:53+00:00"
+            "time": "2020-03-31T15:00:51+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
@@ -4291,16 +4297,16 @@
         },
         {
             "name": "symfony/dotenv",
-            "version": "v4.4.6",
+            "version": "v4.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dotenv.git",
-                "reference": "9bba981ecb1f57c04520d4165b3e6a17ac49319f"
+                "reference": "a78e698cfb8aca8ef6814639eb5ffc17180a4326"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dotenv/zipball/9bba981ecb1f57c04520d4165b3e6a17ac49319f",
-                "reference": "9bba981ecb1f57c04520d4165b3e6a17ac49319f",
+                "url": "https://api.github.com/repos/symfony/dotenv/zipball/a78e698cfb8aca8ef6814639eb5ffc17180a4326",
+                "reference": "a78e698cfb8aca8ef6814639eb5ffc17180a4326",
                 "shasum": ""
             },
             "require": {
@@ -4344,20 +4350,34 @@
                 "env",
                 "environment"
             ],
-            "time": "2020-02-29T10:04:02+00:00"
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-03-27T16:54:36+00:00"
         },
         {
             "name": "symfony/lock",
-            "version": "v3.4.38",
+            "version": "v3.4.39",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/lock.git",
-                "reference": "c8fe2c2ea8177852825a0b92d0897114feda0695"
+                "reference": "ce180b892bd7d6b0e10f662ca95f7c85350a62b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/lock/zipball/c8fe2c2ea8177852825a0b92d0897114feda0695",
-                "reference": "c8fe2c2ea8177852825a0b92d0897114feda0695",
+                "url": "https://api.github.com/repos/symfony/lock/zipball/ce180b892bd7d6b0e10f662ca95f7c85350a62b0",
+                "reference": "ce180b892bd7d6b0e10f662ca95f7c85350a62b0",
                 "shasum": ""
             },
             "require": {
@@ -4406,7 +4426,21 @@
                 "redlock",
                 "semaphore"
             ],
-            "time": "2020-02-04T08:04:52+00:00"
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-03-16T15:51:59+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -4463,6 +4497,20 @@
                 "ctype",
                 "polyfill",
                 "portable"
+            ],
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
             ],
             "time": "2020-02-27T09:26:54+00:00"
         },
@@ -4584,5 +4632,6 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }
