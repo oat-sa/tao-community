@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8b29b7834647da6918038cea6ccda612",
+    "content-hash": "38d48f90b0451b211f78c227adb33778",
     "packages": [
         {
             "name": "clearfw/clearfw",
@@ -874,6 +874,7 @@
             "keywords": [
                 "LTI"
             ],
+            "abandoned": true,
             "time": "2016-09-18T04:22:22+00:00"
         },
         {
@@ -1238,15 +1239,15 @@
             "authors": [
                 {
                     "name": "Erin Millard",
+                    "role": "original author",
                     "email": "ezzatron@gmail.com",
-                    "homepage": "http://ezzatron.com/",
-                    "role": "original author"
+                    "homepage": "http://ezzatron.com/"
                 },
                 {
                     "name": "OAT SA",
+                    "role": "forkers",
                     "email": "contact@taotesting.com",
-                    "homepage": "https://taotestingg.com",
-                    "role": "forkers"
+                    "homepage": "https://taotestingg.com"
                 }
             ],
             "description": "NPM integration for Composer packages.",
@@ -1899,16 +1900,16 @@
         },
         {
             "name": "oat-sa/extension-tao-itemqti",
-            "version": "v22.1.0",
+            "version": "v22.1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti.git",
-                "reference": "f19fb34a289018b72273834f1da3037627b73a8c"
+                "reference": "655fad1a35ba6f46678609a386d00d852b2bf7c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/f19fb34a289018b72273834f1da3037627b73a8c",
-                "reference": "f19fb34a289018b72273834f1da3037627b73a8c",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/655fad1a35ba6f46678609a386d00d852b2bf7c2",
+                "reference": "655fad1a35ba6f46678609a386d00d852b2bf7c2",
                 "shasum": ""
             },
             "require": {
@@ -1978,7 +1979,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2019-12-06T12:10:23+00:00"
+            "time": "2020-04-07T12:40:09+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pci",
@@ -4426,6 +4427,7 @@
                 "servicemanager",
                 "zf2"
             ],
+            "abandoned": "laminas/laminas-servicemanager",
             "time": "2015-06-03T15:32:02+00:00"
         }
     ],
