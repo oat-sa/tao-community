@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c216e8a29c686f712178a2a3ac038753",
+    "content-hash": "e38a6045da009234781fea66771c7640",
     "packages": [
         {
             "name": "clearfw/clearfw",
@@ -220,31 +220,32 @@
         },
         {
             "name": "doctrine/dbal",
-            "version": "v2.9.3",
+            "version": "2.10.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "7345cd59edfa2036eb0fa4264b77ae2576842035"
+                "reference": "aab745e7b6b2de3b47019da81e7225e14dcfdac8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/7345cd59edfa2036eb0fa4264b77ae2576842035",
-                "reference": "7345cd59edfa2036eb0fa4264b77ae2576842035",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/aab745e7b6b2de3b47019da81e7225e14dcfdac8",
+                "reference": "aab745e7b6b2de3b47019da81e7225e14dcfdac8",
                 "shasum": ""
             },
             "require": {
                 "doctrine/cache": "^1.0",
                 "doctrine/event-manager": "^1.0",
                 "ext-pdo": "*",
-                "php": "^7.1"
+                "php": "^7.2"
             },
             "require-dev": {
-                "doctrine/coding-standard": "^5.0",
-                "jetbrains/phpstorm-stubs": "^2018.1.2",
-                "phpstan/phpstan": "^0.10.1",
-                "phpunit/phpunit": "^7.4",
-                "symfony/console": "^2.0.5|^3.0|^4.0",
-                "symfony/phpunit-bridge": "^3.4.5|^4.0.5"
+                "doctrine/coding-standard": "^6.0",
+                "jetbrains/phpstorm-stubs": "^2019.1",
+                "nikic/php-parser": "^4.4",
+                "phpstan/phpstan": "^0.12",
+                "phpunit/phpunit": "^8.4.1",
+                "symfony/console": "^2.0.5|^3.0|^4.0|^5.0",
+                "vimeo/psalm": "^3.11"
             },
             "suggest": {
                 "symfony/console": "For helpful console commands such as SQL execution and import of files."
@@ -255,7 +256,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.9.x-dev",
+                    "dev-master": "2.10.x-dev",
                     "dev-develop": "3.0.x-dev"
                 }
             },
@@ -291,14 +292,25 @@
             "keywords": [
                 "abstraction",
                 "database",
+                "db2",
                 "dbal",
+                "mariadb",
+                "mssql",
                 "mysql",
-                "persistence",
+                "oci8",
+                "oracle",
+                "pdo",
                 "pgsql",
-                "php",
-                "queryobject"
+                "postgresql",
+                "queryobject",
+                "sasql",
+                "sql",
+                "sqlanywhere",
+                "sqlite",
+                "sqlserver",
+                "sqlsrv"
             ],
-            "time": "2019-11-02T22:19:34+00:00"
+            "time": "2020-04-20T17:19:26+00:00"
         },
         {
             "name": "doctrine/event-manager",
@@ -1240,15 +1252,15 @@
             "authors": [
                 {
                     "name": "Erin Millard",
+                    "role": "original author",
                     "email": "ezzatron@gmail.com",
-                    "homepage": "http://ezzatron.com/",
-                    "role": "original author"
+                    "homepage": "http://ezzatron.com/"
                 },
                 {
                     "name": "OAT SA",
+                    "role": "forkers",
                     "email": "contact@taotesting.com",
-                    "homepage": "https://taotestingg.com",
-                    "role": "forkers"
+                    "homepage": "https://taotestingg.com"
                 }
             ],
             "description": "NPM integration for Composer packages.",
@@ -2068,16 +2080,16 @@
         },
         {
             "name": "oat-sa/extension-tao-lti",
-            "version": "v11.7.1",
+            "version": "v11.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-lti.git",
-                "reference": "7ce7c02336bef3e5e8e1cec57442d104fa875430"
+                "reference": "4ae00d00f0489518e5960a92411d3e40191cec79"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-lti/zipball/7ce7c02336bef3e5e8e1cec57442d104fa875430",
-                "reference": "7ce7c02336bef3e5e8e1cec57442d104fa875430",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-lti/zipball/4ae00d00f0489518e5960a92411d3e40191cec79",
+                "reference": "4ae00d00f0489518e5960a92411d3e40191cec79",
                 "shasum": ""
             },
             "require": {
@@ -2138,7 +2150,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2020-04-10T08:29:57+00:00"
+            "time": "2020-05-05T11:25:42+00:00"
         },
         {
             "name": "oat-sa/extension-tao-ltideliveryprovider",
@@ -3019,22 +3031,22 @@
         },
         {
             "name": "oat-sa/generis",
-            "version": "v12.20.0",
+            "version": "v12.20.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/generis.git",
-                "reference": "3ce4614227c81b29870a8e89c0b1fe896d8b463a"
+                "reference": "f9180452b3d8598cd79bad00c2af574511052679"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/generis/zipball/3ce4614227c81b29870a8e89c0b1fe896d8b463a",
-                "reference": "3ce4614227c81b29870a8e89c0b1fe896d8b463a",
+                "url": "https://api.github.com/repos/oat-sa/generis/zipball/f9180452b3d8598cd79bad00c2af574511052679",
+                "reference": "f9180452b3d8598cd79bad00c2af574511052679",
                 "shasum": ""
             },
             "require": {
                 "clearfw/clearfw": "~1.2.0",
                 "doctrine/annotations": "~1.6.0",
-                "doctrine/dbal": "~2.9.0",
+                "doctrine/dbal": "~2.10.0",
                 "easyrdf/easyrdf": "^0.9.0",
                 "fluent/logger": "^1.0.1",
                 "league/flysystem": "~1.0",
@@ -3121,7 +3133,7 @@
                 "computer-based-assessment",
                 "doctrine-dbal"
             ],
-            "time": "2020-04-29T08:19:37+00:00"
+            "time": "2020-05-05T11:05:30+00:00"
         },
         {
             "name": "oat-sa/jig",
