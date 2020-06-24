@@ -23,41 +23,60 @@
     "computer-based-assessment"
   ],
   "repositories": [
-
+    {
+      "type": "vcs",
+      "url": "git@github.com:oat-sa/tao-core.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.com:oat-sa/extension-tao-item.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.com:oat-sa/extension-tao-itemqti.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.com:oat-sa/extension-tao-test.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.com:oat-sa/extension-tao-testqti.git"
+    }
   ],
   "homepage": "http://www.taotesting.com",
   "require": {
-    "oat-sa/generis": "12.23.0",
-    "oat-sa/tao-core": "42.12.0",
-    "oat-sa/extension-tao-community": "8.3.1",
-    "oat-sa/extension-tao-funcacl": "5.6.1",
-    "oat-sa/extension-tao-dac-simple": "6.6.1",
-    "oat-sa/extension-tao-testtaker": "7.4.0",
-    "oat-sa/extension-tao-group": "6.4.0",
-    "oat-sa/extension-tao-item": "10.6.2",
-    "oat-sa/extension-tao-itemqti": "24.3.0",
-    "oat-sa/extension-tao-itemqti-pci": "6.6.0",
-    "oat-sa/extension-tao-itemqti-pic": "5.4.1",
-    "oat-sa/extension-tao-test": "14.0.0",
-    "oat-sa/extension-tao-testqti": "38.4.2",
-    "oat-sa/extension-tao-outcome": "12.0.1",
-    "oat-sa/extension-tao-outcomeui": "8.7.4",
-    "oat-sa/extension-tao-outcomerds": "7.1.0",
-    "oat-sa/extension-tao-outcomekeyvalue": "5.5.0",
-    "oat-sa/extension-tao-outcomelti": "3.2.1",
-    "oat-sa/extension-tao-delivery": "14.14.3",
-    "oat-sa/extension-tao-delivery-rdf": "11.5.2",
-    "oat-sa/extension-tao-lti": "11.7.2",
-    "oat-sa/extension-tao-ltideliveryprovider": "11.0.1",
-    "oat-sa/extension-tao-revision": "8.5.2",
-    "oat-sa/extension-tao-mediamanager": "9.3.0",
-    "oat-sa/extension-pcisample": "2.8.1",
-    "oat-sa/extension-tao-backoffice": "4.3.1",
-    "oat-sa/extension-tao-proctoring": "19.13.1",
-    "oat-sa/extension-tao-clientdiag": "7.5.0",
-    "oat-sa/extension-tao-eventlog": "2.8.0",
-    "oat-sa/extension-tao-task-queue": "5.2.0",
-    "oat-sa/extension-tao-testqti-previewer": "2.13.0"
+    "oat-sa/generis": "dev-develop",
+    "oat-sa/tao-core": "dev-breaking/TDR-10/upgrade-jquery-handlebars",
+    "oat-sa/extension-tao-community": "dev-develop",
+    "oat-sa/extension-tao-funcacl": "dev-develop",
+    "oat-sa/extension-tao-dac-simple": "dev-develop",
+    "oat-sa/extension-tao-testtaker": "dev-develop",
+    "oat-sa/extension-tao-group": "dev-develop",
+    "oat-sa/extension-tao-item": "dev-feature/TDR-10_upgrade-jquery",
+    "oat-sa/extension-tao-itemqti": "dev-breaking/TDR-10/upgrade-jquery-handlebars",
+    "oat-sa/extension-tao-itemqti-pci": "dev-develop",
+    "oat-sa/extension-tao-itemqti-pic": "dev-develop",
+    "oat-sa/extension-tao-test": "dev-feature/TDR-10_upgrade-jquery",
+    "oat-sa/extension-tao-testqti": "dev-breaking/TDR-10/upgrade-jquery-handlebars",
+    "oat-sa/extension-tao-outcome": "dev-develop",
+    "oat-sa/extension-tao-outcomeui": "dev-develop",
+    "oat-sa/extension-tao-outcomerds": "dev-develop",
+    "oat-sa/extension-tao-outcomekeyvalue": "dev-develop",
+    "oat-sa/extension-tao-outcomelti": "dev-develop",
+    "oat-sa/extension-tao-delivery": "dev-develop",
+    "oat-sa/extension-tao-delivery-rdf": "dev-develop",
+    "oat-sa/extension-tao-lti": "dev-develop",
+    "oat-sa/extension-tao-ltideliveryprovider": "dev-develop",
+    "oat-sa/extension-tao-revision": "dev-develop",
+    "oat-sa/extension-tao-mediamanager": "dev-develop",
+    "oat-sa/extension-pcisample": "dev-develop",
+    "oat-sa/extension-tao-backoffice": "dev-develop",
+    "oat-sa/extension-tao-proctoring": "dev-develop",
+    "oat-sa/extension-tao-clientdiag": "dev-develop",
+    "oat-sa/extension-tao-eventlog": "dev-develop",
+    "oat-sa/extension-tao-task-queue": "dev-develop",
+    "oat-sa/extension-tao-testqti-previewer": "dev-develop"
   },
   "description": "TAO is an Open Source e-Testing platform that empowers you to build, deliver, and share innovative and engaging assessments online – in any language or subject matter."
 }
