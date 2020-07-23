@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "50d6423c993f12ce9b9d36c54e7b2994",
+    "content-hash": "02977da09db2902516f30d06b2472533",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -3175,16 +3175,16 @@
         },
         {
             "name": "oat-sa/extension-tao-testqti",
-            "version": "v38.19.6",
+            "version": "v38.19.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "2e4ee51e109d7bbcff1788d24c1bb279c6361c6d"
+                "reference": "0310faebfe1283747d6c161ae3e9915e027969db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/2e4ee51e109d7bbcff1788d24c1bb279c6361c6d",
-                "reference": "2e4ee51e109d7bbcff1788d24c1bb279c6361c6d",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/0310faebfe1283747d6c161ae3e9915e027969db",
+                "reference": "0310faebfe1283747d6c161ae3e9915e027969db",
                 "shasum": ""
             },
             "require": {
@@ -3257,7 +3257,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2020-07-17T08:26:01+00:00"
+            "time": "2020-07-23T08:08:45+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
@@ -6131,5 +6131,6 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }
