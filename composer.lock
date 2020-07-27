@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6097a5e42c605b6449760090f8f4d37d",
+    "content-hash": "bafe89304f606e9012dd331a51da61d7",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -1469,15 +1469,15 @@
             "authors": [
                 {
                     "name": "Erin Millard",
+                    "role": "original author",
                     "email": "ezzatron@gmail.com",
-                    "homepage": "http://ezzatron.com/",
-                    "role": "original author"
+                    "homepage": "http://ezzatron.com/"
                 },
                 {
                     "name": "OAT SA",
+                    "role": "forkers",
                     "email": "contact@taotesting.com",
-                    "homepage": "https://taotestingg.com",
-                    "role": "forkers"
+                    "homepage": "https://taotestingg.com"
                 }
             ],
             "description": "NPM integration for Composer packages.",
@@ -3694,16 +3694,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "v44.2.1.2",
+            "version": "v44.2.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "e72063b0b789f4f337a0bba61d90984d4559a624"
+                "reference": "e78222e55ceebc07f1a6f50c820d4395f0c931c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/e72063b0b789f4f337a0bba61d90984d4559a624",
-                "reference": "e72063b0b789f4f337a0bba61d90984d4559a624",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/e78222e55ceebc07f1a6f50c820d4395f0c931c7",
+                "reference": "e78222e55ceebc07f1a6f50c820d4395f0c931c7",
                 "shasum": ""
             },
             "require": {
@@ -3792,7 +3792,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2020-06-22T14:13:02+00:00"
+            "time": "2020-07-27T08:08:24+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -5469,6 +5469,5 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "platform-dev": []
 }
