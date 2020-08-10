@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b17affefccd7c3de7fd067ee95b3eae5",
+    "content-hash": "923bc7324b3441e7571db10eb1acf1ad",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -333,6 +333,20 @@
                 "redis",
                 "xcache"
             ],
+            "funding": [
+                {
+                    "url": "https://www.doctrine-project.org/sponsorship.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/phpdoctrine",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fcache",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-07-07T18:54:01+00:00"
         },
         {
@@ -563,6 +577,20 @@
                 "parser",
                 "php"
             ],
+            "funding": [
+                {
+                    "url": "https://www.doctrine-project.org/sponsorship.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/phpdoctrine",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Flexer",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-05-25T17:44:05+00:00"
         },
         {
@@ -647,6 +675,20 @@
                 "dbal",
                 "migrations",
                 "php"
+            ],
+            "funding": [
+                {
+                    "url": "https://www.doctrine-project.org/sponsorship.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/phpdoctrine",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fmigrations",
+                    "type": "tidelift"
+                }
             ],
             "time": "2020-06-21T08:55:42+00:00"
         },
@@ -1283,6 +1325,12 @@
                 "sftp",
                 "storage"
             ],
+            "funding": [
+                {
+                    "url": "https://offset.earth/frankdejonge",
+                    "type": "other"
+                }
+            ],
             "time": "2020-07-26T07:20:36+00:00"
         },
         {
@@ -1463,6 +1511,16 @@
                 "logging",
                 "psr-3"
             ],
+            "funding": [
+                {
+                    "url": "https://github.com/Seldaek",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/monolog/monolog",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-07-23T08:35:51+00:00"
         },
         {
@@ -1628,12 +1686,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-pcisample.git",
-                "reference": "a78fabbaa1ff63d074ee0f067f140de5fe0e1fd4"
+                "reference": "3b4bdec72c67d3cf926792657018c16252020f13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-pcisample/zipball/a78fabbaa1ff63d074ee0f067f140de5fe0e1fd4",
-                "reference": "a78fabbaa1ff63d074ee0f067f140de5fe0e1fd4",
+                "url": "https://api.github.com/repos/oat-sa/extension-pcisample/zipball/3b4bdec72c67d3cf926792657018c16252020f13",
+                "reference": "3b4bdec72c67d3cf926792657018c16252020f13",
                 "shasum": ""
             },
             "require": {
@@ -1662,7 +1720,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2020-08-06T07:55:33+00:00"
+            "time": "2020-07-17T08:48:46+00:00"
         },
         {
             "name": "oat-sa/extension-tao-backoffice",
@@ -1831,12 +1889,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-dac-simple.git",
-                "reference": "4a86ec40a06b6a53177d4f225a816bff3e856ba7"
+                "reference": "a4fd76029cfa65876ac3b11142c115e30fd0521d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-dac-simple/zipball/4a86ec40a06b6a53177d4f225a816bff3e856ba7",
-                "reference": "4a86ec40a06b6a53177d4f225a816bff3e856ba7",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-dac-simple/zipball/a4fd76029cfa65876ac3b11142c115e30fd0521d",
+                "reference": "a4fd76029cfa65876ac3b11142c115e30fd0521d",
                 "shasum": ""
             },
             "require": {
@@ -1866,7 +1924,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2020-08-05T07:18:06+00:00"
+            "time": "2020-07-17T08:37:03+00:00"
         },
         {
             "name": "oat-sa/extension-tao-delivery",
@@ -3097,12 +3155,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-test.git",
-                "reference": "d2a577914014179ec24a63f1caba2c798c392af3"
+                "reference": "9e22f512611631094b3fd93eb95203b7e26d10dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-test/zipball/d2a577914014179ec24a63f1caba2c798c392af3",
-                "reference": "d2a577914014179ec24a63f1caba2c798c392af3",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-test/zipball/9e22f512611631094b3fd93eb95203b7e26d10dd",
+                "reference": "9e22f512611631094b3fd93eb95203b7e26d10dd",
                 "shasum": ""
             },
             "require": {
@@ -3171,20 +3229,20 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2020-08-05T07:11:58+00:00"
+            "time": "2020-07-17T08:49:30+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti",
-            "version": "v39.4.1",
+            "version": "v39.4.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "d3e89858ab080f61d708969a39e207fa0e73b127"
+                "reference": "7e9d68b6e912d58eb037108c532101a1518cd8bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/d3e89858ab080f61d708969a39e207fa0e73b127",
-                "reference": "d3e89858ab080f61d708969a39e207fa0e73b127",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/7e9d68b6e912d58eb037108c532101a1518cd8bb",
+                "reference": "7e9d68b6e912d58eb037108c532101a1518cd8bb",
                 "shasum": ""
             },
             "require": {
@@ -3257,7 +3315,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2020-08-06T11:36:07+00:00"
+            "time": "2020-08-10T14:16:28+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
@@ -5290,6 +5348,20 @@
                 "env",
                 "environment"
             ],
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-07-05T09:39:30+00:00"
         },
         {
@@ -5352,6 +5424,20 @@
                 "redlock",
                 "semaphore"
             ],
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-07-23T12:42:41+00:00"
         },
         {
@@ -5413,6 +5499,20 @@
                 "ctype",
                 "polyfill",
                 "portable"
+            ],
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
             ],
             "time": "2020-07-14T12:35:20+00:00"
         },
@@ -5485,6 +5585,20 @@
                 "portable",
                 "shim"
             ],
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-07-14T12:35:20+00:00"
         },
         {
@@ -5552,6 +5666,20 @@
                 "portable",
                 "shim"
             ],
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-07-14T12:35:20+00:00"
         },
         {
@@ -5614,6 +5742,20 @@
                 "polyfill",
                 "portable",
                 "shim"
+            ],
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
             ],
             "time": "2020-07-14T12:35:20+00:00"
         },
@@ -5678,6 +5820,20 @@
                 "portable",
                 "shim"
             ],
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-07-14T12:35:20+00:00"
         },
         {
@@ -5736,6 +5892,20 @@
                 "polyfill",
                 "portable",
                 "shim"
+            ],
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
             ],
             "time": "2020-07-14T12:35:20+00:00"
         },
@@ -5799,6 +5969,20 @@
                 "interoperability",
                 "standards"
             ],
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-07-06T13:23:11+00:00"
         },
         {
@@ -5849,6 +6033,20 @@
             ],
             "description": "Symfony Stopwatch Component",
             "homepage": "https://symfony.com",
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-05-20T17:43:50+00:00"
         },
         {
@@ -5908,6 +6106,20 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-05-20T08:37:50+00:00"
         },
         {
@@ -6131,5 +6343,6 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }
