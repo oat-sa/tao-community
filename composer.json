@@ -2,15 +2,9 @@
   "name": "oat-sa/tao-community",
   "license": "GPL-2.0-only",
   "require-dev": {
-    "mikey179/vfsstream": "1.4.0",
-    "phpunit/phpunit": "^4.8",
-    "nikic/php-parser": "^4.2"
   },
   "config": {
-    "preferred-install": "source",
-    "platform": {
-      "php": "7.0.31"
-    }
+    "preferred-install": "source"
   },
   "support": {
     "issues": "http://forge.taotesting.com",
@@ -42,8 +36,8 @@
     "oat-sa/extension-tao-testtaker": "dev-develop",
     "oat-sa/extension-tao-group": "dev-develop",
     "oat-sa/extension-tao-item": "dev-develop",
-    "oat-sa/extension-tao-itemqti": "dev-develop",
     "oat-sa/extension-tao-itemqti-pci": "dev-develop",
+    "oat-sa/extension-tao-itemqti": "dev-develop",
     "oat-sa/extension-tao-itemqti-pic": "dev-develop",
     "oat-sa/extension-tao-test": "dev-develop",
     "oat-sa/extension-tao-testqti": "dev-develop",
@@ -64,8 +58,7 @@
     "oat-sa/extension-tao-clientdiag": "dev-develop",
     "oat-sa/extension-tao-eventlog": "dev-develop",
     "oat-sa/extension-tao-task-queue": "dev-develop",
-    "oat-sa/extension-tao-testqti-previewer": "dev-develop",
-    "oat-sa/extension-tao-scheduler":"dev-develop"
+    "oat-sa/extension-tao-testqti-previewer": "dev-develop"
   },
   "description": "TAO is an Open Source e-Testing platform that empowers you to build, deliver, and share innovative and engaging assessments online – in any language or subject matter."
 }
