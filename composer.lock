@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "713f013cf635fd8a8653fb9762b6800b",
+    "content-hash": "84524f7f563c0242f25b78a5d013d933",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -970,6 +970,7 @@
                 }
             ],
             "description": "JSONPath implementation for parsing, searching and flattening arrays",
+            "abandoned": "softcreatr/jsonpath",
             "time": "2019-07-15T17:23:22+00:00"
         },
         {
@@ -1466,16 +1467,16 @@
         },
         {
             "name": "league/mime-type-detection",
-            "version": "1.5.0",
+            "version": "1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/mime-type-detection.git",
-                "reference": "ea2fbfc988bade315acd5967e6d02274086d0f28"
+                "reference": "353f66d7555d8a90781f6f5e7091932f9a4250aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/mime-type-detection/zipball/ea2fbfc988bade315acd5967e6d02274086d0f28",
-                "reference": "ea2fbfc988bade315acd5967e6d02274086d0f28",
+                "url": "https://api.github.com/repos/thephpleague/mime-type-detection/zipball/353f66d7555d8a90781f6f5e7091932f9a4250aa",
+                "reference": "353f66d7555d8a90781f6f5e7091932f9a4250aa",
                 "shasum": ""
             },
             "require": {
@@ -1513,7 +1514,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-09-21T18:10:53+00:00"
+            "time": "2020-10-18T11:50:25+00:00"
         },
         {
             "name": "league/openapi-psr7-validator",
@@ -1687,9 +1688,9 @@
             "authors": [
                 {
                     "name": "Maurice Fonk",
-                    "role": "developer",
                     "email": "maurice@naneau.net",
-                    "homepage": "http://mauricefonk.com"
+                    "homepage": "http://mauricefonk.com",
+                    "role": "developer"
                 }
             ],
             "description": "A decent, standards-compliant, Semantic Versioning (SemVer) parser and library",
@@ -1787,15 +1788,15 @@
             "authors": [
                 {
                     "name": "Erin Millard",
+                    "role": "original author",
                     "email": "ezzatron@gmail.com",
-                    "homepage": "http://ezzatron.com/",
-                    "role": "original author"
+                    "homepage": "http://ezzatron.com/"
                 },
                 {
                     "name": "OAT SA",
+                    "role": "forkers",
                     "email": "contact@taotesting.com",
-                    "homepage": "https://taotestingg.com",
-                    "role": "forkers"
+                    "homepage": "https://taotestingg.com"
                 }
             ],
             "description": "NPM integration for Composer packages.",
@@ -2807,16 +2808,16 @@
         },
         {
             "name": "oat-sa/extension-tao-outcome",
-            "version": "v12.3.0",
+            "version": "v12.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-outcome.git",
-                "reference": "d00b44afeb3ce79a43bed730922c4fa1eb2244e9"
+                "reference": "a5552766a37d656bbed21a0689e7474cab6f05d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-outcome/zipball/d00b44afeb3ce79a43bed730922c4fa1eb2244e9",
-                "reference": "d00b44afeb3ce79a43bed730922c4fa1eb2244e9",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-outcome/zipball/a5552766a37d656bbed21a0689e7474cab6f05d4",
+                "reference": "a5552766a37d656bbed21a0689e7474cab6f05d4",
                 "shasum": ""
             },
             "require": {
@@ -2876,7 +2877,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2020-08-14T08:38:02+00:00"
+            "time": "2020-10-22T13:30:27+00:00"
         },
         {
             "name": "oat-sa/extension-tao-outcomekeyvalue",
@@ -3832,9 +3833,9 @@
                 },
                 {
                     "name": "Ivan Klimchuk",
-                    "role": "Developer",
                     "email": "ivan@klimchuk.com",
-                    "homepage": "http://klimchuk.com"
+                    "homepage": "http://klimchuk.com",
+                    "role": "Developer"
                 }
             ],
             "description": "Classes for manipulate dates and intervals with microseconds precision",
@@ -3947,9 +3948,9 @@
                 },
                 {
                     "name": "Joel Bout",
-                    "role": "Developer",
                     "email": "joel@taotesting.com",
-                    "homepage": "http://www.taotesting.com"
+                    "homepage": "http://www.taotesting.com",
+                    "role": "Developer"
                 }
             ],
             "description": "Library to connect the taoTests engine to a computer adaptive test",
@@ -4241,16 +4242,16 @@
         },
         {
             "name": "paragonie/random_compat",
-            "version": "v2.0.18",
+            "version": "v2.0.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "0a58ef6e3146256cc3dc7cc393927bcc7d1b72db"
+                "reference": "446fc9faa5c2a9ddf65eb7121c0af7e857295241"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/0a58ef6e3146256cc3dc7cc393927bcc7d1b72db",
-                "reference": "0a58ef6e3146256cc3dc7cc393927bcc7d1b72db",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/446fc9faa5c2a9ddf65eb7121c0af7e857295241",
+                "reference": "446fc9faa5c2a9ddf65eb7121c0af7e857295241",
                 "shasum": ""
             },
             "require": {
@@ -4286,7 +4287,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2019-01-03T20:59:08+00:00"
+            "time": "2020-10-15T10:06:57+00:00"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
