@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "884bac8dc3ec2d0136a1f17f519bb750",
+    "content-hash": "ae379646e35432d43fc2cd4fab4ee06d",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -1730,15 +1730,15 @@
             "authors": [
                 {
                     "name": "Erin Millard",
+                    "role": "original author",
                     "email": "ezzatron@gmail.com",
-                    "homepage": "http://ezzatron.com/",
-                    "role": "original author"
+                    "homepage": "http://ezzatron.com/"
                 },
                 {
                     "name": "OAT SA",
+                    "role": "forkers",
                     "email": "contact@taotesting.com",
-                    "homepage": "https://taotestingg.com",
-                    "role": "forkers"
+                    "homepage": "https://taotestingg.com"
                 }
             ],
             "description": "NPM integration for Composer packages.",
@@ -3307,16 +3307,16 @@
         },
         {
             "name": "oat-sa/extension-tao-testqti",
-            "version": "v39.7.6",
+            "version": "v39.7.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "ef1261d5cd6797ec0400dd85e176d1522cadebb5"
+                "reference": "ea1468c55a397a1e4355c7915a3fc165c6058d01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/ef1261d5cd6797ec0400dd85e176d1522cadebb5",
-                "reference": "ef1261d5cd6797ec0400dd85e176d1522cadebb5",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/ea1468c55a397a1e4355c7915a3fc165c6058d01",
+                "reference": "ea1468c55a397a1e4355c7915a3fc165c6058d01",
                 "shasum": ""
             },
             "require": {
@@ -3389,7 +3389,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2020-09-11T08:38:25+00:00"
+            "time": "2020-10-30T09:43:26+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
@@ -6397,5 +6397,6 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }
