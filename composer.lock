@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "89141e17f70d9c47c182733a0cecf29c",
+    "content-hash": "7d705c98a5ca90e31dc83fd17a2c8d91",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -239,16 +239,16 @@
         },
         {
             "name": "dflydev/fig-cookies",
-            "version": "v2.0.1",
+            "version": "v2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dflydev/dflydev-fig-cookies.git",
-                "reference": "733af78ddad60aec96f7c4a1204619dd4d62afff"
+                "reference": "aa3c3a6224fea4ca2c05cf6b8285ce023ff41d9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dflydev/dflydev-fig-cookies/zipball/733af78ddad60aec96f7c4a1204619dd4d62afff",
-                "reference": "733af78ddad60aec96f7c4a1204619dd4d62afff",
+                "url": "https://api.github.com/repos/dflydev/dflydev-fig-cookies/zipball/aa3c3a6224fea4ca2c05cf6b8285ce023ff41d9b",
+                "reference": "aa3c3a6224fea4ca2c05cf6b8285ce023ff41d9b",
                 "shasum": ""
             },
             "require": {
@@ -289,7 +289,7 @@
                 "psr-7",
                 "psr7"
             ],
-            "time": "2020-01-02T16:13:22+00:00"
+            "time": "2020-12-07T16:40:59+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -438,20 +438,6 @@
                 "php",
                 "redis",
                 "xcache"
-            ],
-            "funding": [
-                {
-                    "url": "https://www.doctrine-project.org/sponsorship.html",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.patreon.com/phpdoctrine",
-                    "type": "patreon"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fcache",
-                    "type": "tidelift"
-                }
             ],
             "time": "2020-07-07T18:54:01+00:00"
         },
@@ -686,20 +672,6 @@
                 "event system",
                 "events"
             ],
-            "funding": [
-                {
-                    "url": "https://www.doctrine-project.org/sponsorship.html",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.patreon.com/phpdoctrine",
-                    "type": "patreon"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fevent-manager",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-05-29T18:28:51+00:00"
         },
         {
@@ -761,20 +733,6 @@
                 "lexer",
                 "parser",
                 "php"
-            ],
-            "funding": [
-                {
-                    "url": "https://www.doctrine-project.org/sponsorship.html",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.patreon.com/phpdoctrine",
-                    "type": "patreon"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Flexer",
-                    "type": "tidelift"
-                }
             ],
             "time": "2020-05-25T17:44:05+00:00"
         },
@@ -860,20 +818,6 @@
                 "dbal",
                 "migrations",
                 "php"
-            ],
-            "funding": [
-                {
-                    "url": "https://www.doctrine-project.org/sponsorship.html",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.patreon.com/phpdoctrine",
-                    "type": "patreon"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fmigrations",
-                    "type": "tidelift"
-                }
             ],
             "time": "2020-06-21T08:55:42+00:00"
         },
@@ -1482,16 +1426,6 @@
                 "JWS",
                 "jwt"
             ],
-            "funding": [
-                {
-                    "url": "https://github.com/lcobucci",
-                    "type": "github"
-                },
-                {
-                    "url": "https://www.patreon.com/lcobucci",
-                    "type": "patreon"
-                }
-            ],
             "time": "2020-08-20T13:22:28+00:00"
         },
         {
@@ -1627,12 +1561,6 @@
                 "sftp",
                 "storage"
             ],
-            "funding": [
-                {
-                    "url": "https://offset.earth/frankdejonge",
-                    "type": "other"
-                }
-            ],
             "time": "2020-08-23T07:39:11+00:00"
         },
         {
@@ -1725,16 +1653,6 @@
                 }
             ],
             "description": "Mime-type detection for Flysystem",
-            "funding": [
-                {
-                    "url": "https://github.com/frankdejonge",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/league/flysystem",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-10-18T11:50:25+00:00"
         },
         {
@@ -1812,12 +1730,6 @@
                 "secure",
                 "server"
             ],
-            "funding": [
-                {
-                    "url": "https://github.com/sephster",
-                    "type": "github"
-                }
-            ],
             "time": "2020-07-01T11:33:50+00:00"
         },
         {
@@ -1874,16 +1786,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.25.5",
+            "version": "1.26.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "1817faadd1846cd08be9a49e905dc68823bc38c0"
+                "reference": "2209ddd84e7ef1256b7af205d0717fb62cfc9c33"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/1817faadd1846cd08be9a49e905dc68823bc38c0",
-                "reference": "1817faadd1846cd08be9a49e905dc68823bc38c0",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/2209ddd84e7ef1256b7af205d0717fb62cfc9c33",
+                "reference": "2209ddd84e7ef1256b7af205d0717fb62cfc9c33",
                 "shasum": ""
             },
             "require": {
@@ -1899,7 +1811,7 @@
                 "graylog2/gelf-php": "~1.0",
                 "php-amqplib/php-amqplib": "~2.4",
                 "php-console/php-console": "^3.1.3",
-                "php-parallel-lint/php-parallel-lint": "^1.0",
+                "phpstan/phpstan": "^0.12.59",
                 "phpunit/phpunit": "~4.5",
                 "ruflin/elastica": ">=0.90 <3.0",
                 "sentry/sentry": "^0.13",
@@ -1919,11 +1831,6 @@
                 "sentry/sentry": "Allow sending log messages to a Sentry server"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Monolog\\": "src/Monolog"
@@ -1947,17 +1854,7 @@
                 "logging",
                 "psr-3"
             ],
-            "funding": [
-                {
-                    "url": "https://github.com/Seldaek",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/monolog/monolog",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2020-07-23T08:35:51+00:00"
+            "time": "2020-12-14T12:56:38+00:00"
         },
         {
             "name": "naneau/semver",
@@ -2083,16 +1980,6 @@
                 "datetime",
                 "time"
             ],
-            "funding": [
-                {
-                    "url": "https://opencollective.com/Carbon",
-                    "type": "open_collective"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/nesbot/carbon",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-11-28T14:25:28+00:00"
         },
         {
@@ -2201,16 +2088,6 @@
             "keywords": [
                 "psr-17",
                 "psr-7"
-            ],
-            "funding": [
-                {
-                    "url": "https://github.com/Zegnat",
-                    "type": "github"
-                },
-                {
-                    "url": "https://github.com/nyholm",
-                    "type": "github"
-                }
             ],
             "time": "2020-11-14T17:35:34+00:00"
         },
@@ -2408,20 +2285,20 @@
         },
         {
             "name": "oat-sa/extension-tao-community",
-            "version": "v9.1.0",
+            "version": "v9.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-community.git",
-                "reference": "a2d18fec402861856018841535337501313f041a"
+                "reference": "041db56815e07d879006b121e4b322167fbe8c1f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-community/zipball/a2d18fec402861856018841535337501313f041a",
-                "reference": "a2d18fec402861856018841535337501313f041a",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-community/zipball/041db56815e07d879006b121e4b322167fbe8c1f",
+                "reference": "041db56815e07d879006b121e4b322167fbe8c1f",
                 "shasum": ""
             },
             "require": {
-                "oat-sa/extension-tao-delivery-rdf": ">=13.1.0||dev-develop",
+                "oat-sa/extension-tao-delivery-rdf": ">=13.2.0||dev-develop",
                 "oat-sa/oatbox-extension-installer": "~1.1||dev-master"
             },
             "type": "tao-extension",
@@ -2479,7 +2356,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2020-09-25T09:05:27+00:00"
+            "time": "2020-12-18T09:40:14+00:00"
         },
         {
             "name": "oat-sa/extension-tao-dac-simple",
@@ -2599,16 +2476,16 @@
         },
         {
             "name": "oat-sa/extension-tao-delivery-rdf",
-            "version": "v13.1.0",
+            "version": "v13.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-delivery-rdf.git",
-                "reference": "16f62606690f964226ede10f67850f3e8dcd8629"
+                "reference": "ceaae010123602a6d8b4cf39c5b3f2df37b17e7e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-delivery-rdf/zipball/16f62606690f964226ede10f67850f3e8dcd8629",
-                "reference": "16f62606690f964226ede10f67850f3e8dcd8629",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-delivery-rdf/zipball/ceaae010123602a6d8b4cf39c5b3f2df37b17e7e",
+                "reference": "ceaae010123602a6d8b4cf39c5b3f2df37b17e7e",
                 "shasum": ""
             },
             "require": {
@@ -2638,7 +2515,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2020-09-25T08:40:00+00:00"
+            "time": "2020-12-18T09:31:22+00:00"
         },
         {
             "name": "oat-sa/extension-tao-eventlog",
@@ -2832,16 +2709,16 @@
         },
         {
             "name": "oat-sa/extension-tao-item",
-            "version": "v10.17.0",
+            "version": "v10.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-item.git",
-                "reference": "6aec84b1cbf8f743b0d34cc2b241361135c291a8"
+                "reference": "e38c60cc6dcd840033a760782f221b72a8430745"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-item/zipball/6aec84b1cbf8f743b0d34cc2b241361135c291a8",
-                "reference": "6aec84b1cbf8f743b0d34cc2b241361135c291a8",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-item/zipball/e38c60cc6dcd840033a760782f221b72a8430745",
+                "reference": "e38c60cc6dcd840033a760782f221b72a8430745",
                 "shasum": ""
             },
             "require": {
@@ -2911,20 +2788,20 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2020-11-20T10:14:39+00:00"
+            "time": "2020-12-18T09:15:33+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti",
-            "version": "v25.18.1",
+            "version": "v25.19.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti.git",
-                "reference": "925ed18872ed10e8feb6c2727aa09e848e2a7ad1"
+                "reference": "e7adcf8fa099de7b630ff083b21e38d9b378bdfe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/925ed18872ed10e8feb6c2727aa09e848e2a7ad1",
-                "reference": "925ed18872ed10e8feb6c2727aa09e848e2a7ad1",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/e7adcf8fa099de7b630ff083b21e38d9b378bdfe",
+                "reference": "e7adcf8fa099de7b630ff083b21e38d9b378bdfe",
                 "shasum": ""
             },
             "require": {
@@ -2994,7 +2871,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2020-12-04T09:22:43+00:00"
+            "time": "2020-12-18T09:28:59+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pci",
@@ -3232,16 +3109,16 @@
         },
         {
             "name": "oat-sa/extension-tao-mediamanager",
-            "version": "v11.6.2",
+            "version": "v11.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-mediamanager.git",
-                "reference": "da431c0cd02e0d9ef1b68130f9f5b16b653b5d5d"
+                "reference": "a8bc0c7a73e6d480d69ba990a8ce16522dfdc580"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-mediamanager/zipball/da431c0cd02e0d9ef1b68130f9f5b16b653b5d5d",
-                "reference": "da431c0cd02e0d9ef1b68130f9f5b16b653b5d5d",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-mediamanager/zipball/a8bc0c7a73e6d480d69ba990a8ce16522dfdc580",
+                "reference": "a8bc0c7a73e6d480d69ba990a8ce16522dfdc580",
                 "shasum": ""
             },
             "require": {
@@ -3272,20 +3149,20 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2020-12-04T09:38:07+00:00"
+            "time": "2020-12-18T10:27:44+00:00"
         },
         {
             "name": "oat-sa/extension-tao-outcome",
-            "version": "v12.3.1",
+            "version": "v12.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-outcome.git",
-                "reference": "a5552766a37d656bbed21a0689e7474cab6f05d4"
+                "reference": "e5b012b07e1a1aaf672749468dba8ddf27d20ade"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-outcome/zipball/a5552766a37d656bbed21a0689e7474cab6f05d4",
-                "reference": "a5552766a37d656bbed21a0689e7474cab6f05d4",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-outcome/zipball/e5b012b07e1a1aaf672749468dba8ddf27d20ade",
+                "reference": "e5b012b07e1a1aaf672749468dba8ddf27d20ade",
                 "shasum": ""
             },
             "require": {
@@ -3345,7 +3222,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2020-10-22T13:30:27+00:00"
+            "time": "2020-12-18T10:06:09+00:00"
         },
         {
             "name": "oat-sa/extension-tao-outcomekeyvalue",
@@ -3833,16 +3710,16 @@
         },
         {
             "name": "oat-sa/extension-tao-testqti",
-            "version": "v40.3.2",
+            "version": "v40.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "0dc4e572ec811f0802481ecd17db85aa33dcb54b"
+                "reference": "7085d992bcdeb56e5939d3bce33d936aee01d6d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/0dc4e572ec811f0802481ecd17db85aa33dcb54b",
-                "reference": "0dc4e572ec811f0802481ecd17db85aa33dcb54b",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/7085d992bcdeb56e5939d3bce33d936aee01d6d1",
+                "reference": "7085d992bcdeb56e5939d3bce33d936aee01d6d1",
                 "shasum": ""
             },
             "require": {
@@ -3916,7 +3793,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2020-12-04T09:30:58+00:00"
+            "time": "2020-12-18T09:13:56+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
@@ -4536,16 +4413,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "v46.8.4",
+            "version": "v46.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "8018f5f6b7345e9906bbae8f26e615d57399937c"
+                "reference": "add9fd52acb1b011cb44aa42f041d839a34af10e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/8018f5f6b7345e9906bbae8f26e615d57399937c",
-                "reference": "8018f5f6b7345e9906bbae8f26e615d57399937c",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/add9fd52acb1b011cb44aa42f041d839a34af10e",
+                "reference": "add9fd52acb1b011cb44aa42f041d839a34af10e",
                 "shasum": ""
             },
             "require": {
@@ -4638,7 +4515,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2020-12-15T13:24:16+00:00"
+            "time": "2020-12-18T09:41:39+00:00"
         },
         {
             "name": "ocramius/package-versions",
@@ -4910,16 +4787,16 @@
         },
         {
             "name": "phpseclib/phpseclib",
-            "version": "2.0.29",
+            "version": "2.0.30",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "497856a8d997f640b4a516062f84228a772a48a8"
+                "reference": "136b9ca7eebef78be14abf90d65c5e57b6bc5d36"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/497856a8d997f640b4a516062f84228a772a48a8",
-                "reference": "497856a8d997f640b4a516062f84228a772a48a8",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/136b9ca7eebef78be14abf90d65c5e57b6bc5d36",
+                "reference": "136b9ca7eebef78be14abf90d65c5e57b6bc5d36",
                 "shasum": ""
             },
             "require": {
@@ -4927,7 +4804,7 @@
             },
             "require-dev": {
                 "phing/phing": "~2.7",
-                "phpunit/phpunit": "^4.8.35|^5.7|^6.0",
+                "phpunit/phpunit": "^4.8.35|^5.7|^6.0|^9.4",
                 "squizlabs/php_codesniffer": "~2.0"
             },
             "suggest": {
@@ -4997,21 +4874,7 @@
                 "x.509",
                 "x509"
             ],
-            "funding": [
-                {
-                    "url": "https://github.com/terrafrost",
-                    "type": "github"
-                },
-                {
-                    "url": "https://www.patreon.com/phpseclib",
-                    "type": "patreon"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/phpseclib/phpseclib",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2020-09-08T04:24:43+00:00"
+            "time": "2020-12-17T05:42:04+00:00"
         },
         {
             "name": "pimple/pimple",
@@ -6207,20 +6070,6 @@
                 "env",
                 "environment"
             ],
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-11-14T17:10:20+00:00"
         },
         {
@@ -6277,20 +6126,6 @@
                 "mutex",
                 "redlock",
                 "semaphore"
-            ],
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
             ],
             "time": "2020-10-24T10:57:07+00:00"
         },
@@ -6353,20 +6188,6 @@
                 "ctype",
                 "polyfill",
                 "portable"
-            ],
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
             ],
             "time": "2020-10-23T14:02:19+00:00"
         },
@@ -6438,20 +6259,6 @@
                 "portable",
                 "shim"
             ],
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-10-23T14:02:19+00:00"
         },
         {
@@ -6519,20 +6326,6 @@
                 "portable",
                 "shim"
             ],
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-10-23T14:02:19+00:00"
         },
         {
@@ -6596,36 +6389,11 @@
                 "portable",
                 "shim"
             ],
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-10-23T14:02:19+00:00"
         },
         {
             "name": "symfony/polyfill-php70",
             "version": "v1.20.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-php70.git",
-                "reference": "5f03a781d984aae42cebd18e7912fa80f02ee644"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php70/zipball/5f03a781d984aae42cebd18e7912fa80f02ee644",
-                "reference": "5f03a781d984aae42cebd18e7912fa80f02ee644",
-                "shasum": ""
-            },
             "require": {
                 "php": ">=7.1"
             },
@@ -6660,20 +6428,6 @@
                 "polyfill",
                 "portable",
                 "shim"
-            ],
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
             ],
             "time": "2020-10-23T14:02:19+00:00"
         },
@@ -6733,20 +6487,6 @@
                 "polyfill",
                 "portable",
                 "shim"
-            ],
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
             ],
             "time": "2020-10-23T14:02:19+00:00"
         },
@@ -6814,20 +6554,6 @@
                 "portable",
                 "shim"
             ],
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-10-23T14:02:19+00:00"
         },
         {
@@ -6890,20 +6616,6 @@
                 "interoperability",
                 "standards"
             ],
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-09-07T11:33:47+00:00"
         },
         {
@@ -6949,20 +6661,6 @@
             ],
             "description": "Symfony Stopwatch Component",
             "homepage": "https://symfony.com",
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-11-01T16:14:45+00:00"
         },
         {
@@ -7039,20 +6737,6 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-11-28T11:24:18+00:00"
         },
         {
@@ -7114,20 +6798,6 @@
                 "interoperability",
                 "standards"
             ],
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-09-28T13:05:58+00:00"
         },
         {
@@ -7182,20 +6852,6 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-11-24T12:28:30+00:00"
         },
         {
@@ -7419,6 +7075,5 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "platform-dev": []
 }
