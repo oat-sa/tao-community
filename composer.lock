@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "cebe/php-openapi",
-            "version": "1.5.0",
+            "version": "1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cebe/php-openapi.git",
-                "reference": "310de0290cfa9597f8bd3444cb7f8e1682bbbeeb"
+                "reference": "839772036e555e86f02b61d72fae27e281e8c557"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cebe/php-openapi/zipball/310de0290cfa9597f8bd3444cb7f8e1682bbbeeb",
-                "reference": "310de0290cfa9597f8bd3444cb7f8e1682bbbeeb",
+                "url": "https://api.github.com/repos/cebe/php-openapi/zipball/839772036e555e86f02b61d72fae27e281e8c557",
+                "reference": "839772036e555e86f02b61d72fae27e281e8c557",
                 "shasum": ""
             },
             "require": {
@@ -66,7 +66,11 @@
             "keywords": [
                 "openapi"
             ],
-            "time": "2020-12-31T00:41:54+00:00"
+            "support": {
+                "issues": "https://github.com/cebe/php-openapi/issues",
+                "source": "https://github.com/cebe/php-openapi"
+            },
+            "time": "2021-02-16T09:31:22+00:00"
         },
         {
             "name": "clearfw/clearfw",
@@ -128,6 +132,10 @@
                 }
             ],
             "description": "ClearFw",
+            "support": {
+                "issues": "https://github.com/oat-sa/clearfw/issues",
+                "source": "https://github.com/oat-sa/clearfw/tree/master"
+            },
             "time": "2019-02-15T10:59:35+00:00"
         },
         {
@@ -171,6 +179,10 @@
                 }
             ],
             "description": "Convert JWK to PEM format.",
+            "support": {
+                "issues": "https://github.com/acodercat/php-jwk-to-pem/issues",
+                "source": "https://github.com/acodercat/php-jwk-to-pem/tree/0.0.3"
+            },
             "time": "2019-06-07T06:06:16+00:00"
         },
         {
@@ -226,6 +238,10 @@
                 }
             ],
             "description": "Composer plugin that provides efficient querying for installed package versions (no runtime IO)",
+            "support": {
+                "issues": "https://github.com/composer/package-versions-deprecated/issues",
+                "source": "https://github.com/composer/package-versions-deprecated/tree/1.11.99.1"
+            },
             "funding": [
                 {
                     "url": "https://packagist.com",
@@ -303,6 +319,10 @@
                 "security",
                 "symmetric key cryptography"
             ],
+            "support": {
+                "issues": "https://github.com/defuse/php-encryption/issues",
+                "source": "https://github.com/defuse/php-encryption/tree/master"
+            },
             "time": "2018-07-24T23:27:56+00:00"
         },
         {
@@ -357,6 +377,10 @@
                 "psr-7",
                 "psr7"
             ],
+            "support": {
+                "issues": "https://github.com/dflydev/dflydev-fig-cookies/issues",
+                "source": "https://github.com/dflydev/dflydev-fig-cookies/tree/v2.0.3"
+            },
             "time": "2020-12-07T16:40:59+00:00"
         },
         {
@@ -425,6 +449,10 @@
                 "docblock",
                 "parser"
             ],
+            "support": {
+                "issues": "https://github.com/doctrine/annotations/issues",
+                "source": "https://github.com/doctrine/annotations/tree/v1.6.1"
+            },
             "time": "2019-03-25T19:12:02+00:00"
         },
         {
@@ -507,6 +535,10 @@
                 "redis",
                 "xcache"
             ],
+            "support": {
+                "issues": "https://github.com/doctrine/cache/issues",
+                "source": "https://github.com/doctrine/cache/tree/1.10.x"
+            },
             "funding": [
                 {
                     "url": "https://www.doctrine-project.org/sponsorship.html",
@@ -586,6 +618,10 @@
                 "iterators",
                 "php"
             ],
+            "support": {
+                "issues": "https://github.com/doctrine/collections/issues",
+                "source": "https://github.com/doctrine/collections/tree/1.6.7"
+            },
             "time": "2020-07-27T17:53:49+00:00"
         },
         {
@@ -678,6 +714,10 @@
                 "sqlserver",
                 "sqlsrv"
             ],
+            "support": {
+                "issues": "https://github.com/doctrine/dbal/issues",
+                "source": "https://github.com/doctrine/dbal/tree/2.10"
+            },
             "time": "2020-01-04T12:56:21+00:00"
         },
         {
@@ -754,6 +794,10 @@
                 "event system",
                 "events"
             ],
+            "support": {
+                "issues": "https://github.com/doctrine/event-manager/issues",
+                "source": "https://github.com/doctrine/event-manager/tree/1.1.x"
+            },
             "funding": [
                 {
                     "url": "https://www.doctrine-project.org/sponsorship.html",
@@ -830,6 +874,10 @@
                 "parser",
                 "php"
             ],
+            "support": {
+                "issues": "https://github.com/doctrine/lexer/issues",
+                "source": "https://github.com/doctrine/lexer/tree/1.2.1"
+            },
             "funding": [
                 {
                     "url": "https://www.doctrine-project.org/sponsorship.html",
@@ -929,6 +977,10 @@
                 "migrations",
                 "php"
             ],
+            "support": {
+                "issues": "https://github.com/doctrine/migrations/issues",
+                "source": "https://github.com/doctrine/migrations/tree/3.0.1"
+            },
             "funding": [
                 {
                     "url": "https://www.doctrine-project.org/sponsorship.html",
@@ -1005,6 +1057,12 @@
                 "rdfa",
                 "sparql"
             ],
+            "support": {
+                "forum": "http://groups.google.com/group/easyrdf/",
+                "irc": "irc://chat.freenode.net/easyrdf",
+                "issues": "http://github.com/njh/easyrdf/issues",
+                "source": "https://github.com/easyrdf/easyrdf/tree/0.9.1"
+            },
             "time": "2015-02-27T09:45:49+00:00"
         },
         {
@@ -1053,6 +1111,10 @@
                 "event-dispatcher",
                 "event-emitter"
             ],
+            "support": {
+                "issues": "https://github.com/igorw/evenement/issues",
+                "source": "https://github.com/igorw/evenement/tree/master"
+            },
             "time": "2017-07-17T17:39:19+00:00"
         },
         {
@@ -1103,6 +1165,10 @@
             "keywords": [
                 "html"
             ],
+            "support": {
+                "issues": "https://github.com/ezyang/htmlpurifier/issues",
+                "source": "https://github.com/ezyang/htmlpurifier/tree/master"
+            },
             "time": "2020-06-29T00:56:53+00:00"
         },
         {
@@ -1144,6 +1210,10 @@
                 }
             ],
             "description": "JSONPath implementation for parsing, searching and flattening arrays",
+            "support": {
+                "issues": "https://github.com/FlowCommunications/JSONPath/issues",
+                "source": "https://github.com/FlowCommunications/JSONPath/tree/0.5.0"
+            },
             "abandoned": "softcreatr/jsonpath",
             "time": "2019-07-15T17:23:22+00:00"
         },
@@ -1198,6 +1268,10 @@
                 "log",
                 "logging"
             ],
+            "support": {
+                "issues": "https://github.com/fluent/fluent-logger-php/issues",
+                "source": "https://github.com/fluent/fluent-logger-php/tree/v1.0.1"
+            },
             "time": "2017-02-15T07:14:53+00:00"
         },
         {
@@ -1265,6 +1339,10 @@
                 "rest",
                 "web service"
             ],
+            "support": {
+                "issues": "https://github.com/guzzle/guzzle/issues",
+                "source": "https://github.com/guzzle/guzzle/tree/6.5"
+            },
             "time": "2020-06-16T21:01:06+00:00"
         },
         {
@@ -1316,6 +1394,10 @@
             "keywords": [
                 "promise"
             ],
+            "support": {
+                "issues": "https://github.com/guzzle/promises/issues",
+                "source": "https://github.com/guzzle/promises/tree/1.4.0"
+            },
             "time": "2020-09-30T07:37:28+00:00"
         },
         {
@@ -1387,6 +1469,10 @@
                 "uri",
                 "url"
             ],
+            "support": {
+                "issues": "https://github.com/guzzle/psr7/issues",
+                "source": "https://github.com/guzzle/psr7/tree/1.7.0"
+            },
             "time": "2020-09-30T07:37:11+00:00"
         },
         {
@@ -1427,6 +1513,10 @@
             "keywords": [
                 "LTI"
             ],
+            "support": {
+                "issues": "https://github.com/IMSGlobal/LTI-Tool-Provider-Library-PHP/issues",
+                "source": "https://github.com/IMSGlobal/LTI-Tool-Provider-Library-PHP/tree/3.0.2"
+            },
             "abandoned": true,
             "time": "2016-09-18T04:22:22+00:00"
         },
@@ -1463,6 +1553,10 @@
             "license": [
                 "proprietary"
             ],
+            "support": {
+                "issues": "https://github.com/jtl-software/php-api-client-opsgenie/issues",
+                "source": "https://github.com/jtl-software/php-api-client-opsgenie/tree/2.0.2"
+            },
             "time": "2019-10-17T11:11:17+00:00"
         },
         {
@@ -1530,6 +1624,10 @@
                 "json",
                 "schema"
             ],
+            "support": {
+                "issues": "https://github.com/justinrainbow/json-schema/issues",
+                "source": "https://github.com/justinrainbow/json-schema/tree/5.x.x"
+            },
             "time": "2017-05-16T21:06:09+00:00"
         },
         {
@@ -1585,6 +1683,10 @@
                 "JWS",
                 "jwt"
             ],
+            "support": {
+                "issues": "https://github.com/lcobucci/jwt/issues",
+                "source": "https://github.com/lcobucci/jwt/tree/3.3.3"
+            },
             "funding": [
                 {
                     "url": "https://github.com/lcobucci",
@@ -1645,6 +1747,10 @@
                 "event",
                 "listener"
             ],
+            "support": {
+                "issues": "https://github.com/thephpleague/event/issues",
+                "source": "https://github.com/thephpleague/event/tree/master"
+            },
             "time": "2018-11-26T11:52:41+00:00"
         },
         {
@@ -1730,6 +1836,10 @@
                 "sftp",
                 "storage"
             ],
+            "support": {
+                "issues": "https://github.com/thephpleague/flysystem/issues",
+                "source": "https://github.com/thephpleague/flysystem/tree/1.x"
+            },
             "funding": [
                 {
                     "url": "https://offset.earth/frankdejonge",
@@ -1787,6 +1897,10 @@
                 "adapter",
                 "memory"
             ],
+            "support": {
+                "issues": "https://github.com/thephpleague/flysystem-memory/issues",
+                "source": "https://github.com/thephpleague/flysystem-memory/tree/1.0.2"
+            },
             "time": "2019-05-30T21:34:13+00:00"
         },
         {
@@ -1829,6 +1943,10 @@
                 }
             ],
             "description": "Mime-type detection for Flysystem",
+            "support": {
+                "issues": "https://github.com/thephpleague/mime-type-detection/issues",
+                "source": "https://github.com/thephpleague/mime-type-detection/tree/1.7.0"
+            },
             "funding": [
                 {
                     "url": "https://github.com/frankdejonge",
@@ -1916,6 +2034,10 @@
                 "secure",
                 "server"
             ],
+            "support": {
+                "issues": "https://github.com/thephpleague/oauth2-server/issues",
+                "source": "https://github.com/thephpleague/oauth2-server/tree/8.1.1"
+            },
             "funding": [
                 {
                     "url": "https://github.com/sephster",
@@ -1974,6 +2096,10 @@
                 "psr7",
                 "validation"
             ],
+            "support": {
+                "issues": "https://github.com/thephpleague/openapi-psr7-validator/issues",
+                "source": "https://github.com/thephpleague/openapi-psr7-validator/tree/master"
+            },
             "time": "2020-06-12T10:28:04+00:00"
         },
         {
@@ -2046,6 +2172,10 @@
                 "logging",
                 "psr-3"
             ],
+            "support": {
+                "issues": "https://github.com/Seldaek/monolog/issues",
+                "source": "https://github.com/Seldaek/monolog/tree/1.26.0"
+            },
             "funding": [
                 {
                     "url": "https://github.com/Seldaek",
@@ -2103,6 +2233,10 @@
                 "semver",
                 "versioning"
             ],
+            "support": {
+                "issues": "https://github.com/naneau/semver/issues",
+                "source": "https://github.com/naneau/semver/tree/get_original_version"
+            },
             "time": "2013-01-04T00:00:00+00:00"
         },
         {
@@ -2182,6 +2316,10 @@
                 "datetime",
                 "time"
             ],
+            "support": {
+                "issues": "https://github.com/briannesbitt/Carbon/issues",
+                "source": "https://github.com/briannesbitt/Carbon"
+            },
             "funding": [
                 {
                     "url": "https://opencollective.com/Carbon",
@@ -2238,6 +2376,10 @@
                 "router",
                 "routing"
             ],
+            "support": {
+                "issues": "https://github.com/nikic/FastRoute/issues",
+                "source": "https://github.com/nikic/FastRoute/tree/master"
+            },
             "time": "2018-02-13T20:26:39+00:00"
         },
         {
@@ -2301,6 +2443,10 @@
                 "psr-17",
                 "psr-7"
             ],
+            "support": {
+                "issues": "https://github.com/Nyholm/psr7/issues",
+                "source": "https://github.com/Nyholm/psr7/tree/1.3.2"
+            },
             "funding": [
                 {
                     "url": "https://github.com/Zegnat",
@@ -2375,6 +2521,9 @@
                 "package",
                 "plugin"
             ],
+            "support": {
+                "source": "https://github.com/oat-sa/composer-npm-bridge/tree/v0.4.2"
+            },
             "time": "2020-11-20T08:17:48+00:00"
         },
         {
@@ -2417,6 +2566,10 @@
                 "TAO",
                 "computer-based-assessment"
             ],
+            "support": {
+                "issues": "https://github.com/oat-sa/extension-pcisample/issues",
+                "source": "https://github.com/oat-sa/extension-pcisample/tree/v2.10.2"
+            },
             "time": "2020-08-06T07:55:33+00:00"
         },
         {
@@ -2459,6 +2612,10 @@
                 "TAO",
                 "computer-based-assessment"
             ],
+            "support": {
+                "issues": "https://github.com/oat-sa/extension-tao-backoffice/issues",
+                "source": "https://github.com/oat-sa/extension-tao-backoffice/tree/master"
+            },
             "time": "2020-07-17T08:43:27+00:00"
         },
         {
@@ -2503,6 +2660,10 @@
                 "TAO",
                 "computer-based-assessment"
             ],
+            "support": {
+                "issues": "https://github.com/oat-sa/extension-tao-clientdiag/issues",
+                "source": "https://github.com/oat-sa/extension-tao-clientdiag/tree/v7.8.1"
+            },
             "time": "2020-10-09T08:32:08+00:00"
         },
         {
@@ -2578,6 +2739,11 @@
                 "TAO",
                 "computer-based-assessment"
             ],
+            "support": {
+                "forum": "http://forum.taotesting.com",
+                "issues": "http://forge.taotesting.com",
+                "source": "https://github.com/oat-sa/extension-tao-community/tree/v9.3.0"
+            },
             "time": "2021-02-12T09:41:01+00:00"
         },
         {
@@ -2621,6 +2787,10 @@
                 "TAO",
                 "computer-based-assessment"
             ],
+            "support": {
+                "issues": "https://github.com/oat-sa/extension-tao-dac-simple/issues",
+                "source": "https://github.com/oat-sa/extension-tao-dac-simple/tree/v6.8.3"
+            },
             "time": "2020-09-11T08:33:41+00:00"
         },
         {
@@ -2694,6 +2864,11 @@
                 "TAO",
                 "computer-based-assessment"
             ],
+            "support": {
+                "forum": "http://forum.taotesting.com",
+                "issues": "http://forge.taotesting.com",
+                "source": "https://github.com/oat-sa/extension-tao-delivery/tree/v14.19.0"
+            },
             "time": "2020-10-23T08:29:29+00:00"
         },
         {
@@ -2737,6 +2912,10 @@
                 "TAO",
                 "computer-based-assessment"
             ],
+            "support": {
+                "issues": "https://github.com/oat-sa/extension-tao-delivery-rdf/issues",
+                "source": "https://github.com/oat-sa/extension-tao-delivery-rdf/tree/v13.3.2"
+            },
             "time": "2021-02-12T09:24:08+00:00"
         },
         {
@@ -2780,6 +2959,10 @@
                 "TAO",
                 "computer-based-assessment"
             ],
+            "support": {
+                "issues": "https://github.com/oat-sa/extension-tao-eventlog/issues",
+                "source": "https://github.com/oat-sa/extension-tao-eventlog/tree/master"
+            },
             "time": "2020-07-17T09:10:19+00:00"
         },
         {
@@ -2854,6 +3037,11 @@
                 "TAO",
                 "computer-based-assessment"
             ],
+            "support": {
+                "forum": "http://forum.taotesting.com",
+                "issues": "http://forge.taotesting.com",
+                "source": "https://github.com/oat-sa/extension-tao-funcacl/tree/v6.0.1"
+            },
             "time": "2020-07-17T09:06:23+00:00"
         },
         {
@@ -2927,6 +3115,11 @@
                 "TAO",
                 "computer-based-assessment"
             ],
+            "support": {
+                "forum": "http://forum.taotesting.com",
+                "issues": "http://forge.taotesting.com",
+                "source": "https://github.com/oat-sa/extension-tao-group/tree/v6.6.2"
+            },
             "time": "2020-07-17T08:56:04+00:00"
         },
         {
@@ -3009,6 +3202,11 @@
                 "TAO",
                 "computer-based-assessment"
             ],
+            "support": {
+                "forum": "http://forum.taotesting.com",
+                "issues": "http://forge.taotesting.com",
+                "source": "https://github.com/oat-sa/extension-tao-item/tree/v10.19.1"
+            },
             "time": "2021-01-29T09:44:13+00:00"
         },
         {
@@ -3091,6 +3289,11 @@
                 "TAO",
                 "computer-based-assessment"
             ],
+            "support": {
+                "forum": "http://forum.taotesting.com",
+                "issues": "http://forge.taotesting.com",
+                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/v26.0.0"
+            },
             "time": "2021-02-12T10:19:26+00:00"
         },
         {
@@ -3133,6 +3336,10 @@
                 "TAO",
                 "computer-based-assessment"
             ],
+            "support": {
+                "issues": "https://github.com/oat-sa/extension-tao-itemqti-pci/issues",
+                "source": "https://github.com/oat-sa/extension-tao-itemqti-pci/tree/v6.10.0"
+            },
             "time": "2021-02-12T09:46:43+00:00"
         },
         {
@@ -3175,6 +3382,10 @@
                 "TAO",
                 "computer-based-assessment"
             ],
+            "support": {
+                "issues": "https://github.com/oat-sa/extension-tao-itemqti-pic/issues",
+                "source": "https://github.com/oat-sa/extension-tao-itemqti-pic/tree/v5.6.5"
+            },
             "time": "2020-10-23T08:34:48+00:00"
         },
         {
@@ -3251,6 +3462,11 @@
                 "TAO",
                 "computer-based-assessment"
             ],
+            "support": {
+                "forum": "http://forum.taotesting.com",
+                "issues": "http://forge.taotesting.com",
+                "source": "https://github.com/oat-sa/extension-tao-lti/tree/v11.14.0"
+            },
             "time": "2020-10-23T08:21:54+00:00"
         },
         {
@@ -3325,6 +3541,11 @@
                 "TAO",
                 "computer-based-assessment"
             ],
+            "support": {
+                "forum": "http://forum.taotesting.com",
+                "issues": "http://forge.taotesting.com",
+                "source": "https://github.com/oat-sa/extension-tao-ltideliveryprovider/tree/v11.5.0"
+            },
             "time": "2020-11-06T09:26:23+00:00"
         },
         {
@@ -3369,6 +3590,11 @@
                 "TAO",
                 "computer-based-assessment"
             ],
+            "support": {
+                "forum": "http://forum.taotesting.com",
+                "issues": "http://forge.taotesting.com",
+                "source": "https://github.com/oat-sa/extension-tao-mediamanager/tree/v11.8.1"
+            },
             "time": "2021-01-29T09:34:30+00:00"
         },
         {
@@ -3442,6 +3668,11 @@
                 "TAO",
                 "computer-based-assessment"
             ],
+            "support": {
+                "forum": "http://forum.taotesting.com",
+                "issues": "http://forge.taotesting.com",
+                "source": "https://github.com/oat-sa/extension-tao-outcome/tree/v12.3.3"
+            },
             "time": "2020-12-18T10:06:09+00:00"
         },
         {
@@ -3516,6 +3747,11 @@
                 "TAO",
                 "computer-based-assessment"
             ],
+            "support": {
+                "forum": "http://forum.taotesting.com",
+                "issues": "http://forge.taotesting.com",
+                "source": "https://github.com/oat-sa/extension-tao-outcomekeyvalue/tree/v5.7.1"
+            },
             "time": "2020-07-17T08:52:04+00:00"
         },
         {
@@ -3585,6 +3821,11 @@
                 "TAO",
                 "computer-based-assessment"
             ],
+            "support": {
+                "forum": "http://forum.taotesting.com",
+                "issues": "http://forge.taotesting.com",
+                "source": "https://github.com/oat-sa/extension-tao-outcomelti/tree/v4.0.0"
+            },
             "time": "2020-09-11T08:24:27+00:00"
         },
         {
@@ -3628,6 +3869,10 @@
                 "TAO",
                 "computer-based-assessment"
             ],
+            "support": {
+                "issues": "https://github.com/oat-sa/extension-tao-outcomerds/issues",
+                "source": "https://github.com/oat-sa/extension-tao-outcomerds/tree/master"
+            },
             "time": "2020-07-17T08:41:36+00:00"
         },
         {
@@ -3702,6 +3947,11 @@
                 "TAO",
                 "computer-based-assessment"
             ],
+            "support": {
+                "forum": "http://forum.taotesting.com",
+                "issues": "http://forge.taotesting.com",
+                "source": "https://github.com/oat-sa/extension-tao-outcomeui/tree/v9.5.0"
+            },
             "time": "2020-12-04T09:08:58+00:00"
         },
         {
@@ -3746,6 +3996,10 @@
                 "TAO",
                 "computer-based-assessment"
             ],
+            "support": {
+                "issues": "https://github.com/oat-sa/extension-tao-proctoring/issues",
+                "source": "https://github.com/oat-sa/extension-tao-proctoring/tree/v19.20.8"
+            },
             "time": "2021-01-29T09:31:31+00:00"
         },
         {
@@ -3789,6 +4043,10 @@
                 "TAO",
                 "computer-based-assessment"
             ],
+            "support": {
+                "issues": "https://github.com/oat-sa/extension-tao-revision/issues",
+                "source": "https://github.com/oat-sa/extension-tao-revision/tree/master"
+            },
             "time": "2020-07-16T07:25:46+00:00"
         },
         {
@@ -3844,6 +4102,10 @@
                 "queue",
                 "task"
             ],
+            "support": {
+                "issues": "https://github.com/oat-sa/extension-tao-task-queue/issues",
+                "source": "https://github.com/oat-sa/extension-tao-task-queue/tree/v5.5.1"
+            },
             "time": "2020-09-11T08:42:11+00:00"
         },
         {
@@ -3925,6 +4187,11 @@
                 "TAO",
                 "computer-based-assessment"
             ],
+            "support": {
+                "forum": "https://forum.taocloud.org/",
+                "issues": "https://github.com/oat-sa/extension-tao-test/issues",
+                "source": "https://github.com/oat-sa/extension-tao-test/tree/v14.6.2"
+            },
             "time": "2021-01-29T09:35:54+00:00"
         },
         {
@@ -4011,6 +4278,11 @@
                 "TAO",
                 "computer-based-assessment"
             ],
+            "support": {
+                "forum": "http://forum.taotesting.com",
+                "issues": "http://forge.taotesting.com",
+                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/v40.3.17"
+            },
             "time": "2021-02-16T11:04:26+00:00"
         },
         {
@@ -4058,6 +4330,11 @@
                 "computer-based-assessment",
                 "previewer"
             ],
+            "support": {
+                "forum": "http://forum.taotesting.com",
+                "issues": "http://forge.taotesting.com",
+                "source": "https://github.com/oat-sa/extension-tao-testqti-previewer/tree/v2.24.2"
+            },
             "time": "2021-02-12T09:14:15+00:00"
         },
         {
@@ -4131,6 +4408,11 @@
                 "TAO",
                 "computer-based-assessment"
             ],
+            "support": {
+                "forum": "http://forum.taotesting.com",
+                "issues": "http://forge.taotesting.com",
+                "source": "https://github.com/oat-sa/extension-tao-testtaker/tree/v7.7.3"
+            },
             "time": "2020-10-09T08:39:26+00:00"
         },
         {
@@ -4240,6 +4522,11 @@
                 "computer-based-assessment",
                 "doctrine-dbal"
             ],
+            "support": {
+                "forum": "http://forum.taotesting.com",
+                "issues": "http://forge.taotesting.com",
+                "source": "https://github.com/oat-sa/generis/tree/v13.14.1"
+            },
             "time": "2021-01-29T09:38:58+00:00"
         },
         {
@@ -4276,6 +4563,9 @@
                 }
             ],
             "description": "Jig PHP Utilities",
+            "support": {
+                "source": "https://github.com/oat-sa/jig/tree/master"
+            },
             "time": "2015-07-29T12:04:19+00:00"
         },
         {
@@ -4324,6 +4614,9 @@
                 "math parser",
                 "shunting-yard algorithm"
             ],
+            "support": {
+                "source": "https://github.com/oat-sa/lib-beeme/tree/master"
+            },
             "time": "2016-11-03T16:25:18+00:00"
         },
         {
@@ -4357,6 +4650,10 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "Library provide an object search API",
+            "support": {
+                "issues": "https://github.com/oat-sa/lib-generis-search/issues",
+                "source": "https://github.com/oat-sa/lib-generis-search/tree/V2.1.2"
+            },
             "time": "2020-05-06T12:52:35+00:00"
         },
         {
@@ -4405,6 +4702,10 @@
                 "GPL-2.0-only"
             ],
             "description": "OAT LTI 1.3 Core Library",
+            "support": {
+                "issues": "https://github.com/oat-sa/lib-lti1p3-core/issues",
+                "source": "https://github.com/oat-sa/lib-lti1p3-core/tree/3.3.1"
+            },
             "time": "2021-02-05T19:37:48+00:00"
         },
         {
@@ -4461,6 +4762,11 @@
                 "ms",
                 "time"
             ],
+            "support": {
+                "forum": "http://forum.taotesting.com",
+                "issues": "https://github.com/oat-sa/lib-tao-dtms/issues",
+                "source": "https://github.com/oat-sa/lib-tao-dtms/tree/master"
+            },
             "time": "2018-02-19T14:54:02+00:00"
         },
         {
@@ -4524,6 +4830,11 @@
                 "QTI",
                 "TAO"
             ],
+            "support": {
+                "forum": "http://forum.taotesting.com",
+                "issues": "http://forge.taotesting.com",
+                "source": "https://github.com/oat-sa/lib-tao-qti/tree/v7.0.0"
+            },
             "time": "2021-02-12T06:12:38+00:00"
         },
         {
@@ -4573,6 +4884,11 @@
                 "TAO",
                 "computer-based-assessment"
             ],
+            "support": {
+                "forum": "http://forum.taotesting.com",
+                "issues": "http://forge.taotesting.com",
+                "source": "https://github.com/oat-sa/lib-test-cat/tree/master"
+            },
             "time": "2018-08-02T11:59:59+00:00"
         },
         {
@@ -4629,6 +4945,11 @@
                 "computer-based-assessment",
                 "oatbox"
             ],
+            "support": {
+                "forum": "http://forum.taotesting.com",
+                "issues": "http://forge.taotesting.com",
+                "source": "https://github.com/oat-sa/oatbox-extension-installer/tree/v1.2"
+            },
             "time": "2020-10-26T11:52:04+00:00"
         },
         {
@@ -4737,6 +5058,11 @@
                 "TAO",
                 "computer-based-assessment"
             ],
+            "support": {
+                "forum": "https://forum.taocloud.org",
+                "issues": "https://github.com/oat-sa/tao-core/issues",
+                "source": "https://github.com/oat-sa/tao-core/tree/v46.14.4"
+            },
             "time": "2021-02-12T09:30:04+00:00"
         },
         {
@@ -4807,6 +5133,10 @@
                 "proxy pattern",
                 "service proxies"
             ],
+            "support": {
+                "issues": "https://github.com/Ocramius/ProxyManager/issues",
+                "source": "https://github.com/Ocramius/ProxyManager/tree/2.2.x"
+            },
             "time": "2019-08-10T08:37:15+00:00"
         },
         {
@@ -4856,6 +5186,11 @@
                 "pseudorandom",
                 "random"
             ],
+            "support": {
+                "email": "info@paragonie.com",
+                "issues": "https://github.com/paragonie/random_compat/issues",
+                "source": "https://github.com/paragonie/random_compat"
+            },
             "time": "2020-10-15T10:06:57+00:00"
         },
         {
@@ -4906,6 +5241,10 @@
                 "stream",
                 "uri"
             ],
+            "support": {
+                "issues": "https://github.com/php-http/message-factory/issues",
+                "source": "https://github.com/php-http/message-factory/tree/master"
+            },
             "time": "2015-12-19T14:08:53+00:00"
         },
         {
@@ -4955,6 +5294,10 @@
                     "email": "mike.vanriel@naenius.com"
                 }
             ],
+            "support": {
+                "issues": "https://github.com/phpDocumentor/ReflectionDocBlock/issues",
+                "source": "https://github.com/phpDocumentor/ReflectionDocBlock/tree/release/2.x"
+            },
             "time": "2016-01-25T08:17:30+00:00"
         },
         {
@@ -5046,6 +5389,10 @@
                 "x.509",
                 "x509"
             ],
+            "support": {
+                "issues": "https://github.com/phpseclib/phpseclib/issues",
+                "source": "https://github.com/phpseclib/phpseclib/tree/2.0.30"
+            },
             "funding": [
                 {
                     "url": "https://github.com/terrafrost",
@@ -5110,6 +5457,9 @@
                 "container",
                 "dependency injection"
             ],
+            "support": {
+                "source": "https://github.com/silexphp/Pimple/tree/v3.3.1"
+            },
             "time": "2020-11-24T20:35:42+00:00"
         },
         {
@@ -5156,6 +5506,9 @@
                 "psr",
                 "psr-6"
             ],
+            "support": {
+                "source": "https://github.com/php-fig/cache/tree/master"
+            },
             "time": "2016-08-06T20:24:11+00:00"
         },
         {
@@ -5205,6 +5558,10 @@
                 "container-interop",
                 "psr"
             ],
+            "support": {
+                "issues": "https://github.com/php-fig/container/issues",
+                "source": "https://github.com/php-fig/container/tree/master"
+            },
             "time": "2017-02-14T16:28:37+00:00"
         },
         {
@@ -5257,6 +5614,9 @@
                 "request",
                 "response"
             ],
+            "support": {
+                "source": "https://github.com/php-fig/http-factory/tree/master"
+            },
             "time": "2019-04-30T12:38:16+00:00"
         },
         {
@@ -5307,6 +5667,9 @@
                 "request",
                 "response"
             ],
+            "support": {
+                "source": "https://github.com/php-fig/http-message/tree/master"
+            },
             "time": "2016-08-06T14:39:51+00:00"
         },
         {
@@ -5360,6 +5723,10 @@
                 "response",
                 "server"
             ],
+            "support": {
+                "issues": "https://github.com/php-fig/http-server-handler/issues",
+                "source": "https://github.com/php-fig/http-server-handler/tree/master"
+            },
             "time": "2018-10-30T16:46:14+00:00"
         },
         {
@@ -5413,6 +5780,10 @@
                 "request",
                 "response"
             ],
+            "support": {
+                "issues": "https://github.com/php-fig/http-server-middleware/issues",
+                "source": "https://github.com/php-fig/http-server-middleware/tree/master"
+            },
             "time": "2018-10-30T17:12:04+00:00"
         },
         {
@@ -5460,6 +5831,9 @@
                 "psr",
                 "psr-3"
             ],
+            "support": {
+                "source": "https://github.com/php-fig/log/tree/1.1.3"
+            },
             "time": "2020-03-23T09:12:05+00:00"
         },
         {
@@ -5508,6 +5882,9 @@
                 "psr-16",
                 "simple-cache"
             ],
+            "support": {
+                "source": "https://github.com/php-fig/simple-cache/tree/master"
+            },
             "time": "2017-10-23T01:57:42+00:00"
         },
         {
@@ -5573,6 +5950,11 @@
                 "QTI",
                 "TAO"
             ],
+            "support": {
+                "forum": "http://forum.taotesting.com",
+                "issues": "http://forge.taotesting.com",
+                "source": "https://github.com/oat-sa/qti-sdk/tree/0.24.0"
+            },
             "time": "2021-02-12T01:35:31+00:00"
         },
         {
@@ -5613,6 +5995,10 @@
                 }
             ],
             "description": "A polyfill for getallheaders.",
+            "support": {
+                "issues": "https://github.com/ralouphie/getallheaders/issues",
+                "source": "https://github.com/ralouphie/getallheaders/tree/develop"
+            },
             "time": "2019-03-08T08:55:37+00:00"
         },
         {
@@ -5700,6 +6086,12 @@
                 "identifier",
                 "uuid"
             ],
+            "support": {
+                "issues": "https://github.com/ramsey/uuid/issues",
+                "rss": "https://github.com/ramsey/uuid/releases.atom",
+                "source": "https://github.com/ramsey/uuid",
+                "wiki": "https://github.com/ramsey/uuid/wiki"
+            },
             "time": "2020-02-21T04:36:14+00:00"
         },
         {
@@ -5742,6 +6134,10 @@
                 "process",
                 "reactphp"
             ],
+            "support": {
+                "issues": "https://github.com/reactphp/child-process/issues",
+                "source": "https://github.com/reactphp/child-process/tree/v0.5.2"
+            },
             "time": "2018-01-18T14:53:06+00:00"
         },
         {
@@ -5784,6 +6180,10 @@
                 "asynchronous",
                 "event-loop"
             ],
+            "support": {
+                "issues": "https://github.com/reactphp/event-loop/issues",
+                "source": "https://github.com/reactphp/event-loop/tree/v1.1.1"
+            },
             "time": "2020-01-01T18:39:52+00:00"
         },
         {
@@ -5830,6 +6230,10 @@
                 "stream",
                 "writable"
             ],
+            "support": {
+                "issues": "https://github.com/reactphp/stream/issues",
+                "source": "https://github.com/reactphp/stream/tree/v1.1.1"
+            },
             "time": "2020-05-04T10:17:57+00:00"
         },
         {
@@ -5893,6 +6297,10 @@
                 "validation",
                 "validator"
             ],
+            "support": {
+                "issues": "https://github.com/Respect/Validation/issues",
+                "source": "https://github.com/Respect/Validation/tree/1.1.31"
+            },
             "time": "2019-05-28T06:10:06+00:00"
         },
         {
@@ -5945,6 +6353,10 @@
                 "multipart",
                 "parser"
             ],
+            "support": {
+                "issues": "https://github.com/Riverline/multipart-parser/issues",
+                "source": "https://github.com/Riverline/multipart-parser/tree/2.0.8"
+            },
             "time": "2020-01-24T09:39:24+00:00"
         },
         {
@@ -5994,6 +6406,10 @@
                 "operating system",
                 "os"
             ],
+            "support": {
+                "issues": "https://github.com/sinergi/php-browser-detector/issues",
+                "source": "https://github.com/sinergi/php-browser-detector/tree/6.1.3"
+            },
             "time": "2020-10-29T15:55:28+00:00"
         },
         {
@@ -6067,6 +6483,10 @@
                 "micro",
                 "router"
             ],
+            "support": {
+                "issues": "https://github.com/slimphp/Slim/issues",
+                "source": "https://github.com/slimphp/Slim/tree/3.x"
+            },
             "time": "2019-11-28T17:40:33+00:00"
         },
         {
@@ -6139,6 +6559,9 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/console/tree/4.2"
+            },
             "time": "2019-07-24T17:13:20+00:00"
         },
         {
@@ -6210,6 +6633,9 @@
                 "interoperability",
                 "standards"
             ],
+            "support": {
+                "source": "https://github.com/symfony/contracts/tree/master"
+            },
             "time": "2019-04-27T14:29:50+00:00"
         },
         {
@@ -6262,6 +6688,9 @@
                 "env",
                 "environment"
             ],
+            "support": {
+                "source": "https://github.com/symfony/dotenv/tree/v4.4.19"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -6333,6 +6762,9 @@
                 "redlock",
                 "semaphore"
             ],
+            "support": {
+                "source": "https://github.com/symfony/lock/tree/v3.4.47"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -6351,7 +6783,7 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.22.0",
+            "version": "v1.22.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
@@ -6409,6 +6841,9 @@
                 "polyfill",
                 "portable"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.22.1"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -6427,16 +6862,16 @@
         },
         {
             "name": "symfony/polyfill-intl-idn",
-            "version": "v1.22.0",
+            "version": "v1.22.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-idn.git",
-                "reference": "0eb8293dbbcd6ef6bf81404c9ce7d95bcdf34f44"
+                "reference": "2d63434d922daf7da8dd863e7907e67ee3031483"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/0eb8293dbbcd6ef6bf81404c9ce7d95bcdf34f44",
-                "reference": "0eb8293dbbcd6ef6bf81404c9ce7d95bcdf34f44",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/2d63434d922daf7da8dd863e7907e67ee3031483",
+                "reference": "2d63434d922daf7da8dd863e7907e67ee3031483",
                 "shasum": ""
             },
             "require": {
@@ -6493,6 +6928,9 @@
                 "portable",
                 "shim"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-intl-idn/tree/v1.22.1"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -6507,20 +6945,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-07T16:49:33+00:00"
+            "time": "2021-01-22T09:19:47+00:00"
         },
         {
             "name": "symfony/polyfill-intl-normalizer",
-            "version": "v1.22.0",
+            "version": "v1.22.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-normalizer.git",
-                "reference": "6e971c891537eb617a00bb07a43d182a6915faba"
+                "reference": "43a0283138253ed1d48d352ab6d0bdb3f809f248"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-normalizer/zipball/6e971c891537eb617a00bb07a43d182a6915faba",
-                "reference": "6e971c891537eb617a00bb07a43d182a6915faba",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-normalizer/zipball/43a0283138253ed1d48d352ab6d0bdb3f809f248",
+                "reference": "43a0283138253ed1d48d352ab6d0bdb3f809f248",
                 "shasum": ""
             },
             "require": {
@@ -6574,6 +7012,9 @@
                 "portable",
                 "shim"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-intl-normalizer/tree/v1.22.1"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -6588,20 +7029,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-07T17:09:11+00:00"
+            "time": "2021-01-22T09:19:47+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.22.0",
+            "version": "v1.22.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "f377a3dd1fde44d37b9831d68dc8dea3ffd28e13"
+                "reference": "5232de97ee3b75b0360528dae24e73db49566ab1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/f377a3dd1fde44d37b9831d68dc8dea3ffd28e13",
-                "reference": "f377a3dd1fde44d37b9831d68dc8dea3ffd28e13",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/5232de97ee3b75b0360528dae24e73db49566ab1",
+                "reference": "5232de97ee3b75b0360528dae24e73db49566ab1",
                 "shasum": ""
             },
             "require": {
@@ -6651,6 +7092,9 @@
                 "portable",
                 "shim"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.22.1"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -6665,7 +7109,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-07T16:49:33+00:00"
+            "time": "2021-01-22T09:19:47+00:00"
         },
         {
             "name": "symfony/polyfill-php70",
@@ -6716,6 +7160,9 @@
                 "portable",
                 "shim"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-php70/tree/v1.20.0"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -6734,7 +7181,7 @@
         },
         {
             "name": "symfony/polyfill-php72",
-            "version": "v1.22.0",
+            "version": "v1.22.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php72.git",
@@ -6789,6 +7236,9 @@
                 "portable",
                 "shim"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-php72/tree/v1.22.1"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -6807,7 +7257,7 @@
         },
         {
             "name": "symfony/polyfill-php80",
-            "version": "v1.22.0",
+            "version": "v1.22.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
@@ -6869,6 +7319,9 @@
                 "portable",
                 "shim"
             ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-php80/tree/v1.22.1"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -6945,6 +7398,9 @@
                 "interoperability",
                 "standards"
             ],
+            "support": {
+                "source": "https://github.com/symfony/service-contracts/tree/master"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -7004,6 +7460,9 @@
             ],
             "description": "Provides a way to profile code",
             "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/stopwatch/tree/v5.2.3"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -7094,6 +7553,9 @@
             ],
             "description": "Provides tools to internationalize your application",
             "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/translation/tree/v5.2.3"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -7169,6 +7631,9 @@
                 "interoperability",
                 "standards"
             ],
+            "support": {
+                "source": "https://github.com/symfony/translation-contracts/tree/v2.3.0"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -7237,6 +7702,9 @@
             ],
             "description": "Loads and dumps YAML files",
             "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/yaml/tree/v4.4.19"
+            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -7300,6 +7768,10 @@
                 "check",
                 "validate"
             ],
+            "support": {
+                "issues": "https://github.com/webmozarts/assert/issues",
+                "source": "https://github.com/webmozarts/assert/tree/1.9.1"
+            },
             "time": "2020-07-08T17:02:28+00:00"
         },
         {
@@ -7357,6 +7829,14 @@
                 "code",
                 "zf"
             ],
+            "support": {
+                "chat": "https://zendframework-slack.herokuapp.com",
+                "docs": "https://docs.zendframework.com/zend-code/",
+                "forum": "https://discourse.zendframework.com/c/questions/components",
+                "issues": "https://github.com/zendframework/zend-code/issues",
+                "rss": "https://github.com/zendframework/zend-code/releases.atom",
+                "source": "https://github.com/zendframework/zend-code"
+            },
             "abandoned": "laminas/laminas-code",
             "time": "2019-12-10T19:21:15+00:00"
         },
@@ -7412,6 +7892,10 @@
                 "events",
                 "zf2"
             ],
+            "support": {
+                "issues": "https://github.com/zendframework/zend-eventmanager/issues",
+                "source": "https://github.com/zendframework/zend-eventmanager/tree/master"
+            },
             "abandoned": "laminas/laminas-eventmanager",
             "time": "2018-04-25T15:33:34+00:00"
         },
@@ -7463,6 +7947,10 @@
                 "servicemanager",
                 "zf2"
             ],
+            "support": {
+                "issues": "https://github.com/zendframework/zend-servicemanager/issues",
+                "source": "https://github.com/zendframework/zend-servicemanager/tree/release-2.5.1"
+            },
             "abandoned": "laminas/laminas-servicemanager",
             "time": "2015-06-03T15:32:02+00:00"
         }
@@ -7475,5 +7963,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.0.0"
 }
