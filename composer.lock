@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ff043940b19561055b0037756d92c4f5",
+    "content-hash": "0ad604709da43c079138a58abbc3eaac",
     "packages": [
         {
             "name": "clearfw/clearfw",
@@ -2095,16 +2095,16 @@
         },
         {
             "name": "oat-sa/extension-tao-itemqti",
-            "version": "v18.7.7",
+            "version": "18.7.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti.git",
-                "reference": "4c103334f9f5cccf78c7019adcea471182e9e656"
+                "reference": "4eab6cad45ab1dbceda4fb6f1c01ac702709ed04"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/4c103334f9f5cccf78c7019adcea471182e9e656",
-                "reference": "4c103334f9f5cccf78c7019adcea471182e9e656",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/4eab6cad45ab1dbceda4fb6f1c01ac702709ed04",
+                "reference": "4eab6cad45ab1dbceda4fb6f1c01ac702709ed04",
                 "shasum": ""
             },
             "require": {
@@ -2167,12 +2167,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "support": {
-                "forum": "http://forum.taotesting.com",
-                "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/master"
-            },
-            "time": "2019-02-15T10:25:37+00:00"
+            "time": "2021-02-25T13:01:12+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pci",
@@ -4546,7 +4541,14 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [],
+    "aliases": [
+        {
+            "alias": "18.7.7",
+            "alias_normalized": "18.7.7.0",
+            "version": "18.7.7.2",
+            "package": "oat-sa/extension-tao-itemqti"
+        }
+    ],
     "minimum-stability": "dev",
     "stability-flags": [],
     "prefer-stable": false,
