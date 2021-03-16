@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7891dea53d48e3ad4b52ce0a392943de",
+    "content-hash": "0c6c2eb08eff5bd5cf636a5563fa56bb",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -5308,16 +5308,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "dev-hotfix/ADF-168/guzzle-version-lock",
+            "version": "v47.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "cdffd5ab7a2811ef128b406646f15184dacf0200"
+                "reference": "505710dcb59f2f723896f46924f231804352c4b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/cdffd5ab7a2811ef128b406646f15184dacf0200",
-                "reference": "cdffd5ab7a2811ef128b406646f15184dacf0200",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/505710dcb59f2f723896f46924f231804352c4b4",
+                "reference": "505710dcb59f2f723896f46924f231804352c4b4",
                 "shasum": ""
             },
             "require": {
@@ -5417,9 +5417,9 @@
             "support": {
                 "forum": "https://forum.taocloud.org",
                 "issues": "https://github.com/oat-sa/tao-core/issues",
-                "source": "https://github.com/oat-sa/tao-core/tree/hotfix/ADF-168/guzzle-version-lock"
+                "source": "https://github.com/oat-sa/tao-core/tree/v47.1.3"
             },
-            "time": "2021-03-12T12:37:06+00:00"
+            "time": "2021-03-16T10:13:50+00:00"
         },
         {
             "name": "ocramius/proxy-manager",
@@ -8260,24 +8260,12 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [
-        {
-            "package": "oat-sa/tao-core",
-            "version": "dev-hotfix/ADF-168/guzzle-version-lock",
-            "alias": "47.1.1",
-            "alias_normalized": "47.1.1.0"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "oat-sa/tao-core": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "platform-overrides": {
-        "php": "7.2.34"
-    },
     "plugin-api-version": "2.0.0"
 }
