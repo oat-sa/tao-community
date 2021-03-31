@@ -5,6 +5,7 @@ name: Relese Tao extension
 on:
   pull_request:
     branches: [ alpha ]
+
 jobs:
   auto-release:
     name: automated Tao-community extension release
