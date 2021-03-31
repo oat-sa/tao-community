@@ -1,0 +1,76 @@
+# This workflow will do a release after merge to develop branch
+
+name: Relese Tao extension
+
+on:
+  pull_request:
+    branches: [ alpha ]
+jobs:
+  auto-release:
+    name: automated Tao-community extension release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Install PHP, composer v2
+      - name: Setup PHP,
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.2'
+          tools: composer:v2
+        env:
+          COMPOSER_TOKEN: ${{ secrets.GH_TOKEN }}
+
+      - name: Extract branch name
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
+
+      # Prepare composer.json file
+      - name: Prepare composer file
+        run: |
+          php -r '$composerArray = json_decode(file_get_contents("./composer.json"), true);
+          foreach ($composerArray["require"] as &$repository) {
+              $repository = "*";
+          }
+          file_put_contents("./composer-release.json", json_encode($composerArray, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));'
+
+      # Composer Install
+#      - name: Install dependencies
+#        run: |
+#          COMPOSER=composer-release.json composer install --no-dev --no-interaction --prefer-source
+
+      # Generate new composer.json file
+      - name: generate new composer.json
+        run: |
+          php -r '$composerArray = json_decode(file_get_contents("./composer.json"), true);
+          $composerLockArray = json_decode(file_get_contents("./composer.lock"), true);
+          foreach ($composerArray["require"] as $name => &$version) {
+              $version = getVersion($name, $composerLockArray);
+          }
+          function getVersion($name, $composerLockArray) {
+              foreach ($composerLockArray["packages"] as $package) {
+                  if ($package["name"] === $name) {
+                      break;
+                  }
+              }
+              return str_replace("v", "", $package["version"]);
+          }'\
+
+      - name: Add comment to PR
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          BRANCH_NAME: ${{ steps.extract_branch.outputs.branch }}
+        run: |
+          REPO_NAME=$(jq --raw-output '."name"' composer.json)
+          git config --global user.name github-actions
+          git config --global user.email github-actions@github.com
+          git config --global url."https://github.com/".insteadOf git@github.com:
+          git config --global url."https://".insteadOf git://
+          git config --global url."https://github.com/".insteadOf ssh://git@github.com/
+          git remote set-url --push origin https://${GITHUB_TOKEN}@github.com/$REPO_NAME.git
+          git add composer.json
+          git add composer.lock
+          git commit -m 'chore(release): update composer files'
+          echo "$BRANCH_NAME"
