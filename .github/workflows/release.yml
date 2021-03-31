@@ -30,6 +30,7 @@ jobs:
 
       # Prepare composer.json file
       - name: Prepare composer file
+        if: always()
         run: |
           php -r '$composerArray = json_decode(file_get_contents("./composer.json"), true);
           foreach ($composerArray["require"] as &$repository) {
@@ -59,7 +60,7 @@ jobs:
               return str_replace("v", "", $package["version"]);
           }'\
 
-      - name: Add comment to PR
+      - name: Add commit to PR
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           BRANCH_NAME: ${{ steps.extract_branch.outputs.branch }}
