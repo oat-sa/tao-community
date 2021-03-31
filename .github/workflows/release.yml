@@ -4,10 +4,8 @@ name: generate composer files
 
 on:
   pull_request:
-    branches:
-      - alpha
-    types:
-      - [opened, reopened]
+    branches: [alpha]
+    types: [opened, reopened]
 
 jobs:
   auto-release:
