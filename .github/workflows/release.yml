@@ -5,6 +5,8 @@ name: generate composer files
 on:
   pull_request:
     branches: [ alpha ]
+    types:
+      - created
 
 jobs:
   auto-release:
@@ -75,4 +77,4 @@ jobs:
           git add composer-release.json
           git add composer.lock
           git commit -m 'chore(release): update composer files'
-          git push origin $BRANCH_NAME
+          git status
