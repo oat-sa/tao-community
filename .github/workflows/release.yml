@@ -75,4 +75,4 @@ jobs:
           git add composer.json
           git add composer.lock
           git commit -m 'chore(release): update composer files'
-          echo "$BRANCH_NAME"
+          git branch --show-current
