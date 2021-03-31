@@ -7,7 +7,7 @@ on:
     branches:
       - alpha
     types:
-      - created
+      - [opened, reopened]
 
 jobs:
   auto-release:
