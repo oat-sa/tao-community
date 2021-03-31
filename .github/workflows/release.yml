@@ -1,6 +1,6 @@
 # This workflow will do a release after merge to develop branch
 
-name: Relese Tao extension
+name: generate composer files
 
 on:
   pull_request:
@@ -72,7 +72,7 @@ jobs:
           git config --global url."https://".insteadOf git://
           git config --global url."https://github.com/".insteadOf ssh://git@github.com/
           git remote set-url --push origin https://${GITHUB_TOKEN}@github.com/$REPO_NAME.git
-          git add composer.json
+          git add composer-release.json
           git add composer.lock
           git commit -m 'chore(release): update composer files'
-          git branch --show-current
+          git push origin $BRANCH_NAME
