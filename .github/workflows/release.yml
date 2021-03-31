@@ -77,4 +77,4 @@ jobs:
           git add composer-release.json
           git add composer.lock
           git commit -m 'chore(release): update composer files'
-          git status
+          git push
