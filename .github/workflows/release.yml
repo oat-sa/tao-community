@@ -62,7 +62,7 @@ jobs:
       - name: Install dependencies
         run: |
           rm composer-release.json
-          composer update --no-dev --no-interaction --prefer-source
+          COMPOSER_DISCARD_CHANGES=true composer update --no-dev --no-interaction --prefer-source
 
       - name: Commit and push changes
         uses: EndBug/add-and-commit@v7.0.0
