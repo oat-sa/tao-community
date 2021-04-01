@@ -41,9 +41,9 @@ jobs:
           file_put_contents("./composer-release.json", json_encode($composerArray, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));'
 
       # Composer Install
-#      - name: Install dependencies
-#        run: |
-#          COMPOSER=composer-release.json composer install --no-dev --no-interaction --prefer-source
+      - name: Install dependencies
+        run: |
+          COMPOSER=composer-release.json composer install --no-dev --no-interaction --prefer-source
 
       # Generate new composer.json file
       - name: generate new composer.json
@@ -66,20 +66,4 @@ jobs:
         uses: EndBug/add-and-commit@v7.0.0
         with:
           message: 'chore(release): update composer files'
-
-#      - name: Add commit to PR
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-#          BRANCH_NAME: ${{ steps.extract_branch.outputs.branch }}
-#        run: |
-#          REPO_NAME=$(jq --raw-output '."name"' composer.json)
-#          git config --global user.name github-actions
-#          git config --global user.email github-actions@github.com
-#          git config --global url."https://github.com/".insteadOf git@github.com:
-#          git config --global url."https://".insteadOf git://
-#          git config --global url."https://github.com/".insteadOf ssh://git@github.com/
-#          git remote set-url --push origin https://${GITHUB_TOKEN}@github.com/$REPO_NAME.git
-#          git add composer-release.json
-#          git add composer.lock
-#          git commit -m 'chore(release): update composer files'
-#          git push
+          add: 'composer.*'
