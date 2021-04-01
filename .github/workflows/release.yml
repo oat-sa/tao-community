@@ -44,7 +44,7 @@ jobs:
       - name: generate new composer.json
         run: |
           php -r '$composerArray = json_decode(file_get_contents("./composer.json"), true);
-          $composerLockArray = json_decode(file_get_contents("./composer.lock"), true);
+          $composerLockArray = json_decode(file_get_contents("./composer-release.lock"), true);
           foreach ($composerArray["require"] as $name => &$version) {
               $version = getVersion($name, $composerLockArray);
           }
@@ -62,9 +62,11 @@ jobs:
       - name: Install dependencies
         run: |
           rm composer-release.json
+          rm composer-release.lock
           COMPOSER_DISCARD_CHANGES=true composer update --no-dev --no-interaction --prefer-source
 
       - name: Commit and push changes
         uses: EndBug/add-and-commit@v7.0.0
         with:
+          add: 'composer.*'
           message: 'chore(release): update composer files'
