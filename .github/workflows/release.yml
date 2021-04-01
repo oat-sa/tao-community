@@ -63,10 +63,10 @@ jobs:
           }'\
 
       - name: Commit and push changes
-          uses: devops-infra/action-commit-push@master
-          with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            commit_message: 'chore(release): update composer files'
+        uses: devops-infra/action-commit-push@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          commit_message: 'chore(release): update composer files'
 
 #      - name: Add commit to PR
 #        env:
