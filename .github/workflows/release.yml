@@ -25,11 +25,6 @@ jobs:
         env:
           COMPOSER_TOKEN: ${{ secrets.GH_TOKEN }}
 
-      - name: Extract branch name
-        shell: bash
-        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-        id: extract_branch
-
       # Prepare composer.json file
       - name: Prepare composer file
         if: always()
@@ -40,10 +35,10 @@ jobs:
           }
           file_put_contents("./composer-release.json", json_encode($composerArray, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));'
 
-      # Composer Install
+      # Composer update
       - name: Install dependencies
         run: |
-          COMPOSER=composer-release.json composer install --no-dev --no-interaction --prefer-source
+          COMPOSER=composer-release.json composer update --no-dev --no-interaction --prefer-source
 
       # Generate new composer.json file
       - name: generate new composer.json
@@ -63,8 +58,13 @@ jobs:
               return str_replace("v", "", $package["version"]);
           }'
 
+      # Composer update
+      - name: Install dependencies
+        run: |
+          rm composer-release.json
+          composer update --no-dev --no-interaction --prefer-source
+
       - name: Commit and push changes
         uses: EndBug/add-and-commit@v7.0.0
         with:
           message: 'chore(release): update composer files'
-          add: 'composer.*'
