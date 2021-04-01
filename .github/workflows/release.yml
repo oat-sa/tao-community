@@ -53,6 +53,7 @@ jobs:
           foreach ($composerArray["require"] as $name => &$version) {
               $version = getVersion($name, $composerLockArray);
           }
+          file_put_contents("./composer.json", json_encode($composerArray, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
           function getVersion($name, $composerLockArray) {
               foreach ($composerLockArray["packages"] as $package) {
                   if ($package["name"] === $name) {
@@ -60,7 +61,7 @@ jobs:
                   }
               }
               return str_replace("v", "", $package["version"]);
-          }'\
+          }'
 
       - name: Commit and push changes
         uses: EndBug/add-and-commit@v7.0.0
