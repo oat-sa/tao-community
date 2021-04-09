@@ -1,0 +1,72 @@
+# This workflow will do a release after merge to develop branch
+
+name: generate composer files
+
+on:
+  pull_request:
+    branches:
+      - alpha
+    types: [opened, reopened]
+
+jobs:
+  auto-release:
+    name: automated Tao-community extension release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Install PHP, composer v2
+      - name: Setup PHP,
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.2'
+          tools: composer:v2
+        env:
+          COMPOSER_TOKEN: ${{ secrets.GH_TOKEN }}
+
+      # Generate composer.json file to fetch the latest releases of extensions
+      - name: Prepare composer file
+        if: always()
+        run: |
+          php -r '$composerArray = json_decode(file_get_contents("./composer.json"), true);
+          foreach ($composerArray["require"] as &$repository) {
+              $repository = "*";
+          }
+          file_put_contents("./composer-release.json", json_encode($composerArray, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));'
+
+      # Composer update
+      - name: Install dependencies
+        run: |
+          COMPOSER=composer-release.json composer update --no-dev --no-interaction --prefer-source
+
+      # Generate new composer.json file
+      - name: generate new composer.json
+        run: |
+          php -r '$composerArray = json_decode(file_get_contents("./composer.json"), true);
+          $composerLockArray = json_decode(file_get_contents("./composer-release.lock"), true);
+          foreach ($composerArray["require"] as $name => &$version) {
+              $version = getVersion($name, $composerLockArray);
+          }
+          file_put_contents("./composer.json", json_encode($composerArray, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
+          function getVersion($name, $composerLockArray) {
+              foreach ($composerLockArray["packages"] as $package) {
+                  if ($package["name"] === $name) {
+                      break;
+                  }
+              }
+              return str_replace("v", "", $package["version"]);
+          }'
+
+      # Composer update
+      - name: Install dependencies
+        run: |
+          rm composer-release.json
+          rm composer-release.lock
+          COMPOSER_DISCARD_CHANGES=true composer update --no-dev --no-interaction --prefer-source
+
+      - name: Commit and push changes
+        uses: EndBug/add-and-commit@v7.0.0
+        with:
+          add: 'composer.*'
+          message: 'chore(release): update composer files'
