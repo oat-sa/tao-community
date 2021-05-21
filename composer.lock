@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1b64543da77690777750f2cc2d831933",
+    "content-hash": "4fad6caa9239e516fd019462ca93e322",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -4530,16 +4530,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "v46.8.4",
+            "version": "dev-hotfix/TR-1207/support-locale-format-datetime-in-utc",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "8018f5f6b7345e9906bbae8f26e615d57399937c"
+                "reference": "32c40cae7ecb35325ef3db9935393214a7aa8612"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/8018f5f6b7345e9906bbae8f26e615d57399937c",
-                "reference": "8018f5f6b7345e9906bbae8f26e615d57399937c",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/32c40cae7ecb35325ef3db9935393214a7aa8612",
+                "reference": "32c40cae7ecb35325ef3db9935393214a7aa8612",
                 "shasum": ""
             },
             "require": {
@@ -4632,7 +4632,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2020-12-15T13:24:16+00:00"
+            "time": "2021-05-21T08:41:36+00:00"
         },
         {
             "name": "ocramius/package-versions",
@@ -7205,12 +7205,12 @@
             "version": "1.9.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/webmozart/assert.git",
+                "url": "https://github.com/webmozarts/assert.git",
                 "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/bafc69caeb4d49c39fd0779086c03a3738cbb389",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/bafc69caeb4d49c39fd0779086c03a3738cbb389",
                 "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389",
                 "shasum": ""
             },
@@ -7415,9 +7415,18 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [],
+    "aliases": [
+        {
+            "alias": "46.8.5-dev",
+            "alias_normalized": "46.8.5.0-dev",
+            "version": "dev-hotfix/TR-1207/support-locale-format-datetime-in-utc",
+            "package": "oat-sa/tao-core"
+        }
+    ],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "oat-sa/tao-core": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
