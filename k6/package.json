@@ -1,0 +1,25 @@
+{
+  "name": "@oat-sa/k6-template",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "k6 test template",
+  "scripts": {
+    "bundle": "webpack",
+    "bundle:watch": "nodemon --exec webpack",
+    "prettier-write": "npx prettier --write src",
+    "prettier-check": "npx prettier --check src",
+    "lint": "eslint src/** webpack.config.js"
+  },
+  "keywords": [
+    "k6"
+  ],
+  "author": "Gabriel Felipe Soares <gabriel.felipe.soares@taotesting.com>",
+  "license": "ISC",
+  "dependencies": {
+    "tao-k6-core": "oat-sa/k6-core.git#feature/k6-core-main-features"
+  },
+  "prettier": "@oat-sa/prettier-config",
+  "eslintConfig": {
+    "extends": "@oat-sa/eslint-config-tao"
+  }
+}

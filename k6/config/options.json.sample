@@ -1,0 +1,37 @@
+{
+  "stages": [
+    {
+      "target": 2,
+      "duration": "5s"
+    },
+    {
+      "target": 1,
+      "duration": "5s"
+    },
+    {
+      "target": 0,
+      "duration": "5s"
+    }
+  ],
+  "scenarios": {
+    "scenario1": {
+      "executor": "per-vu-iterations",
+      "vus": 5,
+      "iterations": 3,
+      "maxDuration": "15s"
+    }
+  },
+  "thresholds": {
+    "requests": [
+      {
+        "threshold": "count < 100"
+      }
+    ],
+    "http_req_duration": [
+      {
+        "threshold": "p(95)<1000",
+        "delayAbortEval": "1m"
+      }
+    ]
+  }
+}
