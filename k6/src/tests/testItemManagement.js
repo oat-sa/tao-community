@@ -3,10 +3,11 @@
  * This is a template file, please replace with your implementation.
  *
  */
-import { checkMyApiGetRequest } from '../modules/apiRequest.js';
+import { loginUi } from '../modules/auth/login.js';
 import { configLoader } from 'tao-k6-core';
 import { group, sleep } from 'k6';
 import { Counter } from 'k6/metrics';
+import { accessItemsMenu } from '../modules/items/navigation.js';
 
 export const requests = new Counter('http_reqs');
 
@@ -26,9 +27,21 @@ export const options = {
 };
 
 export default function (setupData) {
+    group(`Login to application: ${setupData.config.application.url}`, function () {
+        const responseLogin = loginUi(
+            setupData.config.application.url,
+            setupData.config.application.login,
+            setupData.config.application.password
+        );
+
+        console.warn(responseLogin);
+    });
+
     group(`Testing: ${setupData.config.application.url}`, function () {
-        group('GET request is working', function () {
-            checkMyApiGetRequest(setupData.config.application.url);
+        group('Access Item Menu', function () {
+            accessItemsMenu({
+                url: setupData.config.application.url
+            });
 
             sleep(setupData.config.custom.intervalBetweenActions);
         });
@@ -36,6 +49,6 @@ export default function (setupData) {
 }
 
 export function teardown(data) {
-    return data;
     // Clear necessary test data
+    return data;
 }
