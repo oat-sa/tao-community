@@ -1,7 +1,5 @@
 /**
- *
- * This is a template file, please replace with your implementation.
- *
+ * Test item management: Create, list and update item
  */
 import { loginUi } from '../modules/auth/login.js';
 import { configLoader } from 'tao-k6-core';
