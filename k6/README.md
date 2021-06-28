@@ -51,3 +51,12 @@ Check syntax:
 ````shell
 npm run lint
 ````
+
+# Api authentication 
+
+Create user inside the container (php and nginx) in order to use the API to test tao (use a proper login/password):
+
+```shell
+export PHP_AUTH_USER=admin
+export PHP_AUTH_PWD=Admin.12345
+```

@@ -8,6 +8,7 @@ import { configLoader } from 'tao-k6-core';
 import { group, sleep } from 'k6';
 import { Counter } from 'k6/metrics';
 import { accessItemsMenu } from '../modules/items/navigation.js';
+import { createItem } from "../modules/items/api.js";
 
 export const requests = new Counter('http_reqs');
 
@@ -38,6 +39,18 @@ export default function (setupData) {
     });
 
     group(`Testing: ${setupData.config.application.url}`, function () {
+        group('Create item', function () {
+            createItem({
+                url: setupData.config.application.url,
+                item: {
+                    classUri: "",
+                    label: "My K6 test"
+                },
+            });
+
+            sleep(setupData.config.custom.intervalBetweenActions);
+        });
+
         group('Access Item Menu', function () {
             accessItemsMenu({
                 url: setupData.config.application.url

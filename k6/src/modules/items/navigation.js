@@ -1,6 +1,6 @@
 import http from 'k6/http';
 import { check } from 'k6';
-import { encodeUri } from '../../components/uri/encoder';
+import { encodeUri } from '../../components/uri/encoder.js';
 
 export function accessItemsMenu(params) {
     const res = http.request('GET', params.url + '/tao/Main/index?structure=items&ext=taoItems', '', params.options);
@@ -10,6 +10,8 @@ export function accessItemsMenu(params) {
         'response body': r => r.body.indexOf('Create and design items and exercises') !== -1,
         'response time ok': r => r.timings.duration < 2000
     });
+
+    return res;
 }
 
 export function getItemTree(params) {
