@@ -2,15 +2,15 @@
   "stages": [
     {
       "target": 2,
-      "duration": "5s"
+      "duration": "1s"
     },
     {
       "target": 1,
-      "duration": "5s"
+      "duration": "1s"
     },
     {
       "target": 0,
-      "duration": "5s"
+      "duration": "1s"
     }
   ],
   "scenarios": {
@@ -18,7 +18,7 @@
       "executor": "per-vu-iterations",
       "vus": 1,
       "iterations": 1,
-      "maxDuration": "15s"
+      "maxDuration": "3s"
     }
   },
   "thresholds": {

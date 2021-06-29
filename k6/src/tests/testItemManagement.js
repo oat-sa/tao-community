@@ -5,8 +5,8 @@ import { loginUi } from '../modules/auth/login.js';
 import { configLoader } from 'tao-k6-core';
 import { group, sleep } from 'k6';
 import { Counter } from 'k6/metrics';
-import { accessItemsMenu } from '../modules/items/navigation.js';
-import { createItem } from "../modules/items/api.js";
+import { accessItemsMenu } from '../modules/item/navigation.js';
+import { createMultipleItems, deleteItems } from '../modules/item/api.js';
 
 export const requests = new Counter('http_reqs');
 
@@ -15,8 +15,34 @@ let config = configLoader.loadEnvironmentConfig();
 config.custom = configLoader.loadFileConfig(__ENV.CUSTOM_FILE);
 
 export function setup() {
+    const user = loginUi({
+        url: config.application.url,
+        login: config.application.login,
+        password: config.application.password,
+        cookieName: config.application.cookieName
+    });
+
+    const parsedUser = {
+        _cookie: user._cookie
+    };
+
+    let itemCollection = createMultipleItems({
+        url: config.application.url,
+        user: parsedUser,
+        quantity: 1,
+        item: {
+            classUri: config.application.itemClassUri,
+            label: 'My test item'
+        }
+    });
+
+    console.log('==============AAA==================');
+    console.log(JSON.stringify(parsedUser));
+
     return {
-        config: config
+        config: config,
+        user: parsedUser,
+        itemCollection: itemCollection
     };
 }
 
@@ -26,32 +52,11 @@ export const options = {
 };
 
 export default function (setupData) {
-    group(`Login to application: ${setupData.config.application.url}`, function () {
-        const responseLogin = loginUi(
-            setupData.config.application.url,
-            setupData.config.application.login,
-            setupData.config.application.password
-        );
-
-        console.warn(responseLogin);
-    });
-
     group(`Testing: ${setupData.config.application.url}`, function () {
-        group('Create item', function () {
-            createItem({
-                url: setupData.config.application.url,
-                item: {
-                    classUri: "",
-                    label: "My K6 test"
-                },
-            });
-
-            sleep(setupData.config.custom.intervalBetweenActions);
-        });
-
         group('Access Item Menu', function () {
             accessItemsMenu({
-                url: setupData.config.application.url
+                url: setupData.config.application.url,
+                user: setupData.user
             });
 
             sleep(setupData.config.custom.intervalBetweenActions);
@@ -60,6 +65,11 @@ export default function (setupData) {
 }
 
 export function teardown(data) {
-    // Clear necessary test data
+    deleteItems({
+        url: data.config.application.url,
+        items: data.itemCollection._items,
+        user: data.user
+    });
+
     return data;
 }

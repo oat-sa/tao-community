@@ -3,7 +3,16 @@ import { check } from 'k6';
 import { encodeUri } from '../../components/uri/encoder.js';
 
 export function accessItemsMenu(params) {
-    const res = http.request('GET', params.url + '/tao/Main/index?structure=items&ext=taoItems', '', params.options);
+    console.log('================================');
+    console.log(JSON.stringify(params.user._cookie));
+
+    const res = http.request('GET', params.url + '/tao/Main/index?structure=items&ext=taoItems', '', {
+        headers: {
+            'X-Requested-With': 'XMLHttpRequest',
+            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+        },
+        cookies: params.user._cookie
+    });
 
     check(res, {
         'status is 200': r => r.status === 200,
@@ -20,7 +29,13 @@ export function getItemTree(params) {
         params.url +
             '/taoItems/Items/getOntologyData?extension=taoItems&perspective=items&section=manage_items&classUri=http%3A%2F%2Fwww.tao.lu%2FOntologies%2FTAOItem.rdf%23Item&hideInstances=0&filter=*&offset=0&limit=30&selected=undefined',
         '',
-        params.options
+        {
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest',
+                'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+            },
+            cookies: params.user._cookie
+        }
     );
 
     check(res, { 'status is 200': r => r.status === 200 });
@@ -38,7 +53,13 @@ export function selectItemOfTree(params) {
             encodeUri(params.item.classUri) +
             '&id=' +
             encodeURIComponent(params.item.uri),
-        params.options
+        {
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest',
+                'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+            },
+            cookies: params.user._cookie
+        }
     );
 
     check(res, { 'status is 200': r => r.status === 200 });
@@ -65,7 +86,13 @@ export function editItemAndSave(params) {
             '&X-CSRF-Token=' +
             params.item.csrfToken + // @TODO Check if this is really required and used/validated
             '&Save=Save',
-        params.options
+        {
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest',
+                'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+            },
+            cookies: params.user._cookie
+        }
     );
 
     check(res, { 'status is 200': r => r.status === 200 });
@@ -78,7 +105,13 @@ export function goToItemAuthoring(params) {
         'GET',
         params.url + '/taoItems/Items/authoring?id=' + encodeURIComponent(params.item.uri),
         '',
-        params.options
+        {
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest',
+                'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+            },
+            cookies: params.user._cookie
+        }
     );
 
     check(res, { 'status is 200': r => r.status === 200 });
@@ -91,7 +124,13 @@ export function saveOnItemAuthoring(params) {
         'GET',
         params.url + '/taoQtiItem/QtiCreator/saveItem?uri=' + encodeURIComponent(params.item.uri),
         params.item.qtiXml,
-        params.options
+        {
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest',
+                'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+            },
+            cookies: params.user._cookie
+        }
     );
 
     check(res, { 'status is 200': r => r.status === 200 });
@@ -106,7 +145,13 @@ export function goToPreviewFromItemAuthoring(params) {
             '/taoQtiTestPreviewer/Previewer/getItem?serviceCallId=previewer&itemUri=' +
             encodeURIComponent(params.item.uri),
         '',
-        params.options
+        {
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest',
+                'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+            },
+            cookies: params.user._cookie
+        }
     );
 
     check(res, { 'status is 200': r => r.status === 200 });
