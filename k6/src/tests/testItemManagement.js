@@ -5,8 +5,9 @@ import { loginUi } from '../modules/auth/login.js';
 import { configLoader } from 'tao-k6-core';
 import { group, sleep } from 'k6';
 import { Counter } from 'k6/metrics';
-import { accessItemsMenu } from '../modules/item/navigation.js';
-import { createMultipleItems, deleteItems } from '../modules/item/api.js';
+import { accessItemsMenu, deleteItem, selectItemOfTree } from '../modules/item/navigation.js';
+import { createMultipleItems } from '../modules/item/api.js';
+import { getTokens } from "../components/security/csrf.js";
 
 export const requests = new Counter('http_reqs');
 
@@ -36,9 +37,6 @@ export function setup() {
         }
     });
 
-    console.log('==============AAA==================');
-    console.log(JSON.stringify(parsedUser));
-
     return {
         config: config,
         user: parsedUser,
@@ -51,25 +49,38 @@ export const options = {
     thresholds: config.options.thresholds
 };
 
-export default function (setupData) {
-    group(`Testing: ${setupData.config.application.url}`, function () {
+export default function (data) {
+    group(`Testing: ${data.config.application.url}`, function () {
         group('Access Item Menu', function () {
             accessItemsMenu({
-                url: setupData.config.application.url,
-                user: setupData.user
+                url: data.config.application.url,
+                user: data.user
             });
 
-            sleep(setupData.config.custom.intervalBetweenActions);
+            sleep(data.config.custom.intervalBetweenActions);
         });
     });
 }
 
 export function teardown(data) {
-    deleteItems({
-        url: data.config.application.url,
-        items: data.itemCollection._items,
-        user: data.user
-    });
+    for (let index in data.itemCollection._items) {
+        const item = data.itemCollection._items[index];
+
+        const response = selectItemOfTree({
+            url: data.config.application.url,
+            item: item,
+            user: data.user
+        });
+
+        const tokens = getTokens(response);
+
+        deleteItem({
+            url: data.config.application.url,
+            item: item,
+            user: data.user,
+            tokens: tokens
+        });
+    }
 
     return data;
 }

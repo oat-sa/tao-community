@@ -59,36 +59,3 @@ export function createMultipleItems(params) {
 
     return items;
 }
-
-/**
- * @param params
- *
- * @returns Item
- */
-export function deleteItems(params) {
-    let items = params.items;
-
-    for (let i in items) {
-        const item = items[i];
-
-        const res = http.request(
-            'POST',
-            params.url + '/taoItems/Items/deleteItem',
-            'uri=' + item._uri + '&id=' + item._uri + '&classUri=' + item._classUri,
-            {
-                redirects: 999,
-                headers: {
-                    ['Accept']: 'application/json',
-                    ['X-Requested-With']: 'XMLHttpRequest',
-                    ['Content-Type']: 'application/x-www-form-urlencoded'
-                },
-                cookies: params.user._cookie
-            }
-        );
-
-        check(res, {
-            'Deleted item - status is 200': r => r.status === 200,
-            'Deleted item - response body': r => r.body.indexOf('"success":true') !== -1
-        });
-    }
-}
