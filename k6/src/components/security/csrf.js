@@ -35,8 +35,6 @@ function getTokenByHTML(regex, htmlContent)
         const occurrences = subRegex.exec(htmlElement);
 
         if (occurrences !== null) {
-            console.log(JSON.stringify(occurrences));
-
             let token = occurrences[0].replace('value="', '');
 
             token = token.substr(0, token.indexOf('"'))

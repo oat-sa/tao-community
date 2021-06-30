@@ -49,16 +49,16 @@ export function deleteItem(params) {
     const res = http.request(
         'POST',
         params.url + '/taoItems/Items/deleteItem',
-        'uri=' + item._uri +
-        '&id=' + item._uri +
-        '&classUri=' + item._classUri,
+        'uri=' + encodeUri(params.item._uri) +
+        '&id=' + encodeUri(params.item._uri) +
+        '&classUri=' + encodeUri(params.item._classUri),
         '&signature=' + params.tokens.signature,
         {
             redirects: 999,
             headers: {
                 'Accept': 'application/json',
                 'X-Requested-With': 'XMLHttpRequest',
-                'Content-Type': 'application/x-www-form-urlencoded',
+                'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
                 'X-CSRF-Token': params.tokens.csrfToken,
             },
             cookies: params.user._cookie
@@ -70,7 +70,8 @@ export function deleteItem(params) {
     //FIXME
     console.error(res.status);
     console.error(JSON.stringify(res.body));
-    console.error(JSON.stringify(item));
+    console.error(JSON.stringify(params.tokens));
+    console.error(JSON.stringify(params.item));
     console.error(JSON.stringify(params.user._cookie));
     //FIXME
     //FIXME
@@ -87,11 +88,11 @@ export function selectItemOfTree(params) {
         'POST',
         params.url + '/taoItems/Items/editItem',
         'uri=' +
-        encodeUri(params.item.uri) +
+        encodeUri(params.item._uri) +
         '&classUri=' +
-        encodeUri(params.item.classUri) +
+        encodeUri(params.item._classUri) +
         '&id=' +
-        encodeURIComponent(params.item.uri),
+        encodeURIComponent(params.item._uri),
         {
             headers: {
                 'X-Requested-With': 'XMLHttpRequest',
