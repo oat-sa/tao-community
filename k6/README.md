@@ -52,11 +52,25 @@ Check syntax:
 npm run lint
 ````
 
+# Supporting external tao
+
+Inside the k6 container, edit `/etc/hosts` and add the tao host.
+
+```shell
+172.18.0.4 tao-community.docker.localhost
+```
+
+In case https is not supported, change in `config/generis/conf.php` the `ROOT_URL` to `http://`: 
+
+```php
+define('ROOT_URL', 'http://tao-community.docker.localhost/');
+```
+
 # Api authentication 
 
 Create user inside the container (php and nginx) in order to use the API to test tao (use a proper login/password):
 
 ```shell
 export PHP_AUTH_USER=admin
-export PHP_AUTH_PWD=Admin.12345
+export PHP_AUTH_PWD=********
 ```
