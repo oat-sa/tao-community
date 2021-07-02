@@ -8,12 +8,10 @@
         "issues": "http://forge.taotesting.com",
         "forum": "http://forum.taotesting.com"
     },
-    "authors": [
-        {
-            "homepage": "http://www.taotesting.com",
-            "name": "Open Assessment Technologies S.A."
-        }
-    ],
+    "authors": [{
+        "homepage": "http://www.taotesting.com",
+        "name": "Open Assessment Technologies S.A."
+    }],
     "keywords": [
         "sprint 158",
         "tao",
@@ -22,6 +20,7 @@
     ],
     "repositories": [],
     "homepage": "http://www.taotesting.com",
+    "prefer-stable": true,
     "require": {
         "oat-sa/generis": "15.0.0",
         "oat-sa/tao-core": "48.14.7",
@@ -57,3 +56,4 @@
     },
     "description": "TAO is an Open Source e-Testing platform that empowers you to build, deliver, and share innovative and engaging assessments online \u2013 in any language or subject matter."
 }
+
