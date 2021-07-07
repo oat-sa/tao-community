@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8414f441cb528de8154b1923fa09c020",
+    "content-hash": "543c07deb999cdf9b7256ad6358b00fa",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -2476,22 +2476,22 @@
         },
         {
             "name": "oat-sa/extension-tao-itemqti",
-            "version": "v25.7.2.5",
+            "version": "v25.7.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti.git",
-                "reference": "cfa623c804eb1165a8af3aa76dda5e1b31cf2bc4"
+                "reference": "040f0138fb4d759cc47f917136498dd16850b2aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/cfa623c804eb1165a8af3aa76dda5e1b31cf2bc4",
-                "reference": "cfa623c804eb1165a8af3aa76dda5e1b31cf2bc4",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/040f0138fb4d759cc47f917136498dd16850b2aa",
+                "reference": "040f0138fb4d759cc47f917136498dd16850b2aa",
                 "shasum": ""
             },
             "require": {
                 "naneau/semver": "~0.0.7",
                 "oat-sa/composer-npm-bridge": "^0.3.0",
-                "oat-sa/lib-tao-qti": "5.2.0",
+                "oat-sa/lib-tao-qti": "5.2.1",
                 "oat-sa/oatbox-extension-installer": "~1.1||dev-master"
             },
             "type": "tao-extension",
@@ -2555,7 +2555,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2021-05-06T16:11:37+00:00"
+            "time": "2021-07-07T01:27:01+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pci",
@@ -3741,16 +3741,16 @@
         },
         {
             "name": "oat-sa/lib-beeme",
-            "version": "0.0.0",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/lib-beeme.git",
-                "reference": "af3020dceddd44117efe3164ec9b24d6588ed4d6"
+                "reference": "a93c6a8887591ed13af6b07215784fdea85458e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/lib-beeme/zipball/af3020dceddd44117efe3164ec9b24d6588ed4d6",
-                "reference": "af3020dceddd44117efe3164ec9b24d6588ed4d6",
+                "url": "https://api.github.com/repos/oat-sa/lib-beeme/zipball/a93c6a8887591ed13af6b07215784fdea85458e5",
+                "reference": "a93c6a8887591ed13af6b07215784fdea85458e5",
                 "shasum": ""
             },
             "require": {
@@ -3785,7 +3785,7 @@
                 "math parser",
                 "shunting-yard algorithm"
             ],
-            "time": "2016-04-05T09:23:52+00:00"
+            "time": "2016-11-03T16:25:18+00:00"
         },
         {
             "name": "oat-sa/lib-generis-search",
@@ -3882,22 +3882,22 @@
         },
         {
             "name": "oat-sa/lib-tao-qti",
-            "version": "v5.2.0",
+            "version": "v5.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/lib-tao-qti.git",
-                "reference": "d9d9e64ad3adac37e4816d5255a8485f17c9901f"
+                "reference": "707ea3bf0cd4c677857beeee28e8968eb10ed061"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/lib-tao-qti/zipball/d9d9e64ad3adac37e4816d5255a8485f17c9901f",
-                "reference": "d9d9e64ad3adac37e4816d5255a8485f17c9901f",
+                "url": "https://api.github.com/repos/oat-sa/lib-tao-qti/zipball/707ea3bf0cd4c677857beeee28e8968eb10ed061",
+                "reference": "707ea3bf0cd4c677857beeee28e8968eb10ed061",
                 "shasum": ""
             },
             "require": {
-                "oat-sa/lib-beeme": "~0.0.0",
+                "oat-sa/lib-beeme": "~0.2.0",
                 "php": "~7.0",
-                "qtism/qtism": "0.21.0"
+                "qtism/qtism": "0.24.12"
             },
             "require-dev": {
                 "phpunit/phpunit": "<6.0.0"
@@ -3939,7 +3939,7 @@
                 "QTI",
                 "TAO"
             ],
-            "time": "2020-07-16T10:41:45+00:00"
+            "time": "2021-07-07T02:41:12+00:00"
         },
         {
             "name": "oat-sa/lib-test-cat",
@@ -4781,30 +4781,37 @@
         },
         {
             "name": "qtism/qtism",
-            "version": "0.21.0",
+            "version": "0.24.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/qti-sdk.git",
-                "reference": "9b6ef1fe29bf8724dc6ba9efb22ec7a28054ba36"
+                "reference": "c660c79c4346b4293a8526d3d65b0366bbe4262b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/qti-sdk/zipball/9b6ef1fe29bf8724dc6ba9efb22ec7a28054ba36",
-                "reference": "9b6ef1fe29bf8724dc6ba9efb22ec7a28054ba36",
+                "url": "https://api.github.com/repos/oat-sa/qti-sdk/zipball/c660c79c4346b4293a8526d3d65b0366bbe4262b",
+                "reference": "c660c79c4346b4293a8526d3d65b0366bbe4262b",
                 "shasum": ""
             },
             "require": {
+                "ext-dom": "*",
+                "ext-json": "*",
+                "ext-libxml": "*",
+                "oat-sa/lib-beeme": "0.2.0",
                 "oat-sa/lib-tao-dtms": "1.0.0",
-                "php": "~7.0"
+                "php": ">=7.1"
             },
             "require-dev": {
-                "phpunit/phpunit": "<6.0.0",
+                "phpunit/phpunit": "<9.0.0",
                 "squizlabs/php_codesniffer": "3.*"
             },
             "type": "library",
             "autoload": {
                 "psr-0": {
                     "qtism\\": "."
+                },
+                "psr-4": {
+                    "qti\\customOperators\\": "qtism/runtime/expressions/operators/custom/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -4835,7 +4842,7 @@
                 "QTI",
                 "TAO"
             ],
-            "time": "2020-07-16T09:49:28+00:00"
+            "time": "2021-07-06T08:38:41+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -6514,5 +6521,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "1.1.0"
 }
