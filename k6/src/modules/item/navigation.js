@@ -8,7 +8,7 @@ export function accessItemsMenu(params) {
             'X-Requested-With': 'XMLHttpRequest',
             'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
         },
-        cookies: params.user._cookie
+        cookies: params.user.cookie
     });
 
     check(res, {
@@ -31,7 +31,7 @@ export function getItemTree(params) {
                 'X-Requested-With': 'XMLHttpRequest',
                 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
             },
-            cookies: params.user._cookie
+            cookies: params.user.cookie
         }
     );
 
@@ -50,11 +50,11 @@ export function deleteItem(params) {
         'POST',
         params.url + '/taoItems/Items/deleteItem',
         'uri=' +
-            encodeUri(params.item._uri) +
+            encodeUri(params.item.uri) +
             '&id=' +
-            encodeUri(params.item._uri) +
+            encodeUri(params.item.uri) +
             '&classUri=' +
-            encodeUri(params.item._classUri),
+            encodeUri(params.item.classUri),
         '&signature=' + params.tokens.signature,
         {
             redirects: 999,
@@ -64,7 +64,7 @@ export function deleteItem(params) {
                 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
                 'X-CSRF-Token': params.tokens.csrfToken
             },
-            cookies: params.user._cookie
+            cookies: params.user.cookie
         }
     );
 
@@ -75,7 +75,7 @@ export function deleteItem(params) {
     console.error(JSON.stringify(res.body));
     console.error(JSON.stringify(params.tokens));
     console.error(JSON.stringify(params.item));
-    console.error(JSON.stringify(params.user._cookie));
+    console.error(JSON.stringify(params.user.cookie));
     //FIXME
     //FIXME
     //FIXME
@@ -91,17 +91,17 @@ export function selectItemOfTree(params) {
         'POST',
         params.url + '/taoItems/Items/editItem',
         'uri=' +
-            encodeUri(params.item._uri) +
+            encodeUri(params.item.uri) +
             '&classUri=' +
-            encodeUri(params.item._classUri) +
+            encodeUri(params.item.classUri) +
             '&id=' +
-            encodeURIComponent(params.item._uri),
+            encodeURIComponent(params.item.uri),
         {
             headers: {
                 'X-Requested-With': 'XMLHttpRequest',
                 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
             },
-            cookies: params.user._cookie
+            cookies: params.user.cookie
         }
     );
 
@@ -134,7 +134,7 @@ export function editItemAndSave(params) {
                 'X-Requested-With': 'XMLHttpRequest',
                 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
             },
-            cookies: params.user._cookie
+            cookies: params.user.cookie
         }
     );
 
@@ -153,7 +153,7 @@ export function goToItemAuthoring(params) {
                 'X-Requested-With': 'XMLHttpRequest',
                 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
             },
-            cookies: params.user._cookie
+            cookies: params.user.cookie
         }
     );
 
@@ -172,7 +172,7 @@ export function saveOnItemAuthoring(params) {
                 'X-Requested-With': 'XMLHttpRequest',
                 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
             },
-            cookies: params.user._cookie
+            cookies: params.user.cookie
         }
     );
 
@@ -193,7 +193,7 @@ export function goToPreviewFromItemAuthoring(params) {
                 'X-Requested-With': 'XMLHttpRequest',
                 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
             },
-            cookies: params.user._cookie
+            cookies: params.user.cookie
         }
     );
 

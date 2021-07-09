@@ -1,7 +1,6 @@
 class User {
     constructor() {
-        this._cookieName = undefined;
-        this._cookieValue = undefined;
+        this.cookie = undefined;
     }
 }
 

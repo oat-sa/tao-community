@@ -20,7 +20,7 @@ export function createItem(params) {
                 ['X-Requested-With']: 'XMLHttpRequest',
                 ['Content-Type']: 'application/x-www-form-urlencoded'
             },
-            cookies: params.user._cookie
+            cookies: params.user.cookie
         }
     );
 

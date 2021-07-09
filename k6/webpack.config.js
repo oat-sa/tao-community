@@ -1,4 +1,4 @@
-import { webpackConfig } from 'k6-core';
+import { webpackConfig } from 'oat-k6-core';
 import path from 'path';
 import glob from 'glob';
 

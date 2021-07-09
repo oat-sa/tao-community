@@ -54,7 +54,7 @@ function getUser(params) {
     check(response, { 'Get cookie status was 200': r => r.status === 200 });
 
     const user = new User();
-    user._cookie = {
+    user.cookie = {
         [params.cookieName]: response.request.cookies[params.cookieName][0]['value']
     };
 

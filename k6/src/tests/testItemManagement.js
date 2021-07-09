@@ -2,7 +2,7 @@
  * Test item management: Create, list and update item
  */
 import { loginUi } from '../modules/auth/login.js';
-import { configLoader } from 'k6-core';
+import { configLoader } from 'oat-k6-core';
 import { group, sleep } from 'k6';
 import { accessItemsMenu, deleteItem, selectItemOfTree } from '../modules/item/navigation.js';
 import { createMultipleItems } from '../modules/item/api.js';
@@ -21,7 +21,7 @@ export function setup() {
     });
 
     const parsedUser = {
-        _cookie: user._cookie
+        cookie: user.cookie
     };
 
     const itemCollection = createMultipleItems({
@@ -41,10 +41,7 @@ export function setup() {
     };
 }
 
-export const options = {
-    stages: config.options.stages,
-    thresholds: config.options.thresholds
-};
+export const options = config.options.stages;
 
 export default function (data) {
     group(`Testing: ${data.config.application.url}`, function () {
@@ -60,7 +57,7 @@ export default function (data) {
 }
 
 export function teardown(data) {
-    data.itemCollection._items.forEach(item => {
+    data.itemCollection.items.forEach(item => {
         const response = selectItemOfTree({
             url: data.config.application.url,
             item: item,

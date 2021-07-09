@@ -1,6 +1,6 @@
 # Provide package name
 
-Provide package description
+Tao-community performance tests
 
 # Running instructions
 
@@ -25,8 +25,7 @@ npm run bundle:watch
 Replace `{MY-APP-DIRECTORY}` with your test app name shared in the [k6-stack](https://github.com/oat-sa/k6-stack/tree/feature/stack).
 
 ```shell script
-docker exec -it k6_stack k6 run --out influxdb=http://k6_stack_influxdb:8086/k6 \
-app/my-test-app/dist/src/tests/testTemplate.js \
+docker exec -it k6_stack k6 run app/{MY-APP-DIRECTORY}/dist/src/tests/testTemplate.js \
 --env APPLICATION_FILE=/app/{MY-APP-DIRECTORY}/config/application.json.sample \
 --env OPTIONS_FILE=/app/{MY-APP-DIRECTORY}/config/options.json.sample \
 --env CUSTOM_FILE=/app/{MY-APP-DIRECTORY}/config/custom.yaml.sample
@@ -37,13 +36,13 @@ app/my-test-app/dist/src/tests/testTemplate.js \
 Check standards:
 
 ````shell
-npm run prettier-check
+npm run prettier
 ````
 
 Fix code / apply standards:
 
 ````shell
-npm run prettier-write
+npm run prettier:write
 ````
 
 Check syntax:
@@ -54,7 +53,7 @@ npm run lint
 
 # Supporting external tao
 
-Inside the k6 container, edit `/etc/hosts` and add the tao host.
+Inside the k6 container, edit `/etc/hosts` and add the tao host. Example:
 
 ```shell
 172.18.0.4 tao-community.docker.localhost
