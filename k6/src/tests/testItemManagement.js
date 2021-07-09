@@ -7,11 +7,11 @@ import { group, sleep } from 'k6';
 import { Counter } from 'k6/metrics';
 import { accessItemsMenu, deleteItem, selectItemOfTree } from '../modules/item/navigation.js';
 import { createMultipleItems } from '../modules/item/api.js';
-import { getTokens } from "../components/security/csrf.js";
+import { getTokens } from '../components/security/csrf.js';
 
 export const requests = new Counter('http_reqs');
 
-let config = configLoader.loadEnvironmentConfig();
+const config = configLoader.loadEnvironmentConfig();
 // eslint-disable-next-line no-undef
 config.custom = configLoader.loadFileConfig(__ENV.CUSTOM_FILE);
 
@@ -27,7 +27,7 @@ export function setup() {
         _cookie: user._cookie
     };
 
-    let itemCollection = createMultipleItems({
+    const itemCollection = createMultipleItems({
         url: config.application.url,
         user: parsedUser,
         quantity: 1,
@@ -63,9 +63,7 @@ export default function (data) {
 }
 
 export function teardown(data) {
-    for (let index in data.itemCollection._items) {
-        const item = data.itemCollection._items[index];
-
+    data.itemCollection._items.forEach(item => {
         const response = selectItemOfTree({
             url: data.config.application.url,
             item: item,
@@ -80,7 +78,7 @@ export function teardown(data) {
             user: data.user,
             tokens: tokens
         });
-    }
+    });
 
     return data;
 }

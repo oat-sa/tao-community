@@ -49,17 +49,20 @@ export function deleteItem(params) {
     const res = http.request(
         'POST',
         params.url + '/taoItems/Items/deleteItem',
-        'uri=' + encodeUri(params.item._uri) +
-        '&id=' + encodeUri(params.item._uri) +
-        '&classUri=' + encodeUri(params.item._classUri),
+        'uri=' +
+            encodeUri(params.item._uri) +
+            '&id=' +
+            encodeUri(params.item._uri) +
+            '&classUri=' +
+            encodeUri(params.item._classUri),
         '&signature=' + params.tokens.signature,
         {
             redirects: 999,
             headers: {
-                'Accept': 'application/json',
+                Accept: 'application/json',
                 'X-Requested-With': 'XMLHttpRequest',
                 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-                'X-CSRF-Token': params.tokens.csrfToken,
+                'X-CSRF-Token': params.tokens.csrfToken
             },
             cookies: params.user._cookie
         }
@@ -88,11 +91,11 @@ export function selectItemOfTree(params) {
         'POST',
         params.url + '/taoItems/Items/editItem',
         'uri=' +
-        encodeUri(params.item._uri) +
-        '&classUri=' +
-        encodeUri(params.item._classUri) +
-        '&id=' +
-        encodeURIComponent(params.item._uri),
+            encodeUri(params.item._uri) +
+            '&classUri=' +
+            encodeUri(params.item._classUri) +
+            '&id=' +
+            encodeURIComponent(params.item._uri),
         {
             headers: {
                 'X-Requested-With': 'XMLHttpRequest',
