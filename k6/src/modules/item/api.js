@@ -31,7 +31,7 @@ export function createItem(params) {
         'Created item - response body': r => r.body.indexOf('"success":true') !== -1
     });
 
-    let item = new Item();
+    const item = new Item();
     item.label = responseObject.data.label;
     item.uri = responseObject.data.uriResource;
     item.classUri = params.item.classUri;
@@ -45,7 +45,7 @@ export function createItem(params) {
  * @returns ItemCollection
  */
 export function createMultipleItems(params) {
-    let items = new ItemCollection();
+    const items = new ItemCollection();
 
     for (let i = 1; i <= params.quantity; i++) {
         let newParams = Object.assign({}, params);
