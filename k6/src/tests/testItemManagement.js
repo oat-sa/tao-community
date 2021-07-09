@@ -2,14 +2,11 @@
  * Test item management: Create, list and update item
  */
 import { loginUi } from '../modules/auth/login.js';
-import { configLoader } from 'tao-k6-core';
+import { configLoader } from 'k6-core';
 import { group, sleep } from 'k6';
-import { Counter } from 'k6/metrics';
 import { accessItemsMenu, deleteItem, selectItemOfTree } from '../modules/item/navigation.js';
 import { createMultipleItems } from '../modules/item/api.js';
 import { getTokens } from '../components/security/csrf.js';
-
-export const requests = new Counter('http_reqs');
 
 const config = configLoader.loadEnvironmentConfig();
 // eslint-disable-next-line no-undef
