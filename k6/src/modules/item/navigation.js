@@ -30,14 +30,15 @@ export function deleteItem(params) {
         'POST',
         params.url + '/taoItems/Items/deleteItem',
         'uri=' +
-            encodeUri(params.item.uri) +
+            params.item.uri +
             '&id=' +
-            encodeUri(params.item.uri) +
+            params.item.uri +
             '&classUri=' +
-            encodeUri(params.item.classUri),
-        '&signature=' + params.tokens.signature,
+            params.item.classUri +
+            '&signature=' +
+            params.tokens.signature,
         {
-            redirects: 999,
+            redirects: 0,
             headers: {
                 Accept: 'application/json',
                 'X-Requested-With': 'XMLHttpRequest',
@@ -48,18 +49,6 @@ export function deleteItem(params) {
         }
     );
 
-    //FIXME
-    //FIXME
-    //FIXME
-    console.error(res.status);
-    console.error(JSON.stringify(res.body));
-    console.error(JSON.stringify(params.tokens));
-    console.error(JSON.stringify(params.item));
-    console.error(JSON.stringify(params.user.cookie));
-    //FIXME
-    //FIXME
-    //FIXME
-
     check(res, {
         'Deleted item - status is 200': r => r.status === 200,
         'Deleted item - response body': r => r.body.indexOf('"success":true') !== -1
@@ -67,7 +56,7 @@ export function deleteItem(params) {
 }
 
 export function selectItemOfTree(params) {
-    const response = http.request(
+    const res = http.request(
         'POST',
         params.url + '/taoItems/Items/editItem',
         'uri=' +
@@ -85,7 +74,7 @@ export function selectItemOfTree(params) {
         }
     );
 
-    check(response, { 'Select Item - status is 200': r => r.status === 200 });
+    check(res, { 'Select Item - status is 200': r => r.status === 200 });
 
-    return response;
+    return res;
 }
