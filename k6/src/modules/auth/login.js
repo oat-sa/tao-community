@@ -17,7 +17,7 @@ export function loginUi(params) {
             connect: 'Log in'
         },
         {
-            redirects: 999,
+            redirects: 0,
             headers: {
                 'Upgrade-Insecure-Requests': 1,
                 Origin: params.url,
@@ -27,35 +27,11 @@ export function loginUi(params) {
         }
     );
 
-    check(res, { 'Login status was 200': r => r.status === 200 });
-
-    return getUser(params);
-}
-
-/**
- * @param params
- *
- * @returns User
- */
-function getUser(params) {
-    const response = http.request(
-        'GET',
-        params.url + '/tao/Main/index',
-        {},
-        {
-            redirects: 999,
-            headers: {
-                ['Accept']: 'application/json, text/javascript, */*; q=0.01',
-                ['X-Requested-With']: 'XMLHttpRequest'
-            }
-        }
-    );
-
-    check(response, { 'Get cookie status was 200': r => r.status === 200 });
+    check(res, { 'Login status was 302': r => r.status === 302 });
 
     const user = new User();
     user.cookie = {
-        [params.cookieName]: response.request.cookies[params.cookieName][0]['value']
+        [params.cookieName]: res.cookies[params.cookieName][0]['value']
     };
 
     return user;
