@@ -4,9 +4,8 @@
 import { loginUi } from '../modules/auth/login.js';
 import { configLoader } from 'oat-k6-core';
 import { group, sleep } from 'k6';
-import { accessItemsMenu, deleteItem, selectItemOfTree } from '../modules/item/navigation.js';
+import { accessItemsMenu, deleteItem, editItem, selectItemOfTree } from '../modules/item/navigation.js';
 import { createMultipleItems } from '../modules/item/api.js';
-import { getTokens } from '../components/security/csrf.js';
 
 const config = configLoader.loadEnvironmentConfig();
 // eslint-disable-next-line no-undef
@@ -53,24 +52,41 @@ export default function (data) {
 
             sleep(data.config.custom.intervalBetweenActions);
         });
+
+        group('Edit items', function () {
+            data.itemCollection.items.forEach(item => {
+                const selectItemResponse = selectItemOfTree({
+                    url: data.config.application.url,
+                    item: item,
+                    user: data.user
+                });
+
+                editItem({
+                    url: data.config.application.url,
+                    item: item,
+                    user: data.user,
+                    tokens: selectItemResponse.tokens
+                });
+
+                sleep(data.config.custom.intervalBetweenActions);
+            });
+        });
     });
 }
 
 export function teardown(data) {
     data.itemCollection.items.forEach(item => {
-        const response = selectItemOfTree({
+        const selectItemResponse = selectItemOfTree({
             url: data.config.application.url,
             item: item,
             user: data.user
         });
 
-        const tokens = getTokens(response);
-
         deleteItem({
             url: data.config.application.url,
             item: item,
             user: data.user,
-            tokens: tokens
+            tokens: selectItemResponse.tokens
         });
     });
 
