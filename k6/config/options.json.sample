@@ -1,0 +1,23 @@
+{
+  "scenarios": {
+    "scenario1": {
+      "executor": "per-vu-iterations",
+      "vus": 1,
+      "iterations": 1,
+      "maxDuration": "3s"
+    }
+  },
+  "thresholds": {
+    "requests": [
+      {
+        "threshold": "count < 100"
+      }
+    ],
+    "http_req_duration": [
+      {
+        "threshold": "p(95)<1000",
+        "delayAbortEval": "1m"
+      }
+    ]
+  }
+}
