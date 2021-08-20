@@ -27,7 +27,11 @@ export function loginUi(params) {
         }
     );
 
-    check(res, { 'Login status was 302': r => r.status === 302 });
+    const success = check(res, { 'Login status was 302': r => r.status === 302 });
+
+    if (!success) {
+        params.errorRate.add(1);
+    }
 
     const user = new User();
     user.cookie = {

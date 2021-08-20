@@ -6,17 +6,23 @@ import { configLoader } from 'oat-k6-core';
 import { group, sleep } from 'k6';
 import { accessItemsMenu, deleteItem, editItem, selectItemOfTree } from '../modules/item/navigation.js';
 import { createMultipleItems } from '../modules/item/api.js';
+import { Rate } from 'k6/metrics';
 
 const config = configLoader.loadEnvironmentConfig();
 // eslint-disable-next-line no-undef
 config.custom = configLoader.loadFileConfig(__ENV.CUSTOM_FILE);
+
+export const options = config.options;
+
+const errorRate = new Rate('errors');
 
 export function setup() {
     const user = loginUi({
         url: config.application.url,
         login: config.application.login,
         password: config.application.password,
-        cookieName: config.application.cookieName
+        cookieName: config.application.cookieName,
+        errorRate: errorRate
     });
 
     const parsedUser = {
@@ -30,7 +36,8 @@ export function setup() {
         item: {
             classUri: config.application.itemClassUri,
             label: 'My test item'
-        }
+        },
+        errorRate: errorRate
     });
 
     return {
@@ -40,14 +47,13 @@ export function setup() {
     };
 }
 
-export const options = config.options.stages;
-
 export default function (data) {
     group(`Testing: ${data.config.application.url}`, function () {
         group('Access Item Menu', function () {
             accessItemsMenu({
                 url: data.config.application.url,
-                user: data.user
+                user: data.user,
+                errorRate: errorRate
             });
 
             sleep(data.config.custom.intervalBetweenActions);
@@ -58,14 +64,16 @@ export default function (data) {
                 const selectItemResponse = selectItemOfTree({
                     url: data.config.application.url,
                     item: item,
-                    user: data.user
+                    user: data.user,
+                    errorRate: errorRate
                 });
 
                 editItem({
                     url: data.config.application.url,
                     item: item,
                     user: data.user,
-                    tokens: selectItemResponse.tokens
+                    tokens: selectItemResponse.tokens,
+                    errorRate: errorRate
                 });
 
                 sleep(data.config.custom.intervalBetweenActions);
@@ -79,14 +87,16 @@ export function teardown(data) {
         const selectItemResponse = selectItemOfTree({
             url: data.config.application.url,
             item: item,
-            user: data.user
+            user: data.user,
+            errorRate: errorRate
         });
 
         deleteItem({
             url: data.config.application.url,
             item: item,
             user: data.user,
-            tokens: selectItemResponse.tokens
+            tokens: selectItemResponse.tokens,
+            errorRate: errorRate
         });
     });
 

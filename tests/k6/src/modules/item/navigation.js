@@ -12,11 +12,29 @@ export function accessItemsMenu(params) {
         cookies: params.user.cookie
     });
 
-    check(res, {
-        'status is 200': r => r.status === 200,
-        'response body': r => r.body.indexOf('Create and design items and exercises') !== -1,
-        'response time ok': r => r.timings.duration < 2000
+    const success1 = check(res, {
+        'Access Items Menu - status is 200': r => r.status === 200,
     });
+
+    const success2 = check(res, {
+        'Access Items Menu - response body': r => r.body.indexOf('Create and design items and exercises') !== -1,
+    });
+
+    const success3 = check(res, {
+        'Access Items Menu - response time ok': r => r.timings.duration < 2000
+    });
+
+    if (!success1) {
+        params.errorRate.add(1);
+    }
+
+    if (!success2) {
+        params.errorRate.add(1);
+    }
+
+    if (!success3) {
+        params.errorRate.add(1);
+    }
 
     return res;
 }
@@ -50,10 +68,23 @@ export function deleteItem(params) {
         }
     );
 
-    check(res, {
+    const success1 = check(res, {
         'Deleted item - status is 200': r => r.status === 200,
+    });
+
+    const success2 = check(res, {
         'Deleted item - response body': r => r.body.indexOf('"success":true') !== -1
     });
+
+    if (!success1) {
+        console.log('=======> Error' + res.status);
+        params.errorRate.add(1);
+    }
+
+    if (!success2) {
+        console.log('=======> Error' + JSON.stringify(res.body));
+        params.errorRate.add(1);
+    }
 
     return {
         tokens: getTokens(res),
@@ -80,7 +111,11 @@ export function selectItemOfTree(params) {
         }
     );
 
-    check(res, { 'Select Item - status is 200': r => r.status === 200 });
+    const success = check(res, { 'Select Item - status is 200': r => r.status === 200 });
+
+    if (!success) {
+        params.errorRate.add(1);
+    }
 
     return {
         tokens: getTokens(res),
@@ -116,7 +151,11 @@ export function editItem(params) {
         }
     );
 
-    check(res, { 'Edit Item - status is 200': r => r.status === 200 });
+    const success = check(res, { 'Edit Item - status is 200': r => r.status === 200 });
+
+    if (!success) {
+        params.errorRate.add(1);
+    }
 
     return {
         tokens: getTokens(res),

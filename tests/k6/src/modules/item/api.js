@@ -26,10 +26,21 @@ export function createItem(params) {
 
     const responseObject = JSON.parse(res.body);
 
-    check(res, {
+    const success1 = check(res, {
         'Created item - status is 200': r => r.status === 200,
+    });
+
+    const success2 = check(res, {
         'Created item - response body': r => r.body.indexOf('"success":true') !== -1
     });
+
+    if (!success1) {
+        params.errorRate.add(1);
+    }
+
+    if (!success2) {
+        params.errorRate.add(1);
+    }
 
     const item = new Item();
     item.label = responseObject.data.label;
