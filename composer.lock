@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9228265f07379e1ab44ec0a94dc9a3e6",
+    "content-hash": "4f9e9843b7f70ba4ac85d42c48592e55",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -3084,16 +3084,16 @@
         },
         {
             "name": "oat-sa/extension-tao-itemqti",
-            "version": "dev-hotfix/TR-1869/bump-required-lib-version",
+            "version": "v25.18.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti.git",
-                "reference": "880ba85d4676c794cab89cc86e28e34e4417cff1"
+                "reference": "36e3bdf0e90236af89b3885e6baeeb3e465a1424"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/880ba85d4676c794cab89cc86e28e34e4417cff1",
-                "reference": "880ba85d4676c794cab89cc86e28e34e4417cff1",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/36e3bdf0e90236af89b3885e6baeeb3e465a1424",
+                "reference": "36e3bdf0e90236af89b3885e6baeeb3e465a1424",
                 "shasum": ""
             },
             "require": {
@@ -3163,7 +3163,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2021-09-02T13:41:07+00:00"
+            "time": "2021-09-03T14:10:30+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pci",
@@ -7484,18 +7484,9 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [
-        {
-            "alias": "25.18.1.1-dev",
-            "alias_normalized": "25.18.1.1-dev",
-            "version": "dev-hotfix/TR-1869/bump-required-lib-version",
-            "package": "oat-sa/extension-tao-itemqti"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "oat-sa/extension-tao-itemqti": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
