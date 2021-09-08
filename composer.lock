@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e9196ec4a87025697bcfa03a9c19bd03",
+    "content-hash": "c05403cf13a61af63059d82090ca9f9c",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -4056,16 +4056,16 @@
         },
         {
             "name": "oat-sa/extension-tao-testqti",
-            "version": "dev-hotfix/TR-1869/on-test-timeout-move-to-last-item",
+            "version": "40.3.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "b45970370f93796868691862d13e0f403d9c532f"
+                "reference": "94d08e354e14b51a851a4a6b47c8bea45b0b8d8d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/b45970370f93796868691862d13e0f403d9c532f",
-                "reference": "b45970370f93796868691862d13e0f403d9c532f",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/94d08e354e14b51a851a4a6b47c8bea45b0b8d8d",
+                "reference": "94d08e354e14b51a851a4a6b47c8bea45b0b8d8d",
                 "shasum": ""
             },
             "require": {
@@ -4138,7 +4138,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2021-09-03T15:13:26+00:00"
+            "time": "2021-09-08T10:11:19+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
@@ -7487,18 +7487,9 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [
-        {
-            "alias": "40.3.12.1-dev",
-            "alias_normalized": "40.3.12.1-dev",
-            "version": "dev-hotfix/TR-1869/on-test-timeout-move-to-last-item",
-            "package": "oat-sa/extension-tao-testqti"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "oat-sa/extension-tao-testqti": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
