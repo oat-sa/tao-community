@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4f9e9843b7f70ba4ac85d42c48592e55",
+    "content-hash": "c05403cf13a61af63059d82090ca9f9c",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -1546,6 +1546,60 @@
                 }
             ],
             "time": "2021-03-08T15:24:29+00:00"
+        },
+        {
+            "name": "laminas/laminas-servicemanager",
+            "version": "2.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laminas/laminas-servicemanager.git",
+                "reference": "0cb6ae6b3025f3db2b91ab1936c5e0247b4db485"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laminas/laminas-servicemanager/zipball/0cb6ae6b3025f3db2b91ab1936c5e0247b4db485",
+                "reference": "0cb6ae6b3025f3db2b91ab1936c5e0247b4db485",
+                "shasum": ""
+            },
+            "require": {
+                "laminas/laminas-zendframework-bridge": "^1.0",
+                "php": ">=5.3.23"
+            },
+            "replace": {
+                "zendframework/zend-servicemanager": "self.version"
+            },
+            "require-dev": {
+                "fabpot/php-cs-fixer": "1.7.*",
+                "laminas/laminas-di": "~2.5",
+                "laminas/laminas-mvc": "~2.5",
+                "phpunit/phpunit": "~4.0"
+            },
+            "suggest": {
+                "laminas/laminas-di": "Laminas\\Di component",
+                "ocramius/proxy-manager": "ProxyManager 0.5.* to handle lazy initialization of services"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5-dev",
+                    "dev-develop": "2.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laminas\\ServiceManager\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "homepage": "https://laminas.dev",
+            "keywords": [
+                "laminas",
+                "servicemanager"
+            ],
+            "time": "2019-12-31T17:44:09+00:00"
         },
         {
             "name": "laminas/laminas-zendframework-bridge",
@@ -4002,16 +4056,16 @@
         },
         {
             "name": "oat-sa/extension-tao-testqti",
-            "version": "v40.3.12",
+            "version": "40.3.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "68731a199abe4fc512178412f89c67705b672c98"
+                "reference": "94d08e354e14b51a851a4a6b47c8bea45b0b8d8d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/68731a199abe4fc512178412f89c67705b672c98",
-                "reference": "68731a199abe4fc512178412f89c67705b672c98",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/94d08e354e14b51a851a4a6b47c8bea45b0b8d8d",
+                "reference": "94d08e354e14b51a851a4a6b47c8bea45b0b8d8d",
                 "shasum": ""
             },
             "require": {
@@ -4084,7 +4138,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2021-01-20T12:44:17+00:00"
+            "time": "2021-09-08T10:11:19+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
@@ -7430,57 +7484,6 @@
                 "validate"
             ],
             "time": "2020-07-08T17:02:28+00:00"
-        },
-        {
-            "name": "zendframework/zend-servicemanager",
-            "version": "2.5.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zendframework/zend-servicemanager.git",
-                "reference": "3b22c403e351d92526c642cba0bd810bc22e1c56"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-servicemanager/zipball/3b22c403e351d92526c642cba0bd810bc22e1c56",
-                "reference": "3b22c403e351d92526c642cba0bd810bc22e1c56",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.23"
-            },
-            "require-dev": {
-                "fabpot/php-cs-fixer": "1.7.*",
-                "phpunit/phpunit": "~4.0",
-                "zendframework/zend-di": "~2.5",
-                "zendframework/zend-mvc": "~2.5"
-            },
-            "suggest": {
-                "ocramius/proxy-manager": "ProxyManager 0.5.* to handle lazy initialization of services",
-                "zendframework/zend-di": "Zend\\Di component"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.5-dev",
-                    "dev-develop": "2.6-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Zend\\ServiceManager\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "homepage": "https://github.com/zendframework/zend-servicemanager",
-            "keywords": [
-                "servicemanager",
-                "zf2"
-            ],
-            "abandoned": "laminas/laminas-servicemanager",
-            "time": "2015-06-03T15:32:02+00:00"
         }
     ],
     "packages-dev": [],
