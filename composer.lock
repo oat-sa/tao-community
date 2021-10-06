@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "144c493e8331fcc966f4c96d47a08abe",
+    "content-hash": "f849f2f43ac3678100ff6934e24af63a",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -5259,16 +5259,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "v48.31.1",
+            "version": "dev-release-2021-10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "51c69658afcdaec5b6c82c7185b99a75155a3d8d"
+                "reference": "f6212fdf9e1c9ba74319130b4ce66c92b196d8e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/51c69658afcdaec5b6c82c7185b99a75155a3d8d",
-                "reference": "51c69658afcdaec5b6c82c7185b99a75155a3d8d",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/f6212fdf9e1c9ba74319130b4ce66c92b196d8e4",
+                "reference": "f6212fdf9e1c9ba74319130b4ce66c92b196d8e4",
                 "shasum": ""
             },
             "require": {
@@ -5368,9 +5368,9 @@
             "support": {
                 "forum": "https://forum.taocloud.org",
                 "issues": "https://github.com/oat-sa/tao-core/issues",
-                "source": "https://github.com/oat-sa/tao-core/tree/v48.31.1"
+                "source": "https://github.com/oat-sa/tao-core/tree/release-2021-10"
             },
-            "time": "2021-08-27T14:53:42+00:00"
+            "time": "2021-10-06T07:17:01+00:00"
         },
         {
             "name": "ocramius/proxy-manager",
@@ -8293,10 +8293,17 @@
             "version": "dev-release-2021-10",
             "alias": "28.10.3",
             "alias_normalized": "28.10.3.0"
+        },
+        {
+            "package": "oat-sa/tao-core",
+            "version": "dev-release-2021-10",
+            "alias": "48.31.1",
+            "alias_normalized": "48.31.1.0"
         }
     ],
     "minimum-stability": "stable",
     "stability-flags": {
+        "oat-sa/tao-core": 20,
         "oat-sa/extension-tao-itemqti": 20
     },
     "prefer-stable": true,
