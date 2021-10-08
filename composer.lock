@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f849f2f43ac3678100ff6934e24af63a",
+    "content-hash": "1261f6c2f4478ef03fdde280b3e7993e",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -3425,16 +3425,16 @@
         },
         {
             "name": "oat-sa/extension-tao-itemqti",
-            "version": "dev-release-2021-10",
+            "version": "v28.10.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti.git",
-                "reference": "a0057c5ad1b3b4a48ca14530ac6864e1721258d8"
+                "reference": "16d5a8d6e8bd66a8ece818a19f1b91e8f7d4160e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/a0057c5ad1b3b4a48ca14530ac6864e1721258d8",
-                "reference": "a0057c5ad1b3b4a48ca14530ac6864e1721258d8",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/16d5a8d6e8bd66a8ece818a19f1b91e8f7d4160e",
+                "reference": "16d5a8d6e8bd66a8ece818a19f1b91e8f7d4160e",
                 "shasum": ""
             },
             "require": {
@@ -3509,9 +3509,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/release-2021-10"
+                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/v28.10.3.1"
             },
-            "time": "2021-09-15T08:39:37+00:00"
+            "time": "2021-10-07T16:27:17+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pci",
@@ -8289,12 +8289,6 @@
     "packages-dev": [],
     "aliases": [
         {
-            "package": "oat-sa/extension-tao-itemqti",
-            "version": "dev-release-2021-10",
-            "alias": "28.10.3",
-            "alias_normalized": "28.10.3.0"
-        },
-        {
             "package": "oat-sa/tao-core",
             "version": "dev-release-2021-10",
             "alias": "48.31.1",
@@ -8303,8 +8297,7 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "oat-sa/tao-core": 20,
-        "oat-sa/extension-tao-itemqti": 20
+        "oat-sa/tao-core": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
@@ -8313,5 +8306,5 @@
     "platform-overrides": {
         "php": "7.2"
     },
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.0.0"
 }
