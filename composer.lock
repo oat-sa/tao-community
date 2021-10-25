@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "35632ea52d3a6ce870fe88c398871ead",
+    "content-hash": "6ac7311a12040f9af5e11af3b3a06e64",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -1342,16 +1342,16 @@
         },
         {
             "name": "guzzlehttp/promises",
-            "version": "1.5.0",
+            "version": "1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/promises.git",
-                "reference": "136a635e2b4a49b9d79e9c8fee267ffb257fdba0"
+                "reference": "fe752aedc9fd8fcca3fe7ad05d419d32998a06da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/136a635e2b4a49b9d79e9c8fee267ffb257fdba0",
-                "reference": "136a635e2b4a49b9d79e9c8fee267ffb257fdba0",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/fe752aedc9fd8fcca3fe7ad05d419d32998a06da",
+                "reference": "fe752aedc9fd8fcca3fe7ad05d419d32998a06da",
                 "shasum": ""
             },
             "require": {
@@ -1406,7 +1406,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/promises/issues",
-                "source": "https://github.com/guzzle/promises/tree/1.5.0"
+                "source": "https://github.com/guzzle/promises/tree/1.5.1"
             },
             "funding": [
                 {
@@ -1422,7 +1422,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-10-07T13:05:22+00:00"
+            "time": "2021-10-22T20:56:57+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -2114,23 +2114,23 @@
         },
         {
             "name": "league/oauth2-server",
-            "version": "8.3.2",
+            "version": "8.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/oauth2-server.git",
-                "reference": "0809487d33dd8a2c8c8c04e4a599ba4aadba1ae6"
+                "reference": "f5698a3893eda9a17bcd48636990281e7ca77b2a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/oauth2-server/zipball/0809487d33dd8a2c8c8c04e4a599ba4aadba1ae6",
-                "reference": "0809487d33dd8a2c8c8c04e4a599ba4aadba1ae6",
+                "url": "https://api.github.com/repos/thephpleague/oauth2-server/zipball/f5698a3893eda9a17bcd48636990281e7ca77b2a",
+                "reference": "f5698a3893eda9a17bcd48636990281e7ca77b2a",
                 "shasum": ""
             },
             "require": {
                 "defuse/php-encryption": "^2.2.1",
                 "ext-json": "*",
                 "ext-openssl": "*",
-                "lcobucci/jwt": "^3.4 || ^4.0",
+                "lcobucci/jwt": "^3.4.6 || ^4.0.4",
                 "league/event": "^2.2",
                 "php": "^7.2 || ^8.0",
                 "psr/http-message": "^1.0.1"
@@ -2189,7 +2189,7 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/oauth2-server/issues",
-                "source": "https://github.com/thephpleague/oauth2-server/tree/8.3.2"
+                "source": "https://github.com/thephpleague/oauth2-server/tree/8.3.3"
             },
             "funding": [
                 {
@@ -2197,7 +2197,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-07-27T08:17:08+00:00"
+            "time": "2021-10-11T20:41:49+00:00"
         },
         {
             "name": "league/openapi-psr7-validator",
@@ -4957,16 +4957,16 @@
         },
         {
             "name": "oat-sa/lib-lti1p3-core",
-            "version": "6.5.0",
+            "version": "6.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/lib-lti1p3-core.git",
-                "reference": "0c96de27b76c8cf7c36038d37c6b0596bb463d74"
+                "reference": "4a912dcc4c8a549d555db5116b20a7c04623824d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/lib-lti1p3-core/zipball/0c96de27b76c8cf7c36038d37c6b0596bb463d74",
-                "reference": "0c96de27b76c8cf7c36038d37c6b0596bb463d74",
+                "url": "https://api.github.com/repos/oat-sa/lib-lti1p3-core/zipball/4a912dcc4c8a549d555db5116b20a7c04623824d",
+                "reference": "4a912dcc4c8a549d555db5116b20a7c04623824d",
                 "shasum": ""
             },
             "require": {
@@ -5006,9 +5006,9 @@
             "description": "OAT LTI 1.3 Core Library",
             "support": {
                 "issues": "https://github.com/oat-sa/lib-lti1p3-core/issues",
-                "source": "https://github.com/oat-sa/lib-lti1p3-core/tree/6.5.0"
+                "source": "https://github.com/oat-sa/lib-lti1p3-core/tree/6.6.0"
             },
-            "time": "2021-10-11T07:51:50+00:00"
+            "time": "2021-10-12T13:28:01+00:00"
         },
         {
             "name": "oat-sa/lib-tao-dtms",
@@ -5256,16 +5256,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "v48.45.2",
+            "version": "dev-release-2021-11-lts",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "1bc0b55a2efa87996a50a004fc2edf6c7b816a75"
+                "reference": "a2e5c377082f0447fc64ed568a37559f59619b23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/1bc0b55a2efa87996a50a004fc2edf6c7b816a75",
-                "reference": "1bc0b55a2efa87996a50a004fc2edf6c7b816a75",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/a2e5c377082f0447fc64ed568a37559f59619b23",
+                "reference": "a2e5c377082f0447fc64ed568a37559f59619b23",
                 "shasum": ""
             },
             "require": {
@@ -5367,9 +5367,9 @@
             "support": {
                 "forum": "https://forum.taocloud.org",
                 "issues": "https://github.com/oat-sa/tao-core/issues",
-                "source": "https://github.com/oat-sa/tao-core/tree/v48.45.2"
+                "source": "https://github.com/oat-sa/tao-core/tree/release-2021-11-lts"
             },
-            "time": "2021-10-08T14:58:10+00:00"
+            "time": "2021-10-25T11:39:55+00:00"
         },
         {
             "name": "ocramius/proxy-manager",
@@ -6743,16 +6743,16 @@
         },
         {
             "name": "riverline/multipart-parser",
-            "version": "2.0.8",
+            "version": "2.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Riverline/multipart-parser.git",
-                "reference": "2fe9026789754c1ff07c06047f0acc113e90933a"
+                "reference": "ebba10245b5a6e03a673ff52c547d05029caedab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Riverline/multipart-parser/zipball/2fe9026789754c1ff07c06047f0acc113e90933a",
-                "reference": "2fe9026789754c1ff07c06047f0acc113e90933a",
+                "url": "https://api.github.com/repos/Riverline/multipart-parser/zipball/ebba10245b5a6e03a673ff52c547d05029caedab",
+                "reference": "ebba10245b5a6e03a673ff52c547d05029caedab",
                 "shasum": ""
             },
             "require": {
@@ -6793,9 +6793,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Riverline/multipart-parser/issues",
-                "source": "https://github.com/Riverline/multipart-parser/tree/2.0.8"
+                "source": "https://github.com/Riverline/multipart-parser/tree/2.0.9"
             },
-            "time": "2020-01-24T09:39:24+00:00"
+            "time": "2021-10-18T09:56:35+00:00"
         },
         {
             "name": "sinergi/browser-detector",
@@ -9048,9 +9048,18 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [],
+    "aliases": [
+        {
+            "package": "oat-sa/tao-core",
+            "version": "dev-release-2021-11-lts",
+            "alias": "48.45.2",
+            "alias_normalized": "48.45.2.0"
+        }
+    ],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "oat-sa/tao-core": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
