@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "81c949aac4428203377684e7b2b7c065",
+    "content-hash": "f4ad98c230d6948b6c4f86ddcde8884d",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -2596,95 +2596,6 @@
             "time": "2020-11-20T08:17:48+00:00"
         },
         {
-            "name": "oat-sa/extension-lti-outcomeui",
-            "version": "v1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/oat-sa/extension-lti-outcomeui.git",
-                "reference": "c6f4f57c413434366c6fd750356c4f4a1b95d4c9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-lti-outcomeui/zipball/c6f4f57c413434366c6fd750356c4f4a1b95d4c9",
-                "reference": "c6f4f57c413434366c6fd750356c4f4a1b95d4c9",
-                "shasum": ""
-            },
-            "require": {
-                "oat-sa/extension-tao-delivery": ">=15.0.0",
-                "oat-sa/extension-tao-lti": ">=12.0.0",
-                "oat-sa/extension-tao-outcomeui": ">=10.0.0",
-                "oat-sa/extension-tao-testqti-previewer": ">=3.0.0",
-                "oat-sa/generis": ">=14.0.0",
-                "oat-sa/oatbox-extension-installer": "~1.1||dev-master"
-            },
-            "type": "tao-extension",
-            "extra": {
-                "tao-extension-name": "ltiOutcomeUi"
-            },
-            "autoload": {
-                "psr-4": {
-                    "oat\\ltiOutcomeUi\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-only"
-            ],
-            "authors": [
-                {
-                    "name": "Open Assessment Technologies S.A.",
-                    "homepage": "http://www.taotesting.com"
-                },
-                {
-                    "name": "Jérôme Bogaerts",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Joel Bout",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Bertrand Chevrier",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Lionel Lecaque",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Patrick Plichart",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Dieter Raber",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Somsack Sipasseuth",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Camille Moyon",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Extension to manage LTI result provider for TAO",
-            "homepage": "http://www.taotesting.com",
-            "keywords": [
-                "OAT",
-                "QTI",
-                "TAO",
-                "computer-based-assessment"
-            ],
-            "support": {
-                "docs": "https://hub.taocloud.org/",
-                "forum": "https://forum.taocloud.org/",
-                "issues": "https://forum.taocloud.org/",
-                "source": "https://github.com/oat-sa/extension-lti-outcomeui/tree/v1.2.0"
-            },
-            "time": "2021-06-17T15:06:46+00:00"
-        },
-        {
             "name": "oat-sa/extension-pcisample",
             "version": "v3.1.1",
             "source": {
@@ -4216,23 +4127,23 @@
         },
         {
             "name": "oat-sa/extension-tao-proctoring",
-            "version": "v20.1.1",
+            "version": "v20.1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-proctoring.git",
-                "reference": "40889e74d44388e0c725817768b7eeb8301f095d"
+                "reference": "34bfdc5aa66883f97c530a44e5b093bcdf18c2e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-proctoring/zipball/40889e74d44388e0c725817768b7eeb8301f095d",
-                "reference": "40889e74d44388e0c725817768b7eeb8301f095d",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-proctoring/zipball/34bfdc5aa66883f97c530a44e5b093bcdf18c2e9",
+                "reference": "34bfdc5aa66883f97c530a44e5b093bcdf18c2e9",
                 "shasum": ""
             },
             "require": {
-                "oat-sa/extension-lti-outcomeui": ">=1.0.0",
                 "oat-sa/extension-tao-delivery": ">=15.0.0",
                 "oat-sa/extension-tao-delivery-rdf": ">=14.0.0",
                 "oat-sa/extension-tao-eventlog": ">=3.0.0",
+                "oat-sa/extension-tao-outcomeui": ">=10.0.0",
                 "oat-sa/extension-tao-test": ">=15.0.0",
                 "oat-sa/extension-tao-testqti": ">=41.0.0",
                 "oat-sa/extension-tao-testtaker": ">=8.0.0",
@@ -4268,9 +4179,9 @@
             ],
             "support": {
                 "issues": "https://github.com/oat-sa/extension-tao-proctoring/issues",
-                "source": "https://github.com/oat-sa/extension-tao-proctoring/tree/v20.1.1"
+                "source": "https://github.com/oat-sa/extension-tao-proctoring/tree/v20.1.1.1"
             },
-            "time": "2021-08-30T14:00:41+00:00"
+            "time": "2021-10-28T11:42:17+00:00"
         },
         {
             "name": "oat-sa/extension-tao-revision",
