@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8b47aa5277501e98f2315469fdcf6c63",
+    "content-hash": "013728223fcc54ebcce5c04e25bcafde",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -4507,16 +4507,16 @@
         },
         {
             "name": "oat-sa/extension-tao-testqti",
-            "version": "dev-hotfix/ADF-548/bundles-proper-order",
+            "version": "v41.13.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "89272cd90108b32de8fc696c93ed872a5d10cdbb"
+                "reference": "9644ffce444d3bb3abf75c02251521dac378a151"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/89272cd90108b32de8fc696c93ed872a5d10cdbb",
-                "reference": "89272cd90108b32de8fc696c93ed872a5d10cdbb",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/9644ffce444d3bb3abf75c02251521dac378a151",
+                "reference": "9644ffce444d3bb3abf75c02251521dac378a151",
                 "shasum": ""
             },
             "require": {
@@ -4599,9 +4599,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/hotfix/ADF-548/bundles-proper-order"
+                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/v41.13.0.3"
             },
-            "time": "2021-10-26T15:23:55+00:00"
+            "time": "2021-10-29T10:36:59+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
@@ -6977,16 +6977,16 @@
         },
         {
             "name": "symfony/dotenv",
-            "version": "v4.4.29",
+            "version": "v4.4.33",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dotenv.git",
-                "reference": "2b078eff6268875f4639cf16e48e321982c671bb"
+                "reference": "de87d7b873c40394aed7aa5b426e8ea5bfdc7ece"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dotenv/zipball/2b078eff6268875f4639cf16e48e321982c671bb",
-                "reference": "2b078eff6268875f4639cf16e48e321982c671bb",
+                "url": "https://api.github.com/repos/symfony/dotenv/zipball/de87d7b873c40394aed7aa5b426e8ea5bfdc7ece",
+                "reference": "de87d7b873c40394aed7aa5b426e8ea5bfdc7ece",
                 "shasum": ""
             },
             "require": {
@@ -7026,7 +7026,7 @@
                 "environment"
             ],
             "support": {
-                "source": "https://github.com/symfony/dotenv/tree/v4.4.29"
+                "source": "https://github.com/symfony/dotenv/tree/v4.4.33"
             },
             "funding": [
                 {
@@ -7042,7 +7042,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-07-27T16:19:30+00:00"
+            "time": "2021-10-28T11:03:11+00:00"
         },
         {
             "name": "symfony/lock",
@@ -8318,18 +8318,9 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [
-        {
-            "package": "oat-sa/extension-tao-testqti",
-            "version": "dev-hotfix/ADF-548/bundles-proper-order",
-            "alias": "41.13.0.2",
-            "alias_normalized": "41.13.0.2"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "oat-sa/extension-tao-testqti": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
