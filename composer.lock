@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f1b7ac443574236cfbc741bd87c93719",
+    "content-hash": "d25c5614d10cb79b87f38d2c5be5e684",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -1342,16 +1342,16 @@
         },
         {
             "name": "guzzlehttp/promises",
-            "version": "1.4.1",
+            "version": "1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/promises.git",
-                "reference": "8e7d04f1f6450fef59366c399cfad4b9383aa30d"
+                "reference": "fe752aedc9fd8fcca3fe7ad05d419d32998a06da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/8e7d04f1f6450fef59366c399cfad4b9383aa30d",
-                "reference": "8e7d04f1f6450fef59366c399cfad4b9383aa30d",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/fe752aedc9fd8fcca3fe7ad05d419d32998a06da",
+                "reference": "fe752aedc9fd8fcca3fe7ad05d419d32998a06da",
                 "shasum": ""
             },
             "require": {
@@ -1363,7 +1363,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.4-dev"
+                    "dev-master": "1.5-dev"
                 }
             },
             "autoload": {
@@ -1380,9 +1380,24 @@
             ],
             "authors": [
                 {
+                    "name": "Graham Campbell",
+                    "email": "hello@gjcampbell.co.uk",
+                    "homepage": "https://github.com/GrahamCampbell"
+                },
+                {
                     "name": "Michael Dowling",
                     "email": "mtdowling@gmail.com",
                     "homepage": "https://github.com/mtdowling"
+                },
+                {
+                    "name": "Tobias Nyholm",
+                    "email": "tobias.nyholm@gmail.com",
+                    "homepage": "https://github.com/Nyholm"
+                },
+                {
+                    "name": "Tobias Schultze",
+                    "email": "webmaster@tubo-world.de",
+                    "homepage": "https://github.com/Tobion"
                 }
             ],
             "description": "Guzzle promises library",
@@ -1391,9 +1406,23 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/promises/issues",
-                "source": "https://github.com/guzzle/promises/tree/1.4.1"
+                "source": "https://github.com/guzzle/promises/tree/1.5.1"
             },
-            "time": "2021-03-07T09:25:29+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/GrahamCampbell",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/Nyholm",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/guzzlehttp/promises",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-10-22T20:56:57+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -3425,23 +3454,23 @@
         },
         {
             "name": "oat-sa/extension-tao-itemqti",
-            "version": "v28.10.3.1",
+            "version": "v28.23.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti.git",
-                "reference": "16d5a8d6e8bd66a8ece818a19f1b91e8f7d4160e"
+                "reference": "e2f8ba975fe6416bb14877ff564e6ad5450b1e43"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/16d5a8d6e8bd66a8ece818a19f1b91e8f7d4160e",
-                "reference": "16d5a8d6e8bd66a8ece818a19f1b91e8f7d4160e",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/e2f8ba975fe6416bb14877ff564e6ad5450b1e43",
+                "reference": "e2f8ba975fe6416bb14877ff564e6ad5450b1e43",
                 "shasum": ""
             },
             "require": {
                 "naneau/semver": "~0.0.7",
                 "oat-sa/extension-tao-item": ">=11.11.2",
                 "oat-sa/generis": ">=14.4.0",
-                "oat-sa/lib-tao-qti": "7.2.1",
+                "oat-sa/lib-tao-qti": "7.3.0",
                 "oat-sa/oatbox-extension-installer": "~1.1||dev-master",
                 "oat-sa/tao-core": ">=48.29.0"
             },
@@ -3509,9 +3538,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/v28.10.3.1"
+                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/v28.23.0"
             },
-            "time": "2021-10-07T16:27:17+00:00"
+            "time": "2021-11-03T08:13:59+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pci",
@@ -4478,16 +4507,16 @@
         },
         {
             "name": "oat-sa/extension-tao-testqti",
-            "version": "v41.14.1",
+            "version": "v41.19.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "57b040f7c2ece766298515a7cee21ec13f570f03"
+                "reference": "26c51df39e6749629e39af5ba4e30654c29c626d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/57b040f7c2ece766298515a7cee21ec13f570f03",
-                "reference": "57b040f7c2ece766298515a7cee21ec13f570f03",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/26c51df39e6749629e39af5ba4e30654c29c626d",
+                "reference": "26c51df39e6749629e39af5ba4e30654c29c626d",
                 "shasum": ""
             },
             "require": {
@@ -4501,7 +4530,7 @@
                 "oat-sa/lib-test-cat": "2.3.7",
                 "oat-sa/oatbox-extension-installer": "~1.1||dev-master",
                 "oat-sa/tao-core": ">=48.9.0",
-                "qtism/qtism": "^0.24.11"
+                "qtism/qtism": "^0.25.0"
             },
             "type": "tao-extension",
             "extra": {
@@ -4570,9 +4599,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/v41.14.1"
+                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/v41.19.0"
             },
-            "time": "2021-08-09T05:38:14+00:00"
+            "time": "2021-11-03T15:24:48+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
@@ -5076,21 +5105,21 @@
         },
         {
             "name": "oat-sa/lib-tao-qti",
-            "version": "v7.2.1",
+            "version": "v7.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/lib-tao-qti.git",
-                "reference": "ed31e32590a89bdea4c72f507e94ef84209fd1f4"
+                "reference": "40430db9d61df8e640999f3341a92eb413f7b19e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/lib-tao-qti/zipball/ed31e32590a89bdea4c72f507e94ef84209fd1f4",
-                "reference": "ed31e32590a89bdea4c72f507e94ef84209fd1f4",
+                "url": "https://api.github.com/repos/oat-sa/lib-tao-qti/zipball/40430db9d61df8e640999f3341a92eb413f7b19e",
+                "reference": "40430db9d61df8e640999f3341a92eb413f7b19e",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1",
-                "qtism/qtism": "0.24.12"
+                "qtism/qtism": "0.25.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "<9.0.0"
@@ -5138,9 +5167,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/lib-tao-qti/tree/v7.2.1"
+                "source": "https://github.com/oat-sa/lib-tao-qti/tree/v7.3.0"
             },
-            "time": "2021-07-06T09:19:58+00:00"
+            "time": "2021-11-02T10:59:37+00:00"
         },
         {
             "name": "oat-sa/lib-test-cat",
@@ -6192,16 +6221,16 @@
         },
         {
             "name": "qtism/qtism",
-            "version": "0.24.12",
+            "version": "0.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/qti-sdk.git",
-                "reference": "c660c79c4346b4293a8526d3d65b0366bbe4262b"
+                "reference": "0e96dea8ff080380f141ca5232b2595572064da0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/qti-sdk/zipball/c660c79c4346b4293a8526d3d65b0366bbe4262b",
-                "reference": "c660c79c4346b4293a8526d3d65b0366bbe4262b",
+                "url": "https://api.github.com/repos/oat-sa/qti-sdk/zipball/0e96dea8ff080380f141ca5232b2595572064da0",
+                "reference": "0e96dea8ff080380f141ca5232b2595572064da0",
                 "shasum": ""
             },
             "require": {
@@ -6256,9 +6285,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/qti-sdk/tree/0.24.12"
+                "source": "https://github.com/oat-sa/qti-sdk/tree/0.25.0"
             },
-            "time": "2021-07-06T08:38:41+00:00"
+            "time": "2021-10-28T08:36:44+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
