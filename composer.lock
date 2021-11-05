@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8438f315d5d2afba556d220acf36e6bc",
+    "content-hash": "1d705c4661d3f16d37b8a905804c7315",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -2394,16 +2394,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.53.1",
+            "version": "2.54.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "f4655858a784988f880c1b8c7feabbf02dfdf045"
+                "reference": "eed83939f1aed3eee517d03a33f5ec587ac529b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/f4655858a784988f880c1b8c7feabbf02dfdf045",
-                "reference": "f4655858a784988f880c1b8c7feabbf02dfdf045",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/eed83939f1aed3eee517d03a33f5ec587ac529b5",
+                "reference": "eed83939f1aed3eee517d03a33f5ec587ac529b5",
                 "shasum": ""
             },
             "require": {
@@ -2414,6 +2414,7 @@
                 "symfony/translation": "^3.4 || ^4.0 || ^5.0"
             },
             "require-dev": {
+                "doctrine/dbal": "^2.0 || ^3.0",
                 "doctrine/orm": "^2.7",
                 "friendsofphp/php-cs-fixer": "^3.0",
                 "kylekatarnls/multi-tester": "^2.0",
@@ -2484,7 +2485,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-09-06T09:29:23+00:00"
+            "time": "2021-11-01T21:22:20+00:00"
         },
         {
             "name": "nikic/fast-route",
@@ -3421,7 +3422,7 @@
         },
         {
             "name": "oat-sa/extension-tao-itemqti",
-            "version": "dev-release-2021-11-lts",
+            "version": "v28.19.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti.git",
@@ -3505,7 +3506,7 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/release-2021-11-lts"
+                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/v28.19.7"
             },
             "time": "2021-11-02T12:30:38+00:00"
         },
@@ -4473,7 +4474,7 @@
         },
         {
             "name": "oat-sa/extension-tao-testqti",
-            "version": "dev-release-2021-11-lts",
+            "version": "v41.15.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
@@ -4565,7 +4566,7 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/release-2021-11-lts"
+                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/v41.15.3"
             },
             "time": "2021-10-26T15:55:57+00:00"
         },
@@ -5256,7 +5257,7 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "dev-release-2021-11-lts",
+            "version": "v48.45.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
@@ -5367,7 +5368,7 @@
             "support": {
                 "forum": "https://forum.taocloud.org",
                 "issues": "https://github.com/oat-sa/tao-core/issues",
-                "source": "https://github.com/oat-sa/tao-core/tree/release-2021-11-lts"
+                "source": "https://github.com/oat-sa/tao-core/tree/v48.45.3"
             },
             "time": "2021-10-29T08:11:56+00:00"
         },
@@ -9048,32 +9049,9 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [
-        {
-            "package": "oat-sa/extension-tao-itemqti",
-            "version": "dev-release-2021-11-lts",
-            "alias": "28.19.7",
-            "alias_normalized": "28.19.7.0"
-        },
-        {
-            "package": "oat-sa/extension-tao-testqti",
-            "version": "dev-release-2021-11-lts",
-            "alias": "41.15.3",
-            "alias_normalized": "41.15.3.0"
-        },
-        {
-            "package": "oat-sa/tao-core",
-            "version": "dev-release-2021-11-lts",
-            "alias": "48.45.2",
-            "alias_normalized": "48.45.2.0"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "oat-sa/tao-core": 20,
-        "oat-sa/extension-tao-itemqti": 20,
-        "oat-sa/extension-tao-testqti": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
