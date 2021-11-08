@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "33c800d76d8cd84b878e8c32ca39ab33",
+    "content-hash": "fbb7ced099feb8c93c340179c376930f",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -5301,16 +5301,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "v48.55.0",
+            "version": "dev-release-2021-12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "c4ebf542d3ff5b47cae11aa32cd6be1f1df198a8"
+                "reference": "b7304605a64693f64d4a1983711c186f50ff3050"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/c4ebf542d3ff5b47cae11aa32cd6be1f1df198a8",
-                "reference": "c4ebf542d3ff5b47cae11aa32cd6be1f1df198a8",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/b7304605a64693f64d4a1983711c186f50ff3050",
+                "reference": "b7304605a64693f64d4a1983711c186f50ff3050",
                 "shasum": ""
             },
             "require": {
@@ -5412,9 +5412,9 @@
             "support": {
                 "forum": "https://forum.taocloud.org",
                 "issues": "https://github.com/oat-sa/tao-core/issues",
-                "source": "https://github.com/oat-sa/tao-core/tree/v48.55.0"
+                "source": "https://github.com/oat-sa/tao-core/tree/release-2021-12"
             },
-            "time": "2021-11-05T13:41:02+00:00"
+            "time": "2021-11-08T07:02:35+00:00"
         },
         {
             "name": "ocramius/proxy-manager",
@@ -9093,9 +9093,18 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [],
+    "aliases": [
+        {
+            "package": "oat-sa/tao-core",
+            "version": "dev-release-2021-12",
+            "alias": "48.55.1",
+            "alias_normalized": "48.55.1.0"
+        }
+    ],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "oat-sa/tao-core": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
