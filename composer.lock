@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "06c09bd6b3fe2556636ae580204881ca",
+    "content-hash": "e42729b6898057fa74f47096db550149",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -4474,16 +4474,16 @@
         },
         {
             "name": "oat-sa/extension-tao-testqti",
-            "version": "v41.19.0",
+            "version": "v42.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "26c51df39e6749629e39af5ba4e30654c29c626d"
+                "reference": "de19e5515ea44093e1dcc621fdf1e73874c53bc2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/26c51df39e6749629e39af5ba4e30654c29c626d",
-                "reference": "26c51df39e6749629e39af5ba4e30654c29c626d",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/de19e5515ea44093e1dcc621fdf1e73874c53bc2",
+                "reference": "de19e5515ea44093e1dcc621fdf1e73874c53bc2",
                 "shasum": ""
             },
             "require": {
@@ -4493,10 +4493,10 @@
                 "oat-sa/extension-tao-itemqti": ">=27.0.0",
                 "oat-sa/extension-tao-outcome": ">=13.0.0",
                 "oat-sa/extension-tao-test": ">=15.0.0",
-                "oat-sa/generis": ">=14.0.0",
+                "oat-sa/generis": ">=15.5.0",
                 "oat-sa/lib-test-cat": "2.3.7",
                 "oat-sa/oatbox-extension-installer": "~1.1||dev-master",
-                "oat-sa/tao-core": ">=48.9.0",
+                "oat-sa/tao-core": ">=48.39.0",
                 "qtism/qtism": "^0.25.0"
             },
             "type": "tao-extension",
@@ -4511,10 +4511,8 @@
             },
             "autoload": {
                 "psr-4": {
-                    "oat\\taoQtiTest\\models\\": "models/classes/",
-                    "oat\\taoQtiTest\\helpers\\": "helpers",
-                    "oat\\taoQtiTest\\test\\": "test",
-                    "oat\\taoQtiTest\\scripts\\": "scripts"
+                    "oat\\taoQtiTest\\": "",
+                    "oat\\taoQtiTest\\models\\": "models/classes/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -4566,9 +4564,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/v41.19.0"
+                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/v42.0.0"
             },
-            "time": "2021-11-03T15:24:48+00:00"
+            "time": "2021-11-19T09:24:52+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
