@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7369afa9dffbe9a61b26f5777482a891",
+    "content-hash": "190f86f1336fd1b5c7b821d09319c36f",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -5301,16 +5301,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "v48.66.1",
+            "version": "dev-hotfix/adf-865/user-cannot-remove-properties",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "5f70b419d7bf4018aa2c787b378fe79aa606dded"
+                "reference": "8e178a23af81495ba3e4b46594379d88e4b931de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/5f70b419d7bf4018aa2c787b378fe79aa606dded",
-                "reference": "5f70b419d7bf4018aa2c787b378fe79aa606dded",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/8e178a23af81495ba3e4b46594379d88e4b931de",
+                "reference": "8e178a23af81495ba3e4b46594379d88e4b931de",
                 "shasum": ""
             },
             "require": {
@@ -5412,9 +5412,9 @@
             "support": {
                 "forum": "https://forum.taocloud.org",
                 "issues": "https://github.com/oat-sa/tao-core/issues",
-                "source": "https://github.com/oat-sa/tao-core/tree/v48.66.1"
+                "source": "https://github.com/oat-sa/tao-core/tree/hotfix/adf-865/user-cannot-remove-properties"
             },
-            "time": "2021-12-03T15:49:44+00:00"
+            "time": "2021-12-10T09:42:43+00:00"
         },
         {
             "name": "ocramius/proxy-manager",
@@ -9098,9 +9098,18 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [],
+    "aliases": [
+        {
+            "package": "oat-sa/tao-core",
+            "version": "dev-hotfix/adf-865/user-cannot-remove-properties",
+            "alias": "48.66.1",
+            "alias_normalized": "48.66.1.0"
+        }
+    ],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "oat-sa/tao-core": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
