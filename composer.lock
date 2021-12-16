@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f51e9b6627e9822f37605b4e06744c96",
+    "content-hash": "cbfea4210f2290ecc35625252609008c",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -3424,16 +3424,16 @@
         },
         {
             "name": "oat-sa/extension-tao-itemqti",
-            "version": "v28.28.0",
+            "version": "dev-release-2022-01",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti.git",
-                "reference": "20b140bbf30d9f4e996dac6c309fce12794de7d3"
+                "reference": "646887d39cda643ed583fc58d0b8fed85576161e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/20b140bbf30d9f4e996dac6c309fce12794de7d3",
-                "reference": "20b140bbf30d9f4e996dac6c309fce12794de7d3",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/646887d39cda643ed583fc58d0b8fed85576161e",
+                "reference": "646887d39cda643ed583fc58d0b8fed85576161e",
                 "shasum": ""
             },
             "require": {
@@ -3508,9 +3508,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/v28.28.0"
+                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/release-2022-01"
             },
-            "time": "2021-12-03T08:25:59+00:00"
+            "time": "2021-12-16T15:31:37+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pci",
@@ -4478,16 +4478,16 @@
         },
         {
             "name": "oat-sa/extension-tao-testqti",
-            "version": "v42.0.0",
+            "version": "dev-release-2022-01",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "de19e5515ea44093e1dcc621fdf1e73874c53bc2"
+                "reference": "1b199255855d08a1c37518cfadd97e5dbf4716e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/de19e5515ea44093e1dcc621fdf1e73874c53bc2",
-                "reference": "de19e5515ea44093e1dcc621fdf1e73874c53bc2",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/1b199255855d08a1c37518cfadd97e5dbf4716e2",
+                "reference": "1b199255855d08a1c37518cfadd97e5dbf4716e2",
                 "shasum": ""
             },
             "require": {
@@ -4568,9 +4568,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/v42.0.0"
+                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/release-2022-01"
             },
-            "time": "2021-11-19T09:24:52+00:00"
+            "time": "2021-12-16T15:31:52+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
@@ -5305,12 +5305,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "ff313a4fe01a60e15226aa66e425ada8a6f9b096"
+                "reference": "d74ad72f7bba10c972e98b9d01db67d667ea62ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/ff313a4fe01a60e15226aa66e425ada8a6f9b096",
-                "reference": "ff313a4fe01a60e15226aa66e425ada8a6f9b096",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/d74ad72f7bba10c972e98b9d01db67d667ea62ae",
+                "reference": "d74ad72f7bba10c972e98b9d01db67d667ea62ae",
                 "shasum": ""
             },
             "require": {
@@ -5414,7 +5414,7 @@
                 "issues": "https://github.com/oat-sa/tao-core/issues",
                 "source": "https://github.com/oat-sa/tao-core/tree/release-2022-01"
             },
-            "time": "2021-12-10T10:31:53+00:00"
+            "time": "2021-12-16T15:31:42+00:00"
         },
         {
             "name": "ocramius/proxy-manager",
@@ -9100,6 +9100,18 @@
     "packages-dev": [],
     "aliases": [
         {
+            "package": "oat-sa/extension-tao-itemqti",
+            "version": "dev-release-2022-01",
+            "alias": "28.28.1",
+            "alias_normalized": "28.28.1.0"
+        },
+        {
+            "package": "oat-sa/extension-tao-testqti",
+            "version": "dev-release-2022-01",
+            "alias": "42.0.1",
+            "alias_normalized": "42.0.1.0"
+        },
+        {
             "package": "oat-sa/tao-core",
             "version": "dev-release-2022-01",
             "alias": "48.66.1",
@@ -9108,7 +9120,9 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "oat-sa/tao-core": 20
+        "oat-sa/tao-core": 20,
+        "oat-sa/extension-tao-itemqti": 20,
+        "oat-sa/extension-tao-testqti": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
