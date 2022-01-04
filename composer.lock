@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7051bb2efd9fe30ea54c3905656c8077",
+    "content-hash": "88ca0a42404e1edf3a6c81c69751db77",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -5299,16 +5299,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "v48.75.0",
+            "version": "dev-release-2022-02-lts",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "da34473d2ddc3f8bfe2826948ef8c212ae7e7de7"
+                "reference": "74d4e522e33939bfdf9307776a7b10104b907137"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/da34473d2ddc3f8bfe2826948ef8c212ae7e7de7",
-                "reference": "da34473d2ddc3f8bfe2826948ef8c212ae7e7de7",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/74d4e522e33939bfdf9307776a7b10104b907137",
+                "reference": "74d4e522e33939bfdf9307776a7b10104b907137",
                 "shasum": ""
             },
             "require": {
@@ -5410,9 +5410,9 @@
             "support": {
                 "forum": "https://forum.taocloud.org",
                 "issues": "https://github.com/oat-sa/tao-core/issues",
-                "source": "https://github.com/oat-sa/tao-core/tree/v48.75.0"
+                "source": "https://github.com/oat-sa/tao-core/tree/release-2022-02-lts"
             },
-            "time": "2021-12-30T11:41:16+00:00"
+            "time": "2022-01-04T13:04:58+00:00"
         },
         {
             "name": "ocramius/proxy-manager",
@@ -9096,9 +9096,18 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [],
+    "aliases": [
+        {
+            "package": "oat-sa/tao-core",
+            "version": "dev-release-2022-02-lts",
+            "alias": "48.75.0",
+            "alias_normalized": "48.75.0.0"
+        }
+    ],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "oat-sa/tao-core": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
