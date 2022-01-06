@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "88ca0a42404e1edf3a6c81c69751db77",
+    "content-hash": "acafc7a9a728ba60101a56aa3d66bcd0",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -4476,16 +4476,16 @@
         },
         {
             "name": "oat-sa/extension-tao-testqti",
-            "version": "v43.1.1",
+            "version": "dev-release-2022-02-lts",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "369eb191bd5f4a7a1b70c0d8760987de476d1d8f"
+                "reference": "1cd96d2e407da9a63cb49910e9b51a6e77cab960"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/369eb191bd5f4a7a1b70c0d8760987de476d1d8f",
-                "reference": "369eb191bd5f4a7a1b70c0d8760987de476d1d8f",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/1cd96d2e407da9a63cb49910e9b51a6e77cab960",
+                "reference": "1cd96d2e407da9a63cb49910e9b51a6e77cab960",
                 "shasum": ""
             },
             "require": {
@@ -4566,9 +4566,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/v43.1.1"
+                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/release-2022-02-lts"
             },
-            "time": "2022-01-03T10:39:33+00:00"
+            "time": "2022-01-06T08:58:47+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
@@ -9098,6 +9098,12 @@
     "packages-dev": [],
     "aliases": [
         {
+            "package": "oat-sa/extension-tao-testqti",
+            "version": "dev-release-2022-02-lts",
+            "alias": "43.1.1",
+            "alias_normalized": "43.1.1.0"
+        },
+        {
             "package": "oat-sa/tao-core",
             "version": "dev-release-2022-02-lts",
             "alias": "48.75.0",
@@ -9106,7 +9112,8 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "oat-sa/tao-core": 20
+        "oat-sa/tao-core": 20,
+        "oat-sa/extension-tao-testqti": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
@@ -9115,5 +9122,5 @@
     "platform-overrides": {
         "php": "7.2.5"
     },
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }
