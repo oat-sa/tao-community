@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c05403cf13a61af63059d82090ca9f9c",
+    "content-hash": "fc5af7879f9a2c36c2bc1a0689d15fc3",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -1770,6 +1770,10 @@
                 "event",
                 "listener"
             ],
+            "support": {
+                "issues": "https://github.com/thephpleague/event/issues",
+                "source": "https://github.com/thephpleague/event/tree/master"
+            },
             "time": "2018-11-26T11:52:41+00:00"
         },
         {
@@ -3832,16 +3836,16 @@
         },
         {
             "name": "oat-sa/extension-tao-proctoring",
-            "version": "v19.20.7",
+            "version": "dev-bugfix/TR-3297/backport_for_tests",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-proctoring.git",
-                "reference": "550e63dcb60aab7480254b302cc445874097eddc"
+                "reference": "eb5fa0f9ff41e04d9a3ce0c90aff297f7765770d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-proctoring/zipball/550e63dcb60aab7480254b302cc445874097eddc",
-                "reference": "550e63dcb60aab7480254b302cc445874097eddc",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-proctoring/zipball/eb5fa0f9ff41e04d9a3ce0c90aff297f7765770d",
+                "reference": "eb5fa0f9ff41e04d9a3ce0c90aff297f7765770d",
                 "shasum": ""
             },
             "require": {
@@ -3872,7 +3876,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2021-01-06T15:32:09+00:00"
+            "time": "2022-01-06T14:28:02+00:00"
         },
         {
             "name": "oat-sa/extension-tao-revision",
@@ -5081,6 +5085,10 @@
                 "stream",
                 "uri"
             ],
+            "support": {
+                "issues": "https://github.com/php-http/message-factory/issues",
+                "source": "https://github.com/php-http/message-factory/tree/master"
+            },
             "time": "2015-12-19T14:08:53+00:00"
         },
         {
@@ -5432,6 +5440,9 @@
                 "request",
                 "response"
             ],
+            "support": {
+                "source": "https://github.com/php-fig/http-factory/tree/master"
+            },
             "time": "2019-04-30T12:38:16+00:00"
         },
         {
@@ -7487,9 +7498,18 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [],
+    "aliases": [
+        {
+            "alias": "19.20.7.2",
+            "alias_normalized": "19.20.7.2",
+            "version": "dev-bugfix/TR-3297/backport_for_tests",
+            "package": "oat-sa/extension-tao-proctoring"
+        }
+    ],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "oat-sa/extension-tao-proctoring": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
