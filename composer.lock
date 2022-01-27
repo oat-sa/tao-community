@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fe293965328f64501bc744917edb393a",
+    "content-hash": "4f3192568fe45cd60b048891bbd2cae8",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -2731,16 +2731,16 @@
         },
         {
             "name": "oat-sa/extension-tao-backoffice",
-            "version": "v6.6.0",
+            "version": "dev-release-2022-02-lts",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-backoffice.git",
-                "reference": "d844fcfcec6ec8bc571854486022e0f20b9fdeaf"
+                "reference": "ba219134b4d87d80af86cfcf7768e76482c2a01a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-backoffice/zipball/d844fcfcec6ec8bc571854486022e0f20b9fdeaf",
-                "reference": "d844fcfcec6ec8bc571854486022e0f20b9fdeaf",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-backoffice/zipball/ba219134b4d87d80af86cfcf7768e76482c2a01a",
+                "reference": "ba219134b4d87d80af86cfcf7768e76482c2a01a",
                 "shasum": ""
             },
             "require": {
@@ -2773,9 +2773,9 @@
             ],
             "support": {
                 "issues": "https://github.com/oat-sa/extension-tao-backoffice/issues",
-                "source": "https://github.com/oat-sa/extension-tao-backoffice/tree/v6.6.0"
+                "source": "https://github.com/oat-sa/extension-tao-backoffice/tree/release-2022-02-lts"
             },
-            "time": "2021-12-30T08:47:31+00:00"
+            "time": "2022-01-27T08:24:37+00:00"
         },
         {
             "name": "oat-sa/extension-tao-clientdiag",
@@ -5303,12 +5303,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "74d4e522e33939bfdf9307776a7b10104b907137"
+                "reference": "7cf34ce9b793dd5ee75e6ad6925cf45a61aa5e4b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/74d4e522e33939bfdf9307776a7b10104b907137",
-                "reference": "74d4e522e33939bfdf9307776a7b10104b907137",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/7cf34ce9b793dd5ee75e6ad6925cf45a61aa5e4b",
+                "reference": "7cf34ce9b793dd5ee75e6ad6925cf45a61aa5e4b",
                 "shasum": ""
             },
             "require": {
@@ -5412,7 +5412,7 @@
                 "issues": "https://github.com/oat-sa/tao-core/issues",
                 "source": "https://github.com/oat-sa/tao-core/tree/release-2022-02-lts"
             },
-            "time": "2022-01-04T13:04:58+00:00"
+            "time": "2022-01-27T08:24:23+00:00"
         },
         {
             "name": "ocramius/proxy-manager",
@@ -9098,6 +9098,12 @@
     "packages-dev": [],
     "aliases": [
         {
+            "package": "oat-sa/extension-tao-backoffice",
+            "version": "dev-release-2022-02-lts",
+            "alias": "6.6.0",
+            "alias_normalized": "6.6.0.0"
+        },
+        {
             "package": "oat-sa/tao-core",
             "version": "dev-release-2022-02-lts",
             "alias": "48.75.0",
@@ -9106,7 +9112,8 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "oat-sa/tao-core": 20
+        "oat-sa/tao-core": 20,
+        "oat-sa/extension-tao-backoffice": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
@@ -9115,5 +9122,5 @@
     "platform-overrides": {
         "php": "7.2.5"
     },
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.1.0"
 }
