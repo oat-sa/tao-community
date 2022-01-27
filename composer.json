@@ -5,7 +5,12 @@
     "platform": {
       "php": "7.2.5"
     },
-    "preferred-install": "dist"
+    "preferred-install": "dist",
+    "allow-plugins": {
+      "oat-sa/oatbox-extension-installer": true,
+      "oat-sa/composer-npm-bridge": true,
+      "composer/package-versions-deprecated": true
+    }
   },
   "support": {
     "issues": "http://forge.taotesting.com",
@@ -27,7 +32,7 @@
   "prefer-stable": true,
   "require": {
         "oat-sa/generis": "15.5.1",
-        "oat-sa/tao-core": "48.45.6",
+        "oat-sa/tao-core": "dev-backport/v48.45.7 as 48.45.7",
         "oat-sa/extension-tao-community": "10.1.2",
         "oat-sa/extension-tao-funcacl": "7.0.1",
         "oat-sa/extension-tao-dac-simple": "7.3.1",
@@ -35,21 +40,21 @@
         "oat-sa/extension-tao-group": "7.5.0",
         "oat-sa/extension-tao-item": "11.16.0",
         "oat-sa/extension-tao-itemqti-pci": "7.7.0",
-        "oat-sa/extension-tao-itemqti": "28.19.10",
+        "oat-sa/extension-tao-itemqti": "dev-backort/v28.19.11 as 28.19.11",
         "oat-sa/extension-tao-itemqti-pic": "6.1.0",
         "oat-sa/extension-tao-test": "15.7.1",
-        "oat-sa/extension-tao-testqti": "41.15.6",
+        "oat-sa/extension-tao-testqti": "dev-backport/v41.15.7 as 41.15.7",
         "oat-sa/extension-tao-outcome": "13.1.0",
         "oat-sa/extension-tao-outcomeui": "10.7.2",
         "oat-sa/extension-tao-outcomerds": "8.1.1",
         "oat-sa/extension-tao-outcomekeyvalue": "6.1.1",
         "oat-sa/extension-tao-outcomelti": "5.0.2",
         "oat-sa/extension-tao-delivery": "15.5.2",
-        "oat-sa/extension-tao-delivery-rdf": "v14.7.1",
+        "oat-sa/extension-tao-delivery-rdf": "dev-backport/v14.7.2 as 14.7.2",
         "oat-sa/extension-tao-lti": "14.0.0",
         "oat-sa/extension-tao-ltideliveryprovider": "12.3.0",
         "oat-sa/extension-tao-revision": "10.1.0",
-        "oat-sa/extension-tao-mediamanager": "12.14.0",
+        "oat-sa/extension-tao-mediamanager": "dev-backport/12.14.1 as 12.14.1",
         "oat-sa/extension-pcisample": "3.1.1",
         "oat-sa/extension-tao-backoffice": "6.3.0",
         "oat-sa/extension-tao-proctoring": "20.1.4",
