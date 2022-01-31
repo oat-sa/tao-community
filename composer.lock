@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "bb399fbc4bdf3583d795039864dbfc85",
+=======
+    "content-hash": "990167780aa90dfa0897af773d5981ce",
+>>>>>>> c50265830e72014d3b22832f809734e2bcc7353a
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -5251,6 +5255,7 @@
         },
         {
             "name": "oat-sa/tao-core",
+<<<<<<< HEAD
             "version": "dev-backport/v48.45.7",
             "source": {
                 "type": "git",
@@ -5261,6 +5266,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/cc47adbd7fe2c0974a04f06115003809e60ac7b4",
                 "reference": "cc47adbd7fe2c0974a04f06115003809e60ac7b4",
+=======
+            "version": "v48.45.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oat-sa/tao-core.git",
+                "reference": "604c04d94f8dd94dc83d266a425e93be47881726"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/604c04d94f8dd94dc83d266a425e93be47881726",
+                "reference": "604c04d94f8dd94dc83d266a425e93be47881726",
+>>>>>>> c50265830e72014d3b22832f809734e2bcc7353a
                 "shasum": ""
             },
             "require": {
@@ -5362,9 +5379,15 @@
             "support": {
                 "forum": "https://forum.taocloud.org",
                 "issues": "https://github.com/oat-sa/tao-core/issues",
+<<<<<<< HEAD
                 "source": "https://github.com/oat-sa/tao-core/tree/backport/v48.45.7"
             },
             "time": "2022-01-20T17:41:11+00:00"
+=======
+                "source": "https://github.com/oat-sa/tao-core/tree/v48.45.7"
+            },
+            "time": "2022-01-27T10:33:27+00:00"
+>>>>>>> c50265830e72014d3b22832f809734e2bcc7353a
         },
         {
             "name": "ocramius/proxy-manager",
