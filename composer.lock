@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bf67e20134dbc89cb940f57d28960fe3",
+    "content-hash": "0f9beb92a7f03d52bc9ac03396b8a384",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -4040,16 +4040,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "v45.2.3",
+            "version": "dev-backport/TR-3442/safari-cannot-play-media",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "e187f9c856c57111a78681dcf468185afdc856d7"
+                "reference": "4e77b570a470de38d90fed85cab435a8d4ece9f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/e187f9c856c57111a78681dcf468185afdc856d7",
-                "reference": "e187f9c856c57111a78681dcf468185afdc856d7",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/4e77b570a470de38d90fed85cab435a8d4ece9f4",
+                "reference": "4e77b570a470de38d90fed85cab435a8d4ece9f4",
                 "shasum": ""
             },
             "require": {
@@ -4141,7 +4141,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2021-08-27T13:55:43+00:00"
+            "time": "2022-02-01T11:35:24+00:00"
         },
         {
             "name": "ocramius/package-versions",
@@ -6496,9 +6496,18 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [],
+    "aliases": [
+        {
+            "alias": "45.2.4",
+            "alias_normalized": "45.2.4.0",
+            "version": "dev-backport/TR-3442/safari-cannot-play-media",
+            "package": "oat-sa/tao-core"
+        }
+    ],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "oat-sa/tao-core": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
