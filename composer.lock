@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0f9beb92a7f03d52bc9ac03396b8a384",
+    "content-hash": "bb3ef40f243417a04f999b3b3e34cf3f",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -4040,16 +4040,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "dev-backport/TR-3442/safari-cannot-play-media",
+            "version": "v45.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "4e77b570a470de38d90fed85cab435a8d4ece9f4"
+                "reference": "8fc84c3ccbc637529eb441c123b87f6ae70f31fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/4e77b570a470de38d90fed85cab435a8d4ece9f4",
-                "reference": "4e77b570a470de38d90fed85cab435a8d4ece9f4",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/8fc84c3ccbc637529eb441c123b87f6ae70f31fe",
+                "reference": "8fc84c3ccbc637529eb441c123b87f6ae70f31fe",
                 "shasum": ""
             },
             "require": {
@@ -4084,17 +4084,17 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "oat\\tao\\controller\\": "controller",
-                    "oat\\tao\\model\\": "models/classes/",
-                    "oat\\tao\\helpers\\": "helpers",
-                    "oat\\tao\\test\\": "test",
-                    "oat\\tao\\scripts\\": "scripts",
-                    "oat\\tao\\install\\": "install"
-                },
                 "files": [
                     "includes/globalHelpers.php"
-                ]
+                ],
+                "psr-4": {
+                    "oat\\tao\\test\\": "test",
+                    "oat\\tao\\model\\": "models/classes/",
+                    "oat\\tao\\helpers\\": "helpers",
+                    "oat\\tao\\install\\": "install",
+                    "oat\\tao\\scripts\\": "scripts",
+                    "oat\\tao\\controller\\": "controller"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -4141,7 +4141,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2022-02-01T11:35:24+00:00"
+            "time": "2022-02-02T12:41:40+00:00"
         },
         {
             "name": "ocramius/package-versions",
@@ -6496,18 +6496,9 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [
-        {
-            "alias": "45.2.4",
-            "alias_normalized": "45.2.4.0",
-            "version": "dev-backport/TR-3442/safari-cannot-play-media",
-            "package": "oat-sa/tao-core"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "oat-sa/tao-core": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
