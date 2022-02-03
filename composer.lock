@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0af6a42d785558266c49b6ed461fce3f",
+    "content-hash": "9ec5b55e51d809586776aee5ae7c6fd0",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -1453,12 +1453,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Psr7\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\Psr7\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2533,16 +2533,16 @@
         },
         {
             "name": "nyholm/psr7",
-            "version": "1.4.1",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Nyholm/psr7.git",
-                "reference": "2212385b47153ea71b1c1b1374f8cb5e4f7892ec"
+                "reference": "1461e07a0f2a975a52082ca3b769ca912b816226"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Nyholm/psr7/zipball/2212385b47153ea71b1c1b1374f8cb5e4f7892ec",
-                "reference": "2212385b47153ea71b1c1b1374f8cb5e4f7892ec",
+                "url": "https://api.github.com/repos/Nyholm/psr7/zipball/1461e07a0f2a975a52082ca3b769ca912b816226",
+                "reference": "1461e07a0f2a975a52082ca3b769ca912b816226",
                 "shasum": ""
             },
             "require": {
@@ -2594,7 +2594,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Nyholm/psr7/issues",
-                "source": "https://github.com/Nyholm/psr7/tree/1.4.1"
+                "source": "https://github.com/Nyholm/psr7/tree/1.5.0"
             },
             "funding": [
                 {
@@ -2606,7 +2606,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-07-02T08:32:20+00:00"
+            "time": "2022-02-02T18:37:57+00:00"
         },
         {
             "name": "oat-sa/composer-npm-bridge",
@@ -3051,7 +3051,7 @@
         },
         {
             "name": "oat-sa/extension-tao-delivery-rdf",
-            "version": "dev-backport/v14.7.2",
+            "version": "v14.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-delivery-rdf.git",
@@ -3099,7 +3099,7 @@
             ],
             "support": {
                 "issues": "https://github.com/oat-sa/extension-tao-delivery-rdf/issues",
-                "source": "https://github.com/oat-sa/extension-tao-delivery-rdf/tree/backport/v14.7.2"
+                "source": "https://github.com/oat-sa/extension-tao-delivery-rdf/tree/v14.7.2"
             },
             "time": "2022-01-20T17:23:03+00:00"
         },
@@ -3416,16 +3416,16 @@
         },
         {
             "name": "oat-sa/extension-tao-itemqti",
-            "version": "dev-backort/v28.19.11",
+            "version": "v28.19.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti.git",
-                "reference": "40de216bfe4926bd1e814b5dbcbd1621477686b3"
+                "reference": "8d8f357ac7adbd621a3481c3e7a6452faa5da560"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/40de216bfe4926bd1e814b5dbcbd1621477686b3",
-                "reference": "40de216bfe4926bd1e814b5dbcbd1621477686b3",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/8d8f357ac7adbd621a3481c3e7a6452faa5da560",
+                "reference": "8d8f357ac7adbd621a3481c3e7a6452faa5da560",
                 "shasum": ""
             },
             "require": {
@@ -3500,9 +3500,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/backort/v28.19.11"
+                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/v28.19.11"
             },
-            "time": "2022-01-20T17:05:29+00:00"
+            "time": "2022-02-03T14:30:43+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pci",
@@ -3774,16 +3774,16 @@
         },
         {
             "name": "oat-sa/extension-tao-mediamanager",
-            "version": "dev-backport/12.14.1",
+            "version": "v12.14.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-mediamanager.git",
-                "reference": "a6ee2992193f25db8489d6860bbafbfc33319749"
+                "reference": "fbe8489bf3bae7a18d67aa19c0d5662f661dbf5c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-mediamanager/zipball/a6ee2992193f25db8489d6860bbafbfc33319749",
-                "reference": "a6ee2992193f25db8489d6860bbafbfc33319749",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-mediamanager/zipball/fbe8489bf3bae7a18d67aa19c0d5662f661dbf5c",
+                "reference": "fbe8489bf3bae7a18d67aa19c0d5662f661dbf5c",
                 "shasum": ""
             },
             "require": {
@@ -3823,9 +3823,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-mediamanager/tree/backport/12.14.1"
+                "source": "https://github.com/oat-sa/extension-tao-mediamanager/tree/v12.14.2"
             },
-            "time": "2022-01-25T09:45:16+00:00"
+            "time": "2022-02-03T14:39:12+00:00"
         },
         {
             "name": "oat-sa/extension-tao-outcome",
@@ -4468,16 +4468,16 @@
         },
         {
             "name": "oat-sa/extension-tao-testqti",
-            "version": "dev-backport/v41.15.7",
+            "version": "v41.15.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "7cdab95db4c6ad969181891cc3ca70d2e8d4d7af"
+                "reference": "ad70771e64338986deea81c8472fdef353e82331"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/7cdab95db4c6ad969181891cc3ca70d2e8d4d7af",
-                "reference": "7cdab95db4c6ad969181891cc3ca70d2e8d4d7af",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/ad70771e64338986deea81c8472fdef353e82331",
+                "reference": "ad70771e64338986deea81c8472fdef353e82331",
                 "shasum": ""
             },
             "require": {
@@ -4505,9 +4505,9 @@
             },
             "autoload": {
                 "psr-4": {
+                    "oat\\taoQtiTest\\test\\": "test",
                     "oat\\taoQtiTest\\models\\": "models/classes/",
                     "oat\\taoQtiTest\\helpers\\": "helpers",
-                    "oat\\taoQtiTest\\test\\": "test",
                     "oat\\taoQtiTest\\scripts\\": "scripts"
                 }
             },
@@ -4560,9 +4560,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/backport/v41.15.7"
+                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/v41.15.8"
             },
-            "time": "2022-01-20T17:19:23+00:00"
+            "time": "2022-02-03T16:17:58+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
@@ -4708,7 +4708,7 @@
         },
         {
             "name": "oat-sa/generis",
-            "version": "dev-backport/v15.5.2",
+            "version": "v15.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/generis.git",
@@ -4757,18 +4757,18 @@
                 "tao-extension-name": "generis"
             },
             "autoload": {
-                "psr-4": {
-                    "oat\\generis\\persistence\\": "common/persistence/",
-                    "oat\\generis\\model\\": "core/",
-                    "oat\\generis\\Helper\\": "helpers/",
-                    "oat\\oatbox\\": "common/oatbox/",
-                    "oat\\generis\\test\\": "test/",
-                    "oat\\generis\\scripts\\": "scripts/"
-                },
                 "files": [
                     "common/legacy/class.LegacyAutoLoader.php",
                     "common/constants.php"
-                ]
+                ],
+                "psr-4": {
+                    "oat\\oatbox\\": "common/oatbox/",
+                    "oat\\generis\\test\\": "test/",
+                    "oat\\generis\\model\\": "core/",
+                    "oat\\generis\\Helper\\": "helpers/",
+                    "oat\\generis\\scripts\\": "scripts/",
+                    "oat\\generis\\persistence\\": "common/persistence/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -4819,7 +4819,7 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/generis/tree/backport/v15.5.2"
+                "source": "https://github.com/oat-sa/generis/tree/v15.5.2"
             },
             "time": "2022-01-27T11:27:52+00:00"
         },
@@ -5251,16 +5251,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "dev-backport/v48.45.8",
+            "version": "v48.45.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "45fd30f256abfa41b2d354f060469fe6e4f5f56f"
+                "reference": "8102b2a27ff19a19063d75f1e9be91d359990c00"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/45fd30f256abfa41b2d354f060469fe6e4f5f56f",
-                "reference": "45fd30f256abfa41b2d354f060469fe6e4f5f56f",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/8102b2a27ff19a19063d75f1e9be91d359990c00",
+                "reference": "8102b2a27ff19a19063d75f1e9be91d359990c00",
                 "shasum": ""
             },
             "require": {
@@ -5302,17 +5302,17 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "oat\\tao\\controller\\": "controller",
-                    "oat\\tao\\model\\": "models/classes/",
-                    "oat\\tao\\helpers\\": "helpers",
-                    "oat\\tao\\test\\": "test",
-                    "oat\\tao\\scripts\\": "scripts",
-                    "oat\\tao\\install\\": "install"
-                },
                 "files": [
                     "includes/globalHelpers.php"
-                ]
+                ],
+                "psr-4": {
+                    "oat\\tao\\test\\": "test",
+                    "oat\\tao\\model\\": "models/classes/",
+                    "oat\\tao\\helpers\\": "helpers",
+                    "oat\\tao\\install\\": "install",
+                    "oat\\tao\\scripts\\": "scripts",
+                    "oat\\tao\\controller\\": "controller"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -5362,9 +5362,9 @@
             "support": {
                 "forum": "https://forum.taocloud.org",
                 "issues": "https://github.com/oat-sa/tao-core/issues",
-                "source": "https://github.com/oat-sa/tao-core/tree/backport/v48.45.8"
+                "source": "https://github.com/oat-sa/tao-core/tree/v48.45.8"
             },
-            "time": "2022-01-31T09:50:36+00:00"
+            "time": "2022-02-03T14:13:13+00:00"
         },
         {
             "name": "ocramius/proxy-manager",
@@ -9054,53 +9054,9 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [
-        {
-            "package": "oat-sa/extension-tao-delivery-rdf",
-            "version": "dev-backport/v14.7.2",
-            "alias": "14.7.2",
-            "alias_normalized": "14.7.2.0"
-        },
-        {
-            "package": "oat-sa/extension-tao-itemqti",
-            "version": "dev-backort/v28.19.11",
-            "alias": "28.19.11",
-            "alias_normalized": "28.19.11.0"
-        },
-        {
-            "package": "oat-sa/extension-tao-mediamanager",
-            "version": "dev-backport/12.14.1",
-            "alias": "12.14.1",
-            "alias_normalized": "12.14.1.0"
-        },
-        {
-            "package": "oat-sa/extension-tao-testqti",
-            "version": "dev-backport/v41.15.7",
-            "alias": "41.15.7",
-            "alias_normalized": "41.15.7.0"
-        },
-        {
-            "package": "oat-sa/generis",
-            "version": "dev-backport/v15.5.2",
-            "alias": "15.5.2",
-            "alias_normalized": "15.5.2.0"
-        },
-        {
-            "package": "oat-sa/tao-core",
-            "version": "dev-backport/v48.45.8",
-            "alias": "48.45.8",
-            "alias_normalized": "48.45.8.0"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "oat-sa/generis": 20,
-        "oat-sa/tao-core": 20,
-        "oat-sa/extension-tao-itemqti": 20,
-        "oat-sa/extension-tao-testqti": 20,
-        "oat-sa/extension-tao-delivery-rdf": 20,
-        "oat-sa/extension-tao-mediamanager": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
