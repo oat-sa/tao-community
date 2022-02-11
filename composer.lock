@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4f3192568fe45cd60b048891bbd2cae8",
+    "content-hash": "65f7ed66a265f349a9dea10402ea299b",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -2731,7 +2731,7 @@
         },
         {
             "name": "oat-sa/extension-tao-backoffice",
-            "version": "dev-release-2022-02-lts",
+            "version": "v6.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-backoffice.git",
@@ -2773,7 +2773,7 @@
             ],
             "support": {
                 "issues": "https://github.com/oat-sa/extension-tao-backoffice/issues",
-                "source": "https://github.com/oat-sa/extension-tao-backoffice/tree/release-2022-02-lts"
+                "source": "https://github.com/oat-sa/extension-tao-backoffice/tree/v6.6.1"
             },
             "time": "2022-01-27T08:24:37+00:00"
         },
@@ -4476,16 +4476,16 @@
         },
         {
             "name": "oat-sa/extension-tao-testqti",
-            "version": "v43.2.2",
+            "version": "v43.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "4b64eaa134d41846bbb900a165fbbca9fc45c6b3"
+                "reference": "18133ac09ad9ecfbb7e742c15e7010cbd3e54805"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/4b64eaa134d41846bbb900a165fbbca9fc45c6b3",
-                "reference": "4b64eaa134d41846bbb900a165fbbca9fc45c6b3",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/18133ac09ad9ecfbb7e742c15e7010cbd3e54805",
+                "reference": "18133ac09ad9ecfbb7e742c15e7010cbd3e54805",
                 "shasum": ""
             },
             "require": {
@@ -4499,6 +4499,7 @@
                 "oat-sa/lib-test-cat": "2.3.7",
                 "oat-sa/oatbox-extension-installer": "~1.1||dev-master",
                 "oat-sa/tao-core": ">=48.39.0",
+                "php": ">=7.2",
                 "qtism/qtism": "^0.25.0"
             },
             "type": "tao-extension",
@@ -4566,9 +4567,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/v43.2.2"
+                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/v43.2.4"
             },
-            "time": "2022-01-05T16:43:15+00:00"
+            "time": "2022-02-04T11:49:25+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
@@ -5299,16 +5300,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "dev-release-2022-02-lts",
+            "version": "v48.75.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "7cf34ce9b793dd5ee75e6ad6925cf45a61aa5e4b"
+                "reference": "e04eca0f732a2bebd0a6db8d6af6363246b460a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/7cf34ce9b793dd5ee75e6ad6925cf45a61aa5e4b",
-                "reference": "7cf34ce9b793dd5ee75e6ad6925cf45a61aa5e4b",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/e04eca0f732a2bebd0a6db8d6af6363246b460a8",
+                "reference": "e04eca0f732a2bebd0a6db8d6af6363246b460a8",
                 "shasum": ""
             },
             "require": {
@@ -5350,17 +5351,17 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "oat\\tao\\controller\\": "controller",
-                    "oat\\tao\\model\\": "models/classes/",
-                    "oat\\tao\\helpers\\": "helpers",
-                    "oat\\tao\\test\\": "test",
-                    "oat\\tao\\scripts\\": "scripts",
-                    "oat\\tao\\install\\": "install"
-                },
                 "files": [
                     "includes/globalHelpers.php"
-                ]
+                ],
+                "psr-4": {
+                    "oat\\tao\\test\\": "test",
+                    "oat\\tao\\model\\": "models/classes/",
+                    "oat\\tao\\helpers\\": "helpers",
+                    "oat\\tao\\install\\": "install",
+                    "oat\\tao\\scripts\\": "scripts",
+                    "oat\\tao\\controller\\": "controller"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -5410,9 +5411,9 @@
             "support": {
                 "forum": "https://forum.taocloud.org",
                 "issues": "https://github.com/oat-sa/tao-core/issues",
-                "source": "https://github.com/oat-sa/tao-core/tree/release-2022-02-lts"
+                "source": "https://github.com/oat-sa/tao-core/tree/v48.75.3"
             },
-            "time": "2022-01-27T08:24:23+00:00"
+            "time": "2022-02-08T09:28:36+00:00"
         },
         {
             "name": "ocramius/proxy-manager",
@@ -9096,25 +9097,9 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [
-        {
-            "package": "oat-sa/extension-tao-backoffice",
-            "version": "dev-release-2022-02-lts",
-            "alias": "6.6.0",
-            "alias_normalized": "6.6.0.0"
-        },
-        {
-            "package": "oat-sa/tao-core",
-            "version": "dev-release-2022-02-lts",
-            "alias": "48.75.0",
-            "alias_normalized": "48.75.0.0"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "oat-sa/tao-core": 20,
-        "oat-sa/extension-tao-backoffice": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
