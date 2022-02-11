@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4cb08d297236e7db4f325510556605b2",
+    "content-hash": "63b433e5090aece83824824cd8ffb861",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -5383,16 +5383,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "v49.3.0",
+            "version": "dev-release-2022-03",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "0f947b7b8a5d869b50f656832224b7d6920c03d4"
+                "reference": "f7590deff6704b67d92bc106c5a3958a6f2aed45"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/0f947b7b8a5d869b50f656832224b7d6920c03d4",
-                "reference": "0f947b7b8a5d869b50f656832224b7d6920c03d4",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/f7590deff6704b67d92bc106c5a3958a6f2aed45",
+                "reference": "f7590deff6704b67d92bc106c5a3958a6f2aed45",
                 "shasum": ""
             },
             "require": {
@@ -5495,9 +5495,9 @@
             "support": {
                 "forum": "https://forum.taocloud.org",
                 "issues": "https://github.com/oat-sa/tao-core/issues",
-                "source": "https://github.com/oat-sa/tao-core/tree/v49.3.0"
+                "source": "https://github.com/oat-sa/tao-core/tree/release-2022-03"
             },
-            "time": "2022-02-09T14:47:43+00:00"
+            "time": "2022-02-11T09:16:25+00:00"
         },
         {
             "name": "ocramius/proxy-manager",
@@ -9187,9 +9187,18 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [],
+    "aliases": [
+        {
+            "package": "oat-sa/tao-core",
+            "version": "dev-release-2022-03",
+            "alias": "49.3.0",
+            "alias_normalized": "49.3.0.0"
+        }
+    ],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "oat-sa/tao-core": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
