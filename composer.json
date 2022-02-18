@@ -5,7 +5,11 @@
     "platform": {
       "php": "7.2.5"
     },
-    "preferred-install": "dist"
+    "preferred-install": "dist",
+    "allow-plugins": {
+      "oat-sa/oatbox-extension-installer": true,
+      "oat-sa/composer-npm-bridge": true
+    }
   },
   "support": {
     "issues": "http://forge.taotesting.com",
@@ -18,7 +22,7 @@
     }
   ],
   "keywords": [
-    "sprint 158",
+    "2022-02-lts",
     "tao",
     "oat",
     "computer-based-assessment"
@@ -45,7 +49,7 @@
         "oat-sa/extension-tao-outcomerds": "8.2.0",
         "oat-sa/extension-tao-outcomekeyvalue": "6.1.1",
         "oat-sa/extension-tao-outcomelti": "5.0.2",
-        "oat-sa/extension-tao-delivery": "15.8.2",
+        "oat-sa/extension-tao-delivery": "15.9.1",
         "oat-sa/extension-tao-delivery-rdf": "14.11.1",
         "oat-sa/extension-tao-lti": "15.6.0",
         "oat-sa/extension-tao-ltideliveryprovider": "12.11.0",
