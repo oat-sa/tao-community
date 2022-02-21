@@ -2,7 +2,12 @@
     "name": "oat-sa/tao-community",
     "license": "GPL-2.0-only",
     "config": {
-        "preferred-install": "dist"
+        "preferred-install": "dist",
+        "allow-plugins": {
+            "oat-sa/oatbox-extension-installer": true,
+            "ocramius/package-versions": true,
+            "oat-sa/composer-npm-bridge": true
+        }
     },
     "support": {
         "issues": "http://forge.taotesting.com",
@@ -32,7 +37,7 @@
         "oat-sa/extension-tao-group": "7.0.1",
         "oat-sa/extension-tao-item": "11.4.0",
         "oat-sa/extension-tao-itemqti-pci": "7.2.3",
-        "oat-sa/extension-tao-itemqti": "28.2.3.1",
+        "oat-sa/extension-tao-itemqti": "28.2.3.2",
         "oat-sa/extension-tao-itemqti-pic": "6.0.1",
         "oat-sa/extension-tao-test": "15.0.1",
         "oat-sa/extension-tao-testqti": "41.5.0",
