@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "131d0c5cfd64c6459d544094c122548a",
+    "content-hash": "852e4f3063961b7933f994b6e1ae6bd1",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -5383,7 +5383,7 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "dev-release-2022-03",
+            "version": "v49.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
@@ -5495,7 +5495,7 @@
             "support": {
                 "forum": "https://forum.taocloud.org",
                 "issues": "https://github.com/oat-sa/tao-core/issues",
-                "source": "https://github.com/oat-sa/tao-core/tree/release-2022-03"
+                "source": "https://github.com/oat-sa/tao-core/tree/v49.3.1"
             },
             "time": "2022-02-11T09:16:25+00:00"
         },
@@ -9187,18 +9187,9 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [
-        {
-            "package": "oat-sa/tao-core",
-            "version": "dev-release-2022-03",
-            "alias": "49.3.0",
-            "alias_normalized": "49.3.0.0"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "oat-sa/tao-core": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
@@ -9206,5 +9197,5 @@
     "platform-overrides": {
         "php": "7.2.5"
     },
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.0.0"
 }
