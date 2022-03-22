@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2186d8d08a95be93b77c9b1caa1d357e",
+    "content-hash": "c48201b41ec698dc3f71915ab954c6d2",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -4951,16 +4951,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "v46.14.8",
+            "version": "46.14.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "db964bd07427ae36425020b238cab00a90e2320c"
+                "reference": "337ffd2eb045bf5c3137b0cc72f04e0383b53bc3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/db964bd07427ae36425020b238cab00a90e2320c",
-                "reference": "db964bd07427ae36425020b238cab00a90e2320c",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/337ffd2eb045bf5c3137b0cc72f04e0383b53bc3",
+                "reference": "337ffd2eb045bf5c3137b0cc72f04e0383b53bc3",
                 "shasum": ""
             },
             "require": {
@@ -4998,17 +4998,17 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "oat\\tao\\controller\\": "controller",
-                    "oat\\tao\\model\\": "models/classes/",
-                    "oat\\tao\\helpers\\": "helpers",
-                    "oat\\tao\\test\\": "test",
-                    "oat\\tao\\scripts\\": "scripts",
-                    "oat\\tao\\install\\": "install"
-                },
                 "files": [
                     "includes/globalHelpers.php"
-                ]
+                ],
+                "psr-4": {
+                    "oat\\tao\\test\\": "test",
+                    "oat\\tao\\model\\": "models/classes/",
+                    "oat\\tao\\helpers\\": "helpers",
+                    "oat\\tao\\install\\": "install",
+                    "oat\\tao\\scripts\\": "scripts",
+                    "oat\\tao\\controller\\": "controller"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -5058,9 +5058,9 @@
             "support": {
                 "forum": "https://forum.taocloud.org",
                 "issues": "https://github.com/oat-sa/tao-core/issues",
-                "source": "https://github.com/oat-sa/tao-core/tree/v46.14.8"
+                "source": "https://github.com/oat-sa/tao-core/tree/46.14.9"
             },
-            "time": "2021-04-13T13:49:30+00:00"
+            "time": "2022-03-22T09:43:46+00:00"
         },
         {
             "name": "ocramius/proxy-manager",
