@@ -2,7 +2,11 @@
   "name": "oat-sa/tao-community",
   "license": "GPL-2.0-only",
   "config": {
-    "preferred-install": "dist"
+    "preferred-install": "dist",
+    "allow-plugins": {
+      "oat-sa/oatbox-extension-installer": true,
+      "oat-sa/composer-npm-bridge": true
+    }
   },
   "support": {
     "issues": "http://forge.taotesting.com",
