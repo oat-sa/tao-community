@@ -5,7 +5,11 @@
     "platform": {
       "php": "7.2.5"
     },
-    "preferred-install": "dist"
+    "preferred-install": "dist",
+    "allow-plugins": {
+      "oat-sa/oatbox-extension-installer": true,
+      "oat-sa/composer-npm-bridge": true
+    }
   },
   "support": {
     "issues": "http://forge.taotesting.com",
@@ -55,7 +59,7 @@
         "oat-sa/extension-tao-backoffice": "6.9.0",
         "oat-sa/extension-tao-proctoring": "20.4.1",
         "oat-sa/extension-tao-clientdiag": "8.4.0",
-        "oat-sa/extension-tao-eventlog": "3.3.0",
+        "oat-sa/extension-tao-eventlog": "3.3.1",
         "oat-sa/extension-tao-task-queue": "6.6.1",
         "oat-sa/extension-tao-testqti-previewer": "3.4.1"
   },
