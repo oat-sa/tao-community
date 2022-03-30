@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d2167421271151f245ed7fe0fc954e75",
+    "content-hash": "ca98d6fedd98f926078db0c7bbb44339",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -3782,16 +3782,16 @@
         },
         {
             "name": "oat-sa/extension-tao-mediamanager",
-            "version": "v12.21.2",
+            "version": "dev-hotfix/aut-2072/refactor-script-to-replace-shared-stimulus",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-mediamanager.git",
-                "reference": "fa531d76e2585c38b5e5d3d06b77b9e68c42a10f"
+                "reference": "d26088e80f1e616d1b243ec992f68fb596079a51"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-mediamanager/zipball/fa531d76e2585c38b5e5d3d06b77b9e68c42a10f",
-                "reference": "fa531d76e2585c38b5e5d3d06b77b9e68c42a10f",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-mediamanager/zipball/d26088e80f1e616d1b243ec992f68fb596079a51",
+                "reference": "d26088e80f1e616d1b243ec992f68fb596079a51",
                 "shasum": ""
             },
             "require": {
@@ -3831,9 +3831,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-mediamanager/tree/v12.21.2"
+                "source": "https://github.com/oat-sa/extension-tao-mediamanager/tree/hotfix/aut-2072/refactor-script-to-replace-shared-stimulus"
             },
-            "time": "2021-12-30T11:34:27+00:00"
+            "time": "2022-03-30T14:45:43+00:00"
         },
         {
             "name": "oat-sa/extension-tao-outcome",
@@ -9097,9 +9097,18 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [],
+    "aliases": [
+        {
+            "package": "oat-sa/extension-tao-mediamanager",
+            "version": "dev-hotfix/aut-2072/refactor-script-to-replace-shared-stimulus",
+            "alias": "12.21.3",
+            "alias_normalized": "12.21.3.0"
+        }
+    ],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "oat-sa/extension-tao-mediamanager": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
