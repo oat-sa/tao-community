@@ -5,7 +5,11 @@
     "platform": {
       "php": "7.2.5"
     },
-    "preferred-install": "dist"
+    "preferred-install": "dist",
+    "allow-plugins": {
+      "oat-sa/oatbox-extension-installer": true,
+      "oat-sa/composer-npm-bridge": true
+    }
   },
   "support": {
     "issues": "http://forge.taotesting.com",
@@ -27,7 +31,7 @@
   "prefer-stable": true,
   "require": {
         "oat-sa/generis": "15.5.1",
-        "oat-sa/tao-core": "48.45.4",
+        "oat-sa/tao-core": "48.45.4.1",
         "oat-sa/extension-tao-community": "10.1.2",
         "oat-sa/extension-tao-funcacl": "7.0.1",
         "oat-sa/extension-tao-dac-simple": "7.3.1",
