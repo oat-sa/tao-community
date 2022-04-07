@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bb3ef40f243417a04f999b3b3e34cf3f",
+    "content-hash": "a934ab2d62eae317e61054d2f7e76135",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -85,13 +85,13 @@
             },
             "type": "library",
             "autoload": {
+                "files": [
+                    "clearbricks/init.php"
+                ],
                 "classmap": [
                     "core/",
                     "core/helpers/",
                     "core/util"
-                ],
-                "files": [
-                    "clearbricks/init.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -439,10 +439,6 @@
                 "sqlserver",
                 "sqlsrv"
             ],
-            "support": {
-                "issues": "https://github.com/doctrine/dbal/issues",
-                "source": "https://github.com/doctrine/dbal/tree/2.10"
-            },
             "time": "2020-01-04T12:56:21+00:00"
         },
         {
@@ -581,10 +577,6 @@
                 "parser",
                 "php"
             ],
-            "support": {
-                "issues": "https://github.com/doctrine/lexer/issues",
-                "source": "https://github.com/doctrine/lexer/tree/1.2.1"
-            },
             "funding": [
                 {
                     "url": "https://www.doctrine-project.org/sponsorship.html",
@@ -684,10 +676,6 @@
                 "migrations",
                 "php"
             ],
-            "support": {
-                "issues": "https://github.com/doctrine/migrations/issues",
-                "source": "https://github.com/doctrine/migrations/tree/3.0.1"
-            },
             "funding": [
                 {
                     "url": "https://www.doctrine-project.org/sponsorship.html",
@@ -836,12 +824,12 @@
             },
             "type": "library",
             "autoload": {
-                "psr-0": {
-                    "HTMLPurifier": "library/"
-                },
                 "files": [
                     "library/HTMLPurifier.composer.php"
                 ],
+                "psr-0": {
+                    "HTMLPurifier": "library/"
+                },
                 "exclude-from-classmap": [
                     "/library/HTMLPurifier/Language/"
                 ]
@@ -862,10 +850,6 @@
             "keywords": [
                 "html"
             ],
-            "support": {
-                "issues": "https://github.com/ezyang/htmlpurifier/issues",
-                "source": "https://github.com/ezyang/htmlpurifier/tree/master"
-            },
             "time": "2020-06-29T00:56:53+00:00"
         },
         {
@@ -907,10 +891,6 @@
                 }
             ],
             "description": "JSONPath implementation for parsing, searching and flattening arrays",
-            "support": {
-                "issues": "https://github.com/FlowCommunications/JSONPath/issues",
-                "source": "https://github.com/FlowCommunications/JSONPath/tree/0.5.0"
-            },
             "abandoned": "softcreatr/jsonpath",
             "time": "2019-07-15T17:23:22+00:00"
         },
@@ -1003,12 +983,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1032,10 +1012,6 @@
                 "rest",
                 "web service"
             ],
-            "support": {
-                "issues": "https://github.com/guzzle/guzzle/issues",
-                "source": "https://github.com/guzzle/guzzle/tree/6.5"
-            },
             "time": "2020-06-16T21:01:06+00:00"
         },
         {
@@ -1065,12 +1041,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Promise\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\Promise\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1125,12 +1101,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Psr7\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\Psr7\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1320,14 +1296,6 @@
                 "laminas",
                 "servicemanager"
             ],
-            "support": {
-                "chat": "https://laminas.dev/chat",
-                "docs": "https://docs.laminas.dev/laminas-servicemanager/",
-                "forum": "https://discourse.laminas.dev",
-                "issues": "https://github.com/laminas/laminas-servicemanager/issues",
-                "rss": "https://github.com/laminas/laminas-servicemanager/releases.atom",
-                "source": "https://github.com/laminas/laminas-servicemanager"
-            },
             "time": "2019-12-31T17:44:09+00:00"
         },
         {
@@ -1376,12 +1344,6 @@
                 "laminas",
                 "zf"
             ],
-            "support": {
-                "forum": "https://discourse.laminas.dev/",
-                "issues": "https://github.com/laminas/laminas-zendframework-bridge/issues",
-                "rss": "https://github.com/laminas/laminas-zendframework-bridge/releases.atom",
-                "source": "https://github.com/laminas/laminas-zendframework-bridge"
-            },
             "funding": [
                 {
                     "url": "https://funding.communitybridge.org/projects/laminas-project",
@@ -1529,10 +1491,6 @@
                 "adapter",
                 "memory"
             ],
-            "support": {
-                "issues": "https://github.com/thephpleague/flysystem-memory/issues",
-                "source": "https://github.com/thephpleague/flysystem-memory/tree/1.0.2"
-            },
             "time": "2019-05-30T21:34:13+00:00"
         },
         {
@@ -1585,10 +1543,6 @@
                 "psr7",
                 "validation"
             ],
-            "support": {
-                "issues": "https://github.com/thephpleague/openapi-psr7-validator/issues",
-                "source": "https://github.com/thephpleague/openapi-psr7-validator/tree/master"
-            },
             "time": "2020-06-12T10:28:04+00:00"
         },
         {
@@ -1747,12 +1701,12 @@
             },
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "FastRoute\\": "src/"
-                },
                 "files": [
                     "src/functions.php"
-                ]
+                ],
+                "psr-4": {
+                    "FastRoute\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2417,9 +2371,9 @@
             },
             "autoload": {
                 "psr-4": {
+                    "oat\\taoItems\\test\\": "test",
                     "oat\\taoItems\\model\\": "models/classes/",
                     "oat\\taoItems\\helpers\\": "helpers",
-                    "oat\\taoItems\\test\\": "test",
                     "oat\\taoItems\\scripts\\": "scripts"
                 }
             },
@@ -2472,16 +2426,16 @@
         },
         {
             "name": "oat-sa/extension-tao-itemqti",
-            "version": "v25.7.2.7",
+            "version": "v25.7.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti.git",
-                "reference": "e5fd5e2edbc1ee0f30a37fbc69002da2179ae39b"
+                "reference": "c885f88d69d8d48af5ff6f4bd715484419ccde70"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/e5fd5e2edbc1ee0f30a37fbc69002da2179ae39b",
-                "reference": "e5fd5e2edbc1ee0f30a37fbc69002da2179ae39b",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/c885f88d69d8d48af5ff6f4bd715484419ccde70",
+                "reference": "c885f88d69d8d48af5ff6f4bd715484419ccde70",
                 "shasum": ""
             },
             "require": {
@@ -2551,7 +2505,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2021-08-26T11:06:52+00:00"
+            "time": "2022-04-07T13:25:43+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pci",
@@ -3334,8 +3288,8 @@
             },
             "autoload": {
                 "psr-4": {
-                    "oat\\taoTests\\models\\": "models/classes/",
                     "oat\\taoTests\\test\\": "test",
+                    "oat\\taoTests\\models\\": "models/classes/",
                     "oat\\taoTests\\scripts\\": "scripts"
                 }
             },
@@ -3418,9 +3372,9 @@
             },
             "autoload": {
                 "psr-4": {
+                    "oat\\taoQtiTest\\test\\": "test",
                     "oat\\taoQtiTest\\models\\": "models/classes/",
                     "oat\\taoQtiTest\\helpers\\": "helpers",
-                    "oat\\taoQtiTest\\test\\": "test",
                     "oat\\taoQtiTest\\scripts\\": "scripts"
                 }
             },
@@ -3638,18 +3592,18 @@
                 "tao-extension-name": "generis"
             },
             "autoload": {
-                "psr-4": {
-                    "oat\\generis\\persistence\\": "common/persistence/",
-                    "oat\\generis\\model\\": "core/",
-                    "oat\\generis\\Helper\\": "helpers/",
-                    "oat\\oatbox\\": "common/oatbox/",
-                    "oat\\generis\\test\\": "test/",
-                    "oat\\generis\\scripts\\": "scripts/"
-                },
                 "files": [
                     "common/legacy/class.LegacyAutoLoader.php",
                     "common/constants.php"
-                ]
+                ],
+                "psr-4": {
+                    "oat\\oatbox\\": "common/oatbox/",
+                    "oat\\generis\\test\\": "test/",
+                    "oat\\generis\\model\\": "core/",
+                    "oat\\generis\\Helper\\": "helpers/",
+                    "oat\\generis\\scripts\\": "scripts/",
+                    "oat\\generis\\persistence\\": "common/persistence/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -3808,16 +3762,12 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "oat\\search\\test\\": "test",
-                    "oat\\search\\": "src"
+                    "oat\\search\\": "src",
+                    "oat\\search\\test\\": "test"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "Library provide an object search API",
-            "support": {
-                "issues": "https://github.com/oat-sa/lib-generis-search/issues",
-                "source": "https://github.com/oat-sa/lib-generis-search/tree/V2.1.2"
-            },
             "time": "2020-05-06T12:52:35+00:00"
         },
         {
@@ -3900,12 +3850,12 @@
             },
             "type": "library",
             "autoload": {
-                "classmap": [
-                    "helpers/"
-                ],
                 "psr-4": {
                     "qti\\customOperators\\": "model/operators/"
-                }
+                },
+                "classmap": [
+                    "helpers/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -4040,16 +3990,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "v45.2.4",
+            "version": "v45.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "8fc84c3ccbc637529eb441c123b87f6ae70f31fe"
+                "reference": "813b2349ab2756603aabee35b288968b0d9fdc52"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/8fc84c3ccbc637529eb441c123b87f6ae70f31fe",
-                "reference": "8fc84c3ccbc637529eb441c123b87f6ae70f31fe",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/813b2349ab2756603aabee35b288968b0d9fdc52",
+                "reference": "813b2349ab2756603aabee35b288968b0d9fdc52",
                 "shasum": ""
             },
             "require": {
@@ -4141,7 +4091,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2022-02-02T12:41:40+00:00"
+            "time": "2022-04-07T12:38:55+00:00"
         },
         {
             "name": "ocramius/package-versions",
@@ -4261,10 +4211,6 @@
                 "proxy pattern",
                 "service proxies"
             ],
-            "support": {
-                "issues": "https://github.com/Ocramius/ProxyManager/issues",
-                "source": "https://github.com/Ocramius/ProxyManager/tree/2.2.x"
-            },
             "time": "2019-08-10T08:37:15+00:00"
         },
         {
@@ -4459,9 +4405,6 @@
                 "psr",
                 "psr-6"
             ],
-            "support": {
-                "source": "https://github.com/php-fig/cache/tree/master"
-            },
             "time": "2016-08-06T20:24:11+00:00"
         },
         {
@@ -4614,10 +4557,6 @@
                 "response",
                 "server"
             ],
-            "support": {
-                "issues": "https://github.com/php-fig/http-server-handler/issues",
-                "source": "https://github.com/php-fig/http-server-handler/tree/master"
-            },
             "time": "2018-10-30T16:46:14+00:00"
         },
         {
@@ -4671,10 +4610,6 @@
                 "request",
                 "response"
             ],
-            "support": {
-                "issues": "https://github.com/php-fig/http-server-middleware/issues",
-                "source": "https://github.com/php-fig/http-server-middleware/tree/master"
-            },
             "time": "2018-10-30T17:12:04+00:00"
         },
         {
@@ -4770,9 +4705,6 @@
                 "psr-16",
                 "simple-cache"
             ],
-            "support": {
-                "source": "https://github.com/php-fig/simple-cache/tree/master"
-            },
             "time": "2017-10-23T01:57:42+00:00"
         },
         {
@@ -4932,12 +4864,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Ramsey\\Uuid\\": "src/"
-                },
                 "files": [
                     "src/functions.php"
-                ]
+                ],
+                "psr-4": {
+                    "Ramsey\\Uuid\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -4965,12 +4897,16 @@
                 "identifier",
                 "uuid"
             ],
-            "support": {
-                "issues": "https://github.com/ramsey/uuid/issues",
-                "rss": "https://github.com/ramsey/uuid/releases.atom",
-                "source": "https://github.com/ramsey/uuid",
-                "wiki": "https://github.com/ramsey/uuid/wiki"
-            },
+            "funding": [
+                {
+                    "url": "https://github.com/ramsey",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/ramsey/uuid",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-02-21T04:36:14+00:00"
         },
         {
@@ -5164,10 +5100,6 @@
                 "validation",
                 "validator"
             ],
-            "support": {
-                "issues": "https://github.com/Respect/Validation/issues",
-                "source": "https://github.com/Respect/Validation/tree/1.1.31"
-            },
             "time": "2019-05-28T06:10:06+00:00"
         },
         {
@@ -5220,10 +5152,6 @@
                 "multipart",
                 "parser"
             ],
-            "support": {
-                "issues": "https://github.com/Riverline/multipart-parser/issues",
-                "source": "https://github.com/Riverline/multipart-parser/tree/2.0.8"
-            },
             "time": "2020-01-24T09:39:24+00:00"
         },
         {
@@ -5669,12 +5597,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Ctype\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Ctype\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -5748,12 +5676,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Intl\\Idn\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\Idn\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -5830,12 +5758,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Intl\\Normalizer\\": ""
-                },
                 "files": [
                     "bootstrap.php"
                 ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\Normalizer\\": ""
+                },
                 "classmap": [
                     "Resources/stubs"
                 ]
@@ -5911,12 +5839,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Mbstring\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -5986,12 +5914,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php70\\": ""
-                },
                 "files": [
                     "bootstrap.php"
                 ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php70\\": ""
+                },
                 "classmap": [
                     "Resources/stubs"
                 ]
@@ -6062,12 +5990,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php72\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php72\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -6424,14 +6352,6 @@
                 "code",
                 "zf"
             ],
-            "support": {
-                "chat": "https://zendframework-slack.herokuapp.com",
-                "docs": "https://docs.zendframework.com/zend-code/",
-                "forum": "https://discourse.zendframework.com/c/questions/components",
-                "issues": "https://github.com/zendframework/zend-code/issues",
-                "rss": "https://github.com/zendframework/zend-code/releases.atom",
-                "source": "https://github.com/zendframework/zend-code"
-            },
             "abandoned": "laminas/laminas-code",
             "time": "2019-12-10T19:21:15+00:00"
         },
@@ -6487,10 +6407,6 @@
                 "events",
                 "zf2"
             ],
-            "support": {
-                "issues": "https://github.com/zendframework/zend-eventmanager/issues",
-                "source": "https://github.com/zendframework/zend-eventmanager/tree/master"
-            },
             "abandoned": "laminas/laminas-eventmanager",
             "time": "2018-04-25T15:33:34+00:00"
         }
