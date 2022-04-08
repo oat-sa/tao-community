@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6c81ce0d818bde50404aefceffc9f576",
+    "content-hash": "ce70f58b9b5c05ceda007f7adf3eeb81",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -91,13 +91,13 @@
             },
             "type": "library",
             "autoload": {
+                "files": [
+                    "clearbricks/init.php"
+                ],
                 "classmap": [
                     "core/",
                     "core/helpers/",
                     "core/util"
-                ],
-                "files": [
-                    "clearbricks/init.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -814,16 +814,16 @@
         },
         {
             "name": "doctrine/lexer",
-            "version": "1.2.2",
+            "version": "1.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/lexer.git",
-                "reference": "9c50f840f257bbb941e6f4a0e94ccf5db5c3f76c"
+                "reference": "c268e882d4dbdd85e36e4ad69e02dc284f89d229"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/lexer/zipball/9c50f840f257bbb941e6f4a0e94ccf5db5c3f76c",
-                "reference": "9c50f840f257bbb941e6f4a0e94ccf5db5c3f76c",
+                "url": "https://api.github.com/repos/doctrine/lexer/zipball/c268e882d4dbdd85e36e4ad69e02dc284f89d229",
+                "reference": "c268e882d4dbdd85e36e4ad69e02dc284f89d229",
                 "shasum": ""
             },
             "require": {
@@ -831,7 +831,7 @@
             },
             "require-dev": {
                 "doctrine/coding-standard": "^9.0",
-                "phpstan/phpstan": "1.3",
+                "phpstan/phpstan": "^1.3",
                 "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5",
                 "vimeo/psalm": "^4.11"
             },
@@ -870,7 +870,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/lexer/issues",
-                "source": "https://github.com/doctrine/lexer/tree/1.2.2"
+                "source": "https://github.com/doctrine/lexer/tree/1.2.3"
             },
             "funding": [
                 {
@@ -886,7 +886,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-12T08:27:12+00:00"
+            "time": "2022-02-28T11:07:21+00:00"
         },
         {
             "name": "doctrine/migrations",
@@ -993,35 +993,42 @@
         },
         {
             "name": "easyrdf/easyrdf",
-            "version": "0.9.1",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/easyrdf/easyrdf.git",
-                "reference": "acd09dfe0555fbcfa254291e433c45fdd4652566"
+                "reference": "c7b0a9dbcb211eb7de03ee99ff5b52d17f2a8e64"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/easyrdf/easyrdf/zipball/acd09dfe0555fbcfa254291e433c45fdd4652566",
-                "reference": "acd09dfe0555fbcfa254291e433c45fdd4652566",
+                "url": "https://api.github.com/repos/easyrdf/easyrdf/zipball/c7b0a9dbcb211eb7de03ee99ff5b52d17f2a8e64",
+                "reference": "c7b0a9dbcb211eb7de03ee99ff5b52d17f2a8e64",
                 "shasum": ""
             },
             "require": {
+                "ext-dom": "*",
                 "ext-mbstring": "*",
                 "ext-pcre": "*",
-                "php": ">=5.2.8"
+                "ext-xmlreader": "*",
+                "lib-libxml": "*",
+                "php": ">=7.1.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~3.5",
-                "sami/sami": "~1.4",
-                "squizlabs/php_codesniffer": "~1.4.3"
+                "code-lts/doctum": "^5",
+                "ml/json-ld": "~1.0",
+                "phpunit/phpunit": "^7",
+                "semsol/arc2": "^2.4",
+                "squizlabs/php_codesniffer": "3.*",
+                "zendframework/zend-http": "~2.3"
             },
             "suggest": {
-                "ml/json-ld": "~1.0"
+                "ml/json-ld": "~1.0",
+                "semsol/arc2": "~2.2"
             },
             "type": "library",
             "autoload": {
-                "psr-0": {
-                    "EasyRdf_": "lib/"
+                "psr-4": {
+                    "EasyRdf\\": "lib"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1038,6 +1045,7 @@
                 {
                     "name": "Alexey Zakhlestin",
                     "email": "indeyets@gmail.com",
+                    "homepage": "http://indeyets.ru/",
                     "role": "Developer"
                 }
             ],
@@ -1053,11 +1061,10 @@
             ],
             "support": {
                 "forum": "http://groups.google.com/group/easyrdf/",
-                "irc": "irc://chat.freenode.net/easyrdf",
-                "issues": "http://github.com/njh/easyrdf/issues",
-                "source": "https://github.com/easyrdf/easyrdf/tree/0.9.1"
+                "issues": "http://github.com/easyrdf/easyrdf/issues",
+                "source": "https://github.com/easyrdf/easyrdf/tree/1.1.1"
             },
-            "time": "2015-02-27T09:45:49+00:00"
+            "time": "2020-12-02T08:47:31+00:00"
         },
         {
             "name": "evenement/evenement",
@@ -1130,12 +1137,12 @@
             },
             "type": "library",
             "autoload": {
-                "psr-0": {
-                    "HTMLPurifier": "library/"
-                },
                 "files": [
                     "library/HTMLPurifier.composer.php"
                 ],
+                "psr-0": {
+                    "HTMLPurifier": "library/"
+                },
                 "exclude-from-classmap": [
                     "/library/HTMLPurifier/Language/"
                 ]
@@ -1301,12 +1308,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1363,12 +1370,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Promise\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\Promise\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1808,14 +1815,14 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Lcobucci\\JWT\\": "src"
-                },
                 "files": [
                     "compat/class-aliases.php",
                     "compat/json-exception-polyfill.php",
                     "compat/lcobucci-clock-polyfill.php"
-                ]
+                ],
+                "psr-4": {
+                    "Lcobucci\\JWT\\": "src"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1888,12 +1895,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "League\\Csv\\": "src"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "League\\Csv\\": "src"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2474,16 +2481,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.56.0",
+            "version": "2.57.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "626ec8cbb724cd3c3400c3ed8f730545b744e3f4"
+                "reference": "4a54375c21eea4811dbd1149fe6b246517554e78"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/626ec8cbb724cd3c3400c3ed8f730545b744e3f4",
-                "reference": "626ec8cbb724cd3c3400c3ed8f730545b744e3f4",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/4a54375c21eea4811dbd1149fe6b246517554e78",
+                "reference": "4a54375c21eea4811dbd1149fe6b246517554e78",
                 "shasum": ""
             },
             "require": {
@@ -2566,7 +2573,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-21T17:08:38+00:00"
+            "time": "2022-02-13T18:13:33+00:00"
         },
         {
             "name": "nikic/fast-route",
@@ -2764,16 +2771,16 @@
         },
         {
             "name": "oat-sa/extension-pcisample",
-            "version": "v3.4.1",
+            "version": "v3.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-pcisample.git",
-                "reference": "d933c9538a2044bd6fb025240a33ebe5697e5542"
+                "reference": "099e81070b2c077174c0d68208433d844c8e4b95"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-pcisample/zipball/d933c9538a2044bd6fb025240a33ebe5697e5542",
-                "reference": "d933c9538a2044bd6fb025240a33ebe5697e5542",
+                "url": "https://api.github.com/repos/oat-sa/extension-pcisample/zipball/099e81070b2c077174c0d68208433d844c8e4b95",
+                "reference": "099e81070b2c077174c0d68208433d844c8e4b95",
                 "shasum": ""
             },
             "require": {
@@ -2808,22 +2815,22 @@
             ],
             "support": {
                 "issues": "https://github.com/oat-sa/extension-pcisample/issues",
-                "source": "https://github.com/oat-sa/extension-pcisample/tree/v3.4.1"
+                "source": "https://github.com/oat-sa/extension-pcisample/tree/v3.5.0"
             },
-            "time": "2022-01-18T09:39:23+00:00"
+            "time": "2022-02-18T08:24:30+00:00"
         },
         {
             "name": "oat-sa/extension-tao-backoffice",
-            "version": "v6.9.0",
+            "version": "v6.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-backoffice.git",
-                "reference": "89152fbc774dfe4d31cc558d4a3848ae00230f07"
+                "reference": "8e2a27e318ae3e777feaccc12053e26314ca9d90"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-backoffice/zipball/89152fbc774dfe4d31cc558d4a3848ae00230f07",
-                "reference": "89152fbc774dfe4d31cc558d4a3848ae00230f07",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-backoffice/zipball/8e2a27e318ae3e777feaccc12053e26314ca9d90",
+                "reference": "8e2a27e318ae3e777feaccc12053e26314ca9d90",
                 "shasum": ""
             },
             "require": {
@@ -2856,9 +2863,9 @@
             ],
             "support": {
                 "issues": "https://github.com/oat-sa/extension-tao-backoffice/issues",
-                "source": "https://github.com/oat-sa/extension-tao-backoffice/tree/v6.9.0"
+                "source": "https://github.com/oat-sa/extension-tao-backoffice/tree/v6.10.0"
             },
-            "time": "2022-02-09T11:36:56+00:00"
+            "time": "2022-03-03T11:19:53+00:00"
         },
         {
             "name": "oat-sa/extension-tao-clientdiag",
@@ -2913,16 +2920,16 @@
         },
         {
             "name": "oat-sa/extension-tao-community",
-            "version": "v10.2.0",
+            "version": "v10.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-community.git",
-                "reference": "6d07db963c1debf664938079dbac23050c2044b7"
+                "reference": "0b61cbf65cc2f6a242b066e349b06da9be98cc18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-community/zipball/6d07db963c1debf664938079dbac23050c2044b7",
-                "reference": "6d07db963c1debf664938079dbac23050c2044b7",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-community/zipball/0b61cbf65cc2f6a242b066e349b06da9be98cc18",
+                "reference": "0b61cbf65cc2f6a242b066e349b06da9be98cc18",
                 "shasum": ""
             },
             "require": {
@@ -3001,9 +3008,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-community/tree/v10.2.0"
+                "source": "https://github.com/oat-sa/extension-tao-community/tree/v10.3.0"
             },
-            "time": "2021-11-03T14:12:50+00:00"
+            "time": "2022-02-25T09:53:27+00:00"
         },
         {
             "name": "oat-sa/extension-tao-dac-simple",
@@ -3058,16 +3065,16 @@
         },
         {
             "name": "oat-sa/extension-tao-delivery",
-            "version": "v15.9.2",
+            "version": "v15.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-delivery.git",
-                "reference": "26918d1c596b15fbfb8f2d2d6faf01885cfc58e3"
+                "reference": "d24d9d6b575340c78d69db395bd17dd6d73218f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-delivery/zipball/26918d1c596b15fbfb8f2d2d6faf01885cfc58e3",
-                "reference": "26918d1c596b15fbfb8f2d2d6faf01885cfc58e3",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-delivery/zipball/d24d9d6b575340c78d69db395bd17dd6d73218f0",
+                "reference": "d24d9d6b575340c78d69db395bd17dd6d73218f0",
                 "shasum": ""
             },
             "require": {
@@ -3133,22 +3140,22 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-delivery/tree/v15.9.2"
+                "source": "https://github.com/oat-sa/extension-tao-delivery/tree/v15.10.0"
             },
-            "time": "2022-02-08T11:12:44+00:00"
+            "time": "2022-03-08T12:15:42+00:00"
         },
         {
             "name": "oat-sa/extension-tao-delivery-rdf",
-            "version": "v14.12.1",
+            "version": "v14.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-delivery-rdf.git",
-                "reference": "45a710b9949ce9f566aab5ff6b85db892bce4549"
+                "reference": "b1d09756cf4a76000bd03df82b3ce366c0e2a74a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-delivery-rdf/zipball/45a710b9949ce9f566aab5ff6b85db892bce4549",
-                "reference": "45a710b9949ce9f566aab5ff6b85db892bce4549",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-delivery-rdf/zipball/b1d09756cf4a76000bd03df82b3ce366c0e2a74a",
+                "reference": "b1d09756cf4a76000bd03df82b3ce366c0e2a74a",
                 "shasum": ""
             },
             "require": {
@@ -3159,7 +3166,7 @@
                 "oat-sa/extension-tao-testqti": ">=41.10.0",
                 "oat-sa/generis": ">=14.0.0",
                 "oat-sa/oatbox-extension-installer": "~1.1||dev-master",
-                "oat-sa/tao-core": ">=48.81.0"
+                "oat-sa/tao-core": ">=50.0.0"
             },
             "type": "tao-extension",
             "extra": {
@@ -3187,22 +3194,22 @@
             ],
             "support": {
                 "issues": "https://github.com/oat-sa/extension-tao-delivery-rdf/issues",
-                "source": "https://github.com/oat-sa/extension-tao-delivery-rdf/tree/v14.12.1"
+                "source": "https://github.com/oat-sa/extension-tao-delivery-rdf/tree/v14.14.0"
             },
-            "time": "2022-01-20T17:26:56+00:00"
+            "time": "2022-02-23T11:56:30+00:00"
         },
         {
             "name": "oat-sa/extension-tao-eventlog",
-            "version": "v3.3.0",
+            "version": "v3.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-eventlog.git",
-                "reference": "6fbacc53e4d9da312c14a5cb1a288a3852f325bb"
+                "reference": "87ba36d27458e42fc266d06d7fcee573367afa9c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-eventlog/zipball/6fbacc53e4d9da312c14a5cb1a288a3852f325bb",
-                "reference": "6fbacc53e4d9da312c14a5cb1a288a3852f325bb",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-eventlog/zipball/87ba36d27458e42fc266d06d7fcee573367afa9c",
+                "reference": "87ba36d27458e42fc266d06d7fcee573367afa9c",
                 "shasum": ""
             },
             "require": {
@@ -3244,9 +3251,9 @@
             ],
             "support": {
                 "issues": "https://github.com/oat-sa/extension-tao-eventlog/issues",
-                "source": "https://github.com/oat-sa/extension-tao-eventlog/tree/v3.3.0"
+                "source": "https://github.com/oat-sa/extension-tao-eventlog/tree/v3.3.1"
             },
-            "time": "2021-12-20T09:59:23+00:00"
+            "time": "2022-03-24T12:45:38+00:00"
         },
         {
             "name": "oat-sa/extension-tao-funcacl",
@@ -3414,16 +3421,16 @@
         },
         {
             "name": "oat-sa/extension-tao-item",
-            "version": "v11.26.0",
+            "version": "v11.26.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-item.git",
-                "reference": "b56ade8792bab3260857d92937f10a59a6d77b11"
+                "reference": "2250ec2cd0eb3887bd60dc5828bfe8727cc3d503"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-item/zipball/b56ade8792bab3260857d92937f10a59a6d77b11",
-                "reference": "b56ade8792bab3260857d92937f10a59a6d77b11",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-item/zipball/2250ec2cd0eb3887bd60dc5828bfe8727cc3d503",
+                "reference": "2250ec2cd0eb3887bd60dc5828bfe8727cc3d503",
                 "shasum": ""
             },
             "require": {
@@ -3498,22 +3505,22 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-item/tree/v11.26.0"
+                "source": "https://github.com/oat-sa/extension-tao-item/tree/v11.26.1"
             },
-            "time": "2022-02-08T14:08:31+00:00"
+            "time": "2022-03-02T13:50:36+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti",
-            "version": "v28.37.3",
+            "version": "v28.39.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti.git",
-                "reference": "8ab0a2590e11aeb05b85b94bfdea419275fa34dd"
+                "reference": "bf149e3bd848149ff7e2ff5967e9ad88548cd885"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/8ab0a2590e11aeb05b85b94bfdea419275fa34dd",
-                "reference": "8ab0a2590e11aeb05b85b94bfdea419275fa34dd",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/bf149e3bd848149ff7e2ff5967e9ad88548cd885",
+                "reference": "bf149e3bd848149ff7e2ff5967e9ad88548cd885",
                 "shasum": ""
             },
             "require": {
@@ -3589,22 +3596,22 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/v28.37.3"
+                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/v28.39.5"
             },
-            "time": "2022-02-24T08:37:44+00:00"
+            "time": "2022-03-11T11:03:54+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pci",
-            "version": "v7.13.3",
+            "version": "v7.16.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti-pci.git",
-                "reference": "150ef2c6960a645d1cebda2e5f8d45eb732c0108"
+                "reference": "bfdbc3ac2c88e0379bbd898c4806b2eb0ef743aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti-pci/zipball/150ef2c6960a645d1cebda2e5f8d45eb732c0108",
-                "reference": "150ef2c6960a645d1cebda2e5f8d45eb732c0108",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti-pci/zipball/bfdbc3ac2c88e0379bbd898c4806b2eb0ef743aa",
+                "reference": "bfdbc3ac2c88e0379bbd898c4806b2eb0ef743aa",
                 "shasum": ""
             },
             "require": {
@@ -3638,9 +3645,9 @@
             ],
             "support": {
                 "issues": "https://github.com/oat-sa/extension-tao-itemqti-pci/issues",
-                "source": "https://github.com/oat-sa/extension-tao-itemqti-pci/tree/v7.13.3"
+                "source": "https://github.com/oat-sa/extension-tao-itemqti-pci/tree/v7.16.0"
             },
-            "time": "2022-02-10T13:46:03+00:00"
+            "time": "2022-03-10T09:53:11+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pic",
@@ -3693,16 +3700,16 @@
         },
         {
             "name": "oat-sa/extension-tao-lti",
-            "version": "v15.6.1",
+            "version": "v15.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-lti.git",
-                "reference": "542ba71d72c0e7f72901c06a8a6b587628e6b42d"
+                "reference": "88eae00380cc839eff35ca6465154d504d326f49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-lti/zipball/542ba71d72c0e7f72901c06a8a6b587628e6b42d",
-                "reference": "542ba71d72c0e7f72901c06a8a6b587628e6b42d",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-lti/zipball/88eae00380cc839eff35ca6465154d504d326f49",
+                "reference": "88eae00380cc839eff35ca6465154d504d326f49",
                 "shasum": ""
             },
             "require": {
@@ -3772,22 +3779,22 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-lti/tree/v15.6.1"
+                "source": "https://github.com/oat-sa/extension-tao-lti/tree/v15.7.1"
             },
-            "time": "2022-01-20T09:48:50+00:00"
+            "time": "2022-03-09T16:47:51+00:00"
         },
         {
             "name": "oat-sa/extension-tao-ltideliveryprovider",
-            "version": "v12.12.0",
+            "version": "v12.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-ltideliveryprovider.git",
-                "reference": "f6857f044156b5b6b9bd8882b32180b5905ec876"
+                "reference": "3a4de9963626b37e8348d21a40d6c2cb48809d7e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-ltideliveryprovider/zipball/f6857f044156b5b6b9bd8882b32180b5905ec876",
-                "reference": "f6857f044156b5b6b9bd8882b32180b5905ec876",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-ltideliveryprovider/zipball/3a4de9963626b37e8348d21a40d6c2cb48809d7e",
+                "reference": "3a4de9963626b37e8348d21a40d6c2cb48809d7e",
                 "shasum": ""
             },
             "require": {
@@ -3859,9 +3866,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-ltideliveryprovider/tree/v12.12.0"
+                "source": "https://github.com/oat-sa/extension-tao-ltideliveryprovider/tree/v12.12.1"
             },
-            "time": "2022-02-08T17:36:26+00:00"
+            "time": "2022-03-02T14:25:37+00:00"
         },
         {
             "name": "oat-sa/extension-tao-mediamanager",
@@ -4355,16 +4362,16 @@
         },
         {
             "name": "oat-sa/extension-tao-revision",
-            "version": "v10.2.0",
+            "version": "v10.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-revision.git",
-                "reference": "07c0260d263bc27f7a6b0b5071a1294aa525a2c4"
+                "reference": "58ceaba4c57496aaa801ac45ce5f08aa4e17c64c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-revision/zipball/07c0260d263bc27f7a6b0b5071a1294aa525a2c4",
-                "reference": "07c0260d263bc27f7a6b0b5071a1294aa525a2c4",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-revision/zipball/58ceaba4c57496aaa801ac45ce5f08aa4e17c64c",
+                "reference": "58ceaba4c57496aaa801ac45ce5f08aa4e17c64c",
                 "shasum": ""
             },
             "require": {
@@ -4402,9 +4409,9 @@
             ],
             "support": {
                 "issues": "https://github.com/oat-sa/extension-tao-revision/issues",
-                "source": "https://github.com/oat-sa/extension-tao-revision/tree/v10.2.0"
+                "source": "https://github.com/oat-sa/extension-tao-revision/tree/v10.3.0"
             },
-            "time": "2021-11-03T16:29:58+00:00"
+            "time": "2022-02-17T16:08:12+00:00"
         },
         {
             "name": "oat-sa/extension-tao-task-queue",
@@ -4469,16 +4476,16 @@
         },
         {
             "name": "oat-sa/extension-tao-test",
-            "version": "v15.12.1",
+            "version": "v15.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-test.git",
-                "reference": "dc5ba3264fae665f70e9b0cb23f15ff5db49ce68"
+                "reference": "38168f7a36467ed369d9eea7c8cf930bd1c99184"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-test/zipball/dc5ba3264fae665f70e9b0cb23f15ff5db49ce68",
-                "reference": "dc5ba3264fae665f70e9b0cb23f15ff5db49ce68",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-test/zipball/38168f7a36467ed369d9eea7c8cf930bd1c99184",
+                "reference": "38168f7a36467ed369d9eea7c8cf930bd1c99184",
                 "shasum": ""
             },
             "require": {
@@ -4553,35 +4560,36 @@
             "support": {
                 "forum": "https://forum.taocloud.org/",
                 "issues": "https://github.com/oat-sa/extension-tao-test/issues",
-                "source": "https://github.com/oat-sa/extension-tao-test/tree/v15.12.1"
+                "source": "https://github.com/oat-sa/extension-tao-test/tree/v15.13.0"
             },
-            "time": "2022-02-08T11:15:39+00:00"
+            "time": "2022-03-02T15:29:28+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti",
-            "version": "v44.4.1",
+            "version": "v44.10.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "ac75d23212b276c68532c1264a86f0b88161e06f"
+                "reference": "84ac0b52b7465903224c351932b86273a27ede9e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/ac75d23212b276c68532c1264a86f0b88161e06f",
-                "reference": "ac75d23212b276c68532c1264a86f0b88161e06f",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/84ac0b52b7465903224c351932b86273a27ede9e",
+                "reference": "84ac0b52b7465903224c351932b86273a27ede9e",
                 "shasum": ""
             },
             "require": {
                 "ext-dom": "*",
+                "league/flysystem": "~1.0",
                 "oat-sa/extension-tao-delivery": ">=15.0.0",
                 "oat-sa/extension-tao-item": ">=11.0.0",
                 "oat-sa/extension-tao-itemqti": ">=28.35.0",
                 "oat-sa/extension-tao-outcome": ">=13.0.0",
                 "oat-sa/extension-tao-test": ">=15.0.0",
-                "oat-sa/generis": ">=15.5.0",
+                "oat-sa/generis": ">=15.17.1",
                 "oat-sa/lib-test-cat": "2.3.7",
                 "oat-sa/oatbox-extension-installer": "~1.1||dev-master",
-                "oat-sa/tao-core": ">=48.71.0",
+                "oat-sa/tao-core": ">=50.4.0",
                 "php": ">=7.2",
                 "qtism/qtism": "^0.25.0"
             },
@@ -4650,22 +4658,22 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/v44.4.1"
+                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/v44.10.2"
             },
-            "time": "2022-02-09T16:31:00+00:00"
+            "time": "2022-03-11T15:16:39+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
-            "version": "v3.4.1",
+            "version": "v3.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti-previewer.git",
-                "reference": "0c2ea51b7481e4a84b2b2a2e11ec80208919f268"
+                "reference": "1aa4cf78d464089c9e1cddd18870631b9700c87d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti-previewer/zipball/0c2ea51b7481e4a84b2b2a2e11ec80208919f268",
-                "reference": "0c2ea51b7481e4a84b2b2a2e11ec80208919f268",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti-previewer/zipball/1aa4cf78d464089c9e1cddd18870631b9700c87d",
+                "reference": "1aa4cf78d464089c9e1cddd18870631b9700c87d",
                 "shasum": ""
             },
             "require": {
@@ -4711,22 +4719,22 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-testqti-previewer/tree/v3.4.1"
+                "source": "https://github.com/oat-sa/extension-tao-testqti-previewer/tree/v3.5.0"
             },
-            "time": "2022-02-04T09:42:51+00:00"
+            "time": "2022-02-17T16:07:11+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testtaker",
-            "version": "v8.7.1",
+            "version": "8.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testtaker.git",
-                "reference": "6cf12fb6765b518b5cf3358e47a22c04a29dd24e"
+                "reference": "772e52c627ea875971014ec001677d489990ea0b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testtaker/zipball/6cf12fb6765b518b5cf3358e47a22c04a29dd24e",
-                "reference": "6cf12fb6765b518b5cf3358e47a22c04a29dd24e",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testtaker/zipball/772e52c627ea875971014ec001677d489990ea0b",
+                "reference": "772e52c627ea875971014ec001677d489990ea0b",
                 "shasum": ""
             },
             "require": {
@@ -4792,22 +4800,22 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-testtaker/tree/v8.7.1"
+                "source": "https://github.com/oat-sa/extension-tao-testtaker/tree/8.7.2"
             },
-            "time": "2022-02-08T11:11:21+00:00"
+            "time": "2022-03-02T13:34:55+00:00"
         },
         {
             "name": "oat-sa/generis",
-            "version": "v15.16.0",
+            "version": "v15.17.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/generis.git",
-                "reference": "d8239483b9941af8cd0f576f3f3cc7626738cb07"
+                "reference": "54929a8924fca6c0a4e9217e1531877273a5364e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/generis/zipball/d8239483b9941af8cd0f576f3f3cc7626738cb07",
-                "reference": "d8239483b9941af8cd0f576f3f3cc7626738cb07",
+                "url": "https://api.github.com/repos/oat-sa/generis/zipball/54929a8924fca6c0a4e9217e1531877273a5364e",
+                "reference": "54929a8924fca6c0a4e9217e1531877273a5364e",
                 "shasum": ""
             },
             "require": {
@@ -4815,7 +4823,8 @@
                 "composer-runtime-api": "^2.0",
                 "doctrine/annotations": "~1.6.0",
                 "doctrine/dbal": "2.10.1",
-                "easyrdf/easyrdf": "^0.9.0",
+                "easyrdf/easyrdf": "^1.1",
+                "ext-pdo": "*",
                 "fluent/logger": "^1.0.1",
                 "laminas/laminas-servicemanager": "~2.5.0",
                 "league/flysystem": "~1.0",
@@ -4849,6 +4858,7 @@
             "autoload": {
                 "files": [
                     "common/legacy/class.LegacyAutoLoader.php",
+                    "common/legacy/ClassAliases.php",
                     "common/constants.php"
                 ],
                 "psr-4": {
@@ -4909,9 +4919,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/generis/tree/v15.16.0"
+                "source": "https://github.com/oat-sa/generis/tree/v15.17.3"
             },
-            "time": "2022-02-07T07:54:43+00:00"
+            "time": "2022-03-10T08:36:25+00:00"
         },
         {
             "name": "oat-sa/jig",
@@ -5028,8 +5038,8 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "oat\\search\\test\\": "test",
-                    "oat\\search\\": "src"
+                    "oat\\search\\": "src",
+                    "oat\\search\\test\\": "test"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -5383,16 +5393,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "v49.3.1",
+            "version": "v50.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "f7590deff6704b67d92bc106c5a3958a6f2aed45"
+                "reference": "730a702bcdfcf8497e708b7825c073d663d445b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/f7590deff6704b67d92bc106c5a3958a6f2aed45",
-                "reference": "f7590deff6704b67d92bc106c5a3958a6f2aed45",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/730a702bcdfcf8497e708b7825c073d663d445b8",
+                "reference": "730a702bcdfcf8497e708b7825c073d663d445b8",
                 "shasum": ""
             },
             "require": {
@@ -5412,7 +5422,7 @@
                 "league/csv": "^9.6",
                 "league/openapi-psr7-validator": "0.9",
                 "oat-sa/composer-npm-bridge": "~0.4.2||dev-master",
-                "oat-sa/generis": ">=15.16.0",
+                "oat-sa/generis": ">=15.17.0",
                 "oat-sa/jig": "~0.1",
                 "oat-sa/oatbox-extension-installer": "~1.1||dev-master",
                 "paragonie/random_compat": "^2.0",
@@ -5495,22 +5505,22 @@
             "support": {
                 "forum": "https://forum.taocloud.org",
                 "issues": "https://github.com/oat-sa/tao-core/issues",
-                "source": "https://github.com/oat-sa/tao-core/tree/v49.3.1"
+                "source": "https://github.com/oat-sa/tao-core/tree/v50.5.2"
             },
-            "time": "2022-02-11T09:16:25+00:00"
+            "time": "2022-04-08T11:58:08+00:00"
         },
         {
             "name": "ocramius/proxy-manager",
-            "version": "2.2.3",
+            "version": "2.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ocramius/ProxyManager.git",
-                "reference": "4d154742e31c35137d5374c998e8f86b54db2e2f"
+                "reference": "2d7cd2a79cd3ade90c46211baae1b88d47683917"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Ocramius/ProxyManager/zipball/4d154742e31c35137d5374c998e8f86b54db2e2f",
-                "reference": "4d154742e31c35137d5374c998e8f86b54db2e2f",
+                "url": "https://api.github.com/repos/Ocramius/ProxyManager/zipball/2d7cd2a79cd3ade90c46211baae1b88d47683917",
+                "reference": "2d7cd2a79cd3ade90c46211baae1b88d47683917",
                 "shasum": ""
             },
             "require": {
@@ -5569,29 +5579,39 @@
             ],
             "support": {
                 "issues": "https://github.com/Ocramius/ProxyManager/issues",
-                "source": "https://github.com/Ocramius/ProxyManager/tree/2.2.x"
+                "source": "https://github.com/Ocramius/ProxyManager/tree/2.2.4"
             },
-            "time": "2019-08-10T08:37:15+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/Ocramius",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/ocramius/proxy-manager",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-03-05T18:15:28+00:00"
         },
         {
             "name": "paragonie/random_compat",
-            "version": "v2.0.20",
+            "version": "v2.0.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "0f1f60250fccffeaf5dda91eea1c018aed1adc2a"
+                "reference": "96c132c7f2f7bc3230723b66e89f8f150b29d5ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/0f1f60250fccffeaf5dda91eea1c018aed1adc2a",
-                "reference": "0f1f60250fccffeaf5dda91eea1c018aed1adc2a",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/96c132c7f2f7bc3230723b66e89f8f150b29d5ae",
+                "reference": "96c132c7f2f7bc3230723b66e89f8f150b29d5ae",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "4.*|5.*"
+                "phpunit/phpunit": "*"
             },
             "suggest": {
                 "ext-libsodium": "Provides a modern crypto API that can be used to generate random bytes."
@@ -5625,7 +5645,7 @@
                 "issues": "https://github.com/paragonie/random_compat/issues",
                 "source": "https://github.com/paragonie/random_compat"
             },
-            "time": "2021-04-17T09:33:01+00:00"
+            "time": "2022-02-16T17:07:03+00:00"
         },
         {
             "name": "php-http/message-factory",
@@ -6484,12 +6504,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Ramsey\\Uuid\\": "src/"
-                },
                 "files": [
                     "src/functions.php"
-                ]
+                ],
+                "psr-4": {
+                    "Ramsey\\Uuid\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -7057,16 +7077,16 @@
         },
         {
             "name": "symfony/cache",
-            "version": "v4.4.37",
+            "version": "v4.4.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/cache.git",
-                "reference": "7613787f68c5eaad98f0bd21d694e6d639b07bf0"
+                "reference": "84a3a42d8f7a049e3a1dd363e35235426e274ddf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/cache/zipball/7613787f68c5eaad98f0bd21d694e6d639b07bf0",
-                "reference": "7613787f68c5eaad98f0bd21d694e6d639b07bf0",
+                "url": "https://api.github.com/repos/symfony/cache/zipball/84a3a42d8f7a049e3a1dd363e35235426e274ddf",
+                "reference": "84a3a42d8f7a049e3a1dd363e35235426e274ddf",
                 "shasum": ""
             },
             "require": {
@@ -7132,7 +7152,7 @@
                 "psr6"
             ],
             "support": {
-                "source": "https://github.com/symfony/cache/tree/v4.4.37"
+                "source": "https://github.com/symfony/cache/tree/v4.4.38"
             },
             "funding": [
                 {
@@ -7148,7 +7168,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-26T15:03:25+00:00"
+            "time": "2022-02-21T12:59:00+00:00"
         },
         {
             "name": "symfony/cache-contracts",
@@ -7683,16 +7703,16 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v5.4.3",
+            "version": "v5.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "0f0c4bf1840420f4aef3f32044a9dbb24682731b"
+                "reference": "d53a45039974952af7f7ebc461ccdd4295e29440"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/0f0c4bf1840420f4aef3f32044a9dbb24682731b",
-                "reference": "0f0c4bf1840420f4aef3f32044a9dbb24682731b",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/d53a45039974952af7f7ebc461ccdd4295e29440",
+                "reference": "d53a45039974952af7f7ebc461ccdd4295e29440",
                 "shasum": ""
             },
             "require": {
@@ -7727,7 +7747,7 @@
             "description": "Provides basic utilities for the filesystem",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/filesystem/tree/v5.4.3"
+                "source": "https://github.com/symfony/filesystem/tree/v5.4.6"
             },
             "funding": [
                 {
@@ -7743,7 +7763,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-02T09:53:40+00:00"
+            "time": "2022-03-02T12:42:23+00:00"
         },
         {
             "name": "symfony/lock",
@@ -7821,7 +7841,7 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.24.0",
+            "version": "v1.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
@@ -7853,12 +7873,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Ctype\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Ctype\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -7883,7 +7903,7 @@
                 "portable"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.24.0"
+                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.25.0"
             },
             "funding": [
                 {
@@ -7903,7 +7923,7 @@
         },
         {
             "name": "symfony/polyfill-intl-idn",
-            "version": "v1.24.0",
+            "version": "v1.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-idn.git",
@@ -7970,7 +7990,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-intl-idn/tree/v1.24.0"
+                "source": "https://github.com/symfony/polyfill-intl-idn/tree/v1.25.0"
             },
             "funding": [
                 {
@@ -7990,7 +8010,7 @@
         },
         {
             "name": "symfony/polyfill-intl-normalizer",
-            "version": "v1.24.0",
+            "version": "v1.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-normalizer.git",
@@ -8054,7 +8074,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-intl-normalizer/tree/v1.24.0"
+                "source": "https://github.com/symfony/polyfill-intl-normalizer/tree/v1.25.0"
             },
             "funding": [
                 {
@@ -8074,7 +8094,7 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.24.0",
+            "version": "v1.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
@@ -8106,12 +8126,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Mbstring\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -8137,7 +8157,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.24.0"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.25.0"
             },
             "funding": [
                 {
@@ -8225,7 +8245,7 @@
         },
         {
             "name": "symfony/polyfill-php72",
-            "version": "v1.24.0",
+            "version": "v1.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php72.git",
@@ -8281,7 +8301,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php72/tree/v1.24.0"
+                "source": "https://github.com/symfony/polyfill-php72/tree/v1.25.0"
             },
             "funding": [
                 {
@@ -8301,7 +8321,7 @@
         },
         {
             "name": "symfony/polyfill-php73",
-            "version": "v1.24.0",
+            "version": "v1.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php73.git",
@@ -8360,7 +8380,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php73/tree/v1.24.0"
+                "source": "https://github.com/symfony/polyfill-php73/tree/v1.25.0"
             },
             "funding": [
                 {
@@ -8380,16 +8400,16 @@
         },
         {
             "name": "symfony/polyfill-php80",
-            "version": "v1.24.0",
+            "version": "v1.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
-                "reference": "57b712b08eddb97c762a8caa32c84e037892d2e9"
+                "reference": "4407588e0d3f1f52efb65fbe92babe41f37fe50c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/57b712b08eddb97c762a8caa32c84e037892d2e9",
-                "reference": "57b712b08eddb97c762a8caa32c84e037892d2e9",
+                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/4407588e0d3f1f52efb65fbe92babe41f37fe50c",
+                "reference": "4407588e0d3f1f52efb65fbe92babe41f37fe50c",
                 "shasum": ""
             },
             "require": {
@@ -8443,7 +8463,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php80/tree/v1.24.0"
+                "source": "https://github.com/symfony/polyfill-php80/tree/v1.25.0"
             },
             "funding": [
                 {
@@ -8459,11 +8479,11 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-09-13T13:58:33+00:00"
+            "time": "2022-03-04T08:16:47+00:00"
         },
         {
             "name": "symfony/polyfill-php81",
-            "version": "v1.24.0",
+            "version": "v1.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php81.git",
@@ -8522,7 +8542,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php81/tree/v1.24.0"
+                "source": "https://github.com/symfony/polyfill-php81/tree/v1.25.0"
             },
             "funding": [
                 {
@@ -8625,16 +8645,16 @@
         },
         {
             "name": "symfony/stopwatch",
-            "version": "v5.4.3",
+            "version": "v5.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/stopwatch.git",
-                "reference": "395220730edceb6bd745236ccb5c9125c748f779"
+                "reference": "4d04b5c24f3c9a1a168a131f6cbe297155bc0d30"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/stopwatch/zipball/395220730edceb6bd745236ccb5c9125c748f779",
-                "reference": "395220730edceb6bd745236ccb5c9125c748f779",
+                "url": "https://api.github.com/repos/symfony/stopwatch/zipball/4d04b5c24f3c9a1a168a131f6cbe297155bc0d30",
+                "reference": "4d04b5c24f3c9a1a168a131f6cbe297155bc0d30",
                 "shasum": ""
             },
             "require": {
@@ -8667,7 +8687,7 @@
             "description": "Provides a way to profile code",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/stopwatch/tree/v5.4.3"
+                "source": "https://github.com/symfony/stopwatch/tree/v5.4.5"
             },
             "funding": [
                 {
@@ -8683,7 +8703,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-02T09:53:40+00:00"
+            "time": "2022-02-18T16:06:09+00:00"
         },
         {
             "name": "symfony/translation",
@@ -8860,16 +8880,16 @@
         },
         {
             "name": "symfony/var-exporter",
-            "version": "v5.4.3",
+            "version": "v5.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-exporter.git",
-                "reference": "b199936b7365be36663532e547812d3abb10234a"
+                "reference": "49e2355fe6f59ea30c18ebb68edf13b7e20582e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-exporter/zipball/b199936b7365be36663532e547812d3abb10234a",
-                "reference": "b199936b7365be36663532e547812d3abb10234a",
+                "url": "https://api.github.com/repos/symfony/var-exporter/zipball/49e2355fe6f59ea30c18ebb68edf13b7e20582e5",
+                "reference": "49e2355fe6f59ea30c18ebb68edf13b7e20582e5",
                 "shasum": ""
             },
             "require": {
@@ -8913,7 +8933,7 @@
                 "serialize"
             ],
             "support": {
-                "source": "https://github.com/symfony/var-exporter/tree/v5.4.3"
+                "source": "https://github.com/symfony/var-exporter/tree/v5.4.6"
             },
             "funding": [
                 {
@@ -8929,7 +8949,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-02T09:53:40+00:00"
+            "time": "2022-03-02T12:42:23+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -9197,5 +9217,5 @@
     "platform-overrides": {
         "php": "7.2.5"
     },
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.2.0"
 }
