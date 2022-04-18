@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9020a08721c31c4fe1cb970412103ce3",
+    "content-hash": "3b01464a994a82fb6af58ac65aaac91a",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -4095,23 +4095,24 @@
         },
         {
             "name": "oat-sa/extension-tao-outcome",
-            "version": "v13.1.0",
+            "version": "v13.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-outcome.git",
-                "reference": "51a06ea18292fc2e32e99dfa6aec0abf27a63380"
+                "reference": "74816b57084999e1f480fe5dc102db90abca0da7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-outcome/zipball/51a06ea18292fc2e32e99dfa6aec0abf27a63380",
-                "reference": "51a06ea18292fc2e32e99dfa6aec0abf27a63380",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-outcome/zipball/74816b57084999e1f480fe5dc102db90abca0da7",
+                "reference": "74816b57084999e1f480fe5dc102db90abca0da7",
                 "shasum": ""
             },
             "require": {
-                "oat-sa/generis": ">=14.0.0",
+                "oat-sa/generis": ">=15.3.0",
                 "oat-sa/lib-tao-dtms": "1.0.0",
                 "oat-sa/oatbox-extension-installer": "~1.1||dev-master",
-                "oat-sa/tao-core": ">=47.0.0"
+                "oat-sa/tao-core": ">=47.0.0",
+                "qtism/qtism": ">=0.25.0"
             },
             "type": "tao-extension",
             "extra": {
@@ -4170,9 +4171,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-outcome/tree/v13.1.0"
+                "source": "https://github.com/oat-sa/extension-tao-outcome/tree/v13.2.0"
             },
-            "time": "2021-06-15T12:04:30+00:00"
+            "time": "2022-04-18T08:38:04+00:00"
         },
         {
             "name": "oat-sa/extension-tao-outcomekeyvalue",
@@ -4385,16 +4386,16 @@
         },
         {
             "name": "oat-sa/extension-tao-outcomeui",
-            "version": "v11.0.6",
+            "version": "v11.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-outcomeui.git",
-                "reference": "94995f55bab644fc634c27f9b6b914fe6db46cb9"
+                "reference": "4076f176f6343df579e83faab3e4d78140aab7a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-outcomeui/zipball/94995f55bab644fc634c27f9b6b914fe6db46cb9",
-                "reference": "94995f55bab644fc634c27f9b6b914fe6db46cb9",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-outcomeui/zipball/4076f176f6343df579e83faab3e4d78140aab7a1",
+                "reference": "4076f176f6343df579e83faab3e4d78140aab7a1",
                 "shasum": ""
             },
             "require": {
@@ -4466,9 +4467,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-outcomeui/tree/v11.0.6"
+                "source": "https://github.com/oat-sa/extension-tao-outcomeui/tree/v11.1.0"
             },
-            "time": "2022-02-09T12:46:12+00:00"
+            "time": "2022-04-18T09:30:26+00:00"
         },
         {
             "name": "oat-sa/extension-tao-proctoring",
