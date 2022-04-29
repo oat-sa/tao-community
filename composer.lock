@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e99d060f3dba975a3566a315573cbbf5",
+    "content-hash": "3604c3d36eb9a0103effef966686ae8e",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -3770,16 +3770,16 @@
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pci",
-            "version": "v8.0.2",
+            "version": "dev-release-2021-05-lts",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti-pci.git",
-                "reference": "92f8a51469aaac8d145789b8fe1f40c420514c9e"
+                "reference": "b6c262f9c19f162b2252a1eef2b897acec5addac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti-pci/zipball/92f8a51469aaac8d145789b8fe1f40c420514c9e",
-                "reference": "92f8a51469aaac8d145789b8fe1f40c420514c9e",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti-pci/zipball/b6c262f9c19f162b2252a1eef2b897acec5addac",
+                "reference": "b6c262f9c19f162b2252a1eef2b897acec5addac",
                 "shasum": ""
             },
             "require": {
@@ -3813,9 +3813,9 @@
             ],
             "support": {
                 "issues": "https://github.com/oat-sa/extension-tao-itemqti-pci/issues",
-                "source": "https://github.com/oat-sa/extension-tao-itemqti-pci/tree/v8.0.2"
+                "source": "https://github.com/oat-sa/extension-tao-itemqti-pci/tree/release-2021-05-lts"
             },
-            "time": "2022-04-14T15:03:13+00:00"
+            "time": "2022-04-29T14:13:09+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pic",
@@ -9376,9 +9376,18 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [],
+    "aliases": [
+        {
+            "package": "oat-sa/extension-tao-itemqti-pci",
+            "version": "dev-release-2021-05-lts",
+            "alias": "v8.0.2",
+            "alias_normalized": "8.0.2.0"
+        }
+    ],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "oat-sa/extension-tao-itemqti-pci": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
