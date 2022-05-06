@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a65a0835215fa15becf4b66be9a8823e",
+    "content-hash": "2c86d31f5a97fb9640091e20cb4c5c44",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -3771,16 +3771,16 @@
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pci",
-            "version": "dev-release-2022-05-lts",
+            "version": "v8.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti-pci.git",
-                "reference": "55db1fb5139014c582717c7c674dbc73e0b10b27"
+                "reference": "d55f5b3b7818d0df8d82353eb7bbda95c2c1c0ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti-pci/zipball/55db1fb5139014c582717c7c674dbc73e0b10b27",
-                "reference": "55db1fb5139014c582717c7c674dbc73e0b10b27",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti-pci/zipball/d55f5b3b7818d0df8d82353eb7bbda95c2c1c0ba",
+                "reference": "d55f5b3b7818d0df8d82353eb7bbda95c2c1c0ba",
                 "shasum": ""
             },
             "require": {
@@ -3814,9 +3814,9 @@
             ],
             "support": {
                 "issues": "https://github.com/oat-sa/extension-tao-itemqti-pci/issues",
-                "source": "https://github.com/oat-sa/extension-tao-itemqti-pci/tree/release-2022-05-lts"
+                "source": "https://github.com/oat-sa/extension-tao-itemqti-pci/tree/v8.0.4"
             },
-            "time": "2022-05-03T13:50:37+00:00"
+            "time": "2022-04-29T13:35:52+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pic",
@@ -5564,16 +5564,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "dev-release-2022-05-lts",
+            "version": "v50.10.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "bd3ec99ed4436332ce131e9296511558c93502a2"
+                "reference": "b8b2bc7033f0e1ef107d9d34f366153ebeaa5c78"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/bd3ec99ed4436332ce131e9296511558c93502a2",
-                "reference": "bd3ec99ed4436332ce131e9296511558c93502a2",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/b8b2bc7033f0e1ef107d9d34f366153ebeaa5c78",
+                "reference": "b8b2bc7033f0e1ef107d9d34f366153ebeaa5c78",
                 "shasum": ""
             },
             "require": {
@@ -5675,9 +5675,9 @@
             "support": {
                 "forum": "https://forum.taocloud.org",
                 "issues": "https://github.com/oat-sa/tao-core/issues",
-                "source": "https://github.com/oat-sa/tao-core/tree/release-2022-05-lts"
+                "source": "https://github.com/oat-sa/tao-core/tree/v50.10.11"
             },
-            "time": "2022-05-04T12:55:38+00:00"
+            "time": "2022-05-06T09:46:17+00:00"
         },
         {
             "name": "ocramius/proxy-manager",
@@ -9377,25 +9377,9 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [
-        {
-            "package": "oat-sa/extension-tao-itemqti-pci",
-            "version": "dev-release-2022-05-lts",
-            "alias": "8.0.2",
-            "alias_normalized": "8.0.2.0"
-        },
-        {
-            "package": "oat-sa/tao-core",
-            "version": "dev-release-2022-05-lts",
-            "alias": "50.10.5",
-            "alias_normalized": "50.10.5.0"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "oat-sa/tao-core": 20,
-        "oat-sa/extension-tao-itemqti-pci": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
@@ -9403,5 +9387,5 @@
     "platform-overrides": {
         "php": "7.2.5"
     },
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.0.0"
 }
