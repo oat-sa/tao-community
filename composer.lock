@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "406794c0b5f50598901e6eded04bfbee",
+    "content-hash": "4ad1164e291bb058d995975d1fdc5c6a",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -4736,16 +4736,16 @@
         },
         {
             "name": "oat-sa/extension-tao-testqti",
-            "version": "v44.14.1",
+            "version": "dev-hotfix/TR-4060/partially-answered-items",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "e006c9219f508096d3bef1f5a9589a4d1be0a288"
+                "reference": "aa37c9ca4f16e8be114d5ba7ee8fef36ffb0eed6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/e006c9219f508096d3bef1f5a9589a4d1be0a288",
-                "reference": "e006c9219f508096d3bef1f5a9589a4d1be0a288",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/aa37c9ca4f16e8be114d5ba7ee8fef36ffb0eed6",
+                "reference": "aa37c9ca4f16e8be114d5ba7ee8fef36ffb0eed6",
                 "shasum": ""
             },
             "require": {
@@ -4828,9 +4828,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/v44.14.1"
+                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/hotfix/TR-4060/partially-answered-items"
             },
-            "time": "2022-04-19T09:03:54+00:00"
+            "time": "2022-05-23T14:32:28+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
@@ -9377,9 +9377,18 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [],
+    "aliases": [
+        {
+            "package": "oat-sa/extension-tao-testqti",
+            "version": "dev-hotfix/TR-4060/partially-answered-items",
+            "alias": "44.14.1.1",
+            "alias_normalized": "44.14.1.1"
+        }
+    ],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "oat-sa/extension-tao-testqti": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
@@ -9387,5 +9396,5 @@
     "platform-overrides": {
         "php": "7.2.5"
     },
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.3.0"
 }
