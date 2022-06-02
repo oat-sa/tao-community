@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1640ebbca787ec5c31b7944c7980a575",
+    "content-hash": "965ea5a2bd10f2a683250811bb978268",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -456,16 +456,16 @@
         },
         {
             "name": "doctrine/cache",
-            "version": "1.12.1",
+            "version": "1.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "4cf401d14df219fa6f38b671f5493449151c9ad8"
+                "reference": "56cd022adb5514472cb144c087393c1821911d09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/4cf401d14df219fa6f38b671f5493449151c9ad8",
-                "reference": "4cf401d14df219fa6f38b671f5493449151c9ad8",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/56cd022adb5514472cb144c087393c1821911d09",
+                "reference": "56cd022adb5514472cb144c087393c1821911d09",
                 "shasum": ""
             },
             "require": {
@@ -477,13 +477,13 @@
             "require-dev": {
                 "alcaeus/mongo-php-adapter": "^1.1",
                 "cache/integration-tests": "dev-master",
-                "doctrine/coding-standard": "^8.0",
+                "doctrine/coding-standard": "^9",
                 "mongodb/mongodb": "^1.1",
-                "phpunit/phpunit": "^7.0 || ^8.0 || ^9.0",
+                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5",
                 "predis/predis": "~1.0",
                 "psr/cache": "^1.0 || ^2.0 || ^3.0",
-                "symfony/cache": "^4.4 || ^5.2 || ^6.0@dev",
-                "symfony/var-exporter": "^4.4 || ^5.2 || ^6.0@dev"
+                "symfony/cache": "^4.4 || ^5.4 || ^6",
+                "symfony/var-exporter": "^4.4 || ^5.4 || ^6"
             },
             "suggest": {
                 "alcaeus/mongo-php-adapter": "Required to use legacy MongoDB driver"
@@ -535,7 +535,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/cache/issues",
-                "source": "https://github.com/doctrine/cache/tree/1.12.1"
+                "source": "https://github.com/doctrine/cache/tree/1.13.0"
             },
             "funding": [
                 {
@@ -551,7 +551,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-07-17T14:39:21+00:00"
+            "time": "2022-05-20T20:06:54+00:00"
         },
         {
             "name": "doctrine/collections",
@@ -2396,16 +2396,16 @@
         },
         {
             "name": "league/oauth2-server",
-            "version": "8.3.4",
+            "version": "8.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/oauth2-server.git",
-                "reference": "0c2f32cd766861f3add4b95c49c5fcef3427e133"
+                "reference": "7aeb7c42b463b1a6fe4d084d3145e2fa22436876"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/oauth2-server/zipball/0c2f32cd766861f3add4b95c49c5fcef3427e133",
-                "reference": "0c2f32cd766861f3add4b95c49c5fcef3427e133",
+                "url": "https://api.github.com/repos/thephpleague/oauth2-server/zipball/7aeb7c42b463b1a6fe4d084d3145e2fa22436876",
+                "reference": "7aeb7c42b463b1a6fe4d084d3145e2fa22436876",
                 "shasum": ""
             },
             "require": {
@@ -2472,7 +2472,7 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/oauth2-server/issues",
-                "source": "https://github.com/thephpleague/oauth2-server/tree/8.3.4"
+                "source": "https://github.com/thephpleague/oauth2-server/tree/8.3.5"
             },
             "funding": [
                 {
@@ -2480,7 +2480,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-04-07T21:33:04+00:00"
+            "time": "2022-05-03T21:21:28+00:00"
         },
         {
             "name": "league/openapi-psr7-validator",
@@ -2540,33 +2540,35 @@
         },
         {
             "name": "league/uri",
-            "version": "6.5.0",
+            "version": "6.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/uri.git",
-                "reference": "c68ca445abb04817d740ddd6d0b3551826ef0c5a"
+                "reference": "4147f19b9de3b5af6a258f35d7a0efbbf9963298"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/uri/zipball/c68ca445abb04817d740ddd6d0b3551826ef0c5a",
-                "reference": "c68ca445abb04817d740ddd6d0b3551826ef0c5a",
+                "url": "https://api.github.com/repos/thephpleague/uri/zipball/4147f19b9de3b5af6a258f35d7a0efbbf9963298",
+                "reference": "4147f19b9de3b5af6a258f35d7a0efbbf9963298",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "league/uri-interfaces": "^2.3",
-                "php": "^7.3 || ^8.0",
+                "php": "^7.4 || ^8.0",
                 "psr/http-message": "^1.0"
             },
             "conflict": {
                 "league/uri-schemes": "^1.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.19 || ^3.0",
-                "phpstan/phpstan": "^0.12.90",
-                "phpstan/phpstan-phpunit": "^0.12.22",
-                "phpstan/phpstan-strict-rules": "^0.12.11",
-                "phpunit/phpunit": "^8.0 || ^9.0",
+                "friendsofphp/php-cs-fixer": "^v3.3.2",
+                "php-http/psr7-integration-tests": "^1.1",
+                "phpstan/phpstan": "^1.2.0",
+                "phpstan/phpstan-deprecation-rules": "^1.0",
+                "phpstan/phpstan-phpunit": "^1.0.0",
+                "phpstan/phpstan-strict-rules": "^1.1.0",
+                "phpunit/phpunit": "^9.5.10",
                 "psr/http-factory": "^1.0"
             },
             "suggest": {
@@ -2598,7 +2600,7 @@
                 }
             ],
             "description": "URI manipulation library",
-            "homepage": "http://uri.thephpleague.com",
+            "homepage": "https://uri.thephpleague.com",
             "keywords": [
                 "data-uri",
                 "file-uri",
@@ -2624,7 +2626,7 @@
                 "docs": "https://uri.thephpleague.com",
                 "forum": "https://thephpleague.slack.com",
                 "issues": "https://github.com/thephpleague/uri/issues",
-                "source": "https://github.com/thephpleague/uri/tree/6.5.0"
+                "source": "https://github.com/thephpleague/uri/tree/6.6.0"
             },
             "funding": [
                 {
@@ -2632,7 +2634,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-08-27T09:54:07+00:00"
+            "time": "2022-05-28T05:44:35+00:00"
         },
         {
             "name": "league/uri-interfaces",
@@ -3185,16 +3187,16 @@
         },
         {
             "name": "oat-sa/extension-tao-backoffice",
-            "version": "v6.10.1",
+            "version": "v6.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-backoffice.git",
-                "reference": "7b740a9d787e13e46b459a489e7d5b0fcc236446"
+                "reference": "8e2a27e318ae3e777feaccc12053e26314ca9d90"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-backoffice/zipball/7b740a9d787e13e46b459a489e7d5b0fcc236446",
-                "reference": "7b740a9d787e13e46b459a489e7d5b0fcc236446",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-backoffice/zipball/8e2a27e318ae3e777feaccc12053e26314ca9d90",
+                "reference": "8e2a27e318ae3e777feaccc12053e26314ca9d90",
                 "shasum": ""
             },
             "require": {
@@ -3227,9 +3229,9 @@
             ],
             "support": {
                 "issues": "https://github.com/oat-sa/extension-tao-backoffice/issues",
-                "source": "https://github.com/oat-sa/extension-tao-backoffice/tree/v6.10.1"
+                "source": "https://github.com/oat-sa/extension-tao-backoffice/tree/v6.10.0"
             },
-            "time": "2022-04-20T11:57:57+00:00"
+            "time": "2022-03-03T11:19:53+00:00"
         },
         {
             "name": "oat-sa/extension-tao-clientdiag",
@@ -3785,16 +3787,16 @@
         },
         {
             "name": "oat-sa/extension-tao-item",
-            "version": "v11.26.0.1",
+            "version": "v11.28.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-item.git",
-                "reference": "378ec20ebb3f8eb685026b2a68c8f0d2387c8799"
+                "reference": "2251d7cb04f256cc71f03d93851fb0a174c85e59"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-item/zipball/378ec20ebb3f8eb685026b2a68c8f0d2387c8799",
-                "reference": "378ec20ebb3f8eb685026b2a68c8f0d2387c8799",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-item/zipball/2251d7cb04f256cc71f03d93851fb0a174c85e59",
+                "reference": "2251d7cb04f256cc71f03d93851fb0a174c85e59",
                 "shasum": ""
             },
             "require": {
@@ -3869,22 +3871,22 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-item/tree/v11.26.0.1"
+                "source": "https://github.com/oat-sa/extension-tao-item/tree/v11.28.0"
             },
-            "time": "2022-04-07T15:16:21+00:00"
+            "time": "2022-03-14T11:13:32+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti",
-            "version": "v29.1.2",
+            "version": "v29.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti.git",
-                "reference": "ee1add42d49b4764f9c01c4c75bcbab85e2ee503"
+                "reference": "3a69c64b4e2a65c26edf2759933e8a075e63cb5c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/ee1add42d49b4764f9c01c4c75bcbab85e2ee503",
-                "reference": "ee1add42d49b4764f9c01c4c75bcbab85e2ee503",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/3a69c64b4e2a65c26edf2759933e8a075e63cb5c",
+                "reference": "3a69c64b4e2a65c26edf2759933e8a075e63cb5c",
                 "shasum": ""
             },
             "require": {
@@ -3960,9 +3962,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/v29.1.2"
+                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/v29.2.2"
             },
-            "time": "2022-04-29T09:41:54+00:00"
+            "time": "2022-05-06T09:02:01+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pci",
@@ -4236,16 +4238,16 @@
         },
         {
             "name": "oat-sa/extension-tao-mediamanager",
-            "version": "v12.25.3",
+            "version": "v12.25.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-mediamanager.git",
-                "reference": "bdb7308ca0596acdd8c7ab2af92e28ad20a55b0b"
+                "reference": "5106bd48d33de21719d434fe81c3600fa809159b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-mediamanager/zipball/bdb7308ca0596acdd8c7ab2af92e28ad20a55b0b",
-                "reference": "bdb7308ca0596acdd8c7ab2af92e28ad20a55b0b",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-mediamanager/zipball/5106bd48d33de21719d434fe81c3600fa809159b",
+                "reference": "5106bd48d33de21719d434fe81c3600fa809159b",
                 "shasum": ""
             },
             "require": {
@@ -4285,9 +4287,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-mediamanager/tree/v12.25.3"
+                "source": "https://github.com/oat-sa/extension-tao-mediamanager/tree/v12.25.2"
             },
-            "time": "2022-04-21T15:02:45+00:00"
+            "time": "2022-04-08T14:17:15+00:00"
         },
         {
             "name": "oat-sa/extension-tao-outcome",
@@ -4582,16 +4584,16 @@
         },
         {
             "name": "oat-sa/extension-tao-outcomeui",
-            "version": "v11.1.1",
+            "version": "v11.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-outcomeui.git",
-                "reference": "105400bd480794d75670282eeeb489078425a764"
+                "reference": "4076f176f6343df579e83faab3e4d78140aab7a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-outcomeui/zipball/105400bd480794d75670282eeeb489078425a764",
-                "reference": "105400bd480794d75670282eeeb489078425a764",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-outcomeui/zipball/4076f176f6343df579e83faab3e4d78140aab7a1",
+                "reference": "4076f176f6343df579e83faab3e4d78140aab7a1",
                 "shasum": ""
             },
             "require": {
@@ -4663,9 +4665,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-outcomeui/tree/v11.1.1"
+                "source": "https://github.com/oat-sa/extension-tao-outcomeui/tree/v11.1.0"
             },
-            "time": "2022-04-21T09:46:20+00:00"
+            "time": "2022-04-18T09:30:26+00:00"
         },
         {
             "name": "oat-sa/extension-tao-proctoring",
@@ -4931,16 +4933,16 @@
         },
         {
             "name": "oat-sa/extension-tao-testqti",
-            "version": "v44.14.3",
+            "version": "v44.14.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "6e19091197eca45748138a1a0894031388a81f1a"
+                "reference": "e006c9219f508096d3bef1f5a9589a4d1be0a288"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/6e19091197eca45748138a1a0894031388a81f1a",
-                "reference": "6e19091197eca45748138a1a0894031388a81f1a",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/e006c9219f508096d3bef1f5a9589a4d1be0a288",
+                "reference": "e006c9219f508096d3bef1f5a9589a4d1be0a288",
                 "shasum": ""
             },
             "require": {
@@ -5023,22 +5025,22 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/v44.14.3"
+                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/v44.14.1"
             },
-            "time": "2022-05-03T07:50:51+00:00"
+            "time": "2022-04-19T09:03:54+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
-            "version": "v3.5.2",
+            "version": "v3.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti-previewer.git",
-                "reference": "192986ee9cad1167e69fd1868860afab79b71ab0"
+                "reference": "2aa14cc20e18c094c1f1c9fc2a67d3b359fe2af5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti-previewer/zipball/192986ee9cad1167e69fd1868860afab79b71ab0",
-                "reference": "192986ee9cad1167e69fd1868860afab79b71ab0",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti-previewer/zipball/2aa14cc20e18c094c1f1c9fc2a67d3b359fe2af5",
+                "reference": "2aa14cc20e18c094c1f1c9fc2a67d3b359fe2af5",
                 "shasum": ""
             },
             "require": {
@@ -5084,9 +5086,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-testqti-previewer/tree/v3.5.2"
+                "source": "https://github.com/oat-sa/extension-tao-testqti-previewer/tree/v3.5.1"
             },
-            "time": "2022-04-25T09:42:13+00:00"
+            "time": "2022-03-30T10:06:26+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testtaker",
@@ -5759,16 +5761,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "v50.10.7",
+            "version": "v50.10.11.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "3a06f734d89ac9ed15640474cf7f886bf61e8a1f"
+                "reference": "7d9948c3b34921382b4812bfb130c6ce28110d9c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/3a06f734d89ac9ed15640474cf7f886bf61e8a1f",
-                "reference": "3a06f734d89ac9ed15640474cf7f886bf61e8a1f",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/7d9948c3b34921382b4812bfb130c6ce28110d9c",
+                "reference": "7d9948c3b34921382b4812bfb130c6ce28110d9c",
                 "shasum": ""
             },
             "require": {
@@ -5870,9 +5872,9 @@
             "support": {
                 "forum": "https://forum.taocloud.org",
                 "issues": "https://github.com/oat-sa/tao-core/issues",
-                "source": "https://github.com/oat-sa/tao-core/tree/v50.10.7"
+                "source": "https://github.com/oat-sa/tao-core/tree/v50.10.11.1"
             },
-            "time": "2022-04-28T07:14:06+00:00"
+            "time": "2022-05-13T08:37:00+00:00"
         },
         {
             "name": "ocramius/proxy-manager",
@@ -7447,16 +7449,16 @@
         },
         {
             "name": "symfony/cache",
-            "version": "v4.4.41",
+            "version": "v4.4.42",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/cache.git",
-                "reference": "27121284fe32a7cefc225268761ec7ce1741b9ac"
+                "reference": "7cdabf9a6a03e291676019184815a14ae310a014"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/cache/zipball/27121284fe32a7cefc225268761ec7ce1741b9ac",
-                "reference": "27121284fe32a7cefc225268761ec7ce1741b9ac",
+                "url": "https://api.github.com/repos/symfony/cache/zipball/7cdabf9a6a03e291676019184815a14ae310a014",
+                "reference": "7cdabf9a6a03e291676019184815a14ae310a014",
                 "shasum": ""
             },
             "require": {
@@ -7522,7 +7524,7 @@
                 "psr6"
             ],
             "support": {
-                "source": "https://github.com/symfony/cache/tree/v4.4.41"
+                "source": "https://github.com/symfony/cache/tree/v4.4.42"
             },
             "funding": [
                 {
@@ -7538,7 +7540,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-04-25T17:25:00+00:00"
+            "time": "2022-05-21T09:26:52+00:00"
         },
         {
             "name": "symfony/cache-contracts",
@@ -8073,16 +8075,16 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v5.4.7",
+            "version": "v5.4.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "3a4442138d80c9f7b600fb297534ac718b61d37f"
+                "reference": "36a017fa4cce1eff1b8e8129ff53513abcef05ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/3a4442138d80c9f7b600fb297534ac718b61d37f",
-                "reference": "3a4442138d80c9f7b600fb297534ac718b61d37f",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/36a017fa4cce1eff1b8e8129ff53513abcef05ba",
+                "reference": "36a017fa4cce1eff1b8e8129ff53513abcef05ba",
                 "shasum": ""
             },
             "require": {
@@ -8117,7 +8119,7 @@
             "description": "Provides basic utilities for the filesystem",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/filesystem/tree/v5.4.7"
+                "source": "https://github.com/symfony/filesystem/tree/v5.4.9"
             },
             "funding": [
                 {
@@ -8133,7 +8135,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-04-01T12:33:59+00:00"
+            "time": "2022-05-20T13:55:35+00:00"
         },
         {
             "name": "symfony/lock",
@@ -8211,16 +8213,16 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.25.0",
+            "version": "v1.26.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "30885182c981ab175d4d034db0f6f469898070ab"
+                "reference": "6fd1b9a79f6e3cf65f9e679b23af304cd9e010d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/30885182c981ab175d4d034db0f6f469898070ab",
-                "reference": "30885182c981ab175d4d034db0f6f469898070ab",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/6fd1b9a79f6e3cf65f9e679b23af304cd9e010d4",
+                "reference": "6fd1b9a79f6e3cf65f9e679b23af304cd9e010d4",
                 "shasum": ""
             },
             "require": {
@@ -8235,7 +8237,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.23-dev"
+                    "dev-main": "1.26-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -8273,7 +8275,7 @@
                 "portable"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.25.0"
+                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.26.0"
             },
             "funding": [
                 {
@@ -8289,20 +8291,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-10-20T20:35:02+00:00"
+            "time": "2022-05-24T11:49:31+00:00"
         },
         {
             "name": "symfony/polyfill-intl-idn",
-            "version": "v1.25.0",
+            "version": "v1.26.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-idn.git",
-                "reference": "749045c69efb97c70d25d7463abba812e91f3a44"
+                "reference": "59a8d271f00dd0e4c2e518104cc7963f655a1aa8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/749045c69efb97c70d25d7463abba812e91f3a44",
-                "reference": "749045c69efb97c70d25d7463abba812e91f3a44",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/59a8d271f00dd0e4c2e518104cc7963f655a1aa8",
+                "reference": "59a8d271f00dd0e4c2e518104cc7963f655a1aa8",
                 "shasum": ""
             },
             "require": {
@@ -8316,7 +8318,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.23-dev"
+                    "dev-main": "1.26-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -8360,7 +8362,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-intl-idn/tree/v1.25.0"
+                "source": "https://github.com/symfony/polyfill-intl-idn/tree/v1.26.0"
             },
             "funding": [
                 {
@@ -8376,20 +8378,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-09-14T14:02:44+00:00"
+            "time": "2022-05-24T11:49:31+00:00"
         },
         {
             "name": "symfony/polyfill-intl-normalizer",
-            "version": "v1.25.0",
+            "version": "v1.26.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-normalizer.git",
-                "reference": "8590a5f561694770bdcd3f9b5c69dde6945028e8"
+                "reference": "219aa369ceff116e673852dce47c3a41794c14bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-normalizer/zipball/8590a5f561694770bdcd3f9b5c69dde6945028e8",
-                "reference": "8590a5f561694770bdcd3f9b5c69dde6945028e8",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-normalizer/zipball/219aa369ceff116e673852dce47c3a41794c14bd",
+                "reference": "219aa369ceff116e673852dce47c3a41794c14bd",
                 "shasum": ""
             },
             "require": {
@@ -8401,7 +8403,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.23-dev"
+                    "dev-main": "1.26-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -8444,7 +8446,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-intl-normalizer/tree/v1.25.0"
+                "source": "https://github.com/symfony/polyfill-intl-normalizer/tree/v1.26.0"
             },
             "funding": [
                 {
@@ -8460,20 +8462,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-02-19T12:13:01+00:00"
+            "time": "2022-05-24T11:49:31+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.25.0",
+            "version": "v1.26.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "0abb51d2f102e00a4eefcf46ba7fec406d245825"
+                "reference": "9344f9cb97f3b19424af1a21a3b0e75b0a7d8d7e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/0abb51d2f102e00a4eefcf46ba7fec406d245825",
-                "reference": "0abb51d2f102e00a4eefcf46ba7fec406d245825",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/9344f9cb97f3b19424af1a21a3b0e75b0a7d8d7e",
+                "reference": "9344f9cb97f3b19424af1a21a3b0e75b0a7d8d7e",
                 "shasum": ""
             },
             "require": {
@@ -8488,7 +8490,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.23-dev"
+                    "dev-main": "1.26-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -8527,7 +8529,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.25.0"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.26.0"
             },
             "funding": [
                 {
@@ -8543,7 +8545,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-11-30T18:21:41+00:00"
+            "time": "2022-05-24T11:49:31+00:00"
         },
         {
             "name": "symfony/polyfill-php70",
@@ -8615,16 +8617,16 @@
         },
         {
             "name": "symfony/polyfill-php72",
-            "version": "v1.25.0",
+            "version": "v1.26.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php72.git",
-                "reference": "9a142215a36a3888e30d0a9eeea9766764e96976"
+                "reference": "bf44a9fd41feaac72b074de600314a93e2ae78e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/9a142215a36a3888e30d0a9eeea9766764e96976",
-                "reference": "9a142215a36a3888e30d0a9eeea9766764e96976",
+                "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/bf44a9fd41feaac72b074de600314a93e2ae78e2",
+                "reference": "bf44a9fd41feaac72b074de600314a93e2ae78e2",
                 "shasum": ""
             },
             "require": {
@@ -8633,7 +8635,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.23-dev"
+                    "dev-main": "1.26-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -8671,7 +8673,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php72/tree/v1.25.0"
+                "source": "https://github.com/symfony/polyfill-php72/tree/v1.26.0"
             },
             "funding": [
                 {
@@ -8687,20 +8689,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-05-27T09:17:38+00:00"
+            "time": "2022-05-24T11:49:31+00:00"
         },
         {
             "name": "symfony/polyfill-php73",
-            "version": "v1.25.0",
+            "version": "v1.26.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php73.git",
-                "reference": "cc5db0e22b3cb4111010e48785a97f670b350ca5"
+                "reference": "e440d35fa0286f77fb45b79a03fedbeda9307e85"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php73/zipball/cc5db0e22b3cb4111010e48785a97f670b350ca5",
-                "reference": "cc5db0e22b3cb4111010e48785a97f670b350ca5",
+                "url": "https://api.github.com/repos/symfony/polyfill-php73/zipball/e440d35fa0286f77fb45b79a03fedbeda9307e85",
+                "reference": "e440d35fa0286f77fb45b79a03fedbeda9307e85",
                 "shasum": ""
             },
             "require": {
@@ -8709,7 +8711,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.23-dev"
+                    "dev-main": "1.26-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -8750,7 +8752,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php73/tree/v1.25.0"
+                "source": "https://github.com/symfony/polyfill-php73/tree/v1.26.0"
             },
             "funding": [
                 {
@@ -8766,20 +8768,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-06-05T21:20:04+00:00"
+            "time": "2022-05-24T11:49:31+00:00"
         },
         {
             "name": "symfony/polyfill-php80",
-            "version": "v1.25.0",
+            "version": "v1.26.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
-                "reference": "4407588e0d3f1f52efb65fbe92babe41f37fe50c"
+                "reference": "cfa0ae98841b9e461207c13ab093d76b0fa7bace"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/4407588e0d3f1f52efb65fbe92babe41f37fe50c",
-                "reference": "4407588e0d3f1f52efb65fbe92babe41f37fe50c",
+                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/cfa0ae98841b9e461207c13ab093d76b0fa7bace",
+                "reference": "cfa0ae98841b9e461207c13ab093d76b0fa7bace",
                 "shasum": ""
             },
             "require": {
@@ -8788,7 +8790,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.23-dev"
+                    "dev-main": "1.26-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -8833,7 +8835,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php80/tree/v1.25.0"
+                "source": "https://github.com/symfony/polyfill-php80/tree/v1.26.0"
             },
             "funding": [
                 {
@@ -8849,20 +8851,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-03-04T08:16:47+00:00"
+            "time": "2022-05-10T07:21:04+00:00"
         },
         {
             "name": "symfony/polyfill-php81",
-            "version": "v1.25.0",
+            "version": "v1.26.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php81.git",
-                "reference": "5de4ba2d41b15f9bd0e19b2ab9674135813ec98f"
+                "reference": "13f6d1271c663dc5ae9fb843a8f16521db7687a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php81/zipball/5de4ba2d41b15f9bd0e19b2ab9674135813ec98f",
-                "reference": "5de4ba2d41b15f9bd0e19b2ab9674135813ec98f",
+                "url": "https://api.github.com/repos/symfony/polyfill-php81/zipball/13f6d1271c663dc5ae9fb843a8f16521db7687a1",
+                "reference": "13f6d1271c663dc5ae9fb843a8f16521db7687a1",
                 "shasum": ""
             },
             "require": {
@@ -8871,7 +8873,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.23-dev"
+                    "dev-main": "1.26-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -8912,7 +8914,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php81/tree/v1.25.0"
+                "source": "https://github.com/symfony/polyfill-php81/tree/v1.26.0"
             },
             "funding": [
                 {
@@ -8928,7 +8930,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-09-13T13:58:11+00:00"
+            "time": "2022-05-24T11:49:31+00:00"
         },
         {
             "name": "symfony/service-contracts",
@@ -9250,16 +9252,16 @@
         },
         {
             "name": "symfony/var-exporter",
-            "version": "v5.4.8",
+            "version": "v5.4.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-exporter.git",
-                "reference": "7e132a3fcd4b57add721b4207236877b6017ec93"
+                "reference": "63249ebfca4e75a357679fa7ba2089cfb898aa67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-exporter/zipball/7e132a3fcd4b57add721b4207236877b6017ec93",
-                "reference": "7e132a3fcd4b57add721b4207236877b6017ec93",
+                "url": "https://api.github.com/repos/symfony/var-exporter/zipball/63249ebfca4e75a357679fa7ba2089cfb898aa67",
+                "reference": "63249ebfca4e75a357679fa7ba2089cfb898aa67",
                 "shasum": ""
             },
             "require": {
@@ -9303,7 +9305,7 @@
                 "serialize"
             ],
             "support": {
-                "source": "https://github.com/symfony/var-exporter/tree/v5.4.8"
+                "source": "https://github.com/symfony/var-exporter/tree/v5.4.9"
             },
             "funding": [
                 {
@@ -9319,7 +9321,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-04-26T13:19:20+00:00"
+            "time": "2022-05-21T10:24:18+00:00"
         },
         {
             "name": "symfony/yaml",
