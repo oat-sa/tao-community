@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "43042e4a479218df156839f7fe7a9b92",
+    "content-hash": "2ce278763cc65a2b7476932324cc347d",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -624,30 +624,32 @@
         },
         {
             "name": "doctrine/dbal",
-            "version": "v2.10.1",
+            "version": "2.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "c2b8e6e82732a64ecde1cddf9e1e06cb8556e3d8"
+                "reference": "adce7a954a1c2f14f85e94aed90c8489af204086"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/c2b8e6e82732a64ecde1cddf9e1e06cb8556e3d8",
-                "reference": "c2b8e6e82732a64ecde1cddf9e1e06cb8556e3d8",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/adce7a954a1c2f14f85e94aed90c8489af204086",
+                "reference": "adce7a954a1c2f14f85e94aed90c8489af204086",
                 "shasum": ""
             },
             "require": {
                 "doctrine/cache": "^1.0",
                 "doctrine/event-manager": "^1.0",
                 "ext-pdo": "*",
-                "php": "^7.2"
+                "php": "^7.3 || ^8"
             },
             "require-dev": {
-                "doctrine/coding-standard": "^6.0",
+                "doctrine/coding-standard": "^8.1",
                 "jetbrains/phpstorm-stubs": "^2019.1",
-                "phpstan/phpstan": "^0.11.3",
-                "phpunit/phpunit": "^8.4.1",
-                "symfony/console": "^2.0.5|^3.0|^4.0|^5.0"
+                "phpstan/phpstan": "^0.12.40",
+                "phpunit/phpunit": "^9.4",
+                "psalm/plugin-phpunit": "^0.10.0",
+                "symfony/console": "^2.0.5|^3.0|^4.0|^5.0",
+                "vimeo/psalm": "^3.17.2"
             },
             "suggest": {
                 "symfony/console": "For helpful console commands such as SQL execution and import of files."
@@ -658,8 +660,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.10.x-dev",
-                    "dev-develop": "3.0.x-dev"
+                    "dev-master": "4.0.x-dev"
                 }
             },
             "autoload": {
@@ -714,9 +715,23 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/dbal/issues",
-                "source": "https://github.com/doctrine/dbal/tree/2.10"
+                "source": "https://github.com/doctrine/dbal/tree/2.12.1"
             },
-            "time": "2020-01-04T12:56:21+00:00"
+            "funding": [
+                {
+                    "url": "https://www.doctrine-project.org/sponsorship.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/phpdoctrine",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fdbal",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-11-14T20:26:58+00:00"
         },
         {
             "name": "doctrine/event-manager",
@@ -3962,16 +3977,16 @@
         },
         {
             "name": "oat-sa/extension-tao-itemqti",
-            "version": "v29.6.0",
+            "version": "dev-php8-migration",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti.git",
-                "reference": "4d00b191cfefc347abc4d837d260a343f2a85b9e"
+                "reference": "7113cb6a76443bc436aa71b64ec93d10eae5f124"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/4d00b191cfefc347abc4d837d260a343f2a85b9e",
-                "reference": "4d00b191cfefc347abc4d837d260a343f2a85b9e",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/7113cb6a76443bc436aa71b64ec93d10eae5f124",
+                "reference": "7113cb6a76443bc436aa71b64ec93d10eae5f124",
                 "shasum": ""
             },
             "require": {
@@ -4047,9 +4062,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/v29.6.0"
+                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/php8-migration"
             },
-            "time": "2022-07-01T06:17:38+00:00"
+            "time": "2022-07-05T13:04:45+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pci",
@@ -5260,19 +5275,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/generis.git",
-                "reference": "64814603b6e454ec38034aa796648b5cbbe06d88"
+                "reference": "4faaa31805322360c530061b8a007ca984f8123c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/generis/zipball/64814603b6e454ec38034aa796648b5cbbe06d88",
-                "reference": "64814603b6e454ec38034aa796648b5cbbe06d88",
+                "url": "https://api.github.com/repos/oat-sa/generis/zipball/4faaa31805322360c530061b8a007ca984f8123c",
+                "reference": "4faaa31805322360c530061b8a007ca984f8123c",
                 "shasum": ""
             },
             "require": {
                 "clearfw/clearfw": "~1.2.0",
                 "composer-runtime-api": "^2.0",
                 "doctrine/annotations": "~1.6.0",
-                "doctrine/dbal": "2.10.1",
+                "doctrine/dbal": "2.12.*",
                 "easyrdf/easyrdf": "^1.1",
                 "ext-pdo": "*",
                 "fluent/logger": "^1.0.1",
@@ -5371,7 +5386,7 @@
                 "issues": "http://forge.taotesting.com",
                 "source": "https://github.com/oat-sa/generis/tree/php8-migration"
             },
-            "time": "2022-07-05T08:47:05+00:00"
+            "time": "2022-07-05T12:50:03+00:00"
         },
         {
             "name": "oat-sa/jig",
@@ -9602,6 +9617,12 @@
             "alias_normalized": "7.7.0.0"
         },
         {
+            "package": "oat-sa/extension-tao-itemqti",
+            "version": "dev-php8-migration",
+            "alias": "29.6.0",
+            "alias_normalized": "29.6.0.0"
+        },
+        {
             "package": "oat-sa/extension-tao-task-queue",
             "version": "dev-php8-migration",
             "alias": "6.6.1",
@@ -9631,6 +9652,7 @@
         "oat-sa/generis": 20,
         "oat-sa/tao-core": 20,
         "oat-sa/extension-tao-dac-simple": 20,
+        "oat-sa/extension-tao-itemqti": 20,
         "oat-sa/extension-tao-testqti": 20,
         "oat-sa/extension-tao-task-queue": 20
     },
