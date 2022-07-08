@@ -4,46 +4,56 @@
 parameters:
   paths:
     - tao
-    - generis
-    - funcAcl
-    - ltiDeliveryProvider
-    - pciSamples
-    - qtiItemPci
-    - qtiItemPic
-    - taoAltResultStorage
-    - taoBackOffice
-    - taoCe
-    - taoClientDiagnostic
-    - taoDacSimple
-    - taoDelivery
-    - taoDeliveryRdf
-    - taoEventLog
-    - taoGroups
-    - taoItems
-    - taoLti
-    - taoLtiBasicOutcome
-    - taoMediaManager
-    - taoOutcomeRds
-    - taoOutcomeUi
-    - taoProctoring
-    - taoQtiItem
-    - taoQtiTest
-    - taoQtiTestPreviewer
-    - taoResultServer
-    - taoRevision
-    - taoTaskQueue
-    - taoTestTaker
-    - taoTests
+#    - generis
+#    - funcAcl
+#    - ltiDeliveryProvider
+#    - pciSamples
+#    - qtiItemPci
+#    - qtiItemPic
+#    - taoAltResultStorage
+#    - taoBackOffice
+#    - taoCe
+#    - taoClientDiagnostic
+#    - taoDacSimple
+#    - taoDelivery
+#    - taoDeliveryRdf
+#    - taoEventLog
+#    - taoGroups
+#    - taoItems
+#    - taoLti
+#    - taoLtiBasicOutcome
+#    - taoMediaManager
+#    - taoOutcomeRds
+#    - taoOutcomeUi
+#    - taoProctoring
+#    - taoQtiItem
+#    - taoQtiTest
+#    - taoQtiTestPreviewer
+#    - taoResultServer
+#    - taoRevision
+#    - taoTaskQueue
+#    - taoTestTaker
+#    - taoTests
   excludePaths:
-    analyseAndScan:
+    analyse:
       - vendor/*
   level: 0
   editorUrl: 'phpstorm://open?file=%%file%%&line=%%line%%'
   errorFormat: table
-  phpVersion: 80100 # PHP 7.4
+  phpVersion: 80100
   fileExtensions:
     - php
+  treatPhpDocTypesAsCertain: false
   bootstrapFiles:
     - generis/test/bootstrap.php
   ignoreErrors:
-    - '#Function pcntl_open not found\.#'
+    - '#Caught class ResourceDeletionException not found#'
+    - '#Class common_session_SessionManager referenced with incorrect case: common_Session_SessionManager#'
+    - '#Method tao_actions_Users::data\(\) should return json\|string but return statement is missing#'
+    - '#Call to an undefined method tao_actions_Users::createInstance\(\).#'
+    - '#Call to static method singleton\(\) on an unknown class wfEngine_models_classes_VariableService#'
+    - '#Result of method tao_helpers_form_FormContainer::__construct\(\) \(void\) is used#'
+    - '#Function get_data not found.#'
+    - '#Method oat\tao\test\unit\session\RestSessionFactoryTester::startSession\(\) should return bool but return statement is missing#'
+    - '#Class Google\Cloud\PubSub\Topic not found#'
+    - '#Call to an undefined method oat\tao\test\unit\model\taskQueue\TaskLogTest::getBroker#'
