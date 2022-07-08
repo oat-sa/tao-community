@@ -64,5 +64,8 @@
     "oat-sa/extension-tao-task-queue": "dev-php8-migration as 6.6.1",
     "oat-sa/extension-tao-testqti-previewer": "3.5.2"
   },
-  "description": "TAO is an Open Source e-Testing platform that empowers you to build, deliver, and share innovative and engaging assessments online – in any language or subject matter."
+  "description": "TAO is an Open Source e-Testing platform that empowers you to build, deliver, and share innovative and engaging assessments online – in any language or subject matter.",
+  "require-dev": {
+    "phpunit/phpunit": "^8.5"
+  }
 }

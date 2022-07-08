@@ -1,0 +1,49 @@
+#
+# vendor/bin/phpstan analyse --configuration=phpstan.neon tao --memory-limit=-1
+#
+parameters:
+  paths:
+    - tao
+    - generis
+    - funcAcl
+    - ltiDeliveryProvider
+    - pciSamples
+    - qtiItemPci
+    - qtiItemPic
+    - taoAltResultStorage
+    - taoBackOffice
+    - taoCe
+    - taoClientDiagnostic
+    - taoDacSimple
+    - taoDelivery
+    - taoDeliveryRdf
+    - taoEventLog
+    - taoGroups
+    - taoItems
+    - taoLti
+    - taoLtiBasicOutcome
+    - taoMediaManager
+    - taoOutcomeRds
+    - taoOutcomeUi
+    - taoProctoring
+    - taoQtiItem
+    - taoQtiTest
+    - taoQtiTestPreviewer
+    - taoResultServer
+    - taoRevision
+    - taoTaskQueue
+    - taoTestTaker
+    - taoTests
+  excludePaths:
+    analyseAndScan:
+      - vendor/*
+  level: 0
+  editorUrl: 'phpstorm://open?file=%%file%%&line=%%line%%'
+  errorFormat: table
+  phpVersion: 80100 # PHP 7.4
+  fileExtensions:
+    - php
+  bootstrapFiles:
+    - generis/test/bootstrap.php
+  ignoreErrors:
+    - '#Function pcntl_open not found\.#'
