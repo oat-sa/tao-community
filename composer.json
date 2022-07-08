@@ -49,7 +49,7 @@
     "oat-sa/extension-tao-outcomeui": "11.1.2",
     "oat-sa/extension-tao-outcomerds": "8.2.0",
     "oat-sa/extension-tao-outcomekeyvalue": "6.1.1",
-    "oat-sa/extension-tao-outcomelti": "5.0.2",
+    "oat-sa/extension-tao-outcomelti": "dev-php8-migration as 5.0.2",
     "oat-sa/extension-tao-delivery": "15.10.0",
     "oat-sa/extension-tao-delivery-rdf": "14.16.0",
     "oat-sa/extension-tao-lti": "15.8.2",
@@ -66,6 +66,9 @@
   },
   "description": "TAO is an Open Source e-Testing platform that empowers you to build, deliver, and share innovative and engaging assessments online – in any language or subject matter.",
   "require-dev": {
-    "phpunit/phpunit": "^8.5"
+    "phpunit/phpunit": "^8.5",
+    "phpstan/phpstan": "^1.8",
+    "squizlabs/php_codesniffer": "*",
+    "phpcompatibility/php-compatibility": "^9.3"
   }
 }
