@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2281341ceebcafe115a7a5e250563a75",
+    "content-hash": "7a84010d37d395c08a2eac677ea4a1e2",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -1595,51 +1595,6 @@
                 }
             ],
             "time": "2022-06-20T21:43:03+00:00"
-        },
-        {
-            "name": "imsglobal/lti",
-            "version": "3.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/IMSGlobal/LTI-Tool-Provider-Library-PHP.git",
-                "reference": "06b12f70c2803ee08da116bcda2951eefd411ac9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/IMSGlobal/LTI-Tool-Provider-Library-PHP/zipball/06b12f70c2803ee08da116bcda2951eefd411ac9",
-                "reference": "06b12f70c2803ee08da116bcda2951eefd411ac9",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.6.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "IMSGlobal\\LTI\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Stephen Vickers",
-                    "email": "svickers@imsglobal.org"
-                }
-            ],
-            "description": "LTI Tool Provider Library",
-            "homepage": "https://www.imsglobal.org/lti",
-            "keywords": [
-                "LTI"
-            ],
-            "support": {
-                "issues": "https://github.com/IMSGlobal/LTI-Tool-Provider-Library-PHP/issues",
-                "source": "https://github.com/IMSGlobal/LTI-Tool-Provider-Library-PHP/tree/3.0.2"
-            },
-            "abandoned": true,
-            "time": "2016-09-18T04:22:22+00:00"
         },
         {
             "name": "jtl-software/opsgenie-client",
@@ -3981,12 +3936,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti.git",
-                "reference": "7113cb6a76443bc436aa71b64ec93d10eae5f124"
+                "reference": "c5db47e1f7bad2f99a45bb18766b3d33a55d5825"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/7113cb6a76443bc436aa71b64ec93d10eae5f124",
-                "reference": "7113cb6a76443bc436aa71b64ec93d10eae5f124",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/c5db47e1f7bad2f99a45bb18766b3d33a55d5825",
+                "reference": "c5db47e1f7bad2f99a45bb18766b3d33a55d5825",
                 "shasum": ""
             },
             "require": {
@@ -4064,7 +4019,7 @@
                 "issues": "http://forge.taotesting.com",
                 "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/php8-migration"
             },
-            "time": "2022-07-05T13:04:45+00:00"
+            "time": "2022-07-08T11:15:38+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pci",
@@ -4557,16 +4512,16 @@
         },
         {
             "name": "oat-sa/extension-tao-outcomelti",
-            "version": "v5.0.2",
+            "version": "dev-php8-migration",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-outcomelti.git",
-                "reference": "f3d1981809684a01f1f79895c6d760e0c793c344"
+                "reference": "4257b3dd1f3329cd8ec424d8d630163cb2dd68bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-outcomelti/zipball/f3d1981809684a01f1f79895c6d760e0c793c344",
-                "reference": "f3d1981809684a01f1f79895c6d760e0c793c344",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-outcomelti/zipball/4257b3dd1f3329cd8ec424d8d630163cb2dd68bd",
+                "reference": "4257b3dd1f3329cd8ec424d8d630163cb2dd68bd",
                 "shasum": ""
             },
             "require": {
@@ -4628,9 +4583,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-outcomelti/tree/v5.0.2"
+                "source": "https://github.com/oat-sa/extension-tao-outcomelti/tree/php8-migration"
             },
-            "time": "2021-04-07T16:05:08+00:00"
+            "time": "2022-07-08T08:18:49+00:00"
         },
         {
             "name": "oat-sa/extension-tao-outcomerds",
@@ -5036,12 +4991,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "a502858b0d99ef0d27ebe6e5e2c668c04e65d731"
+                "reference": "091c5faedfb9a656214eec66e45b6809f8e0477d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/a502858b0d99ef0d27ebe6e5e2c668c04e65d731",
-                "reference": "a502858b0d99ef0d27ebe6e5e2c668c04e65d731",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/091c5faedfb9a656214eec66e45b6809f8e0477d",
+                "reference": "091c5faedfb9a656214eec66e45b6809f8e0477d",
                 "shasum": ""
             },
             "require": {
@@ -5125,7 +5080,7 @@
                 "issues": "http://forge.taotesting.com",
                 "source": "https://github.com/oat-sa/extension-tao-testqti/tree/php8-migration"
             },
-            "time": "2022-07-05T08:58:54+00:00"
+            "time": "2022-07-06T08:23:32+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
@@ -5275,12 +5230,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/generis.git",
-                "reference": "4faaa31805322360c530061b8a007ca984f8123c"
+                "reference": "1b695804272185dde0dae299d428805fe6b543e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/generis/zipball/4faaa31805322360c530061b8a007ca984f8123c",
-                "reference": "4faaa31805322360c530061b8a007ca984f8123c",
+                "url": "https://api.github.com/repos/oat-sa/generis/zipball/1b695804272185dde0dae299d428805fe6b543e8",
+                "reference": "1b695804272185dde0dae299d428805fe6b543e8",
                 "shasum": ""
             },
             "require": {
@@ -5386,7 +5341,49 @@
                 "issues": "http://forge.taotesting.com",
                 "source": "https://github.com/oat-sa/generis/tree/php8-migration"
             },
-            "time": "2022-07-05T12:50:03+00:00"
+            "time": "2022-07-08T06:30:50+00:00"
+        },
+        {
+            "name": "oat-sa/imsglobal-lti",
+            "version": "4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oat-sa/imsglobal-lti.git",
+                "reference": "128034ca9a36ef4ac2a846bbc43a7ae411f0dcd1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oat-sa/imsglobal-lti/zipball/128034ca9a36ef4ac2a846bbc43a7ae411f0dcd1",
+                "reference": "128034ca9a36ef4ac2a846bbc43a7ae411f0dcd1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4,<=8.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "IMSGlobal\\LTI\\": "src/"
+                }
+            },
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "homepage": "https://www.taotesting.com",
+                    "name": "Open Assessment Technologies S.A."
+                }
+            ],
+            "description": "LTI Tool Provider Library",
+            "homepage": "https://www.imsglobal.org/lti",
+            "keywords": [
+                "lti"
+            ],
+            "support": {
+                "source": "https://github.com/oat-sa/imsglobal-lti/tree/4.0.0"
+            },
+            "time": "2022-07-11T14:16:56+00:00"
         },
         {
             "name": "oat-sa/jig",
@@ -5862,12 +5859,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "04e62dfb3bbe32ea682bc61bab57f1bf2b5706bf"
+                "reference": "77c4c098d3b88e055ad1e4a953cea7136d247b04"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/04e62dfb3bbe32ea682bc61bab57f1bf2b5706bf",
-                "reference": "04e62dfb3bbe32ea682bc61bab57f1bf2b5706bf",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/77c4c098d3b88e055ad1e4a953cea7136d247b04",
+                "reference": "77c4c098d3b88e055ad1e4a953cea7136d247b04",
                 "shasum": ""
             },
             "require": {
@@ -5881,13 +5878,13 @@
                 "flow/jsonpath": "~0.5",
                 "guzzlehttp/guzzle": "^6.5.7",
                 "guzzlehttp/psr7": "^1.8.4",
-                "imsglobal/lti": "^3.0",
                 "jtl-software/opsgenie-client": "2.0.2",
                 "justinrainbow/json-schema": "5.2.1",
                 "league/csv": "^9.6",
                 "league/openapi-psr7-validator": "0.9",
                 "oat-sa/composer-npm-bridge": "~0.4.2||dev-master",
                 "oat-sa/generis": ">=15.20.3",
+                "oat-sa/imsglobal-lti": ">=4.0.0",
                 "oat-sa/jig": "~0.1",
                 "oat-sa/oatbox-extension-installer": "~1.1||dev-master",
                 "paragonie/random_compat": "^2.0",
@@ -5970,7 +5967,7 @@
                 "issues": "https://github.com/oat-sa/tao-core/issues",
                 "source": "https://github.com/oat-sa/tao-core/tree/php8-migration"
             },
-            "time": "2022-07-05T15:51:09+00:00"
+            "time": "2022-07-11T14:35:18+00:00"
         },
         {
             "name": "ocramius/proxy-manager",
@@ -11274,6 +11271,12 @@
             "alias_normalized": "29.6.0.0"
         },
         {
+            "package": "oat-sa/extension-tao-outcomelti",
+            "version": "dev-php8-migration",
+            "alias": "5.0.2",
+            "alias_normalized": "5.0.2.0"
+        },
+        {
             "package": "oat-sa/extension-tao-task-queue",
             "version": "dev-php8-migration",
             "alias": "6.6.1",
@@ -11305,6 +11308,7 @@
         "oat-sa/extension-tao-dac-simple": 20,
         "oat-sa/extension-tao-itemqti": 20,
         "oat-sa/extension-tao-testqti": 20,
+        "oat-sa/extension-tao-outcomelti": 20,
         "oat-sa/extension-tao-task-queue": 20
     },
     "prefer-stable": true,
