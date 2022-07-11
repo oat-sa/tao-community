@@ -75,4 +75,16 @@ parameters:
     - '#Instantiated class core_kernel_persistence_Switcher not found#'
     - '#Unsafe usage of new static\(\)#'
     - '#Instantiated class PHPMailer not found#'
-    - '#Caught class oat\tao\model\messaging\transportStrategy\phpmailerException not found#'
+    - '#Caught class oat\\tao\\model\\messaging\\transportStrategy\\phpmailerException not found#'
+    - '#Instantiated class tao_models_classes_Service is abstract#'
+    - '#Parameter \$pubSubClient of method oat\\tao\\model\\Observer\\GCP\\PubSubObserver::__construct\(\) has invalid type Google\\Cloud\\PubSub\\PubSubClient#'
+    - '#Access to an undefined property oat\\tao\\model\\controllerMap\\RequiresRightTag::\$right#'
+    - '#Caught class oat\\tao\\elasticsearch\\Exception\\FailToUpdatePropertiesException not found#'
+    - '#Method oat\\tao\\model\\service\\InjectionAwareService::iterateParameters\(\) should return iterable but return statement is missing#'
+    - '#Deprecated in PHP 8\.0\: Required parameter \$xml_data follows optional parameter \$data\.#'
+    - '#(Access to undefined constant static\(oat\\tao\\model\\taskQueue\\Queue\\Broker\\AbstractQueueBroker\)::ID).*#'
+    - '#(is not covariant with tentative return type).*#'
+    - '#(but return statement is missing).*#'
+    #
+    # Generis
+    #
