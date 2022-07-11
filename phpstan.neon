@@ -4,36 +4,36 @@
 parameters:
   paths:
     - tao
-    - generis
-    - funcAcl
-    - ltiDeliveryProvider
-    - pciSamples
-    - qtiItemPci
-    - qtiItemPic
-    - taoAltResultStorage
-    - taoBackOffice
-    - taoCe
-    - taoClientDiagnostic
-    - taoDacSimple
-    - taoDelivery
-    - taoDeliveryRdf
-    - taoEventLog
-    - taoGroups
-    - taoItems
-    - taoLti
-    - taoLtiBasicOutcome
-    - taoMediaManager
-    - taoOutcomeRds
-    - taoOutcomeUi
-    - taoProctoring
-    - taoQtiItem
-    - taoQtiTest
-    - taoQtiTestPreviewer
-    - taoResultServer
-    - taoRevision
-    - taoTaskQueue
-    - taoTestTaker
-    - taoTests
+#    - generis
+#    - funcAcl
+#    - ltiDeliveryProvider
+#    - pciSamples
+#    - qtiItemPci
+#    - qtiItemPic
+#    - taoAltResultStorage
+#    - taoBackOffice
+#    - taoCe
+#    - taoClientDiagnostic
+#    - taoDacSimple
+#    - taoDelivery
+#    - taoDeliveryRdf
+#    - taoEventLog
+#    - taoGroups
+#    - taoItems
+#    - taoLti
+#    - taoLtiBasicOutcome
+#    - taoMediaManager
+#    - taoOutcomeRds
+#    - taoOutcomeUi
+#    - taoProctoring
+#    - taoQtiItem
+#    - taoQtiTest
+#    - taoQtiTestPreviewer
+#    - taoResultServer
+#    - taoRevision
+#    - taoTaskQueue
+#    - taoTestTaker
+#    - taoTests
   excludePaths:
     analyse:
       - vendor/*
@@ -47,6 +47,9 @@ parameters:
   bootstrapFiles:
     - generis/test/bootstrap.php
   ignoreErrors:
+    #
+    # Tao Core
+    #
     - '#Caught class ResourceDeletionException not found#'
     - '#Class common_session_SessionManager referenced with incorrect case: common_Session_SessionManager#'
     - '#Method tao_actions_Users::data\(\) should return json\|string but return statement is missing#'
@@ -71,3 +74,5 @@ parameters:
     - '#Class tao_models_classes_fsAccess_TokenAccessProvider not found#'
     - '#Instantiated class core_kernel_persistence_Switcher not found#'
     - '#Unsafe usage of new static\(\)#'
+    - '#Instantiated class PHPMailer not found#'
+    - '#Caught class oat\tao\model\messaging\transportStrategy\phpmailerException not found#'
