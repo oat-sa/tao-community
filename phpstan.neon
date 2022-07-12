@@ -33,7 +33,7 @@ parameters:
     - taoRevision
     - taoTaskQueue
     - taoTestTaker
-    - taoTests
+    - taoTests #covered
   excludePaths:
     analyse:
       - vendor/*
@@ -316,3 +316,7 @@ parameters:
     - '#Undefined variable: \$e#'
     - '#Return type iterable of method oat\\taoQtiTest\\models\\runner\\config\\Business\\Domain\\OptionCollection::getIterator\(\) is not covariant with tentative return type Traversable of method IteratorAggregate::getIterator\(\)\.#'
     - '#Instantiated class qtism\\data\\storage\\xml\\marshalling\\MarshallerFactory is abstract\.#'
+    #
+    # taoTests
+    #
+    - '#Undefined variable: \$unserializedFeature#'
