@@ -31,8 +31,8 @@ parameters:
     - taoQtiTestPreviewer #covered
     - taoResultServer
     - taoRevision
-    - taoTaskQueue
-    - taoTestTaker
+    - taoTaskQueue #covered
+    - taoTestTaker #covered
     - taoTests #covered
   excludePaths:
     analyse:
@@ -93,6 +93,17 @@ parameters:
       #
       - taoQtiItem/model/import/Decorator/CvsToQtiTemplateDecorator.php
       - taoQtiItem/model/import/Report/ReportBuilder.php
+      #
+      # taoTaskQueue
+      #
+      - taoTaskQueue/model/Queue.php
+      - taoTaskQueue/model/QueueBroker/InMemoryQueueBroker.php
+      - taoTaskQueue/model/QueueBroker/RdsQueueBroker.php
+      - taoTaskQueue/model/QueueBroker/SqsQueueBroker.php
+      - taoTaskQueue/model/QueueDispatcher.php
+      - taoTaskQueue/model/TaskLog/DataTablePayload.php
+      - taoTaskQueue/model/TaskLog/Decorator/TaskLogCollectionDecorator.php
+      - taoTaskQueue/model/TaskLog/TaskLogCollection.php
       #
       # taoQtiTest
       #
@@ -321,12 +332,28 @@ parameters:
     - '#Return type iterable of method oat\\taoQtiTest\\models\\runner\\config\\Business\\Domain\\OptionCollection::getIterator\(\) is not covariant with tentative return type Traversable of method IteratorAggregate::getIterator\(\)\.#'
     - '#Instantiated class qtism\\data\\storage\\xml\\marshalling\\MarshallerFactory is abstract\.#'
     #
+    # taoTaskQueue
+    #
+    - '#Return type mixed of method oat\\taoTaskQueue\\model\\Queue::count\(\) is not covariant with tentative return type int of method Countable::count\(\)\.#'
+    - '#Return type mixed of method oat\\taoTaskQueue\\model\\QueueBroker\\InMemoryQueueBroker::count\(\) is not covariant with tentative return type int of method Countable::count\(\)\.#'
+    - '#Return type mixed of method oat\\taoTaskQueue\\model\\QueueBroker\\RdsQueueBroker::count\(\) is not covariant with tentative return type int of method Countable::count\(\)\.#'
+    - '#Caught class Aws\\Exception\\AwsException not found\.#'
+    - '#Return type mixed of method oat\\taoTaskQueue\\model\\QueueBroker\\SqsQueueBroker::count\(\) is not covariant with tentative return type int of method Countable::count\(\)\.#'
+    - '#Return type mixed of method oat\\taoTaskQueue\\model\\QueueDispatcher::count\(\) is not covariant with tentative return type int of method Countable::count\(\)\.#'
+    - '#Return type mixed of method oat\\taoTaskQueue\\model\\TaskLog\\DataTablePayload::count\(\) is not covariant with tentative return type int of method Countable::count\(\)\.#'
+    - '#Return type mixed of method oat\\taoTaskQueue\\model\\TaskLog\\Decorator\\TaskLogCollectionDecorator::getIterator\(\) is not covariant with tentative return type Traversable of method IteratorAggregate::getIterator\(\)\.#'
+    - '#Return type mixed of method oat\\taoTaskQueue\\model\\TaskLog\\Decorator\\TaskLogCollectionDecorator::count\(\) is not covariant with tentative return type int of method Countable::count\(\)\.#'
+    - '#Return type mixed of method oat\\taoTaskQueue\\model\\TaskLog\\TaskLogCollection::count\(\) is not covariant with tentative return type int of method Countable::count\(\)\.#'
+    - '#Access to constant SERVICE_ID on an unknown class oat\\Taskqueue\\Persistence\\RdsQueue\.#'
+    - '#Call to an undefined method oat\\taoTaskQueue\\test\\model\\TaskLogActionTraitTest::*#'
+    - '#Call to an undefined method oat\\taoTaskQueue\\test\\model\\TaskLogBroker\\RdsTaskLogBrokerTest::*#'
+    #
     # taoTestTaker
+    #
     - '#Instantiated class oat\\taoTestTaker\\actions\\common_exception_IsAjaxAction not found\.#'
     - '#Class Bootstrap referenced with incorrect case: BootStrap\.#'
     - '#Caught class oat\\taoTestTaker\\models\\common_Exception not found\.#'
     - '#Deprecated in PHP 8\.0: Required parameter \$value follows optional parameter \$valueType\.#'
-    #
     #
     # taoTests
     #
