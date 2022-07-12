@@ -27,7 +27,7 @@ parameters:
     - taoOutcomeUi #covered
     - taoProctoring #covered
     - taoQtiItem #covered
-    - taoQtiTest
+    - taoQtiTest #covered
     - taoQtiTestPreviewer
     - taoResultServer
     - taoRevision
@@ -93,6 +93,11 @@ parameters:
       #
       - taoQtiItem/model/import/Decorator/CvsToQtiTemplateDecorator.php
       - taoQtiItem/model/import/Report/ReportBuilder.php
+      #
+      # taoQtiTest
+      #
+      - taoQtiTest/helpers/class.TestSession.php
+      - taoQtiTest/models/classes/runner/config/Business/Domain/OptionCollection.php
   level: 0
   editorUrl: 'phpstorm://open?file=%%file%%&line=%%line%%'
   errorFormat: table
@@ -303,3 +308,11 @@ parameters:
     - '#Access to constant MAP_RESPONSE_POINT on an unknown class oat\\taoQtiItem\\model\\qti\\response\\taoQTI_models_classes_Matching_Matching\.#'
     - '#Class oat\\taoQtiItem\\model\\qti\\asset\\handler\\LocalAssetHandler does not have a constructor and must be instantiated without any parameters\.#'
     - '#Used function Webmozart\\Assert\\Tests\\StaticAnalysis\\true not found\.#'
+    #
+    # taoQtiTest
+    #
+    - '#Access to constant SERVICE_ID on an unknown class oat\\taoBlueprints\\model\\TestSectionLinkService\.#'
+    - '#Return type mixed of method taoQtiTest_helpers_TestSession::rewind\(\) is not covariant with tentative return type void of method Iterator::rewind\(\)\.#'
+    - '#Undefined variable: \$e#'
+    - '#Return type iterable of method oat\\taoQtiTest\\models\\runner\\config\\Business\\Domain\\OptionCollection::getIterator\(\) is not covariant with tentative return type Traversable of method IteratorAggregate::getIterator\(\)\.#'
+    - '#Instantiated class qtism\\data\\storage\\xml\\marshalling\\MarshallerFactory is abstract\.#'
