@@ -22,9 +22,9 @@ parameters:
     - taoItems #covered
     - taoLti #covered
     - taoLtiBasicOutcome #covered
-    - taoMediaManager
-    - taoOutcomeRds
-    - taoOutcomeUi
+    - taoMediaManager #covered
+    - taoOutcomeRds #covered
+    - taoOutcomeUi #covered
     - taoProctoring
     - taoQtiItem
     - taoQtiTest
@@ -61,6 +61,10 @@ parameters:
       # taoLtiBasicOutcome
       #
       - taoLtiBasicOutcome/includes/ims-blti/* # This entire folder seems not to be used at all
+      #
+      # taoOutcomeUi
+      #
+      - taoOutcomeUi/model/search/ResultIndexIterator.php
   level: 0
   editorUrl: 'phpstorm://open?file=%%file%%&line=%%line%%'
   errorFormat: table
@@ -175,3 +179,16 @@ parameters:
     - '#Return type mixed of method oat\\taoLti\\models\\classes\\LtiProvider\\ConfigurableLtiProviderRepository::count\(\) is not covariant with tentative return type int of method Countable::count\(\)\.#'
     - '#Return type mixed of method oat\\taoLti\\models\\classes\\LtiProvider\\RdfLtiProviderRepository::count\(\) is not covariant with tentative return type int of method Countable::count\(\)\.#'
     - '#Return type mixed of method oat\\taoLti\\models\\classes\\Platform\\Repository\\RdfLtiPlatformRepository::count\(\) is not covariant with tentative return type int of method Countable::count\(\)\.#'
+    #
+    # taoMediaManager
+    #
+    - '#Call to static method setup\(\) on an unknown class org\\bovigo\\vfs\\vfsStream\.#'
+    - '#Instantiated class oat\\taoMediaManager\\scripts\\core_kernel_classes_Propert not found\.#'
+    #
+    # taoOutcomeUi
+    #
+    - '#Call to an undefined static method tao_actions_CommonModule::getTreeOptionsFromRequest\(\)\.#'
+    - '#Call to an undefined method oat\\taoOutcomeUi\\controller\\Results::getCurrentClass\(\)\.#'
+    - '#Return type mixed of method oat\\taoOutcomeUi\\model\\search\\ResultIndexIterator::rewind\(\) is not covariant with tentative return type void of method Iterator::rewind\(\).#'
+    - '#Return type mixed of method oat\\taoOutcomeUi\\model\\search\\ResultIndexIterator::next\(\) is not covariant with tentative return type void of method Iterator::next\(\).#'
+    - '#Return type mixed of method oat\\taoOutcomeUi\\model\\search\\ResultIndexIterator::valid\(\) is not covariant with tentative return type bool of method Iterator::valid\(\).#'
