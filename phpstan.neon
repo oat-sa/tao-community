@@ -4,7 +4,7 @@
 parameters:
   paths:
     - tao #covered
-    - generis
+    - generis #covered
     - funcAcl #covered
     - ltiDeliveryProvider #covered
     - pciSamples #covered
@@ -46,6 +46,25 @@ parameters:
       - tao/helpers/DateIntervalMS.php
       - tao/models/classes/session/Business/Domain/SessionCookieAttributeCollection.php
       - tao/models/classes/service/InjectionAwareService.php
+      #
+      # Generis
+      #
+      - generis/common/class.Collection.php
+      - generis/common/oatbox/filesystem/Directory.php
+      - generis/common/oatbox/reporting/RecursiveReportIterator.php
+      - generis/common/oatbox/task/Queue.php
+      - generis/common/persistence/sql/SchemaCollection.php
+      - generis/common/persistence/sql/class.QueryIterator.php
+      - generis/core/kernel/classes/class.ClassIterator.php
+      - generis/core/kernel/classes/class.ResourceIterator.php
+      - generis/common/persistence/sql/trait.MultipleOperations.php
+      - generis/core/kernel/persistence/file/FileRdf.php
+      - generis/core/kernel/persistence/smoothsql/class.SmoothRdf.php
+      - generis/core/kernel/persistence/wrapper/RdfWrapper.php
+      - generis/core/resource/ResourceCollection.php
+      - generis/common/persistence/class.Persistence.php
+      - generis/common/session/class.RestrictedSession.php
+      - generis/common/test/class.TestUserSession.php
       #
       # taoEventLog
       #
@@ -126,6 +145,53 @@ parameters:
     #
     # Generis
     #
+    - '#Instantiated class common_cache_SingletonCache is abstract\.#'
+    - '#Return type mixed of method common_Collection::count\(\) is not covariant with tentative return type int of method Countable::count\(\)\.#'
+    - '#Return type mixed of method common_Collection::getIterator\(\) is not covariant with tentative return type Traversable of method IteratorAggregate::getIterator\(\)\.#'
+    - '#Class common_Object does not have a constructor and must be instantiated without any parameters\.#'
+    - '#Class common_Logger referenced with incorrect case: common_logger\.#'
+    - '#Caught class common_ext_ManifestException not found\.#'
+    - '#Return type mixed of method oat\\oatbox\\filesystem\\Directory::getIterator\(\) is not covariant with tentative return type Traversable of method IteratorAggregate::getIterator\(\)\.#'
+    - '#Instantiated class FileNotFoundException not found\.#'
+    - '#Instantiated class Google\\Cloud\\Storage\\StorageClient not found\.#'
+    - '#Instantiated class Superbalist\\Flysystem\\GoogleStorage\\GoogleStorageAdapter not found\.#'
+    - '#Return type mixed of method oat\\oatbox\\reporting\\RecursiveReportIterator::getChildren\(\) is not covariant with tentative return type RecursiveIterator\|null of method RecursiveIterator::getChildren\(\)\.#'
+    - '#Return type mixed of method oat\\oatbox\\filesystem\\Directory::getIterator\(\) is not covariant with tentative return type Traversable of method IteratorAggregate::getIterator\(\)\.#'
+    - '#Return type mixed of method oat\\oatbox\\reporting\\RecursiveReportIterator::getChildren\(\) is not covariant with tentative return type RecursiveIterator\|null of method RecursiveIterator::getChildren\(\)\.#'
+    - '#Instantiated class oat\\oatbox\\task\\AbstractTask is abstract\.#'
+    - '#Return type mixed of method oat\\oatbox\\task\\Queue::getIterator\(\) is not covariant with tentative return type Traversable of method IteratorAggregate::getIterator\(\)\.#'
+    - '#Return type mixed of method oat\\generis\\persistence\\sql\\SchemaCollection::getIterator\(\) is not covariant with tentative return type Traversable of method IteratorAggregate::getIterator\(\)\.#'
+    - '#Return type mixed of method common_persistence_sql_QueryIterator::rewind\(\) is not covariant with tentative return type void of method Iterator::rewind\(\)\.#'
+    - '#Return type mixed of method common_persistence_sql_QueryIterator::next\(\) is not covariant with tentative return type void of method Iterator::next\(\)\.#'
+    - '#Return type mixed of method common_persistence_sql_QueryIterator::valid\(\) is not covariant with tentative return type bool of method Iterator::valid\(\)\.#'
+    - '#Method common_test_TestUserSession::getContexts\(\) should return array\<oat\\oatbox\\session\\SessionContext\> but return statement is missing\.#'
+    - '#Return type mixed of method core_kernel_classes_ClassIterator::rewind\(\) is not covariant with tentative return type void of method Iterator::rewind\(\)\.#'
+    - '#Return type mixed of method core_kernel_classes_ClassIterator::next\(\) is not covariant with tentative return type void of method Iterator::next\(\)\.#'
+    - '#Return type mixed of method core_kernel_classes_ClassIterator::valid\(\) is not covariant with tentative return type bool of method Iterator::valid\(\)\.#'
+    - '#Cannot use \[\] for reading\.#'
+    - '#Non-abstract class oat\\generis\\model\\kernel\\persistence\\file\\FileRdf contains abstract method addTripleCollection\(\) from interface oat\\generis\\model\\data\\RdfInterface\.#'
+    - '#Return type mixed of method oat\\generis\\model\\kernel\\persistence\\file\\FileRdf::getIterator\(\) is not covariant with tentative return type Traversable of method IteratorAggregate::getIterator\(\)\.#'
+    - '#Class core_kernel_persistence_smoothsql_Property constructor invoked with 0 parameters, 1 required\.#'
+    - '#Return type mixed of method core_kernel_persistence_smoothsql_SmoothRdf::getIterator\(\) is not covariant with tentative return type Traversable of method IteratorAggregate::getIterator\(\)\.#'
+    - '#Non-abstract class oat\\generis\\model\\kernel\\persistence\\wrapper\\RdfWrapper contains abstract method addTripleCollection\(\) from interface oat\\generis\\model\\data\\RdfInterface\.#'
+    - '#Return type mixed of method oat\\generis\\model\\kernel\\persistence\\wrapper\\RdfWrapper::getIterator\(\) is not covariant with tentative return type Traversable of method IteratorAggregate::getIterator\(\)\.#'
+    - '#Return type mixed of method oat\\generis\\model\\resource\\ResourceCollection::count\(\) is not covariant with tentative return type int of method Countable::count\(\)\.#'
+    - '#Return type mixed of method oat\\generis\\model\\resource\\ResourceCollection::next\(\) is not covariant with tentative return type void of method Iterator::next\(\)\.#'
+    - '#Return type mixed of method oat\\generis\\model\\resource\\ResourceCollection::valid\(\) is not covariant with tentative return type bool of method Iterator::valid\(\)\.#'
+    - '#Return type mixed of method oat\\generis\\model\\resource\\ResourceCollection::rewind\(\) is not covariant with tentative return type void of method Iterator::rewind\(\)\.#'
+    - '#Class oat\\generis\\model\\resource\\exception\\ResourceDeletionException referenced with incorrect case: oat\\generis\\model\\resource\\Exception\\ResourceDeletionException\.#'
+    - '#Deprecated in PHP 8\.0: Required parameter \$driver follows optional parameter \$params\.#'
+    - '#Class oat\\taoWorkspace\\model\\generis\\WrapperModel not found\.#'
+    - '#Call to static method wrap\(\) on an unknown class oat\\taoWorkspace\\model\\generis\\WrapperModel\.#'
+    - '#Access to undefined constant core_kernel_persistence_smoothsql_SmoothModel::OPTION_CACHE_SERVICE\.#'
+    - '#Call to an undefined static method oat\\generis\\test\\TestCase::after\(\)\.#'
+    - '#Access to constant SERVICE_ID on an unknown class oat\\generis\\test\\_common_persistence_Manager\.#'
+    - '#Instantiated class oat\\generis\\test\\common_exception_Error not found\.#'
+    - '#Call to static method url\(\) on an unknown class org\\bovigo\\vfs\\vfsStream\.#'
+    - '#Instantiated class common_persistence_sql_pdo_sqlite_Driver not found\.#'
+    - '#Call to an undefined method oat\\generis\\test\\unit\\ConfigurationTest::pass\(\)\.#'
+    - '#Class UserReadableException not found\.#'
+    - '#Call to an undefined method common_session_BasicSession::setOriginalServiceLocator\(\)\.#'
     #
     # ltiDeliveryProvider
     #
