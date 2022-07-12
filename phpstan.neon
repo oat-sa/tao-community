@@ -1,42 +1,51 @@
 #
-# vendor/bin/phpstan analyse --configuration=phpstan.neon tao --memory-limit=-1
+# rm -rf /tmp/phpstan && vendor/bin/phpstan analyse --configuration=phpstan.neon tao --memory-limit=-1
 #
 parameters:
   paths:
     - tao
-#    - generis
-#    - funcAcl
-#    - ltiDeliveryProvider
-#    - pciSamples
-#    - qtiItemPci
-#    - qtiItemPic
-#    - taoAltResultStorage
-#    - taoBackOffice
-#    - taoCe
-#    - taoClientDiagnostic
-#    - taoDacSimple
-#    - taoDelivery
-#    - taoDeliveryRdf
-#    - taoEventLog
-#    - taoGroups
-#    - taoItems
-#    - taoLti
-#    - taoLtiBasicOutcome
-#    - taoMediaManager
-#    - taoOutcomeRds
-#    - taoOutcomeUi
-#    - taoProctoring
-#    - taoQtiItem
-#    - taoQtiTest
-#    - taoQtiTestPreviewer
-#    - taoResultServer
-#    - taoRevision
-#    - taoTaskQueue
-#    - taoTestTaker
-#    - taoTests
+    - generis
+    - funcAcl
+    - ltiDeliveryProvider
+    - pciSamples
+    - qtiItemPci
+    - qtiItemPic
+    - taoAltResultStorage
+    - taoBackOffice
+    - taoCe
+    - taoClientDiagnostic
+    - taoDacSimple
+    - taoDelivery
+    - taoDeliveryRdf
+    - taoEventLog
+    - taoGroups
+    - taoItems
+    - taoLti
+    - taoLtiBasicOutcome
+    - taoMediaManager
+    - taoOutcomeRds
+    - taoOutcomeUi
+    - taoProctoring
+    - taoQtiItem
+    - taoQtiTest
+    - taoQtiTestPreviewer
+    - taoResultServer
+    - taoRevision
+    - taoTaskQueue
+    - taoTestTaker
+    - taoTests
   excludePaths:
     analyse:
       - vendor/*
+      #
+      # Tao Core
+      #
+      - tao/helpers/class.Xml.php
+      - tao/models/classes/taskQueue/Queue.php
+      - tao/helpers/translation/rdf/RdfPack.php
+      - tao/helpers/DateIntervalMS.php
+      - tao/models/classes/session/Business/Domain/SessionCookieAttributeCollection.php
+      - tao/models/classes/service/InjectionAwareService.php
   level: 0
   editorUrl: 'phpstorm://open?file=%%file%%&line=%%line%%'
   errorFormat: table
@@ -80,8 +89,8 @@ parameters:
     - '#Parameter \$pubSubClient of method oat\\tao\\model\\Observer\\GCP\\PubSubObserver::__construct\(\) has invalid type Google\\Cloud\\PubSub\\PubSubClient#'
     - '#Access to an undefined property oat\\tao\\model\\controllerMap\\RequiresRightTag::\$right#'
     - '#Caught class oat\\tao\\elasticsearch\\Exception\\FailToUpdatePropertiesException not found#'
-    - '#Method oat\\tao\\model\\service\\InjectionAwareService::iterateParameters\(\) should return iterable but return statement is missing#'
-    - '#Deprecated in PHP 8\.0\: Required parameter \$xml_data follows optional parameter \$data\.#'
+    - '#Method oat\\tao\\model\\service\\InjectionAwareService::iterateParameters\(\) should return iterable but return statement is missing\.#'
+    - '#Deprecated in PHP 8\.0: Required parameter \$xml_data follows optional parameter \$data\.#'
     - '#(Access to undefined constant static\(oat\\tao\\model\\taskQueue\\Queue\\Broker\\AbstractQueueBroker\)::ID).*#'
     - '#(is not covariant with tentative return type).*#'
     - '#(but return statement is missing).*#'
