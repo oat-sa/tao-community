@@ -3,20 +3,20 @@
 #
 parameters:
   paths:
-    - tao
+    - tao #covered
     - generis
-    - funcAcl
-    - ltiDeliveryProvider
-    - pciSamples
-    - qtiItemPci
-    - qtiItemPic
-    - taoAltResultStorage
-    - taoBackOffice
-    - taoCe
-    - taoClientDiagnostic
-    - taoDacSimple
-    - taoDelivery
-    - taoDeliveryRdf
+    - funcAcl #covered
+    - ltiDeliveryProvider #covered
+    - pciSamples #covered
+    - qtiItemPci #covered
+    - qtiItemPic #covered
+    - taoAltResultStorage #covered
+    - taoBackOffice #covered
+    - taoCe #covered
+    - taoClientDiagnostic #covered
+    - taoDacSimple #covered
+    - taoDelivery #covered
+    - taoDeliveryRdf #covered
     - taoEventLog
     - taoGroups
     - taoItems
@@ -112,3 +112,25 @@ parameters:
     - '#Access to an undefined property oat\\qtiItemPci\\model\\portableElement\\export\\ImsPciExporter::\$qtiItemExporter\.#'
     - '#Access to an undefined property oat\\qtiItemPci\\model\\portableElement\\export\\OatPciExporter::\$qtiItemExporter\.#'
     - '#Array has 2 duplicate keys with value#'
+    #
+    # qtiItemPic
+    #
+    - '#Access to an undefined property#'
+    #
+    # taoAltResultStorage
+    #
+    - '#Instantiated class taoResultServer_models_classes_ResultServerStateFull not found\.#'
+    #
+    # taoBackOffice
+    #
+    - '#Cannot unset offset string on array\{\}\.#'
+    #
+    # taoDelivery
+    #
+    - '#has invalid type Aws\\Result#'
+    #
+    # taoDeliveryRdf
+    #
+    - '#taoCampaign_helpers_Campaign#'
+    - '#Parameter \$deliveryClass of method oat\\taoDeliveryRdf\\model\\DeliveryAssemblyService::createAssemblyFromServiceCall\(\) has invalid type oat\\taoDeliveryRdf\\model\\core_kernel_classes_Class\.#'
+    - '#Instantiated class oat\\taoDeliveryRdf\\model\\import\\Assembler not found\.#'
