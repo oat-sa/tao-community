@@ -94,6 +94,7 @@ parameters:
     - '#(Access to undefined constant static\(oat\\tao\\model\\taskQueue\\Queue\\Broker\\AbstractQueueBroker\)::ID).*#'
     - '#(is not covariant with tentative return type).*#'
     - '#(but return statement is missing).*#'
+    - '#Instantiated class BootStrap not found\.#'
     #
     # Generis
     #
@@ -104,3 +105,10 @@ parameters:
     - '#Access to constant SERVICE_ID on an unknown class oat\\taoOauth\\model\\Oauth2Service\.#'
     - '#Access to an undefined property oat\\ltiDeliveryProvider\\test\\integration\\model\\requestLog\\rds\\LtiResultAliasStorageTest::\$deliveryExecutionId\.#'
     - '#Instantiated class Bootstrap not found\.#'
+    #
+    # qtiItemPci
+    #
+    - '#Instantiated class oat\\qtiItemPci\\migrations\\IrreversibleMigration not found\.#'
+    - '#Access to an undefined property oat\\qtiItemPci\\model\\portableElement\\export\\ImsPciExporter::\$qtiItemExporter\.#'
+    - '#Access to an undefined property oat\\qtiItemPci\\model\\portableElement\\export\\OatPciExporter::\$qtiItemExporter\.#'
+    - '#Array has 2 duplicate keys with value#'
