@@ -98,6 +98,10 @@ parameters:
       #
       - taoQtiTest/helpers/class.TestSession.php
       - taoQtiTest/models/classes/runner/config/Business/Domain/OptionCollection.php
+      #
+      # taoTestTaker
+      #
+      - taoTestTaker/test/integration/RestTestTakerTest.php
   level: 0
   editorUrl: 'phpstorm://open?file=%%file%%&line=%%line%%'
   errorFormat: table
@@ -316,6 +320,13 @@ parameters:
     - '#Undefined variable: \$e#'
     - '#Return type iterable of method oat\\taoQtiTest\\models\\runner\\config\\Business\\Domain\\OptionCollection::getIterator\(\) is not covariant with tentative return type Traversable of method IteratorAggregate::getIterator\(\)\.#'
     - '#Instantiated class qtism\\data\\storage\\xml\\marshalling\\MarshallerFactory is abstract\.#'
+    #
+    # taoTestTaker
+    - '#Instantiated class oat\\taoTestTaker\\actions\\common_exception_IsAjaxAction not found\.#'
+    - '#Class Bootstrap referenced with incorrect case: BootStrap\.#'
+    - '#Caught class oat\\taoTestTaker\\models\\common_Exception not found\.#'
+    - '#Deprecated in PHP 8\.0: Required parameter \$value follows optional parameter \$valueType\.#'
+    #
     #
     # taoTests
     #
