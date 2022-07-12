@@ -3,37 +3,37 @@
 #
 parameters:
   paths:
-    - tao #covered
-    - generis
-    - funcAcl #covered
-    - ltiDeliveryProvider #covered
-    - pciSamples #covered
-    - qtiItemPci #covered
-    - qtiItemPic #covered
-    - taoAltResultStorage #covered
-    - taoBackOffice #covered
-    - taoCe #covered
-    - taoClientDiagnostic #covered
-    - taoDacSimple #covered
-    - taoDelivery #covered
-    - taoDeliveryRdf #covered
-    - taoEventLog #covered
-    - taoGroups #covered
-    - taoItems #covered
-    - taoLti #covered
-    - taoLtiBasicOutcome #covered
-    - taoMediaManager #covered
-    - taoOutcomeRds #covered
-    - taoOutcomeUi #covered
-    - taoProctoring #covered
+#    - tao #covered
+#    - generis
+#    - funcAcl #covered
+#    - ltiDeliveryProvider #covered
+#    - pciSamples #covered
+#    - qtiItemPci #covered
+#    - qtiItemPic #covered
+#    - taoAltResultStorage #covered
+#    - taoBackOffice #covered
+#    - taoCe #covered
+#    - taoClientDiagnostic #covered
+#    - taoDacSimple #covered
+#    - taoDelivery #covered
+#    - taoDeliveryRdf #covered
+#    - taoEventLog #covered
+#    - taoGroups #covered
+#    - taoItems #covered
+#    - taoLti #covered
+#    - taoLtiBasicOutcome #covered
+#    - taoMediaManager #covered
+#    - taoOutcomeRds #covered
+#    - taoOutcomeUi #covered
+#    - taoProctoring #covered
     - taoQtiItem
-    - taoQtiTest
-    - taoQtiTestPreviewer
-    - taoResultServer
-    - taoRevision
-    - taoTaskQueue
-    - taoTestTaker
-    - taoTests
+#    - taoQtiTest
+#    - taoQtiTestPreviewer
+#    - taoResultServer
+#    - taoRevision
+#    - taoTaskQueue
+#    - taoTestTaker
+#    - taoTests
   excludePaths:
     analyse:
       - vendor/*
@@ -69,6 +69,11 @@ parameters:
       # taoProctoring
       #
       - taoProctoring/model/monitorCache/implementation/DeliveryMonitoringIterator.php
+      #
+      # taoQtiItem
+      #
+      - taoQtiItem/model/import/Decorator/CvsToQtiTemplateDecorator.php
+      - taoQtiItem/model/import/Report/ReportBuilder.php
   level: 0
   editorUrl: 'phpstorm://open?file=%%file%%&line=%%line%%'
   errorFormat: table
@@ -202,3 +207,33 @@ parameters:
     - '#Access to constant KV_COLUMN_PARENT_ID on an unknown class oat\\taoProctoring\\model\\monitorCache\\implementation\\DeliveryMonitoringService\.#'
     - '#Access to constant TABLE_NAME on an unknown class oat\\taoProctoring\\model\\monitorCache\\implementation\\DeliveryMonitoringService\.#'
     - '#Access to constant COLUMN_DELIVERY_EXECUTION_ID on an unknown class oat\\taoProctoring\\model\\monitorCache\\implementation\\DeliveryMonitoringService\.#'
+    #
+    # taoQtiItem
+    #
+    - '#Call to static method singleton\(\) on an unknown class taoResultServer_models_classes_ResultServerStateFull\.#'
+    - '#Method oat\\taoQtiItem\\model\\import\\Decorator\\CvsToQtiTemplateDecorator::getQtiTemplatePath\(\) should return string but return statement is missing\.#'
+    - '#Method oat\\taoQtiItem\\model\\import\\Report\\ReportBuilder::createReportByException\(\) should return oat\\oatbox\\reporting\\Report but return statement is missing\.#'
+    - '#Instantiated class oat\\taoQtiItem\\model\\qti\\InvalidArgumentException not found\.#'
+    - '#Instantiated class oat\\taoQtiItem\\model\\qti\\AssessmentItem not found\.#'
+    - '#Instantiated class oat\\taoQtiItem\\model\\qti\\choice\\InvalidArgumentException not found\.#'
+    - '#Instantiated class oat\\taoQtiItem\\model\\qti\\interaction\\InvalidArgumentException not found\.#'
+    - '#Instantiated class oat\\taoQtiItem\\controller\\QTIform\\CompositeResponseOptions not found\.#'
+    - '#Instantiated class oat\\taoQtiItem\\model\\portableElement\\storage\\PortableElementRegistry is abstract\.#'
+    - '#Instantiated class oat\\taoQtiItem\\controller\\QTIform\\TemplatesDrivenResponseOptions not found\.#'
+    - '#Instantiated class oat\\taoQtiItem\\model\\qti\\interaction\\choiceClass not found\.#'
+    - '#Call to static method createJSONVariableFromQTIData\(\) on an unknown class oat\\taoQtiItem\\model\\qti\\taoQTI_models_classes_Matching_VariableFactory\.#'
+    - '#Call to static method createJSONValueFromQTIData\(\) on an unknown class oat\\taoQtiItem\\model\\qti\\expression\\taoQTI_models_classes_Matching_VariableFactory\.#'
+    - '#Call to static method createJSONShapeFromQTIData\(\) on an unknown class oat\\taoQtiItem\\model\\qti\\taoQTI_models_classes_Matching_VariableFactory\.#'
+    - '#Call to static method createJSONValueFromQTIData\(\) on an unknown class oat\\taoQtiItem\\model\\qti\\taoQTI_models_classes_Matching_VariableFactory\.#'
+    - '#Caught class oat\\taoQtiItem\\model\\qti\\InvalidArgumentException not found\.#'
+    - '#Class oat\\taoQtiItem\\model\\qti\\Object not found\.#'
+    - '#Call to an undefined method oat\\taoQtiItem\\model\\qti\\choice\\Hotspot::getAttibute\(\)\.#'
+    - '#Call to an undefined method oat\\taoQtiItem\\model\\qti\\interaction\\GapMatchInteraction::setElements\(\)\.#'
+    - '#Call to an undefined method oat\\taoQtiItem\\model\\qti\\Element::getBody\(\)\.#'
+    - '#Call to an undefined method oat\\taoQtiItem\\model\\qti\\interaction\\Interaction::getGaps\(\)\.#'
+    - '#Call to an undefined static method oat\\taoQtiItem\\helpers\\QtiRunner::getPrivateFolderPath\(\)\.#'
+    - '#Access to constant MATCH_CORRECT on an unknown class oat\\taoQtiItem\\model\\qti\\response\\taoQTI_models_classes_Matching_Matching\.#'
+    - '#Access to constant MAP_RESPONSE on an unknown class oat\\taoQtiItem\\model\\qti\\response\\taoQTI_models_classes_Matching_Matching\.#'
+    - '#Access to constant MAP_RESPONSE_POINT on an unknown class oat\\taoQtiItem\\model\\qti\\response\\taoQTI_models_classes_Matching_Matching\.#'
+    - '#Class oat\\taoQtiItem\\model\\qti\\asset\\handler\\LocalAssetHandler does not have a constructor and must be instantiated without any parameters\.#'
+    - '#Used function Webmozart\\Assert\\Tests\\StaticAnalysis\\true not found\.#'
