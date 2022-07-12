@@ -17,11 +17,11 @@ parameters:
     - taoDacSimple #covered
     - taoDelivery #covered
     - taoDeliveryRdf #covered
-    - taoEventLog
-    - taoGroups
-    - taoItems
-    - taoLti
-    - taoLtiBasicOutcome
+    - taoEventLog #covered
+    - taoGroups #covered
+    - taoItems #covered
+    - taoLti #covered
+    - taoLtiBasicOutcome #covered
     - taoMediaManager
     - taoOutcomeRds
     - taoOutcomeUi
@@ -46,6 +46,21 @@ parameters:
       - tao/helpers/DateIntervalMS.php
       - tao/models/classes/session/Business/Domain/SessionCookieAttributeCollection.php
       - tao/models/classes/service/InjectionAwareService.php
+      #
+      # taoEventLog
+      #
+      - taoEventLog/model/RdsLogIterator.php
+      #
+      # taoLti
+      #
+      - taoLti/test/integration/models/classes/Tool/Validation/Lti1p3ValidatorTest.php
+      - taoLti/models/classes/LtiProvider/ConfigurableLtiProviderRepository.php
+      - taoLti/models/classes/LtiProvider/RdfLtiProviderRepository.php
+      - taoLti/models/classes/Platform/Repository/RdfLtiPlatformRepository.php
+      #
+      # taoLtiBasicOutcome
+      #
+      - taoLtiBasicOutcome/includes/ims-blti/* # This entire folder seems not to be used at all
   level: 0
   editorUrl: 'phpstorm://open?file=%%file%%&line=%%line%%'
   errorFormat: table
@@ -134,3 +149,29 @@ parameters:
     - '#taoCampaign_helpers_Campaign#'
     - '#Parameter \$deliveryClass of method oat\\taoDeliveryRdf\\model\\DeliveryAssemblyService::createAssemblyFromServiceCall\(\) has invalid type oat\\taoDeliveryRdf\\model\\core_kernel_classes_Class\.#'
     - '#Instantiated class oat\\taoDeliveryRdf\\model\\import\\Assembler not found\.#'
+    #
+    # taoEventLog
+    #
+    - '#Access to undefined constant oat\\taoEventLog\\model\\requestLog\\rds\\RdsRequestLogStorage::USER_ID\.#'
+    - '#Access to undefined constant oat\\taoEventLog\\model\\requestLog\\rds\\RdsRequestLogStorage::SERVICE_ID\.#'
+    - '#Access to undefined constant oat\\taoEventLog\\model\\StorageInterface::SERVICE_ID\.#'
+    - '#Access to undefined constant oat\\taoEventLog\\model\\StorageInterface::EVENT_LOG_TABLE_NAME\.#'
+    - '#Access to undefined constant oat\\taoEventLog\\model\\StorageInterface::EVENT_LOG_ACTION\.#'
+    - '#Access to undefined constant oat\\taoEventLog\\model\\storage\\RdsStorage::EVENT_LOG_TABLE_NAME\.#'
+    - '#Parameter \$user of method oat\\taoEventLog\\model\\requestLog\\RequestLogService::log\(\) has invalid type oat\\taoEventLog\\model\\requestLog\\User\.#'
+    - '#Return type mixed of method oat\\taoEventLog\\model\\RdsLogIterator::next\(\) is not covariant with tentative return type void of method Iterator::next\(\)\.#'
+    - '#Return type mixed of method oat\\taoEventLog\\model\\RdsLogIterator::valid\(\) is not covariant with tentative return type void of method Iterator::valid\(\)\.#'
+    - '#Return type mixed of method oat\\taoEventLog\\model\\RdsLogIterator::rewind\(\) is not covariant with tentative return type void of method Iterator::rewind\(\)\.#'
+    - '#Instantiated class oat\\taoEventLog\\model\\requestLog\\rds\\UserActivityLogIterator not found\.#'
+    - '#Instantiated class oat\\taoEventLog\\model\\requestLog\\fluentd\\RequestLogException not found\.#'
+    #
+    # taoItems
+    #
+    - '#\(void\) is used\.#'
+    - '#Call to an undefined method taoItems_actions_SaSItems::initPreview\(\)\.#'
+    #
+    # taoLti
+    #
+    - '#Return type mixed of method oat\\taoLti\\models\\classes\\LtiProvider\\ConfigurableLtiProviderRepository::count\(\) is not covariant with tentative return type int of method Countable::count\(\)\.#'
+    - '#Return type mixed of method oat\\taoLti\\models\\classes\\LtiProvider\\RdfLtiProviderRepository::count\(\) is not covariant with tentative return type int of method Countable::count\(\)\.#'
+    - '#Return type mixed of method oat\\taoLti\\models\\classes\\Platform\\Repository\\RdfLtiPlatformRepository::count\(\) is not covariant with tentative return type int of method Countable::count\(\)\.#'
