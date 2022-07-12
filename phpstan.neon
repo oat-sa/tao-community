@@ -97,3 +97,10 @@ parameters:
     #
     # Generis
     #
+    #
+    # ltiDeliveryProvider
+    #
+    - '#Method oat\\ltiDeliveryProvider\\scripts\\e2e\\BuildE2eConfiguration::getOauthService\(\) has invalid return type oat\\taoOauth\\model\\Oauth2Service\.#'
+    - '#Access to constant SERVICE_ID on an unknown class oat\\taoOauth\\model\\Oauth2Service\.#'
+    - '#Access to an undefined property oat\\ltiDeliveryProvider\\test\\integration\\model\\requestLog\\rds\\LtiResultAliasStorageTest::\$deliveryExecutionId\.#'
+    - '#Instantiated class Bootstrap not found\.#'
