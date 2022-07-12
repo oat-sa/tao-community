@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7a84010d37d395c08a2eac677ea4a1e2",
+    "content-hash": "d43c1bb0e722b685acf1f01a22075ea3",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -323,64 +323,6 @@
                 "source": "https://github.com/defuse/php-encryption/tree/v2.3.1"
             },
             "time": "2021-04-09T23:57:26+00:00"
-        },
-        {
-            "name": "dflydev/fig-cookies",
-            "version": "v2.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dflydev/dflydev-fig-cookies.git",
-                "reference": "aa3c3a6224fea4ca2c05cf6b8285ce023ff41d9b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dflydev/dflydev-fig-cookies/zipball/aa3c3a6224fea4ca2c05cf6b8285ce023ff41d9b",
-                "reference": "aa3c3a6224fea4ca2c05cf6b8285ce023ff41d9b",
-                "shasum": ""
-            },
-            "require": {
-                "ext-pcre": "*",
-                "php": "^7.2",
-                "psr/http-message": "^1"
-            },
-            "require-dev": {
-                "doctrine/coding-standard": "^4",
-                "phpstan/phpstan": "^0.10.1",
-                "phpunit/phpunit": "^7.2.6",
-                "squizlabs/php_codesniffer": "^3.3"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Dflydev\\FigCookies\\": "src/Dflydev/FigCookies"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Beau Simensen",
-                    "email": "beau@dflydev.com"
-                }
-            ],
-            "description": "Cookies for PSR-7 HTTP Message Interface.",
-            "keywords": [
-                "cookies",
-                "psr-7",
-                "psr7"
-            ],
-            "support": {
-                "issues": "https://github.com/dflydev/dflydev-fig-cookies/issues",
-                "source": "https://github.com/dflydev/dflydev-fig-cookies/tree/v2.0.3"
-            },
-            "time": "2020-12-07T16:40:59+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -2533,35 +2475,40 @@
         },
         {
             "name": "league/openapi-psr7-validator",
-            "version": "0.9",
+            "version": "0.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/openapi-psr7-validator.git",
-                "reference": "ac49e52407b92ceb52ab1a57083a51db8e8de660"
+                "reference": "5f98f98abf37f4533473699ef2ff2b4dc9b8d52e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/openapi-psr7-validator/zipball/ac49e52407b92ceb52ab1a57083a51db8e8de660",
-                "reference": "ac49e52407b92ceb52ab1a57083a51db8e8de660",
+                "url": "https://api.github.com/repos/thephpleague/openapi-psr7-validator/zipball/5f98f98abf37f4533473699ef2ff2b4dc9b8d52e",
+                "reference": "5f98f98abf37f4533473699ef2ff2b4dc9b8d52e",
                 "shasum": ""
             },
             "require": {
-                "cebe/php-openapi": "^1.3",
-                "dflydev/fig-cookies": "^2.0",
+                "cebe/php-openapi": "^1.6",
                 "ext-json": "*",
+                "league/uri": "^6.3",
                 "php": ">=7.2",
-                "psr/cache": "^1.0",
+                "psr/cache": "^1.0 || ^2.0 || ^3.0",
                 "psr/http-message": "^1.0",
                 "psr/http-server-middleware": "^1.0",
-                "respect/validation": "^1.1",
+                "respect/validation": "^1.1.3 || ^2.0",
                 "riverline/multipart-parser": "^2.0.3",
                 "webmozart/assert": "^1.4"
             },
             "require-dev": {
-                "cache/array-adapter": "^1.0",
-                "doctrine/coding-standard": "^6.0",
+                "doctrine/coding-standard": "^8.0",
                 "guzzlehttp/psr7": "^1.5",
-                "phpunit/phpunit": "^7|^8"
+                "hansott/psr7-cookies": "^3.0.2",
+                "phpstan/extension-installer": "^1.0",
+                "phpstan/phpstan": "^1",
+                "phpstan/phpstan-phpunit": "^1",
+                "phpstan/phpstan-webmozart-assert": "^1",
+                "phpunit/phpunit": "^7 || ^8 || ^9",
+                "symfony/cache": "^5.1"
             },
             "type": "library",
             "autoload": {
@@ -2583,9 +2530,9 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/openapi-psr7-validator/issues",
-                "source": "https://github.com/thephpleague/openapi-psr7-validator/tree/master"
+                "source": "https://github.com/thephpleague/openapi-psr7-validator/tree/0.18"
             },
-            "time": "2020-06-12T10:28:04+00:00"
+            "time": "2022-03-01T10:34:32+00:00"
         },
         {
             "name": "league/uri",
@@ -3678,16 +3625,16 @@
         },
         {
             "name": "oat-sa/extension-tao-funcacl",
-            "version": "v7.2.0",
+            "version": "dev-php8-migration",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-funcacl.git",
-                "reference": "116dc120963513f8b5083322802a0f1e84ce165d"
+                "reference": "901959e477fc9a051bb8036f24f4e13a6bf9f262"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-funcacl/zipball/116dc120963513f8b5083322802a0f1e84ce165d",
-                "reference": "116dc120963513f8b5083322802a0f1e84ce165d",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-funcacl/zipball/901959e477fc9a051bb8036f24f4e13a6bf9f262",
+                "reference": "901959e477fc9a051bb8036f24f4e13a6bf9f262",
                 "shasum": ""
             },
             "require": {
@@ -3754,9 +3701,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-funcacl/tree/v7.2.0"
+                "source": "https://github.com/oat-sa/extension-tao-funcacl/tree/php8-migration"
             },
-            "time": "2021-11-30T11:28:36+00:00"
+            "time": "2022-07-12T07:28:47+00:00"
         },
         {
             "name": "oat-sa/extension-tao-group",
@@ -3936,12 +3883,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti.git",
-                "reference": "c5db47e1f7bad2f99a45bb18766b3d33a55d5825"
+                "reference": "798b2f0a758f564584c47266f64eed1b8a2bd2cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/c5db47e1f7bad2f99a45bb18766b3d33a55d5825",
-                "reference": "c5db47e1f7bad2f99a45bb18766b3d33a55d5825",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/798b2f0a758f564584c47266f64eed1b8a2bd2cc",
+                "reference": "798b2f0a758f564584c47266f64eed1b8a2bd2cc",
                 "shasum": ""
             },
             "require": {
@@ -4019,7 +3966,7 @@
                 "issues": "http://forge.taotesting.com",
                 "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/php8-migration"
             },
-            "time": "2022-07-08T11:15:38+00:00"
+            "time": "2022-07-12T14:21:21+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pci",
@@ -4206,16 +4153,16 @@
         },
         {
             "name": "oat-sa/extension-tao-ltideliveryprovider",
-            "version": "v12.12.1",
+            "version": "dev-php8-migration",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-ltideliveryprovider.git",
-                "reference": "3a4de9963626b37e8348d21a40d6c2cb48809d7e"
+                "reference": "34273eb0c984d5b456904ade9a8924e973cd5b2b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-ltideliveryprovider/zipball/3a4de9963626b37e8348d21a40d6c2cb48809d7e",
-                "reference": "3a4de9963626b37e8348d21a40d6c2cb48809d7e",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-ltideliveryprovider/zipball/34273eb0c984d5b456904ade9a8924e973cd5b2b",
+                "reference": "34273eb0c984d5b456904ade9a8924e973cd5b2b",
                 "shasum": ""
             },
             "require": {
@@ -4287,9 +4234,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-ltideliveryprovider/tree/v12.12.1"
+                "source": "https://github.com/oat-sa/extension-tao-ltideliveryprovider/tree/php8-migration"
             },
-            "time": "2022-03-02T14:25:37+00:00"
+            "time": "2022-07-12T07:42:18+00:00"
         },
         {
             "name": "oat-sa/extension-tao-mediamanager",
@@ -4726,16 +4673,16 @@
         },
         {
             "name": "oat-sa/extension-tao-proctoring",
-            "version": "v20.5.0",
+            "version": "dev-php8-migration",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-proctoring.git",
-                "reference": "048ed2cb5c6bd00de5aedf71a0e0ddfb09faf9ac"
+                "reference": "4fa3003520e0e3a802a6c251fda7c33bc47d7843"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-proctoring/zipball/048ed2cb5c6bd00de5aedf71a0e0ddfb09faf9ac",
-                "reference": "048ed2cb5c6bd00de5aedf71a0e0ddfb09faf9ac",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-proctoring/zipball/4fa3003520e0e3a802a6c251fda7c33bc47d7843",
+                "reference": "4fa3003520e0e3a802a6c251fda7c33bc47d7843",
                 "shasum": ""
             },
             "require": {
@@ -4778,9 +4725,9 @@
             ],
             "support": {
                 "issues": "https://github.com/oat-sa/extension-tao-proctoring/issues",
-                "source": "https://github.com/oat-sa/extension-tao-proctoring/tree/v20.5.0"
+                "source": "https://github.com/oat-sa/extension-tao-proctoring/tree/php8-migration"
             },
-            "time": "2022-03-17T10:43:47+00:00"
+            "time": "2022-07-12T11:18:44+00:00"
         },
         {
             "name": "oat-sa/extension-tao-revision",
@@ -4991,12 +4938,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "091c5faedfb9a656214eec66e45b6809f8e0477d"
+                "reference": "f25d78f61b40c318e76c6cbb353e564276dcb7a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/091c5faedfb9a656214eec66e45b6809f8e0477d",
-                "reference": "091c5faedfb9a656214eec66e45b6809f8e0477d",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/f25d78f61b40c318e76c6cbb353e564276dcb7a6",
+                "reference": "f25d78f61b40c318e76c6cbb353e564276dcb7a6",
                 "shasum": ""
             },
             "require": {
@@ -5080,7 +5027,7 @@
                 "issues": "http://forge.taotesting.com",
                 "source": "https://github.com/oat-sa/extension-tao-testqti/tree/php8-migration"
             },
-            "time": "2022-07-06T08:23:32+00:00"
+            "time": "2022-07-12T14:58:54+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
@@ -5230,12 +5177,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/generis.git",
-                "reference": "1b695804272185dde0dae299d428805fe6b543e8"
+                "reference": "b01cf47cb553f20c1d4c9fb89fe0c6b69b189e96"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/generis/zipball/1b695804272185dde0dae299d428805fe6b543e8",
-                "reference": "1b695804272185dde0dae299d428805fe6b543e8",
+                "url": "https://api.github.com/repos/oat-sa/generis/zipball/b01cf47cb553f20c1d4c9fb89fe0c6b69b189e96",
+                "reference": "b01cf47cb553f20c1d4c9fb89fe0c6b69b189e96",
                 "shasum": ""
             },
             "require": {
@@ -5341,7 +5288,7 @@
                 "issues": "http://forge.taotesting.com",
                 "source": "https://github.com/oat-sa/generis/tree/php8-migration"
             },
-            "time": "2022-07-08T06:30:50+00:00"
+            "time": "2022-07-12T14:32:14+00:00"
         },
         {
             "name": "oat-sa/imsglobal-lti",
@@ -5859,12 +5806,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "77c4c098d3b88e055ad1e4a953cea7136d247b04"
+                "reference": "1368282d68347eda3af770d788a922d2d5b797a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/77c4c098d3b88e055ad1e4a953cea7136d247b04",
-                "reference": "77c4c098d3b88e055ad1e4a953cea7136d247b04",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/1368282d68347eda3af770d788a922d2d5b797a4",
+                "reference": "1368282d68347eda3af770d788a922d2d5b797a4",
                 "shasum": ""
             },
             "require": {
@@ -5881,7 +5828,7 @@
                 "jtl-software/opsgenie-client": "2.0.2",
                 "justinrainbow/json-schema": "5.2.1",
                 "league/csv": "^9.6",
-                "league/openapi-psr7-validator": "0.9",
+                "league/openapi-psr7-validator": ">=0.18",
                 "oat-sa/composer-npm-bridge": "~0.4.2||dev-master",
                 "oat-sa/generis": ">=15.20.3",
                 "oat-sa/imsglobal-lti": ">=4.0.0",
@@ -5967,7 +5914,7 @@
                 "issues": "https://github.com/oat-sa/tao-core/issues",
                 "source": "https://github.com/oat-sa/tao-core/tree/php8-migration"
             },
-            "time": "2022-07-11T14:35:18+00:00"
+            "time": "2022-07-12T15:32:52+00:00"
         },
         {
             "name": "ocramius/proxy-manager",
@@ -7288,44 +7235,101 @@
             "time": "2021-05-23T05:42:52+00:00"
         },
         {
-            "name": "respect/validation",
-            "version": "1.1.31",
+            "name": "respect/stringifier",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Respect/Validation.git",
-                "reference": "45d109fc830644fecc1145200d6351ce4f2769d0"
+                "url": "https://github.com/Respect/Stringifier.git",
+                "reference": "e55af3c8aeaeaa2abb5fa47a58a8e9688cc23b59"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Respect/Validation/zipball/45d109fc830644fecc1145200d6351ce4f2769d0",
-                "reference": "45d109fc830644fecc1145200d6351ce4f2769d0",
+                "url": "https://api.github.com/repos/Respect/Stringifier/zipball/e55af3c8aeaeaa2abb5fa47a58a8e9688cc23b59",
+                "reference": "e55af3c8aeaeaa2abb5fa47a58a8e9688cc23b59",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.4",
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.8",
+                "malukenho/docheader": "^0.1.7",
+                "phpunit/phpunit": "^6.4"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/stringify.php"
+                ],
+                "psr-4": {
+                    "Respect\\Stringifier\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Respect/Stringifier Contributors",
+                    "homepage": "https://github.com/Respect/Stringifier/graphs/contributors"
+                }
+            ],
+            "description": "Converts any value to a string",
+            "homepage": "http://respect.github.io/Stringifier/",
+            "keywords": [
+                "respect",
+                "stringifier",
+                "stringify"
+            ],
+            "support": {
+                "issues": "https://github.com/Respect/Stringifier/issues",
+                "source": "https://github.com/Respect/Stringifier/tree/0.2.0"
+            },
+            "time": "2017-12-29T19:39:25+00:00"
+        },
+        {
+            "name": "respect/validation",
+            "version": "2.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Respect/Validation.git",
+                "reference": "4c21a7ffc9a4915673cb2c2843963919e664e627"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Respect/Validation/zipball/4c21a7ffc9a4915673cb2c2843963919e664e627",
+                "reference": "4c21a7ffc9a4915673cb2c2843963919e664e627",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.3 || ^8.0",
+                "respect/stringifier": "^0.2.0",
                 "symfony/polyfill-mbstring": "^1.2"
             },
             "require-dev": {
-                "egulias/email-validator": "~1.2 || ~2.1",
-                "mikey179/vfsstream": "^1.5",
-                "phpunit/phpunit": "~4.0 || ~5.0",
-                "symfony/validator": "~2.6.9",
-                "zendframework/zend-validator": "~2.3"
+                "egulias/email-validator": "^3.0",
+                "malukenho/docheader": "^0.1",
+                "mikey179/vfsstream": "^1.6",
+                "phpstan/phpstan": "^0.12",
+                "phpstan/phpstan-deprecation-rules": "^0.12",
+                "phpstan/phpstan-phpunit": "^0.12",
+                "phpunit/phpunit": "^9.3",
+                "psr/http-message": "^1.0",
+                "respect/coding-standard": "^3.0",
+                "squizlabs/php_codesniffer": "^3.5",
+                "symfony/validator": "^3.0||^4.0",
+                "zendframework/zend-validator": "^2.1"
             },
             "suggest": {
                 "egulias/email-validator": "Strict (RFC compliant) email validation",
                 "ext-bcmath": "Arbitrary Precision Mathematics",
+                "ext-fileinfo": "File Information",
                 "ext-mbstring": "Multibyte String Functions",
-                "friendsofphp/php-cs-fixer": "Fix PSR2 and other coding style issues",
                 "symfony/validator": "Use Symfony validator through Respect\\Validation",
                 "zendframework/zend-validator": "Use Zend Framework validator through Respect\\Validation"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Respect\\Validation\\": "library/"
@@ -7333,7 +7337,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD-3-Clause"
+                "MIT"
             ],
             "authors": [
                 {
@@ -7350,9 +7354,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Respect/Validation/issues",
-                "source": "https://github.com/Respect/Validation/tree/1.1.31"
+                "source": "https://github.com/Respect/Validation/tree/2.2.3"
             },
-            "time": "2019-05-28T06:10:06+00:00"
+            "time": "2021-03-19T14:12:45+00:00"
         },
         {
             "name": "riverline/multipart-parser",
@@ -11265,16 +11269,34 @@
             "alias_normalized": "7.7.0.0"
         },
         {
+            "package": "oat-sa/extension-tao-funcacl",
+            "version": "dev-php8-migration",
+            "alias": "7.2.0",
+            "alias_normalized": "7.2.0.0"
+        },
+        {
             "package": "oat-sa/extension-tao-itemqti",
             "version": "dev-php8-migration",
             "alias": "29.6.0",
             "alias_normalized": "29.6.0.0"
         },
         {
+            "package": "oat-sa/extension-tao-ltideliveryprovider",
+            "version": "dev-php8-migration",
+            "alias": "12.12.1",
+            "alias_normalized": "12.12.1.0"
+        },
+        {
             "package": "oat-sa/extension-tao-outcomelti",
             "version": "dev-php8-migration",
             "alias": "5.0.2",
             "alias_normalized": "5.0.2.0"
+        },
+        {
+            "package": "oat-sa/extension-tao-proctoring",
+            "version": "dev-php8-migration",
+            "alias": "20.5.0",
+            "alias_normalized": "20.5.0.0"
         },
         {
             "package": "oat-sa/extension-tao-task-queue",
@@ -11305,10 +11327,13 @@
     "stability-flags": {
         "oat-sa/generis": 20,
         "oat-sa/tao-core": 20,
+        "oat-sa/extension-tao-funcacl": 20,
         "oat-sa/extension-tao-dac-simple": 20,
         "oat-sa/extension-tao-itemqti": 20,
         "oat-sa/extension-tao-testqti": 20,
         "oat-sa/extension-tao-outcomelti": 20,
+        "oat-sa/extension-tao-ltideliveryprovider": 20,
+        "oat-sa/extension-tao-proctoring": 20,
         "oat-sa/extension-tao-task-queue": 20
     },
     "prefer-stable": true,
