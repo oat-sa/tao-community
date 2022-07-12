@@ -29,8 +29,8 @@ parameters:
     - taoQtiItem #covered
     - taoQtiTest #covered
     - taoQtiTestPreviewer #covered
-    - taoResultServer
-    - taoRevision
+    - taoResultServer #covered
+    - taoRevision #covered
     - taoTaskQueue #covered
     - taoTestTaker #covered
     - taoTests #covered
@@ -93,6 +93,10 @@ parameters:
       #
       - taoQtiItem/model/import/Decorator/CvsToQtiTemplateDecorator.php
       - taoQtiItem/model/import/Report/ReportBuilder.php
+      #
+      # taoResultServer
+      #
+      - taoResultServer/test/integration/experiment/ResultsServiceTestCase.php
       #
       # taoTaskQueue
       #
@@ -331,6 +335,16 @@ parameters:
     - '#Undefined variable: \$e#'
     - '#Return type iterable of method oat\\taoQtiTest\\models\\runner\\config\\Business\\Domain\\OptionCollection::getIterator\(\) is not covariant with tentative return type Traversable of method IteratorAggregate::getIterator\(\)\.#'
     - '#Instantiated class qtism\\data\\storage\\xml\\marshalling\\MarshallerFactory is abstract\.#'
+    #
+    # taoResultServer
+    #
+    - '#Parameter \$sessionIdentifier of method taoResultServer_models_classes_Context::addSessionIdentifier\(\) has invalid type taoResultServer_models_classes_SessionIdentifier\.#'
+    - '#Class ResultsServiceTestCase extends unknown class UnitTestCase\.#'
+    - '#Call to static method initTest\(\) on an unknown class TaoTestRunner\.#'
+    - '#Instantiated class taoResultServer_models_classes_LocalResultsService not found\.#'
+    - '#Call to an undefined method ResultsServiceTestCase::assertIsA\(\)\.#'
+    - '#Instantiated class taoResultServer_models_classes_SessionIdentifier not found\.#'
+    - '#Call to an undefined method ResultsServiceTestCase::assertEqual\(\)\.#'
     #
     # taoTaskQueue
     #
