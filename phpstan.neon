@@ -25,7 +25,7 @@ parameters:
     - taoMediaManager #covered
     - taoOutcomeRds #covered
     - taoOutcomeUi #covered
-    - taoProctoring
+    - taoProctoring #covered
     - taoQtiItem
     - taoQtiTest
     - taoQtiTestPreviewer
@@ -65,6 +65,10 @@ parameters:
       # taoOutcomeUi
       #
       - taoOutcomeUi/model/search/ResultIndexIterator.php
+      #
+      # taoProctoring
+      #
+      - taoProctoring/model/monitorCache/implementation/DeliveryMonitoringIterator.php
   level: 0
   editorUrl: 'phpstorm://open?file=%%file%%&line=%%line%%'
   errorFormat: table
@@ -185,10 +189,16 @@ parameters:
     - '#Call to static method setup\(\) on an unknown class org\\bovigo\\vfs\\vfsStream\.#'
     - '#Instantiated class oat\\taoMediaManager\\scripts\\core_kernel_classes_Propert not found\.#'
     #
-    # taoOutcomeUi
+    # taoProctoring
     #
-    - '#Call to an undefined static method tao_actions_CommonModule::getTreeOptionsFromRequest\(\)\.#'
-    - '#Call to an undefined method oat\\taoOutcomeUi\\controller\\Results::getCurrentClass\(\)\.#'
-    - '#Return type mixed of method oat\\taoOutcomeUi\\model\\search\\ResultIndexIterator::rewind\(\) is not covariant with tentative return type void of method Iterator::rewind\(\).#'
-    - '#Return type mixed of method oat\\taoOutcomeUi\\model\\search\\ResultIndexIterator::next\(\) is not covariant with tentative return type void of method Iterator::next\(\).#'
-    - '#Return type mixed of method oat\\taoOutcomeUi\\model\\search\\ResultIndexIterator::valid\(\) is not covariant with tentative return type bool of method Iterator::valid\(\).#'
+    - '#Class oat\\taoProctoring\\model\\PaginatedStorage not found\.#'
+    - '#Return type mixed of method oat\\taoProctoring\\model\\monitorCache\\implementation\\DeliveryMonitoringIterator::rewind\(\) is not covariant with tentative return type void of method Iterator::rewind\(\)#'
+    - '#Return type mixed of method oat\\taoProctoring\\model\\monitorCache\\implementation\\DeliveryMonitoringIterator::valid\(\) is not covariant with tentative return type void of method Iterator::valid\(\)#'
+    - '#Instantiated class oat\\taoProctoring\\test\\monitorCache\\mock\\DeliveryMonitoringData not found\.#'
+    - '#Access to constant CONFIG_ID on an unknown class oat\\taoProctoring\\model\\monitorCache\\implementation\\DeliveryMonitoringService\.#'
+    - '#Access to constant OPTION_PERSISTENCE on an unknown class oat\\taoProctoring\\model\\monitorCache\\implementation\\DeliveryMonitoringService\.#'
+    - '#Access to constant KV_TABLE_NAME on an unknown class oat\\taoProctoring\\model\\monitorCache\\implementation\\DeliveryMonitoringService\.#'
+    - '#Access to constant KV_FK_PARENT on an unknown class oat\\taoProctoring\\model\\monitorCache\\implementation\\DeliveryMonitoringService\.#'
+    - '#Access to constant KV_COLUMN_PARENT_ID on an unknown class oat\\taoProctoring\\model\\monitorCache\\implementation\\DeliveryMonitoringService\.#'
+    - '#Access to constant TABLE_NAME on an unknown class oat\\taoProctoring\\model\\monitorCache\\implementation\\DeliveryMonitoringService\.#'
+    - '#Access to constant COLUMN_DELIVERY_EXECUTION_ID on an unknown class oat\\taoProctoring\\model\\monitorCache\\implementation\\DeliveryMonitoringService\.#'
