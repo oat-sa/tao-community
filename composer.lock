@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d3d2110b69b2d021138c83dd30d18482",
+    "content-hash": "6ee4c36a789f83f5995e679139408fe3",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -3632,12 +3632,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-dac-simple.git",
-                "reference": "bc6ac02d9f78956d083f59eb3ed6413e006188f8"
+                "reference": "029eddd1e2ed082f8296989832b5e08872eed327"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-dac-simple/zipball/bc6ac02d9f78956d083f59eb3ed6413e006188f8",
-                "reference": "bc6ac02d9f78956d083f59eb3ed6413e006188f8",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-dac-simple/zipball/029eddd1e2ed082f8296989832b5e08872eed327",
+                "reference": "029eddd1e2ed082f8296989832b5e08872eed327",
                 "shasum": ""
             },
             "require": {
@@ -3646,6 +3646,10 @@
                 "oat-sa/generis": ">=14.0.0",
                 "oat-sa/oatbox-extension-installer": "~1.1||dev-master",
                 "oat-sa/tao-core": ">=50.15.0"
+            },
+            "require-dev": {
+                "oat-sa/generis": "dev-php8-migration as v16.0.0",
+                "oat-sa/tao-core": "dev-php8-migration as v51.0.0"
             },
             "type": "tao-extension",
             "extra": {
@@ -3675,7 +3679,7 @@
                 "issues": "https://github.com/oat-sa/extension-tao-dac-simple/issues",
                 "source": "https://github.com/oat-sa/extension-tao-dac-simple/tree/php8-migration"
             },
-            "time": "2022-07-18T20:00:59+00:00"
+            "time": "2022-07-21T10:38:30+00:00"
         },
         {
             "name": "oat-sa/extension-tao-delivery",
@@ -3886,12 +3890,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-funcacl.git",
-                "reference": "eb3ad107d57cd267cce345f5e4237e8638f292dd"
+                "reference": "23ce227548136f4741d715286a65c5cace70194b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-funcacl/zipball/eb3ad107d57cd267cce345f5e4237e8638f292dd",
-                "reference": "eb3ad107d57cd267cce345f5e4237e8638f292dd",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-funcacl/zipball/23ce227548136f4741d715286a65c5cace70194b",
+                "reference": "23ce227548136f4741d715286a65c5cace70194b",
                 "shasum": ""
             },
             "require": {
@@ -3899,6 +3903,10 @@
                 "oat-sa/generis": ">=15.11.0",
                 "oat-sa/oatbox-extension-installer": "~1.1||dev-master",
                 "oat-sa/tao-core": ">=47.0.0"
+            },
+            "require-dev": {
+                "oat-sa/generis": "dev-php8-migration as v16.0.0",
+                "oat-sa/tao-core": "dev-php8-migration as v51.0.0"
             },
             "type": "tao-extension",
             "extra": {
@@ -3960,7 +3968,7 @@
                 "issues": "http://forge.taotesting.com",
                 "source": "https://github.com/oat-sa/extension-tao-funcacl/tree/php8-migration"
             },
-            "time": "2022-07-18T20:01:27+00:00"
+            "time": "2022-07-21T10:34:28+00:00"
         },
         {
             "name": "oat-sa/extension-tao-group",
@@ -5231,12 +5239,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "fd2afb30bf7227323fc1ef90a823ada6df1c7ff4"
+                "reference": "9897729338bcd89fcffae9b423bb1ceeeb9ef370"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/fd2afb30bf7227323fc1ef90a823ada6df1c7ff4",
-                "reference": "fd2afb30bf7227323fc1ef90a823ada6df1c7ff4",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/9897729338bcd89fcffae9b423bb1ceeeb9ef370",
+                "reference": "9897729338bcd89fcffae9b423bb1ceeeb9ef370",
                 "shasum": ""
             },
             "require": {
@@ -5252,6 +5260,10 @@
                 "oat-sa/oatbox-extension-installer": "~1.1||dev-master",
                 "oat-sa/tao-core": ">=50.18.3",
                 "qtism/qtism": ">=0.27.0"
+            },
+            "require-dev": {
+                "oat-sa/generis": "dev-php8-migration as v16.0.0",
+                "oat-sa/tao-core": "dev-php8-migration as v51.0.0"
             },
             "type": "tao-extension",
             "extra": {
@@ -5320,7 +5332,7 @@
                 "issues": "http://forge.taotesting.com",
                 "source": "https://github.com/oat-sa/extension-tao-testqti/tree/php8-migration"
             },
-            "time": "2022-07-18T19:54:51+00:00"
+            "time": "2022-07-21T11:40:47+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
@@ -5386,16 +5398,16 @@
         },
         {
             "name": "oat-sa/extension-tao-testtaker",
-            "version": "dev-master",
+            "version": "dev-php8-migration",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testtaker.git",
-                "reference": "edce2ba8d6153dd41753077be5c0f83e50ae635d"
+                "reference": "e17c5cc305322460b5dbd21cb4155bb283d7be2e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testtaker/zipball/edce2ba8d6153dd41753077be5c0f83e50ae635d",
-                "reference": "edce2ba8d6153dd41753077be5c0f83e50ae635d",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testtaker/zipball/e17c5cc305322460b5dbd21cb4155bb283d7be2e",
+                "reference": "e17c5cc305322460b5dbd21cb4155bb283d7be2e",
                 "shasum": ""
             },
             "require": {
@@ -5404,7 +5416,10 @@
                 "oat-sa/oatbox-extension-installer": "~1.1||dev-master",
                 "oat-sa/tao-core": ">=48.45.0"
             },
-            "default-branch": true,
+            "require-dev": {
+                "oat-sa/generis": "dev-php8-migration as v16.0.0",
+                "oat-sa/tao-core": "dev-php8-migration as v51.0.0"
+            },
             "type": "tao-extension",
             "extra": {
                 "tao-extension-name": "taoTestTaker"
@@ -5462,9 +5477,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-testtaker/tree/v8.9.0"
+                "source": "https://github.com/oat-sa/extension-tao-testtaker/tree/php8-migration"
             },
-            "time": "2022-03-14T11:13:33+00:00"
+            "time": "2022-07-21T12:25:00+00:00"
         },
         {
             "name": "oat-sa/generis",
@@ -11747,6 +11762,12 @@
             "version": "dev-php8-migration",
             "alias": "45.0",
             "alias_normalized": "45.0.0.0"
+        },
+        {
+            "package": "oat-sa/extension-tao-testtaker",
+            "version": "dev-php8-migration",
+            "alias": "8.9.2",
+            "alias_normalized": "8.9.2.0"
         },
         {
             "package": "oat-sa/generis",
