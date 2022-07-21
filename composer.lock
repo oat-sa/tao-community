@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "df110361dfb313add2542094d46021ac",
+    "content-hash": "d3d2110b69b2d021138c83dd30d18482",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -4510,16 +4510,16 @@
         },
         {
             "name": "oat-sa/extension-tao-mediamanager",
-            "version": "dev-master",
+            "version": "dev-php8-migration",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-mediamanager.git",
-                "reference": "654c76c275495b937875d5c3e4deeb38f74a2b14"
+                "reference": "3464a35cba7d3c35f26b9f9a2583ee8bc6fb5296"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-mediamanager/zipball/654c76c275495b937875d5c3e4deeb38f74a2b14",
-                "reference": "654c76c275495b937875d5c3e4deeb38f74a2b14",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-mediamanager/zipball/3464a35cba7d3c35f26b9f9a2583ee8bc6fb5296",
+                "reference": "3464a35cba7d3c35f26b9f9a2583ee8bc6fb5296",
                 "shasum": ""
             },
             "require": {
@@ -4532,7 +4532,11 @@
                 "oat-sa/oatbox-extension-installer": "~1.1||dev-master",
                 "oat-sa/tao-core": ">=50.14.0"
             },
-            "default-branch": true,
+            "require-dev": {
+                "mikey179/vfsstream": "~1",
+                "oat-sa/generis": "dev-php8-migration as v16.0.0",
+                "oat-sa/tao-core": "dev-php8-migration as v51.0.0"
+            },
             "type": "tao-extension",
             "extra": {
                 "tao-extension-name": "taoMediaManager"
@@ -4560,9 +4564,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-mediamanager/tree/v12.29.0"
+                "source": "https://github.com/oat-sa/extension-tao-mediamanager/tree/php8-migration"
             },
-            "time": "2022-06-13T08:55:34+00:00"
+            "time": "2022-07-21T10:21:32+00:00"
         },
         {
             "name": "oat-sa/extension-tao-outcome",
@@ -11707,6 +11711,12 @@
             "version": "dev-php8-migration",
             "alias": "13.0",
             "alias_normalized": "13.0.0.0"
+        },
+        {
+            "package": "oat-sa/extension-tao-mediamanager",
+            "version": "dev-php8-migration",
+            "alias": "12.29.2",
+            "alias_normalized": "12.29.2.0"
         },
         {
             "package": "oat-sa/extension-tao-outcomelti",
