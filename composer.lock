@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b0068d4dbed92a275b23c681cbc7acd7",
+    "content-hash": "4e42bb8abb91490210ba99799595e649",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -5148,16 +5148,16 @@
         },
         {
             "name": "oat-sa/extension-tao-test",
-            "version": "dev-master",
+            "version": "dev-php8-migration",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-test.git",
-                "reference": "bf674100144b262504949c5548ef92bd25b989db"
+                "reference": "e75926cb3e07acd161f8914e84578150ca131e24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-test/zipball/bf674100144b262504949c5548ef92bd25b989db",
-                "reference": "bf674100144b262504949c5548ef92bd25b989db",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-test/zipball/e75926cb3e07acd161f8914e84578150ca131e24",
+                "reference": "e75926cb3e07acd161f8914e84578150ca131e24",
                 "shasum": ""
             },
             "require": {
@@ -5167,7 +5167,10 @@
                 "oat-sa/oatbox-extension-installer": "~1.1||dev-master",
                 "oat-sa/tao-core": ">=48.70.0"
             },
-            "default-branch": true,
+            "require-dev": {
+                "oat-sa/generis": "dev-php8-migration as v16.0.0",
+                "oat-sa/tao-core": "dev-php8-migration as v51.0.0"
+            },
             "type": "tao-extension",
             "extra": {
                 "tao-extension-name": "taoTests",
@@ -5233,9 +5236,9 @@
             "support": {
                 "forum": "https://forum.taocloud.org/",
                 "issues": "https://github.com/oat-sa/extension-tao-test/issues",
-                "source": "https://github.com/oat-sa/extension-tao-test/tree/v15.14.0"
+                "source": "https://github.com/oat-sa/extension-tao-test/tree/php8-migration"
             },
-            "time": "2022-07-07T14:50:58+00:00"
+            "time": "2022-07-21T12:53:28+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti",
@@ -11766,6 +11769,12 @@
             "version": "dev-php8-migration",
             "alias": "7.0",
             "alias_normalized": "7.0.0.0"
+        },
+        {
+            "package": "oat-sa/extension-tao-test",
+            "version": "dev-php8-migration",
+            "alias": "15.14.2",
+            "alias_normalized": "15.14.2.0"
         },
         {
             "package": "oat-sa/extension-tao-testqti",
