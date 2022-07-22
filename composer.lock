@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4ea4010d6ef0d88813134a17c35ae97b",
+    "content-hash": "67accfb5055c85f759f7fbd0373d2f2f",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -3765,26 +3765,30 @@
         },
         {
             "name": "oat-sa/extension-tao-itemqti",
-            "version": "v29.6.1",
+            "version": "v29.6.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti.git",
-                "reference": "832435400507fbb1d1f25afd39489ce124d425b7"
+                "reference": "83b95feb4ba3fcc93156c91fea3f5dc8a703cc40"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/832435400507fbb1d1f25afd39489ce124d425b7",
-                "reference": "832435400507fbb1d1f25afd39489ce124d425b7",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/83b95feb4ba3fcc93156c91fea3f5dc8a703cc40",
+                "reference": "83b95feb4ba3fcc93156c91fea3f5dc8a703cc40",
                 "shasum": ""
             },
             "require": {
                 "ext-simplexml": "*",
                 "naneau/semver": "~0.0.7",
                 "oat-sa/extension-tao-item": ">=11.20.1",
+                "oat-sa/extension-tao-test": ">=6.6.0",
                 "oat-sa/generis": ">=14.4.0",
-                "oat-sa/lib-tao-qti": "7.6.0",
+                "oat-sa/lib-tao-qti": "^7.6.0",
                 "oat-sa/oatbox-extension-installer": "~1.1||dev-master",
                 "oat-sa/tao-core": ">=50.18.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*"
             },
             "type": "tao-extension",
             "extra": {
@@ -3850,9 +3854,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/v29.6.1"
+                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/v29.6.5"
             },
-            "time": "2022-07-06T10:08:13+00:00"
+            "time": "2022-07-22T13:53:36+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pci",
@@ -9472,5 +9476,5 @@
     "platform-overrides": {
         "php": "7.2.5"
     },
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }
