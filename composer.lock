@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "405fe6b41a1f2669a96d77686cccd8ea",
+    "content-hash": "67af82bc4ab5f3ca193ac99ebaa8fafb",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -4829,16 +4829,16 @@
         },
         {
             "name": "oat-sa/extension-tao-outcomerds",
-            "version": "dev-master",
+            "version": "dev-php8-migration",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-outcomerds.git",
-                "reference": "33db90fc6f4742ba7c8544daa53e152f5e38c3a3"
+                "reference": "99bededcc0dbfd5b74abca9feec1c129cbfb922f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-outcomerds/zipball/33db90fc6f4742ba7c8544daa53e152f5e38c3a3",
-                "reference": "33db90fc6f4742ba7c8544daa53e152f5e38c3a3",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-outcomerds/zipball/99bededcc0dbfd5b74abca9feec1c129cbfb922f",
+                "reference": "99bededcc0dbfd5b74abca9feec1c129cbfb922f",
                 "shasum": ""
             },
             "require": {
@@ -4847,7 +4847,11 @@
                 "oat-sa/oatbox-extension-installer": "~1.1||dev-master",
                 "oat-sa/tao-core": ">=47.0.0"
             },
-            "default-branch": true,
+            "require-dev": {
+                "oat-sa/extension-tao-delivery": ">=15.10.0",
+                "oat-sa/generis": "dev-php8-migration as v16.0.0",
+                "oat-sa/tao-core": "dev-php8-migration as v51.0.0"
+            },
             "type": "tao-extension",
             "extra": {
                 "tao-extension-name": "taoOutcomeRds"
@@ -4874,9 +4878,9 @@
             ],
             "support": {
                 "issues": "https://github.com/oat-sa/extension-tao-outcomerds/issues",
-                "source": "https://github.com/oat-sa/extension-tao-outcomerds/tree/v8.2.0"
+                "source": "https://github.com/oat-sa/extension-tao-outcomerds/tree/php8-migration"
             },
-            "time": "2021-11-03T16:52:36+00:00"
+            "time": "2022-07-21T14:14:44+00:00"
         },
         {
             "name": "oat-sa/extension-tao-outcomeui",
@@ -11764,6 +11768,12 @@
             "version": "dev-php8-migration",
             "alias": "6.0",
             "alias_normalized": "6.0.0.0"
+        },
+        {
+            "package": "oat-sa/extension-tao-outcomerds",
+            "version": "dev-php8-migration",
+            "alias": "8.2.2",
+            "alias_normalized": "8.2.2.0"
         },
         {
             "package": "oat-sa/extension-tao-outcomeui",
