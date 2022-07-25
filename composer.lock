@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "67af82bc4ab5f3ca193ac99ebaa8fafb",
+    "content-hash": "0057e98fe87a624c7cde8174ba689547",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -4669,16 +4669,16 @@
         },
         {
             "name": "oat-sa/extension-tao-outcomekeyvalue",
-            "version": "dev-master",
+            "version": "dev-php8-migration",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-outcomekeyvalue.git",
-                "reference": "44d2fada3f0749dcbeffeb099e6946a5336feaad"
+                "reference": "c457b8dd3801ab57e347d8cd480bd4bc64fd2193"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-outcomekeyvalue/zipball/44d2fada3f0749dcbeffeb099e6946a5336feaad",
-                "reference": "44d2fada3f0749dcbeffeb099e6946a5336feaad",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-outcomekeyvalue/zipball/c457b8dd3801ab57e347d8cd480bd4bc64fd2193",
+                "reference": "c457b8dd3801ab57e347d8cd480bd4bc64fd2193",
                 "shasum": ""
             },
             "require": {
@@ -4687,7 +4687,11 @@
                 "oat-sa/oatbox-extension-installer": "~1.1||dev-master",
                 "oat-sa/tao-core": ">=47.0.0"
             },
-            "default-branch": true,
+            "require-dev": {
+                "oat-sa/extension-tao-delivery": ">=15.10.0",
+                "oat-sa/generis": "dev-php8-migration as v16.0.0",
+                "oat-sa/tao-core": "dev-php8-migration as v51.0.0"
+            },
             "type": "tao-extension",
             "extra": {
                 "tao-extension-name": "taoAltResultStorage"
@@ -4746,9 +4750,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-outcomekeyvalue/tree/v6.1.1"
+                "source": "https://github.com/oat-sa/extension-tao-outcomekeyvalue/tree/php8-migration"
             },
-            "time": "2021-08-30T13:57:06+00:00"
+            "time": "2022-07-25T11:35:30+00:00"
         },
         {
             "name": "oat-sa/extension-tao-outcomelti",
@@ -11762,6 +11766,12 @@
             "version": "dev-php8-migration",
             "alias": "13.2.2",
             "alias_normalized": "13.2.2.0"
+        },
+        {
+            "package": "oat-sa/extension-tao-outcomekeyvalue",
+            "version": "dev-php8-migration",
+            "alias": "6.1.3",
+            "alias_normalized": "6.1.3.0"
         },
         {
             "package": "oat-sa/extension-tao-outcomelti",
