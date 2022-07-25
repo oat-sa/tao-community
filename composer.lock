@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3858dbb34839a45db1457c0b4721add7",
+    "content-hash": "405fe6b41a1f2669a96d77686cccd8ea",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -4880,16 +4880,16 @@
         },
         {
             "name": "oat-sa/extension-tao-outcomeui",
-            "version": "dev-master",
+            "version": "dev-php8-migration",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-outcomeui.git",
-                "reference": "f9aa0177e7711ce5f031b4e56c9f059df665c0c1"
+                "reference": "b326052898fca668fd0ee52a15df1eed703add0b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-outcomeui/zipball/f9aa0177e7711ce5f031b4e56c9f059df665c0c1",
-                "reference": "f9aa0177e7711ce5f031b4e56c9f059df665c0c1",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-outcomeui/zipball/b326052898fca668fd0ee52a15df1eed703add0b",
+                "reference": "b326052898fca668fd0ee52a15df1eed703add0b",
                 "shasum": ""
             },
             "require": {
@@ -4903,7 +4903,10 @@
                 "oat-sa/oatbox-extension-installer": "~1.1||dev-master",
                 "oat-sa/tao-core": ">=49.2.2"
             },
-            "default-branch": true,
+            "require-dev": {
+                "oat-sa/generis": "dev-php8-migration as v16.0.0",
+                "oat-sa/tao-core": "dev-php8-migration as v51.0.0"
+            },
             "type": "tao-extension",
             "extra": {
                 "tao-extension-name": "taoOutcomeUi"
@@ -4962,9 +4965,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-outcomeui/tree/v11.1.3"
+                "source": "https://github.com/oat-sa/extension-tao-outcomeui/tree/php8-migration"
             },
-            "time": "2022-07-04T11:28:22+00:00"
+            "time": "2022-07-21T14:11:01+00:00"
         },
         {
             "name": "oat-sa/extension-tao-proctoring",
@@ -11761,6 +11764,12 @@
             "version": "dev-php8-migration",
             "alias": "6.0",
             "alias_normalized": "6.0.0.0"
+        },
+        {
+            "package": "oat-sa/extension-tao-outcomeui",
+            "version": "dev-php8-migration",
+            "alias": "11.1.6",
+            "alias_normalized": "11.1.6.0"
         },
         {
             "package": "oat-sa/extension-tao-proctoring",
