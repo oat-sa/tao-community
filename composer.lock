@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5ec5e75629bca555d49b2e2d79d5acea",
+    "content-hash": "2e8e105ed58a2e21c0733fee0f3cc094",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -5361,16 +5361,16 @@
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
-            "version": "dev-master",
+            "version": "dev-php8-migration",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti-previewer.git",
-                "reference": "fd3763dde2ebc0d4765c122ebfafc0ae8f52df41"
+                "reference": "b05524e525973290af8451d16af5b2852237b99b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti-previewer/zipball/fd3763dde2ebc0d4765c122ebfafc0ae8f52df41",
-                "reference": "fd3763dde2ebc0d4765c122ebfafc0ae8f52df41",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti-previewer/zipball/b05524e525973290af8451d16af5b2852237b99b",
+                "reference": "b05524e525973290af8451d16af5b2852237b99b",
                 "shasum": ""
             },
             "require": {
@@ -5386,7 +5386,11 @@
                 "oat-sa/tao-core": ">=47.0.0",
                 "qtism/qtism": "~0"
             },
-            "default-branch": true,
+            "require-dev": {
+                "oat-sa/extension-tao-testqti": "dev-php8-migration as v45.0.0",
+                "oat-sa/generis": "dev-php8-migration as v16.0.0",
+                "oat-sa/tao-core": "dev-php8-migration as v51.0.0"
+            },
             "type": "tao-extension",
             "extra": {
                 "tao-extension-name": "taoQtiTestPreviewer"
@@ -5417,9 +5421,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-testqti-previewer/tree/v3.6.1"
+                "source": "https://github.com/oat-sa/extension-tao-testqti-previewer/tree/php8-migration"
             },
-            "time": "2022-07-18T18:54:25+00:00"
+            "time": "2022-07-20T12:10:14+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testtaker",
@@ -11829,6 +11833,12 @@
             "version": "dev-php8-migration",
             "alias": "45.0",
             "alias_normalized": "45.0.0.0"
+        },
+        {
+            "package": "oat-sa/extension-tao-testqti-previewer",
+            "version": "dev-php8-migration",
+            "alias": "3.6.2",
+            "alias_normalized": "3.6.2.0"
         },
         {
             "package": "oat-sa/extension-tao-testtaker",
