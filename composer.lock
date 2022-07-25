@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0057e98fe87a624c7cde8174ba689547",
+    "content-hash": "5ec5e75629bca555d49b2e2d79d5acea",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -3683,16 +3683,16 @@
         },
         {
             "name": "oat-sa/extension-tao-delivery",
-            "version": "dev-master",
+            "version": "dev-php8-migration",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-delivery.git",
-                "reference": "d24d9d6b575340c78d69db395bd17dd6d73218f0"
+                "reference": "7b412de41d21379605d359aa1c494b3dd874c0ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-delivery/zipball/d24d9d6b575340c78d69db395bd17dd6d73218f0",
-                "reference": "d24d9d6b575340c78d69db395bd17dd6d73218f0",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-delivery/zipball/7b412de41d21379605d359aa1c494b3dd874c0ec",
+                "reference": "7b412de41d21379605d359aa1c494b3dd874c0ec",
                 "shasum": ""
             },
             "require": {
@@ -3701,7 +3701,10 @@
                 "oat-sa/oatbox-extension-installer": "~1.1||dev-master",
                 "oat-sa/tao-core": ">=48.23.0"
             },
-            "default-branch": true,
+            "require-dev": {
+                "oat-sa/generis": "dev-php8-migration as v16.0.0",
+                "oat-sa/tao-core": "dev-php8-migration as v51.0.0"
+            },
             "type": "tao-extension",
             "extra": {
                 "tao-extension-name": "taoDelivery"
@@ -3759,9 +3762,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-delivery/tree/v15.10.0"
+                "source": "https://github.com/oat-sa/extension-tao-delivery/tree/php8-migration"
             },
-            "time": "2022-03-08T12:15:42+00:00"
+            "time": "2022-07-25T11:44:13+00:00"
         },
         {
             "name": "oat-sa/extension-tao-delivery-rdf",
@@ -11712,6 +11715,12 @@
             "version": "dev-php8-migration",
             "alias": "8.0",
             "alias_normalized": "8.0.0.0"
+        },
+        {
+            "package": "oat-sa/extension-tao-delivery",
+            "version": "dev-php8-migration",
+            "alias": "15.10.2",
+            "alias_normalized": "15.10.2.0"
         },
         {
             "package": "oat-sa/extension-tao-delivery-rdf",
