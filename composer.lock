@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "46be4f56f4bb44d1d7d35fed9d005cbd",
+    "content-hash": "2acb929a8a59ea607f43445c388c7aac",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -3680,16 +3680,16 @@
         },
         {
             "name": "oat-sa/extension-tao-itemqti",
-            "version": "v29.2.2",
+            "version": "dev-hotfix/TR-4477/preview-custom-theme",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti.git",
-                "reference": "3a69c64b4e2a65c26edf2759933e8a075e63cb5c"
+                "reference": "f176bb5f7577adc80b964ab9c872754c34e7c696"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/3a69c64b4e2a65c26edf2759933e8a075e63cb5c",
-                "reference": "3a69c64b4e2a65c26edf2759933e8a075e63cb5c",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/f176bb5f7577adc80b964ab9c872754c34e7c696",
+                "reference": "f176bb5f7577adc80b964ab9c872754c34e7c696",
                 "shasum": ""
             },
             "require": {
@@ -3765,9 +3765,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/v29.2.2"
+                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/hotfix/TR-4477/preview-custom-theme"
             },
-            "time": "2022-05-06T09:02:01+00:00"
+            "time": "2022-07-29T11:30:44+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pci",
@@ -4736,16 +4736,16 @@
         },
         {
             "name": "oat-sa/extension-tao-testqti",
-            "version": "v44.14.1.3",
+            "version": "dev-hotfix/TR-4477/preview-custom-theme",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "f71d9000b38f5a251ff15c0fd5c6ac5abfbd5282"
+                "reference": "958b4992c8ea874be818885e4f1ef9a04a384bed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/f71d9000b38f5a251ff15c0fd5c6ac5abfbd5282",
-                "reference": "f71d9000b38f5a251ff15c0fd5c6ac5abfbd5282",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/958b4992c8ea874be818885e4f1ef9a04a384bed",
+                "reference": "958b4992c8ea874be818885e4f1ef9a04a384bed",
                 "shasum": ""
             },
             "require": {
@@ -4828,9 +4828,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/v44.14.1.3"
+                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/hotfix/TR-4477/preview-custom-theme"
             },
-            "time": "2022-06-22T15:18:49+00:00"
+            "time": "2022-07-29T11:28:25+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
@@ -9377,9 +9377,25 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [],
+    "aliases": [
+        {
+            "package": "oat-sa/extension-tao-itemqti",
+            "version": "dev-hotfix/TR-4477/preview-custom-theme",
+            "alias": "29.2.2",
+            "alias_normalized": "29.2.2.0"
+        },
+        {
+            "package": "oat-sa/extension-tao-testqti",
+            "version": "dev-hotfix/TR-4477/preview-custom-theme",
+            "alias": "44.14.1.3",
+            "alias_normalized": "44.14.1.3"
+        }
+    ],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "oat-sa/extension-tao-itemqti": 20,
+        "oat-sa/extension-tao-testqti": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
