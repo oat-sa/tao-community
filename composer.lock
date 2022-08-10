@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5c40bc8feee156deb9cdffad8bdbb6ca",
+    "content-hash": "feaf7a8a8bd303bfc66e1c90a7a98198",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -4218,16 +4218,16 @@
         },
         {
             "name": "oat-sa/extension-tao-lti",
-            "version": "v15.8.2",
+            "version": "v15.8.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-lti.git",
-                "reference": "d5ff83cd4c7481d538547b1387cff604d9dcd44d"
+                "reference": "57c7660d2ea680c58c337f6a2b3e35a9b5602281"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-lti/zipball/d5ff83cd4c7481d538547b1387cff604d9dcd44d",
-                "reference": "d5ff83cd4c7481d538547b1387cff604d9dcd44d",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-lti/zipball/57c7660d2ea680c58c337f6a2b3e35a9b5602281",
+                "reference": "57c7660d2ea680c58c337f6a2b3e35a9b5602281",
                 "shasum": ""
             },
             "require": {
@@ -4297,9 +4297,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-lti/tree/v15.8.2"
+                "source": "https://github.com/oat-sa/extension-tao-lti/tree/v15.8.3"
             },
-            "time": "2022-06-17T11:39:01+00:00"
+            "time": "2022-07-18T18:58:41+00:00"
         },
         {
             "name": "oat-sa/extension-tao-ltideliveryprovider",
@@ -9550,5 +9550,8 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "platform-overrides": {
+        "php": "7.4"
+    },
+    "plugin-api-version": "2.3.0"
 }

@@ -2,6 +2,10 @@
   "name": "oat-sa/tao-community",
   "license": "GPL-2.0-only",
   "config": {
+    "platform": {
+      "php": "7.4"
+    },
+    "preferred-install": "dist",
     "allow-plugins": {
       "oat-sa/oatbox-extension-installer": true,
       "oat-sa/composer-npm-bridge": true
@@ -47,7 +51,7 @@
         "oat-sa/extension-tao-outcomelti": "5.0.2",
         "oat-sa/extension-tao-delivery": "15.11.0",
         "oat-sa/extension-tao-delivery-rdf": "14.16.1",
-        "oat-sa/extension-tao-lti": "15.8.2",
+        "oat-sa/extension-tao-lti": "15.8.3",
         "oat-sa/extension-tao-ltideliveryprovider": "12.12.2",
         "oat-sa/extension-tao-revision": "10.4.0",
         "oat-sa/extension-tao-mediamanager": "12.30.0",
