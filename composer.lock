@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "92926721c285f1416c3a069da90b55e5",
+    "content-hash": "64f495043d66249f0c66eac1d5f2e8eb",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -85,13 +85,13 @@
             },
             "type": "library",
             "autoload": {
+                "files": [
+                    "clearbricks/init.php"
+                ],
                 "classmap": [
                     "core/",
                     "core/helpers/",
                     "core/util"
-                ],
-                "files": [
-                    "clearbricks/init.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -129,10 +129,6 @@
                 }
             ],
             "description": "ClearFw",
-            "support": {
-                "issues": "https://github.com/oat-sa/clearfw/issues",
-                "source": "https://github.com/oat-sa/clearfw/tree/master"
-            },
             "time": "2019-02-15T10:59:35+00:00"
         },
         {
@@ -176,10 +172,6 @@
                 }
             ],
             "description": "Convert JWK to PEM format.",
-            "support": {
-                "issues": "https://github.com/acodercat/php-jwk-to-pem/issues",
-                "source": "https://github.com/acodercat/php-jwk-to-pem/tree/0.0.3"
-            },
             "time": "2019-06-07T06:06:16+00:00"
         },
         {
@@ -297,10 +289,6 @@
                 "psr-7",
                 "psr7"
             ],
-            "support": {
-                "issues": "https://github.com/dflydev/dflydev-fig-cookies/issues",
-                "source": "https://github.com/dflydev/dflydev-fig-cookies/tree/v2.0.3"
-            },
             "time": "2020-12-07T16:40:59+00:00"
         },
         {
@@ -369,10 +357,6 @@
                 "docblock",
                 "parser"
             ],
-            "support": {
-                "issues": "https://github.com/doctrine/annotations/issues",
-                "source": "https://github.com/doctrine/annotations/tree/v1.6.1"
-            },
             "time": "2019-03-25T19:12:02+00:00"
         },
         {
@@ -455,10 +439,6 @@
                 "redis",
                 "xcache"
             ],
-            "support": {
-                "issues": "https://github.com/doctrine/cache/issues",
-                "source": "https://github.com/doctrine/cache/tree/1.10.x"
-            },
             "funding": [
                 {
                     "url": "https://www.doctrine-project.org/sponsorship.html",
@@ -538,10 +518,6 @@
                 "iterators",
                 "php"
             ],
-            "support": {
-                "issues": "https://github.com/doctrine/collections/issues",
-                "source": "https://github.com/doctrine/collections/tree/1.6.7"
-            },
             "time": "2020-07-27T17:53:49+00:00"
         },
         {
@@ -634,10 +610,6 @@
                 "sqlserver",
                 "sqlsrv"
             ],
-            "support": {
-                "issues": "https://github.com/doctrine/dbal/issues",
-                "source": "https://github.com/doctrine/dbal/tree/2.10"
-            },
             "time": "2020-01-04T12:56:21+00:00"
         },
         {
@@ -714,10 +686,6 @@
                 "event system",
                 "events"
             ],
-            "support": {
-                "issues": "https://github.com/doctrine/event-manager/issues",
-                "source": "https://github.com/doctrine/event-manager/tree/1.1.x"
-            },
             "funding": [
                 {
                     "url": "https://www.doctrine-project.org/sponsorship.html",
@@ -794,10 +762,6 @@
                 "parser",
                 "php"
             ],
-            "support": {
-                "issues": "https://github.com/doctrine/lexer/issues",
-                "source": "https://github.com/doctrine/lexer/tree/1.2.1"
-            },
             "funding": [
                 {
                     "url": "https://www.doctrine-project.org/sponsorship.html",
@@ -897,10 +861,6 @@
                 "migrations",
                 "php"
             ],
-            "support": {
-                "issues": "https://github.com/doctrine/migrations/issues",
-                "source": "https://github.com/doctrine/migrations/tree/3.0.1"
-            },
             "funding": [
                 {
                     "url": "https://www.doctrine-project.org/sponsorship.html",
@@ -977,12 +937,6 @@
                 "rdfa",
                 "sparql"
             ],
-            "support": {
-                "forum": "http://groups.google.com/group/easyrdf/",
-                "irc": "irc://chat.freenode.net/easyrdf",
-                "issues": "http://github.com/njh/easyrdf/issues",
-                "source": "https://github.com/easyrdf/easyrdf/tree/0.9.1"
-            },
             "time": "2015-02-27T09:45:49+00:00"
         },
         {
@@ -1031,10 +985,6 @@
                 "event-dispatcher",
                 "event-emitter"
             ],
-            "support": {
-                "issues": "https://github.com/igorw/evenement/issues",
-                "source": "https://github.com/igorw/evenement/tree/master"
-            },
             "time": "2017-07-17T17:39:19+00:00"
         },
         {
@@ -1059,12 +1009,12 @@
             },
             "type": "library",
             "autoload": {
-                "psr-0": {
-                    "HTMLPurifier": "library/"
-                },
                 "files": [
                     "library/HTMLPurifier.composer.php"
                 ],
+                "psr-0": {
+                    "HTMLPurifier": "library/"
+                },
                 "exclude-from-classmap": [
                     "/library/HTMLPurifier/Language/"
                 ]
@@ -1085,10 +1035,6 @@
             "keywords": [
                 "html"
             ],
-            "support": {
-                "issues": "https://github.com/ezyang/htmlpurifier/issues",
-                "source": "https://github.com/ezyang/htmlpurifier/tree/master"
-            },
             "time": "2020-06-29T00:56:53+00:00"
         },
         {
@@ -1130,10 +1076,6 @@
                 }
             ],
             "description": "JSONPath implementation for parsing, searching and flattening arrays",
-            "support": {
-                "issues": "https://github.com/FlowCommunications/JSONPath/issues",
-                "source": "https://github.com/FlowCommunications/JSONPath/tree/0.5.0"
-            },
             "abandoned": "softcreatr/jsonpath",
             "time": "2019-07-15T17:23:22+00:00"
         },
@@ -1188,10 +1130,6 @@
                 "log",
                 "logging"
             ],
-            "support": {
-                "issues": "https://github.com/fluent/fluent-logger-php/issues",
-                "source": "https://github.com/fluent/fluent-logger-php/tree/v1.0.1"
-            },
             "time": "2017-02-15T07:14:53+00:00"
         },
         {
@@ -1230,12 +1168,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1259,10 +1197,6 @@
                 "rest",
                 "web service"
             ],
-            "support": {
-                "issues": "https://github.com/guzzle/guzzle/issues",
-                "source": "https://github.com/guzzle/guzzle/tree/6.5"
-            },
             "time": "2020-06-16T21:01:06+00:00"
         },
         {
@@ -1425,10 +1359,6 @@
             "keywords": [
                 "LTI"
             ],
-            "support": {
-                "issues": "https://github.com/IMSGlobal/LTI-Tool-Provider-Library-PHP/issues",
-                "source": "https://github.com/IMSGlobal/LTI-Tool-Provider-Library-PHP/tree/3.0.2"
-            },
             "abandoned": true,
             "time": "2016-09-18T04:22:22+00:00"
         },
@@ -1497,10 +1427,6 @@
                 "json",
                 "schema"
             ],
-            "support": {
-                "issues": "https://github.com/justinrainbow/json-schema/issues",
-                "source": "https://github.com/justinrainbow/json-schema/tree/5.x.x"
-            },
             "time": "2017-05-16T21:06:09+00:00"
         },
         {
@@ -1784,10 +1710,6 @@
                 "JWS",
                 "jwt"
             ],
-            "support": {
-                "issues": "https://github.com/lcobucci/jwt/issues",
-                "source": "https://github.com/lcobucci/jwt/tree/3.3.3"
-            },
             "funding": [
                 {
                     "url": "https://github.com/lcobucci",
@@ -1933,10 +1855,6 @@
                 "sftp",
                 "storage"
             ],
-            "support": {
-                "issues": "https://github.com/thephpleague/flysystem/issues",
-                "source": "https://github.com/thephpleague/flysystem/tree/1.x"
-            },
             "funding": [
                 {
                     "url": "https://offset.earth/frankdejonge",
@@ -1994,10 +1912,6 @@
                 "adapter",
                 "memory"
             ],
-            "support": {
-                "issues": "https://github.com/thephpleague/flysystem-memory/issues",
-                "source": "https://github.com/thephpleague/flysystem-memory/tree/1.0.2"
-            },
             "time": "2019-05-30T21:34:13+00:00"
         },
         {
@@ -2126,10 +2040,6 @@
                 "secure",
                 "server"
             ],
-            "support": {
-                "issues": "https://github.com/thephpleague/oauth2-server/issues",
-                "source": "https://github.com/thephpleague/oauth2-server/tree/8.1.1"
-            },
             "funding": [
                 {
                     "url": "https://github.com/sephster",
@@ -2188,10 +2098,6 @@
                 "psr7",
                 "validation"
             ],
-            "support": {
-                "issues": "https://github.com/thephpleague/openapi-psr7-validator/issues",
-                "source": "https://github.com/thephpleague/openapi-psr7-validator/tree/master"
-            },
             "time": "2020-06-12T10:28:04+00:00"
         },
         {
@@ -2264,10 +2170,6 @@
                 "logging",
                 "psr-3"
             ],
-            "support": {
-                "issues": "https://github.com/Seldaek/monolog/issues",
-                "source": "https://github.com/Seldaek/monolog/tree/1.26.0"
-            },
             "funding": [
                 {
                     "url": "https://github.com/Seldaek",
@@ -2325,10 +2227,6 @@
                 "semver",
                 "versioning"
             ],
-            "support": {
-                "issues": "https://github.com/naneau/semver/issues",
-                "source": "https://github.com/naneau/semver/tree/get_original_version"
-            },
             "time": "2013-01-04T00:00:00+00:00"
         },
         {
@@ -2442,12 +2340,12 @@
             },
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "FastRoute\\": "src/"
-                },
                 "files": [
                     "src/functions.php"
-                ]
+                ],
+                "psr-4": {
+                    "FastRoute\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2464,10 +2362,6 @@
                 "router",
                 "routing"
             ],
-            "support": {
-                "issues": "https://github.com/nikic/FastRoute/issues",
-                "source": "https://github.com/nikic/FastRoute/tree/master"
-            },
             "time": "2018-02-13T20:26:39+00:00"
         },
         {
@@ -2647,10 +2541,6 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "support": {
-                "issues": "https://github.com/oat-sa/extension-pcisample/issues",
-                "source": "https://github.com/oat-sa/extension-pcisample/tree/v2.10.2"
-            },
             "time": "2020-08-06T07:55:33+00:00"
         },
         {
@@ -2693,10 +2583,6 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "support": {
-                "issues": "https://github.com/oat-sa/extension-tao-backoffice/issues",
-                "source": "https://github.com/oat-sa/extension-tao-backoffice/tree/master"
-            },
             "time": "2020-07-17T08:43:27+00:00"
         },
         {
@@ -2741,10 +2627,6 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "support": {
-                "issues": "https://github.com/oat-sa/extension-tao-clientdiag/issues",
-                "source": "https://github.com/oat-sa/extension-tao-clientdiag/tree/v7.8.1"
-            },
             "time": "2020-10-09T08:32:08+00:00"
         },
         {
@@ -2863,10 +2745,6 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "support": {
-                "issues": "https://github.com/oat-sa/extension-tao-dac-simple/issues",
-                "source": "https://github.com/oat-sa/extension-tao-dac-simple/tree/v6.8.3"
-            },
             "time": "2020-09-11T08:33:41+00:00"
         },
         {
@@ -3026,10 +2904,6 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "support": {
-                "issues": "https://github.com/oat-sa/extension-tao-eventlog/issues",
-                "source": "https://github.com/oat-sa/extension-tao-eventlog/tree/master"
-            },
             "time": "2020-07-17T09:10:19+00:00"
         },
         {
@@ -3104,11 +2978,6 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "support": {
-                "forum": "http://forum.taotesting.com",
-                "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-funcacl/tree/v6.0.1"
-            },
             "time": "2020-07-17T09:06:23+00:00"
         },
         {
@@ -3182,11 +3051,6 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "support": {
-                "forum": "http://forum.taotesting.com",
-                "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-group/tree/v6.6.2"
-            },
             "time": "2020-07-17T08:56:04+00:00"
         },
         {
@@ -3395,10 +3259,6 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "support": {
-                "issues": "https://github.com/oat-sa/extension-tao-itemqti-pci/issues",
-                "source": "https://github.com/oat-sa/extension-tao-itemqti-pci/tree/v6.9.1"
-            },
             "time": "2020-10-09T08:26:56+00:00"
         },
         {
@@ -3441,10 +3301,6 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "support": {
-                "issues": "https://github.com/oat-sa/extension-tao-itemqti-pic/issues",
-                "source": "https://github.com/oat-sa/extension-tao-itemqti-pic/tree/v5.6.5"
-            },
             "time": "2020-10-23T08:34:48+00:00"
         },
         {
@@ -3521,11 +3377,6 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "support": {
-                "forum": "http://forum.taotesting.com",
-                "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-lti/tree/v11.14.0"
-            },
             "time": "2020-10-23T08:21:54+00:00"
         },
         {
@@ -3600,11 +3451,6 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "support": {
-                "forum": "http://forum.taotesting.com",
-                "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-ltideliveryprovider/tree/v11.5.0"
-            },
             "time": "2020-11-06T09:26:23+00:00"
         },
         {
@@ -3796,11 +3642,6 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "support": {
-                "forum": "http://forum.taotesting.com",
-                "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-outcomekeyvalue/tree/v5.7.1"
-            },
             "time": "2020-07-17T08:52:04+00:00"
         },
         {
@@ -3870,11 +3711,6 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "support": {
-                "forum": "http://forum.taotesting.com",
-                "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-outcomelti/tree/v4.0.0"
-            },
             "time": "2020-09-11T08:24:27+00:00"
         },
         {
@@ -3918,10 +3754,6 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "support": {
-                "issues": "https://github.com/oat-sa/extension-tao-outcomerds/issues",
-                "source": "https://github.com/oat-sa/extension-tao-outcomerds/tree/master"
-            },
             "time": "2020-07-17T08:41:36+00:00"
         },
         {
@@ -4083,10 +3915,6 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "support": {
-                "issues": "https://github.com/oat-sa/extension-tao-revision/issues",
-                "source": "https://github.com/oat-sa/extension-tao-revision/tree/master"
-            },
             "time": "2020-07-16T07:25:46+00:00"
         },
         {
@@ -4142,10 +3970,6 @@
                 "queue",
                 "task"
             ],
-            "support": {
-                "issues": "https://github.com/oat-sa/extension-tao-task-queue/issues",
-                "source": "https://github.com/oat-sa/extension-tao-task-queue/tree/v5.5.1"
-            },
             "time": "2020-09-11T08:42:11+00:00"
         },
         {
@@ -4232,16 +4056,16 @@
         },
         {
             "name": "oat-sa/extension-tao-testqti",
-            "version": "v40.3.12.2",
+            "version": "40.3.12.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "aed16e107c4939eb812703b632d2ffc97c706365"
+                "reference": "9069fe97d2f6c97fc50c5c83f3e7db8eedeef978"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/aed16e107c4939eb812703b632d2ffc97c706365",
-                "reference": "aed16e107c4939eb812703b632d2ffc97c706365",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/9069fe97d2f6c97fc50c5c83f3e7db8eedeef978",
+                "reference": "9069fe97d2f6c97fc50c5c83f3e7db8eedeef978",
                 "shasum": ""
             },
             "require": {
@@ -4262,10 +4086,8 @@
             },
             "autoload": {
                 "psr-4": {
-                    "oat\\taoQtiTest\\test\\": "test",
-                    "oat\\taoQtiTest\\models\\": "models/classes/",
-                    "oat\\taoQtiTest\\helpers\\": "helpers",
-                    "oat\\taoQtiTest\\scripts\\": "scripts"
+                    "oat\\taoQtiTest\\": "",
+                    "oat\\taoQtiTest\\models\\": "models/classes/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -4314,7 +4136,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2022-04-25T13:14:41+00:00"
+            "time": "2022-08-18T14:42:01+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
@@ -4361,11 +4183,6 @@
                 "computer-based-assessment",
                 "previewer"
             ],
-            "support": {
-                "forum": "http://forum.taotesting.com",
-                "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-testqti-previewer/tree/v2.24.1"
-            },
             "time": "2021-01-06T16:03:07+00:00"
         },
         {
@@ -4439,11 +4256,6 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "support": {
-                "forum": "http://forum.taotesting.com",
-                "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-testtaker/tree/v7.7.3"
-            },
             "time": "2020-10-09T08:39:26+00:00"
         },
         {
@@ -4589,9 +4401,6 @@
                 }
             ],
             "description": "Jig PHP Utilities",
-            "support": {
-                "source": "https://github.com/oat-sa/jig/tree/master"
-            },
             "time": "2015-07-29T12:04:19+00:00"
         },
         {
@@ -4640,9 +4449,6 @@
                 "math parser",
                 "shunting-yard algorithm"
             ],
-            "support": {
-                "source": "https://github.com/oat-sa/lib-beeme/tree/master"
-            },
             "time": "2016-11-03T16:25:18+00:00"
         },
         {
@@ -4670,16 +4476,12 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "oat\\search\\test\\": "test",
-                    "oat\\search\\": "src"
+                    "oat\\search\\": "src",
+                    "oat\\search\\test\\": "test"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "Library provide an object search API",
-            "support": {
-                "issues": "https://github.com/oat-sa/lib-generis-search/issues",
-                "source": "https://github.com/oat-sa/lib-generis-search/tree/V2.1.2"
-            },
             "time": "2020-05-06T12:52:35+00:00"
         },
         {
@@ -4784,11 +4586,6 @@
                 "ms",
                 "time"
             ],
-            "support": {
-                "forum": "http://forum.taotesting.com",
-                "issues": "https://github.com/oat-sa/lib-tao-dtms/issues",
-                "source": "https://github.com/oat-sa/lib-tao-dtms/tree/master"
-            },
             "time": "2018-02-19T14:54:02+00:00"
         },
         {
@@ -4901,11 +4698,6 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "support": {
-                "forum": "http://forum.taotesting.com",
-                "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/lib-test-cat/tree/master"
-            },
             "time": "2018-08-02T11:59:59+00:00"
         },
         {
@@ -4962,11 +4754,6 @@
                 "computer-based-assessment",
                 "oatbox"
             ],
-            "support": {
-                "forum": "http://forum.taotesting.com",
-                "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/oatbox-extension-installer/tree/v1.2"
-            },
             "time": "2020-10-26T11:52:04+00:00"
         },
         {
@@ -5193,10 +4980,6 @@
                 "proxy pattern",
                 "service proxies"
             ],
-            "support": {
-                "issues": "https://github.com/Ocramius/ProxyManager/issues",
-                "source": "https://github.com/Ocramius/ProxyManager/tree/2.2.x"
-            },
             "time": "2019-08-10T08:37:15+00:00"
         },
         {
@@ -5246,11 +5029,6 @@
                 "pseudorandom",
                 "random"
             ],
-            "support": {
-                "email": "info@paragonie.com",
-                "issues": "https://github.com/paragonie/random_compat/issues",
-                "source": "https://github.com/paragonie/random_compat"
-            },
             "time": "2020-10-15T10:06:57+00:00"
         },
         {
@@ -5350,10 +5128,6 @@
                     "email": "mike.vanriel@naenius.com"
                 }
             ],
-            "support": {
-                "issues": "https://github.com/phpDocumentor/ReflectionDocBlock/issues",
-                "source": "https://github.com/phpDocumentor/ReflectionDocBlock/tree/release/2.x"
-            },
             "time": "2016-01-25T08:17:30+00:00"
         },
         {
@@ -5555,9 +5329,6 @@
                 "psr",
                 "psr-6"
             ],
-            "support": {
-                "source": "https://github.com/php-fig/cache/tree/master"
-            },
             "time": "2016-08-06T20:24:11+00:00"
         },
         {
@@ -5709,9 +5480,6 @@
                 "request",
                 "response"
             ],
-            "support": {
-                "source": "https://github.com/php-fig/http-message/tree/master"
-            },
             "time": "2016-08-06T14:39:51+00:00"
         },
         {
@@ -5765,10 +5533,6 @@
                 "response",
                 "server"
             ],
-            "support": {
-                "issues": "https://github.com/php-fig/http-server-handler/issues",
-                "source": "https://github.com/php-fig/http-server-handler/tree/master"
-            },
             "time": "2018-10-30T16:46:14+00:00"
         },
         {
@@ -5822,10 +5586,6 @@
                 "request",
                 "response"
             ],
-            "support": {
-                "issues": "https://github.com/php-fig/http-server-middleware/issues",
-                "source": "https://github.com/php-fig/http-server-middleware/tree/master"
-            },
             "time": "2018-10-30T17:12:04+00:00"
         },
         {
@@ -5873,9 +5633,6 @@
                 "psr",
                 "psr-3"
             ],
-            "support": {
-                "source": "https://github.com/php-fig/log/tree/1.1.3"
-            },
             "time": "2020-03-23T09:12:05+00:00"
         },
         {
@@ -5924,9 +5681,6 @@
                 "psr-16",
                 "simple-cache"
             ],
-            "support": {
-                "source": "https://github.com/php-fig/simple-cache/tree/master"
-            },
             "time": "2017-10-23T01:57:42+00:00"
         },
         {
@@ -6032,10 +5786,6 @@
                 }
             ],
             "description": "A polyfill for getallheaders.",
-            "support": {
-                "issues": "https://github.com/ralouphie/getallheaders/issues",
-                "source": "https://github.com/ralouphie/getallheaders/tree/develop"
-            },
             "time": "2019-03-08T08:55:37+00:00"
         },
         {
@@ -6090,12 +5840,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Ramsey\\Uuid\\": "src/"
-                },
                 "files": [
                     "src/functions.php"
-                ]
+                ],
+                "psr-4": {
+                    "Ramsey\\Uuid\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -6123,12 +5873,16 @@
                 "identifier",
                 "uuid"
             ],
-            "support": {
-                "issues": "https://github.com/ramsey/uuid/issues",
-                "rss": "https://github.com/ramsey/uuid/releases.atom",
-                "source": "https://github.com/ramsey/uuid",
-                "wiki": "https://github.com/ramsey/uuid/wiki"
-            },
+            "funding": [
+                {
+                    "url": "https://github.com/ramsey",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/ramsey/uuid",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-02-21T04:36:14+00:00"
         },
         {
@@ -6171,10 +5925,6 @@
                 "process",
                 "reactphp"
             ],
-            "support": {
-                "issues": "https://github.com/reactphp/child-process/issues",
-                "source": "https://github.com/reactphp/child-process/tree/v0.5.2"
-            },
             "time": "2018-01-18T14:53:06+00:00"
         },
         {
@@ -6217,10 +5967,6 @@
                 "asynchronous",
                 "event-loop"
             ],
-            "support": {
-                "issues": "https://github.com/reactphp/event-loop/issues",
-                "source": "https://github.com/reactphp/event-loop/tree/v1.1.1"
-            },
             "time": "2020-01-01T18:39:52+00:00"
         },
         {
@@ -6267,10 +6013,6 @@
                 "stream",
                 "writable"
             ],
-            "support": {
-                "issues": "https://github.com/reactphp/stream/issues",
-                "source": "https://github.com/reactphp/stream/tree/v1.1.1"
-            },
             "time": "2020-05-04T10:17:57+00:00"
         },
         {
@@ -6334,10 +6076,6 @@
                 "validation",
                 "validator"
             ],
-            "support": {
-                "issues": "https://github.com/Respect/Validation/issues",
-                "source": "https://github.com/Respect/Validation/tree/1.1.31"
-            },
             "time": "2019-05-28T06:10:06+00:00"
         },
         {
@@ -6390,10 +6128,6 @@
                 "multipart",
                 "parser"
             ],
-            "support": {
-                "issues": "https://github.com/Riverline/multipart-parser/issues",
-                "source": "https://github.com/Riverline/multipart-parser/tree/2.0.8"
-            },
             "time": "2020-01-24T09:39:24+00:00"
         },
         {
@@ -6443,10 +6177,6 @@
                 "operating system",
                 "os"
             ],
-            "support": {
-                "issues": "https://github.com/sinergi/php-browser-detector/issues",
-                "source": "https://github.com/sinergi/php-browser-detector/tree/6.1.3"
-            },
             "time": "2020-10-29T15:55:28+00:00"
         },
         {
@@ -6520,10 +6250,6 @@
                 "micro",
                 "router"
             ],
-            "support": {
-                "issues": "https://github.com/slimphp/Slim/issues",
-                "source": "https://github.com/slimphp/Slim/tree/3.x"
-            },
             "time": "2019-11-28T17:40:33+00:00"
         },
         {
@@ -6722,9 +6448,6 @@
                 "redlock",
                 "semaphore"
             ],
-            "support": {
-                "source": "https://github.com/symfony/lock/tree/v3.4.47"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -7108,9 +6831,6 @@
                 "portable",
                 "shim"
             ],
-            "support": {
-                "source": "https://github.com/symfony/polyfill-php70/tree/v1.20.0"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -7640,9 +7360,6 @@
                 "interoperability",
                 "standards"
             ],
-            "support": {
-                "source": "https://github.com/symfony/translation-contracts/tree/v2.3.0"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
