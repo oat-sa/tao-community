@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8800a2db4d8bcbacaf5b3cb5815d6bcc",
+    "content-hash": "14d4caaa409105b9ee4f249fadb15480",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -550,26 +550,27 @@
         },
         {
             "name": "doctrine/collections",
-            "version": "1.6.8",
+            "version": "1.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/collections.git",
-                "reference": "1958a744696c6bb3bb0d28db2611dc11610e78af"
+                "reference": "3fe77330f5591108bbf1315da7377a7e704ed8a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/collections/zipball/1958a744696c6bb3bb0d28db2611dc11610e78af",
-                "reference": "1958a744696c6bb3bb0d28db2611dc11610e78af",
+                "url": "https://api.github.com/repos/doctrine/collections/zipball/3fe77330f5591108bbf1315da7377a7e704ed8a0",
+                "reference": "3fe77330f5591108bbf1315da7377a7e704ed8a0",
                 "shasum": ""
             },
             "require": {
+                "doctrine/deprecations": "^0.5.3 || ^1",
                 "php": "^7.1.3 || ^8.0"
             },
             "require-dev": {
-                "doctrine/coding-standard": "^9.0",
-                "phpstan/phpstan": "^0.12",
+                "doctrine/coding-standard": "^9.0 || ^10.0",
+                "phpstan/phpstan": "^1.4.8",
                 "phpunit/phpunit": "^7.5 || ^8.5 || ^9.1.5",
-                "vimeo/psalm": "^4.2.1"
+                "vimeo/psalm": "^4.22"
             },
             "type": "library",
             "autoload": {
@@ -613,9 +614,9 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/collections/issues",
-                "source": "https://github.com/doctrine/collections/tree/1.6.8"
+                "source": "https://github.com/doctrine/collections/tree/1.7.2"
             },
-            "time": "2021-08-10T18:51:53+00:00"
+            "time": "2022-08-27T16:08:58+00:00"
         },
         {
             "name": "doctrine/dbal",
@@ -1521,16 +1522,16 @@
         },
         {
             "name": "guzzlehttp/promises",
-            "version": "1.5.1",
+            "version": "1.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/promises.git",
-                "reference": "fe752aedc9fd8fcca3fe7ad05d419d32998a06da"
+                "reference": "b94b2807d85443f9719887892882d0329d1e2598"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/fe752aedc9fd8fcca3fe7ad05d419d32998a06da",
-                "reference": "fe752aedc9fd8fcca3fe7ad05d419d32998a06da",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/b94b2807d85443f9719887892882d0329d1e2598",
+                "reference": "b94b2807d85443f9719887892882d0329d1e2598",
                 "shasum": ""
             },
             "require": {
@@ -1585,7 +1586,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/promises/issues",
-                "source": "https://github.com/guzzle/promises/tree/1.5.1"
+                "source": "https://github.com/guzzle/promises/tree/1.5.2"
             },
             "funding": [
                 {
@@ -1601,7 +1602,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-10-22T20:56:57+00:00"
+            "time": "2022-08-28T14:55:35+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -3217,16 +3218,16 @@
         },
         {
             "name": "oat-sa/composer-npm-bridge",
-            "version": "0.4.2",
+            "version": "v0.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/composer-npm-bridge.git",
-                "reference": "2d1fa0cc7f21477ceebb04ef444ee0924c475bd0"
+                "reference": "20bf3d9e740ab23787005bc0f884b7a9241e457b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/composer-npm-bridge/zipball/2d1fa0cc7f21477ceebb04ef444ee0924c475bd0",
-                "reference": "2d1fa0cc7f21477ceebb04ef444ee0924c475bd0",
+                "url": "https://api.github.com/repos/oat-sa/composer-npm-bridge/zipball/20bf3d9e740ab23787005bc0f884b7a9241e457b",
+                "reference": "20bf3d9e740ab23787005bc0f884b7a9241e457b",
                 "shasum": ""
             },
             "require": {
@@ -3278,9 +3279,9 @@
                 "plugin"
             ],
             "support": {
-                "source": "https://github.com/oat-sa/composer-npm-bridge/tree/v0.4.2"
+                "source": "https://github.com/oat-sa/composer-npm-bridge/tree/v0.4.4"
             },
-            "time": "2020-11-20T08:17:48+00:00"
+            "time": "2022-08-12T10:28:07+00:00"
         },
         {
             "name": "oat-sa/extension-pcisample",
@@ -5097,16 +5098,16 @@
         },
         {
             "name": "oat-sa/extension-tao-testqti",
-            "version": "v44.20.1",
+            "version": "v44.20.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "880651cbd34ef09c9a923977d32213e67a14110d"
+                "reference": "198ea2ce6846903663448dd31be0b215e635f8e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/880651cbd34ef09c9a923977d32213e67a14110d",
-                "reference": "880651cbd34ef09c9a923977d32213e67a14110d",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/198ea2ce6846903663448dd31be0b215e635f8e7",
+                "reference": "198ea2ce6846903663448dd31be0b215e635f8e7",
                 "shasum": ""
             },
             "require": {
@@ -5122,7 +5123,7 @@
                 "oat-sa/oatbox-extension-installer": "~1.1||dev-master",
                 "oat-sa/tao-core": ">=50.18.3",
                 "php": ">=7.2",
-                "qtism/qtism": ">=0.27.0"
+                "qtism/qtism": ">=0.28.1"
             },
             "type": "tao-extension",
             "extra": {
@@ -5189,22 +5190,22 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/v44.20.1"
+                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/v44.20.2"
             },
-            "time": "2022-08-22T11:13:24+00:00"
+            "time": "2022-08-26T08:17:13+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
-            "version": "v3.7.0",
+            "version": "v3.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti-previewer.git",
-                "reference": "314e3c45dc29c469cc69bc9a210b7ff753098be4"
+                "reference": "115ea730538936fa6e9614b88062ab70f90ba340"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti-previewer/zipball/314e3c45dc29c469cc69bc9a210b7ff753098be4",
-                "reference": "314e3c45dc29c469cc69bc9a210b7ff753098be4",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti-previewer/zipball/115ea730538936fa6e9614b88062ab70f90ba340",
+                "reference": "115ea730538936fa6e9614b88062ab70f90ba340",
                 "shasum": ""
             },
             "require": {
@@ -5250,9 +5251,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-testqti-previewer/tree/v3.7.0"
+                "source": "https://github.com/oat-sa/extension-tao-testqti-previewer/tree/v3.7.1"
             },
-            "time": "2022-08-02T14:55:27+00:00"
+            "time": "2022-08-22T16:46:05+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testtaker",
@@ -5742,21 +5743,21 @@
         },
         {
             "name": "oat-sa/lib-tao-qti",
-            "version": "v7.7.0",
+            "version": "7.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/lib-tao-qti.git",
-                "reference": "ddb058f1b40e6b1c49a4b43d3b8b87086e8c3ba6"
+                "reference": "dc4d856f5de147f9515804f7665038d59de923f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/lib-tao-qti/zipball/ddb058f1b40e6b1c49a4b43d3b8b87086e8c3ba6",
-                "reference": "ddb058f1b40e6b1c49a4b43d3b8b87086e8c3ba6",
+                "url": "https://api.github.com/repos/oat-sa/lib-tao-qti/zipball/dc4d856f5de147f9515804f7665038d59de923f1",
+                "reference": "dc4d856f5de147f9515804f7665038d59de923f1",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1",
-                "qtism/qtism": "0.28.0"
+                "qtism/qtism": "0.28.1"
             },
             "require-dev": {
                 "phpunit/phpunit": "<9.0.0"
@@ -5804,9 +5805,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/lib-tao-qti/tree/v7.7.0"
+                "source": "https://github.com/oat-sa/lib-tao-qti/tree/7.7.1"
             },
-            "time": "2022-07-18T14:06:14+00:00"
+            "time": "2022-08-25T12:42:18+00:00"
         },
         {
             "name": "oat-sa/lib-test-cat",
@@ -6785,16 +6786,16 @@
         },
         {
             "name": "qtism/qtism",
-            "version": "0.28.0",
+            "version": "0.28.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/qti-sdk.git",
-                "reference": "9a3280b6f6cdde175f6ffd9d36f5a7c8d12a8616"
+                "reference": "b3ba7862108fc048919a82de5368a321ec8ac022"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/qti-sdk/zipball/9a3280b6f6cdde175f6ffd9d36f5a7c8d12a8616",
-                "reference": "9a3280b6f6cdde175f6ffd9d36f5a7c8d12a8616",
+                "url": "https://api.github.com/repos/oat-sa/qti-sdk/zipball/b3ba7862108fc048919a82de5368a321ec8ac022",
+                "reference": "b3ba7862108fc048919a82de5368a321ec8ac022",
                 "shasum": ""
             },
             "require": {
@@ -6849,9 +6850,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/qti-sdk/tree/0.28.0"
+                "source": "https://github.com/oat-sa/qti-sdk/tree/0.28.1"
             },
-            "time": "2022-07-18T13:33:49+00:00"
+            "time": "2022-08-25T09:21:45+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -8164,16 +8165,16 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v5.4.11",
+            "version": "v5.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "6699fb0228d1bc35b12aed6dd5e7455457609ddd"
+                "reference": "2d67c1f9a1937406a9be3171b4b22250c0a11447"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/6699fb0228d1bc35b12aed6dd5e7455457609ddd",
-                "reference": "6699fb0228d1bc35b12aed6dd5e7455457609ddd",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/2d67c1f9a1937406a9be3171b4b22250c0a11447",
+                "reference": "2d67c1f9a1937406a9be3171b4b22250c0a11447",
                 "shasum": ""
             },
             "require": {
@@ -8208,7 +8209,7 @@
             "description": "Provides basic utilities for the filesystem",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/filesystem/tree/v5.4.11"
+                "source": "https://github.com/symfony/filesystem/tree/v5.4.12"
             },
             "funding": [
                 {
@@ -8224,7 +8225,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-07-20T13:00:38+00:00"
+            "time": "2022-08-02T13:48:16+00:00"
         },
         {
             "name": "symfony/lock",
@@ -9414,16 +9415,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v4.4.44",
+            "version": "v4.4.45",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "c2b28c10fb3b7ac67bafa7b8f952cd83f35acde2"
+                "reference": "aeccc4dc52a9e634f1d1eebeb21eacfdcff1053d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/c2b28c10fb3b7ac67bafa7b8f952cd83f35acde2",
-                "reference": "c2b28c10fb3b7ac67bafa7b8f952cd83f35acde2",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/aeccc4dc52a9e634f1d1eebeb21eacfdcff1053d",
+                "reference": "aeccc4dc52a9e634f1d1eebeb21eacfdcff1053d",
                 "shasum": ""
             },
             "require": {
@@ -9465,7 +9466,7 @@
             "description": "Loads and dumps YAML files",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/yaml/tree/v4.4.44"
+                "source": "https://github.com/symfony/yaml/tree/v4.4.45"
             },
             "funding": [
                 {
@@ -9481,7 +9482,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-06-27T13:16:42+00:00"
+            "time": "2022-08-02T15:47:23+00:00"
         },
         {
             "name": "webmozart/assert",
@@ -9553,5 +9554,5 @@
     "platform-overrides": {
         "php": "7.4"
     },
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.0.0"
 }
