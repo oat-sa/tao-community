@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "14d4caaa409105b9ee4f249fadb15480",
+    "content-hash": "6ea816b09edac3022733a76bf7851ead",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -5926,7 +5926,7 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "v50.21.5",
+            "version": "dev-release-2022-09",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
@@ -9544,9 +9544,18 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [],
+    "aliases": [
+        {
+            "package": "oat-sa/tao-core",
+            "version": "dev-release-2022-09",
+            "alias": "50.21.5",
+            "alias_normalized": "50.21.5.0"
+        }
+    ],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "oat-sa/tao-core": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
