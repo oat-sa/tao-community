@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6ea816b09edac3022733a76bf7851ead",
+    "content-hash": "df86975e83f82eb8c3497af206d7fc64",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -5926,16 +5926,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "dev-release-2022-09",
+            "version": "v50.21.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "260b5a445f84569ce41927f3e407f7a603b8b8d1"
+                "reference": "153a8e0eda66279155d3bfa5ba6ed71579199100"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/260b5a445f84569ce41927f3e407f7a603b8b8d1",
-                "reference": "260b5a445f84569ce41927f3e407f7a603b8b8d1",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/153a8e0eda66279155d3bfa5ba6ed71579199100",
+                "reference": "153a8e0eda66279155d3bfa5ba6ed71579199100",
                 "shasum": ""
             },
             "require": {
@@ -6037,9 +6037,9 @@
             "support": {
                 "forum": "https://forum.taocloud.org",
                 "issues": "https://github.com/oat-sa/tao-core/issues",
-                "source": "https://github.com/oat-sa/tao-core/tree/release-2022-09"
+                "source": "https://github.com/oat-sa/tao-core/tree/v50.21.5.1"
             },
-            "time": "2022-09-08T10:25:36+00:00"
+            "time": "2022-09-08T13:47:13+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -9544,18 +9544,9 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [
-        {
-            "package": "oat-sa/tao-core",
-            "version": "dev-release-2022-09",
-            "alias": "50.21.5",
-            "alias_normalized": "50.21.5.0"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "oat-sa/tao-core": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
@@ -9563,5 +9554,5 @@
     "platform-overrides": {
         "php": "7.4"
     },
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.0.0"
 }
