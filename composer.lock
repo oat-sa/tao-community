@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "76627849e2439fe4997afbc464f64de7",
+    "content-hash": "2a6cc6d8b01495c1b7b48a6bc2ee293d",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -4736,7 +4736,7 @@
         },
         {
             "name": "oat-sa/extension-tao-testqti",
-            "version": "v44.14.1.4",
+            "version": "dev-release-44.14.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
@@ -9377,9 +9377,18 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [],
+    "aliases": [
+        {
+            "package": "oat-sa/extension-tao-testqti",
+            "version": "dev-release-44.14.1.5",
+            "alias": "44.14.1.5",
+            "alias_normalized": "44.14.1.5"
+        }
+    ],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "oat-sa/extension-tao-testqti": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
