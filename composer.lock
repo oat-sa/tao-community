@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9a0717f0605d509abbda28fa2efd0090",
+    "content-hash": "baa52a3e24f8e1033355dd954c02dcb7",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -84,13 +84,13 @@
             },
             "type": "library",
             "autoload": {
+                "files": [
+                    "clearbricks/init.php"
+                ],
                 "classmap": [
                     "core/",
                     "core/helpers/",
                     "core/util"
-                ],
-                "files": [
-                    "clearbricks/init.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -837,12 +837,12 @@
             },
             "type": "library",
             "autoload": {
-                "psr-0": {
-                    "HTMLPurifier": "library/"
-                },
                 "files": [
                     "library/HTMLPurifier.composer.php"
                 ],
+                "psr-0": {
+                    "HTMLPurifier": "library/"
+                },
                 "exclude-from-classmap": [
                     "/library/HTMLPurifier/Language/"
                 ]
@@ -996,12 +996,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1054,12 +1054,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Promise\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\Promise\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1114,12 +1114,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Psr7\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\Psr7\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1654,12 +1654,12 @@
             },
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "FastRoute\\": "src/"
-                },
                 "files": [
                     "src/functions.php"
-                ]
+                ],
+                "psr-4": {
+                    "FastRoute\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2324,9 +2324,9 @@
             },
             "autoload": {
                 "psr-4": {
+                    "oat\\taoItems\\test\\": "test",
                     "oat\\taoItems\\model\\": "models/classes/",
                     "oat\\taoItems\\helpers\\": "helpers",
-                    "oat\\taoItems\\test\\": "test",
                     "oat\\taoItems\\scripts\\": "scripts"
                 }
             },
@@ -3241,8 +3241,8 @@
             },
             "autoload": {
                 "psr-4": {
-                    "oat\\taoTests\\models\\": "models/classes/",
                     "oat\\taoTests\\test\\": "test",
+                    "oat\\taoTests\\models\\": "models/classes/",
                     "oat\\taoTests\\scripts\\": "scripts"
                 }
             },
@@ -3325,9 +3325,9 @@
             },
             "autoload": {
                 "psr-4": {
+                    "oat\\taoQtiTest\\test\\": "test",
                     "oat\\taoQtiTest\\models\\": "models/classes/",
                     "oat\\taoQtiTest\\helpers\\": "helpers",
-                    "oat\\taoQtiTest\\test\\": "test",
                     "oat\\taoQtiTest\\scripts\\": "scripts"
                 }
             },
@@ -3545,18 +3545,18 @@
                 "tao-extension-name": "generis"
             },
             "autoload": {
-                "psr-4": {
-                    "oat\\generis\\persistence\\": "common/persistence/",
-                    "oat\\generis\\model\\": "core/",
-                    "oat\\generis\\Helper\\": "helpers/",
-                    "oat\\oatbox\\": "common/oatbox/",
-                    "oat\\generis\\test\\": "test/",
-                    "oat\\generis\\scripts\\": "scripts/"
-                },
                 "files": [
                     "common/legacy/class.LegacyAutoLoader.php",
                     "common/constants.php"
-                ]
+                ],
+                "psr-4": {
+                    "oat\\oatbox\\": "common/oatbox/",
+                    "oat\\generis\\test\\": "test/",
+                    "oat\\generis\\model\\": "core/",
+                    "oat\\generis\\Helper\\": "helpers/",
+                    "oat\\generis\\scripts\\": "scripts/",
+                    "oat\\generis\\persistence\\": "common/persistence/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -3715,8 +3715,8 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "oat\\search\\test\\": "test",
-                    "oat\\search\\": "src"
+                    "oat\\search\\": "src",
+                    "oat\\search\\test\\": "test"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3803,12 +3803,12 @@
             },
             "type": "library",
             "autoload": {
-                "classmap": [
-                    "helpers/"
-                ],
                 "psr-4": {
                     "qti\\customOperators\\": "model/operators/"
-                }
+                },
+                "classmap": [
+                    "helpers/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -3947,16 +3947,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "v45.2.1",
+            "version": "v45.2.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "19614520e42fb19d4f30516332339cd259dcbda6"
+                "reference": "bc3e0a2f95ba703db84dd11b79852540f83d0847"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/19614520e42fb19d4f30516332339cd259dcbda6",
-                "reference": "19614520e42fb19d4f30516332339cd259dcbda6",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/bc3e0a2f95ba703db84dd11b79852540f83d0847",
+                "reference": "bc3e0a2f95ba703db84dd11b79852540f83d0847",
                 "shasum": ""
             },
             "require": {
@@ -3991,17 +3991,17 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "oat\\tao\\controller\\": "controller",
-                    "oat\\tao\\model\\": "models/classes/",
-                    "oat\\tao\\helpers\\": "helpers",
-                    "oat\\tao\\test\\": "test",
-                    "oat\\tao\\scripts\\": "scripts",
-                    "oat\\tao\\install\\": "install"
-                },
                 "files": [
                     "includes/globalHelpers.php"
-                ]
+                ],
+                "psr-4": {
+                    "oat\\tao\\test\\": "test",
+                    "oat\\tao\\model\\": "models/classes/",
+                    "oat\\tao\\helpers\\": "helpers",
+                    "oat\\tao\\install\\": "install",
+                    "oat\\tao\\scripts\\": "scripts",
+                    "oat\\tao\\controller\\": "controller"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -4048,7 +4048,7 @@
                 "TAO",
                 "computer-based-assessment"
             ],
-            "time": "2020-07-31T09:55:16+00:00"
+            "time": "2022-09-26T11:24:16+00:00"
         },
         {
             "name": "ocramius/package-versions",
@@ -4814,12 +4814,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Ramsey\\Uuid\\": "src/"
-                },
                 "files": [
                     "src/functions.php"
-                ]
+                ],
+                "psr-4": {
+                    "Ramsey\\Uuid\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -4846,6 +4846,16 @@
                 "guid",
                 "identifier",
                 "uuid"
+            ],
+            "funding": [
+                {
+                    "url": "https://github.com/ramsey",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/ramsey/uuid",
+                    "type": "tidelift"
+                }
             ],
             "time": "2020-02-21T04:36:14+00:00"
         },
@@ -5459,12 +5469,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Ctype\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Ctype\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -5537,12 +5547,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Intl\\Idn\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\Idn\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -5619,12 +5629,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Intl\\Normalizer\\": ""
-                },
                 "files": [
                     "bootstrap.php"
                 ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\Normalizer\\": ""
+                },
                 "classmap": [
                     "Resources/stubs"
                 ]
@@ -5700,12 +5710,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Mbstring\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -5839,12 +5849,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php72\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php72\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -5912,12 +5922,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php73\\": ""
-                },
                 "files": [
                     "bootstrap.php"
                 ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php73\\": ""
+                },
                 "classmap": [
                     "Resources/stubs"
                 ]
