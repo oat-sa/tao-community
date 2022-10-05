@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a3d76c689ba67beb54d6ad0ecd6a863a",
+    "content-hash": "820bf6f1cb73d2fdde06dcec64b2b088",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -4026,16 +4026,16 @@
         },
         {
             "name": "oat-sa/extension-tao-itemqti",
-            "version": "v29.12.4",
+            "version": "dev-release-2022-10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti.git",
-                "reference": "4616369a83d1eb7d6326eb5159386bb511712283"
+                "reference": "dbaaab332199a3011a3ee9ee5d4f8a77f5e72851"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/4616369a83d1eb7d6326eb5159386bb511712283",
-                "reference": "4616369a83d1eb7d6326eb5159386bb511712283",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/dbaaab332199a3011a3ee9ee5d4f8a77f5e72851",
+                "reference": "dbaaab332199a3011a3ee9ee5d4f8a77f5e72851",
                 "shasum": ""
             },
             "require": {
@@ -4115,9 +4115,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/v29.12.4"
+                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/release-2022-10"
             },
-            "time": "2022-08-31T07:05:42+00:00"
+            "time": "2022-10-05T09:46:02+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pci",
@@ -9547,6 +9547,12 @@
     "packages-dev": [],
     "aliases": [
         {
+            "package": "oat-sa/extension-tao-itemqti",
+            "version": "dev-release-2022-10",
+            "alias": "29.12.4",
+            "alias_normalized": "29.12.4.0"
+        },
+        {
             "package": "oat-sa/tao-core",
             "version": "dev-release-2022-10",
             "alias": "50.23.0",
@@ -9555,7 +9561,8 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "oat-sa/tao-core": 20
+        "oat-sa/tao-core": 20,
+        "oat-sa/extension-tao-itemqti": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
