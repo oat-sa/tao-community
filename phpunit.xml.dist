@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd"
+         bootstrap="./generis/test/bootstrap.php">
+    <testsuites>
+        <testsuite name="unit">
+            <directory>./*/test/unit</directory>
+        </testsuite>
+    </testsuites>
+    <coverage cacheDirectory="/tmp">
+        <include>
+            <directory suffix=".php">./*</directory>
+        </include>
+        <exclude>
+            <directory suffix=".php">./*/config</directory>
+            <directory suffix=".php">./*/includes</directory>
+            <directory suffix=".php">./*/locales</directory>
+            <directory suffix=".php">./*/migrations</directory>
+            <directory suffix=".php">./*/scripts</directory>
+            <directory suffix=".php">./*/test</directory>
+            <file>./*/manifest.php</file>
+        </exclude>
+    </coverage>
+</phpunit>

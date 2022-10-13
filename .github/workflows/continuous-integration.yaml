@@ -1,0 +1,55 @@
+name: Continuous integration
+
+on:
+  push:
+    branches: [ master, release* ]
+  pull_request:
+    branches: [ master, release* ]
+
+jobs:
+  ci:
+    runs-on: ${{ matrix.operating-system }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        operating-system: [ ubuntu-latest ]
+        php-version: [ '7.4', '8.0', '8.1' ]
+        include:
+          - php-version: '7.4'
+            coverage: true
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-version }}
+
+      - name: Validate composer.json and composer.lock
+        run: composer validate
+
+      - name: Cache Composer packages
+        id: composer-cache
+        uses: actions/cache@v3
+        with:
+          path: vendor
+          key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-php-
+
+      - name: Disable NPM bridge
+        run: composer config allow-plugins.oat-sa/composer-npm-bridge false --no-interaction --no-plugins
+
+      - name: Install dependencies
+        run: composer install --no-progress
+
+      - name: Run tests
+        run: ./test.sh {{ matrix.coverage && '-c' }}
+
+      - name: Merge coverage reports
+        run: php -dxdebug.mode=coverage vendor/bin/phpunit-merger coverage coverage coverage.xml
+        if: ${{ matrix.coverage }}
+
+      - uses: codecov/codecov-action@v3
+        if: ${{ matrix.coverage }}
