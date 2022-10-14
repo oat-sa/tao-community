@@ -25,7 +25,7 @@ fi
 for d in */; do
   d=${d%?}
 
-  if [[ "$d" == 'vendor' ]]; then
+  if [[ "$d" == 'vendor' || "$d" == 'coverage' ]]; then
     continue
   fi
 
