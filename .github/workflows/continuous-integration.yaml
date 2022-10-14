@@ -55,7 +55,7 @@ jobs:
         continue-on-error: true
 
       - name: Merge coverage reports
-        run: php -dxdebug.mode=coverage vendor/bin/phpunit-merger coverage coverage --html=clover clover.xml
+        run: php -dxdebug.mode=coverage -derror_reporting=24575 vendor/bin/phpunit-merger coverage coverage --html=clover clover.xml
         if: ${{ matrix.coverage }}
 
       - name: Generate a coverage badge
