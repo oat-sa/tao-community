@@ -21,4 +21,7 @@
             <file>./*/manifest.php</file>
         </exclude>
     </coverage>
+    <logging>
+        <junit outputFile="log/*/junit.xml"/>
+    </logging>
 </phpunit>

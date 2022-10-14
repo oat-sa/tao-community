@@ -65,6 +65,12 @@ jobs:
           push_badge: true
           repo_token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Publish Test Report
+        uses: mikepenz/action-junit-report@v3
+        if: ${{ matrix.coverage }}
+        with:
+          report_paths: 'log/*/junit.xml'
+
       - name: Deploy coverage reports
         id: deploy
         uses: nwtgck/actions-netlify@v1
