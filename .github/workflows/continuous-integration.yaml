@@ -70,6 +70,7 @@ jobs:
         if: ${{ matrix.coverage }}
         with:
           add: coverage_badge.svg
+          commit: --signoff
           message: 'ci: add updated coverage_badge.xml'
 
       - name: Publish a test report
