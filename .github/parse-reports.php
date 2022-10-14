@@ -7,5 +7,5 @@ preg_match_all($pattern, file_get_contents('/tmp/failures.txt'), $matches, PREG_
 $i = 0;
 foreach ($matches as $match) {
     $i++;
-    echo "$i. **{$match['details']}**\n{$match['name']} {$match['message']}\n\n";
+    echo "$i. **{$match['details']}**\n{$match['name']} {$match['message']}\n";
 }

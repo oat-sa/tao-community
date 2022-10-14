@@ -18,7 +18,7 @@ jobs:
         php-version: [ '7.4', '8.0', '8.1' ]
         include:
           - php-version: '7.4'
-            coverage: false
+            coverage: true
 
     steps:
       - uses: actions/checkout@v3
@@ -60,11 +60,9 @@ jobs:
           report_paths: 'log/*/junit.xml'
 
       - name: Parse the the reports
-        uses: mathiasvr/command-output@v1
         id: report
         if: ${{ steps.tests.outcome }} != 'success'
-        with:
-          run: grep testFailed log/*/teamcity.txt -R > /tmp/failures.txt
+        run: grep testFailed log/*/teamcity.txt -R > /tmp/failures.txt
 
       - name: Format the test report
         id: failures
@@ -83,8 +81,8 @@ jobs:
             |💯 Total|✅ Passed|⏭️ Skipped|❌ Failed|
             |-|-|-|-|
             |${{ steps.junit.outputs.total }}|${{ steps.junit.outputs.passed }}|${{ steps.junit.outputs.skipped }}|${{ steps.junit.outputs.failed }}|
-            ${{ steps.failures.outputs.formatted }}
             EOF
+            echo "${{ steps.failures.outputs.formatted }}"
 
       - uses: peter-evans/find-comment@v2
         id: summary-comment
@@ -93,7 +91,7 @@ jobs:
           comment-author: 'github-actions[bot]'
           body-includes: Summary ${{ matrix.php-version }}
 
-      - name: Create or update comment
+      - name: Create or update summary comment
         uses: peter-evans/create-or-update-comment@v2
         with:
           comment-id: ${{ steps.summary-comment.outputs.comment-id }}
@@ -133,6 +131,21 @@ jobs:
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+
+      - uses: peter-evans/find-comment@v2
+        id: coverage-comment
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          comment-author: 'github-actions[bot]'
+          body-includes: Coverage report
+
+      - name: Create or update coverage-report comment
+        uses: peter-evans/create-or-update-comment@v2
+        with:
+          comment-id: ${{ steps.coverage-comment.outputs.comment-id }}
+          issue-number: ${{ github.event.pull_request.number }}
+          body: '[🔗 Coverage report](${{ steps.deploy.outputs.deploy-url }})'
+          edit-mode: replace
 
       - name: Job summary
         run: echo "${{ steps.summary.outputs.stdout }}" >> $GITHUB_STEP_SUMMARY
