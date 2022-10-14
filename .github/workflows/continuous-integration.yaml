@@ -56,7 +56,7 @@ jobs:
         continue-on-error: true
 
       - name: Merge coverage reports
-        run: php -dxdebug.mode=coverage -derror_reporting=24575 vendor/bin/phpunit-merger coverage coverage --html=clover clover.xml
+        run: vendor/bin/phpunit-merger coverage coverage --html=clover clover.xml
         if: ${{ matrix.coverage }}
 
       - name: Generate a coverage badge
@@ -81,10 +81,24 @@ jobs:
           report_paths: 'log/*/junit.xml'
           annotate_only: true
 
+      - name: Job summary
+        id: summary
+        if: ${{ matrix.coverage }}
+        run: |
+          cat << EOF
+          ### ${{ steps.tests.outcome != 'success' && '❌ Some tests have failed' || '✅ All tests have passed' }} \n\
+          ### [Coverage report]()
+          ### Summary
+          |Total|Passed|Skipped|Failed|
+          |-|-|-|-|
+          |${{steps.junit.outputs.total}}|${{steps.junit.outputs.passed}}|${{steps.junit.outputs.skipped}}|${{steps.junit.outputs.failed}}|
+          EOF
+          echo ${{ steps.tests.outcome != 'success' && '### Details\n${{ steps.junit.outputs.stdout }}' || '' }}'
+
       - name: Deploy coverage reports
         id: deploy
         uses: nwtgck/actions-netlify@v1
-        if: ${{ matrix.coverage }}
+        if: false
         with:
           publish-dir: ./clover
           alias: deploy-preview-${{ github.event.number }}
@@ -102,7 +116,7 @@ jobs:
         with:
           issue-number: ${{ github.event.pull_request.number }}
           comment-author: 'github-actions[bot]'
-          body-includes: Test results
+          body-includes: Summary
 
       - name: Create or update comment
         uses: peter-evans/create-or-update-comment@v2
@@ -110,17 +124,12 @@ jobs:
         with:
           comment-id: ${{ steps.fc.outputs.comment-id }}
           issue-number: ${{ github.event.pull_request.number }}
-          body: |
-            ### ${{ steps.tests.outcome != 'success' && '❌ Some tests have failed' || '✅ All tests have passed' }}
-            ### [Coverage report](${{ steps.deploy.outputs.deploy-url }})
-            ### Summary
-            |Total|Passed|Skipped|Failed|
-            |-|-|-|=|
-            |${{steps.junit.outputs.total}}|${{steps.junit.outputs.passed}}|${{steps.junit.outputs.skipped}}|${{steps.junit.outputs.failed}}|
-            ${{ steps.tests.outcome != 'success'
-            && '### Details\n${{steps.junit.outputs.stdout}}'
-            || '' }}
+          body: ${{ steps.summary.outputs.stdout }}
           edit-mode: replace
+
+      - name: Job summary
+        if: ${{ matrix.coverage }}
+        run: echo ${{ steps.summary.outputs.stdout }} >> $GITHUB_STEP_SUMMARY
 
       - name: Fail the job if tests weren't OK
         run: exit 1
