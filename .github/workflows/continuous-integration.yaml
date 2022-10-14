@@ -64,12 +64,6 @@ jobs:
         if: ${{ steps.tests.outcome }} != 'success'
         run: grep testFailed log/*/teamcity.txt -R > /tmp/failures.txt
 
-      - name: Format the test report
-        id: failures
-        if: ${{ steps.tests.outcome }} != 'success'
-        run: |
-          echo ::set-output name=formatted::$(php ./.github/parse-reports.php)
-
       - name: Job summary
         uses: mathiasvr/command-output@v1
         id: summary
@@ -81,7 +75,7 @@ jobs:
             |-|-|-|-|
             |${{ steps.junit.outputs.total }}|${{ steps.junit.outputs.passed }}|${{ steps.junit.outputs.skipped }}|${{ steps.junit.outputs.failed }}|
             EOF
-            echo -e "${{ steps.failures.outputs.formatted }}"
+            php ./.github/parse-reports.php
 
       - uses: peter-evans/find-comment@v2
         id: summary-comment
