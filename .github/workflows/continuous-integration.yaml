@@ -74,6 +74,7 @@ jobs:
 
       - name: Publish a test report
         uses: mikepenz/action-junit-report@v3
+        id: junit
         if: ${{ matrix.coverage }}
         with:
           report_paths: 'log/*/junit.xml'
@@ -88,7 +89,7 @@ jobs:
           alias: deploy-preview-${{ github.event.number }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
           enable-pull-request-comment: false
-          enable-commit-comment: true
+          enable-commit-comment: false
           production-branch: master
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
@@ -109,10 +110,15 @@ jobs:
           comment-id: ${{ steps.fc.outputs.comment-id }}
           issue-number: ${{ github.event.pull_request.number }}
           body: |
-            # Test results
-            ${{ steps.tests.outcome != 'success' && '❌ Some tests have failed. See the build log for details' || '✅' }}
-            
-            [_Coverage report_](${{ steps.deploy.outputs.deploy-url }})
+            ### ${{ steps.tests.outcome != 'success' && '❌ Some tests have failed' || '✅ All tests have passed' }}
+            ### [Coverage report](${{ steps.deploy.outputs.deploy-url }})
+            ### Summary
+            |Total|Passed|Skipped|Failed|
+            |-|-|-|=|
+            |${{steps.junit.outputs.total}}|${{steps.junit.outputs.passed}}|${{steps.junit.outputs.skipped}}|${{steps.junit.outputs.failed}}|
+            ${{ steps.tests.outcome != 'success'
+            && '### Details\n${{steps.junit.outputs.stdout}}'
+            || '' }}
           edit-mode: replace
 
       - name: Fail the job if tests weren't OK
