@@ -1,6 +1,6 @@
 # tao-community
 
-![coverage](badge.svg)
+![coverage](coverage_badge.svg)
 
 ## Running tests
 

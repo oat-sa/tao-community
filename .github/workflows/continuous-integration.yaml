@@ -9,7 +9,7 @@ on:
 jobs:
   ci:
     runs-on: ${{ matrix.operating-system }}
-    if: "!contains(github.event.head_commit.message, '[ci]')"
+    if: "!contains(github.event.head_commit.message, 'ci: add updated coverage_badge.xml')"
 
     strategy:
       fail-fast: false
@@ -63,16 +63,21 @@ jobs:
         uses: timkrase/phpunit-coverage-badge@v1.2.0
         if: ${{ matrix.coverage }}
         with:
-          push_badge: true
           repo_token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Publish Test Report
+      - name: Push a coverage badge
+        uses: EndBug/add-and-commit@v9
+        if: ${{ matrix.coverage }}
+        with:
+          add: coverage_badge.svg
+          message: 'ci: add updated coverage_badge.xml'
+
+      - name: Publish a test report
         uses: mikepenz/action-junit-report@v3
         if: ${{ matrix.coverage }}
         with:
           report_paths: 'log/*/junit.xml'
-          job_summary: true
-          detailed_summary: true
+          annotate_only: true
 
       - name: Deploy coverage reports
         id: deploy
@@ -82,10 +87,33 @@ jobs:
           publish-dir: ./clover
           alias: deploy-preview-${{ github.event.number }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          enable-pull-request-comment: false
+          enable-commit-comment: true
           production-branch: master
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+
+      - uses: peter-evans/find-comment@v2
+        id: fc
+        if: ${{ matrix.coverage }}
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          comment-author: 'github-actions[bot]'
+          body-includes: Test results
+
+      - name: Create or update comment
+        uses: peter-evans/create-or-update-comment@v2
+        if: ${{ matrix.coverage }}
+        with:
+          comment-id: ${{ steps.fc.outputs.comment-id }}
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            # Test results
+            ${{ steps.tests.outcome != 'success' && '❌ Some tests have failed. See the build log for details' || '✅' }}
+            
+            [_Coverage report_](${{ steps.deploy.outputs.deploy-url }})
+          edit-mode: replace
 
       - name: Fail the job if tests weren't OK
         run: exit 1
