@@ -77,12 +77,11 @@ jobs:
           run: |
             cat << EOF
             # Summary ${{ matrix.php-version }}
-            ## ${{ steps.tests.outcome != 'success' && '❌ Some tests have failed' || '✅ All tests have passed' }}
             |💯 Total|✅ Passed|⏭️ Skipped|❌ Failed|
             |-|-|-|-|
             |${{ steps.junit.outputs.total }}|${{ steps.junit.outputs.passed }}|${{ steps.junit.outputs.skipped }}|${{ steps.junit.outputs.failed }}|
             EOF
-            echo "${{ steps.failures.outputs.formatted }}"
+            echo -e "${{ steps.failures.outputs.formatted }}"
 
       - uses: peter-evans/find-comment@v2
         id: summary-comment
@@ -134,6 +133,7 @@ jobs:
 
       - uses: peter-evans/find-comment@v2
         id: coverage-comment
+        if: ${{ matrix.coverage }}
         with:
           issue-number: ${{ github.event.pull_request.number }}
           comment-author: 'github-actions[bot]'
@@ -141,6 +141,7 @@ jobs:
 
       - name: Create or update coverage-report comment
         uses: peter-evans/create-or-update-comment@v2
+        if: ${{ matrix.coverage }}
         with:
           comment-id: ${{ steps.coverage-comment.outputs.comment-id }}
           issue-number: ${{ github.event.pull_request.number }}
