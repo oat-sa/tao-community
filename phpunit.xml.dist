@@ -23,5 +23,6 @@
     </coverage>
     <logging>
         <junit outputFile="log/*/junit.xml"/>
+        <teamcity outputFile="log/*/teamcity.txt"/>
     </logging>
 </phpunit>

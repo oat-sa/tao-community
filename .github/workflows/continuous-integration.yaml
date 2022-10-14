@@ -18,7 +18,7 @@ jobs:
         php-version: [ '7.4', '8.0', '8.1' ]
         include:
           - php-version: '7.4'
-            coverage: true
+            coverage: false
 
     steps:
       - uses: actions/checkout@v3
@@ -49,11 +49,57 @@ jobs:
         run: composer install --no-progress
 
       - name: Run tests
-        uses: mathiasvr/command-output@v1
         id: tests
-        with:
-          run: ./test.sh {{ matrix.coverage && '-c' }}
+        run: ./test.sh ${{ matrix.coverage && '-c' }}
         continue-on-error: true
+
+      - name: Publish a test report
+        uses: mikepenz/action-junit-report@v3
+        id: junit
+        with:
+          report_paths: 'log/*/junit.xml'
+
+      - name: Parse the the reports
+        uses: mathiasvr/command-output@v1
+        id: report
+        if: ${{ steps.tests.outcome }} != 'success'
+        with:
+          run: grep testFailed log/*/teamcity.txt -R > /tmp/failures.txt
+
+      - name: Format the test report
+        id: failures
+        if: ${{ steps.tests.outcome }} != 'success'
+        run: |
+          echo ::set-output name=formatted::$(php ./.github/parse-reports.php)
+
+      - name: Job summary
+        uses: mathiasvr/command-output@v1
+        id: summary
+        with:
+          run: |
+            cat << EOF
+            # Summary ${{ matrix.php-version }}
+            ## ${{ steps.tests.outcome != 'success' && '❌ Some tests have failed' || '✅ All tests have passed' }}
+            |💯 Total|✅ Passed|⏭️ Skipped|❌ Failed|
+            |-|-|-|-|
+            |${{ steps.junit.outputs.total }}|${{ steps.junit.outputs.passed }}|${{ steps.junit.outputs.skipped }}|${{ steps.junit.outputs.failed }}|
+            ${{ steps.failures.outputs.formatted }}
+            EOF
+
+      - uses: peter-evans/find-comment@v2
+        id: summary-comment
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          comment-author: 'github-actions[bot]'
+          body-includes: Summary ${{ matrix.php-version }}
+
+      - name: Create or update comment
+        uses: peter-evans/create-or-update-comment@v2
+        with:
+          comment-id: ${{ steps.summary-comment.outputs.comment-id }}
+          issue-number: ${{ github.event.pull_request.number }}
+          body: ${{ steps.summary.outputs.stdout }}
+          edit-mode: replace
 
       - name: Merge coverage reports
         run: vendor/bin/phpunit-merger coverage coverage --html=clover clover.xml
@@ -73,32 +119,10 @@ jobs:
           commit: --signoff
           message: 'ci: add updated coverage_badge.xml'
 
-      - name: Publish a test report
-        uses: mikepenz/action-junit-report@v3
-        id: junit
-        if: ${{ matrix.coverage }}
-        with:
-          report_paths: 'log/*/junit.xml'
-          annotate_only: true
-
-      - name: Job summary
-        id: summary
-        if: ${{ matrix.coverage }}
-        run: |
-          cat << EOF
-          ### ${{ steps.tests.outcome != 'success' && '❌ Some tests have failed' || '✅ All tests have passed' }} \n\
-          ### [Coverage report]()
-          ### Summary
-          |Total|Passed|Skipped|Failed|
-          |-|-|-|-|
-          |${{steps.junit.outputs.total}}|${{steps.junit.outputs.passed}}|${{steps.junit.outputs.skipped}}|${{steps.junit.outputs.failed}}|
-          EOF
-          echo ${{ steps.tests.outcome != 'success' && '### Details\n${{ steps.junit.outputs.stdout }}' || '' }}'
-
       - name: Deploy coverage reports
         id: deploy
         uses: nwtgck/actions-netlify@v1
-        if: false
+        if: ${{ matrix.coverage }}
         with:
           publish-dir: ./clover
           alias: deploy-preview-${{ github.event.number }}
@@ -110,27 +134,9 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
 
-      - uses: peter-evans/find-comment@v2
-        id: fc
-        if: ${{ matrix.coverage }}
-        with:
-          issue-number: ${{ github.event.pull_request.number }}
-          comment-author: 'github-actions[bot]'
-          body-includes: Summary
-
-      - name: Create or update comment
-        uses: peter-evans/create-or-update-comment@v2
-        if: ${{ matrix.coverage }}
-        with:
-          comment-id: ${{ steps.fc.outputs.comment-id }}
-          issue-number: ${{ github.event.pull_request.number }}
-          body: ${{ steps.summary.outputs.stdout }}
-          edit-mode: replace
-
       - name: Job summary
-        if: ${{ matrix.coverage }}
-        run: echo ${{ steps.summary.outputs.stdout }} >> $GITHUB_STEP_SUMMARY
+        run: echo "${{ steps.summary.outputs.stdout }}" >> $GITHUB_STEP_SUMMARY
 
       - name: Fail the job if tests weren't OK
         run: exit 1
-        if: steps.tests.outcome != 'success'
+        if: ${{ steps.tests.outcome }} != 'success'
