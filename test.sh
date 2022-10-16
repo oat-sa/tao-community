@@ -42,5 +42,5 @@ for d in */; do
   cp "$DIR/phpunit.xml.dist" "$DIR/phpunit.xml"
   sed -ie "s/\*/$d/g" "$DIR/phpunit.xml"
 
-  php -derror_reporting=24575 $coverage "$DIR/vendor/bin/phpunit" --coverage-php "coverage/$d.php"
+  php -derror_reporting=24575 $coverage "$DIR/vendor/bin/phpunit" --coverage-php "coverage/$d.php" --log-teamcity "log/$d/teamcity.txt"
 done
