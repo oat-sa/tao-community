@@ -1,0 +1,130 @@
+name: Continuous integration
+
+on:
+  push:
+    branches: [ master, release* ]
+  pull_request:
+    branches: [ master, release* ]
+
+jobs:
+  ci:
+    concurrency: ci-${{ github.ref }}
+    runs-on: ${{ matrix.operating-system }}
+    if: "!contains(github.event.head_commit.message, 'ci: add updated coverage_badge.svg')"
+
+    strategy:
+      fail-fast: false
+      matrix:
+        operating-system: [ ubuntu-latest ]
+        php-version: [ '7.4', '8.0', '8.1' ]
+        include:
+          - php-version: '7.4'
+            coverage: true
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: ${{ github.head_ref || github.ref_name }}
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-version }}
+
+      - name: Validate composer.json and composer.lock
+        run: composer validate
+
+      - name: Cache Composer packages
+        id: composer-cache
+        uses: actions/cache@v3
+        with:
+          path: vendor
+          key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-php-
+
+      - name: Disable NPM bridge
+        run: composer config allow-plugins.oat-sa/composer-npm-bridge false --no-interaction --no-plugins
+
+      - name: Install dependencies
+        run: composer install --no-progress
+
+      - name: Run tests
+        run: ./test.sh ${{ matrix.coverage && '-c' }}
+        continue-on-error: true
+
+      - name: Publish a test report
+        uses: mikepenz/action-junit-report@v3
+        id: junit
+        with:
+          report_paths: 'log/*/junit.xml'
+          job_summary: false
+
+      - name: Parse the the reports
+        id: report
+        run: grep testFailed log/*/teamcity.txt -R > /tmp/failures.txt
+
+      - name: Build coverage report link
+        id: report-link
+        if: ${{ matrix.coverage }}
+        run: echo ::set-output name=formatted::'[🔗 Coverage report](https://oat-sa.github.io/tao-community/${{ github.head_ref || github.ref_name }})'
+
+      - name: Job summary
+        uses: mathiasvr/command-output@v1
+        id: summary
+        with:
+          run: |
+            cat << EOF
+            # Summary ${{ matrix.php-version }}
+            ${{ steps.report-link.outputs.formatted }}
+            |💯 Total|✅ Passed|⏭️ Skipped|❌ Failed|
+            |-|-|-|-|
+            |${{ steps.junit.outputs.total }}|${{ steps.junit.outputs.passed }}|${{ steps.junit.outputs.skipped }}|${{ steps.junit.outputs.failed }}|
+            EOF
+            php ./.github/parse-reports.php
+
+      - uses: peter-evans/find-comment@v2
+        id: summary-comment
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          comment-author: 'github-actions[bot]'
+          body-includes: Summary ${{ matrix.php-version }}
+
+      - name: Create or update summary comment
+        uses: peter-evans/create-or-update-comment@v2
+        with:
+          comment-id: ${{ steps.summary-comment.outputs.comment-id }}
+          issue-number: ${{ github.event.pull_request.number }}
+          body: ${{ steps.summary.outputs.stdout }}
+          edit-mode: replace
+
+      - name: Merge coverage reports
+        run: vendor/bin/phpunit-merger coverage coverage --html=clover clover.xml
+        if: ${{ matrix.coverage }}
+
+      - name: Generate a coverage badge
+        uses: timkrase/phpunit-coverage-badge@v1.2.0
+        if: ${{ matrix.coverage }}
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Push a coverage badge
+        uses: EndBug/add-and-commit@v9
+        if: ${{ matrix.coverage }}
+        with:
+          add: coverage_badge.svg
+          commit: --signoff
+          message: 'ci: add updated coverage_badge.svg'
+
+      - name: Deploy coverage reports
+        uses: JamesIves/github-pages-deploy-action@v4
+        if: ${{ matrix.coverage }}
+        with:
+          folder: clover
+          target-folder: ${{ github.head_ref || github.ref_name }}
+
+      - name: Job summary
+        run: echo "${{ steps.summary.outputs.stdout }}" >> $GITHUB_STEP_SUMMARY
+
+      - name: Fail the job if tests weren't OK
+        run: exit ${{ steps.junit.outputs.failed }}
