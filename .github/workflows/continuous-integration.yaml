@@ -64,6 +64,11 @@ jobs:
         id: report
         run: grep testFailed log/*/teamcity.txt -R > /tmp/failures.txt
 
+      - name: Build coverage report link
+        id: report-link
+        if: ${{ matrix.coverage }}
+        run: echo ::set-output name=formatted::'[🔗 Coverage report](https://oat-sa.github.io/tao-community/${{ github.head_ref || github.ref_name }})'
+
       - name: Job summary
         uses: mathiasvr/command-output@v1
         id: summary
@@ -71,6 +76,7 @@ jobs:
           run: |
             cat << EOF
             # Summary ${{ matrix.php-version }}
+            ${{ steps.report-link.outputs.formatted }}
             |💯 Total|✅ Passed|⏭️ Skipped|❌ Failed|
             |-|-|-|-|
             |${{ steps.junit.outputs.total }}|${{ steps.junit.outputs.passed }}|${{ steps.junit.outputs.skipped }}|${{ steps.junit.outputs.failed }}|
@@ -116,23 +122,6 @@ jobs:
         with:
           folder: clover
           target-folder: ${{ github.head_ref || github.ref_name }}
-
-      - uses: peter-evans/find-comment@v2
-        id: coverage-comment
-        if: ${{ matrix.coverage }}
-        with:
-          issue-number: ${{ github.event.pull_request.number }}
-          comment-author: 'github-actions[bot]'
-          body-includes: Coverage report
-
-      - name: Create or update coverage-report comment
-        uses: peter-evans/create-or-update-comment@v2
-        if: ${{ matrix.coverage }}
-        with:
-          comment-id: ${{ steps.coverage-comment.outputs.comment-id }}
-          issue-number: ${{ github.event.pull_request.number }}
-          body: '[🔗 Coverage report](https://oat-sa.github.io/tao-community/${{ github.head_ref || github.ref_name }})'
-          edit-mode: replace
 
       - name: Job summary
         run: echo "${{ steps.summary.outputs.stdout }}" >> $GITHUB_STEP_SUMMARY
