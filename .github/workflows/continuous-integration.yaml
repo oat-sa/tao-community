@@ -57,6 +57,7 @@ jobs:
         id: junit
         with:
           report_paths: 'log/*/junit.xml'
+          job_summary: false
 
       - name: Parse the the reports
         id: report
