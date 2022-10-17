@@ -117,21 +117,6 @@ jobs:
           folder: clover
           target-folder: ${{ github.head_ref || github.ref_name }}
 
-      - name: Deploy coverage reports
-        id: deploy
-        uses: nwtgck/actions-netlify@v1
-        if: false
-        with:
-          publish-dir: ./clover
-          alias: deploy-preview-${{ github.event.number }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          enable-pull-request-comment: false
-          enable-commit-comment: false
-          production-branch: master
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-
       - uses: peter-evans/find-comment@v2
         id: coverage-comment
         if: ${{ matrix.coverage }}
@@ -146,7 +131,7 @@ jobs:
         with:
           comment-id: ${{ steps.coverage-comment.outputs.comment-id }}
           issue-number: ${{ github.event.pull_request.number }}
-          body: '[🔗 Coverage report](${{ steps.deploy.outputs.deploy-url }})'
+          body: '[🔗 Coverage report](https://oat-sa.github.io/tao-community/${{ github.head_ref || github.ref_name }})'
           edit-mode: replace
 
       - name: Job summary

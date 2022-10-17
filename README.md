@@ -1,6 +1,6 @@
 # tao-community
 
-[![coverage](coverage_badge.svg)](https://thunderous-nasturtium-81ab3a.netlify.app)
+[![coverage](coverage_badge.svg)](https://oat-sa.github.io/tao-community/)
 
 ## Running tests
 
