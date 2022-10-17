@@ -8,8 +8,9 @@ on:
 
 jobs:
   ci:
+    concurrency: ci-${{ github.ref }}
     runs-on: ${{ matrix.operating-system }}
-    if: "!contains(github.event.head_commit.message, 'ci: add updated coverage_badge.xml')"
+    if: "!contains(github.event.head_commit.message, 'ci: add updated coverage_badge.svg')"
 
     strategy:
       fail-fast: false
@@ -107,12 +108,19 @@ jobs:
         with:
           add: coverage_badge.svg
           commit: --signoff
-          message: 'ci: add updated coverage_badge.xml'
+          message: 'ci: add updated coverage_badge.svg'
+
+      - name: Deploy coverage reports
+        uses: JamesIves/github-pages-deploy-action@v4
+        if: ${{ matrix.coverage }}
+        with:
+          folder: clover
+          target-folder: ${{ github.head_ref || github.ref_name }}
 
       - name: Deploy coverage reports
         id: deploy
         uses: nwtgck/actions-netlify@v1
-        if: ${{ matrix.coverage }}
+        if: false
         with:
           publish-dir: ./clover
           alias: deploy-preview-${{ github.event.number }}
