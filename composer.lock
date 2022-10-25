@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0d10ff81e4bd525fed90e1d4a8cfe870",
+    "content-hash": "348936f1e79b804c6c945021ef8d79fd",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -5926,16 +5926,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "v50.23.0.2",
+            "version": "dev-hotfix/REL-879/downgrade-minimal-browser-support",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "07e7062747f7f4e298bc09dfcb7cb9a8d7a65f29"
+                "reference": "d3a1c5184652219b0d531f48b9ccd47bfc772aab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/07e7062747f7f4e298bc09dfcb7cb9a8d7a65f29",
-                "reference": "07e7062747f7f4e298bc09dfcb7cb9a8d7a65f29",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/d3a1c5184652219b0d531f48b9ccd47bfc772aab",
+                "reference": "d3a1c5184652219b0d531f48b9ccd47bfc772aab",
                 "shasum": ""
             },
             "require": {
@@ -6037,9 +6037,9 @@
             "support": {
                 "forum": "https://forum.taocloud.org",
                 "issues": "https://github.com/oat-sa/tao-core/issues",
-                "source": "https://github.com/oat-sa/tao-core/tree/v50.23.0.2"
+                "source": "https://github.com/oat-sa/tao-core/tree/hotfix/REL-879/downgrade-minimal-browser-support"
             },
-            "time": "2022-10-12T12:12:34+00:00"
+            "time": "2022-10-25T15:00:13+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -9545,9 +9545,18 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [],
+    "aliases": [
+        {
+            "package": "oat-sa/tao-core",
+            "version": "dev-hotfix/REL-879/downgrade-minimal-browser-support",
+            "alias": "50.23.0.3",
+            "alias_normalized": "50.23.0.3"
+        }
+    ],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "oat-sa/tao-core": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
@@ -9555,5 +9564,5 @@
     "platform-overrides": {
         "php": "7.4"
     },
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.3.0"
 }
