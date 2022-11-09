@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f393b7737b6ef26cb1885e7941fcd049",
+    "content-hash": "20c09d0bf77e67739fa4955cf6d28498",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -6100,16 +6100,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "v50.25.1",
+            "version": "dev-release-2022-12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "a0f496d47412536cb3bfa5202a5dbc9efbc06e97"
+                "reference": "8d8a033a53089ab0e2ccf7c79fd19e9d4f873e4a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/a0f496d47412536cb3bfa5202a5dbc9efbc06e97",
-                "reference": "a0f496d47412536cb3bfa5202a5dbc9efbc06e97",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/8d8a033a53089ab0e2ccf7c79fd19e9d4f873e4a",
+                "reference": "8d8a033a53089ab0e2ccf7c79fd19e9d4f873e4a",
                 "shasum": ""
             },
             "require": {
@@ -6211,9 +6211,9 @@
             "support": {
                 "forum": "https://forum.taocloud.org",
                 "issues": "https://github.com/oat-sa/tao-core/issues",
-                "source": "https://github.com/oat-sa/tao-core/tree/v50.25.1"
+                "source": "https://github.com/oat-sa/tao-core/tree/release-2022-12"
             },
-            "time": "2022-10-07T15:42:47+00:00"
+            "time": "2022-11-09T09:02:54+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -11632,6 +11632,12 @@
     ],
     "aliases": [
         {
+            "package": "oat-sa/tao-core",
+            "version": "dev-release-2022-12",
+            "alias": "50.25.1",
+            "alias_normalized": "50.25.1.0"
+        },
+        {
             "package": "phpdocumentor/reflection-docblock",
             "version": "5.3.0.0",
             "alias": "2.0.5",
@@ -11639,7 +11645,9 @@
         }
     ],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "oat-sa/tao-core": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
@@ -11647,5 +11655,5 @@
     "platform-overrides": {
         "php": "7.4"
     },
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.0.0"
 }
