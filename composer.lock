@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cadaff77b4c8e1e3021ba63fed22301c",
+    "content-hash": "6444f2981350a4ccc6a02f1559be4317",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -4111,16 +4111,16 @@
         },
         {
             "name": "oat-sa/extension-tao-itemqti",
-            "version": "v29.15.2",
+            "version": "dev-release-2022-12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti.git",
-                "reference": "ea14de59161d1012f74c34aade59dfc5d907ea8f"
+                "reference": "7051ceaf265af43e0a53d4e127a216b23834961c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/ea14de59161d1012f74c34aade59dfc5d907ea8f",
-                "reference": "ea14de59161d1012f74c34aade59dfc5d907ea8f",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/7051ceaf265af43e0a53d4e127a216b23834961c",
+                "reference": "7051ceaf265af43e0a53d4e127a216b23834961c",
                 "shasum": ""
             },
             "require": {
@@ -4197,9 +4197,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/v29.15.2"
+                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/release-2022-12"
             },
-            "time": "2022-11-10T16:02:51+00:00"
+            "time": "2022-11-15T11:18:44+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pci",
@@ -11632,6 +11632,12 @@
     ],
     "aliases": [
         {
+            "package": "oat-sa/extension-tao-itemqti",
+            "version": "dev-release-2022-12",
+            "alias": "29.15.2",
+            "alias_normalized": "29.15.2.0"
+        },
+        {
             "package": "oat-sa/tao-core",
             "version": "dev-release-2022-12",
             "alias": "50.25.1",
@@ -11646,7 +11652,8 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "oat-sa/tao-core": 20
+        "oat-sa/tao-core": 20,
+        "oat-sa/extension-tao-itemqti": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
@@ -11655,5 +11662,5 @@
     "platform-overrides": {
         "php": "7.4"
     },
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.1.0"
 }
