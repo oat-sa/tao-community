@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c15fdcd0903dbffcee1ce078ed12bf8f",
+    "content-hash": "e5a3332c80fa46eae52f564abb826948",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -3816,16 +3816,16 @@
         },
         {
             "name": "oat-sa/extension-tao-itemqti",
-            "version": "dev-hotfix/TR-5000/backport-eliminate-label-break",
+            "version": "v29.6.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti.git",
-                "reference": "afc1f124b366d524c08feb44386019d1a90099a2"
+                "reference": "224011e17c8acc42fec9174dc790afdb86f7f8c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/afc1f124b366d524c08feb44386019d1a90099a2",
-                "reference": "afc1f124b366d524c08feb44386019d1a90099a2",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/224011e17c8acc42fec9174dc790afdb86f7f8c9",
+                "reference": "224011e17c8acc42fec9174dc790afdb86f7f8c9",
                 "shasum": ""
             },
             "require": {
@@ -3905,9 +3905,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/hotfix/TR-5000/backport-eliminate-label-break"
+                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/v29.6.10"
             },
-            "time": "2022-12-14T10:51:47+00:00"
+            "time": "2022-12-14T17:41:29+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pci",
@@ -9528,18 +9528,9 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [
-        {
-            "package": "oat-sa/extension-tao-itemqti",
-            "version": "dev-hotfix/TR-5000/backport-eliminate-label-break",
-            "alias": "29.6.9",
-            "alias_normalized": "29.6.9.0"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "oat-sa/extension-tao-itemqti": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
