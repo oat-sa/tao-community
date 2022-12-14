@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5cfdb5c3bf2291c7cd1363155d1ccbc8",
+    "content-hash": "952c7003b77920d6ba7d1f76e774af42",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -2779,16 +2779,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.63.0",
+            "version": "2.64.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "ad35dd71a6a212b98e4b87e97389b6fa85f0e347"
+                "reference": "889546413c97de2d05063b8cb7b193c2531ea211"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/ad35dd71a6a212b98e4b87e97389b6fa85f0e347",
-                "reference": "ad35dd71a6a212b98e4b87e97389b6fa85f0e347",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/889546413c97de2d05063b8cb7b193c2531ea211",
+                "reference": "889546413c97de2d05063b8cb7b193c2531ea211",
                 "shasum": ""
             },
             "require": {
@@ -2799,7 +2799,7 @@
                 "symfony/translation": "^3.4 || ^4.0 || ^5.0 || ^6.0"
             },
             "require-dev": {
-                "doctrine/dbal": "^2.0 || ^3.0",
+                "doctrine/dbal": "^2.0 || ^3.1.4",
                 "doctrine/orm": "^2.7",
                 "friendsofphp/php-cs-fixer": "^3.0",
                 "kylekatarnls/multi-tester": "^2.0",
@@ -2877,7 +2877,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-10-30T18:34:28+00:00"
+            "time": "2022-11-26T17:36:00+00:00"
         },
         {
             "name": "nikic/fast-route",
@@ -3816,16 +3816,16 @@
         },
         {
             "name": "oat-sa/extension-tao-itemqti",
-            "version": "v29.6.8",
+            "version": "dev-hotfix/TR-5000/backport-eliminate-label-break",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti.git",
-                "reference": "7a550c6966207a9897d6abd0632ba9d3e423b1c2"
+                "reference": "afc1f124b366d524c08feb44386019d1a90099a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/7a550c6966207a9897d6abd0632ba9d3e423b1c2",
-                "reference": "7a550c6966207a9897d6abd0632ba9d3e423b1c2",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/afc1f124b366d524c08feb44386019d1a90099a2",
+                "reference": "afc1f124b366d524c08feb44386019d1a90099a2",
                 "shasum": ""
             },
             "require": {
@@ -3905,9 +3905,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/v29.6.8"
+                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/hotfix/TR-5000/backport-eliminate-label-break"
             },
-            "time": "2022-11-30T10:52:08+00:00"
+            "time": "2022-12-14T10:51:47+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pci",
@@ -9528,9 +9528,18 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [],
+    "aliases": [
+        {
+            "package": "oat-sa/extension-tao-itemqti",
+            "version": "dev-hotfix/TR-5000/backport-eliminate-label-break",
+            "alias": "29.6.8",
+            "alias_normalized": "29.6.8.0"
+        }
+    ],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "oat-sa/extension-tao-itemqti": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
