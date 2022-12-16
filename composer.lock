@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5f782a792aa5458de72ae58323309cbd",
+    "content-hash": "9fe5accf117c3dcc059e5e2fc208e4fa",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -326,31 +326,34 @@
         },
         {
             "name": "doctrine/annotations",
-            "version": "1.13.3",
+            "version": "1.14.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
-                "reference": "648b0343343565c4a056bfc8392201385e8d89f0"
+                "reference": "9e034d7a70032d422169f27d8759e8d84abb4f51"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/648b0343343565c4a056bfc8392201385e8d89f0",
-                "reference": "648b0343343565c4a056bfc8392201385e8d89f0",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/9e034d7a70032d422169f27d8759e8d84abb4f51",
+                "reference": "9e034d7a70032d422169f27d8759e8d84abb4f51",
                 "shasum": ""
             },
             "require": {
-                "doctrine/lexer": "1.*",
+                "doctrine/lexer": "^1 || ^2",
                 "ext-tokenizer": "*",
                 "php": "^7.1 || ^8.0",
                 "psr/cache": "^1 || ^2 || ^3"
             },
             "require-dev": {
                 "doctrine/cache": "^1.11 || ^2.0",
-                "doctrine/coding-standard": "^6.0 || ^8.1",
-                "phpstan/phpstan": "^1.4.10 || ^1.8.0",
-                "phpunit/phpunit": "^7.5 || ^8.0 || ^9.1.5",
-                "symfony/cache": "^4.4 || ^5.2",
+                "doctrine/coding-standard": "^9 || ^10",
+                "phpstan/phpstan": "~1.4.10 || ^1.8.0",
+                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5",
+                "symfony/cache": "^4.4 || ^5.4 || ^6",
                 "vimeo/psalm": "^4.10"
+            },
+            "suggest": {
+                "php": "PHP 8.0 or higher comes with attributes, a native replacement for annotations"
             },
             "type": "library",
             "autoload": {
@@ -393,9 +396,9 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/annotations/issues",
-                "source": "https://github.com/doctrine/annotations/tree/1.13.3"
+                "source": "https://github.com/doctrine/annotations/tree/1.14.1"
             },
-            "time": "2022-07-02T10:48:51+00:00"
+            "time": "2022-12-12T12:46:12+00:00"
         },
         {
             "name": "doctrine/cache",
@@ -1231,16 +1234,16 @@
         },
         {
             "name": "ezimuel/ringphp",
-            "version": "1.2.1",
+            "version": "1.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ezimuel/ringphp.git",
-                "reference": "8d00384f9e5c04713ef8448adf47824265791b50"
+                "reference": "7887fc8488013065f72f977dcb281994f5fde9f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezimuel/ringphp/zipball/8d00384f9e5c04713ef8448adf47824265791b50",
-                "reference": "8d00384f9e5c04713ef8448adf47824265791b50",
+                "url": "https://api.github.com/repos/ezimuel/ringphp/zipball/7887fc8488013065f72f977dcb281994f5fde9f4",
+                "reference": "7887fc8488013065f72f977dcb281994f5fde9f4",
                 "shasum": ""
             },
             "require": {
@@ -1282,9 +1285,9 @@
             ],
             "description": "Fork of guzzle/RingPHP (abandoned) to be used with elasticsearch-php",
             "support": {
-                "source": "https://github.com/ezimuel/ringphp/tree/1.2.1"
+                "source": "https://github.com/ezimuel/ringphp/tree/1.2.2"
             },
-            "time": "2022-10-25T12:54:22+00:00"
+            "time": "2022-12-07T11:28:53+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -5174,16 +5177,16 @@
         },
         {
             "name": "oat-sa/extension-tao-testqti",
-            "version": "v45.0.1",
+            "version": "v45.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "7f9bfb908f67c78827c5f367a02ae784873b41a4"
+                "reference": "4b309e2169f82ab364f7d5971e271063bb904a55"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/7f9bfb908f67c78827c5f367a02ae784873b41a4",
-                "reference": "7f9bfb908f67c78827c5f367a02ae784873b41a4",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/4b309e2169f82ab364f7d5971e271063bb904a55",
+                "reference": "4b309e2169f82ab364f7d5971e271063bb904a55",
                 "shasum": ""
             },
             "require": {
@@ -5267,9 +5270,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/v45.0.1"
+                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/v45.0.2"
             },
-            "time": "2022-12-02T10:33:53+00:00"
+            "time": "2022-12-15T15:06:26+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
