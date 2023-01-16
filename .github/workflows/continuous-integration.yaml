@@ -19,6 +19,7 @@ jobs:
         php-version: [ '7.4', '8.0', '8.1' ]
         include:
           - php-version: '7.4'
+            node-version: '18'
             coverage: true
 
     steps:
@@ -30,6 +31,12 @@ jobs:
       - uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php-version }}
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        if: ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
 
       - name: Validate composer.json and composer.lock
         run: composer validate
@@ -43,13 +50,24 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-php-
 
-      - name: Disable NPM bridge
-        run: composer config allow-plugins.oat-sa/composer-npm-bridge false --no-interaction --no-plugins
+      - name: Configure NPM bridge plugin
+        run: composer config allow-plugins.oat-sa/composer-npm-bridge $([[ "${{ matrix.node-version }}" ]] && echo "true" || echo "false") --no-interaction --no-plugins
 
       - name: Install dependencies
         run: composer install --no-progress
 
-      - name: Run tests
+      - name: Generate localization files
+        if: ${{ matrix.node-version }}
+        run: php tao/scripts/tools/GenerateTranslationBundles.php
+
+      - name: Front-end tests
+        if: ${{ matrix.node-version }}
+        working-directory: tao/views/build
+        run: |
+          npm ci
+          npx grunt testall
+
+      - name: Back-end tests
         run: ./test.sh ${{ matrix.coverage && '-c' }}
         continue-on-error: true
 
