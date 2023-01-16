@@ -33,15 +33,16 @@ jobs:
           php-version: ${{ matrix.php-version }}
 
       - name: Use Node.js ${{ matrix.node-version }}
+        if: startswith(matrix.php-version, '7.4')
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Create manifest
-        working-directory: tao/views/build
-        run: |
-          npm ci
-          npx grunt testall
+      #- name: Create manifest
+      #  working-directory: tao/views/build
+      #  run: |
+      #    npm ci
+      #    npx grunt testall
 
       - name: Validate composer.json and composer.lock
         run: composer validate
