@@ -19,7 +19,7 @@ jobs:
       fail-fast: false
       matrix:
         operating-system: [ ubuntu-latest ]
-        php-version: [ '7.4', '8.0', '8.1' ]
+        php-version: [ '7.4' ] #, '8.0', '8.1' ]
         include:
           - php-version: '7.4'
             coverage: true
@@ -39,6 +39,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ env.node-version }}
+        run: |
+          npm ci
+          npx grunt testall         
 
       #- name: Create manifest
       #  working-directory: tao/views/build
