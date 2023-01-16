@@ -17,6 +17,7 @@ jobs:
       matrix:
         operating-system: [ ubuntu-latest ]
         php-version: [ '7.4', '8.0', '8.1' ]
+        node-version: [14.x]
         include:
           - php-version: '7.4'
             coverage: true
@@ -31,6 +32,14 @@ jobs:
         with:
           php-version: ${{ matrix.php-version }}
 
+      - name: Use Node.js ${{ matrix.node-version }}
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: cd tao/views/build
+      - run: npm ci
+      - run: npx grunt testall
+
       - name: Validate composer.json and composer.lock
         run: composer validate
 
@@ -43,8 +52,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-php-
 
-      - name: Disable NPM bridge
-        run: composer config allow-plugins.oat-sa/composer-npm-bridge false --no-interaction --no-plugins
+      #- name: Disable NPM bridge
+      #  run: composer config allow-plugins.oat-sa/composer-npm-bridge false --no-interaction --no-plugins
 
       - name: Install dependencies
         run: composer install --no-progress
