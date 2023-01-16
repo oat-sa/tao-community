@@ -36,8 +36,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
+
+      - name: Create manifest
+        working-directory: tao/views/build
         run: |
-          cd tao/views/build
           npm ci
           npx grunt testall
 
