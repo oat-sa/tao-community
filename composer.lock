@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "90243e829407a1af1a4e86e527d74c93",
+    "content-hash": "d2e7aa8e79385c233bb0e88b89f02a03",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -4115,16 +4115,16 @@
         },
         {
             "name": "oat-sa/extension-tao-itemqti",
-            "version": "v29.20.0",
+            "version": "v29.20.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti.git",
-                "reference": "0152d12223b61240416696d8899477f2495372e8"
+                "reference": "092e6fa5462d2d3cc44386637fa7c9eeba704e6f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/0152d12223b61240416696d8899477f2495372e8",
-                "reference": "0152d12223b61240416696d8899477f2495372e8",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/092e6fa5462d2d3cc44386637fa7c9eeba704e6f",
+                "reference": "092e6fa5462d2d3cc44386637fa7c9eeba704e6f",
                 "shasum": ""
             },
             "require": {
@@ -4201,9 +4201,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/v29.20.0"
+                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/v29.20.2"
             },
-            "time": "2022-12-27T16:16:16+00:00"
+            "time": "2023-01-23T09:29:55+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pci",
@@ -5177,16 +5177,16 @@
         },
         {
             "name": "oat-sa/extension-tao-testqti",
-            "version": "v45.0.6",
+            "version": "dev-release-2023-02",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "105210ca70bdd0b29cc77e0ea613baac8d8c09b3"
+                "reference": "bce85ed96604ad6532d5d87b5e813290a9cb488c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/105210ca70bdd0b29cc77e0ea613baac8d8c09b3",
-                "reference": "105210ca70bdd0b29cc77e0ea613baac8d8c09b3",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/bce85ed96604ad6532d5d87b5e813290a9cb488c",
+                "reference": "bce85ed96604ad6532d5d87b5e813290a9cb488c",
                 "shasum": ""
             },
             "require": {
@@ -5270,9 +5270,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/v45.0.6"
+                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/backport/PISA25-269/endpoint-update-metada-is-not-indexing-metadata-on-advanced-search"
             },
-            "time": "2023-01-20T12:31:10+00:00"
+            "time": "2023-01-23T11:11:12+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
@@ -6105,16 +6105,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "v51.0.1",
+            "version": "v51.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "a7d7bc3d38d51187eed423c279f735f1dfa24cc7"
+                "reference": "110c52c572714964ce94384c9d576eb551859688"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/a7d7bc3d38d51187eed423c279f735f1dfa24cc7",
-                "reference": "a7d7bc3d38d51187eed423c279f735f1dfa24cc7",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/110c52c572714964ce94384c9d576eb551859688",
+                "reference": "110c52c572714964ce94384c9d576eb551859688",
                 "shasum": ""
             },
             "require": {
@@ -6216,9 +6216,9 @@
             "support": {
                 "forum": "https://forum.taocloud.org",
                 "issues": "https://github.com/oat-sa/tao-core/issues",
-                "source": "https://github.com/oat-sa/tao-core/tree/v51.0.1"
+                "source": "https://github.com/oat-sa/tao-core/tree/v51.0.3"
             },
-            "time": "2023-01-06T15:54:23+00:00"
+            "time": "2023-01-23T10:05:21+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -11637,6 +11637,12 @@
     ],
     "aliases": [
         {
+            "package": "oat-sa/extension-tao-testqti",
+            "version": "dev-release-2023-02",
+            "alias": "45.0.7",
+            "alias_normalized": "45.0.7.0"
+        },
+        {
             "package": "phpdocumentor/reflection-docblock",
             "version": "5.3.0.0",
             "alias": "2.0.5",
@@ -11644,7 +11650,9 @@
         }
     ],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "oat-sa/extension-tao-testqti": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
