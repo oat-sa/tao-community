@@ -67,7 +67,7 @@ jobs:
       - name: Build coverage report link
         id: report-link
         if: ${{ matrix.coverage }}
-        run: echo ::set-output name=formatted::'[🔗 Coverage report](https://oat-sa.github.io/tao-community/${{ github.head_ref || github.ref_name }})'
+        run: echo formatted='[🔗 Coverage report](https://oat-sa.github.io/tao-community/${{ github.head_ref || github.ref_name }})' >> $GITHUB_OUTPUT
 
       - name: Job summary
         uses: mathiasvr/command-output@v1
