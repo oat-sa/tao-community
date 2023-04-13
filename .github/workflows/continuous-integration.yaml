@@ -124,6 +124,8 @@ jobs:
         with:
           folder: clover
           target-folder: ${{ github.head_ref || github.ref_name }}
+          single-commit: true
+          token: ${{ secrets.CI_GITHUB_TOKEN }}
 
       - name: Job summary
         run: echo "${{ steps.summary.outputs.stdout }}" >> $GITHUB_STEP_SUMMARY
