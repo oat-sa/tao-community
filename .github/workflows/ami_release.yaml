@@ -12,11 +12,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          path: 'tmtao_communityp'        
+          ref: master 
+          path: tao_community    
 
       - name: Get latest release tag of tao-community
         id: tao_community_tag
         run: |
+          cd tao_community
           tags=$(git tag -l "*")
           if [ -z "$tags" ]; then
             echo "::set-output name=tag::"
@@ -30,11 +32,13 @@ jobs:
         with:
           repository: oat-sa/taocloud-ami-luoss
           fetch-depth: 0
-          path: 'taocloud-ami-luoss'
+          ref: develop
+          path: '../taocloud-ami-luoss'
 
       - name: Get latest release tag of taocloud-ami-luoss
         id: taocloud_ami_luoss_tag
         run: |
+          cd ../taocloud-ami-luoss
           latest_tag=$(git for-each-ref refs/tags/release-* --sort=-taggerdate --format='%(refname)' --count=1)
           if [ -n "$latest_tag" ]; then
             echo "::set-output name=tag::"
