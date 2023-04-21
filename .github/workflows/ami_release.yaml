@@ -34,6 +34,7 @@ jobs:
           fetch-depth: 0
           ref: develop
           path: 'tao-community/taocloud-ami-luoss'
+          token: ${{ secrets.GH_TOKEN }}
 
       - name: Get latest release tag of taocloud-ami-luoss
         id: taocloud_ami_luoss_tag
