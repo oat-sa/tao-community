@@ -1,0 +1,55 @@
+name: Update taocloud-ami-luoss on new TAO Community release
+
+on:
+  create:
+    tags: '*'
+
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Get latest release tag of tao-community
+        id: tao_community_tag
+        run: |
+          tags=$(git tag -l "*")
+          if [ -z "$tags" ]; then
+            echo "::set-output name=tag::"
+            exit 0
+          fi
+          latest_tag=$(git for-each-ref --sort=-taggerdate --format '%(refname:lstrip=2)' refs/tags/* | head -n 1)
+          echo "::set-output name=tag::$tao_community_tag"
+
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          repository: oat-sa/taocloud-ami-luoss
+          fetch-depth: 0
+
+      - name: Get latest release tag of taocloud-ami-luoss
+        id: taocloud_ami_luoss_tag
+        run: |
+          latest_tag=$(git for-each-ref refs/tags/release-* --sort=-taggerdate --format='%(refname)' --count=1)
+          if [ -n "$latest_tag" ]; then
+            echo "::set-output name=tag::"
+            exit 0
+          fi
+          echo "::set-output name=tag::$taocloud_ami_luoss_tag"
+
+      - name: Checkout tag
+        run: |
+          git checkout $(git rev-parse --short ${{ steps.taocloud_ami_luoss_tag.tag }})
+
+
+      - name: Update composer.json in taocloud-ami-luoss
+        run: |
+          # Update composer.json with the latest tao-community tag
+          sed -i s/\"oat-sa/\extension-tao-community: \".*\"/\"oat-sa\/tao-community\": \"${{ steps.tao_community_tag.outputs.tag }}"\"/" composer.json
+          composer update oat-sa/tao-community -W
+
+      - name: Add composer files
+        run: |
+          git add composer.json composer.lock
