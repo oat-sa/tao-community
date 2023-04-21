@@ -57,7 +57,7 @@ jobs:
         run: |
           # Update composer.json with the latest tao-community tag
           cd tao-community/taocloud-ami-luoss
-          sed -i s/\"oat-sa/\extension-tao-community: \".*\"/\"oat-sa\/tao-community\": \"${{ steps.tao_community_tag.outputs.tag }}"\"/" composer.json
+          sed -i "s/\"oat-sa/\extension-tao-community": \".*\"/\"oat-sa\/tao-community\": \"${{ steps.tao_community_tag.outputs.tag }}"\"/" composer.json
           composer update oat-sa/tao-community -W
 
       - name: Add composer files
