@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          path: 'tmtao_communityp'        
 
       - name: Get latest release tag of tao-community
         id: tao_community_tag
@@ -28,7 +30,7 @@ jobs:
         with:
           repository: oat-sa/taocloud-ami-luoss
           fetch-depth: 0
-          path: './tmp'
+          path: 'taocloud-ami-luoss'
 
       - name: Get latest release tag of taocloud-ami-luoss
         id: taocloud_ami_luoss_tag
