@@ -47,9 +47,9 @@ jobs:
             echo "No tags found"
           fi
 
-        - name: Checkout tag
-          run: |
-            git checkout ${{ steps.taocloud_ami_luoss_tag.outputs.tag }}
+      - name: Checkout tag
+        run: |
+          git checkout ${{ steps.taocloud_ami_luoss_tag.outputs.tag }}
 
 
       - name: Update composer.json in taocloud-ami-luoss
