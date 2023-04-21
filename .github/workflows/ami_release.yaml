@@ -33,12 +33,12 @@ jobs:
           repository: oat-sa/taocloud-ami-luoss
           fetch-depth: 0
           ref: develop
-          path: '../taocloud-ami-luoss'
+          path: 'tao-community/taocloud-ami-luoss'
 
       - name: Get latest release tag of taocloud-ami-luoss
         id: taocloud_ami_luoss_tag
         run: |
-          cd ../taocloud-ami-luoss
+          cd taocloud-ami-luoss
           latest_tag=$(git for-each-ref refs/tags/release-* --sort=-taggerdate --format='%(refname)' --count=1)
           if [ -n "$latest_tag" ]; then
             echo "::set-output name=tag::"
