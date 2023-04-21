@@ -49,6 +49,7 @@ jobs:
 
       - name: Checkout tag
         run: |
+          cd tao-community/taocloud-ami-luoss
           git checkout ${{ steps.taocloud_ami_luoss_tag.outputs.tag }}
 
 
