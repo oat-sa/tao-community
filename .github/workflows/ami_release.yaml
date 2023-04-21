@@ -5,12 +5,12 @@ on:
     tags: '*'
 
 jobs:
-  my-job:
+  ci:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Get latest release tag of tao-community
         id: tao_community_tag
@@ -24,10 +24,11 @@ jobs:
           echo "::set-output name=tag::$tao_community_tag"
 
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: oat-sa/taocloud-ami-luoss
           fetch-depth: 0
+          path: './tmp'
 
       - name: Get latest release tag of taocloud-ami-luoss
         id: taocloud_ami_luoss_tag
