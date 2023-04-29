@@ -5,61 +5,17 @@ on:
     tags: '*'
 
 jobs:
-  ci:
+  build:
+  dispatch:
+    needs: build
+    strategy:
+      matrix:
+        repo: ['oat-sa/taocloud-ami-luoss']
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v2
         with:
-          ref: master 
-          path: tao_community    
-
-      - name: Get latest release tag of tao-community
-        id: tao_community_tag
-        run: |
-          cd tao_community
-          tags=$(git tag -l "*")
-          if [ -z "$tags" ]; then
-            echo "::set-output name=tag::"
-            exit 0
-          fi
-          latest_tag=$(git for-each-ref --sort=-taggerdate --format '%(refname:lstrip=2)' refs/tags/* | head -n 1)
-          echo "::set-output name=tag::$tao_community_tag"
-
-      - name: Checkout repository
-        uses: actions/checkout@v3
-        with:
-          repository: oat-sa/taocloud-ami-luoss
-          fetch-depth: 0
-          ref: develop
-          path: 'tao-community/taocloud-ami-luoss'
-          token: ${{ secrets.GH_TOKEN }}
-
-      - name: Get latest release tag of taocloud-ami-luoss
-        id: taocloud_ami_luoss_tag
-        run: |
-          cd tao-community/taocloud-ami-luoss
-          latest_tag=$(git for-each-ref refs/tags/release-* --sort=-taggerdate --format='%(refname)' --count=1)
-          if [ -z "$latest_tag" ]; then
-            echo "::set-output name=tag::$latest_tag"
-          else
-            echo "No tags found"
-          fi
-
-      - name: Checkout tag
-        run: |
-          cd tao-community/taocloud-ami-luoss
-          git checkout ${{ steps.taocloud_ami_luoss_tag.outputs.tag }}
-
-
-      - name: Update composer.json in taocloud-ami-luoss
-        run: |
-          # Update composer.json with the latest tao-community tag
-          cd tao-community/taocloud-ami-luoss
-          sed -i "s/\"extension-tao-community\": \".*\"/\"oat-sa\/tao-community\": \"${{ steps.tao_community_tag.outputs.tag }}\"/" composer.json
-          composer update oat-sa/tao-community -W
-
-      - name: Add composer files
-        run: |
-          git add composer.json composer.lock
+          token: ${{ secrets.CI_GITHUB_TOKEN }}
+          repository: ${{ matrix.repo }}
+          event-type: build-ami
