@@ -19,3 +19,4 @@ jobs:
           token: ${{ secrets.CI_GITHUB_TOKEN }}
           repository: ${{ matrix.repo }}
           event-type: build-ami
+          ref: refs/heads/tag-build-ami
