@@ -10,10 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Send repository_dispatch event
-        uses: octokit/request-action@v2.x
+        uses: peter-evans/repository-dispatch@v1
         with:
           token: ${{ secrets.CI_GITHUB_TOKEN }}
           repository: oat-sa/taocloud-ami-luoss
-          ref: refs/heads/tag-build-ami
           event-type: tag-build-ami
-          client-payload: '{"tag": "${{ github.ref }}", "branch": "tag-build-ami"}'
+          client-payload: '{"tag": "${{ github.ref }}"}'
