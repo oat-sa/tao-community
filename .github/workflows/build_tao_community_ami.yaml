@@ -15,4 +15,4 @@ jobs:
           token: ${{ secrets.CI_GITHUB_TOKEN }}
           repository: oat-sa/taocloud-ami-luoss
           event-type: build-tao-community-ami
-          client-payload: '{"tag": "${{ github.ref.replace("refs/tags/", "") }}", "branch": "build-tao-community"}'
+          client-payload: '{"tag": "${{ github.ref_name }}", "branch": "build-tao-community"}'
