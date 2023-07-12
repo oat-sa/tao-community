@@ -63,7 +63,7 @@ jobs:
         working-directory: tao/views/build
         run: |
           cat package.json
-          npm cache clean
+          npm cache clean --force
           npm ci
           npx grunt testall --force
         continue-on-error: true  
