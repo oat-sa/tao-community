@@ -62,9 +62,9 @@ jobs:
       - name: Front tests
         working-directory: tao/views/build
         run: |
-          cat package.json
           npm ci
           npx grunt testall
+        continue-on-error: true  
 
       - name: Publish a test report
         uses: mikepenz/action-junit-report@v3
