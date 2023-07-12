@@ -11,7 +11,6 @@ env:
 
 jobs:
   ci:
-    #concurrency: ci-${{ github.ref }}
     runs-on: ${{ matrix.operating-system }}
     if: "!contains(github.event.head_commit.message, 'ci: add updated coverage_badge.svg')"
 
@@ -19,7 +18,7 @@ jobs:
       fail-fast: false
       matrix:
         operating-system: [ ubuntu-latest ]
-        php-version: [ '7.4' ] #, '8.0', '8.1' ]
+        php-version: [ '7.4' ]
         node-version: [ 14.x ]
         include:
           - php-version: '7.4'
@@ -41,13 +40,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: front tests
-        #working-directory: tao/views/build
-        run: |
-          ls
-          npm ci
-          npx grunt testall
-
       - name: Validate composer.json and composer.lock
         run: composer validate
 
@@ -60,15 +52,18 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-php-
 
-      #- name: Disable NPM bridge
-      #  run: composer config allow-plugins.oat-sa/composer-npm-bridge false --no-interaction --no-plugins
-
       - name: Install dependencies
         run: composer install --no-progress
 
       - name: Run tests
         run: ./test.sh ${{ matrix.coverage && '-c' }}
         continue-on-error: true
+
+      - name: Front tests
+        working-directory: tao/views/build
+        run: |
+          npm ci
+          npx grunt testall
 
       - name: Publish a test report
         uses: mikepenz/action-junit-report@v3
