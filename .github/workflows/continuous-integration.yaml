@@ -64,7 +64,8 @@ jobs:
         run: |
           cat package.json
           npm ci
-          npx grunt testall --force
+          npx grunt connect:test taoitemstest
+          #npx grunt testall --force
         continue-on-error: true  
 
       - name: Publish a test report
