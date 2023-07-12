@@ -1,0 +1,18 @@
+name: Update taocloud-ami-luoss on new TAO Community release
+on:
+  create:
+    # Trigger the action only when a new tag is created
+    tags:
+      - '*'
+
+jobs:
+  build-tao-community-ami:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send repository_dispatch event
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.CI_GITHUB_TOKEN }}
+          repository: oat-sa/taocloud-ami-luoss
+          event-type: build-tao-community-ami
+          client-payload: '{"tag": "${{ github.ref_name }}", "branch": "build-tao-community"}'
