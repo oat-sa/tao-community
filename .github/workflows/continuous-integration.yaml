@@ -64,7 +64,7 @@ jobs:
         run: |
           npm ci
           #npx grunt testall
-          npx grunt connect:test taoitemstest
+          npx grunt connect:test taotest
         continue-on-error: true  
 
       - name: Publish a test report
