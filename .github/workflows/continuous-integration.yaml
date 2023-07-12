@@ -63,6 +63,7 @@ jobs:
         working-directory: tao/views/build
         run: |
           cat package.json
+          npm i puppeteer@19.4.0
           npm ci
           npx grunt connect:test tao-core
           #npx grunt testall --force
