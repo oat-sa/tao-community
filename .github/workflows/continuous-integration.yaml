@@ -62,6 +62,7 @@ jobs:
       - name: Front tests
         working-directory: tao/views/build
         run: |
+          cat package.json
           npm ci
           npx grunt testall
 
