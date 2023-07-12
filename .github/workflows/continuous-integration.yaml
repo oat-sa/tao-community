@@ -63,7 +63,6 @@ jobs:
         working-directory: tao/views/build
         run: |
           cat package.json
-          npm install
           npm ci
           npx grunt testall --force
         continue-on-error: true  
