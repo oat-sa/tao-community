@@ -42,7 +42,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: front tests
-        working-directory: tao/views/build
+        #working-directory: tao/views/build
         run: |
           ls
           npm ci
