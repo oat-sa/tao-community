@@ -8,9 +8,11 @@ on:
 
 jobs:
   ci:
-    concurrency: ci-${{ matrix.php-version }}-${{ github.ref }}
     runs-on: ${{ matrix.operating-system }}
     if: "!contains(github.event.head_commit.message, 'ci: add updated coverage_badge.svg')"
+    concurrency:
+      group: ci-${{ matrix.php-version }}-${{ github.ref }}
+      cancel-in-progress: true
 
     strategy:
       fail-fast: false
