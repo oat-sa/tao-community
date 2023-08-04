@@ -8,9 +8,11 @@ on:
 
 jobs:
   ci:
-    concurrency: ci-${{ matrix.php-version }}-${{ github.ref }}
     runs-on: ${{ matrix.operating-system }}
     if: "!contains(github.event.head_commit.message, 'ci: add updated coverage_badge.svg')"
+    concurrency:
+      group: ci-${{ matrix.php-version }}-${{ github.ref }}
+      cancel-in-progress: true
 
     strategy:
       fail-fast: false
@@ -19,6 +21,7 @@ jobs:
         php-version: [ '7.4', '8.0', '8.1' ]
         include:
           - php-version: '7.4'
+            node-version: '18'
             coverage: true
 
     steps:
@@ -30,6 +33,12 @@ jobs:
       - uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php-version }}
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        if: ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
 
       - name: Validate composer.json and composer.lock
         run: composer validate
@@ -43,61 +52,110 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-php-
 
-      - name: Disable NPM bridge
-        run: composer config allow-plugins.oat-sa/composer-npm-bridge false --no-interaction --no-plugins
+      - name: Configure NPM bridge plugin
+        run: composer config allow-plugins.oat-sa/composer-npm-bridge $([[ "${{ matrix.node-version }}" ]] && echo "true" || echo "false") --no-interaction --no-plugins
 
       - name: Install dependencies
         run: composer install --no-progress
 
-      - name: Run tests
+      - name: Generate localization files
+        if: ${{ matrix.node-version }}
+        run: php tao/scripts/tools/GenerateTranslationBundles.php
+
+      - name: Front-end tests
+        if: ${{ matrix.node-version }}
+        working-directory: tao/views/build
+        run: |
+          npm ci
+          npx grunt connect:test qunit_junit pcisamplestest qtiitempcitest taotest taoclientdiagnostictest taodeliveryrdftest taoitemstest taomediamanagertest taooutcomeuitest taoproctoringtest taoqtiitemtest taoqtitesttest taoqtitestpreviewertest taotaskqueuetest taoteststest --force --reports=../../../junit-reports
+
+      - name: Back-end tests
         run: ./test.sh ${{ matrix.coverage && '-c' }}
         continue-on-error: true
 
-      - name: Publish a test report
+      - name: Publish a back-end test report
         uses: mikepenz/action-junit-report@v3
-        id: junit
+        id: be-junit
         with:
           report_paths: 'log/*/junit.xml'
           job_summary: false
 
-      - name: Parse the the reports
+      - name: Publish a front-end test report
+        if: ${{ matrix.node-version }}
+        uses: mikepenz/action-junit-report@v3
+        id: fe-junit
+        with:
+          job_summary: false
+
+      - name: Parse the the back-end reports
         id: report
         run: grep testFailed log/*/teamcity.txt -R > /tmp/failures.txt
 
-      - name: Build coverage report link
+      - name: Build back-end coverage report link
         id: report-link
         if: ${{ matrix.coverage }}
         run: echo formatted='[🔗 Coverage report](https://oat-sa.github.io/tao-community/${{ github.head_ref || github.ref_name }})' >> $GITHUB_OUTPUT
 
-      - name: Job summary
+      - name: Back-end job summary
         uses: mathiasvr/command-output@v2.0.0
-        id: summary
+        id: be-summary
         with:
           run: |
             cat << EOF
-            # Summary ${{ matrix.php-version }}
+            # Back-end summary PHP ${{ matrix.php-version }}
             ${{ steps.report-link.outputs.formatted }}
             |💯 Total|✅ Passed|⏭️ Skipped|❌ Failed|
             |-|-|-|-|
-            |${{ steps.junit.outputs.total }}|${{ steps.junit.outputs.passed }}|${{ steps.junit.outputs.skipped }}|${{ steps.junit.outputs.failed }}|
+            |${{ steps.be-junit.outputs.total }}|${{ steps.be-junit.outputs.passed }}|${{ steps.be-junit.outputs.skipped }}|${{ steps.be-junit.outputs.failed }}|
+            EOF
+            php ./.github/parse-reports.php
+
+      - name: Front-end job summary
+        if: ${{ matrix.node-version }}
+        uses: mathiasvr/command-output@v2.0.0
+        id: fe-summary
+        with:
+          run: |
+            cat << EOF
+            # Front-end summary Node ${{ matrix.node-version }}
+            |💯 Total|✅ Passed|⏭️ Skipped|❌ Failed|
+            |-|-|-|-|
+            |${{ steps.fe-junit.outputs.total }}|${{ steps.fe-junit.outputs.passed }}|${{ steps.fe-junit.outputs.skipped }}|${{ steps.fe-junit.outputs.failed }}|
             EOF
             php ./.github/parse-reports.php
 
       - uses: peter-evans/find-comment@v2
-        id: summary-comment
+        id: be-summary-comment
         if: github.event_name == 'pull_request'
         with:
           issue-number: ${{ github.event.pull_request.number }}
           comment-author: 'github-actions[bot]'
-          body-includes: Summary ${{ matrix.php-version }}
+          body-includes: Back-end summary PHP ${{ matrix.php-version }}
 
-      - name: Create or update summary comment
+      - uses: peter-evans/find-comment@v2
+        id: fe-summary-comment
+        if: ${{ github.event_name == 'pull_request' && matrix.node-version }}
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          comment-author: 'github-actions[bot]'
+          body-includes: Front-end summary Node ${{ matrix.node-version }}
+
+      - name: Create or update back-end summary comment
         uses: peter-evans/create-or-update-comment@v2
         if: github.event_name == 'pull_request'
         with:
-          comment-id: ${{ steps.summary-comment.outputs.comment-id }}
+          comment-id: ${{ steps.be-summary-comment.outputs.comment-id }}
           issue-number: ${{ github.event.pull_request.number }}
-          body: ${{ steps.summary.outputs.stdout }}
+          body: ${{ steps.be-summary.outputs.stdout }}
+          edit-mode: replace
+
+      - name: Create or update front-end summary comment
+        uses: peter-evans/create-or-update-comment@v2
+        if: ${{ github.event_name == 'pull_request' && matrix.node-version }}
+        with:
+          comment-id: ${{ steps.fe-summary-comment.outputs.comment-id }}
+          issue-number: ${{ github.event.pull_request.number }}
+          body: ${{ steps.fe-summary.outputs.stdout }}
           edit-mode: replace
 
       - name: Merge coverage reports
@@ -127,8 +185,16 @@ jobs:
           single-commit: true
           token: ${{ secrets.CI_GITHUB_TOKEN }}
 
-      - name: Job summary
-        run: echo "${{ steps.summary.outputs.stdout }}" >> $GITHUB_STEP_SUMMARY
+      - name: Back-end job summary
+        run: echo "${{ steps.be-summary.outputs.stdout }}" >> $GITHUB_STEP_SUMMARY
 
-      - name: Fail the job if tests weren't OK
-        run: exit ${{ steps.junit.outputs.failed }}
+      - name: Front-end job summary
+        if: ${{ matrix.node-version }}
+        run: echo "${{ steps.fe-summary.outputs.stdout }}" >> $GITHUB_STEP_SUMMARY
+
+      - name: Fail the job if back-end tests weren't OK
+        run: exit ${{ steps.be-junit.outputs.failed }}
+
+      - name: Fail the job if front-end tests weren't OK
+        if: ${{ matrix.node-version }}
+        run: exit ${{ steps.fe-junit.outputs.failed }}
