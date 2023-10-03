@@ -19,17 +19,6 @@ jobs:
       matrix:
         operating-system: [ ubuntu-latest ]
         php-version: [ '7.4', '8.0', '8.1' ]
-        include:
-          - php-version: '7.4'
-            node-version: '18'
-            coverage: true
-          - php-version: '8.0'
-            node-version: '18'
-            coverage: true
-          - php-version: '8.1'
-            node-version: '18'
-            coverage: true
-
     steps:
       - uses: actions/checkout@v3
         with:
