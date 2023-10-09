@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "eba7d667a0fb6a3e1818eaefa2c6bb10",
+    "content-hash": "2c6d26cf9b37c98166300b6f6d81a24f",
     "packages": [
         {
             "name": "clearfw/clearfw",
@@ -3204,20 +3204,21 @@
         },
         {
             "name": "oat-sa/extension-pcisample",
-            "version": "v3.8.2",
+            "version": "v3.8.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-pcisample.git",
-                "reference": "500288057e583873752ca50601ed9adf9628eb7e"
+                "reference": "5cd8af8ed708e877b03c35c432af9c3afa1eb222"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-pcisample/zipball/500288057e583873752ca50601ed9adf9628eb7e",
-                "reference": "500288057e583873752ca50601ed9adf9628eb7e",
+                "url": "https://api.github.com/repos/oat-sa/extension-pcisample/zipball/5cd8af8ed708e877b03c35c432af9c3afa1eb222",
+                "reference": "5cd8af8ed708e877b03c35c432af9c3afa1eb222",
                 "shasum": ""
             },
             "require": {
                 "oat-sa/extension-tao-itemqti-pci": ">=7.0.0",
+                "oat-sa/extension-tao-mediamanager": ">=12.0.0",
                 "oat-sa/extension-tao-testqti": ">=41.0.0",
                 "oat-sa/generis": ">=15.22",
                 "oat-sa/oatbox-extension-installer": "~1.1||dev-master",
@@ -3248,9 +3249,9 @@
             ],
             "support": {
                 "issues": "https://github.com/oat-sa/extension-pcisample/issues",
-                "source": "https://github.com/oat-sa/extension-pcisample/tree/v3.8.2"
+                "source": "https://github.com/oat-sa/extension-pcisample/tree/v3.8.3"
             },
-            "time": "2023-08-10T07:42:16+00:00"
+            "time": "2023-09-08T11:57:17+00:00"
         },
         {
             "name": "oat-sa/extension-tao-backoffice",
@@ -3944,16 +3945,16 @@
         },
         {
             "name": "oat-sa/extension-tao-itemqti",
-            "version": "v30.2.3.1",
+            "version": "v30.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti.git",
-                "reference": "18f35340310d8e267e2577037d82a8b09772f498"
+                "reference": "789ed3b36c70ed44a2a426d9abf0f524975fbc53"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/18f35340310d8e267e2577037d82a8b09772f498",
-                "reference": "18f35340310d8e267e2577037d82a8b09772f498",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/789ed3b36c70ed44a2a426d9abf0f524975fbc53",
+                "reference": "789ed3b36c70ed44a2a426d9abf0f524975fbc53",
                 "shasum": ""
             },
             "require": {
@@ -4030,22 +4031,22 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/v30.2.3.1"
+                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/v30.3.0"
             },
-            "time": "2023-09-12T15:48:20+00:00"
+            "time": "2023-10-04T15:16:08+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pci",
-            "version": "v8.10.1",
+            "version": "v8.10.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti-pci.git",
-                "reference": "0192967a136c962534ef40657ea74fa1106fd8ba"
+                "reference": "c6361a887f74dcd6176a8375ea793d3972ce70f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti-pci/zipball/0192967a136c962534ef40657ea74fa1106fd8ba",
-                "reference": "0192967a136c962534ef40657ea74fa1106fd8ba",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti-pci/zipball/c6361a887f74dcd6176a8375ea793d3972ce70f0",
+                "reference": "c6361a887f74dcd6176a8375ea793d3972ce70f0",
                 "shasum": ""
             },
             "require": {
@@ -4079,9 +4080,9 @@
             ],
             "support": {
                 "issues": "https://github.com/oat-sa/extension-tao-itemqti-pci/issues",
-                "source": "https://github.com/oat-sa/extension-tao-itemqti-pci/tree/v8.10.1"
+                "source": "https://github.com/oat-sa/extension-tao-itemqti-pci/tree/v8.10.2"
             },
-            "time": "2023-08-09T16:19:01+00:00"
+            "time": "2023-09-18T11:21:56+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pic",
@@ -4219,16 +4220,16 @@
         },
         {
             "name": "oat-sa/extension-tao-ltideliveryprovider",
-            "version": "v12.16.1",
+            "version": "v12.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-ltideliveryprovider.git",
-                "reference": "bec95a403ccc0c855a24d447c4a13ebf9866fbf9"
+                "reference": "b45035c21cc1d8dda31af3836a1991403a195938"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-ltideliveryprovider/zipball/bec95a403ccc0c855a24d447c4a13ebf9866fbf9",
-                "reference": "bec95a403ccc0c855a24d447c4a13ebf9866fbf9",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-ltideliveryprovider/zipball/b45035c21cc1d8dda31af3836a1991403a195938",
+                "reference": "b45035c21cc1d8dda31af3836a1991403a195938",
                 "shasum": ""
             },
             "require": {
@@ -4300,22 +4301,22 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-ltideliveryprovider/tree/v12.16.1"
+                "source": "https://github.com/oat-sa/extension-tao-ltideliveryprovider/tree/v12.17.0"
             },
-            "time": "2023-08-09T17:17:49+00:00"
+            "time": "2023-09-22T11:11:07+00:00"
         },
         {
             "name": "oat-sa/extension-tao-mediamanager",
-            "version": "v12.37.1",
+            "version": "v12.39.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-mediamanager.git",
-                "reference": "cbc0306a7172bfa4d75396536d900ce5f075daf3"
+                "reference": "4de30f16f96f4259ac38019288b87211dc543e59"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-mediamanager/zipball/cbc0306a7172bfa4d75396536d900ce5f075daf3",
-                "reference": "cbc0306a7172bfa4d75396536d900ce5f075daf3",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-mediamanager/zipball/4de30f16f96f4259ac38019288b87211dc543e59",
+                "reference": "4de30f16f96f4259ac38019288b87211dc543e59",
                 "shasum": ""
             },
             "require": {
@@ -4358,22 +4359,22 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-mediamanager/tree/v12.37.1"
+                "source": "https://github.com/oat-sa/extension-tao-mediamanager/tree/v12.39.0"
             },
-            "time": "2023-08-10T05:14:45+00:00"
+            "time": "2023-10-04T13:50:20+00:00"
         },
         {
             "name": "oat-sa/extension-tao-outcome",
-            "version": "v13.7.2",
+            "version": "v13.7.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-outcome.git",
-                "reference": "3da20edd4cc29d1d7d6b7b7183091869422e06e1"
+                "reference": "8e66527795f32ce453e03fa98c2ce08184145cce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-outcome/zipball/3da20edd4cc29d1d7d6b7b7183091869422e06e1",
-                "reference": "3da20edd4cc29d1d7d6b7b7183091869422e06e1",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-outcome/zipball/8e66527795f32ce453e03fa98c2ce08184145cce",
+                "reference": "8e66527795f32ce453e03fa98c2ce08184145cce",
                 "shasum": ""
             },
             "require": {
@@ -4446,9 +4447,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-outcome/tree/v13.7.2"
+                "source": "https://github.com/oat-sa/extension-tao-outcome/tree/v13.7.4"
             },
-            "time": "2023-08-18T11:05:05+00:00"
+            "time": "2023-10-06T09:51:21+00:00"
         },
         {
             "name": "oat-sa/extension-tao-outcomekeyvalue",
@@ -4614,16 +4615,16 @@
         },
         {
             "name": "oat-sa/extension-tao-outcomerds",
-            "version": "v8.4.2",
+            "version": "v8.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-outcomerds.git",
-                "reference": "f84208764847fb6fa22d89803e9a27649f69ab8d"
+                "reference": "b01ef0a407b1178e58b18451f22b8df7d6f62902"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-outcomerds/zipball/f84208764847fb6fa22d89803e9a27649f69ab8d",
-                "reference": "f84208764847fb6fa22d89803e9a27649f69ab8d",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-outcomerds/zipball/b01ef0a407b1178e58b18451f22b8df7d6f62902",
+                "reference": "b01ef0a407b1178e58b18451f22b8df7d6f62902",
                 "shasum": ""
             },
             "require": {
@@ -4661,22 +4662,22 @@
             ],
             "support": {
                 "issues": "https://github.com/oat-sa/extension-tao-outcomerds/issues",
-                "source": "https://github.com/oat-sa/extension-tao-outcomerds/tree/v8.4.2"
+                "source": "https://github.com/oat-sa/extension-tao-outcomerds/tree/v8.4.3"
             },
-            "time": "2023-08-09T14:18:58+00:00"
+            "time": "2023-09-19T15:13:09+00:00"
         },
         {
             "name": "oat-sa/extension-tao-outcomeui",
-            "version": "v12.1.4",
+            "version": "v12.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-outcomeui.git",
-                "reference": "923841fc2d49d5a7a4059e64ed43a45223dc6867"
+                "reference": "5e54fca7bd5e94db47c0f5ef4ed45e40c4c0d6e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-outcomeui/zipball/923841fc2d49d5a7a4059e64ed43a45223dc6867",
-                "reference": "923841fc2d49d5a7a4059e64ed43a45223dc6867",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-outcomeui/zipball/5e54fca7bd5e94db47c0f5ef4ed45e40c4c0d6e4",
+                "reference": "5e54fca7bd5e94db47c0f5ef4ed45e40c4c0d6e4",
                 "shasum": ""
             },
             "require": {
@@ -4684,11 +4685,11 @@
                 "oat-sa/extension-tao-delivery-rdf": ">=14.0.0",
                 "oat-sa/extension-tao-item": ">=11.0.0",
                 "oat-sa/extension-tao-test": ">=15.0.0",
-                "oat-sa/extension-tao-testqti": ">=41.0.0",
+                "oat-sa/extension-tao-testqti": ">=47.2.3",
                 "oat-sa/extension-tao-testtaker": ">=8.0.0",
                 "oat-sa/generis": ">=15.22",
                 "oat-sa/oatbox-extension-installer": "~1.1||dev-master",
-                "oat-sa/tao-core": ">=50.24.6"
+                "oat-sa/tao-core": ">=53.7.1"
             },
             "type": "tao-extension",
             "extra": {
@@ -4748,22 +4749,22 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-outcomeui/tree/v12.1.4"
+                "source": "https://github.com/oat-sa/extension-tao-outcomeui/tree/v12.2.1"
             },
-            "time": "2023-08-10T07:23:59+00:00"
+            "time": "2023-09-25T14:59:12+00:00"
         },
         {
             "name": "oat-sa/extension-tao-proctoring",
-            "version": "v20.7.2",
+            "version": "v20.7.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-proctoring.git",
-                "reference": "613fe6aec897684f6801574d78d34c0df2a53648"
+                "reference": "f897a00a67d7b8abc8ecafe3b1e21c2d4855132d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-proctoring/zipball/613fe6aec897684f6801574d78d34c0df2a53648",
-                "reference": "613fe6aec897684f6801574d78d34c0df2a53648",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-proctoring/zipball/f897a00a67d7b8abc8ecafe3b1e21c2d4855132d",
+                "reference": "f897a00a67d7b8abc8ecafe3b1e21c2d4855132d",
                 "shasum": ""
             },
             "require": {
@@ -4806,9 +4807,9 @@
             ],
             "support": {
                 "issues": "https://github.com/oat-sa/extension-tao-proctoring/issues",
-                "source": "https://github.com/oat-sa/extension-tao-proctoring/tree/v20.7.2"
+                "source": "https://github.com/oat-sa/extension-tao-proctoring/tree/v20.7.3"
             },
-            "time": "2023-08-10T07:50:40+00:00"
+            "time": "2023-10-06T09:50:16+00:00"
         },
         {
             "name": "oat-sa/extension-tao-revision",
@@ -5015,16 +5016,16 @@
         },
         {
             "name": "oat-sa/extension-tao-testqti",
-            "version": "v47.2.1",
+            "version": "v47.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "57e98158af6741d23e6b3a5d4986631c7933bc27"
+                "reference": "24e608d319b68218164d3874a14c5e3254622f27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/57e98158af6741d23e6b3a5d4986631c7933bc27",
-                "reference": "57e98158af6741d23e6b3a5d4986631c7933bc27",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/24e608d319b68218164d3874a14c5e3254622f27",
+                "reference": "24e608d319b68218164d3874a14c5e3254622f27",
                 "shasum": ""
             },
             "require": {
@@ -5108,22 +5109,22 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/v47.2.1"
+                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/v47.4.0"
             },
-            "time": "2023-08-11T14:13:37+00:00"
+            "time": "2023-10-04T15:18:18+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
-            "version": "v3.9.1",
+            "version": "v3.10.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti-previewer.git",
-                "reference": "767b6624ce5b50f7e7f72943ffc55ff6e3ac09a6"
+                "reference": "3ae91a9abe53f05260c035c5773f66d416aef0b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti-previewer/zipball/767b6624ce5b50f7e7f72943ffc55ff6e3ac09a6",
-                "reference": "767b6624ce5b50f7e7f72943ffc55ff6e3ac09a6",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti-previewer/zipball/3ae91a9abe53f05260c035c5773f66d416aef0b5",
+                "reference": "3ae91a9abe53f05260c035c5773f66d416aef0b5",
                 "shasum": ""
             },
             "require": {
@@ -5131,9 +5132,8 @@
                 "oat-sa/extension-tao-item": ">=11.11.2",
                 "oat-sa/extension-tao-itemqti": ">=28.22.0",
                 "oat-sa/extension-tao-outcome": ">=13.0.0",
-                "oat-sa/extension-tao-outcomeui": ">=10.0.0",
                 "oat-sa/extension-tao-test": ">=15.0.0",
-                "oat-sa/extension-tao-testqti": ">=41.22.2",
+                "oat-sa/extension-tao-testqti": ">=47.2.3",
                 "oat-sa/generis": ">=15.22",
                 "oat-sa/oatbox-extension-installer": "~1.1||dev-master",
                 "oat-sa/tao-core": ">=50.24.6",
@@ -5169,9 +5169,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-testqti-previewer/tree/v3.9.1"
+                "source": "https://github.com/oat-sa/extension-tao-testqti-previewer/tree/v3.10.1"
             },
-            "time": "2023-08-10T16:17:21+00:00"
+            "time": "2023-10-06T09:52:34+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testtaker",
@@ -5887,16 +5887,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "v53.6.1",
+            "version": "v53.7.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "87b82b5a5b97f1f415980e1b5b3e3773d035a5e7"
+                "reference": "f2bdc93b0811ab796d9e6fa7de5bc657011cd7d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/87b82b5a5b97f1f415980e1b5b3e3773d035a5e7",
-                "reference": "87b82b5a5b97f1f415980e1b5b3e3773d035a5e7",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/f2bdc93b0811ab796d9e6fa7de5bc657011cd7d8",
+                "reference": "f2bdc93b0811ab796d9e6fa7de5bc657011cd7d8",
                 "shasum": ""
             },
             "require": {
@@ -5997,9 +5997,9 @@
             "support": {
                 "forum": "https://forum.taocloud.org",
                 "issues": "https://github.com/oat-sa/tao-core/issues",
-                "source": "https://github.com/oat-sa/tao-core/tree/v53.6.1"
+                "source": "https://github.com/oat-sa/tao-core/tree/v53.7.3"
             },
-            "time": "2023-09-01T15:03:57+00:00"
+            "time": "2023-10-09T07:27:46+00:00"
         },
         {
             "name": "paragonie/random_compat",
