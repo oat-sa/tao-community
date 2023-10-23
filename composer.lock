@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cef5b01f4a8ef775932fcbfa7465511f",
+    "content-hash": "b1b0bdbd9635279a772235a4657fc45e",
     "packages": [
         {
             "name": "clearfw/clearfw",
@@ -4667,16 +4667,16 @@
         },
         {
             "name": "oat-sa/extension-tao-outcomeui",
-            "version": "v12.1.3",
+            "version": "v12.1.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-outcomeui.git",
-                "reference": "2ab9410f9ac2aa37736784fb677feff26f187017"
+                "reference": "ee3f2aed3fb20882cb87c421d4221850bdf0fe0e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-outcomeui/zipball/2ab9410f9ac2aa37736784fb677feff26f187017",
-                "reference": "2ab9410f9ac2aa37736784fb677feff26f187017",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-outcomeui/zipball/ee3f2aed3fb20882cb87c421d4221850bdf0fe0e",
+                "reference": "ee3f2aed3fb20882cb87c421d4221850bdf0fe0e",
                 "shasum": ""
             },
             "require": {
@@ -4688,7 +4688,7 @@
                 "oat-sa/extension-tao-testtaker": ">=8.0.0",
                 "oat-sa/generis": ">=15.22",
                 "oat-sa/oatbox-extension-installer": "~1.1||dev-master",
-                "oat-sa/tao-core": ">=50.24.6"
+                "oat-sa/tao-core": ">=53.6.0.1"
             },
             "type": "tao-extension",
             "extra": {
@@ -4748,9 +4748,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-outcomeui/tree/v12.1.3"
+                "source": "https://github.com/oat-sa/extension-tao-outcomeui/tree/v12.1.3.2"
             },
-            "time": "2023-06-20T15:45:45+00:00"
+            "time": "2023-10-23T13:00:06+00:00"
         },
         {
             "name": "oat-sa/extension-tao-proctoring",
@@ -5887,16 +5887,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "v53.6.0",
+            "version": "v53.6.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "57ae1b464c07479f8c86bbfa249d15c4e44cfa8f"
+                "reference": "83de5b3ca3809b764bf1d853aeab5f168effaaef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/57ae1b464c07479f8c86bbfa249d15c4e44cfa8f",
-                "reference": "57ae1b464c07479f8c86bbfa249d15c4e44cfa8f",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/83de5b3ca3809b764bf1d853aeab5f168effaaef",
+                "reference": "83de5b3ca3809b764bf1d853aeab5f168effaaef",
                 "shasum": ""
             },
             "require": {
@@ -5997,9 +5997,9 @@
             "support": {
                 "forum": "https://forum.taocloud.org",
                 "issues": "https://github.com/oat-sa/tao-core/issues",
-                "source": "https://github.com/oat-sa/tao-core/tree/v53.6.0"
+                "source": "https://github.com/oat-sa/tao-core/tree/v53.6.0.1"
             },
-            "time": "2023-08-31T11:54:11+00:00"
+            "time": "2023-10-23T12:48:24+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -11389,5 +11389,5 @@
     "platform-overrides": {
         "php": "7.4"
     },
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.3.0"
 }
