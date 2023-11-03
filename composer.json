@@ -8,7 +8,8 @@
     "preferred-install": "dist",
     "allow-plugins": {
       "oat-sa/oatbox-extension-installer": true,
-      "oat-sa/composer-npm-bridge": true
+      "oat-sa/composer-npm-bridge": true,
+      "php-http/discovery": true
     }
   },
   "support": {
@@ -31,17 +32,17 @@
   "homepage": "http://www.taotesting.com",
   "prefer-stable": true,
   "require": {
-    "oat-sa/generis": "15.28.0",
-    "oat-sa/tao-core": "53.7.3",
+    "oat-sa/generis": "15.32.0",
+    "oat-sa/tao-core": "53.12.0",
     "oat-sa/extension-tao-community": "11.0.5",
     "oat-sa/extension-tao-funcacl": "7.4.1",
-    "oat-sa/extension-tao-dac-simple": "7.10.6",
+    "oat-sa/extension-tao-dac-simple": "8.0.0",
     "oat-sa/extension-tao-itemqti": "30.3.1",
     "oat-sa/extension-tao-testqti": "47.4.0",
     "oat-sa/extension-tao-testtaker": "8.11.2",
     "oat-sa/extension-tao-group": "7.8.2",
     "oat-sa/extension-tao-item": "12.1.1",
-    "oat-sa/extension-tao-itemqti-pci": "8.10.2",
+    "oat-sa/extension-tao-itemqti-pci": "8.12.0",
     "oat-sa/extension-tao-itemqti-pic": "7.0.2",
     "oat-sa/extension-tao-test": "16.0.4",
     "oat-sa/extension-tao-outcome": "13.7.4",
@@ -50,18 +51,19 @@
     "oat-sa/extension-tao-outcomekeyvalue": "6.2.2",
     "oat-sa/extension-tao-outcomelti": "5.1.2",
     "oat-sa/extension-tao-delivery": "15.14.2",
-    "oat-sa/extension-tao-delivery-rdf": "14.19.2",
-    "oat-sa/extension-tao-lti": "15.13.4",
+    "oat-sa/extension-tao-delivery-rdf": "14.19.3",
+    "oat-sa/extension-tao-lti": "15.14.1",
     "oat-sa/extension-tao-ltideliveryprovider": "12.17.0",
     "oat-sa/extension-tao-revision": "10.7.2",
-    "oat-sa/extension-tao-mediamanager": "12.39.0",
+    "oat-sa/extension-tao-mediamanager": "12.39.1",
     "oat-sa/extension-pcisample": "3.8.3",
     "oat-sa/extension-tao-backoffice": "6.12.7",
     "oat-sa/extension-tao-proctoring": "20.7.3",
     "oat-sa/extension-tao-clientdiag": "8.5.2",
-    "oat-sa/extension-tao-eventlog": "3.4.2",
-    "oat-sa/extension-tao-task-queue": "6.8.2",
-    "oat-sa/extension-tao-testqti-previewer": "3.10.1"
+    "oat-sa/extension-tao-eventlog": "3.5.0",
+    "oat-sa/extension-tao-task-queue": "6.8.3",
+    "oat-sa/extension-tao-testqti-previewer": "3.10.1",
+    "oat-sa/lib-generis-search": "^2.3"
   },
   "require-dev": {
     "mikey179/vfsstream": "~1",
