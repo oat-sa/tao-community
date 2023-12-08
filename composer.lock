@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f9e5ed6d7a9e9f3deb72b723af479bd5",
+    "content-hash": "b90f6b2f8db8f5fbeb5645f7e4e1ab5f",
     "packages": [
         {
             "name": "clearfw/clearfw",
@@ -3945,7 +3945,7 @@
         },
         {
             "name": "oat-sa/extension-tao-itemqti",
-            "version": "v30.3.1.2",
+            "version": "dev-release-30.3.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti.git",
@@ -4307,7 +4307,7 @@
         },
         {
             "name": "oat-sa/extension-tao-mediamanager",
-            "version": "v12.39.0",
+            "version": "dev-release-12.39.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-mediamanager.git",
@@ -5887,7 +5887,7 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "v53.7.3",
+            "version": "dev-release-53.7.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
@@ -11374,6 +11374,24 @@
     ],
     "aliases": [
         {
+            "package": "oat-sa/extension-tao-itemqti",
+            "version": "dev-release-30.3.1.3",
+            "alias": "30.3.1.3",
+            "alias_normalized": "30.3.1.3"
+        },
+        {
+            "package": "oat-sa/extension-tao-mediamanager",
+            "version": "dev-release-12.39.0.1",
+            "alias": "12.39.0.1",
+            "alias_normalized": "12.39.0.1"
+        },
+        {
+            "package": "oat-sa/tao-core",
+            "version": "dev-release-53.7.3.1",
+            "alias": "53.7.3.1",
+            "alias_normalized": "53.7.3.1"
+        },
+        {
             "package": "phpdocumentor/reflection-docblock",
             "version": "5.3.0.0",
             "alias": "2.0.5",
@@ -11381,7 +11399,11 @@
         }
     ],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "oat-sa/tao-core": 20,
+        "oat-sa/extension-tao-itemqti": 20,
+        "oat-sa/extension-tao-mediamanager": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
