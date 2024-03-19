@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3627338706e82317bb40733d96f5e341",
+    "content-hash": "5a10710d036f0c640ae51f0858c2b6cb",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -4410,16 +4410,16 @@
         },
         {
             "name": "oat-sa/extension-tao-lti",
-            "version": "v15.17.0",
+            "version": "v15.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-lti.git",
-                "reference": "8168f6e3ebe2ed32f46f0d94c58b140adc04b18a"
+                "reference": "97aeffc0ebf34de5b375236e7c7dbdaaa29193b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-lti/zipball/8168f6e3ebe2ed32f46f0d94c58b140adc04b18a",
-                "reference": "8168f6e3ebe2ed32f46f0d94c58b140adc04b18a",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-lti/zipball/97aeffc0ebf34de5b375236e7c7dbdaaa29193b6",
+                "reference": "97aeffc0ebf34de5b375236e7c7dbdaaa29193b6",
                 "shasum": ""
             },
             "require": {
@@ -4429,7 +4429,7 @@
                 "oat-sa/lib-lti1p3-ags": "^1.2",
                 "oat-sa/lib-lti1p3-core": "^6.0.0",
                 "oat-sa/oatbox-extension-installer": "~1.1||dev-master",
-                "oat-sa/tao-core": ">=50.24.6"
+                "oat-sa/tao-core": ">=54.8.0"
             },
             "type": "tao-extension",
             "extra": {
@@ -4489,9 +4489,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-lti/tree/v15.17.0"
+                "source": "https://github.com/oat-sa/extension-tao-lti/tree/v15.18.0"
             },
-            "time": "2024-03-12T12:10:49+00:00"
+            "time": "2024-03-19T08:56:16+00:00"
         },
         {
             "name": "oat-sa/extension-tao-ltideliveryprovider",
@@ -6165,16 +6165,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "v54.6.0",
+            "version": "v54.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "4405ac43f3b6031aac24cfc83993048f23630229"
+                "reference": "621fd5bb78fac84fd523b97391576a31585253a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/4405ac43f3b6031aac24cfc83993048f23630229",
-                "reference": "4405ac43f3b6031aac24cfc83993048f23630229",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/621fd5bb78fac84fd523b97391576a31585253a8",
+                "reference": "621fd5bb78fac84fd523b97391576a31585253a8",
                 "shasum": ""
             },
             "require": {
@@ -6275,9 +6275,9 @@
             "support": {
                 "forum": "https://forum.taocloud.org",
                 "issues": "https://github.com/oat-sa/tao-core/issues",
-                "source": "https://github.com/oat-sa/tao-core/tree/v54.6.0"
+                "source": "https://github.com/oat-sa/tao-core/tree/v54.8.0"
             },
-            "time": "2024-03-11T09:24:45+00:00"
+            "time": "2024-03-19T07:38:49+00:00"
         },
         {
             "name": "paragonie/constant_time_encoding",
@@ -12119,5 +12119,5 @@
     "platform-overrides": {
         "php": "7.4"
     },
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.3.0"
 }
