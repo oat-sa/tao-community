@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "207c6f38493f214a9517f6478c454dc2",
+    "content-hash": "bf47b46c563eae8489d56784e2077655",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -5291,16 +5291,16 @@
         },
         {
             "name": "oat-sa/extension-tao-testqti",
-            "version": "v48.3.4",
+            "version": "dev-release-2024-05-lts",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "c2cffd0d4cdaf8bca39d7c181affa30fbd4c4a5e"
+                "reference": "2ae548f9d65083862080d41ed05b14c7f5e62a67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/c2cffd0d4cdaf8bca39d7c181affa30fbd4c4a5e",
-                "reference": "c2cffd0d4cdaf8bca39d7c181affa30fbd4c4a5e",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/2ae548f9d65083862080d41ed05b14c7f5e62a67",
+                "reference": "2ae548f9d65083862080d41ed05b14c7f5e62a67",
                 "shasum": ""
             },
             "require": {
@@ -5384,9 +5384,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/v48.3.4"
+                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/release-2024-05-lts"
             },
-            "time": "2024-03-15T09:33:50+00:00"
+            "time": "2024-04-19T08:49:48+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
@@ -12104,6 +12104,12 @@
     ],
     "aliases": [
         {
+            "package": "oat-sa/extension-tao-testqti",
+            "version": "dev-release-2024-05-lts",
+            "alias": "48.3.4.1",
+            "alias_normalized": "48.3.4.1"
+        },
+        {
             "package": "phpdocumentor/reflection-docblock",
             "version": "5.3.0.0",
             "alias": "2.0.5",
@@ -12111,7 +12117,9 @@
         }
     ],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "oat-sa/extension-tao-testqti": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
