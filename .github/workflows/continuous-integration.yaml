@@ -2,7 +2,7 @@ name: Continuous integration
 
 on:
   push:
-    branches: [ master, release* ]
+    branches: [ master, release*, feature/adding-php8.3-to-tao-community ]
   pull_request:
     branches: [ master, release* ]
 
@@ -18,7 +18,7 @@ jobs:
       fail-fast: false
       matrix:
         operating-system: [ ubuntu-latest ]
-        php-version: [ '7.4', '8.0', '8.1' ]
+        php-version: [ '7.4', '8.0', '8.1', '8.3' ]
         include:
           - php-version: '7.4'
             node-version: '18'
