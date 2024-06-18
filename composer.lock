@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "097cca852a4acc6224bd0c3f89f66820",
+    "content-hash": "6da3c4210261953152b9d671947f86c1",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -5531,16 +5531,16 @@
         },
         {
             "name": "oat-sa/generis",
-            "version": "v15.35.5",
+            "version": "dev-fix/AUT-3679/platform-requirements-tests-max-version-8.3.x",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/generis.git",
-                "reference": "ab99b0685af59d79f6e27086a7deb341cd4b56d7"
+                "reference": "6d5d35549a59240a44bfb3d85a49a9403d0b9827"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/generis/zipball/ab99b0685af59d79f6e27086a7deb341cd4b56d7",
-                "reference": "ab99b0685af59d79f6e27086a7deb341cd4b56d7",
+                "url": "https://api.github.com/repos/oat-sa/generis/zipball/6d5d35549a59240a44bfb3d85a49a9403d0b9827",
+                "reference": "6d5d35549a59240a44bfb3d85a49a9403d0b9827",
                 "shasum": ""
             },
             "require": {
@@ -5646,9 +5646,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/generis/tree/v15.35.5"
+                "source": "https://github.com/oat-sa/generis/tree/fix/AUT-3679/platform-requirements-tests-max-version-8.3.x"
             },
-            "time": "2024-03-01T04:27:44+00:00"
+            "time": "2024-06-13T08:40:01+00:00"
         },
         {
             "name": "oat-sa/imsglobal-lti",
@@ -12424,6 +12424,12 @@
     ],
     "aliases": [
         {
+            "package": "oat-sa/generis",
+            "version": "dev-fix/AUT-3679/platform-requirements-tests-max-version-8.3.x",
+            "alias": "15.36.2",
+            "alias_normalized": "15.36.2.0"
+        },
+        {
             "package": "phpdocumentor/reflection-docblock",
             "version": "5.3.0.0",
             "alias": "2.0.5",
@@ -12431,7 +12437,9 @@
         }
     ],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "oat-sa/generis": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
