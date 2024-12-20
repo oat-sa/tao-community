@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "afc013cdc14e7c07b3d67644f81392ea",
+    "content-hash": "ffc2a21178f44d34e2967aeeeba68b6d",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -5285,16 +5285,16 @@
         },
         {
             "name": "oat-sa/extension-tao-testqti",
-            "version": "v48.9.0",
+            "version": "v48.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "9ba8ee62e60b042a2be3ea8633b280c9795864e6"
+                "reference": "240f7f835b42ec156fa27f537127f73021314d7a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/9ba8ee62e60b042a2be3ea8633b280c9795864e6",
-                "reference": "9ba8ee62e60b042a2be3ea8633b280c9795864e6",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/240f7f835b42ec156fa27f537127f73021314d7a",
+                "reference": "240f7f835b42ec156fa27f537127f73021314d7a",
                 "shasum": ""
             },
             "require": {
@@ -5310,18 +5310,18 @@
                 "oat-sa/lib-test-cat": "2.3.7",
                 "oat-sa/oatbox-extension-installer": "~1.1||dev-master",
                 "oat-sa/tao-core": ">=54.14.7",
-                "qtism/qtism": ">=0.28.3",
+                "qtism/qtism": ">=0.28.7",
                 "slim/slim": "^3.0"
             },
             "type": "tao-extension",
             "extra": {
-                "tao-extension-name": "taoQtiTest",
                 "npm-bridge": {
                     "arguments": [
                         "--prefix",
                         "views"
                     ]
-                }
+                },
+                "tao-extension-name": "taoQtiTest"
             },
             "autoload": {
                 "psr-4": {
@@ -5378,9 +5378,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/v48.9.0"
+                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/v48.9.1"
             },
-            "time": "2024-07-09T14:39:27+00:00"
+            "time": "2024-12-20T15:39:25+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
@@ -7496,16 +7496,16 @@
         },
         {
             "name": "qtism/qtism",
-            "version": "0.28.5",
+            "version": "0.28.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/qti-sdk.git",
-                "reference": "2caf4e69a5590acd849286d0f48390d467be6edb"
+                "reference": "3a90acdc8c4141d2d7c15eb0111a0018d17ae0e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/qti-sdk/zipball/2caf4e69a5590acd849286d0f48390d467be6edb",
-                "reference": "2caf4e69a5590acd849286d0f48390d467be6edb",
+                "url": "https://api.github.com/repos/oat-sa/qti-sdk/zipball/3a90acdc8c4141d2d7c15eb0111a0018d17ae0e0",
+                "reference": "3a90acdc8c4141d2d7c15eb0111a0018d17ae0e0",
                 "shasum": ""
             },
             "require": {
@@ -7560,9 +7560,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/qti-sdk/tree/0.28.5"
+                "source": "https://github.com/oat-sa/qti-sdk/tree/0.28.7"
             },
-            "time": "2024-02-08T14:54:31+00:00"
+            "time": "2024-12-19T16:45:58+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
