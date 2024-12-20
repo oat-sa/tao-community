@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "553e28746de6ff7c317bc49e3df951ec",
+    "content-hash": "50d2b6480b20b480fa05e887cf14ae95",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -4232,16 +4232,16 @@
         },
         {
             "name": "oat-sa/extension-tao-itemqti",
-            "version": "v30.21.16",
+            "version": "v30.21.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti.git",
-                "reference": "0534c7bacad92f671a22775b013946d148af04a8"
+                "reference": "b104b2c71e9a50e80d47935d2e7f03198dce93ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/0534c7bacad92f671a22775b013946d148af04a8",
-                "reference": "0534c7bacad92f671a22775b013946d148af04a8",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/b104b2c71e9a50e80d47935d2e7f03198dce93ff",
+                "reference": "b104b2c71e9a50e80d47935d2e7f03198dce93ff",
                 "shasum": ""
             },
             "require": {
@@ -4256,13 +4256,13 @@
             },
             "type": "tao-extension",
             "extra": {
-                "tao-extension-name": "taoQtiItem",
                 "npm-bridge": {
                     "arguments": [
                         "--prefix",
                         "views"
                     ]
-                }
+                },
+                "tao-extension-name": "taoQtiItem"
             },
             "autoload": {
                 "psr-4": {
@@ -4318,9 +4318,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/v30.21.16"
+                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/v30.21.18"
             },
-            "time": "2024-11-26T13:49:59+00:00"
+            "time": "2024-12-20T15:30:42+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pci",
@@ -5303,16 +5303,16 @@
         },
         {
             "name": "oat-sa/extension-tao-testqti",
-            "version": "v48.13.4",
+            "version": "v48.13.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "3d2fb16d257ea84a497f513b1a4922b3e1c990a2"
+                "reference": "665f486b493d5c2eba5a195c2fec07568d06bf55"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/3d2fb16d257ea84a497f513b1a4922b3e1c990a2",
-                "reference": "3d2fb16d257ea84a497f513b1a4922b3e1c990a2",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/665f486b493d5c2eba5a195c2fec07568d06bf55",
+                "reference": "665f486b493d5c2eba5a195c2fec07568d06bf55",
                 "shasum": ""
             },
             "require": {
@@ -5333,13 +5333,13 @@
             },
             "type": "tao-extension",
             "extra": {
-                "tao-extension-name": "taoQtiTest",
                 "npm-bridge": {
                     "arguments": [
                         "--prefix",
                         "views"
                     ]
-                }
+                },
+                "tao-extension-name": "taoQtiTest"
             },
             "autoload": {
                 "psr-4": {
@@ -5396,9 +5396,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/v48.13.4"
+                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/v48.13.5"
             },
-            "time": "2024-11-22T11:15:14+00:00"
+            "time": "2024-12-10T10:50:26+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
