@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "291c8fdcc7f8015198fa6011e2efdf24",
+    "content-hash": "c81cf62beac02957e4c168b9a38f4586",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -4214,16 +4214,16 @@
         },
         {
             "name": "oat-sa/extension-tao-itemqti",
-            "version": "v30.14.1",
+            "version": "v30.14.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti.git",
-                "reference": "44ce3770a3c766b1ae7c32f431208f9d0c14a1a6"
+                "reference": "da16318b146e67c3efa1646248cf887a1862c0b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/44ce3770a3c766b1ae7c32f431208f9d0c14a1a6",
-                "reference": "44ce3770a3c766b1ae7c32f431208f9d0c14a1a6",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/da16318b146e67c3efa1646248cf887a1862c0b3",
+                "reference": "da16318b146e67c3efa1646248cf887a1862c0b3",
                 "shasum": ""
             },
             "require": {
@@ -4238,13 +4238,13 @@
             },
             "type": "tao-extension",
             "extra": {
-                "tao-extension-name": "taoQtiItem",
                 "npm-bridge": {
                     "arguments": [
                         "--prefix",
                         "views"
                     ]
-                }
+                },
+                "tao-extension-name": "taoQtiItem"
             },
             "autoload": {
                 "psr-4": {
@@ -4300,9 +4300,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/v30.14.1"
+                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/v30.14.2"
             },
-            "time": "2024-07-10T12:25:12+00:00"
+            "time": "2025-03-12T16:49:22+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pci",
