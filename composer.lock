@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "447b794b26a6005c17537f9440af9cd0",
+    "content-hash": "c1cf6d847cd370416f5d93048047d770",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -6176,16 +6176,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "v54.22.6",
+            "version": "v54.22.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "7bb4df2c795da834e2518bd70984789e309db91f"
+                "reference": "9297e2266bbf57b267e06a6f47c19af9e12e74fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/7bb4df2c795da834e2518bd70984789e309db91f",
-                "reference": "7bb4df2c795da834e2518bd70984789e309db91f",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/9297e2266bbf57b267e06a6f47c19af9e12e74fa",
+                "reference": "9297e2266bbf57b267e06a6f47c19af9e12e74fa",
                 "shasum": ""
             },
             "require": {
@@ -6217,13 +6217,13 @@
             },
             "type": "tao-extension",
             "extra": {
-                "tao-extension-name": "tao",
                 "npm-bridge": {
                     "arguments": [
                         "--prefix",
                         "views"
                     ]
-                }
+                },
+                "tao-extension-name": "tao"
             },
             "autoload": {
                 "files": [
@@ -6286,9 +6286,9 @@
             "support": {
                 "forum": "https://forum.taocloud.org",
                 "issues": "https://github.com/oat-sa/tao-core/issues",
-                "source": "https://github.com/oat-sa/tao-core/tree/v54.22.6"
+                "source": "https://github.com/oat-sa/tao-core/tree/v54.22.6.1"
             },
-            "time": "2024-10-09T09:40:40+00:00"
+            "time": "2025-03-13T14:18:07+00:00"
         },
         {
             "name": "paragonie/constant_time_encoding",
@@ -12218,5 +12218,5 @@
     "platform-overrides": {
         "php": "7.4"
     },
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.3.0"
 }
