@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /home/runner/work/tao-community/tao-community/taoDacSimple</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../_css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="../_css/nv.d3.min.css" rel="stylesheet" type="text/css">
+  <link href="../_css/style.css" rel="stylesheet" type="text/css">
+  <link href="../_css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="../index.html">/home/runner/work/tao-community/tao-community</a></li>
+         <li class="breadcrumb-item"><a href="index.html">taoDacSimple</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="controller/AdminAccessController.php.html#51">oat\taoDacSimple\controller\AdminAccessController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/AdminService.php.html#32">oat\taoDacSimple\model\AdminService</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/Copy/ServiceProvider/CopyServiceProvider.php.html#37">oat\taoDacSimple\model\Copy\ServiceProvider\CopyServiceProvider</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/PermissionsServiceFactory.php.html#30">oat\taoDacSimple\model\PermissionsServiceFactory</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/action/AdminAction.php.html#38">oat\taoDacSimple\model\action\AdminAction</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/tasks/ChangePermissionsTask.php.html#46">oat\taoDacSimple\model\tasks\ChangePermissionsTask</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/PermissionProvider.php.html#46">oat\taoDacSimple\model\PermissionProvider</a></td><td class="text-right">7%</td></tr>
+       <tr><td><a href="model/event/AbstractDacEvent.php.html#27">oat\taoDacSimple\model\event\AbstractDacEvent</a></td><td class="text-right">36%</td></tr>
+       <tr><td><a href="model/DataBaseAccess.php.html#38">oat\taoDacSimple\model\DataBaseAccess</a></td><td class="text-right">43%</td></tr>
+       <tr><td><a href="model/event/DacAffectedUsersEvent.php.html#28">oat\taoDacSimple\model\event\DacAffectedUsersEvent</a></td><td class="text-right">50%</td></tr>
+       <tr><td><a href="model/PermissionsStrategyAbstract.php.html#27">oat\taoDacSimple\model\PermissionsStrategyAbstract</a></td><td class="text-right">65%</td></tr>
+       <tr><td><a href="model/SyncPermissionsStrategy.php.html#26">oat\taoDacSimple\model\SyncPermissionsStrategy</a></td><td class="text-right">71%</td></tr>
+       <tr><td><a href="model/PermissionsService.php.html#35">oat\taoDacSimple\model\PermissionsService</a></td><td class="text-right">87%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="model/DataBaseAccess.php.html#38">oat\taoDacSimple\model\DataBaseAccess</a></td><td class="text-right">352</td></tr>
+       <tr><td><a href="controller/AdminAccessController.php.html#51">oat\taoDacSimple\controller\AdminAccessController</a></td><td class="text-right">342</td></tr>
+       <tr><td><a href="model/tasks/ChangePermissionsTask.php.html#46">oat\taoDacSimple\model\tasks\ChangePermissionsTask</a></td><td class="text-right">272</td></tr>
+       <tr><td><a href="model/PermissionProvider.php.html#46">oat\taoDacSimple\model\PermissionProvider</a></td><td class="text-right">127</td></tr>
+       <tr><td><a href="model/AdminService.php.html#32">oat\taoDacSimple\model\AdminService</a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="model/PermissionsStrategyAbstract.php.html#27">oat\taoDacSimple\model\PermissionsStrategyAbstract</a></td><td class="text-right">51</td></tr>
+       <tr><td><a href="model/PermissionsService.php.html#35">oat\taoDacSimple\model\PermissionsService</a></td><td class="text-right">51</td></tr>
+       <tr><td><a href="model/PermissionsServiceFactory.php.html#30">oat\taoDacSimple\model\PermissionsServiceFactory</a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="model/SyncPermissionsStrategy.php.html#26">oat\taoDacSimple\model\SyncPermissionsStrategy</a></td><td class="text-right">5</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="controller/AdminAccessController.php.html#63"><abbr title="oat\taoDacSimple\controller\AdminAccessController::adminPermissions">adminPermissions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/event/AbstractDacEvent.php.html#77"><abbr title="oat\taoDacSimple\model\event\AbstractDacEvent::getUserUri">getUserUri</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/action/AdminAction.php.html#45"><abbr title="oat\taoDacSimple\model\action\AdminAction::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/action/AdminAction.php.html#53"><abbr title="oat\taoDacSimple\model\action\AdminAction::getName">getName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/action/AdminAction.php.html#61"><abbr title="oat\taoDacSimple\model\action\AdminAction::getUrl">getUrl</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/action/AdminAction.php.html#69"><abbr title="oat\taoDacSimple\model\action\AdminAction::getBinding">getBinding</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/action/AdminAction.php.html#77"><abbr title="oat\taoDacSimple\model\action\AdminAction::getContext">getContext</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/action/AdminAction.php.html#85"><abbr title="oat\taoDacSimple\model\action\AdminAction::getGroup">getGroup</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/action/AdminAction.php.html#93"><abbr title="oat\taoDacSimple\model\action\AdminAction::getIcon">getIcon</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/action/AdminAction.php.html#106"><abbr title="oat\taoDacSimple\model\action\AdminAction::isMultiple">isMultiple</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/action/AdminAction.php.html#114"><abbr title="oat\taoDacSimple\model\action\AdminAction::getRequiredRights">getRequiredRights</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/event/AbstractDacEvent.php.html#53"><abbr title="oat\taoDacSimple\model\event\AbstractDacEvent::getName">getName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/event/AbstractDacEvent.php.html#65"><abbr title="oat\taoDacSimple\model\event\AbstractDacEvent::jsonSerialize">jsonSerialize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/event/AbstractDacEvent.php.html#85"><abbr title="oat\taoDacSimple\model\event\AbstractDacEvent::getResourceUri">getResourceUri</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controller/AdminAccessController.php.html#113"><abbr title="oat\taoDacSimple\controller\AdminAccessController::savePermissions">savePermissions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/event/AbstractDacEvent.php.html#93"><abbr title="oat\taoDacSimple\model\event\AbstractDacEvent::getPrivilege">getPrivilege</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/event/DacAffectedUsersEvent.php.html#45"><abbr title="oat\taoDacSimple\model\event\DacAffectedUsersEvent::getName">getName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/event/DacAffectedUsersEvent.php.html#50"><abbr title="oat\taoDacSimple\model\event\DacAffectedUsersEvent::getPermissionsAdded">getPermissionsAdded</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/event/DacAffectedUsersEvent.php.html#55"><abbr title="oat\taoDacSimple\model\event\DacAffectedUsersEvent::getPermissionsRemoved">getPermissionsRemoved</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/tasks/ChangePermissionsTask.php.html#63"><abbr title="oat\taoDacSimple\model\tasks\ChangePermissionsTask::__invoke">__invoke</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/tasks/ChangePermissionsTask.php.html#84"><abbr title="oat\taoDacSimple\model\tasks\ChangePermissionsTask::doHandle">doHandle</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/tasks/ChangePermissionsTask.php.html#126"><abbr title="oat\taoDacSimple\model\tasks\ChangePermissionsTask::createSubtasksForClasses">createSubtasksForClasses</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/tasks/ChangePermissionsTask.php.html#152"><abbr title="oat\taoDacSimple\model\tasks\ChangePermissionsTask::formatLabel">formatLabel</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/tasks/ChangePermissionsTask.php.html#159"><abbr title="oat\taoDacSimple\model\tasks\ChangePermissionsTask::getDispatcher">getDispatcher</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/tasks/ChangePermissionsTask.php.html#164"><abbr title="oat\taoDacSimple\model\tasks\ChangePermissionsTask::getPermissionService">getPermissionService</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/tasks/ChangePermissionsTask.php.html#169"><abbr title="oat\taoDacSimple\model\tasks\ChangePermissionsTask::validateParams">validateParams</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/PermissionsStrategyAbstract.php.html#60"><abbr title="oat\taoDacSimple\model\PermissionsStrategyAbstract::arrayIntersectRecursive">arrayIntersectRecursive</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/PermissionsServiceFactory.php.html#41"><abbr title="oat\taoDacSimple\model\PermissionsServiceFactory::create">create</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/tasks/ChangePermissionsTask.php.html#184"><abbr title="oat\taoDacSimple\model\tasks\ChangePermissionsTask::jsonSerialize">jsonSerialize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/DataBaseAccess.php.html#278"><abbr title="oat\taoDacSimple\model\DataBaseAccess::removeMultiplePermissions">removeMultiplePermissions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controller/AdminAccessController.php.html#148"><abbr title="oat\taoDacSimple\controller\AdminAccessController::findUser">findUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controller/AdminAccessController.php.html#174"><abbr title="oat\taoDacSimple\controller\AdminAccessController::getPrivilegesFromRequest">getPrivilegesFromRequest</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controller/AdminAccessController.php.html#194"><abbr title="oat\taoDacSimple\controller\AdminAccessController::getResourceFromRequest">getResourceFromRequest</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/AdminService.php.html#41"><abbr title="oat\taoDacSimple\model\AdminService::setOwner">setOwner</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/AdminService.php.html#65"><abbr title="oat\taoDacSimple\model\AdminService::getUsersPermissions">getUsersPermissions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/AdminService.php.html#76"><abbr title="oat\taoDacSimple\model\AdminService::addPermissionToClass">addPermissionToClass</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/AdminService.php.html#90"><abbr title="oat\taoDacSimple\model\AdminService::getServiceManager">getServiceManager</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/AdminService.php.html#95"><abbr title="oat\taoDacSimple\model\AdminService::getRolePrivilegeRetriever">getRolePrivilegeRetriever</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/Copy/ServiceProvider/CopyServiceProvider.php.html#39"><abbr title="oat\taoDacSimple\model\Copy\ServiceProvider\CopyServiceProvider::__invoke">__invoke</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/DataBaseAccess.php.html#130"><abbr title="oat\taoDacSimple\model\DataBaseAccess::getResourcesPermissions">getResourcesPermissions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/DataBaseAccess.php.html#153"><abbr title="oat\taoDacSimple\model\DataBaseAccess::addPermissions">addPermissions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/DataBaseAccess.php.html#219"><abbr title="oat\taoDacSimple\model\DataBaseAccess::getResourcePermissions">getResourcePermissions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/DataBaseAccess.php.html#246"><abbr title="oat\taoDacSimple\model\DataBaseAccess::removePermissions">removePermissions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/DataBaseAccess.php.html#339"><abbr title="oat\taoDacSimple\model\DataBaseAccess::removeAllPermissions">removeAllPermissions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/DataBaseAccess.php.html#412"><abbr title="oat\taoDacSimple\model\DataBaseAccess::createTables">createTables</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/DataBaseAccess.php.html#431"><abbr title="oat\taoDacSimple\model\DataBaseAccess::removeTables">removeTables</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/PermissionProvider.php.html#61"><abbr title="oat\taoDacSimple\model\PermissionProvider::getPermissions">getPermissions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/PermissionProvider.php.html#87"><abbr title="oat\taoDacSimple\model\PermissionProvider::onResourceCreated">onResourceCreated</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/PermissionProvider.php.html#107"><abbr title="oat\taoDacSimple\model\PermissionProvider::getSupportedRights">getSupportedRights</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/PermissionProvider.php.html#123"><abbr title="oat\taoDacSimple\model\PermissionProvider::getRightLabels">getRightLabels</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/PermissionProvider.php.html#132"><abbr title="oat\taoDacSimple\model\PermissionProvider::getSupportedRootClasses">getSupportedRootClasses</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/PermissionsService.php.html#81"><abbr title="oat\taoDacSimple\model\PermissionsService::saveResourcePermissionsRecursive">saveResourcePermissionsRecursive</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/PermissionsService.php.html#258"><abbr title="oat\taoDacSimple\model\PermissionsService::getResourcesByClassRecursive">getResourcesByClassRecursive</abbr></a></td><td class="text-right">42%</td></tr>
+       <tr><td><a href="model/DataBaseAccess.php.html#391"><abbr title="oat\taoDacSimple\model\DataBaseAccess::getPersistence">getPersistence</abbr></a></td><td class="text-right">50%</td></tr>
+       <tr><td><a href="model/SyncPermissionsStrategy.php.html#46"><abbr title="oat\taoDacSimple\model\SyncPermissionsStrategy::getPermissionsToRemove">getPermissionsToRemove</abbr></a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="model/SyncPermissionsStrategy.php.html#36"><abbr title="oat\taoDacSimple\model\SyncPermissionsStrategy::getPermissionsToAdd">getPermissionsToAdd</abbr></a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="model/PermissionsService.php.html#220"><abbr title="oat\taoDacSimple\model\PermissionsService::dryAdd">dryAdd</abbr></a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="model/PermissionsStrategyAbstract.php.html#98"><abbr title="oat\taoDacSimple\model\PermissionsStrategyAbstract::getDeltaPermissions">getDeltaPermissions</abbr></a></td><td class="text-right">81%</td></tr>
+       <tr><td><a href="model/PermissionsService.php.html#275"><abbr title="oat\taoDacSimple\model\PermissionsService::getResourcesPermissions">getResourcesPermissions</abbr></a></td><td class="text-right">83%</td></tr>
+       <tr><td><a href="model/PermissionsService.php.html#142"><abbr title="oat\taoDacSimple\model\PermissionsService::getResourcesToUpdate">getResourcesToUpdate</abbr></a></td><td class="text-right">83%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="model/PermissionsStrategyAbstract.php.html#60"><abbr title="oat\taoDacSimple\model\PermissionsStrategyAbstract::arrayIntersectRecursive">arrayIntersectRecursive</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="model/DataBaseAccess.php.html#278"><abbr title="oat\taoDacSimple\model\DataBaseAccess::removeMultiplePermissions">removeMultiplePermissions</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="controller/AdminAccessController.php.html#63"><abbr title="oat\taoDacSimple\controller\AdminAccessController::adminPermissions">adminPermissions</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="model/tasks/ChangePermissionsTask.php.html#84"><abbr title="oat\taoDacSimple\model\tasks\ChangePermissionsTask::doHandle">doHandle</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="model/PermissionProvider.php.html#87"><abbr title="oat\taoDacSimple\model\PermissionProvider::onResourceCreated">onResourceCreated</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="model/AdminService.php.html#41"><abbr title="oat\taoDacSimple\model\AdminService::setOwner">setOwner</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="controller/AdminAccessController.php.html#113"><abbr title="oat\taoDacSimple\controller\AdminAccessController::savePermissions">savePermissions</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="model/PermissionProvider.php.html#61"><abbr title="oat\taoDacSimple\model\PermissionProvider::getPermissions">getPermissions</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="model/tasks/ChangePermissionsTask.php.html#169"><abbr title="oat\taoDacSimple\model\tasks\ChangePermissionsTask::validateParams">validateParams</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="controller/AdminAccessController.php.html#148"><abbr title="oat\taoDacSimple\controller\AdminAccessController::findUser">findUser</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="model/AdminService.php.html#76"><abbr title="oat\taoDacSimple\model\AdminService::addPermissionToClass">addPermissionToClass</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="controller/AdminAccessController.php.html#174"><abbr title="oat\taoDacSimple\controller\AdminAccessController::getPrivilegesFromRequest">getPrivilegesFromRequest</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="model/PermissionsStrategyAbstract.php.html#98"><abbr title="oat\taoDacSimple\model\PermissionsStrategyAbstract::getDeltaPermissions">getDeltaPermissions</abbr></a></td><td class="text-right">7</td></tr>
+       <tr><td><a href="model/DataBaseAccess.php.html#219"><abbr title="oat\taoDacSimple\model\DataBaseAccess::getResourcePermissions">getResourcePermissions</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="model/tasks/ChangePermissionsTask.php.html#152"><abbr title="oat\taoDacSimple\model\tasks\ChangePermissionsTask::formatLabel">formatLabel</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="model/tasks/ChangePermissionsTask.php.html#126"><abbr title="oat\taoDacSimple\model\tasks\ChangePermissionsTask::createSubtasksForClasses">createSubtasksForClasses</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="model/tasks/ChangePermissionsTask.php.html#63"><abbr title="oat\taoDacSimple\model\tasks\ChangePermissionsTask::__invoke">__invoke</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="model/PermissionsServiceFactory.php.html#41"><abbr title="oat\taoDacSimple\model\PermissionsServiceFactory::create">create</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="model/DataBaseAccess.php.html#153"><abbr title="oat\taoDacSimple\model\DataBaseAccess::addPermissions">addPermissions</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="controller/AdminAccessController.php.html#194"><abbr title="oat\taoDacSimple\controller\AdminAccessController::getResourceFromRequest">getResourceFromRequest</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="model/DataBaseAccess.php.html#431"><abbr title="oat\taoDacSimple\model\DataBaseAccess::removeTables">removeTables</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="model/DataBaseAccess.php.html#412"><abbr title="oat\taoDacSimple\model\DataBaseAccess::createTables">createTables</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="model/DataBaseAccess.php.html#339"><abbr title="oat\taoDacSimple\model\DataBaseAccess::removeAllPermissions">removeAllPermissions</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="model/DataBaseAccess.php.html#130"><abbr title="oat\taoDacSimple\model\DataBaseAccess::getResourcesPermissions">getResourcesPermissions</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="model/PermissionsService.php.html#142"><abbr title="oat\taoDacSimple\model\PermissionsService::getResourcesToUpdate">getResourcesToUpdate</abbr></a></td><td class="text-right">4</td></tr>
+       <tr><td><a href="model/PermissionsService.php.html#220"><abbr title="oat\taoDacSimple\model\PermissionsService::dryAdd">dryAdd</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="model/PermissionsService.php.html#275"><abbr title="oat\taoDacSimple\model\PermissionsService::getResourcesPermissions">getResourcesPermissions</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="model/PermissionsService.php.html#258"><abbr title="oat\taoDacSimple\model\PermissionsService::getResourcesByClassRecursive">getResourcesByClassRecursive</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="model/DataBaseAccess.php.html#391"><abbr title="oat\taoDacSimple\model\DataBaseAccess::getPersistence">getPersistence</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="model/SyncPermissionsStrategy.php.html#36"><abbr title="oat\taoDacSimple\model\SyncPermissionsStrategy::getPermissionsToAdd">getPermissionsToAdd</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="model/SyncPermissionsStrategy.php.html#46"><abbr title="oat\taoDacSimple\model\SyncPermissionsStrategy::getPermissionsToRemove">getPermissionsToRemove</abbr></a></td><td class="text-right">2</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 7.0.15</a> using <a href="https://secure.php.net/" target="_top">PHP 7.4.33</a> with <a href="https://xdebug.org/">Xdebug 3.1.6</a> with <a href="https://github.com/krakjoe/pcov">PCOV 1.0.11</a> at Mon Sep 18 15:04:42 UTC 2023.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="../_js/jquery.min.js" type="text/javascript"></script>
+  <script src="../_js/d3.min.js" type="text/javascript"></script>
+  <script src="../_js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([6,1,0,0,1,1,1,1,1,1,1,9], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([52,0,0,0,0,1,1,3,0,3,2,44], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[0,18,"<a href=\"controller\/AdminAccessController.php.html#51\">oat\\taoDacSimple\\controller\\AdminAccessController<\/a>"],[0,10,"<a href=\"model\/AdminService.php.html#32\">oat\\taoDacSimple\\model\\AdminService<\/a>"],[100,9,"<a href=\"model\/Command\/ChangePermissionsCommand.php.html#36\">oat\\taoDacSimple\\model\\Command\\ChangePermissionsCommand<\/a>"],[100,3,"<a href=\"model\/Copy\/Service\/DacSimplePermissionCopier.php.html#32\">oat\\taoDacSimple\\model\\Copy\\Service\\DacSimplePermissionCopier<\/a>"],[0,1,"<a href=\"model\/Copy\/ServiceProvider\/CopyServiceProvider.php.html#37\">oat\\taoDacSimple\\model\\Copy\\ServiceProvider\\CopyServiceProvider<\/a>"],[43.01675977653631,41,"<a href=\"model\/DataBaseAccess.php.html#38\">oat\\taoDacSimple\\model\\DataBaseAccess<\/a>"],[7.142857142857142,12,"<a href=\"model\/PermissionProvider.php.html#46\">oat\\taoDacSimple\\model\\PermissionProvider<\/a>"],[87.5,47,"<a href=\"model\/PermissionsService.php.html#35\">oat\\taoDacSimple\\model\\PermissionsService<\/a>"],[100,0,"<a href=\"model\/PermissionsServiceException.php.html#28\">oat\\taoDacSimple\\model\\PermissionsServiceException<\/a>"],[0,2,"<a href=\"model\/PermissionsServiceFactory.php.html#30\">oat\\taoDacSimple\\model\\PermissionsServiceFactory<\/a>"],[65.11627906976744,25,"<a href=\"model\/PermissionsStrategyAbstract.php.html#27\">oat\\taoDacSimple\\model\\PermissionsStrategyAbstract<\/a>"],[100,6,"<a href=\"model\/RolePrivilegeRetriever.php.html#27\">oat\\taoDacSimple\\model\\RolePrivilegeRetriever<\/a>"],[93.54838709677419,13,"<a href=\"model\/SavePermissionsStrategy.php.html#26\">oat\\taoDacSimple\\model\\SavePermissionsStrategy<\/a>"],[71.42857142857143,5,"<a href=\"model\/SyncPermissionsStrategy.php.html#26\">oat\\taoDacSimple\\model\\SyncPermissionsStrategy<\/a>"],[0,9,"<a href=\"model\/action\/AdminAction.php.html#38\">oat\\taoDacSimple\\model\\action\\AdminAction<\/a>"],[36.36363636363637,6,"<a href=\"model\/event\/AbstractDacEvent.php.html#27\">oat\\taoDacSimple\\model\\event\\AbstractDacEvent<\/a>"],[100,0,"<a href=\"model\/event\/DacAddedEvent.php.html#27\">oat\\taoDacSimple\\model\\event\\DacAddedEvent<\/a>"],[50,4,"<a href=\"model\/event\/DacAffectedUsersEvent.php.html#28\">oat\\taoDacSimple\\model\\event\\DacAffectedUsersEvent<\/a>"],[100,0,"<a href=\"model\/event\/DacRemovedEvent.php.html#27\">oat\\taoDacSimple\\model\\event\\DacRemovedEvent<\/a>"],[100,0,"<a href=\"model\/event\/DacRootAddedEvent.php.html#31\">oat\\taoDacSimple\\model\\event\\DacRootAddedEvent<\/a>"],[100,0,"<a href=\"model\/event\/DacRootRemovedEvent.php.html#31\">oat\\taoDacSimple\\model\\event\\DacRootRemovedEvent<\/a>"],[100,7,"<a href=\"model\/eventHandler\/ResourceUpdateHandler.php.html#33\">oat\\taoDacSimple\\model\\eventHandler\\ResourceUpdateHandler<\/a>"],[0,16,"<a href=\"model\/tasks\/ChangePermissionsTask.php.html#46\">oat\\taoDacSimple\\model\\tasks\\ChangePermissionsTask<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[0,6,"<a href=\"controller\/AdminAccessController.php.html#63\">oat\\taoDacSimple\\controller\\AdminAccessController::adminPermissions<\/a>"],[0,4,"<a href=\"controller\/AdminAccessController.php.html#113\">oat\\taoDacSimple\\controller\\AdminAccessController::savePermissions<\/a>"],[0,3,"<a href=\"controller\/AdminAccessController.php.html#148\">oat\\taoDacSimple\\controller\\AdminAccessController::findUser<\/a>"],[0,3,"<a href=\"controller\/AdminAccessController.php.html#174\">oat\\taoDacSimple\\controller\\AdminAccessController::getPrivilegesFromRequest<\/a>"],[0,2,"<a href=\"controller\/AdminAccessController.php.html#194\">oat\\taoDacSimple\\controller\\AdminAccessController::getResourceFromRequest<\/a>"],[0,4,"<a href=\"model\/AdminService.php.html#41\">oat\\taoDacSimple\\model\\AdminService::setOwner<\/a>"],[0,1,"<a href=\"model\/AdminService.php.html#65\">oat\\taoDacSimple\\model\\AdminService::getUsersPermissions<\/a>"],[0,3,"<a href=\"model\/AdminService.php.html#76\">oat\\taoDacSimple\\model\\AdminService::addPermissionToClass<\/a>"],[0,1,"<a href=\"model\/AdminService.php.html#90\">oat\\taoDacSimple\\model\\AdminService::getServiceManager<\/a>"],[0,1,"<a href=\"model\/AdminService.php.html#95\">oat\\taoDacSimple\\model\\AdminService::getRolePrivilegeRetriever<\/a>"],[100,1,"<a href=\"model\/Command\/ChangePermissionsCommand.php.html#55\">oat\\taoDacSimple\\model\\Command\\ChangePermissionsCommand::__construct<\/a>"],[100,1,"<a href=\"model\/Command\/ChangePermissionsCommand.php.html#78\">oat\\taoDacSimple\\model\\Command\\ChangePermissionsCommand::withRecursion<\/a>"],[100,1,"<a href=\"model\/Command\/ChangePermissionsCommand.php.html#92\">oat\\taoDacSimple\\model\\Command\\ChangePermissionsCommand::withNestedResources<\/a>"],[100,1,"<a href=\"model\/Command\/ChangePermissionsCommand.php.html#97\">oat\\taoDacSimple\\model\\Command\\ChangePermissionsCommand::getRoot<\/a>"],[100,1,"<a href=\"model\/Command\/ChangePermissionsCommand.php.html#102\">oat\\taoDacSimple\\model\\Command\\ChangePermissionsCommand::getMasterRequest<\/a>"],[100,1,"<a href=\"model\/Command\/ChangePermissionsCommand.php.html#107\">oat\\taoDacSimple\\model\\Command\\ChangePermissionsCommand::getPrivilegesPerUser<\/a>"],[100,1,"<a href=\"model\/Command\/ChangePermissionsCommand.php.html#112\">oat\\taoDacSimple\\model\\Command\\ChangePermissionsCommand::getPermissionsDelta<\/a>"],[100,1,"<a href=\"model\/Command\/ChangePermissionsCommand.php.html#117\">oat\\taoDacSimple\\model\\Command\\ChangePermissionsCommand::isRecursive<\/a>"],[100,1,"<a href=\"model\/Command\/ChangePermissionsCommand.php.html#122\">oat\\taoDacSimple\\model\\Command\\ChangePermissionsCommand::applyToNestedResources<\/a>"],[100,1,"<a href=\"model\/Copy\/Service\/DacSimplePermissionCopier.php.html#37\">oat\\taoDacSimple\\model\\Copy\\Service\\DacSimplePermissionCopier::__construct<\/a>"],[100,2,"<a href=\"model\/Copy\/Service\/DacSimplePermissionCopier.php.html#42\">oat\\taoDacSimple\\model\\Copy\\Service\\DacSimplePermissionCopier::copy<\/a>"],[0,1,"<a href=\"model\/Copy\/ServiceProvider\/CopyServiceProvider.php.html#39\">oat\\taoDacSimple\\model\\Copy\\ServiceProvider\\CopyServiceProvider::__invoke<\/a>"],[100,1,"<a href=\"model\/DataBaseAccess.php.html#55\">oat\\taoDacSimple\\model\\DataBaseAccess::setInsertChunkSize<\/a>"],[100,1,"<a href=\"model\/DataBaseAccess.php.html#63\">oat\\taoDacSimple\\model\\DataBaseAccess::getEventManager<\/a>"],[100,1,"<a href=\"model\/DataBaseAccess.php.html#74\">oat\\taoDacSimple\\model\\DataBaseAccess::getUsersWithPermissions<\/a>"],[100,3,"<a href=\"model\/DataBaseAccess.php.html#98\">oat\\taoDacSimple\\model\\DataBaseAccess::getPermissions<\/a>"],[0,2,"<a href=\"model\/DataBaseAccess.php.html#130\">oat\\taoDacSimple\\model\\DataBaseAccess::getResourcesPermissions<\/a>"],[0,2,"<a href=\"model\/DataBaseAccess.php.html#153\">oat\\taoDacSimple\\model\\DataBaseAccess::addPermissions<\/a>"],[100,6,"<a href=\"model\/DataBaseAccess.php.html#184\">oat\\taoDacSimple\\model\\DataBaseAccess::addMultiplePermissions<\/a>"],[0,2,"<a href=\"model\/DataBaseAccess.php.html#219\">oat\\taoDacSimple\\model\\DataBaseAccess::getResourcePermissions<\/a>"],[0,1,"<a href=\"model\/DataBaseAccess.php.html#246\">oat\\taoDacSimple\\model\\DataBaseAccess::removePermissions<\/a>"],[0,7,"<a href=\"model\/DataBaseAccess.php.html#278\">oat\\taoDacSimple\\model\\DataBaseAccess::removeMultiplePermissions<\/a>"],[0,2,"<a href=\"model\/DataBaseAccess.php.html#339\">oat\\taoDacSimple\\model\\DataBaseAccess::removeAllPermissions<\/a>"],[100,3,"<a href=\"model\/DataBaseAccess.php.html#364\">oat\\taoDacSimple\\model\\DataBaseAccess::checkPermissions<\/a>"],[50,2,"<a href=\"model\/DataBaseAccess.php.html#391\">oat\\taoDacSimple\\model\\DataBaseAccess::getPersistence<\/a>"],[100,1,"<a href=\"model\/DataBaseAccess.php.html#406\">oat\\taoDacSimple\\model\\DataBaseAccess::fetchQuery<\/a>"],[0,2,"<a href=\"model\/DataBaseAccess.php.html#412\">oat\\taoDacSimple\\model\\DataBaseAccess::createTables<\/a>"],[0,2,"<a href=\"model\/DataBaseAccess.php.html#431\">oat\\taoDacSimple\\model\\DataBaseAccess::removeTables<\/a>"],[100,3,"<a href=\"model\/DataBaseAccess.php.html#446\">oat\\taoDacSimple\\model\\DataBaseAccess::insertPermissions<\/a>"],[0,3,"<a href=\"model\/PermissionProvider.php.html#61\">oat\\taoDacSimple\\model\\PermissionProvider::getPermissions<\/a>"],[0,4,"<a href=\"model\/PermissionProvider.php.html#87\">oat\\taoDacSimple\\model\\PermissionProvider::onResourceCreated<\/a>"],[0,1,"<a href=\"model\/PermissionProvider.php.html#107\">oat\\taoDacSimple\\model\\PermissionProvider::getSupportedRights<\/a>"],[0,1,"<a href=\"model\/PermissionProvider.php.html#123\">oat\\taoDacSimple\\model\\PermissionProvider::getRightLabels<\/a>"],[0,1,"<a href=\"model\/PermissionProvider.php.html#132\">oat\\taoDacSimple\\model\\PermissionProvider::getSupportedRootClasses<\/a>"],[100,1,"<a href=\"model\/PermissionProvider.php.html#144\">oat\\taoDacSimple\\model\\PermissionProvider::getResourceAccessData<\/a>"],[100,1,"<a href=\"model\/PermissionProvider.php.html#149\">oat\\taoDacSimple\\model\\PermissionProvider::getRolePrivilegeRetriever<\/a>"],[100,1,"<a href=\"model\/PermissionsService.php.html#45\">oat\\taoDacSimple\\model\\PermissionsService::__construct<\/a>"],[100,2,"<a href=\"model\/PermissionsService.php.html#55\">oat\\taoDacSimple\\model\\PermissionsService::applyPermissions<\/a>"],[0,1,"<a href=\"model\/PermissionsService.php.html#81\">oat\\taoDacSimple\\model\\PermissionsService::saveResourcePermissionsRecursive<\/a>"],[100,2,"<a href=\"model\/PermissionsService.php.html#101\">oat\\taoDacSimple\\model\\PermissionsService::savePermissions<\/a>"],[100,1,"<a href=\"model\/PermissionsService.php.html#121\">oat\\taoDacSimple\\model\\PermissionsService::getPermissionsDelta<\/a>"],[83.33333333333334,4,"<a href=\"model\/PermissionsService.php.html#142\">oat\\taoDacSimple\\model\\PermissionsService::getResourcesToUpdate<\/a>"],[100,4,"<a href=\"model\/PermissionsService.php.html#157\">oat\\taoDacSimple\\model\\PermissionsService::getActions<\/a>"],[100,3,"<a href=\"model\/PermissionsService.php.html#184\">oat\\taoDacSimple\\model\\PermissionsService::dryRun<\/a>"],[100,3,"<a href=\"model\/PermissionsService.php.html#198\">oat\\taoDacSimple\\model\\PermissionsService::wetRun<\/a>"],[100,3,"<a href=\"model\/PermissionsService.php.html#208\">oat\\taoDacSimple\\model\\PermissionsService::dryRemove<\/a>"],[66.66666666666666,3,"<a href=\"model\/PermissionsService.php.html#220\">oat\\taoDacSimple\\model\\PermissionsService::dryAdd<\/a>"],[100,5,"<a href=\"model\/PermissionsService.php.html#234\">oat\\taoDacSimple\\model\\PermissionsService::deduplicateActions<\/a>"],[42.857142857142854,2,"<a href=\"model\/PermissionsService.php.html#258\">oat\\taoDacSimple\\model\\PermissionsService::getResourcesByClassRecursive<\/a>"],[83.33333333333334,3,"<a href=\"model\/PermissionsService.php.html#275\">oat\\taoDacSimple\\model\\PermissionsService::getResourcesPermissions<\/a>"],[100,5,"<a href=\"model\/PermissionsService.php.html#293\">oat\\taoDacSimple\\model\\PermissionsService::assertHasUserWithGrantPermission<\/a>"],[100,5,"<a href=\"model\/PermissionsService.php.html#316\">oat\\taoDacSimple\\model\\PermissionsService::triggerEvents<\/a>"],[0,2,"<a href=\"model\/PermissionsServiceFactory.php.html#41\">oat\\taoDacSimple\\model\\PermissionsServiceFactory::create<\/a>"],[100,9,"<a href=\"model\/PermissionsStrategyAbstract.php.html#29\">oat\\taoDacSimple\\model\\PermissionsStrategyAbstract::arrayDiffRecursive<\/a>"],[0,8,"<a href=\"model\/PermissionsStrategyAbstract.php.html#60\">oat\\taoDacSimple\\model\\PermissionsStrategyAbstract::arrayIntersectRecursive<\/a>"],[100,1,"<a href=\"model\/PermissionsStrategyAbstract.php.html#85\">oat\\taoDacSimple\\model\\PermissionsStrategyAbstract::isAssociative<\/a>"],[81.25,7,"<a href=\"model\/PermissionsStrategyAbstract.php.html#98\">oat\\taoDacSimple\\model\\PermissionsStrategyAbstract::getDeltaPermissions<\/a>"],[100,3,"<a href=\"model\/RolePrivilegeRetriever.php.html#43\">oat\\taoDacSimple\\model\\RolePrivilegeRetriever::retrieveByResourceIds<\/a>"],[100,2,"<a href=\"model\/RolePrivilegeRetriever.php.html#63\">oat\\taoDacSimple\\model\\RolePrivilegeRetriever::removeDuplicatedEntries<\/a>"],[100,1,"<a href=\"model\/RolePrivilegeRetriever.php.html#72\">oat\\taoDacSimple\\model\\RolePrivilegeRetriever::getDataBaseAccess<\/a>"],[100,1,"<a href=\"model\/SavePermissionsStrategy.php.html#28\">oat\\taoDacSimple\\model\\SavePermissionsStrategy::normalizeRequest<\/a>"],[94.11764705882352,7,"<a href=\"model\/SavePermissionsStrategy.php.html#33\">oat\\taoDacSimple\\model\\SavePermissionsStrategy::getPermissionsToAdd<\/a>"],[92.3076923076923,5,"<a href=\"model\/SavePermissionsStrategy.php.html#70\">oat\\taoDacSimple\\model\\SavePermissionsStrategy::getPermissionsToRemove<\/a>"],[100,1,"<a href=\"model\/SyncPermissionsStrategy.php.html#28\">oat\\taoDacSimple\\model\\SyncPermissionsStrategy::normalizeRequest<\/a>"],[66.66666666666666,2,"<a href=\"model\/SyncPermissionsStrategy.php.html#36\">oat\\taoDacSimple\\model\\SyncPermissionsStrategy::getPermissionsToAdd<\/a>"],[66.66666666666666,2,"<a href=\"model\/SyncPermissionsStrategy.php.html#46\">oat\\taoDacSimple\\model\\SyncPermissionsStrategy::getPermissionsToRemove<\/a>"],[0,1,"<a href=\"model\/action\/AdminAction.php.html#45\">oat\\taoDacSimple\\model\\action\\AdminAction::getId<\/a>"],[0,1,"<a href=\"model\/action\/AdminAction.php.html#53\">oat\\taoDacSimple\\model\\action\\AdminAction::getName<\/a>"],[0,1,"<a href=\"model\/action\/AdminAction.php.html#61\">oat\\taoDacSimple\\model\\action\\AdminAction::getUrl<\/a>"],[0,1,"<a href=\"model\/action\/AdminAction.php.html#69\">oat\\taoDacSimple\\model\\action\\AdminAction::getBinding<\/a>"],[0,1,"<a href=\"model\/action\/AdminAction.php.html#77\">oat\\taoDacSimple\\model\\action\\AdminAction::getContext<\/a>"],[0,1,"<a href=\"model\/action\/AdminAction.php.html#85\">oat\\taoDacSimple\\model\\action\\AdminAction::getGroup<\/a>"],[0,1,"<a href=\"model\/action\/AdminAction.php.html#93\">oat\\taoDacSimple\\model\\action\\AdminAction::getIcon<\/a>"],[0,1,"<a href=\"model\/action\/AdminAction.php.html#106\">oat\\taoDacSimple\\model\\action\\AdminAction::isMultiple<\/a>"],[0,1,"<a href=\"model\/action\/AdminAction.php.html#114\">oat\\taoDacSimple\\model\\action\\AdminAction::getRequiredRights<\/a>"],[100,1,"<a href=\"model\/event\/AbstractDacEvent.php.html#41\">oat\\taoDacSimple\\model\\event\\AbstractDacEvent::__construct<\/a>"],[0,1,"<a href=\"model\/event\/AbstractDacEvent.php.html#53\">oat\\taoDacSimple\\model\\event\\AbstractDacEvent::getName<\/a>"],[0,1,"<a href=\"model\/event\/AbstractDacEvent.php.html#65\">oat\\taoDacSimple\\model\\event\\AbstractDacEvent::jsonSerialize<\/a>"],[0,1,"<a href=\"model\/event\/AbstractDacEvent.php.html#77\">oat\\taoDacSimple\\model\\event\\AbstractDacEvent::getUserUri<\/a>"],[0,1,"<a href=\"model\/event\/AbstractDacEvent.php.html#85\">oat\\taoDacSimple\\model\\event\\AbstractDacEvent::getResourceUri<\/a>"],[0,1,"<a href=\"model\/event\/AbstractDacEvent.php.html#93\">oat\\taoDacSimple\\model\\event\\AbstractDacEvent::getPrivilege<\/a>"],[100,1,"<a href=\"model\/event\/DacAffectedUsersEvent.php.html#39\">oat\\taoDacSimple\\model\\event\\DacAffectedUsersEvent::__construct<\/a>"],[0,1,"<a href=\"model\/event\/DacAffectedUsersEvent.php.html#45\">oat\\taoDacSimple\\model\\event\\DacAffectedUsersEvent::getName<\/a>"],[0,1,"<a href=\"model\/event\/DacAffectedUsersEvent.php.html#50\">oat\\taoDacSimple\\model\\event\\DacAffectedUsersEvent::getPermissionsAdded<\/a>"],[0,1,"<a href=\"model\/event\/DacAffectedUsersEvent.php.html#55\">oat\\taoDacSimple\\model\\event\\DacAffectedUsersEvent::getPermissionsRemoved<\/a>"],[100,5,"<a href=\"model\/eventHandler\/ResourceUpdateHandler.php.html#38\">oat\\taoDacSimple\\model\\eventHandler\\ResourceUpdateHandler::catchResourceUpdated<\/a>"],[100,1,"<a href=\"model\/eventHandler\/ResourceUpdateHandler.php.html#72\">oat\\taoDacSimple\\model\\eventHandler\\ResourceUpdateHandler::getRolePrivilegeRetriever<\/a>"],[100,1,"<a href=\"model\/eventHandler\/ResourceUpdateHandler.php.html#77\">oat\\taoDacSimple\\model\\eventHandler\\ResourceUpdateHandler::getPermissionService<\/a>"],[0,2,"<a href=\"model\/tasks\/ChangePermissionsTask.php.html#63\">oat\\taoDacSimple\\model\\tasks\\ChangePermissionsTask::__invoke<\/a>"],[0,4,"<a href=\"model\/tasks\/ChangePermissionsTask.php.html#84\">oat\\taoDacSimple\\model\\tasks\\ChangePermissionsTask::doHandle<\/a>"],[0,2,"<a href=\"model\/tasks\/ChangePermissionsTask.php.html#126\">oat\\taoDacSimple\\model\\tasks\\ChangePermissionsTask::createSubtasksForClasses<\/a>"],[0,2,"<a href=\"model\/tasks\/ChangePermissionsTask.php.html#152\">oat\\taoDacSimple\\model\\tasks\\ChangePermissionsTask::formatLabel<\/a>"],[0,1,"<a href=\"model\/tasks\/ChangePermissionsTask.php.html#159\">oat\\taoDacSimple\\model\\tasks\\ChangePermissionsTask::getDispatcher<\/a>"],[0,1,"<a href=\"model\/tasks\/ChangePermissionsTask.php.html#164\">oat\\taoDacSimple\\model\\tasks\\ChangePermissionsTask::getPermissionService<\/a>"],[0,3,"<a href=\"model\/tasks\/ChangePermissionsTask.php.html#169\">oat\\taoDacSimple\\model\\tasks\\ChangePermissionsTask::validateParams<\/a>"],[0,1,"<a href=\"model\/tasks\/ChangePermissionsTask.php.html#184\">oat\\taoDacSimple\\model\\tasks\\ChangePermissionsTask::jsonSerialize<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>
