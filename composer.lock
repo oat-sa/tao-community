@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4c6606f35bac8785a57ec098acc5af43",
+    "content-hash": "f4595a095ff3249cc2fa17191034d2fc",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -5670,16 +5670,16 @@
         },
         {
             "name": "oat-sa/extension-tao-testqti",
-            "version": "v48.20.6.1",
+            "version": "v48.20.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "d0805c465979c2eff3859bce44bb63e1f39ba2cd"
+                "reference": "ca4947b488c6825bc39e52b1d4fee6a2cba90928"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/d0805c465979c2eff3859bce44bb63e1f39ba2cd",
-                "reference": "d0805c465979c2eff3859bce44bb63e1f39ba2cd",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/ca4947b488c6825bc39e52b1d4fee6a2cba90928",
+                "reference": "ca4947b488c6825bc39e52b1d4fee6a2cba90928",
                 "shasum": ""
             },
             "require": {
@@ -5695,7 +5695,7 @@
                 "oat-sa/lib-test-cat": "2.4.0",
                 "oat-sa/oatbox-extension-installer": "~1.1||dev-master",
                 "oat-sa/tao-core": ">=54.32.1",
-                "qtism/qtism": ">=0.28.7",
+                "qtism/qtism": ">=0.28.9",
                 "slim/slim": "^3.0"
             },
             "type": "tao-extension",
@@ -5763,9 +5763,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/v48.20.6.1"
+                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/v48.20.6.2"
             },
-            "time": "2025-06-11T14:15:35+00:00"
+            "time": "2025-07-07T14:30:16+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
@@ -7883,16 +7883,16 @@
         },
         {
             "name": "qtism/qtism",
-            "version": "0.28.7",
+            "version": "0.28.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/qti-sdk.git",
-                "reference": "3a90acdc8c4141d2d7c15eb0111a0018d17ae0e0"
+                "reference": "c06ad6b0051502bb22b0f73c88df9f5f8850de27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/qti-sdk/zipball/3a90acdc8c4141d2d7c15eb0111a0018d17ae0e0",
-                "reference": "3a90acdc8c4141d2d7c15eb0111a0018d17ae0e0",
+                "url": "https://api.github.com/repos/oat-sa/qti-sdk/zipball/c06ad6b0051502bb22b0f73c88df9f5f8850de27",
+                "reference": "c06ad6b0051502bb22b0f73c88df9f5f8850de27",
                 "shasum": ""
             },
             "require": {
@@ -7947,9 +7947,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/qti-sdk/tree/0.28.7"
+                "source": "https://github.com/oat-sa/qti-sdk/tree/0.28.9"
             },
-            "time": "2024-12-19T16:45:58+00:00"
+            "time": "2025-07-07T13:24:29+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -12805,5 +12805,5 @@
     "platform-overrides": {
         "php": "8.1"
     },
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }
