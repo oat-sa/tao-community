@@ -67,7 +67,7 @@ jobs:
         working-directory: tao/views/build
         run: |
           npm ci
-          npx grunt connect:test qunit_junit pcisamplestest qtiitempcitest taotest taoclientdiagnostictest taodeliveryrdftest taoitemstest taomediamanagertest taooutcomeuitest taoproctoringtest taoqtiitemtest taoqtitesttest taoqtitestpreviewertest taotaskqueuetest taoteststest --force --reports=../../../junit-reports
+          npx grunt connect:test qunit_junit pcisamplestest qtiitempcitest taotest taoclientdiagnostictest taodeliveryrdftest taoitemstest taomediamanagertest taooutcomeuitest taoproctoringtest taoqtiitemtest taoqtitesttest taoqtitestpreviewertest taotaskqueuetest taoteststest --force --reports=../../../junit-reports --chrome-flags="--no-sandbox --disable-gpu"
 
       - name: Back-end tests
         run: ./test.sh ${{ matrix.coverage && '-c' }}
