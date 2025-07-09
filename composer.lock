@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f4595a095ff3249cc2fa17191034d2fc",
+    "content-hash": "a02bc5a19254583e0bd9f097d7644947",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -5670,16 +5670,16 @@
         },
         {
             "name": "oat-sa/extension-tao-testqti",
-            "version": "v48.20.6.2",
+            "version": "v48.20.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-testqti.git",
-                "reference": "ca4947b488c6825bc39e52b1d4fee6a2cba90928"
+                "reference": "2d93ef1e204befb014dea9b4fdcd88fe93e5ce39"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/ca4947b488c6825bc39e52b1d4fee6a2cba90928",
-                "reference": "ca4947b488c6825bc39e52b1d4fee6a2cba90928",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-testqti/zipball/2d93ef1e204befb014dea9b4fdcd88fe93e5ce39",
+                "reference": "2d93ef1e204befb014dea9b4fdcd88fe93e5ce39",
                 "shasum": ""
             },
             "require": {
@@ -5695,7 +5695,7 @@
                 "oat-sa/lib-test-cat": "2.4.0",
                 "oat-sa/oatbox-extension-installer": "~1.1||dev-master",
                 "oat-sa/tao-core": ">=54.32.1",
-                "qtism/qtism": ">=0.28.9",
+                "qtism/qtism": ">=0.28.10",
                 "slim/slim": "^3.0"
             },
             "type": "tao-extension",
@@ -5763,9 +5763,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/v48.20.6.2"
+                "source": "https://github.com/oat-sa/extension-tao-testqti/tree/v48.20.6.3"
             },
-            "time": "2025-07-07T14:30:16+00:00"
+            "time": "2025-07-09T14:13:57+00:00"
         },
         {
             "name": "oat-sa/extension-tao-testqti-previewer",
@@ -7883,16 +7883,16 @@
         },
         {
             "name": "qtism/qtism",
-            "version": "0.28.9",
+            "version": "0.28.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/qti-sdk.git",
-                "reference": "c06ad6b0051502bb22b0f73c88df9f5f8850de27"
+                "reference": "5f767b83fe50583bb5e777008e8f635e393110da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/qti-sdk/zipball/c06ad6b0051502bb22b0f73c88df9f5f8850de27",
-                "reference": "c06ad6b0051502bb22b0f73c88df9f5f8850de27",
+                "url": "https://api.github.com/repos/oat-sa/qti-sdk/zipball/5f767b83fe50583bb5e777008e8f635e393110da",
+                "reference": "5f767b83fe50583bb5e777008e8f635e393110da",
                 "shasum": ""
             },
             "require": {
@@ -7947,9 +7947,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/qti-sdk/tree/0.28.9"
+                "source": "https://github.com/oat-sa/qti-sdk/tree/0.28.10"
             },
-            "time": "2025-07-07T13:24:29+00:00"
+            "time": "2025-07-09T10:52:12+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -12797,13 +12797,13 @@
         }
     ],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
+    "platform": {},
+    "platform-dev": {},
     "platform-overrides": {
         "php": "8.1"
     },
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
