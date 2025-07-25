@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a5de56202070107983b6f7701a7131f8",
+    "content-hash": "6fec3d5c58c0e1e4437ec554ab0b78c9",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -4602,27 +4602,28 @@
         },
         {
             "name": "oat-sa/extension-tao-itemqti",
-            "version": "v30.42.2",
+            "version": "v30.44.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti.git",
-                "reference": "05523f906552304e0308c8cc21f432799149122d"
+                "reference": "c7acc98d2e2bc395e3e29f3f6e63617fcd856b58"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/05523f906552304e0308c8cc21f432799149122d",
-                "reference": "05523f906552304e0308c8cc21f432799149122d",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/c7acc98d2e2bc395e3e29f3f6e63617fcd856b58",
+                "reference": "c7acc98d2e2bc395e3e29f3f6e63617fcd856b58",
                 "shasum": ""
             },
             "require": {
                 "ext-simplexml": "*",
                 "naneau/semver": "~0.0.7",
+                "oat-sa/extension-tao-backoffice": ">=7.1.0",
                 "oat-sa/extension-tao-item": ">=12.4.0",
                 "oat-sa/extension-tao-test": ">=16.3.0",
                 "oat-sa/generis": ">=16.0.0",
                 "oat-sa/lib-tao-qti": "^7.8.1",
                 "oat-sa/oatbox-extension-installer": "~1.1||dev-master",
-                "oat-sa/tao-core": ">=54.39.1"
+                "oat-sa/tao-core": ">=54.41.2"
             },
             "type": "tao-extension",
             "extra": {
@@ -4688,9 +4689,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/v30.42.2"
+                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/v30.44.0"
             },
-            "time": "2025-07-09T07:34:31+00:00"
+            "time": "2025-07-18T10:54:09+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pci",
@@ -6548,16 +6549,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "v54.41.1",
+            "version": "v54.41.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "3a1d773afc245c02c726064e96c82ebf12bfd3d4"
+                "reference": "86a3a4a9307c894b0c12a7467d0ad0f9fa0013f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/3a1d773afc245c02c726064e96c82ebf12bfd3d4",
-                "reference": "3a1d773afc245c02c726064e96c82ebf12bfd3d4",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/86a3a4a9307c894b0c12a7467d0ad0f9fa0013f9",
+                "reference": "86a3a4a9307c894b0c12a7467d0ad0f9fa0013f9",
                 "shasum": ""
             },
             "require": {
@@ -6658,9 +6659,9 @@
             "support": {
                 "forum": "https://forum.taocloud.org",
                 "issues": "https://github.com/oat-sa/tao-core/issues",
-                "source": "https://github.com/oat-sa/tao-core/tree/v54.41.1"
+                "source": "https://github.com/oat-sa/tao-core/tree/v54.41.3"
             },
-            "time": "2025-07-04T10:50:18+00:00"
+            "time": "2025-07-22T16:00:00+00:00"
         },
         {
             "name": "paragonie/constant_time_encoding",
