@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /home/runner/work/tao-community/tao-community/tao/models/classes/resources</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../../../../_css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="../../../../_css/nv.d3.min.css" rel="stylesheet" type="text/css">
+  <link href="../../../../_css/style.css" rel="stylesheet" type="text/css">
+  <link href="../../../../_css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="../../../../index.html">/home/runner/work/tao-community/tao-community</a></li>
+         <li class="breadcrumb-item"><a href="../../../index.html">tao</a></li>
+         <li class="breadcrumb-item"><a href="../../index.html">models</a></li>
+         <li class="breadcrumb-item"><a href="../index.html">classes</a></li>
+         <li class="breadcrumb-item"><a href="index.html">resources</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="CopierServiceProvider.php.html#40">oat\tao\model\resources\CopierServiceProvider</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ListResourceLookup.php.html#39">oat\tao\model\resources\ListResourceLookup</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ResourcesServiceProvider.php.html#37">oat\tao\model\resources\ResourcesServiceProvider</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/InstanceMetadataCopier.php.html#38">oat\tao\model\resources\Service\InstanceMetadataCopier</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TreeResourceLookup.php.html#33">oat\tao\model\resources\TreeResourceLookup</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ResourceIterator.php.html#36">oat\tao\model\resources\ResourceIterator</a></td><td class="text-right">21%</td></tr>
+       <tr><td><a href="ResourceService.php.html#38">oat\tao\model\resources\ResourceService</a></td><td class="text-right">21%</td></tr>
+       <tr><td><a href="SecureResourceServiceAllChildrenCacheCollection.php.html#29">oat\tao\model\resources\SecureResourceServiceAllChildrenCacheCollection</a></td><td class="text-right">33%</td></tr>
+       <tr><td><a href="Service/InstanceCopier.php.html#35">oat\tao\model\resources\Service\InstanceCopier</a></td><td class="text-right">72%</td></tr>
+       <tr><td><a href="Service/ClassCopierProxy.php.html#32">oat\tao\model\resources\Service\ClassCopierProxy</a></td><td class="text-right">78%</td></tr>
+       <tr><td><a href="Service/ClassCopier.php.html#36">oat\tao\model\resources\Service\ClassCopier</a></td><td class="text-right">81%</td></tr>
+       <tr><td><a href="Service/ClassDeleter.php.html#38">oat\tao\model\resources\Service\ClassDeleter</a></td><td class="text-right">84%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="ResourceService.php.html#38">oat\tao\model\resources\ResourceService</a></td><td class="text-right">701</td></tr>
+       <tr><td><a href="ListResourceLookup.php.html#39">oat\tao\model\resources\ListResourceLookup</a></td><td class="text-right">342</td></tr>
+       <tr><td><a href="Service/InstanceMetadataCopier.php.html#38">oat\tao\model\resources\Service\InstanceMetadataCopier</a></td><td class="text-right">306</td></tr>
+       <tr><td><a href="TreeResourceLookup.php.html#33">oat\tao\model\resources\TreeResourceLookup</a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="Service/ClassDeleter.php.html#38">oat\tao\model\resources\Service\ClassDeleter</a></td><td class="text-right">27</td></tr>
+       <tr><td><a href="Service/ClassCopier.php.html#36">oat\tao\model\resources\Service\ClassCopier</a></td><td class="text-right">17</td></tr>
+       <tr><td><a href="ResourceIterator.php.html#36">oat\tao\model\resources\ResourceIterator</a></td><td class="text-right">11</td></tr>
+       <tr><td><a href="Service/ClassCopierProxy.php.html#32">oat\tao\model\resources\Service\ClassCopierProxy</a></td><td class="text-right">11</td></tr>
+       <tr><td><a href="Service/InstanceCopier.php.html#35">oat\tao\model\resources\Service\InstanceCopier</a></td><td class="text-right">10</td></tr>
+       <tr><td><a href="SecureResourceServiceAllChildrenCacheCollection.php.html#29">oat\tao\model\resources\SecureResourceServiceAllChildrenCacheCollection</a></td><td class="text-right">5</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="CopierServiceProvider.php.html#42"><abbr title="oat\tao\model\resources\CopierServiceProvider::__invoke">__invoke</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ResourcesServiceProvider.php.html#39"><abbr title="oat\tao\model\resources\ResourcesServiceProvider::__invoke">__invoke</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TreeResourceLookup.php.html#62"><abbr title="oat\tao\model\resources\TreeResourceLookup::getClasses">getClasses</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TreeResourceLookup.php.html#47"><abbr title="oat\tao\model\resources\TreeResourceLookup::getResources">getResources</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/InstanceMetadataCopier.php.html#134"><abbr title="oat\tao\model\resources\Service\InstanceMetadataCopier::copyFile">copyFile</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/InstanceMetadataCopier.php.html#117"><abbr title="oat\tao\model\resources\Service\InstanceMetadataCopier::isFileProperty">isFileProperty</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/InstanceMetadataCopier.php.html#106"><abbr title="oat\tao\model\resources\Service\InstanceMetadataCopier::getOriginalProperty">getOriginalProperty</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/InstanceMetadataCopier.php.html#74"><abbr title="oat\tao\model\resources\Service\InstanceMetadataCopier::copy">copy</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/InstanceMetadataCopier.php.html#67"><abbr title="oat\tao\model\resources\Service\InstanceMetadataCopier::addPropertyUriToBlacklist">addPropertyUriToBlacklist</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/InstanceMetadataCopier.php.html#57"><abbr title="oat\tao\model\resources\Service\InstanceMetadataCopier::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/InstanceCopier.php.html#65"><abbr title="oat\tao\model\resources\Service\InstanceCopier::withPermissionCopiers">withPermissionCopiers</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/InstanceCopier.php.html#56"><abbr title="oat\tao\model\resources\Service\InstanceCopier::withPermissionCopier">withPermissionCopier</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/ClassCopier.php.html#80"><abbr title="oat\tao\model\resources\Service\ClassCopier::withPermissionCopiers">withPermissionCopiers</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/ClassCopier.php.html#71"><abbr title="oat\tao\model\resources\Service\ClassCopier::withPermissionCopier">withPermissionCopier</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="SecureResourceServiceAllChildrenCacheCollection.php.html#44"><abbr title="oat\tao\model\resources\SecureResourceServiceAllChildrenCacheCollection::getInstances">getInstances</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ListResourceLookup.php.html#55"><abbr title="oat\tao\model\resources\ListResourceLookup::getResources">getResources</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="TreeResourceLookup.php.html#83"><abbr title="oat\tao\model\resources\TreeResourceLookup::formatTreeData">formatTreeData</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ResourceIterator.php.html#62"><abbr title="oat\tao\model\resources\ResourceIterator::loadResources">loadResources</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ListResourceLookup.php.html#183"><abbr title="oat\tao\model\resources\ListResourceLookup::getParentClassUri">getParentClassUri</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ResourceService.php.html#124"><abbr title="oat\tao\model\resources\ResourceService::getResources">getResources</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ResourceService.php.html#157"><abbr title="oat\tao\model\resources\ResourceService::getClasses">getClasses</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ListResourceLookup.php.html#178"><abbr title="oat\tao\model\resources\ListResourceLookup::getSignatureGenerator">getSignatureGenerator</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ListResourceLookup.php.html#168"><abbr title="oat\tao\model\resources\ListResourceLookup::getClasses">getClasses</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ListResourceLookup.php.html#148"><abbr title="oat\tao\model\resources\ListResourceLookup::getResourceData">getResourceData</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ResourceService.php.html#185"><abbr title="oat\tao\model\resources\ResourceService::getResourcesPermissions">getResourcesPermissions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ResourceService.php.html#212"><abbr title="oat\tao\model\resources\ResourceService::getPropertyFilters">getPropertyFilters</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ResourceService.php.html#242"><abbr title="oat\tao\model\resources\ResourceService::getResourceLookup">getResourceLookup</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ListResourceLookup.php.html#125"><abbr title="oat\tao\model\resources\ListResourceLookup::format">format</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ResourceService.php.html#263"><abbr title="oat\tao\model\resources\ResourceService::getUris">getUris</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ListResourceLookup.php.html#103"><abbr title="oat\tao\model\resources\ListResourceLookup::searchByProperties">searchByProperties</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ListResourceLookup.php.html#79"><abbr title="oat\tao\model\resources\ListResourceLookup::searchByString">searchByString</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/ClassCopierProxy.php.html#67"><abbr title="oat\tao\model\resources\Service\ClassCopierProxy::copy">copy</abbr></a></td><td class="text-right">37%</td></tr>
+       <tr><td><a href="Service/ClassDeleter.php.html#79"><abbr title="oat\tao\model\resources\Service\ClassDeleter::delete">delete</abbr></a></td><td class="text-right">57%</td></tr>
+       <tr><td><a href="SecureResourceService.php.html#179"><abbr title="oat\tao\model\resources\SecureResourceService::getClass">getClass</abbr></a></td><td class="text-right">60%</td></tr>
+       <tr><td><a href="ResourceWatcher.php.html#197"><abbr title="oat\tao\model\resources\ResourceWatcher::ignoreEditIemClassUpdates">ignoreEditIemClassUpdates</abbr></a></td><td class="text-right">75%</td></tr>
+       <tr><td><a href="ResourceWatcher.php.html#117"><abbr title="oat\tao\model\resources\ResourceWatcher::getUpdatedAt">getUpdatedAt</abbr></a></td><td class="text-right">75%</td></tr>
+       <tr><td><a href="SecureResourceCachedService.php.html#172"><abbr title="oat\tao\model\resources\SecureResourceCachedService::getCache">getCache</abbr></a></td><td class="text-right">80%</td></tr>
+       <tr><td><a href="SecureResourceCachedService.php.html#119"><abbr title="oat\tao\model\resources\SecureResourceCachedService::validatePermission">validatePermission</abbr></a></td><td class="text-right">80%</td></tr>
+       <tr><td><a href="Service/ClassDeleter.php.html#156"><abbr title="oat\tao\model\resources\Service\ClassDeleter::deleteInstances">deleteInstances</abbr></a></td><td class="text-right">84%</td></tr>
+       <tr><td><a href="Service/ClassCopier.php.html#90"><abbr title="oat\tao\model\resources\Service\ClassCopier::copy">copy</abbr></a></td><td class="text-right">85%</td></tr>
+       <tr><td><a href="SecureResourceService.php.html#194"><abbr title="oat\tao\model\resources\SecureResourceService::getParentUris">getParentUris</abbr></a></td><td class="text-right">85%</td></tr>
+       <tr><td><a href="Service/ClassDeleter.php.html#199"><abbr title="oat\tao\model\resources\Service\ClassDeleter::deleteProperty">deleteProperty</abbr></a></td><td class="text-right">88%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="ResourceService.php.html#212"><abbr title="oat\tao\model\resources\ResourceService::getPropertyFilters">getPropertyFilters</abbr></a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="ResourceService.php.html#263"><abbr title="oat\tao\model\resources\ResourceService::getUris">getUris</abbr></a></td><td class="text-right">90</td></tr>
+       <tr><td><a href="Service/InstanceMetadataCopier.php.html#74"><abbr title="oat\tao\model\resources\Service\InstanceMetadataCopier::copy">copy</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="TreeResourceLookup.php.html#83"><abbr title="oat\tao\model\resources\TreeResourceLookup::formatTreeData">formatTreeData</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="ListResourceLookup.php.html#148"><abbr title="oat\tao\model\resources\ListResourceLookup::getResourceData">getResourceData</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Service/InstanceMetadataCopier.php.html#106"><abbr title="oat\tao\model\resources\Service\InstanceMetadataCopier::getOriginalProperty">getOriginalProperty</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="ResourceService.php.html#185"><abbr title="oat\tao\model\resources\ResourceService::getResourcesPermissions">getResourcesPermissions</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="ResourceService.php.html#242"><abbr title="oat\tao\model\resources\ResourceService::getResourceLookup">getResourceLookup</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="TreeResourceLookup.php.html#62"><abbr title="oat\tao\model\resources\TreeResourceLookup::getClasses">getClasses</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="TreeResourceLookup.php.html#47"><abbr title="oat\tao\model\resources\TreeResourceLookup::getResources">getResources</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Service/InstanceMetadataCopier.php.html#117"><abbr title="oat\tao\model\resources\Service\InstanceMetadataCopier::isFileProperty">isFileProperty</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="ListResourceLookup.php.html#55"><abbr title="oat\tao\model\resources\ListResourceLookup::getResources">getResources</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="ListResourceLookup.php.html#125"><abbr title="oat\tao\model\resources\ListResourceLookup::format">format</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="ListResourceLookup.php.html#183"><abbr title="oat\tao\model\resources\ListResourceLookup::getParentClassUri">getParentClassUri</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="ResourceIterator.php.html#62"><abbr title="oat\tao\model\resources\ResourceIterator::loadResources">loadResources</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="SecureResourceCachedService.php.html#119"><abbr title="oat\tao\model\resources\SecureResourceCachedService::validatePermission">validatePermission</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Service/InstanceCopier.php.html#65"><abbr title="oat\tao\model\resources\Service\InstanceCopier::withPermissionCopiers">withPermissionCopiers</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="ListResourceLookup.php.html#79"><abbr title="oat\tao\model\resources\ListResourceLookup::searchByString">searchByString</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="SecureResourceServiceAllChildrenCacheCollection.php.html#44"><abbr title="oat\tao\model\resources\SecureResourceServiceAllChildrenCacheCollection::getInstances">getInstances</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Service/ClassCopier.php.html#80"><abbr title="oat\tao\model\resources\Service\ClassCopier::withPermissionCopiers">withPermissionCopiers</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="ResourceService.php.html#124"><abbr title="oat\tao\model\resources\ResourceService::getResources">getResources</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="ResourceService.php.html#157"><abbr title="oat\tao\model\resources\ResourceService::getClasses">getClasses</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Service/InstanceMetadataCopier.php.html#67"><abbr title="oat\tao\model\resources\Service\InstanceMetadataCopier::addPropertyUriToBlacklist">addPropertyUriToBlacklist</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Service/ClassDeleter.php.html#79"><abbr title="oat\tao\model\resources\Service\ClassDeleter::delete">delete</abbr></a></td><td class="text-right">5</td></tr>
+       <tr><td><a href="Service/ClassCopier.php.html#90"><abbr title="oat\tao\model\resources\Service\ClassCopier::copy">copy</abbr></a></td><td class="text-right">5</td></tr>
+       <tr><td><a href="ResourceWatcher.php.html#117"><abbr title="oat\tao\model\resources\ResourceWatcher::getUpdatedAt">getUpdatedAt</abbr></a></td><td class="text-right">4</td></tr>
+       <tr><td><a href="Service/ClassDeleter.php.html#156"><abbr title="oat\tao\model\resources\Service\ClassDeleter::deleteInstances">deleteInstances</abbr></a></td><td class="text-right">4</td></tr>
+       <tr><td><a href="SecureResourceService.php.html#179"><abbr title="oat\tao\model\resources\SecureResourceService::getClass">getClass</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="ResourceWatcher.php.html#197"><abbr title="oat\tao\model\resources\ResourceWatcher::ignoreEditIemClassUpdates">ignoreEditIemClassUpdates</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="SecureResourceCachedService.php.html#172"><abbr title="oat\tao\model\resources\SecureResourceCachedService::getCache">getCache</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="SecureResourceService.php.html#194"><abbr title="oat\tao\model\resources\SecureResourceService::getParentUris">getParentUris</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="Service/ClassDeleter.php.html#199"><abbr title="oat\tao\model\resources\Service\ClassDeleter::deleteProperty">deleteProperty</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="Service/ClassCopierProxy.php.html#67"><abbr title="oat\tao\model\resources\Service\ClassCopierProxy::copy">copy</abbr></a></td><td class="text-right">2</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 7.0.15</a> using <a href="https://secure.php.net/" target="_top">PHP 7.4.33</a> with <a href="https://xdebug.org/">Xdebug 3.1.6</a> with <a href="https://github.com/krakjoe/pcov">PCOV 1.0.11</a> at Fri Jun 23 15:17:57 UTC 2023.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="../../../../_js/jquery.min.js" type="text/javascript"></script>
+  <script src="../../../../_js/d3.min.js" type="text/javascript"></script>
+  <script src="../../../../_js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([5,0,0,2,1,0,0,0,2,2,4,14], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([31,0,0,0,1,0,1,1,2,6,4,75], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[0,1,"<a href=\"CopierServiceProvider.php.html#40\">oat\\tao\\model\\resources\\CopierServiceProvider<\/a>"],[100,0,"<a href=\"Exception\/ClassDeletionException.php.html#27\">oat\\tao\\model\\resources\\Exception\\ClassDeletionException<\/a>"],[100,0,"<a href=\"Exception\/PartialClassDeletionException.php.html#27\">oat\\tao\\model\\resources\\Exception\\PartialClassDeletionException<\/a>"],[100,1,"<a href=\"GetAllChildrenCacheKeyFactory.php.html#30\">oat\\tao\\model\\resources\\GetAllChildrenCacheKeyFactory<\/a>"],[0,18,"<a href=\"ListResourceLookup.php.html#39\">oat\\tao\\model\\resources\\ListResourceLookup<\/a>"],[100,1,"<a href=\"ResourceAccessDeniedException.php.html#29\">oat\\tao\\model\\resources\\ResourceAccessDeniedException<\/a>"],[21.428571428571427,4,"<a href=\"ResourceIterator.php.html#36\">oat\\tao\\model\\resources\\ResourceIterator<\/a>"],[21.428571428571427,37,"<a href=\"ResourceService.php.html#38\">oat\\tao\\model\\resources\\ResourceService<\/a>"],[94.5945945945946,25,"<a href=\"ResourceWatcher.php.html#44\">oat\\tao\\model\\resources\\ResourceWatcher<\/a>"],[0,1,"<a href=\"ResourcesServiceProvider.php.html#37\">oat\\tao\\model\\resources\\ResourcesServiceProvider<\/a>"],[92.15686274509804,21,"<a href=\"SecureResourceCachedService.php.html#35\">oat\\tao\\model\\resources\\SecureResourceCachedService<\/a>"],[94.5945945945946,30,"<a href=\"SecureResourceService.php.html#36\">oat\\tao\\model\\resources\\SecureResourceService<\/a>"],[33.33333333333333,3,"<a href=\"SecureResourceServiceAllChildrenCacheCollection.php.html#29\">oat\\tao\\model\\resources\\SecureResourceServiceAllChildrenCacheCollection<\/a>"],[81.57894736842105,16,"<a href=\"Service\/ClassCopier.php.html#36\">oat\\tao\\model\\resources\\Service\\ClassCopier<\/a>"],[78.26086956521739,10,"<a href=\"Service\/ClassCopierProxy.php.html#32\">oat\\tao\\model\\resources\\Service\\ClassCopierProxy<\/a>"],[84.05797101449275,25,"<a href=\"Service\/ClassDeleter.php.html#38\">oat\\tao\\model\\resources\\Service\\ClassDeleter<\/a>"],[94.11764705882352,5,"<a href=\"Service\/ClassMetadataCopier.php.html#33\">oat\\tao\\model\\resources\\Service\\ClassMetadataCopier<\/a>"],[100,5,"<a href=\"Service\/ClassMetadataMapper.php.html#30\">oat\\tao\\model\\resources\\Service\\ClassMetadataMapper<\/a>"],[72.72727272727273,9,"<a href=\"Service\/InstanceCopier.php.html#35\">oat\\tao\\model\\resources\\Service\\InstanceCopier<\/a>"],[0,17,"<a href=\"Service\/InstanceMetadataCopier.php.html#38\">oat\\tao\\model\\resources\\Service\\InstanceMetadataCopier<\/a>"],[100,10,"<a href=\"Service\/RootClassesListService.php.html#33\">oat\\tao\\model\\resources\\Service\\RootClassesListService<\/a>"],[100,2,"<a href=\"Specification\/RootClassSpecification.php.html#29\">oat\\tao\\model\\resources\\Specification\\RootClassSpecification<\/a>"],[0,10,"<a href=\"TreeResourceLookup.php.html#33\">oat\\tao\\model\\resources\\TreeResourceLookup<\/a>"],[100,1,"<a href=\"ValidatePermissionsCacheKeyFactory.php.html#10\">oat\\tao\\model\\resources\\ValidatePermissionsCacheKeyFactory<\/a>"],[100,7,"<a href=\"relation\/FindAllQuery.php.html#25\">oat\\tao\\model\\resources\\relation\\FindAllQuery<\/a>"],[100,8,"<a href=\"relation\/ResourceRelation.php.html#27\">oat\\tao\\model\\resources\\relation\\ResourceRelation<\/a>"],[100,9,"<a href=\"relation\/ResourceRelationCollection.php.html#29\">oat\\tao\\model\\resources\\relation\\ResourceRelationCollection<\/a>"],[100,1,"<a href=\"relation\/exception\/NestedClassLimitExceededException.php.html#27\">oat\\tao\\model\\resources\\relation\\exception\\NestedClassLimitExceededException<\/a>"],[100,4,"<a href=\"relation\/service\/ItemResourceRelationService.php.html#31\">oat\\tao\\model\\resources\\relation\\service\\ItemResourceRelationService<\/a>"],[100,11,"<a href=\"relation\/service\/ResourceRelationServiceProxy.php.html#29\">oat\\tao\\model\\resources\\relation\\service\\ResourceRelationServiceProxy<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[0,1,"<a href=\"CopierServiceProvider.php.html#42\">oat\\tao\\model\\resources\\CopierServiceProvider::__invoke<\/a>"],[100,1,"<a href=\"GetAllChildrenCacheKeyFactory.php.html#32\">oat\\tao\\model\\resources\\GetAllChildrenCacheKeyFactory::create<\/a>"],[0,3,"<a href=\"ListResourceLookup.php.html#55\">oat\\tao\\model\\resources\\ListResourceLookup::getResources<\/a>"],[0,2,"<a href=\"ListResourceLookup.php.html#79\">oat\\tao\\model\\resources\\ListResourceLookup::searchByString<\/a>"],[0,1,"<a href=\"ListResourceLookup.php.html#103\">oat\\tao\\model\\resources\\ListResourceLookup::searchByProperties<\/a>"],[0,3,"<a href=\"ListResourceLookup.php.html#125\">oat\\tao\\model\\resources\\ListResourceLookup::format<\/a>"],[0,4,"<a href=\"ListResourceLookup.php.html#148\">oat\\tao\\model\\resources\\ListResourceLookup::getResourceData<\/a>"],[0,1,"<a href=\"ListResourceLookup.php.html#168\">oat\\tao\\model\\resources\\ListResourceLookup::getClasses<\/a>"],[0,1,"<a href=\"ListResourceLookup.php.html#178\">oat\\tao\\model\\resources\\ListResourceLookup::getSignatureGenerator<\/a>"],[0,3,"<a href=\"ListResourceLookup.php.html#183\">oat\\tao\\model\\resources\\ListResourceLookup::getParentClassUri<\/a>"],[100,1,"<a href=\"ResourceAccessDeniedException.php.html#31\">oat\\tao\\model\\resources\\ResourceAccessDeniedException::__construct<\/a>"],[100,1,"<a href=\"ResourceIterator.php.html#49\">oat\\tao\\model\\resources\\ResourceIterator::__construct<\/a>"],[0,3,"<a href=\"ResourceIterator.php.html#62\">oat\\tao\\model\\resources\\ResourceIterator::loadResources<\/a>"],[100,1,"<a href=\"ResourceService.php.html#64\">oat\\tao\\model\\resources\\ResourceService::getAllClasses<\/a>"],[100,4,"<a href=\"ResourceService.php.html#81\">oat\\tao\\model\\resources\\ResourceService::getSubClasses<\/a>"],[100,1,"<a href=\"ResourceService.php.html#106\">oat\\tao\\model\\resources\\ResourceService::getNestingLevelLimit<\/a>"],[0,2,"<a href=\"ResourceService.php.html#124\">oat\\tao\\model\\resources\\ResourceService::getResources<\/a>"],[0,2,"<a href=\"ResourceService.php.html#157\">oat\\tao\\model\\resources\\ResourceService::getClasses<\/a>"],[0,4,"<a href=\"ResourceService.php.html#185\">oat\\tao\\model\\resources\\ResourceService::getResourcesPermissions<\/a>"],[0,10,"<a href=\"ResourceService.php.html#212\">oat\\tao\\model\\resources\\ResourceService::getPropertyFilters<\/a>"],[0,4,"<a href=\"ResourceService.php.html#242\">oat\\tao\\model\\resources\\ResourceService::getResourceLookup<\/a>"],[0,9,"<a href=\"ResourceService.php.html#263\">oat\\tao\\model\\resources\\ResourceService::getUris<\/a>"],[100,1,"<a href=\"ResourceWatcher.php.html#56\">oat\\tao\\model\\resources\\ResourceWatcher::catchCreatedResourceEvent<\/a>"],[93.33333333333333,4,"<a href=\"ResourceWatcher.php.html#74\">oat\\tao\\model\\resources\\ResourceWatcher::catchUpdatedResourceEvent<\/a>"],[100,2,"<a href=\"ResourceWatcher.php.html#100\">oat\\tao\\model\\resources\\ResourceWatcher::catchDeletedResourceEvent<\/a>"],[75,4,"<a href=\"ResourceWatcher.php.html#117\">oat\\tao\\model\\resources\\ResourceWatcher::getUpdatedAt<\/a>"],[100,5,"<a href=\"ResourceWatcher.php.html#135\">oat\\tao\\model\\resources\\ResourceWatcher::createResourceIndexingTask<\/a>"],[100,5,"<a href=\"ResourceWatcher.php.html#154\">oat\\tao\\model\\resources\\ResourceWatcher::hasResourceSupport<\/a>"],[100,1,"<a href=\"ResourceWatcher.php.html#192\">oat\\tao\\model\\resources\\ResourceWatcher::hasClassSupport<\/a>"],[75,3,"<a href=\"ResourceWatcher.php.html#197\">oat\\tao\\model\\resources\\ResourceWatcher::ignoreEditIemClassUpdates<\/a>"],[0,1,"<a href=\"ResourcesServiceProvider.php.html#39\">oat\\tao\\model\\resources\\ResourcesServiceProvider::__invoke<\/a>"],[100,2,"<a href=\"SecureResourceCachedService.php.html#62\">oat\\tao\\model\\resources\\SecureResourceCachedService::__construct<\/a>"],[100,3,"<a href=\"SecureResourceCachedService.php.html#82\">oat\\tao\\model\\resources\\SecureResourceCachedService::getAllChildren<\/a>"],[100,2,"<a href=\"SecureResourceCachedService.php.html#106\">oat\\tao\\model\\resources\\SecureResourceCachedService::validatePermissions<\/a>"],[80,6,"<a href=\"SecureResourceCachedService.php.html#119\">oat\\tao\\model\\resources\\SecureResourceCachedService::validatePermission<\/a>"],[100,1,"<a href=\"SecureResourceCachedService.php.html#152\">oat\\tao\\model\\resources\\SecureResourceCachedService::getService<\/a>"],[100,2,"<a href=\"SecureResourceCachedService.php.html#159\">oat\\tao\\model\\resources\\SecureResourceCachedService::addToCache<\/a>"],[80,3,"<a href=\"SecureResourceCachedService.php.html#172\">oat\\tao\\model\\resources\\SecureResourceCachedService::getCache<\/a>"],[100,2,"<a href=\"SecureResourceCachedService.php.html#190\">oat\\tao\\model\\resources\\SecureResourceCachedService::getUser<\/a>"],[100,4,"<a href=\"SecureResourceService.php.html#48\">oat\\tao\\model\\resources\\SecureResourceService::getAllChildren<\/a>"],[100,4,"<a href=\"SecureResourceService.php.html#77\">oat\\tao\\model\\resources\\SecureResourceService::getInstances<\/a>"],[100,2,"<a href=\"SecureResourceService.php.html#110\">oat\\tao\\model\\resources\\SecureResourceService::hasAccess<\/a>"],[100,4,"<a href=\"SecureResourceService.php.html#122\">oat\\tao\\model\\resources\\SecureResourceService::validateResourceUriPermissions<\/a>"],[100,2,"<a href=\"SecureResourceService.php.html#144\">oat\\tao\\model\\resources\\SecureResourceService::validatePermissions<\/a>"],[90.9090909090909,3,"<a href=\"SecureResourceService.php.html#157\">oat\\tao\\model\\resources\\SecureResourceService::validatePermission<\/a>"],[60,3,"<a href=\"SecureResourceService.php.html#179\">oat\\tao\\model\\resources\\SecureResourceService::getClass<\/a>"],[85.71428571428571,3,"<a href=\"SecureResourceService.php.html#194\">oat\\tao\\model\\resources\\SecureResourceService::getParentUris<\/a>"],[100,1,"<a href=\"SecureResourceService.php.html#209\">oat\\tao\\model\\resources\\SecureResourceService::getPermissionProvider<\/a>"],[100,2,"<a href=\"SecureResourceService.php.html#220\">oat\\tao\\model\\resources\\SecureResourceService::getUser<\/a>"],[100,1,"<a href=\"SecureResourceService.php.html#232\">oat\\tao\\model\\resources\\SecureResourceService::throwResourceAccessDeniedException<\/a>"],[100,1,"<a href=\"SecureResourceService.php.html#243\">oat\\tao\\model\\resources\\SecureResourceService::getAdvancedLogger<\/a>"],[100,1,"<a href=\"SecureResourceServiceAllChildrenCacheCollection.php.html#34\">oat\\tao\\model\\resources\\SecureResourceServiceAllChildrenCacheCollection::__construct<\/a>"],[0,2,"<a href=\"SecureResourceServiceAllChildrenCacheCollection.php.html#44\">oat\\tao\\model\\resources\\SecureResourceServiceAllChildrenCacheCollection::getInstances<\/a>"],[100,1,"<a href=\"Service\/ClassCopier.php.html#59\">oat\\tao\\model\\resources\\Service\\ClassCopier::__construct<\/a>"],[0,1,"<a href=\"Service\/ClassCopier.php.html#71\">oat\\tao\\model\\resources\\Service\\ClassCopier::withPermissionCopier<\/a>"],[0,2,"<a href=\"Service\/ClassCopier.php.html#80\">oat\\tao\\model\\resources\\Service\\ClassCopier::withPermissionCopiers<\/a>"],[85.71428571428571,5,"<a href=\"Service\/ClassCopier.php.html#90\">oat\\tao\\model\\resources\\Service\\ClassCopier::copy<\/a>"],[100,7,"<a href=\"Service\/ClassCopier.php.html#122\">oat\\tao\\model\\resources\\Service\\ClassCopier::assertInSameRootClass<\/a>"],[100,1,"<a href=\"Service\/ClassCopierProxy.php.html#40\">oat\\tao\\model\\resources\\Service\\ClassCopierProxy::__construct<\/a>"],[100,3,"<a href=\"Service\/ClassCopierProxy.php.html#45\">oat\\tao\\model\\resources\\Service\\ClassCopierProxy::addClassCopier<\/a>"],[37.5,2,"<a href=\"Service\/ClassCopierProxy.php.html#67\">oat\\tao\\model\\resources\\Service\\ClassCopierProxy::copy<\/a>"],[100,4,"<a href=\"Service\/ClassCopierProxy.php.html#86\">oat\\tao\\model\\resources\\Service\\ClassCopierProxy::extractRootClass<\/a>"],[100,1,"<a href=\"Service\/ClassDeleter.php.html#63\">oat\\tao\\model\\resources\\Service\\ClassDeleter::__construct<\/a>"],[57.89473684210527,4,"<a href=\"Service\/ClassDeleter.php.html#79\">oat\\tao\\model\\resources\\Service\\ClassDeleter::delete<\/a>"],[100,4,"<a href=\"Service\/ClassDeleter.php.html#111\">oat\\tao\\model\\resources\\Service\\ClassDeleter::deleteClassRecursively<\/a>"],[100,2,"<a href=\"Service\/ClassDeleter.php.html#130\">oat\\tao\\model\\resources\\Service\\ClassDeleter::deleteClass<\/a>"],[100,4,"<a href=\"Service\/ClassDeleter.php.html#148\">oat\\tao\\model\\resources\\Service\\ClassDeleter::deleteClassContent<\/a>"],[84.61538461538461,4,"<a href=\"Service\/ClassDeleter.php.html#156\">oat\\tao\\model\\resources\\Service\\ClassDeleter::deleteInstances<\/a>"],[100,3,"<a href=\"Service\/ClassDeleter.php.html#188\">oat\\tao\\model\\resources\\Service\\ClassDeleter::deleteProperties<\/a>"],[88.88888888888889,3,"<a href=\"Service\/ClassDeleter.php.html#199\">oat\\tao\\model\\resources\\Service\\ClassDeleter::deleteProperty<\/a>"],[100,1,"<a href=\"Service\/ClassMetadataCopier.php.html#41\">oat\\tao\\model\\resources\\Service\\ClassMetadataCopier::__construct<\/a>"],[90,3,"<a href=\"Service\/ClassMetadataCopier.php.html#46\">oat\\tao\\model\\resources\\Service\\ClassMetadataCopier::copy<\/a>"],[100,1,"<a href=\"Service\/ClassMetadataCopier.php.html#64\">oat\\tao\\model\\resources\\Service\\ClassMetadataCopier::copyProperty<\/a>"],[100,1,"<a href=\"Service\/ClassMetadataMapper.php.html#35\">oat\\tao\\model\\resources\\Service\\ClassMetadataMapper::add<\/a>"],[100,2,"<a href=\"Service\/ClassMetadataMapper.php.html#42\">oat\\tao\\model\\resources\\Service\\ClassMetadataMapper::get<\/a>"],[100,2,"<a href=\"Service\/ClassMetadataMapper.php.html#50\">oat\\tao\\model\\resources\\Service\\ClassMetadataMapper::remove<\/a>"],[100,1,"<a href=\"Service\/InstanceCopier.php.html#46\">oat\\tao\\model\\resources\\Service\\InstanceCopier::__construct<\/a>"],[100,1,"<a href=\"Service\/InstanceCopier.php.html#51\">oat\\tao\\model\\resources\\Service\\InstanceCopier::withInstanceContentCopier<\/a>"],[0,1,"<a href=\"Service\/InstanceCopier.php.html#56\">oat\\tao\\model\\resources\\Service\\InstanceCopier::withPermissionCopier<\/a>"],[0,2,"<a href=\"Service\/InstanceCopier.php.html#65\">oat\\tao\\model\\resources\\Service\\InstanceCopier::withPermissionCopiers<\/a>"],[92.3076923076923,4,"<a href=\"Service\/InstanceCopier.php.html#75\">oat\\tao\\model\\resources\\Service\\InstanceCopier::copy<\/a>"],[0,1,"<a href=\"Service\/InstanceMetadataCopier.php.html#57\">oat\\tao\\model\\resources\\Service\\InstanceMetadataCopier::__construct<\/a>"],[0,2,"<a href=\"Service\/InstanceMetadataCopier.php.html#67\">oat\\tao\\model\\resources\\Service\\InstanceMetadataCopier::addPropertyUriToBlacklist<\/a>"],[0,6,"<a href=\"Service\/InstanceMetadataCopier.php.html#74\">oat\\tao\\model\\resources\\Service\\InstanceMetadataCopier::copy<\/a>"],[0,4,"<a href=\"Service\/InstanceMetadataCopier.php.html#106\">oat\\tao\\model\\resources\\Service\\InstanceMetadataCopier::getOriginalProperty<\/a>"],[0,3,"<a href=\"Service\/InstanceMetadataCopier.php.html#117\">oat\\tao\\model\\resources\\Service\\InstanceMetadataCopier::isFileProperty<\/a>"],[0,1,"<a href=\"Service\/InstanceMetadataCopier.php.html#134\">oat\\tao\\model\\resources\\Service\\InstanceMetadataCopier::copyFile<\/a>"],[100,1,"<a href=\"Service\/RootClassesListService.php.html#47\">oat\\tao\\model\\resources\\Service\\RootClassesListService::__construct<\/a>"],[100,3,"<a href=\"Service\/RootClassesListService.php.html#56\">oat\\tao\\model\\resources\\Service\\RootClassesListService::list<\/a>"],[100,6,"<a href=\"Service\/RootClassesListService.php.html#74\">oat\\tao\\model\\resources\\Service\\RootClassesListService::listUris<\/a>"],[100,1,"<a href=\"Specification\/RootClassSpecification.php.html#34\">oat\\tao\\model\\resources\\Specification\\RootClassSpecification::__construct<\/a>"],[100,1,"<a href=\"Specification\/RootClassSpecification.php.html#39\">oat\\tao\\model\\resources\\Specification\\RootClassSpecification::isSatisfiedBy<\/a>"],[0,3,"<a href=\"TreeResourceLookup.php.html#47\">oat\\tao\\model\\resources\\TreeResourceLookup::getResources<\/a>"],[0,3,"<a href=\"TreeResourceLookup.php.html#62\">oat\\tao\\model\\resources\\TreeResourceLookup::getClasses<\/a>"],[0,4,"<a href=\"TreeResourceLookup.php.html#83\">oat\\tao\\model\\resources\\TreeResourceLookup::formatTreeData<\/a>"],[100,1,"<a href=\"ValidatePermissionsCacheKeyFactory.php.html#12\">oat\\tao\\model\\resources\\ValidatePermissionsCacheKeyFactory::create<\/a>"],[100,1,"<a href=\"relation\/FindAllQuery.php.html#36\">oat\\tao\\model\\resources\\relation\\FindAllQuery::__construct<\/a>"],[100,2,"<a href=\"relation\/FindAllQuery.php.html#43\">oat\\tao\\model\\resources\\relation\\FindAllQuery::getSourceId<\/a>"],[100,2,"<a href=\"relation\/FindAllQuery.php.html#48\">oat\\tao\\model\\resources\\relation\\FindAllQuery::getClassId<\/a>"],[100,2,"<a href=\"relation\/FindAllQuery.php.html#53\">oat\\tao\\model\\resources\\relation\\FindAllQuery::getType<\/a>"],[100,1,"<a href=\"relation\/ResourceRelation.php.html#41\">oat\\tao\\model\\resources\\relation\\ResourceRelation::__construct<\/a>"],[100,1,"<a href=\"relation\/ResourceRelation.php.html#48\">oat\\tao\\model\\resources\\relation\\ResourceRelation::getType<\/a>"],[100,1,"<a href=\"relation\/ResourceRelation.php.html#53\">oat\\tao\\model\\resources\\relation\\ResourceRelation::getId<\/a>"],[100,1,"<a href=\"relation\/ResourceRelation.php.html#58\">oat\\tao\\model\\resources\\relation\\ResourceRelation::withSourceId<\/a>"],[100,1,"<a href=\"relation\/ResourceRelation.php.html#65\">oat\\tao\\model\\resources\\relation\\ResourceRelation::getSourceId<\/a>"],[100,2,"<a href=\"relation\/ResourceRelation.php.html#70\">oat\\tao\\model\\resources\\relation\\ResourceRelation::getLabel<\/a>"],[100,1,"<a href=\"relation\/ResourceRelation.php.html#75\">oat\\tao\\model\\resources\\relation\\ResourceRelation::jsonSerialize<\/a>"],[100,2,"<a href=\"relation\/ResourceRelationCollection.php.html#34\">oat\\tao\\model\\resources\\relation\\ResourceRelationCollection::__construct<\/a>"],[100,1,"<a href=\"relation\/ResourceRelationCollection.php.html#41\">oat\\tao\\model\\resources\\relation\\ResourceRelationCollection::getIterator<\/a>"],[100,1,"<a href=\"relation\/ResourceRelationCollection.php.html#46\">oat\\tao\\model\\resources\\relation\\ResourceRelationCollection::add<\/a>"],[100,1,"<a href=\"relation\/ResourceRelationCollection.php.html#53\">oat\\tao\\model\\resources\\relation\\ResourceRelationCollection::filterNewSourceIds<\/a>"],[100,1,"<a href=\"relation\/ResourceRelationCollection.php.html#58\">oat\\tao\\model\\resources\\relation\\ResourceRelationCollection::filterRemovedSourceIds<\/a>"],[100,1,"<a href=\"relation\/ResourceRelationCollection.php.html#63\">oat\\tao\\model\\resources\\relation\\ResourceRelationCollection::jsonSerialize<\/a>"],[100,2,"<a href=\"relation\/ResourceRelationCollection.php.html#68\">oat\\tao\\model\\resources\\relation\\ResourceRelationCollection::getSourceIds<\/a>"],[100,1,"<a href=\"relation\/exception\/NestedClassLimitExceededException.php.html#31\">oat\\tao\\model\\resources\\relation\\exception\\NestedClassLimitExceededException::__construct<\/a>"],[100,4,"<a href=\"relation\/service\/ItemResourceRelationService.php.html#38\">oat\\tao\\model\\resources\\relation\\service\\ItemResourceRelationService::findRelations<\/a>"],[100,2,"<a href=\"relation\/service\/ResourceRelationServiceProxy.php.html#34\">oat\\tao\\model\\resources\\relation\\service\\ResourceRelationServiceProxy::addService<\/a>"],[100,2,"<a href=\"relation\/service\/ResourceRelationServiceProxy.php.html#45\">oat\\tao\\model\\resources\\relation\\service\\ResourceRelationServiceProxy::removeService<\/a>"],[100,4,"<a href=\"relation\/service\/ResourceRelationServiceProxy.php.html#58\">oat\\tao\\model\\resources\\relation\\service\\ResourceRelationServiceProxy::findRelations<\/a>"],[100,1,"<a href=\"relation\/service\/ResourceRelationServiceProxy.php.html#81\">oat\\tao\\model\\resources\\relation\\service\\ResourceRelationServiceProxy::getResourceRelationService<\/a>"],[100,2,"<a href=\"relation\/service\/ResourceRelationServiceProxy.php.html#86\">oat\\tao\\model\\resources\\relation\\service\\ResourceRelationServiceProxy::getServices<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>
