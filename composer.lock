@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "992c485b472b759504c1f4f8e6263bc6",
+    "content-hash": "e12778096978269ea333338eb54f7602",
     "packages": [
         {
             "name": "cebe/php-openapi",
@@ -6100,16 +6100,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "v50.25.1.6",
+            "version": "v50.25.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "7b7cb6a235c9a0b7bc3efc21ba4543e7563ec754"
+                "reference": "0e52e21af7bc77b91b72653887e94a62f41313b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/7b7cb6a235c9a0b7bc3efc21ba4543e7563ec754",
-                "reference": "7b7cb6a235c9a0b7bc3efc21ba4543e7563ec754",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/0e52e21af7bc77b91b72653887e94a62f41313b5",
+                "reference": "0e52e21af7bc77b91b72653887e94a62f41313b5",
                 "shasum": ""
             },
             "require": {
@@ -6142,13 +6142,13 @@
             },
             "type": "tao-extension",
             "extra": {
-                "tao-extension-name": "tao",
                 "npm-bridge": {
                     "arguments": [
                         "--prefix",
                         "views"
                     ]
-                }
+                },
+                "tao-extension-name": "tao"
             },
             "autoload": {
                 "files": [
@@ -6211,9 +6211,9 @@
             "support": {
                 "forum": "https://forum.taocloud.org",
                 "issues": "https://github.com/oat-sa/tao-core/issues",
-                "source": "https://github.com/oat-sa/tao-core/tree/v50.25.1.6"
+                "source": "https://github.com/oat-sa/tao-core/tree/v50.25.1.7"
             },
-            "time": "2023-10-04T07:38:46+00:00"
+            "time": "2025-11-20T11:51:14+00:00"
         },
         {
             "name": "paragonie/random_compat",
