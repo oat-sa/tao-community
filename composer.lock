@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c2fe4f77e6f91ace037b807bf5bcb5ee",
+    "content-hash": "a1b04d892823261f73ed98dd01f81bd4",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -4220,16 +4220,16 @@
         },
         {
             "name": "oat-sa/extension-tao-itemqti",
-            "version": "v30.11.3.1",
+            "version": "v30.11.3.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti.git",
-                "reference": "4f4716ef8ef933ae4d09fa6397cd0dff1c3ac820"
+                "reference": "76ea7efe95ab0e0e88162e247830988f79bbc935"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/4f4716ef8ef933ae4d09fa6397cd0dff1c3ac820",
-                "reference": "4f4716ef8ef933ae4d09fa6397cd0dff1c3ac820",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/76ea7efe95ab0e0e88162e247830988f79bbc935",
+                "reference": "76ea7efe95ab0e0e88162e247830988f79bbc935",
                 "shasum": ""
             },
             "require": {
@@ -4244,13 +4244,13 @@
             },
             "type": "tao-extension",
             "extra": {
-                "tao-extension-name": "taoQtiItem",
                 "npm-bridge": {
                     "arguments": [
                         "--prefix",
                         "views"
                     ]
-                }
+                },
+                "tao-extension-name": "taoQtiItem"
             },
             "autoload": {
                 "psr-4": {
@@ -4306,9 +4306,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/v30.11.3.1"
+                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/v30.11.3.7"
             },
-            "time": "2024-06-26T13:06:38+00:00"
+            "time": "2025-12-19T08:46:39+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pci",
@@ -6165,16 +6165,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "v54.14.3.2",
+            "version": "v54.14.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "c4761f149cdf1a71eb5e7724421b774483111303"
+                "reference": "6064428909b7b3218dd456dc03aa50b68f7ea61c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/c4761f149cdf1a71eb5e7724421b774483111303",
-                "reference": "c4761f149cdf1a71eb5e7724421b774483111303",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/6064428909b7b3218dd456dc03aa50b68f7ea61c",
+                "reference": "6064428909b7b3218dd456dc03aa50b68f7ea61c",
                 "shasum": ""
             },
             "require": {
@@ -6206,13 +6206,13 @@
             },
             "type": "tao-extension",
             "extra": {
-                "tao-extension-name": "tao",
                 "npm-bridge": {
                     "arguments": [
                         "--prefix",
                         "views"
                     ]
-                }
+                },
+                "tao-extension-name": "tao"
             },
             "autoload": {
                 "files": [
@@ -6275,9 +6275,9 @@
             "support": {
                 "forum": "https://forum.taocloud.org",
                 "issues": "https://github.com/oat-sa/tao-core/issues",
-                "source": "https://github.com/oat-sa/tao-core/tree/v54.14.3.2"
+                "source": "https://github.com/oat-sa/tao-core/tree/v54.14.3.3"
             },
-            "time": "2024-07-29T17:40:23+00:00"
+            "time": "2025-12-19T09:01:53+00:00"
         },
         {
             "name": "paragonie/constant_time_encoding",
