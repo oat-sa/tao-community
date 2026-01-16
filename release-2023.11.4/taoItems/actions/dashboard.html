@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /home/runner/work/tao-community/tao-community/taoItems/actions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../../_css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="../../_css/nv.d3.min.css" rel="stylesheet" type="text/css">
+  <link href="../../_css/style.css" rel="stylesheet" type="text/css">
+  <link href="../../_css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="../../index.html">/home/runner/work/tao-community/tao-community</a></li>
+         <li class="breadcrumb-item"><a href="../index.html">taoItems</a></li>
+         <li class="breadcrumb-item"><a href="index.html">actions</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="class.Category.php.html#31">taoItems_actions_Category</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemContent.php.html#48">taoItems_actions_ItemContent</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemExport.php.html#35">taoItems_actions_ItemExport</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemImport.php.html#41">taoItems_actions_ItemImport</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemPreview.php.html#42">taoItems_actions_ItemPreview</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemRunner.php.html#31">taoItems_actions_ItemRunner</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Items.php.html#52">taoItems_actions_Items</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.RestFormItem.php.html#26">taoItems_actions_RestFormItem</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.RestItems.php.html#26">taoItems_actions_RestItems</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.SaSItems.php.html#37">taoItems_actions_SaSItems</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="form/class.Item.php.html#34">taoItems_actions_form_Item</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="form/class.RestItemForm.php.html#30">taoItems_actions_form_RestItemForm</a></td><td class="text-right">0%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="class.Items.php.html#52">taoItems_actions_Items</a></td><td class="text-right">1892</td></tr>
+       <tr><td><a href="class.ItemContent.php.html#48">taoItems_actions_ItemContent</a></td><td class="text-right">1722</td></tr>
+       <tr><td><a href="class.ItemPreview.php.html#42">taoItems_actions_ItemPreview</a></td><td class="text-right">272</td></tr>
+       <tr><td><a href="class.SaSItems.php.html#37">taoItems_actions_SaSItems</a></td><td class="text-right">272</td></tr>
+       <tr><td><a href="class.Category.php.html#31">taoItems_actions_Category</a></td><td class="text-right">182</td></tr>
+       <tr><td><a href="class.ItemExport.php.html#35">taoItems_actions_ItemExport</a></td><td class="text-right">156</td></tr>
+       <tr><td><a href="class.ItemImport.php.html#41">taoItems_actions_ItemImport</a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="class.ItemRunner.php.html#31">taoItems_actions_ItemRunner</a></td><td class="text-right">90</td></tr>
+       <tr><td><a href="form/class.Item.php.html#34">taoItems_actions_form_Item</a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="class.RestFormItem.php.html#26">taoItems_actions_RestFormItem</a></td><td class="text-right">20</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="class.Category.php.html#41"><abbr title="taoItems_actions_Category::getExposedsByClass">getExposedsByClass</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Items.php.html#318"><abbr title="taoItems_actions_Items::moveClass">moveClass</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemRunner.php.html#88"><abbr title="taoItems_actions_ItemRunner::getResultServerParams">getResultServerParams</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Items.php.html#59"><abbr title="taoItems_actions_Items::getEventManager">getEventManager</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Items.php.html#67"><abbr title="taoItems_actions_Items::defaultData">defaultData</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Items.php.html#97"><abbr title="taoItems_actions_Items::getClassService">getClassService</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Items.php.html#111"><abbr title="taoItems_actions_Items::cloneInstance">cloneInstance</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Items.php.html#122"><abbr title="taoItems_actions_Items::moveInstance">moveInstance</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Items.php.html#132"><abbr title="taoItems_actions_Items::moveAll">moveAll</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Items.php.html#142"><abbr title="taoItems_actions_Items::getOntologyData">getOntologyData</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Items.php.html#152"><abbr title="taoItems_actions_Items::editItem">editItem</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Items.php.html#250"><abbr title="taoItems_actions_Items::editItemClass">editItemClass</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Items.php.html#287"><abbr title="taoItems_actions_Items::deleteItem">deleteItem</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Items.php.html#297"><abbr title="taoItems_actions_Items::deleteClass">deleteClass</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Items.php.html#309"><abbr title="taoItems_actions_Items::deleteAll">deleteAll</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Items.php.html#328"><abbr title="taoItems_actions_Items::translateInstance">translateInstance</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemRunner.php.html#70"><abbr title="taoItems_actions_ItemRunner::selectView">selectView</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Items.php.html#339"><abbr title="taoItems_actions_Items::authoring">authoring</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Items.php.html#381"><abbr title="taoItems_actions_Items::getDependsOnPropertyValidator">getDependsOnPropertyValidator</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Items.php.html#386"><abbr title="taoItems_actions_Items::getResourceWatcher">getResourceWatcher</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.RestFormItem.php.html#32"><abbr title="taoItems_actions_RestFormItem::create">create</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.RestFormItem.php.html#44"><abbr title="taoItems_actions_RestFormItem::edit">edit</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.RestFormItem.php.html#55"><abbr title="taoItems_actions_RestFormItem::getForm">getForm</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.RestItems.php.html#32"><abbr title="taoItems_actions_RestItems::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.RestItems.php.html#43"><abbr title="taoItems_actions_RestItems::getParametersAliases">getParametersAliases</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.RestItems.php.html#54"><abbr title="taoItems_actions_RestItems::getParametersRequirements">getParametersRequirements</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.SaSItems.php.html#45"><abbr title="taoItems_actions_SaSItems::getCurrentClass">getCurrentClass</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.SaSItems.php.html#57"><abbr title="taoItems_actions_SaSItems::sasEditInstance">sasEditInstance</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.SaSItems.php.html#94"><abbr title="taoItems_actions_SaSItems::viewItem">viewItem</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.SaSItems.php.html#164"><abbr title="taoItems_actions_SaSItems::loadStandaloneMode">loadStandaloneMode</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="form/class.Item.php.html#40"><abbr title="taoItems_actions_form_Item::initElements">initElements</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemRunner.php.html#79"><abbr title="taoItems_actions_ItemRunner::getResultServerEndpoint">getResultServerEndpoint</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemRunner.php.html#33"><abbr title="taoItems_actions_ItemRunner::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Category.php.html#68"><abbr title="taoItems_actions_Category::setExposed">setExposed</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemExport.php.html#44"><abbr title="taoItems_actions_ItemExport::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Category.php.html#94"><abbr title="taoItems_actions_Category::returnBadParameter">returnBadParameter</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Category.php.html#111"><abbr title="taoItems_actions_Category::returnSuccess">returnSuccess</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemContent.php.html#56"><abbr title="taoItems_actions_ItemContent::files">files</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemContent.php.html#82"><abbr title="taoItems_actions_ItemContent::fileExists">fileExists</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemContent.php.html#103"><abbr title="taoItems_actions_ItemContent::upload">upload</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemContent.php.html#173"><abbr title="taoItems_actions_ItemContent::download">download</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemContent.php.html#191"><abbr title="taoItems_actions_ItemContent::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemContent.php.html#203"><abbr title="taoItems_actions_ItemContent::getMediaAsset">getMediaAsset</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemContent.php.html#243"><abbr title="taoItems_actions_ItemContent::resolveAsset">resolveAsset</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemContent.php.html#256"><abbr title="taoItems_actions_ItemContent::getRequiredQueryParams">getRequiredQueryParams</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemContent.php.html#268"><abbr title="taoItems_actions_ItemContent::buildFilters">buildFilters</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemContent.php.html#294"><abbr title="taoItems_actions_ItemContent::getAssetTreeBuilder">getAssetTreeBuilder</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemContent.php.html#302"><abbr title="taoItems_actions_ItemContent::getMediaSourceFileStream">getMediaSourceFileStream</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemContent.php.html#311"><abbr title="taoItems_actions_ItemContent::getPermissionChecker">getPermissionChecker</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemExport.php.html#49"><abbr title="taoItems_actions_ItemExport::getAvailableExportHandlers">getAvailableExportHandlers</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemPreview.php.html#159"><abbr title="taoItems_actions_ItemPreview::getResultServer">getResultServer</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemExport.php.html#78"><abbr title="taoItems_actions_ItemExport::getClassInstances">getClassInstances</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemExport.php.html#89"><abbr title="taoItems_actions_ItemExport::getFormFactory">getFormFactory</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemExport.php.html#112"><abbr title="taoItems_actions_ItemExport::getResourcesToExport">getResourcesToExport</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemImport.php.html#52"><abbr title="taoItems_actions_ItemImport::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemImport.php.html#57"><abbr title="taoItems_actions_ItemImport::getAvailableImportHandlers">getAvailableImportHandlers</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemImport.php.html#74"><abbr title="taoItems_actions_ItemImport::replaceAvailableImportHandlers">replaceAvailableImportHandlers</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemImport.php.html#99"><abbr title="taoItems_actions_ItemImport::getFeatureFlagChecker">getFeatureFlagChecker</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemPreview.php.html#46"><abbr title="taoItems_actions_ItemPreview::forwardMe">forwardMe</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemPreview.php.html#62"><abbr title="taoItems_actions_ItemPreview::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemPreview.php.html#82"><abbr title="taoItems_actions_ItemPreview::getPreviewUrl">getPreviewUrl</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemPreview.php.html#88"><abbr title="taoItems_actions_ItemPreview::render">render</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemPreview.php.html#106"><abbr title="taoItems_actions_ItemPreview::getRenderedItem">getRenderedItem</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemPreview.php.html#124"><abbr title="taoItems_actions_ItemPreview::renderItem">renderItem</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemPreview.php.html#137"><abbr title="taoItems_actions_ItemPreview::renderResource">renderResource</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="form/class.RestItemForm.php.html#39"><abbr title="taoItems_actions_form_RestItemForm::getClassProperties">getClassProperties</abbr></a></td><td class="text-right">0%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="class.Items.php.html#152"><abbr title="taoItems_actions_Items::editItem">editItem</abbr></a></td><td class="text-right">156</td></tr>
+       <tr><td><a href="class.ItemContent.php.html#103"><abbr title="taoItems_actions_ItemContent::upload">upload</abbr></a></td><td class="text-right">132</td></tr>
+       <tr><td><a href="class.SaSItems.php.html#94"><abbr title="taoItems_actions_SaSItems::viewItem">viewItem</abbr></a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="class.ItemContent.php.html#203"><abbr title="taoItems_actions_ItemContent::getMediaAsset">getMediaAsset</abbr></a></td><td class="text-right">90</td></tr>
+       <tr><td><a href="class.Items.php.html#339"><abbr title="taoItems_actions_Items::authoring">authoring</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="class.Category.php.html#68"><abbr title="taoItems_actions_Category::setExposed">setExposed</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="form/class.Item.php.html#40"><abbr title="taoItems_actions_form_Item::initElements">initElements</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="class.Items.php.html#250"><abbr title="taoItems_actions_Items::editItemClass">editItemClass</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="class.ItemContent.php.html#268"><abbr title="taoItems_actions_ItemContent::buildFilters">buildFilters</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="class.ItemRunner.php.html#33"><abbr title="taoItems_actions_ItemRunner::index">index</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="class.ItemExport.php.html#49"><abbr title="taoItems_actions_ItemExport::getAvailableExportHandlers">getAvailableExportHandlers</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="class.ItemImport.php.html#74"><abbr title="taoItems_actions_ItemImport::replaceAvailableImportHandlers">replaceAvailableImportHandlers</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="class.Category.php.html#41"><abbr title="taoItems_actions_Category::getExposedsByClass">getExposedsByClass</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="class.ItemImport.php.html#57"><abbr title="taoItems_actions_ItemImport::getAvailableImportHandlers">getAvailableImportHandlers</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="class.ItemContent.php.html#256"><abbr title="taoItems_actions_ItemContent::getRequiredQueryParams">getRequiredQueryParams</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="class.ItemExport.php.html#78"><abbr title="taoItems_actions_ItemExport::getClassInstances">getClassInstances</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="class.SaSItems.php.html#57"><abbr title="taoItems_actions_SaSItems::sasEditInstance">sasEditInstance</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="class.Items.php.html#67"><abbr title="taoItems_actions_Items::defaultData">defaultData</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="class.ItemPreview.php.html#62"><abbr title="taoItems_actions_ItemPreview::index">index</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="class.ItemPreview.php.html#137"><abbr title="taoItems_actions_ItemPreview::renderResource">renderResource</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="class.ItemPreview.php.html#88"><abbr title="taoItems_actions_ItemPreview::render">render</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="class.ItemPreview.php.html#106"><abbr title="taoItems_actions_ItemPreview::getRenderedItem">getRenderedItem</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="class.ItemPreview.php.html#46"><abbr title="taoItems_actions_ItemPreview::forwardMe">forwardMe</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="class.ItemContent.php.html#302"><abbr title="taoItems_actions_ItemContent::getMediaSourceFileStream">getMediaSourceFileStream</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="class.ItemContent.php.html#173"><abbr title="taoItems_actions_ItemContent::download">download</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="class.RestFormItem.php.html#32"><abbr title="taoItems_actions_RestFormItem::create">create</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="class.SaSItems.php.html#45"><abbr title="taoItems_actions_SaSItems::getCurrentClass">getCurrentClass</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="class.ItemExport.php.html#89"><abbr title="taoItems_actions_ItemExport::getFormFactory">getFormFactory</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="class.ItemContent.php.html#82"><abbr title="taoItems_actions_ItemContent::fileExists">fileExists</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="class.Items.php.html#97"><abbr title="taoItems_actions_Items::getClassService">getClassService</abbr></a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 7.0.15</a> using <a href="https://secure.php.net/" target="_top">PHP 7.4.33</a> with <a href="https://xdebug.org/">Xdebug 3.1.6</a> with <a href="https://github.com/krakjoe/pcov">PCOV 1.0.11</a> at Wed Nov 22 14:10:49 UTC 2023.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="../../_js/jquery.min.js" type="text/javascript"></script>
+  <script src="../../_js/d3.min.js" type="text/javascript"></script>
+  <script src="../../_js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([12,0,0,0,0,0,0,0,0,0,0,1], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([66,0,0,0,0,0,0,0,0,0,0,0], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[0,13,"<a href=\"class.Category.php.html#31\">taoItems_actions_Category<\/a>"],[0,41,"<a href=\"class.ItemContent.php.html#48\">taoItems_actions_ItemContent<\/a>"],[0,12,"<a href=\"class.ItemExport.php.html#35\">taoItems_actions_ItemExport<\/a>"],[0,10,"<a href=\"class.ItemImport.php.html#41\">taoItems_actions_ItemImport<\/a>"],[0,16,"<a href=\"class.ItemPreview.php.html#42\">taoItems_actions_ItemPreview<\/a>"],[0,9,"<a href=\"class.ItemRunner.php.html#31\">taoItems_actions_ItemRunner<\/a>"],[0,43,"<a href=\"class.Items.php.html#52\">taoItems_actions_Items<\/a>"],[100,0,"<a href=\"class.Main.php.html#35\">taoItems_actions_Main<\/a>"],[0,4,"<a href=\"class.RestFormItem.php.html#26\">taoItems_actions_RestFormItem<\/a>"],[0,3,"<a href=\"class.RestItems.php.html#26\">taoItems_actions_RestItems<\/a>"],[0,16,"<a href=\"class.SaSItems.php.html#37\">taoItems_actions_SaSItems<\/a>"],[0,6,"<a href=\"form\/class.Item.php.html#34\">taoItems_actions_form_Item<\/a>"],[0,1,"<a href=\"form\/class.RestItemForm.php.html#30\">taoItems_actions_form_RestItemForm<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[0,4,"<a href=\"class.Category.php.html#41\">taoItems_actions_Category::getExposedsByClass<\/a>"],[0,7,"<a href=\"class.Category.php.html#68\">taoItems_actions_Category::setExposed<\/a>"],[0,1,"<a href=\"class.Category.php.html#94\">taoItems_actions_Category::returnBadParameter<\/a>"],[0,1,"<a href=\"class.Category.php.html#111\">taoItems_actions_Category::returnSuccess<\/a>"],[0,1,"<a href=\"class.ItemContent.php.html#56\">taoItems_actions_ItemContent::files<\/a>"],[0,2,"<a href=\"class.ItemContent.php.html#82\">taoItems_actions_ItemContent::fileExists<\/a>"],[0,11,"<a href=\"class.ItemContent.php.html#103\">taoItems_actions_ItemContent::upload<\/a>"],[0,2,"<a href=\"class.ItemContent.php.html#173\">taoItems_actions_ItemContent::download<\/a>"],[0,1,"<a href=\"class.ItemContent.php.html#191\">taoItems_actions_ItemContent::delete<\/a>"],[0,9,"<a href=\"class.ItemContent.php.html#203\">taoItems_actions_ItemContent::getMediaAsset<\/a>"],[0,1,"<a href=\"class.ItemContent.php.html#243\">taoItems_actions_ItemContent::resolveAsset<\/a>"],[0,4,"<a href=\"class.ItemContent.php.html#256\">taoItems_actions_ItemContent::getRequiredQueryParams<\/a>"],[0,6,"<a href=\"class.ItemContent.php.html#268\">taoItems_actions_ItemContent::buildFilters<\/a>"],[0,1,"<a href=\"class.ItemContent.php.html#294\">taoItems_actions_ItemContent::getAssetTreeBuilder<\/a>"],[0,2,"<a href=\"class.ItemContent.php.html#302\">taoItems_actions_ItemContent::getMediaSourceFileStream<\/a>"],[0,1,"<a href=\"class.ItemContent.php.html#311\">taoItems_actions_ItemContent::getPermissionChecker<\/a>"],[0,1,"<a href=\"class.ItemExport.php.html#44\">taoItems_actions_ItemExport::index<\/a>"],[0,5,"<a href=\"class.ItemExport.php.html#49\">taoItems_actions_ItemExport::getAvailableExportHandlers<\/a>"],[0,3,"<a href=\"class.ItemExport.php.html#78\">taoItems_actions_ItemExport::getClassInstances<\/a>"],[0,2,"<a href=\"class.ItemExport.php.html#89\">taoItems_actions_ItemExport::getFormFactory<\/a>"],[0,1,"<a href=\"class.ItemExport.php.html#112\">taoItems_actions_ItemExport::getResourcesToExport<\/a>"],[0,1,"<a href=\"class.ItemImport.php.html#52\">taoItems_actions_ItemImport::index<\/a>"],[0,4,"<a href=\"class.ItemImport.php.html#57\">taoItems_actions_ItemImport::getAvailableImportHandlers<\/a>"],[0,4,"<a href=\"class.ItemImport.php.html#74\">taoItems_actions_ItemImport::replaceAvailableImportHandlers<\/a>"],[0,1,"<a href=\"class.ItemImport.php.html#99\">taoItems_actions_ItemImport::getFeatureFlagChecker<\/a>"],[0,2,"<a href=\"class.ItemPreview.php.html#46\">taoItems_actions_ItemPreview::forwardMe<\/a>"],[0,3,"<a href=\"class.ItemPreview.php.html#62\">taoItems_actions_ItemPreview::index<\/a>"],[0,1,"<a href=\"class.ItemPreview.php.html#82\">taoItems_actions_ItemPreview::getPreviewUrl<\/a>"],[0,3,"<a href=\"class.ItemPreview.php.html#88\">taoItems_actions_ItemPreview::render<\/a>"],[0,2,"<a href=\"class.ItemPreview.php.html#106\">taoItems_actions_ItemPreview::getRenderedItem<\/a>"],[0,1,"<a href=\"class.ItemPreview.php.html#124\">taoItems_actions_ItemPreview::renderItem<\/a>"],[0,3,"<a href=\"class.ItemPreview.php.html#137\">taoItems_actions_ItemPreview::renderResource<\/a>"],[0,1,"<a href=\"class.ItemPreview.php.html#159\">taoItems_actions_ItemPreview::getResultServer<\/a>"],[0,6,"<a href=\"class.ItemRunner.php.html#33\">taoItems_actions_ItemRunner::index<\/a>"],[0,1,"<a href=\"class.ItemRunner.php.html#70\">taoItems_actions_ItemRunner::selectView<\/a>"],[0,1,"<a href=\"class.ItemRunner.php.html#79\">taoItems_actions_ItemRunner::getResultServerEndpoint<\/a>"],[0,1,"<a href=\"class.ItemRunner.php.html#88\">taoItems_actions_ItemRunner::getResultServerParams<\/a>"],[0,1,"<a href=\"class.Items.php.html#59\">taoItems_actions_Items::getEventManager<\/a>"],[0,3,"<a href=\"class.Items.php.html#67\">taoItems_actions_Items::defaultData<\/a>"],[0,2,"<a href=\"class.Items.php.html#97\">taoItems_actions_Items::getClassService<\/a>"],[0,1,"<a href=\"class.Items.php.html#111\">taoItems_actions_Items::cloneInstance<\/a>"],[0,1,"<a href=\"class.Items.php.html#122\">taoItems_actions_Items::moveInstance<\/a>"],[0,1,"<a href=\"class.Items.php.html#132\">taoItems_actions_Items::moveAll<\/a>"],[0,1,"<a href=\"class.Items.php.html#142\">taoItems_actions_Items::getOntologyData<\/a>"],[0,12,"<a href=\"class.Items.php.html#152\">taoItems_actions_Items::editItem<\/a>"],[0,6,"<a href=\"class.Items.php.html#250\">taoItems_actions_Items::editItemClass<\/a>"],[0,1,"<a href=\"class.Items.php.html#287\">taoItems_actions_Items::deleteItem<\/a>"],[0,1,"<a href=\"class.Items.php.html#297\">taoItems_actions_Items::deleteClass<\/a>"],[0,1,"<a href=\"class.Items.php.html#309\">taoItems_actions_Items::deleteAll<\/a>"],[0,1,"<a href=\"class.Items.php.html#318\">taoItems_actions_Items::moveClass<\/a>"],[0,1,"<a href=\"class.Items.php.html#328\">taoItems_actions_Items::translateInstance<\/a>"],[0,8,"<a href=\"class.Items.php.html#339\">taoItems_actions_Items::authoring<\/a>"],[0,1,"<a href=\"class.Items.php.html#381\">taoItems_actions_Items::getDependsOnPropertyValidator<\/a>"],[0,1,"<a href=\"class.Items.php.html#386\">taoItems_actions_Items::getResourceWatcher<\/a>"],[0,2,"<a href=\"class.RestFormItem.php.html#32\">taoItems_actions_RestFormItem::create<\/a>"],[0,1,"<a href=\"class.RestFormItem.php.html#44\">taoItems_actions_RestFormItem::edit<\/a>"],[0,1,"<a href=\"class.RestFormItem.php.html#55\">taoItems_actions_RestFormItem::getForm<\/a>"],[0,1,"<a href=\"class.RestItems.php.html#32\">taoItems_actions_RestItems::__construct<\/a>"],[0,1,"<a href=\"class.RestItems.php.html#43\">taoItems_actions_RestItems::getParametersAliases<\/a>"],[0,1,"<a href=\"class.RestItems.php.html#54\">taoItems_actions_RestItems::getParametersRequirements<\/a>"],[0,2,"<a href=\"class.SaSItems.php.html#45\">taoItems_actions_SaSItems::getCurrentClass<\/a>"],[0,3,"<a href=\"class.SaSItems.php.html#57\">taoItems_actions_SaSItems::sasEditInstance<\/a>"],[0,10,"<a href=\"class.SaSItems.php.html#94\">taoItems_actions_SaSItems::viewItem<\/a>"],[0,1,"<a href=\"class.SaSItems.php.html#164\">taoItems_actions_SaSItems::loadStandaloneMode<\/a>"],[0,6,"<a href=\"form\/class.Item.php.html#40\">taoItems_actions_form_Item::initElements<\/a>"],[0,1,"<a href=\"form\/class.RestItemForm.php.html#39\">taoItems_actions_form_RestItemForm::getClassProperties<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>
