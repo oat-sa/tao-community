@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /home/runner/work/tao-community/tao-community/taoMediaManager/model/relation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../../../_css/bootstrap.min.css?v=9.2.32" rel="stylesheet" type="text/css">
+  <link href="../../../_css/nv.d3.min.css?v=9.2.32" rel="stylesheet" type="text/css">
+  <link href="../../../_css/style.css?v=9.2.32" rel="stylesheet" type="text/css">
+  <link href="../../../_css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="../../../index.html">/home/runner/work/tao-community/tao-community</a></li>
+         <li class="breadcrumb-item"><a href="../../index.html">taoMediaManager</a></li>
+         <li class="breadcrumb-item"><a href="../index.html">model</a></li>
+         <li class="breadcrumb-item"><a href="index.html">relation</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="event/processor/EventProcessorContainerProvider.php.html#33">oat\taoMediaManager\model\relation\event\processor\EventProcessorContainerProvider</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="factory/QueryFactory.php.html#31">oat\taoMediaManager\model\relation\factory\QueryFactory</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="service/ItemToMediaRdsSearcher.php.html#27">oat\taoMediaManager\model\relation\service\ItemToMediaRdsSearcher</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="service/MediaContainerProvider.php.html#32">oat\taoMediaManager\model\relation\service\MediaContainerProvider</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="service/MediaToMediaRdsSearcher.php.html#27">oat\taoMediaManager\model\relation\service\MediaToMediaRdsSearcher</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="task/MediaToMediaRelationMigrationTask.php.html#36">oat\taoMediaManager\model\relation\task\MediaToMediaRelationMigrationTask</a></td><td class="text-right">20%</td></tr>
+       <tr><td><a href="MediaRelationService.php.html#32">oat\taoMediaManager\model\relation\MediaRelationService</a></td><td class="text-right">28%</td></tr>
+       <tr><td><a href="service/AbstractRdsSearcher.php.html#38">oat\taoMediaManager\model\relation\service\AbstractRdsSearcher</a></td><td class="text-right">32%</td></tr>
+       <tr><td><a href="event/MediaRelationListener.php.html#39">oat\taoMediaManager\model\relation\event\MediaRelationListener</a></td><td class="text-right">55%</td></tr>
+       <tr><td><a href="event/MediaRemovedEvent.php.html#27">oat\taoMediaManager\model\relation\event\MediaRemovedEvent</a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="event/processor/ResourceDeleteEventProcessor.php.html#30">oat\taoMediaManager\model\relation\event\processor\ResourceDeleteEventProcessor</a></td><td class="text-right">75%</td></tr>
+       <tr><td><a href="event/MediaSavedEvent.php.html#27">oat\taoMediaManager\model\relation\event\MediaSavedEvent</a></td><td class="text-right">80%</td></tr>
+       <tr><td><a href="event/processor/ItemRemovedEventProcessor.php.html#31">oat\taoMediaManager\model\relation\event\processor\ItemRemovedEventProcessor</a></td><td class="text-right">84%</td></tr>
+       <tr><td><a href="event/processor/EventInstanceCopiedProcessor.php.html#31">oat\taoMediaManager\model\relation\event\processor\EventInstanceCopiedProcessor</a></td><td class="text-right">87%</td></tr>
+       <tr><td><a href="repository/rdf/RdfMediaRelationRepository.php.html#46">oat\taoMediaManager\model\relation\repository\rdf\RdfMediaRelationRepository</a></td><td class="text-right">87%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="repository/rdf/RdfMediaRelationRepository.php.html#46">oat\taoMediaManager\model\relation\repository\rdf\RdfMediaRelationRepository</a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="event/MediaRelationListener.php.html#39">oat\taoMediaManager\model\relation\event\MediaRelationListener</a></td><td class="text-right">21</td></tr>
+       <tr><td><a href="factory/QueryFactory.php.html#31">oat\taoMediaManager\model\relation\factory\QueryFactory</a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="service/AbstractRdsSearcher.php.html#38">oat\taoMediaManager\model\relation\service\AbstractRdsSearcher</a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="event/processor/ItemRemovedEventProcessor.php.html#31">oat\taoMediaManager\model\relation\event\processor\ItemRemovedEventProcessor</a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="event/processor/EventInstanceCopiedProcessor.php.html#31">oat\taoMediaManager\model\relation\event\processor\EventInstanceCopiedProcessor</a></td><td class="text-right">5</td></tr>
+       <tr><td><a href="event/processor/ResourceDeleteEventProcessor.php.html#30">oat\taoMediaManager\model\relation\event\processor\ResourceDeleteEventProcessor</a></td><td class="text-right">3</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="MediaRelationService.php.html#42"><abbr title="oat\taoMediaManager\model\relation\MediaRelationService::findRelations">findRelations</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="event/MediaRelationListener.php.html#48"><abbr title="oat\taoMediaManager\model\relation\event\MediaRelationListener::whenInstanceCopiedEvent">whenInstanceCopiedEvent</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="event/MediaRelationListener.php.html#53"><abbr title="oat\taoMediaManager\model\relation\event\MediaRelationListener::whenItemIsDuplicated">whenItemIsDuplicated</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="event/MediaRelationListener.php.html#58"><abbr title="oat\taoMediaManager\model\relation\event\MediaRelationListener::whenResourceIsRemoved">whenResourceIsRemoved</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="event/MediaRemovedEvent.php.html#45"><abbr title="oat\taoMediaManager\model\relation\event\MediaRemovedEvent::getName">getName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="event/MediaSavedEvent.php.html#54"><abbr title="oat\taoMediaManager\model\relation\event\MediaSavedEvent::getName">getName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="event/processor/EventProcessorContainerProvider.php.html#35"><abbr title="oat\taoMediaManager\model\relation\event\processor\EventProcessorContainerProvider::__invoke">__invoke</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="event/processor/ItemRemovedEventProcessor.php.html#58"><abbr title="oat\taoMediaManager\model\relation\event\processor\ItemRemovedEventProcessor::getAssetDeleter">getAssetDeleter</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="factory/QueryFactory.php.html#36"><abbr title="oat\taoMediaManager\model\relation\factory\QueryFactory::createFindAllQueryByRequest">createFindAllQueryByRequest</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="factory/QueryFactory.php.html#48"><abbr title="oat\taoMediaManager\model\relation\factory\QueryFactory::getMediaRelationRepository">getMediaRelationRepository</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="repository/rdf/RdfMediaRelationRepository.php.html#233"><abbr title="oat\taoMediaManager\model\relation\repository\rdf\RdfMediaRelationRepository::getItemAssetUris">getItemAssetUris</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="repository/rdf/RdfMediaRelationRepository.php.html#243"><abbr title="oat\taoMediaManager\model\relation\repository\rdf\RdfMediaRelationRepository::getRelatedItemUrisByAssetUri">getRelatedItemUrisByAssetUri</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="repository/rdf/RdfMediaRelationRepository.php.html#326"><abbr title="oat\taoMediaManager\model\relation\repository\rdf\RdfMediaRelationRepository::getPersistence">getPersistence</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="service/AbstractRdsSearcher.php.html#82"><abbr title="oat\taoMediaManager\model\relation\service\AbstractRdsSearcher::getFilterArray">getFilterArray</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="service/ItemToMediaRdsSearcher.php.html#29"><abbr title="oat\taoMediaManager\model\relation\service\ItemToMediaRdsSearcher::getTargetClasses">getTargetClasses</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="service/MediaContainerProvider.php.html#34"><abbr title="oat\taoMediaManager\model\relation\service\MediaContainerProvider::__invoke">__invoke</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="service/MediaToMediaRdsSearcher.php.html#29"><abbr title="oat\taoMediaManager\model\relation\service\MediaToMediaRdsSearcher::getTargetClasses">getTargetClasses</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="task/MediaToMediaRelationMigrationTask.php.html#43"><abbr title="oat\taoMediaManager\model\relation\task\MediaToMediaRelationMigrationTask::getResultSearcher">getResultSearcher</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="task/MediaToMediaRelationMigrationTask.php.html#48"><abbr title="oat\taoMediaManager\model\relation\task\MediaToMediaRelationMigrationTask::getSpawnMigrationConfigService">getSpawnMigrationConfigService</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="task/MediaToMediaRelationMigrationTask.php.html#53"><abbr title="oat\taoMediaManager\model\relation\task\MediaToMediaRelationMigrationTask::getResultFilterFactory">getResultFilterFactory</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="task/MediaToMediaRelationMigrationTask.php.html#58"><abbr title="oat\taoMediaManager\model\relation\task\MediaToMediaRelationMigrationTask::getMigrationConfigFactory">getMigrationConfigFactory</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="service/AbstractRdsSearcher.php.html#59"><abbr title="oat\taoMediaManager\model\relation\service\AbstractRdsSearcher::getPersistenceIterator">getPersistenceIterator</abbr></a></td><td class="text-right">35%</td></tr>
+       <tr><td><a href="service/AbstractRdsSearcher.php.html#44"><abbr title="oat\taoMediaManager\model\relation\service\AbstractRdsSearcher::search">search</abbr></a></td><td class="text-right">50%</td></tr>
+       <tr><td><a href="event/MediaRelationListener.php.html#78"><abbr title="oat\taoMediaManager\model\relation\event\MediaRelationListener::process">process</abbr></a></td><td class="text-right">54%</td></tr>
+       <tr><td><a href="repository/rdf/RdfMediaRelationRepository.php.html#253"><abbr title="oat\taoMediaManager\model\relation\repository\rdf\RdfMediaRelationRepository::applyQueryTargetType">applyQueryTargetType</abbr></a></td><td class="text-right">54%</td></tr>
+       <tr><td><a href="event/processor/ResourceDeleteEventProcessor.php.html#39"><abbr title="oat\taoMediaManager\model\relation\event\processor\ResourceDeleteEventProcessor::process">process</abbr></a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="service/IdDiscoverService.php.html#58"><abbr title="oat\taoMediaManager\model\relation\service\IdDiscoverService::getMediaResolver">getMediaResolver</abbr></a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="event/processor/EventInstanceCopiedProcessor.php.html#47"><abbr title="oat\taoMediaManager\model\relation\event\processor\EventInstanceCopiedProcessor::process">process</abbr></a></td><td class="text-right">83%</td></tr>
+       <tr><td><a href="event/MediaSavedEventDispatcher.php.html#46"><abbr title="oat\taoMediaManager\model\relation\event\MediaSavedEventDispatcher::dispatchFromFile">dispatchFromFile</abbr></a></td><td class="text-right">87%</td></tr>
+       <tr><td><a href="event/processor/ItemDuplicationEventProcessor.php.html#43"><abbr title="oat\taoMediaManager\model\relation\event\processor\ItemDuplicationEventProcessor::process">process</abbr></a></td><td class="text-right">88%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="factory/QueryFactory.php.html#36"><abbr title="oat\taoMediaManager\model\relation\factory\QueryFactory::createFindAllQueryByRequest">createFindAllQueryByRequest</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="event/MediaRelationListener.php.html#78"><abbr title="oat\taoMediaManager\model\relation\event\MediaRelationListener::process">process</abbr></a></td><td class="text-right">5</td></tr>
+       <tr><td><a href="repository/rdf/RdfMediaRelationRepository.php.html#253"><abbr title="oat\taoMediaManager\model\relation\repository\rdf\RdfMediaRelationRepository::applyQueryTargetType">applyQueryTargetType</abbr></a></td><td class="text-right">5</td></tr>
+       <tr><td><a href="event/MediaSavedEventDispatcher.php.html#46"><abbr title="oat\taoMediaManager\model\relation\event\MediaSavedEventDispatcher::dispatchFromFile">dispatchFromFile</abbr></a></td><td class="text-right">5</td></tr>
+       <tr><td><a href="event/processor/EventInstanceCopiedProcessor.php.html#47"><abbr title="oat\taoMediaManager\model\relation\event\processor\EventInstanceCopiedProcessor::process">process</abbr></a></td><td class="text-right">4</td></tr>
+       <tr><td><a href="service/AbstractRdsSearcher.php.html#59"><abbr title="oat\taoMediaManager\model\relation\service\AbstractRdsSearcher::getPersistenceIterator">getPersistenceIterator</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="event/processor/ItemDuplicationEventProcessor.php.html#43"><abbr title="oat\taoMediaManager\model\relation\event\processor\ItemDuplicationEventProcessor::process">process</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="service/AbstractRdsSearcher.php.html#44"><abbr title="oat\taoMediaManager\model\relation\service\AbstractRdsSearcher::search">search</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="event/processor/ResourceDeleteEventProcessor.php.html#39"><abbr title="oat\taoMediaManager\model\relation\event\processor\ResourceDeleteEventProcessor::process">process</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="service/IdDiscoverService.php.html#58"><abbr title="oat\taoMediaManager\model\relation\service\IdDiscoverService::getMediaResolver">getMediaResolver</abbr></a></td><td class="text-right">2</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 9.2.32</a> using <a href="https://secure.php.net/" target="_top">PHP 8.3.21</a> at Tue May 27 14:34:44 UTC 2025.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="../../../_js/jquery.min.js?v=9.2.32" type="text/javascript"></script>
+  <script src="../../../_js/d3.min.js?v=9.2.32" type="text/javascript"></script>
+  <script src="../../../_js/nv.d3.min.js?v=9.2.32" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([5,0,0,2,1,0,1,1,1,4,5,14], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([21,0,0,0,1,0,3,2,0,3,3,78], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[100,1,"<a href=\"MediaRelation.php.html#30\">oat\\taoMediaManager\\model\\relation\\MediaRelation<\/a>"],[100,2,"<a href=\"MediaRelationCollection.php.html#30\">oat\\taoMediaManager\\model\\relation\\MediaRelationCollection<\/a>"],[28.57142857142857,3,"<a href=\"MediaRelationService.php.html#32\">oat\\taoMediaManager\\model\\relation\\MediaRelationService<\/a>"],[55.55555555555556,11,"<a href=\"event\/MediaRelationListener.php.html#39\">oat\\taoMediaManager\\model\\relation\\event\\MediaRelationListener<\/a>"],[66.66666666666666,3,"<a href=\"event\/MediaRemovedEvent.php.html#27\">oat\\taoMediaManager\\model\\relation\\event\\MediaRemovedEvent<\/a>"],[80,4,"<a href=\"event\/MediaSavedEvent.php.html#27\">oat\\taoMediaManager\\model\\relation\\event\\MediaSavedEvent<\/a>"],[93.33333333333333,10,"<a href=\"event\/MediaSavedEventDispatcher.php.html#32\">oat\\taoMediaManager\\model\\relation\\event\\MediaSavedEventDispatcher<\/a>"],[87.5,5,"<a href=\"event\/processor\/EventInstanceCopiedProcessor.php.html#31\">oat\\taoMediaManager\\model\\relation\\event\\processor\\EventInstanceCopiedProcessor<\/a>"],[0,1,"<a href=\"event\/processor\/EventProcessorContainerProvider.php.html#33\">oat\\taoMediaManager\\model\\relation\\event\\processor\\EventProcessorContainerProvider<\/a>"],[100,1,"<a href=\"event\/processor\/InvalidEventException.php.html#28\">oat\\taoMediaManager\\model\\relation\\event\\processor\\InvalidEventException<\/a>"],[93.33333333333333,8,"<a href=\"event\/processor\/ItemDuplicationEventProcessor.php.html#30\">oat\\taoMediaManager\\model\\relation\\event\\processor\\ItemDuplicationEventProcessor<\/a>"],[84.61538461538461,6,"<a href=\"event\/processor\/ItemRemovedEventProcessor.php.html#31\">oat\\taoMediaManager\\model\\relation\\event\\processor\\ItemRemovedEventProcessor<\/a>"],[100,9,"<a href=\"event\/processor\/ItemUpdatedEventProcessor.php.html#31\">oat\\taoMediaManager\\model\\relation\\event\\processor\\ItemUpdatedEventProcessor<\/a>"],[100,3,"<a href=\"event\/processor\/MediaRemovedEventProcessor.php.html#30\">oat\\taoMediaManager\\model\\relation\\event\\processor\\MediaRemovedEventProcessor<\/a>"],[100,3,"<a href=\"event\/processor\/MediaSavedEventProcessor.php.html#30\">oat\\taoMediaManager\\model\\relation\\event\\processor\\MediaSavedEventProcessor<\/a>"],[75,3,"<a href=\"event\/processor\/ResourceDeleteEventProcessor.php.html#30\">oat\\taoMediaManager\\model\\relation\\event\\processor\\ResourceDeleteEventProcessor<\/a>"],[0,4,"<a href=\"factory\/QueryFactory.php.html#31\">oat\\taoMediaManager\\model\\relation\\factory\\QueryFactory<\/a>"],[100,3,"<a href=\"repository\/query\/FindAllByTargetQuery.php.html#26\">oat\\taoMediaManager\\model\\relation\\repository\\query\\FindAllByTargetQuery<\/a>"],[100,1,"<a href=\"repository\/query\/FindAllQuery.php.html#28\">oat\\taoMediaManager\\model\\relation\\repository\\query\\FindAllQuery<\/a>"],[87.94326241134752,29,"<a href=\"repository\/rdf\/RdfMediaRelationRepository.php.html#46\">oat\\taoMediaManager\\model\\relation\\repository\\rdf\\RdfMediaRelationRepository<\/a>"],[32.142857142857146,5,"<a href=\"service\/AbstractRdsSearcher.php.html#38\">oat\\taoMediaManager\\model\\relation\\service\\AbstractRdsSearcher<\/a>"],[90.9090909090909,6,"<a href=\"service\/IdDiscoverService.php.html#31\">oat\\taoMediaManager\\model\\relation\\service\\IdDiscoverService<\/a>"],[100,6,"<a href=\"service\/ItemMediaCollector.php.html#33\">oat\\taoMediaManager\\model\\relation\\service\\ItemMediaCollector<\/a>"],[0,1,"<a href=\"service\/ItemToMediaRdsSearcher.php.html#27\">oat\\taoMediaManager\\model\\relation\\service\\ItemToMediaRdsSearcher<\/a>"],[0,1,"<a href=\"service\/MediaContainerProvider.php.html#32\">oat\\taoMediaManager\\model\\relation\\service\\MediaContainerProvider<\/a>"],[0,1,"<a href=\"service\/MediaToMediaRdsSearcher.php.html#27\">oat\\taoMediaManager\\model\\relation\\service\\MediaToMediaRdsSearcher<\/a>"],[100,3,"<a href=\"service\/remove\/MediaRelationRemoveService.php.html#30\">oat\\taoMediaManager\\model\\relation\\service\\remove\\MediaRelationRemoveService<\/a>"],[100,5,"<a href=\"service\/update\/AbstractRelationUpdateService.php.html#30\">oat\\taoMediaManager\\model\\relation\\service\\update\\AbstractRelationUpdateService<\/a>"],[100,1,"<a href=\"service\/update\/ItemRelationUpdateService.php.html#27\">oat\\taoMediaManager\\model\\relation\\service\\update\\ItemRelationUpdateService<\/a>"],[100,1,"<a href=\"service\/update\/MediaRelationUpdateService.php.html#27\">oat\\taoMediaManager\\model\\relation\\service\\update\\MediaRelationUpdateService<\/a>"],[100,5,"<a href=\"task\/ItemToMediaRelationMigrationTask.php.html#36\">oat\\taoMediaManager\\model\\relation\\task\\ItemToMediaRelationMigrationTask<\/a>"],[93.33333333333333,7,"<a href=\"task\/ItemToMediaUnitProcessor.php.html#37\">oat\\taoMediaManager\\model\\relation\\task\\ItemToMediaUnitProcessor<\/a>"],[20,5,"<a href=\"task\/MediaToMediaRelationMigrationTask.php.html#36\">oat\\taoMediaManager\\model\\relation\\task\\MediaToMediaRelationMigrationTask<\/a>"],[93.75,9,"<a href=\"task\/MediaToMediaUnitProcessor.php.html#41\">oat\\taoMediaManager\\model\\relation\\task\\MediaToMediaUnitProcessor<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[100,1,"<a href=\"MediaRelation.php.html#38\">oat\\taoMediaManager\\model\\relation\\MediaRelation::isMedia<\/a>"],[100,1,"<a href=\"MediaRelationCollection.php.html#35\">oat\\taoMediaManager\\model\\relation\\MediaRelationCollection::filterNewMediaIds<\/a>"],[100,1,"<a href=\"MediaRelationCollection.php.html#43\">oat\\taoMediaManager\\model\\relation\\MediaRelationCollection::filterRemovedMediaIds<\/a>"],[100,1,"<a href=\"MediaRelationService.php.html#37\">oat\\taoMediaManager\\model\\relation\\MediaRelationService::getMediaRelations<\/a>"],[0,1,"<a href=\"MediaRelationService.php.html#42\">oat\\taoMediaManager\\model\\relation\\MediaRelationService::findRelations<\/a>"],[100,1,"<a href=\"MediaRelationService.php.html#52\">oat\\taoMediaManager\\model\\relation\\MediaRelationService::getMediaRelationRepository<\/a>"],[100,1,"<a href=\"event\/MediaRelationListener.php.html#43\">oat\\taoMediaManager\\model\\relation\\event\\MediaRelationListener::whenItemIsUpdated<\/a>"],[0,1,"<a href=\"event\/MediaRelationListener.php.html#48\">oat\\taoMediaManager\\model\\relation\\event\\MediaRelationListener::whenInstanceCopiedEvent<\/a>"],[0,1,"<a href=\"event\/MediaRelationListener.php.html#53\">oat\\taoMediaManager\\model\\relation\\event\\MediaRelationListener::whenItemIsDuplicated<\/a>"],[0,1,"<a href=\"event\/MediaRelationListener.php.html#58\">oat\\taoMediaManager\\model\\relation\\event\\MediaRelationListener::whenResourceIsRemoved<\/a>"],[100,1,"<a href=\"event\/MediaRelationListener.php.html#63\">oat\\taoMediaManager\\model\\relation\\event\\MediaRelationListener::whenItemIsRemoved<\/a>"],[100,1,"<a href=\"event\/MediaRelationListener.php.html#68\">oat\\taoMediaManager\\model\\relation\\event\\MediaRelationListener::whenMediaIsRemoved<\/a>"],[100,1,"<a href=\"event\/MediaRelationListener.php.html#73\">oat\\taoMediaManager\\model\\relation\\event\\MediaRelationListener::whenMediaIsSaved<\/a>"],[54.54545454545454,4,"<a href=\"event\/MediaRelationListener.php.html#78\">oat\\taoMediaManager\\model\\relation\\event\\MediaRelationListener::process<\/a>"],[100,1,"<a href=\"event\/MediaRemovedEvent.php.html#32\">oat\\taoMediaManager\\model\\relation\\event\\MediaRemovedEvent::__construct<\/a>"],[100,1,"<a href=\"event\/MediaRemovedEvent.php.html#37\">oat\\taoMediaManager\\model\\relation\\event\\MediaRemovedEvent::getMediaId<\/a>"],[0,1,"<a href=\"event\/MediaRemovedEvent.php.html#45\">oat\\taoMediaManager\\model\\relation\\event\\MediaRemovedEvent::getName<\/a>"],[100,1,"<a href=\"event\/MediaSavedEvent.php.html#35\">oat\\taoMediaManager\\model\\relation\\event\\MediaSavedEvent::__construct<\/a>"],[100,1,"<a href=\"event\/MediaSavedEvent.php.html#41\">oat\\taoMediaManager\\model\\relation\\event\\MediaSavedEvent::getMediaId<\/a>"],[100,1,"<a href=\"event\/MediaSavedEvent.php.html#46\">oat\\taoMediaManager\\model\\relation\\event\\MediaSavedEvent::getReferencedMediaIds<\/a>"],[0,1,"<a href=\"event\/MediaSavedEvent.php.html#54\">oat\\taoMediaManager\\model\\relation\\event\\MediaSavedEvent::getName<\/a>"],[100,2,"<a href=\"event\/MediaSavedEventDispatcher.php.html#34\">oat\\taoMediaManager\\model\\relation\\event\\MediaSavedEventDispatcher::dispatchFromContent<\/a>"],[87.5,5,"<a href=\"event\/MediaSavedEventDispatcher.php.html#46\">oat\\taoMediaManager\\model\\relation\\event\\MediaSavedEventDispatcher::dispatchFromFile<\/a>"],[100,1,"<a href=\"event\/MediaSavedEventDispatcher.php.html#63\">oat\\taoMediaManager\\model\\relation\\event\\MediaSavedEventDispatcher::isSharedStimulus<\/a>"],[100,1,"<a href=\"event\/MediaSavedEventDispatcher.php.html#68\">oat\\taoMediaManager\\model\\relation\\event\\MediaSavedEventDispatcher::getEventManager<\/a>"],[100,1,"<a href=\"event\/MediaSavedEventDispatcher.php.html#73\">oat\\taoMediaManager\\model\\relation\\event\\MediaSavedEventDispatcher::getSharedStimulusExtractor<\/a>"],[100,1,"<a href=\"event\/processor\/EventInstanceCopiedProcessor.php.html#36\">oat\\taoMediaManager\\model\\relation\\event\\processor\\EventInstanceCopiedProcessor::__construct<\/a>"],[83.33333333333334,4,"<a href=\"event\/processor\/EventInstanceCopiedProcessor.php.html#47\">oat\\taoMediaManager\\model\\relation\\event\\processor\\EventInstanceCopiedProcessor::process<\/a>"],[0,1,"<a href=\"event\/processor\/EventProcessorContainerProvider.php.html#35\">oat\\taoMediaManager\\model\\relation\\event\\processor\\EventProcessorContainerProvider::__invoke<\/a>"],[100,1,"<a href=\"event\/processor\/InvalidEventException.php.html#30\">oat\\taoMediaManager\\model\\relation\\event\\processor\\InvalidEventException::__construct<\/a>"],[100,1,"<a href=\"event\/processor\/ItemDuplicationEventProcessor.php.html#35\">oat\\taoMediaManager\\model\\relation\\event\\processor\\ItemDuplicationEventProcessor::__construct<\/a>"],[88.88888888888889,3,"<a href=\"event\/processor\/ItemDuplicationEventProcessor.php.html#43\">oat\\taoMediaManager\\model\\relation\\event\\processor\\ItemDuplicationEventProcessor::process<\/a>"],[100,4,"<a href=\"event\/processor\/ItemDuplicationEventProcessor.php.html#60\">oat\\taoMediaManager\\model\\relation\\event\\processor\\ItemDuplicationEventProcessor::isValidEventPayload<\/a>"],[90.9090909090909,4,"<a href=\"event\/processor\/ItemRemovedEventProcessor.php.html#36\">oat\\taoMediaManager\\model\\relation\\event\\processor\\ItemRemovedEventProcessor::process<\/a>"],[0,1,"<a href=\"event\/processor\/ItemRemovedEventProcessor.php.html#58\">oat\\taoMediaManager\\model\\relation\\event\\processor\\ItemRemovedEventProcessor::getAssetDeleter<\/a>"],[100,1,"<a href=\"event\/processor\/ItemRemovedEventProcessor.php.html#63\">oat\\taoMediaManager\\model\\relation\\event\\processor\\ItemRemovedEventProcessor::getItemRelationUpdateService<\/a>"],[100,3,"<a href=\"event\/processor\/ItemUpdatedEventProcessor.php.html#40\">oat\\taoMediaManager\\model\\relation\\event\\processor\\ItemUpdatedEventProcessor::process<\/a>"],[100,3,"<a href=\"event\/processor\/ItemUpdatedEventProcessor.php.html#54\">oat\\taoMediaManager\\model\\relation\\event\\processor\\ItemUpdatedEventProcessor::mustUpdateItemRelation<\/a>"],[100,1,"<a href=\"event\/processor\/ItemUpdatedEventProcessor.php.html#61\">oat\\taoMediaManager\\model\\relation\\event\\processor\\ItemUpdatedEventProcessor::getAggregatedMediaIds<\/a>"],[100,1,"<a href=\"event\/processor\/ItemUpdatedEventProcessor.php.html#72\">oat\\taoMediaManager\\model\\relation\\event\\processor\\ItemUpdatedEventProcessor::getItemRelationUpdateService<\/a>"],[100,1,"<a href=\"event\/processor\/ItemUpdatedEventProcessor.php.html#77\">oat\\taoMediaManager\\model\\relation\\event\\processor\\ItemUpdatedEventProcessor::getIdDiscoverService<\/a>"],[100,2,"<a href=\"event\/processor\/MediaRemovedEventProcessor.php.html#35\">oat\\taoMediaManager\\model\\relation\\event\\processor\\MediaRemovedEventProcessor::process<\/a>"],[100,1,"<a href=\"event\/processor\/MediaRemovedEventProcessor.php.html#45\">oat\\taoMediaManager\\model\\relation\\event\\processor\\MediaRemovedEventProcessor::getMediaRelationUpdateService<\/a>"],[100,2,"<a href=\"event\/processor\/MediaSavedEventProcessor.php.html#35\">oat\\taoMediaManager\\model\\relation\\event\\processor\\MediaSavedEventProcessor::process<\/a>"],[100,1,"<a href=\"event\/processor\/MediaSavedEventProcessor.php.html#45\">oat\\taoMediaManager\\model\\relation\\event\\processor\\MediaSavedEventProcessor::getMediaRelationUpdateService<\/a>"],[100,1,"<a href=\"event\/processor\/ResourceDeleteEventProcessor.php.html#34\">oat\\taoMediaManager\\model\\relation\\event\\processor\\ResourceDeleteEventProcessor::__construct<\/a>"],[66.66666666666666,2,"<a href=\"event\/processor\/ResourceDeleteEventProcessor.php.html#39\">oat\\taoMediaManager\\model\\relation\\event\\processor\\ResourceDeleteEventProcessor::process<\/a>"],[0,3,"<a href=\"factory\/QueryFactory.php.html#36\">oat\\taoMediaManager\\model\\relation\\factory\\QueryFactory::createFindAllQueryByRequest<\/a>"],[0,1,"<a href=\"factory\/QueryFactory.php.html#48\">oat\\taoMediaManager\\model\\relation\\factory\\QueryFactory::getMediaRelationRepository<\/a>"],[100,1,"<a href=\"repository\/query\/FindAllByTargetQuery.php.html#34\">oat\\taoMediaManager\\model\\relation\\repository\\query\\FindAllByTargetQuery::__construct<\/a>"],[100,1,"<a href=\"repository\/query\/FindAllByTargetQuery.php.html#40\">oat\\taoMediaManager\\model\\relation\\repository\\query\\FindAllByTargetQuery::getTargetId<\/a>"],[100,1,"<a href=\"repository\/query\/FindAllByTargetQuery.php.html#45\">oat\\taoMediaManager\\model\\relation\\repository\\query\\FindAllByTargetQuery::getType<\/a>"],[100,1,"<a href=\"repository\/query\/FindAllQuery.php.html#33\">oat\\taoMediaManager\\model\\relation\\repository\\query\\FindAllQuery::getMediaId<\/a>"],[100,2,"<a href=\"repository\/rdf\/RdfMediaRelationRepository.php.html#61\">oat\\taoMediaManager\\model\\relation\\repository\\rdf\\RdfMediaRelationRepository::findAll<\/a>"],[100,5,"<a href=\"repository\/rdf\/RdfMediaRelationRepository.php.html#75\">oat\\taoMediaManager\\model\\relation\\repository\\rdf\\RdfMediaRelationRepository::findMediaWithRelations<\/a>"],[100,1,"<a href=\"repository\/rdf\/RdfMediaRelationRepository.php.html#124\">oat\\taoMediaManager\\model\\relation\\repository\\rdf\\RdfMediaRelationRepository::findAllByTarget<\/a>"],[100,2,"<a href=\"repository\/rdf\/RdfMediaRelationRepository.php.html#129\">oat\\taoMediaManager\\model\\relation\\repository\\rdf\\RdfMediaRelationRepository::save<\/a>"],[100,2,"<a href=\"repository\/rdf\/RdfMediaRelationRepository.php.html#154\">oat\\taoMediaManager\\model\\relation\\repository\\rdf\\RdfMediaRelationRepository::remove<\/a>"],[100,2,"<a href=\"repository\/rdf\/RdfMediaRelationRepository.php.html#179\">oat\\taoMediaManager\\model\\relation\\repository\\rdf\\RdfMediaRelationRepository::getPropertyByRelation<\/a>"],[100,1,"<a href=\"repository\/rdf\/RdfMediaRelationRepository.php.html#188\">oat\\taoMediaManager\\model\\relation\\repository\\rdf\\RdfMediaRelationRepository::findAllByMedia<\/a>"],[100,1,"<a href=\"repository\/rdf\/RdfMediaRelationRepository.php.html#211\">oat\\taoMediaManager\\model\\relation\\repository\\rdf\\RdfMediaRelationRepository::findAllMediaByTarget<\/a>"],[0,1,"<a href=\"repository\/rdf\/RdfMediaRelationRepository.php.html#233\">oat\\taoMediaManager\\model\\relation\\repository\\rdf\\RdfMediaRelationRepository::getItemAssetUris<\/a>"],[0,1,"<a href=\"repository\/rdf\/RdfMediaRelationRepository.php.html#243\">oat\\taoMediaManager\\model\\relation\\repository\\rdf\\RdfMediaRelationRepository::getRelatedItemUrisByAssetUri<\/a>"],[54.54545454545454,4,"<a href=\"repository\/rdf\/RdfMediaRelationRepository.php.html#253\">oat\\taoMediaManager\\model\\relation\\repository\\rdf\\RdfMediaRelationRepository::applyQueryTargetType<\/a>"],[100,1,"<a href=\"repository\/rdf\/RdfMediaRelationRepository.php.html#273\">oat\\taoMediaManager\\model\\relation\\repository\\rdf\\RdfMediaRelationRepository::getComplexSearchService<\/a>"],[100,2,"<a href=\"repository\/rdf\/RdfMediaRelationRepository.php.html#283\">oat\\taoMediaManager\\model\\relation\\repository\\rdf\\RdfMediaRelationRepository::mapTargetRelations<\/a>"],[100,2,"<a href=\"repository\/rdf\/RdfMediaRelationRepository.php.html#299\">oat\\taoMediaManager\\model\\relation\\repository\\rdf\\RdfMediaRelationRepository::mapSourceRelations<\/a>"],[100,1,"<a href=\"repository\/rdf\/RdfMediaRelationRepository.php.html#316\">oat\\taoMediaManager\\model\\relation\\repository\\rdf\\RdfMediaRelationRepository::createMediaRelation<\/a>"],[0,1,"<a href=\"repository\/rdf\/RdfMediaRelationRepository.php.html#326\">oat\\taoMediaManager\\model\\relation\\repository\\rdf\\RdfMediaRelationRepository::getPersistence<\/a>"],[100,0,"<a href=\"service\/AbstractRdsSearcher.php.html#42\">oat\\taoMediaManager\\model\\relation\\service\\AbstractRdsSearcher::getTargetClasses<\/a>"],[50,2,"<a href=\"service\/AbstractRdsSearcher.php.html#44\">oat\\taoMediaManager\\model\\relation\\service\\AbstractRdsSearcher::search<\/a>"],[35.714285714285715,2,"<a href=\"service\/AbstractRdsSearcher.php.html#59\">oat\\taoMediaManager\\model\\relation\\service\\AbstractRdsSearcher::getPersistenceIterator<\/a>"],[0,1,"<a href=\"service\/AbstractRdsSearcher.php.html#82\">oat\\taoMediaManager\\model\\relation\\service\\AbstractRdsSearcher::getFilterArray<\/a>"],[100,1,"<a href=\"service\/IdDiscoverService.php.html#36\">oat\\taoMediaManager\\model\\relation\\service\\IdDiscoverService::withMediaResolver<\/a>"],[100,3,"<a href=\"service\/IdDiscoverService.php.html#43\">oat\\taoMediaManager\\model\\relation\\service\\IdDiscoverService::discover<\/a>"],[66.66666666666666,2,"<a href=\"service\/IdDiscoverService.php.html#58\">oat\\taoMediaManager\\model\\relation\\service\\IdDiscoverService::getMediaResolver<\/a>"],[100,1,"<a href=\"service\/ItemMediaCollector.php.html#37\">oat\\taoMediaManager\\model\\relation\\service\\ItemMediaCollector::__construct<\/a>"],[100,3,"<a href=\"service\/ItemMediaCollector.php.html#42\">oat\\taoMediaManager\\model\\relation\\service\\ItemMediaCollector::getItemMediaResources<\/a>"],[100,1,"<a href=\"service\/ItemMediaCollector.php.html#71\">oat\\taoMediaManager\\model\\relation\\service\\ItemMediaCollector::getImgElements<\/a>"],[100,1,"<a href=\"service\/ItemMediaCollector.php.html#76\">oat\\taoMediaManager\\model\\relation\\service\\ItemMediaCollector::getSharedStimulus<\/a>"],[0,1,"<a href=\"service\/ItemToMediaRdsSearcher.php.html#29\">oat\\taoMediaManager\\model\\relation\\service\\ItemToMediaRdsSearcher::getTargetClasses<\/a>"],[0,1,"<a href=\"service\/MediaContainerProvider.php.html#34\">oat\\taoMediaManager\\model\\relation\\service\\MediaContainerProvider::__invoke<\/a>"],[0,1,"<a href=\"service\/MediaToMediaRdsSearcher.php.html#29\">oat\\taoMediaManager\\model\\relation\\service\\MediaToMediaRdsSearcher::getTargetClasses<\/a>"],[100,2,"<a href=\"service\/remove\/MediaRelationRemoveService.php.html#32\">oat\\taoMediaManager\\model\\relation\\service\\remove\\MediaRelationRemoveService::removeMediaRelations<\/a>"],[100,1,"<a href=\"service\/remove\/MediaRelationRemoveService.php.html#46\">oat\\taoMediaManager\\model\\relation\\service\\remove\\MediaRelationRemoveService::getMediaRelationRepository<\/a>"],[100,3,"<a href=\"service\/update\/AbstractRelationUpdateService.php.html#32\">oat\\taoMediaManager\\model\\relation\\service\\update\\AbstractRelationUpdateService::updateByTargetId<\/a>"],[100,0,"<a href=\"service\/update\/AbstractRelationUpdateService.php.html#49\">oat\\taoMediaManager\\model\\relation\\service\\update\\AbstractRelationUpdateService::getRelationType<\/a>"],[100,1,"<a href=\"service\/update\/AbstractRelationUpdateService.php.html#51\">oat\\taoMediaManager\\model\\relation\\service\\update\\AbstractRelationUpdateService::createMediaRelation<\/a>"],[100,1,"<a href=\"service\/update\/AbstractRelationUpdateService.php.html#57\">oat\\taoMediaManager\\model\\relation\\service\\update\\AbstractRelationUpdateService::getMediaRelationRepository<\/a>"],[100,1,"<a href=\"service\/update\/ItemRelationUpdateService.php.html#29\">oat\\taoMediaManager\\model\\relation\\service\\update\\ItemRelationUpdateService::getRelationType<\/a>"],[100,1,"<a href=\"service\/update\/MediaRelationUpdateService.php.html#29\">oat\\taoMediaManager\\model\\relation\\service\\update\\MediaRelationUpdateService::getRelationType<\/a>"],[100,1,"<a href=\"task\/ItemToMediaRelationMigrationTask.php.html#38\">oat\\taoMediaManager\\model\\relation\\task\\ItemToMediaRelationMigrationTask::getUnitProcessor<\/a>"],[100,1,"<a href=\"task\/ItemToMediaRelationMigrationTask.php.html#43\">oat\\taoMediaManager\\model\\relation\\task\\ItemToMediaRelationMigrationTask::getResultSearcher<\/a>"],[100,1,"<a href=\"task\/ItemToMediaRelationMigrationTask.php.html#48\">oat\\taoMediaManager\\model\\relation\\task\\ItemToMediaRelationMigrationTask::getSpawnMigrationConfigService<\/a>"],[100,1,"<a href=\"task\/ItemToMediaRelationMigrationTask.php.html#53\">oat\\taoMediaManager\\model\\relation\\task\\ItemToMediaRelationMigrationTask::getResultFilterFactory<\/a>"],[100,1,"<a href=\"task\/ItemToMediaRelationMigrationTask.php.html#58\">oat\\taoMediaManager\\model\\relation\\task\\ItemToMediaRelationMigrationTask::getMigrationConfigFactory<\/a>"],[90.9090909090909,3,"<a href=\"task\/ItemToMediaUnitProcessor.php.html#44\">oat\\taoMediaManager\\model\\relation\\task\\ItemToMediaUnitProcessor::process<\/a>"],[100,1,"<a href=\"task\/ItemToMediaUnitProcessor.php.html#66\">oat\\taoMediaManager\\model\\relation\\task\\ItemToMediaUnitProcessor::getItemRelationUpdateService<\/a>"],[100,1,"<a href=\"task\/ItemToMediaUnitProcessor.php.html#71\">oat\\taoMediaManager\\model\\relation\\task\\ItemToMediaUnitProcessor::getElementReferencesExtractor<\/a>"],[100,1,"<a href=\"task\/ItemToMediaUnitProcessor.php.html#76\">oat\\taoMediaManager\\model\\relation\\task\\ItemToMediaUnitProcessor::getQtiService<\/a>"],[100,1,"<a href=\"task\/ItemToMediaUnitProcessor.php.html#81\">oat\\taoMediaManager\\model\\relation\\task\\ItemToMediaUnitProcessor::getIdDiscoverService<\/a>"],[100,1,"<a href=\"task\/MediaToMediaRelationMigrationTask.php.html#38\">oat\\taoMediaManager\\model\\relation\\task\\MediaToMediaRelationMigrationTask::getUnitProcessor<\/a>"],[0,1,"<a href=\"task\/MediaToMediaRelationMigrationTask.php.html#43\">oat\\taoMediaManager\\model\\relation\\task\\MediaToMediaRelationMigrationTask::getResultSearcher<\/a>"],[0,1,"<a href=\"task\/MediaToMediaRelationMigrationTask.php.html#48\">oat\\taoMediaManager\\model\\relation\\task\\MediaToMediaRelationMigrationTask::getSpawnMigrationConfigService<\/a>"],[0,1,"<a href=\"task\/MediaToMediaRelationMigrationTask.php.html#53\">oat\\taoMediaManager\\model\\relation\\task\\MediaToMediaRelationMigrationTask::getResultFilterFactory<\/a>"],[0,1,"<a href=\"task\/MediaToMediaRelationMigrationTask.php.html#58\">oat\\taoMediaManager\\model\\relation\\task\\MediaToMediaRelationMigrationTask::getMigrationConfigFactory<\/a>"],[91.66666666666666,5,"<a href=\"task\/MediaToMediaUnitProcessor.php.html#49\">oat\\taoMediaManager\\model\\relation\\task\\MediaToMediaUnitProcessor::process<\/a>"],[100,1,"<a href=\"task\/MediaToMediaUnitProcessor.php.html#71\">oat\\taoMediaManager\\model\\relation\\task\\MediaToMediaUnitProcessor::getSharedStimulusExtractor<\/a>"],[100,1,"<a href=\"task\/MediaToMediaUnitProcessor.php.html#76\">oat\\taoMediaManager\\model\\relation\\task\\MediaToMediaUnitProcessor::getFileManager<\/a>"],[100,1,"<a href=\"task\/MediaToMediaUnitProcessor.php.html#81\">oat\\taoMediaManager\\model\\relation\\task\\MediaToMediaUnitProcessor::getMediaRelationUpdateService<\/a>"],[100,1,"<a href=\"task\/MediaToMediaUnitProcessor.php.html#86\">oat\\taoMediaManager\\model\\relation\\task\\MediaToMediaUnitProcessor::getSharedStimulusResourceSpecification<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>

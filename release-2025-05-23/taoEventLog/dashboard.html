@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /home/runner/work/tao-community/tao-community/taoEventLog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../_css/bootstrap.min.css?v=9.2.32" rel="stylesheet" type="text/css">
+  <link href="../_css/nv.d3.min.css?v=9.2.32" rel="stylesheet" type="text/css">
+  <link href="../_css/style.css?v=9.2.32" rel="stylesheet" type="text/css">
+  <link href="../_css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="../index.html">/home/runner/work/tao-community/tao-community</a></li>
+         <li class="breadcrumb-item"><a href="index.html">taoEventLog</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="controller/TaoEventLog.php.html#38">oat\taoEventLog\controller\TaoEventLog</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/AbstractLog.php.html#32">oat\taoEventLog\model\AbstractLog</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/datatable/EventLogDatatable.php.html#39">oat\taoEventLog\model\datatable\EventLogDatatable</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/eventLog/LoggerService.php.html#46">oat\taoEventLog\model\eventLog\LoggerService</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/export/implementation/LogEntryCsvExporter.php.html#38">oat\taoEventLog\model\export\implementation\LogEntryCsvExporter</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/export/implementation/LogEntryCsvStdOutExporter.php.html#26">oat\taoEventLog\model\export\implementation\LogEntryCsvStdOutExporter</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/export/implementation/LogEntryRepository.php.html#31">oat\taoEventLog\model\export\implementation\LogEntryRepository</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/requestLog/AbstractRequestLogStorage.php.html#36">oat\taoEventLog\model\requestLog\AbstractRequestLogStorage</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/requestLog/RequestLogService.php.html#36">oat\taoEventLog\model\requestLog\RequestLogService</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/requestLog/fluentd/FluentdTcpStorage.php.html#35">oat\taoEventLog\model\requestLog\fluentd\FluentdTcpStorage</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/requestLog/fluentd/FluentdUdpStorage.php.html#61">oat\taoEventLog\model\requestLog\fluentd\FluentdUdpStorage</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/requestLog/noStorage/NoStorage.php.html#46">oat\taoEventLog\model\requestLog\noStorage\NoStorage</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/requestLog/rds/RdsRequestLogStorage.php.html#41">oat\taoEventLog\model\requestLog\rds\RdsRequestLogStorage</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/storage/RdsStorage.php.html#32">oat\taoEventLog\model\storage\RdsStorage</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/userLastActivityLog/rds/UserLastActivityLogStorage.php.html#42">oat\taoEventLog\model\userLastActivityLog\rds\UserLastActivityLogStorage</a></td><td class="text-right">82%</td></tr>
+       <tr><td><a href="model/storage/AbstractRdsStorage.php.html#37">oat\taoEventLog\model\storage\AbstractRdsStorage</a></td><td class="text-right">82%</td></tr>
+       <tr><td><a href="model/eventLog/RdsStorage.php.html#37">oat\taoEventLog\model\eventLog\RdsStorage</a></td><td class="text-right">89%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="model/requestLog/rds/RdsRequestLogStorage.php.html#41">oat\taoEventLog\model\requestLog\rds\RdsRequestLogStorage</a></td><td class="text-right">552</td></tr>
+       <tr><td><a href="model/datatable/EventLogDatatable.php.html#39">oat\taoEventLog\model\datatable\EventLogDatatable</a></td><td class="text-right">420</td></tr>
+       <tr><td><a href="model/eventLog/LoggerService.php.html#46">oat\taoEventLog\model\eventLog\LoggerService</a></td><td class="text-right">210</td></tr>
+       <tr><td><a href="model/export/implementation/LogEntryRepository.php.html#31">oat\taoEventLog\model\export\implementation\LogEntryRepository</a></td><td class="text-right">210</td></tr>
+       <tr><td><a href="model/requestLog/RequestLogService.php.html#36">oat\taoEventLog\model\requestLog\RequestLogService</a></td><td class="text-right">210</td></tr>
+       <tr><td><a href="model/export/implementation/LogEntryCsvStdOutExporter.php.html#26">oat\taoEventLog\model\export\implementation\LogEntryCsvStdOutExporter</a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="model/export/implementation/LogEntryCsvExporter.php.html#38">oat\taoEventLog\model\export\implementation\LogEntryCsvExporter</a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="model/requestLog/fluentd/FluentdTcpStorage.php.html#35">oat\taoEventLog\model\requestLog\fluentd\FluentdTcpStorage</a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="controller/TaoEventLog.php.html#38">oat\taoEventLog\controller\TaoEventLog</a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="model/userLastActivityLog/rds/UserLastActivityLogStorage.php.html#42">oat\taoEventLog\model\userLastActivityLog\rds\UserLastActivityLogStorage</a></td><td class="text-right">33</td></tr>
+       <tr><td><a href="model/storage/AbstractRdsStorage.php.html#37">oat\taoEventLog\model\storage\AbstractRdsStorage</a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="model/requestLog/fluentd/FluentdUdpStorage.php.html#61">oat\taoEventLog\model\requestLog\fluentd\FluentdUdpStorage</a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="model/eventLog/RdsStorage.php.html#37">oat\taoEventLog\model\eventLog\RdsStorage</a></td><td class="text-right">17</td></tr>
+       <tr><td><a href="model/requestLog/AbstractRequestLogStorage.php.html#36">oat\taoEventLog\model\requestLog\AbstractRequestLogStorage</a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="controller/TaoEventLog.php.html#43"><abbr title="oat\taoEventLog\controller\TaoEventLog::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controller/TaoEventLog.php.html#52"><abbr title="oat\taoEventLog\controller\TaoEventLog::search">search</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controller/TaoEventLog.php.html#63"><abbr title="oat\taoEventLog\controller\TaoEventLog::export">export</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controller/TaoEventLog.php.html#96"><abbr title="oat\taoEventLog\controller\TaoEventLog::getParameter">getParameter</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/AbstractLog.php.html#46"><abbr title="oat\taoEventLog\model\AbstractLog::search">search</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/AbstractLog.php.html#51"><abbr title="oat\taoEventLog\model\AbstractLog::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/AbstractLog.php.html#62"><abbr title="oat\taoEventLog\model\AbstractLog::count">count</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/AbstractLog.php.html#70"><abbr title="oat\taoEventLog\model\AbstractLog::getStorage">getStorage</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/RdsLogIterator.php.html#100"><abbr title="oat\taoEventLog\model\RdsLogIterator::key">key</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/datatable/EventLogDatatable.php.html#52"><abbr title="oat\taoEventLog\model\datatable\EventLogDatatable::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/datatable/EventLogDatatable.php.html#63"><abbr title="oat\taoEventLog\model\datatable\EventLogDatatable::getPayload">getPayload</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/datatable/EventLogDatatable.php.html#85"><abbr title="oat\taoEventLog\model\datatable\EventLogDatatable::doPostProcessing">doPostProcessing</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/datatable/EventLogDatatable.php.html#120"><abbr title="oat\taoEventLog\model\datatable\EventLogDatatable::getFilters">getFilters</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/datatable/EventLogDatatable.php.html#175"><abbr title="oat\taoEventLog\model\datatable\EventLogDatatable::jsonSerialize">jsonSerialize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/eventLog/LoggerService.php.html#59"><abbr title="oat\taoEventLog\model\eventLog\LoggerService::getAction">getAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/eventLog/LoggerService.php.html#69"><abbr title="oat\taoEventLog\model\eventLog\LoggerService::setAction">setAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/eventLog/LoggerService.php.html#78"><abbr title="oat\taoEventLog\model\eventLog\LoggerService::log">log</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/eventLog/LoggerService.php.html#109"><abbr title="oat\taoEventLog\model\eventLog\LoggerService::logEvent">logEvent</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/eventLog/LoggerService.php.html#117"><abbr title="oat\taoEventLog\model\eventLog\LoggerService::rotate">rotate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/eventLog/LoggerService.php.html#131"><abbr title="oat\taoEventLog\model\eventLog\LoggerService::searchInstances">searchInstances</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/eventLog/LoggerService.php.html#139"><abbr title="oat\taoEventLog\model\eventLog\LoggerService::getStorage">getStorage</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/eventLog/LoggerService.php.html#145"><abbr title="oat\taoEventLog\model\eventLog\LoggerService::getUser">getUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/eventLog/LoggerService.php.html#153"><abbr title="oat\taoEventLog\model\eventLog\LoggerService::createEventLogEntity">createEventLogEntity</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/eventLog/RdsStorage.php.html#118"><abbr title="oat\taoEventLog\model\eventLog\RdsStorage::searchInstances">searchInstances</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/eventLog/RdsStorage.php.html#240"><abbr title="oat\taoEventLog\model\eventLog\RdsStorage::getUserService">getUserService</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/export/implementation/LogEntryCsvExporter.php.html#46"><abbr title="oat\taoEventLog\model\export\implementation\LogEntryCsvExporter::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/export/implementation/LogEntryCsvExporter.php.html#60"><abbr title="oat\taoEventLog\model\export\implementation\LogEntryCsvExporter::export">export</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/export/implementation/LogEntryCsvExporter.php.html#79"><abbr title="oat\taoEventLog\model\export\implementation\LogEntryCsvExporter::prepareFilters">prepareFilters</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/export/implementation/LogEntryCsvStdOutExporter.php.html#46"><abbr title="oat\taoEventLog\model\export\implementation\LogEntryCsvStdOutExporter::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/export/implementation/LogEntryCsvStdOutExporter.php.html#56"><abbr title="oat\taoEventLog\model\export\implementation\LogEntryCsvStdOutExporter::export">export</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/export/implementation/LogEntryCsvStdOutExporter.php.html#62"><abbr title="oat\taoEventLog\model\export\implementation\LogEntryCsvStdOutExporter::sendHeaders">sendHeaders</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/export/implementation/LogEntryCsvStdOutExporter.php.html#76"><abbr title="oat\taoEventLog\model\export\implementation\LogEntryCsvStdOutExporter::echoContent">echoContent</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/export/implementation/LogEntryRepository.php.html#53"><abbr title="oat\taoEventLog\model\export\implementation\LogEntryRepository::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/export/implementation/LogEntryRepository.php.html#66"><abbr title="oat\taoEventLog\model\export\implementation\LogEntryRepository::fetch">fetch</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/export/implementation/LogEntryRepository.php.html#116"><abbr title="oat\taoEventLog\model\export\implementation\LogEntryRepository::prepareFilters">prepareFilters</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/requestLog/AbstractRequestLogStorage.php.html#49"><abbr title="oat\taoEventLog\model\requestLog\AbstractRequestLogStorage::prepareData">prepareData</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/requestLog/RequestLogService.php.html#64"><abbr title="oat\taoEventLog\model\requestLog\RequestLogService::log">log</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/requestLog/RequestLogService.php.html#83"><abbr title="oat\taoEventLog\model\requestLog\RequestLogService::find">find</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/requestLog/RequestLogService.php.html#98"><abbr title="oat\taoEventLog\model\requestLog\RequestLogService::count">count</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/requestLog/RequestLogService.php.html#110"><abbr title="oat\taoEventLog\model\requestLog\RequestLogService::getStorage">getStorage</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/requestLog/RequestLogService.php.html#128"><abbr title="oat\taoEventLog\model\requestLog\RequestLogService::catchEvent">catchEvent</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/requestLog/fluentd/FluentdTcpStorage.php.html#52"><abbr title="oat\taoEventLog\model\requestLog\fluentd\FluentdTcpStorage::getSocket">getSocket</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/requestLog/fluentd/FluentdTcpStorage.php.html#77"><abbr title="oat\taoEventLog\model\requestLog\fluentd\FluentdTcpStorage::log">log</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/requestLog/fluentd/FluentdUdpStorage.php.html#76"><abbr title="oat\taoEventLog\model\requestLog\fluentd\FluentdUdpStorage::log">log</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/requestLog/fluentd/FluentdUdpStorage.php.html#81"><abbr title="oat\taoEventLog\model\requestLog\fluentd\FluentdUdpStorage::getSocket">getSocket</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/requestLog/fluentd/FluentdUdpStorage.php.html#95"><abbr title="oat\taoEventLog\model\requestLog\fluentd\FluentdUdpStorage::sendData">sendData</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/requestLog/noStorage/NoStorage.php.html#53"><abbr title="oat\taoEventLog\model\requestLog\noStorage\NoStorage::log">log</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/requestLog/rds/RdsRequestLogStorage.php.html#58"><abbr title="oat\taoEventLog\model\requestLog\rds\RdsRequestLogStorage::log">log</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/requestLog/rds/RdsRequestLogStorage.php.html#67"><abbr title="oat\taoEventLog\model\requestLog\rds\RdsRequestLogStorage::find">find</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/requestLog/rds/RdsRequestLogStorage.php.html#90"><abbr title="oat\taoEventLog\model\requestLog\rds\RdsRequestLogStorage::count">count</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/requestLog/rds/RdsRequestLogStorage.php.html#115"><abbr title="oat\taoEventLog\model\requestLog\rds\RdsRequestLogStorage::addFilter">addFilter</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/requestLog/rds/RdsRequestLogStorage.php.html#148"><abbr title="oat\taoEventLog\model\requestLog\rds\RdsRequestLogStorage::getColumnNames">getColumnNames</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/requestLog/rds/RdsRequestLogStorage.php.html#162"><abbr title="oat\taoEventLog\model\requestLog\rds\RdsRequestLogStorage::getPersistence">getPersistence</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/requestLog/rds/RdsRequestLogStorage.php.html#171"><abbr title="oat\taoEventLog\model\requestLog\rds\RdsRequestLogStorage::getQueryBuilder">getQueryBuilder</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/requestLog/rds/RdsRequestLogStorage.php.html#189"><abbr title="oat\taoEventLog\model\requestLog\rds\RdsRequestLogStorage::install">install</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/storage/AbstractRdsStorage.php.html#217"><abbr title="oat\taoEventLog\model\storage\AbstractRdsStorage::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/storage/RdsStorage.php.html#39"><abbr title="oat\taoEventLog\model\storage\RdsStorage::getTableName">getTableName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/storage/RdsStorage.php.html#43"><abbr title="oat\taoEventLog\model\storage\RdsStorage::log">log</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/storage/RdsStorage.php.html#47"><abbr title="oat\taoEventLog\model\storage\RdsStorage::logMultiple">logMultiple</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/storage/RdsStorage.php.html#52"><abbr title="oat\taoEventLog\model\storage\RdsStorage::tableColumns">tableColumns</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/storage/RdsStorage.php.html#56"><abbr title="oat\taoEventLog\model\storage\RdsStorage::install">install</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/userLastActivityLog/rds/UserLastActivityLogStorage.php.html#244"><abbr title="oat\taoEventLog\model\userLastActivityLog\rds\UserLastActivityLogStorage::catchEvent">catchEvent</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/eventLog/RdsStorage.php.html#227"><abbr title="oat\taoEventLog\model\eventLog\RdsStorage::getUserLogin">getUserLogin</abbr></a></td><td class="text-right">60%</td></tr>
+       <tr><td><a href="model/storage/AbstractRdsStorage.php.html#126"><abbr title="oat\taoEventLog\model\storage\AbstractRdsStorage::count">count</abbr></a></td><td class="text-right">76%</td></tr>
+       <tr><td><a href="model/storage/AbstractRdsStorage.php.html#151"><abbr title="oat\taoEventLog\model\storage\AbstractRdsStorage::addFilter">addFilter</abbr></a></td><td class="text-right">83%</td></tr>
+       <tr><td><a href="model/eventLog/RdsStorage.php.html#77"><abbr title="oat\taoEventLog\model\eventLog\RdsStorage::logMultiple">logMultiple</abbr></a></td><td class="text-right">86%</td></tr>
+       <tr><td><a href="model/userLastActivityLog/rds/UserLastActivityLogStorage.php.html#132"><abbr title="oat\taoEventLog\model\userLastActivityLog\rds\UserLastActivityLogStorage::addFilter">addFilter</abbr></a></td><td class="text-right">88%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="model/datatable/EventLogDatatable.php.html#120"><abbr title="oat\taoEventLog\model\datatable\EventLogDatatable::getFilters">getFilters</abbr></a></td><td class="text-right">210</td></tr>
+       <tr><td><a href="model/export/implementation/LogEntryRepository.php.html#66"><abbr title="oat\taoEventLog\model\export\implementation\LogEntryRepository::fetch">fetch</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="model/export/implementation/LogEntryCsvExporter.php.html#79"><abbr title="oat\taoEventLog\model\export\implementation\LogEntryCsvExporter::prepareFilters">prepareFilters</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="model/export/implementation/LogEntryRepository.php.html#116"><abbr title="oat\taoEventLog\model\export\implementation\LogEntryRepository::prepareFilters">prepareFilters</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="model/requestLog/rds/RdsRequestLogStorage.php.html#67"><abbr title="oat\taoEventLog\model\requestLog\rds\RdsRequestLogStorage::find">find</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="model/userLastActivityLog/rds/UserLastActivityLogStorage.php.html#244"><abbr title="oat\taoEventLog\model\userLastActivityLog\rds\UserLastActivityLogStorage::catchEvent">catchEvent</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="model/export/implementation/LogEntryCsvStdOutExporter.php.html#76"><abbr title="oat\taoEventLog\model\export\implementation\LogEntryCsvStdOutExporter::echoContent">echoContent</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="model/requestLog/rds/RdsRequestLogStorage.php.html#115"><abbr title="oat\taoEventLog\model\requestLog\rds\RdsRequestLogStorage::addFilter">addFilter</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="model/eventLog/LoggerService.php.html#78"><abbr title="oat\taoEventLog\model\eventLog\LoggerService::log">log</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="model/requestLog/RequestLogService.php.html#110"><abbr title="oat\taoEventLog\model\requestLog\RequestLogService::getStorage">getStorage</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="model/requestLog/fluentd/FluentdTcpStorage.php.html#52"><abbr title="oat\taoEventLog\model\requestLog\fluentd\FluentdTcpStorage::getSocket">getSocket</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="model/requestLog/fluentd/FluentdTcpStorage.php.html#77"><abbr title="oat\taoEventLog\model\requestLog\fluentd\FluentdTcpStorage::log">log</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="model/requestLog/rds/RdsRequestLogStorage.php.html#90"><abbr title="oat\taoEventLog\model\requestLog\rds\RdsRequestLogStorage::count">count</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="controller/TaoEventLog.php.html#63"><abbr title="oat\taoEventLog\controller\TaoEventLog::export">export</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="model/datatable/EventLogDatatable.php.html#85"><abbr title="oat\taoEventLog\model\datatable\EventLogDatatable::doPostProcessing">doPostProcessing</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="model/eventLog/LoggerService.php.html#59"><abbr title="oat\taoEventLog\model\eventLog\LoggerService::getAction">getAction</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="model/export/implementation/LogEntryCsvStdOutExporter.php.html#62"><abbr title="oat\taoEventLog\model\export\implementation\LogEntryCsvStdOutExporter::sendHeaders">sendHeaders</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="model/requestLog/RequestLogService.php.html#64"><abbr title="oat\taoEventLog\model\requestLog\RequestLogService::log">log</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="model/requestLog/RequestLogService.php.html#128"><abbr title="oat\taoEventLog\model\requestLog\RequestLogService::catchEvent">catchEvent</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="model/requestLog/rds/RdsRequestLogStorage.php.html#189"><abbr title="oat\taoEventLog\model\requestLog\rds\RdsRequestLogStorage::install">install</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="model/storage/AbstractRdsStorage.php.html#151"><abbr title="oat\taoEventLog\model\storage\AbstractRdsStorage::addFilter">addFilter</abbr></a></td><td class="text-right">7</td></tr>
+       <tr><td><a href="controller/TaoEventLog.php.html#96"><abbr title="oat\taoEventLog\controller\TaoEventLog::getParameter">getParameter</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="model/eventLog/RdsStorage.php.html#240"><abbr title="oat\taoEventLog\model\eventLog\RdsStorage::getUserService">getUserService</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="model/requestLog/AbstractRequestLogStorage.php.html#49"><abbr title="oat\taoEventLog\model\requestLog\AbstractRequestLogStorage::prepareData">prepareData</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="model/requestLog/RequestLogService.php.html#83"><abbr title="oat\taoEventLog\model\requestLog\RequestLogService::find">find</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="model/requestLog/RequestLogService.php.html#98"><abbr title="oat\taoEventLog\model\requestLog\RequestLogService::count">count</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="model/requestLog/fluentd/FluentdUdpStorage.php.html#81"><abbr title="oat\taoEventLog\model\requestLog\fluentd\FluentdUdpStorage::getSocket">getSocket</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="model/requestLog/fluentd/FluentdUdpStorage.php.html#95"><abbr title="oat\taoEventLog\model\requestLog\fluentd\FluentdUdpStorage::sendData">sendData</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="model/requestLog/rds/RdsRequestLogStorage.php.html#171"><abbr title="oat\taoEventLog\model\requestLog\rds\RdsRequestLogStorage::getQueryBuilder">getQueryBuilder</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="model/storage/AbstractRdsStorage.php.html#217"><abbr title="oat\taoEventLog\model\storage\AbstractRdsStorage::delete">delete</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="model/userLastActivityLog/rds/UserLastActivityLogStorage.php.html#132"><abbr title="oat\taoEventLog\model\userLastActivityLog\rds\UserLastActivityLogStorage::addFilter">addFilter</abbr></a></td><td class="text-right">5</td></tr>
+       <tr><td><a href="model/storage/AbstractRdsStorage.php.html#126"><abbr title="oat\taoEventLog\model\storage\AbstractRdsStorage::count">count</abbr></a></td><td class="text-right">4</td></tr>
+       <tr><td><a href="model/eventLog/RdsStorage.php.html#227"><abbr title="oat\taoEventLog\model\eventLog\RdsStorage::getUserLogin">getUserLogin</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="model/eventLog/RdsStorage.php.html#77"><abbr title="oat\taoEventLog\model\eventLog\RdsStorage::logMultiple">logMultiple</abbr></a></td><td class="text-right">3</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 9.2.32</a> using <a href="https://secure.php.net/" target="_top">PHP 8.3.29</a> at Mon Jan 26 16:09:54 UTC 2026.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="../_js/jquery.min.js?v=9.2.32" type="text/javascript"></script>
+  <script src="../_js/d3.min.js?v=9.2.32" type="text/javascript"></script>
+  <script src="../_js/nv.d3.min.js?v=9.2.32" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([14,0,0,0,0,0,0,0,0,3,1,5], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([62,0,0,0,0,0,0,1,1,3,6,22], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[0,7,"<a href=\"controller\/TaoEventLog.php.html#38\">oat\\taoEventLog\\controller\\TaoEventLog<\/a>"],[0,4,"<a href=\"model\/AbstractLog.php.html#32\">oat\\taoEventLog\\model\\AbstractLog<\/a>"],[100,6,"<a href=\"model\/LogEntity.php.html#32\">oat\\taoEventLog\\model\\LogEntity<\/a>"],[100,0,"<a href=\"model\/LoggerService.php.html#30\">oat\\taoEventLog\\model\\LoggerService<\/a>"],[92.85714285714286,12,"<a href=\"model\/RdsLogIterator.php.html#32\">oat\\taoEventLog\\model\\RdsLogIterator<\/a>"],[0,20,"<a href=\"model\/datatable\/EventLogDatatable.php.html#39\">oat\\taoEventLog\\model\\datatable\\EventLogDatatable<\/a>"],[100,0,"<a href=\"model\/eventLog\/EventLogEntity.php.html#30\">oat\\taoEventLog\\model\\eventLog\\EventLogEntity<\/a>"],[0,14,"<a href=\"model\/eventLog\/LoggerService.php.html#46\">oat\\taoEventLog\\model\\eventLog\\LoggerService<\/a>"],[89.7196261682243,17,"<a href=\"model\/eventLog\/RdsStorage.php.html#37\">oat\\taoEventLog\\model\\eventLog\\RdsStorage<\/a>"],[0,8,"<a href=\"model\/export\/implementation\/LogEntryCsvExporter.php.html#38\">oat\\taoEventLog\\model\\export\\implementation\\LogEntryCsvExporter<\/a>"],[0,10,"<a href=\"model\/export\/implementation\/LogEntryCsvStdOutExporter.php.html#26\">oat\\taoEventLog\\model\\export\\implementation\\LogEntryCsvStdOutExporter<\/a>"],[0,14,"<a href=\"model\/export\/implementation\/LogEntryRepository.php.html#31\">oat\\taoEventLog\\model\\export\\implementation\\LogEntryRepository<\/a>"],[0,2,"<a href=\"model\/requestLog\/AbstractRequestLogStorage.php.html#36\">oat\\taoEventLog\\model\\requestLog\\AbstractRequestLogStorage<\/a>"],[100,0,"<a href=\"model\/requestLog\/RequestLogException.php.html#30\">oat\\taoEventLog\\model\\requestLog\\RequestLogException<\/a>"],[0,14,"<a href=\"model\/requestLog\/RequestLogService.php.html#36\">oat\\taoEventLog\\model\\requestLog\\RequestLogService<\/a>"],[0,8,"<a href=\"model\/requestLog\/fluentd\/FluentdTcpStorage.php.html#35\">oat\\taoEventLog\\model\\requestLog\\fluentd\\FluentdTcpStorage<\/a>"],[0,5,"<a href=\"model\/requestLog\/fluentd\/FluentdUdpStorage.php.html#61\">oat\\taoEventLog\\model\\requestLog\\fluentd\\FluentdUdpStorage<\/a>"],[0,1,"<a href=\"model\/requestLog\/noStorage\/NoStorage.php.html#46\">oat\\taoEventLog\\model\\requestLog\\noStorage\\NoStorage<\/a>"],[100,0,"<a href=\"model\/requestLog\/rds\/RdsRequestLogIterator.php.html#30\">oat\\taoEventLog\\model\\requestLog\\rds\\RdsRequestLogIterator<\/a>"],[0,23,"<a href=\"model\/requestLog\/rds\/RdsRequestLogStorage.php.html#41\">oat\\taoEventLog\\model\\requestLog\\rds\\RdsRequestLogStorage<\/a>"],[82.6086956521739,27,"<a href=\"model\/storage\/AbstractRdsStorage.php.html#37\">oat\\taoEventLog\\model\\storage\\AbstractRdsStorage<\/a>"],[0,5,"<a href=\"model\/storage\/RdsStorage.php.html#32\">oat\\taoEventLog\\model\\storage\\RdsStorage<\/a>"],[82.2429906542056,29,"<a href=\"model\/userLastActivityLog\/rds\/UserLastActivityLogStorage.php.html#42\">oat\\taoEventLog\\model\\userLastActivityLog\\rds\\UserLastActivityLogStorage<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[0,1,"<a href=\"controller\/TaoEventLog.php.html#43\">oat\\taoEventLog\\controller\\TaoEventLog::index<\/a>"],[0,1,"<a href=\"controller\/TaoEventLog.php.html#52\">oat\\taoEventLog\\controller\\TaoEventLog::search<\/a>"],[0,3,"<a href=\"controller\/TaoEventLog.php.html#63\">oat\\taoEventLog\\controller\\TaoEventLog::export<\/a>"],[0,2,"<a href=\"controller\/TaoEventLog.php.html#96\">oat\\taoEventLog\\controller\\TaoEventLog::getParameter<\/a>"],[100,0,"<a href=\"model\/AbstractLog.php.html#39\">oat\\taoEventLog\\model\\AbstractLog::log<\/a>"],[0,1,"<a href=\"model\/AbstractLog.php.html#46\">oat\\taoEventLog\\model\\AbstractLog::search<\/a>"],[0,1,"<a href=\"model\/AbstractLog.php.html#51\">oat\\taoEventLog\\model\\AbstractLog::delete<\/a>"],[0,1,"<a href=\"model\/AbstractLog.php.html#62\">oat\\taoEventLog\\model\\AbstractLog::count<\/a>"],[0,1,"<a href=\"model\/AbstractLog.php.html#70\">oat\\taoEventLog\\model\\AbstractLog::getStorage<\/a>"],[100,1,"<a href=\"model\/LogEntity.php.html#56\">oat\\taoEventLog\\model\\LogEntity::__construct<\/a>"],[100,1,"<a href=\"model\/LogEntity.php.html#68\">oat\\taoEventLog\\model\\LogEntity::getEvent<\/a>"],[100,1,"<a href=\"model\/LogEntity.php.html#76\">oat\\taoEventLog\\model\\LogEntity::getAction<\/a>"],[100,1,"<a href=\"model\/LogEntity.php.html#84\">oat\\taoEventLog\\model\\LogEntity::getUser<\/a>"],[100,1,"<a href=\"model\/LogEntity.php.html#92\">oat\\taoEventLog\\model\\LogEntity::getTime<\/a>"],[100,1,"<a href=\"model\/LogEntity.php.html#100\">oat\\taoEventLog\\model\\LogEntity::getData<\/a>"],[90,3,"<a href=\"model\/RdsLogIterator.php.html#57\">oat\\taoEventLog\\model\\RdsLogIterator::__construct<\/a>"],[100,1,"<a href=\"model\/RdsLogIterator.php.html#76\">oat\\taoEventLog\\model\\RdsLogIterator::current<\/a>"],[100,3,"<a href=\"model\/RdsLogIterator.php.html#81\">oat\\taoEventLog\\model\\RdsLogIterator::next<\/a>"],[0,1,"<a href=\"model\/RdsLogIterator.php.html#100\">oat\\taoEventLog\\model\\RdsLogIterator::key<\/a>"],[100,3,"<a href=\"model\/RdsLogIterator.php.html#108\">oat\\taoEventLog\\model\\RdsLogIterator::valid<\/a>"],[100,1,"<a href=\"model\/RdsLogIterator.php.html#118\">oat\\taoEventLog\\model\\RdsLogIterator::rewind<\/a>"],[0,1,"<a href=\"model\/datatable\/EventLogDatatable.php.html#52\">oat\\taoEventLog\\model\\datatable\\EventLogDatatable::__construct<\/a>"],[0,1,"<a href=\"model\/datatable\/EventLogDatatable.php.html#63\">oat\\taoEventLog\\model\\datatable\\EventLogDatatable::getPayload<\/a>"],[0,3,"<a href=\"model\/datatable\/EventLogDatatable.php.html#85\">oat\\taoEventLog\\model\\datatable\\EventLogDatatable::doPostProcessing<\/a>"],[0,14,"<a href=\"model\/datatable\/EventLogDatatable.php.html#120\">oat\\taoEventLog\\model\\datatable\\EventLogDatatable::getFilters<\/a>"],[0,1,"<a href=\"model\/datatable\/EventLogDatatable.php.html#175\">oat\\taoEventLog\\model\\datatable\\EventLogDatatable::jsonSerialize<\/a>"],[0,3,"<a href=\"model\/eventLog\/LoggerService.php.html#59\">oat\\taoEventLog\\model\\eventLog\\LoggerService::getAction<\/a>"],[0,1,"<a href=\"model\/eventLog\/LoggerService.php.html#69\">oat\\taoEventLog\\model\\eventLog\\LoggerService::setAction<\/a>"],[0,4,"<a href=\"model\/eventLog\/LoggerService.php.html#78\">oat\\taoEventLog\\model\\eventLog\\LoggerService::log<\/a>"],[0,1,"<a href=\"model\/eventLog\/LoggerService.php.html#109\">oat\\taoEventLog\\model\\eventLog\\LoggerService::logEvent<\/a>"],[0,1,"<a href=\"model\/eventLog\/LoggerService.php.html#117\">oat\\taoEventLog\\model\\eventLog\\LoggerService::rotate<\/a>"],[0,1,"<a href=\"model\/eventLog\/LoggerService.php.html#131\">oat\\taoEventLog\\model\\eventLog\\LoggerService::searchInstances<\/a>"],[0,1,"<a href=\"model\/eventLog\/LoggerService.php.html#139\">oat\\taoEventLog\\model\\eventLog\\LoggerService::getStorage<\/a>"],[0,1,"<a href=\"model\/eventLog\/LoggerService.php.html#145\">oat\\taoEventLog\\model\\eventLog\\LoggerService::getUser<\/a>"],[0,1,"<a href=\"model\/eventLog\/LoggerService.php.html#153\">oat\\taoEventLog\\model\\eventLog\\LoggerService::createEventLogEntity<\/a>"],[100,1,"<a href=\"model\/eventLog\/RdsStorage.php.html#61\">oat\\taoEventLog\\model\\eventLog\\RdsStorage::getTableName<\/a>"],[100,1,"<a href=\"model\/eventLog\/RdsStorage.php.html#70\">oat\\taoEventLog\\model\\eventLog\\RdsStorage::log<\/a>"],[86.95652173913044,3,"<a href=\"model\/eventLog\/RdsStorage.php.html#77\">oat\\taoEventLog\\model\\eventLog\\RdsStorage::logMultiple<\/a>"],[0,1,"<a href=\"model\/eventLog\/RdsStorage.php.html#118\">oat\\taoEventLog\\model\\eventLog\\RdsStorage::searchInstances<\/a>"],[100,1,"<a href=\"model\/eventLog\/RdsStorage.php.html#126\">oat\\taoEventLog\\model\\eventLog\\RdsStorage::tableColumns<\/a>"],[96.15384615384616,3,"<a href=\"model\/eventLog\/RdsStorage.php.html#143\">oat\\taoEventLog\\model\\eventLog\\RdsStorage::install<\/a>"],[100,1,"<a href=\"model\/eventLog\/RdsStorage.php.html#209\">oat\\taoEventLog\\model\\eventLog\\RdsStorage::getInsertChunkSize<\/a>"],[100,1,"<a href=\"model\/eventLog\/RdsStorage.php.html#214\">oat\\taoEventLog\\model\\eventLog\\RdsStorage::createInsert<\/a>"],[60,3,"<a href=\"model\/eventLog\/RdsStorage.php.html#227\">oat\\taoEventLog\\model\\eventLog\\RdsStorage::getUserLogin<\/a>"],[0,2,"<a href=\"model\/eventLog\/RdsStorage.php.html#240\">oat\\taoEventLog\\model\\eventLog\\RdsStorage::getUserService<\/a>"],[0,1,"<a href=\"model\/export\/implementation\/LogEntryCsvExporter.php.html#46\">oat\\taoEventLog\\model\\export\\implementation\\LogEntryCsvExporter::__construct<\/a>"],[0,1,"<a href=\"model\/export\/implementation\/LogEntryCsvExporter.php.html#60\">oat\\taoEventLog\\model\\export\\implementation\\LogEntryCsvExporter::export<\/a>"],[0,6,"<a href=\"model\/export\/implementation\/LogEntryCsvExporter.php.html#79\">oat\\taoEventLog\\model\\export\\implementation\\LogEntryCsvExporter::prepareFilters<\/a>"],[0,1,"<a href=\"model\/export\/implementation\/LogEntryCsvStdOutExporter.php.html#46\">oat\\taoEventLog\\model\\export\\implementation\\LogEntryCsvStdOutExporter::__construct<\/a>"],[0,1,"<a href=\"model\/export\/implementation\/LogEntryCsvStdOutExporter.php.html#56\">oat\\taoEventLog\\model\\export\\implementation\\LogEntryCsvStdOutExporter::export<\/a>"],[0,3,"<a href=\"model\/export\/implementation\/LogEntryCsvStdOutExporter.php.html#62\">oat\\taoEventLog\\model\\export\\implementation\\LogEntryCsvStdOutExporter::sendHeaders<\/a>"],[0,5,"<a href=\"model\/export\/implementation\/LogEntryCsvStdOutExporter.php.html#76\">oat\\taoEventLog\\model\\export\\implementation\\LogEntryCsvStdOutExporter::echoContent<\/a>"],[0,1,"<a href=\"model\/export\/implementation\/LogEntryRepository.php.html#53\">oat\\taoEventLog\\model\\export\\implementation\\LogEntryRepository::__construct<\/a>"],[0,7,"<a href=\"model\/export\/implementation\/LogEntryRepository.php.html#66\">oat\\taoEventLog\\model\\export\\implementation\\LogEntryRepository::fetch<\/a>"],[0,6,"<a href=\"model\/export\/implementation\/LogEntryRepository.php.html#116\">oat\\taoEventLog\\model\\export\\implementation\\LogEntryRepository::prepareFilters<\/a>"],[0,2,"<a href=\"model\/requestLog\/AbstractRequestLogStorage.php.html#49\">oat\\taoEventLog\\model\\requestLog\\AbstractRequestLogStorage::prepareData<\/a>"],[0,3,"<a href=\"model\/requestLog\/RequestLogService.php.html#64\">oat\\taoEventLog\\model\\requestLog\\RequestLogService::log<\/a>"],[0,2,"<a href=\"model\/requestLog\/RequestLogService.php.html#83\">oat\\taoEventLog\\model\\requestLog\\RequestLogService::find<\/a>"],[0,2,"<a href=\"model\/requestLog\/RequestLogService.php.html#98\">oat\\taoEventLog\\model\\requestLog\\RequestLogService::count<\/a>"],[0,4,"<a href=\"model\/requestLog\/RequestLogService.php.html#110\">oat\\taoEventLog\\model\\requestLog\\RequestLogService::getStorage<\/a>"],[0,3,"<a href=\"model\/requestLog\/RequestLogService.php.html#128\">oat\\taoEventLog\\model\\requestLog\\RequestLogService::catchEvent<\/a>"],[0,4,"<a href=\"model\/requestLog\/fluentd\/FluentdTcpStorage.php.html#52\">oat\\taoEventLog\\model\\requestLog\\fluentd\\FluentdTcpStorage::getSocket<\/a>"],[0,4,"<a href=\"model\/requestLog\/fluentd\/FluentdTcpStorage.php.html#77\">oat\\taoEventLog\\model\\requestLog\\fluentd\\FluentdTcpStorage::log<\/a>"],[0,1,"<a href=\"model\/requestLog\/fluentd\/FluentdUdpStorage.php.html#76\">oat\\taoEventLog\\model\\requestLog\\fluentd\\FluentdUdpStorage::log<\/a>"],[0,2,"<a href=\"model\/requestLog\/fluentd\/FluentdUdpStorage.php.html#81\">oat\\taoEventLog\\model\\requestLog\\fluentd\\FluentdUdpStorage::getSocket<\/a>"],[0,2,"<a href=\"model\/requestLog\/fluentd\/FluentdUdpStorage.php.html#95\">oat\\taoEventLog\\model\\requestLog\\fluentd\\FluentdUdpStorage::sendData<\/a>"],[0,1,"<a href=\"model\/requestLog\/noStorage\/NoStorage.php.html#53\">oat\\taoEventLog\\model\\requestLog\\noStorage\\NoStorage::log<\/a>"],[0,1,"<a href=\"model\/requestLog\/rds\/RdsRequestLogStorage.php.html#58\">oat\\taoEventLog\\model\\requestLog\\rds\\RdsRequestLogStorage::log<\/a>"],[0,6,"<a href=\"model\/requestLog\/rds\/RdsRequestLogStorage.php.html#67\">oat\\taoEventLog\\model\\requestLog\\rds\\RdsRequestLogStorage::find<\/a>"],[0,4,"<a href=\"model\/requestLog\/rds\/RdsRequestLogStorage.php.html#90\">oat\\taoEventLog\\model\\requestLog\\rds\\RdsRequestLogStorage::count<\/a>"],[0,5,"<a href=\"model\/requestLog\/rds\/RdsRequestLogStorage.php.html#115\">oat\\taoEventLog\\model\\requestLog\\rds\\RdsRequestLogStorage::addFilter<\/a>"],[0,1,"<a href=\"model\/requestLog\/rds\/RdsRequestLogStorage.php.html#148\">oat\\taoEventLog\\model\\requestLog\\rds\\RdsRequestLogStorage::getColumnNames<\/a>"],[0,1,"<a href=\"model\/requestLog\/rds\/RdsRequestLogStorage.php.html#162\">oat\\taoEventLog\\model\\requestLog\\rds\\RdsRequestLogStorage::getPersistence<\/a>"],[0,2,"<a href=\"model\/requestLog\/rds\/RdsRequestLogStorage.php.html#171\">oat\\taoEventLog\\model\\requestLog\\rds\\RdsRequestLogStorage::getQueryBuilder<\/a>"],[0,3,"<a href=\"model\/requestLog\/rds\/RdsRequestLogStorage.php.html#189\">oat\\taoEventLog\\model\\requestLog\\rds\\RdsRequestLogStorage::install<\/a>"],[95.23809523809523,11,"<a href=\"model\/storage\/AbstractRdsStorage.php.html#84\">oat\\taoEventLog\\model\\storage\\AbstractRdsStorage::search<\/a>"],[76.92307692307693,4,"<a href=\"model\/storage\/AbstractRdsStorage.php.html#126\">oat\\taoEventLog\\model\\storage\\AbstractRdsStorage::count<\/a>"],[83.33333333333334,7,"<a href=\"model\/storage\/AbstractRdsStorage.php.html#151\">oat\\taoEventLog\\model\\storage\\AbstractRdsStorage::addFilter<\/a>"],[100,1,"<a href=\"model\/storage\/AbstractRdsStorage.php.html#191\">oat\\taoEventLog\\model\\storage\\AbstractRdsStorage::getQueryBuilder<\/a>"],[100,2,"<a href=\"model\/storage\/AbstractRdsStorage.php.html#200\">oat\\taoEventLog\\model\\storage\\AbstractRdsStorage::getPersistence<\/a>"],[0,2,"<a href=\"model\/storage\/AbstractRdsStorage.php.html#217\">oat\\taoEventLog\\model\\storage\\AbstractRdsStorage::delete<\/a>"],[0,1,"<a href=\"model\/storage\/RdsStorage.php.html#39\">oat\\taoEventLog\\model\\storage\\RdsStorage::getTableName<\/a>"],[0,1,"<a href=\"model\/storage\/RdsStorage.php.html#43\">oat\\taoEventLog\\model\\storage\\RdsStorage::log<\/a>"],[0,1,"<a href=\"model\/storage\/RdsStorage.php.html#47\">oat\\taoEventLog\\model\\storage\\RdsStorage::logMultiple<\/a>"],[0,1,"<a href=\"model\/storage\/RdsStorage.php.html#52\">oat\\taoEventLog\\model\\storage\\RdsStorage::tableColumns<\/a>"],[0,1,"<a href=\"model\/storage\/RdsStorage.php.html#56\">oat\\taoEventLog\\model\\storage\\RdsStorage::install<\/a>"],[92.85714285714286,2,"<a href=\"model\/userLastActivityLog\/rds\/UserLastActivityLogStorage.php.html#61\">oat\\taoEventLog\\model\\userLastActivityLog\\rds\\UserLastActivityLogStorage::log<\/a>"],[90.9090909090909,6,"<a href=\"model\/userLastActivityLog\/rds\/UserLastActivityLogStorage.php.html#84\">oat\\taoEventLog\\model\\userLastActivityLog\\rds\\UserLastActivityLogStorage::find<\/a>"],[100,4,"<a href=\"model\/userLastActivityLog\/rds\/UserLastActivityLogStorage.php.html#107\">oat\\taoEventLog\\model\\userLastActivityLog\\rds\\UserLastActivityLogStorage::count<\/a>"],[88.88888888888889,5,"<a href=\"model\/userLastActivityLog\/rds\/UserLastActivityLogStorage.php.html#132\">oat\\taoEventLog\\model\\userLastActivityLog\\rds\\UserLastActivityLogStorage::addFilter<\/a>"],[100,1,"<a href=\"model\/userLastActivityLog\/rds\/UserLastActivityLogStorage.php.html#165\">oat\\taoEventLog\\model\\userLastActivityLog\\rds\\UserLastActivityLogStorage::getColumnNames<\/a>"],[100,1,"<a href=\"model\/userLastActivityLog\/rds\/UserLastActivityLogStorage.php.html#180\">oat\\taoEventLog\\model\\userLastActivityLog\\rds\\UserLastActivityLogStorage::getPersistence<\/a>"],[100,1,"<a href=\"model\/userLastActivityLog\/rds\/UserLastActivityLogStorage.php.html#190\">oat\\taoEventLog\\model\\userLastActivityLog\\rds\\UserLastActivityLogStorage::getQueryBuilder<\/a>"],[92.85714285714286,3,"<a href=\"model\/userLastActivityLog\/rds\/UserLastActivityLogStorage.php.html#201\">oat\\taoEventLog\\model\\userLastActivityLog\\rds\\UserLastActivityLogStorage::install<\/a>"],[0,6,"<a href=\"model\/userLastActivityLog\/rds\/UserLastActivityLogStorage.php.html#244\">oat\\taoEventLog\\model\\userLastActivityLog\\rds\\UserLastActivityLogStorage::catchEvent<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>
