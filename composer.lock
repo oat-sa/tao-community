@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9bf787e48c0efe527d428d6f0b4d871a",
+    "content-hash": "d1a45bbd31f556a7e4306933f560a460",
     "packages": [
         {
             "name": "brick/math",
@@ -4714,16 +4714,16 @@
         },
         {
             "name": "oat-sa/extension-tao-itemqti",
-            "version": "v32.2.2",
+            "version": "v32.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-itemqti.git",
-                "reference": "fef1420fd2737661a18378f35ff4fdcfb7dc9f6a"
+                "reference": "00038183cf862bffbcb93b3cf3d02aba6f48b351"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/fef1420fd2737661a18378f35ff4fdcfb7dc9f6a",
-                "reference": "fef1420fd2737661a18378f35ff4fdcfb7dc9f6a",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-itemqti/zipball/00038183cf862bffbcb93b3cf3d02aba6f48b351",
+                "reference": "00038183cf862bffbcb93b3cf3d02aba6f48b351",
                 "shasum": ""
             },
             "require": {
@@ -4735,7 +4735,7 @@
                 "oat-sa/generis": ">=17.0.0",
                 "oat-sa/lib-tao-qti": "^7.8.1",
                 "oat-sa/oatbox-extension-installer": "~1.1||dev-master",
-                "oat-sa/tao-core": ">=56.0.0"
+                "oat-sa/tao-core": ">=56.1.13"
             },
             "type": "tao-extension",
             "extra": {
@@ -4801,9 +4801,9 @@
             "support": {
                 "forum": "http://forum.taotesting.com",
                 "issues": "http://forge.taotesting.com",
-                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/v32.2.2"
+                "source": "https://github.com/oat-sa/extension-tao-itemqti/tree/v32.3.1"
             },
-            "time": "2026-03-20T10:35:41+00:00"
+            "time": "2026-03-30T07:28:50+00:00"
         },
         {
             "name": "oat-sa/extension-tao-itemqti-pci",
@@ -6661,16 +6661,16 @@
         },
         {
             "name": "oat-sa/tao-core",
-            "version": "v56.1.11",
+            "version": "v56.1.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/tao-core.git",
-                "reference": "59d9237d97db955df57d37fab13549d3d16f8b13"
+                "reference": "c2e855b5576f610e8c34fd89eab89d205c5f3099"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/59d9237d97db955df57d37fab13549d3d16f8b13",
-                "reference": "59d9237d97db955df57d37fab13549d3d16f8b13",
+                "url": "https://api.github.com/repos/oat-sa/tao-core/zipball/c2e855b5576f610e8c34fd89eab89d205c5f3099",
+                "reference": "c2e855b5576f610e8c34fd89eab89d205c5f3099",
                 "shasum": ""
             },
             "require": {
@@ -6771,9 +6771,9 @@
             "support": {
                 "forum": "https://forum.taocloud.org",
                 "issues": "https://github.com/oat-sa/tao-core/issues",
-                "source": "https://github.com/oat-sa/tao-core/tree/v56.1.11"
+                "source": "https://github.com/oat-sa/tao-core/tree/v56.1.14"
             },
-            "time": "2026-03-19T09:23:54+00:00"
+            "time": "2026-03-31T08:34:47+00:00"
         },
         {
             "name": "paragonie/constant_time_encoding",
@@ -13202,5 +13202,5 @@
     "platform-overrides": {
         "php": "8.1"
     },
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }
