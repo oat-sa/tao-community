@@ -60,12 +60,32 @@ jobs:
         if: ${{ matrix.node-version }}
         run: php tao/scripts/tools/GenerateTranslationBundles.php
 
+      - name: Install front-end dependencies
+        if: ${{ matrix.node-version }}
+        working-directory: tao/views/build
+        run: npm ci
+
+      - name: Install compatible Chromium for Puppeteer
+        if: ${{ matrix.node-version }}
+        working-directory: tao/views/build
+        run: node node_modules/puppeteer/install.js
+
+      - name: Find Puppeteer Chromium path
+        if: ${{ matrix.node-version }}
+        id: chromium-path
+        working-directory: tao/views/build
+        run: |
+          CHROME_PATH=$(find node_modules/puppeteer/.local-chromium -name "chrome" -type f 2>/dev/null | head -1)
+          echo "path=$CHROME_PATH" >> $GITHUB_OUTPUT
+          echo "Found Chromium at: $CHROME_PATH"
+
       - name: Front-end tests
         if: ${{ matrix.node-version }}
         working-directory: tao/views/build
+        env:
+          PUPPETEER_EXECUTABLE_PATH: ${{ steps.chromium-path.outputs.path }}
         run: |
-          npm ci
-          npx grunt connect:test qunit_junit pcisamplestest qtiitempcitest taotest taoclientdiagnostictest taodeliveryrdftest taoitemstest taomediamanagertest taooutcomeuitest taoproctoringtest taoqtiitemtest taoqtitesttest taoqtitestpreviewertest taotaskqueuetest taoteststest --force --reports=../../../junit-reports --chrome-flags="--no-sandbox --disable-dev-shm-usage --disable-setuid-sandbox  --disable-gpu"
+          npx grunt connect:test qunit_junit pcisamplestest qtiitempcitest taotest taoclientdiagnostictest taodeliveryrdftest taoitemstest taomediamanagertest taooutcomeuitest taoproctoringtest taoqtiitemtest taoqtitesttest taoqtitestpreviewertest taotaskqueuetest taoteststest --force --reports=../../../junit-reports --chrome-flags="--no-sandbox --disable-dev-shm-usage --disable-setuid-sandbox --disable-gpu --disable-extensions --disable-background-networking --disable-sync --disable-translate --no-first-run --no-default-browser-check"
 
       - name: Back-end tests
         run: ./test.sh ${{ matrix.coverage && '-c' }}
