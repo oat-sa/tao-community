@@ -15,7 +15,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        operating-system: [ ubuntu-latest ]
+        operating-system: [ ubuntu-22.04 ]
         php-version: [ '8.1', '8.3' ]
         include:
           - php-version: '8.3'
@@ -76,7 +76,7 @@ jobs:
             libxfixes3 \
             libxrandr2 \
             libgbm1 \
-            libasound2t64
+            libasound2
 
       - name: Install front-end dependencies
         if: ${{ matrix.node-version }}
