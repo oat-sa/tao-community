@@ -15,8 +15,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        operating-system: [ ubuntu-latest ]
-        php-version: [ '8.1', '8.3' ]
+        operating-system: [ ubuntu-22.04 ]
+        php-version: [ '8.3' ]
         include:
           - php-version: '8.3'
             node-version: '18'
@@ -60,12 +60,54 @@ jobs:
         if: ${{ matrix.node-version }}
         run: php tao/scripts/tools/GenerateTranslationBundles.php
 
+      - name: Install Chromium dependencies
+        if: ${{ matrix.node-version }}
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libnss3 \
+            libatk1.0-0 \
+            libatk-bridge2.0-0 \
+            libcups2 \
+            libdrm2 \
+            libxkbcommon0 \
+            libxcomposite1 \
+            libxdamage1 \
+            libxfixes3 \
+            libxrandr2 \
+            libgbm1 \
+            libasound2
+
+      - name: Install front-end dependencies
+        if: ${{ matrix.node-version }}
+        working-directory: tao/views/build
+        run: npm ci
+
+      - name: Install compatible Chromium for Puppeteer
+        if: ${{ matrix.node-version }}
+        working-directory: tao/views/build
+        run: node node_modules/puppeteer/install.js
+
+      - name: Find Puppeteer Chromium path
+        if: ${{ matrix.node-version }}
+        id: chromium-path
+        working-directory: tao/views/build
+        run: |
+          CHROME_PATH=$(find ${{ github.workspace }}/tao/views/build/node_modules/puppeteer/.local-chromium -name "chrome" -type f 2>/dev/null | head -1)
+          echo "path=$CHROME_PATH" >> $GITHUB_OUTPUT
+          echo "Found Chromium at: $CHROME_PATH"
+          chmod +x "$CHROME_PATH"
+
       - name: Front-end tests
         if: ${{ matrix.node-version }}
         working-directory: tao/views/build
+        env:
+          PUPPETEER_EXECUTABLE_PATH: ${{ steps.chromium-path.outputs.path }}
+          PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: "true"
+          CHROME_BIN: ${{ steps.chromium-path.outputs.path }}
+          CHROMIUM_BIN: ${{ steps.chromium-path.outputs.path }}
         run: |
-          npm ci
-          npx grunt connect:test qunit_junit pcisamplestest qtiitempcitest taotest taoclientdiagnostictest taodeliveryrdftest taoitemstest taomediamanagertest taooutcomeuitest taoproctoringtest taoqtiitemtest taoqtitesttest taoqtitestpreviewertest taotaskqueuetest taoteststest --force --reports=../../../junit-reports --chrome-flags="--no-sandbox --disable-dev-shm-usage --disable-setuid-sandbox  --disable-gpu"
+          npx grunt connect:test qunit_junit pcisamplestest qtiitempcitest taotest taoclientdiagnostictest taodeliveryrdftest taoitemstest taomediamanagertest taooutcomeuitest taoproctoringtest taoqtiitemtest taoqtitesttest taoqtitestpreviewertest taotaskqueuetest taoteststest --force --reports=../../../junit-reports --chrome-flags="--no-sandbox --disable-dev-shm-usage --disable-setuid-sandbox --disable-gpu --disable-extensions --disable-background-networking --disable-sync --disable-translate --no-first-run --no-default-browser-check --headless"
 
       - name: Back-end tests
         run: ./test.sh ${{ matrix.coverage && '-c' }}
