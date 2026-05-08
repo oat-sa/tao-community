@@ -214,6 +214,7 @@ jobs:
         uses: mikepenz/action-junit-report@v3
         id: fe-junit
         with:
+          report_paths: junit-reports/**/*.xml
           job_summary: false
 
       - name: Parse the the back-end reports
