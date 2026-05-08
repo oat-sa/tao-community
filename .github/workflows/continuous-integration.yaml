@@ -98,16 +98,88 @@ jobs:
           echo "Found Chromium at: $CHROME_PATH"
           chmod +x "$CHROME_PATH"
 
-      - name: Front-end tests
+      # Separate Grunt invocations give a fresh Chromium/page per suite and make failures easier to pinpoint
+      # (long single runs often hit Puppeteer "Target closed" on CI).
+      - name: Configure Puppeteer environment for Grunt
+        if: ${{ matrix.node-version }}
+        run: |
+          {
+            echo "PUPPETEER_EXECUTABLE_PATH=${{ steps.chromium-path.outputs.path }}"
+            echo "PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true"
+            echo "CHROME_BIN=${{ steps.chromium-path.outputs.path }}"
+            echo "CHROMIUM_BIN=${{ steps.chromium-path.outputs.path }}"
+            echo "GRUNT_CHROME_FLAGS=--no-sandbox --disable-dev-shm-usage --disable-setuid-sandbox --disable-gpu --disable-extensions --disable-background-networking --disable-sync --disable-translate --no-first-run --no-default-browser-check --headless"
+          } >> "$GITHUB_ENV"
+
+      - name: Front-end tests (pcisamplestest)
         if: ${{ matrix.node-version }}
         working-directory: tao/views/build
-        env:
-          PUPPETEER_EXECUTABLE_PATH: ${{ steps.chromium-path.outputs.path }}
-          PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: "true"
-          CHROME_BIN: ${{ steps.chromium-path.outputs.path }}
-          CHROMIUM_BIN: ${{ steps.chromium-path.outputs.path }}
-        run: |
-          npx grunt connect:test qunit_junit pcisamplestest qtiitempcitest taotest taoclientdiagnostictest taodeliveryrdftest taoitemstest taomediamanagertest taooutcomeuitest taoproctoringtest taoqtiitemtest taoqtitesttest taoqtitestpreviewertest taotaskqueuetest taoteststest --force --reports=../../../junit-reports --chrome-flags="--no-sandbox --disable-dev-shm-usage --disable-setuid-sandbox --disable-gpu --disable-extensions --disable-background-networking --disable-sync --disable-translate --no-first-run --no-default-browser-check --headless"
+        run: npx grunt connect:test qunit_junit pcisamplestest --force --reports=../../../junit-reports --chrome-flags="$GRUNT_CHROME_FLAGS"
+
+      - name: Front-end tests (qtiitempcitest)
+        if: ${{ matrix.node-version }}
+        working-directory: tao/views/build
+        run: npx grunt connect:test qunit_junit qtiitempcitest --force --reports=../../../junit-reports --chrome-flags="$GRUNT_CHROME_FLAGS"
+
+      - name: Front-end tests (taotest)
+        if: ${{ matrix.node-version }}
+        working-directory: tao/views/build
+        run: npx grunt connect:test qunit_junit taotest --force --reports=../../../junit-reports --chrome-flags="$GRUNT_CHROME_FLAGS"
+
+      - name: Front-end tests (taoclientdiagnostictest)
+        if: ${{ matrix.node-version }}
+        working-directory: tao/views/build
+        run: npx grunt connect:test qunit_junit taoclientdiagnostictest --force --reports=../../../junit-reports --chrome-flags="$GRUNT_CHROME_FLAGS"
+
+      - name: Front-end tests (taodeliveryrdftest)
+        if: ${{ matrix.node-version }}
+        working-directory: tao/views/build
+        run: npx grunt connect:test qunit_junit taodeliveryrdftest --force --reports=../../../junit-reports --chrome-flags="$GRUNT_CHROME_FLAGS"
+
+      - name: Front-end tests (taoitemstest)
+        if: ${{ matrix.node-version }}
+        working-directory: tao/views/build
+        run: npx grunt connect:test qunit_junit taoitemstest --force --reports=../../../junit-reports --chrome-flags="$GRUNT_CHROME_FLAGS"
+
+      - name: Front-end tests (taomediamanagertest)
+        if: ${{ matrix.node-version }}
+        working-directory: tao/views/build
+        run: npx grunt connect:test qunit_junit taomediamanagertest --force --reports=../../../junit-reports --chrome-flags="$GRUNT_CHROME_FLAGS"
+
+      - name: Front-end tests (taooutcomeuitest)
+        if: ${{ matrix.node-version }}
+        working-directory: tao/views/build
+        run: npx grunt connect:test qunit_junit taooutcomeuitest --force --reports=../../../junit-reports --chrome-flags="$GRUNT_CHROME_FLAGS"
+
+      - name: Front-end tests (taoproctoringtest)
+        if: ${{ matrix.node-version }}
+        working-directory: tao/views/build
+        run: npx grunt connect:test qunit_junit taoproctoringtest --force --reports=../../../junit-reports --chrome-flags="$GRUNT_CHROME_FLAGS"
+
+      - name: Front-end tests (taoqtiitemtest)
+        if: ${{ matrix.node-version }}
+        working-directory: tao/views/build
+        run: npx grunt connect:test qunit_junit taoqtiitemtest --force --reports=../../../junit-reports --chrome-flags="$GRUNT_CHROME_FLAGS"
+
+      - name: Front-end tests (taoqtitesttest)
+        if: ${{ matrix.node-version }}
+        working-directory: tao/views/build
+        run: npx grunt connect:test qunit_junit taoqtitesttest --force --reports=../../../junit-reports --chrome-flags="$GRUNT_CHROME_FLAGS"
+
+      - name: Front-end tests (taoqtitestpreviewertest)
+        if: ${{ matrix.node-version }}
+        working-directory: tao/views/build
+        run: npx grunt connect:test qunit_junit taoqtitestpreviewertest --force --reports=../../../junit-reports --chrome-flags="$GRUNT_CHROME_FLAGS"
+
+      - name: Front-end tests (taotaskqueuetest)
+        if: ${{ matrix.node-version }}
+        working-directory: tao/views/build
+        run: npx grunt connect:test qunit_junit taotaskqueuetest --force --reports=../../../junit-reports --chrome-flags="$GRUNT_CHROME_FLAGS"
+
+      - name: Front-end tests (taoteststest)
+        if: ${{ matrix.node-version }}
+        working-directory: tao/views/build
+        run: npx grunt connect:test qunit_junit taoteststest --force --reports=../../../junit-reports --chrome-flags="$GRUNT_CHROME_FLAGS"
 
       - name: Back-end tests
         run: ./test.sh ${{ matrix.coverage && '-c' }}
