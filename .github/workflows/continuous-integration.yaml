@@ -100,32 +100,30 @@ jobs:
         working-directory: tao/views/build
         run: npm ci
 
-      - name: Install compatible Chromium for Puppeteer
+      - name: Install Chrome for Puppeteer
         if: ${{ matrix.node-version }}
         working-directory: tao/views/build
-        run: node node_modules/puppeteer/install.js
+        run: npx puppeteer browsers install chrome
 
-      - name: Find Puppeteer Chromium path
+      - name: Find Puppeteer Chrome path
         if: ${{ matrix.node-version }}
         id: chromium-path
         working-directory: tao/views/build
         run: |
-          CHROME_PATH=$(find ${{ github.workspace }}/tao/views/build/node_modules/puppeteer/.local-chromium -name "chrome" -type f 2>/dev/null | head -1)
+          CHROME_PATH=$(node -p "require('puppeteer').executablePath()")
           echo "path=$CHROME_PATH" >> $GITHUB_OUTPUT
-          echo "Found Chromium at: $CHROME_PATH"
+          echo "Found Chrome at: $CHROME_PATH"
           chmod +x "$CHROME_PATH"
 
-      # grunt-contrib-qunit 3.x drives Puppeteer 1.20 (old Chromium). Split suites + retries avoid flaky
-      # "Protocol error (Page.addScriptToEvaluateOnNewDocument): Target closed" on GitHub-hosted runners.
+      # Split suites + retries reduce flaky headless Chrome failures on GitHub-hosted runners.
       - name: Configure Puppeteer environment for Grunt
         if: ${{ matrix.node-version }}
         run: |
           {
             echo "PUPPETEER_EXECUTABLE_PATH=${{ steps.chromium-path.outputs.path }}"
-            echo "PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true"
             echo "CHROME_BIN=${{ steps.chromium-path.outputs.path }}"
             echo "CHROMIUM_BIN=${{ steps.chromium-path.outputs.path }}"
-            echo "GRUNT_CHROME_FLAGS=--no-sandbox --disable-dev-shm-usage --disable-setuid-sandbox --disable-gpu --disable-extensions --disable-background-networking --disable-sync --disable-translate --no-first-run --no-default-browser-check --disable-software-rasterizer"
+            echo "CHROMIUM_FLAGS=--no-sandbox --disable-dev-shm-usage --disable-setuid-sandbox --disable-gpu --disable-extensions --disable-background-networking --disable-sync --disable-translate --no-first-run --no-default-browser-check --disable-software-rasterizer"
           } >> "$GITHUB_ENV"
 
       - name: Front-end tests (pcisamplestest)
