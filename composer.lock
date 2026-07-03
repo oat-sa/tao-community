@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3f3b3722c6b3d48e5438e6d64bbf79b6",
+    "content-hash": "552bfa4990e8f8bf43d950709097589b",
     "packages": [
         {
             "name": "brick/math",
@@ -4283,16 +4283,16 @@
         },
         {
             "name": "oat-sa/extension-tao-delivery-rdf",
-            "version": "v14.26.4",
+            "version": "dev-fix/unit-tests",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oat-sa/extension-tao-delivery-rdf.git",
-                "reference": "47be6bb725ac428631c3b2c3211175e48e2d83c4"
+                "reference": "7b9510bcdf796ce91e24614f522634d2ca3e7810"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oat-sa/extension-tao-delivery-rdf/zipball/47be6bb725ac428631c3b2c3211175e48e2d83c4",
-                "reference": "47be6bb725ac428631c3b2c3211175e48e2d83c4",
+                "url": "https://api.github.com/repos/oat-sa/extension-tao-delivery-rdf/zipball/7b9510bcdf796ce91e24614f522634d2ca3e7810",
+                "reference": "7b9510bcdf796ce91e24614f522634d2ca3e7810",
                 "shasum": ""
             },
             "require": {
@@ -4331,9 +4331,9 @@
             ],
             "support": {
                 "issues": "https://github.com/oat-sa/extension-tao-delivery-rdf/issues",
-                "source": "https://github.com/oat-sa/extension-tao-delivery-rdf/tree/v14.26.4"
+                "source": "https://github.com/oat-sa/extension-tao-delivery-rdf/tree/fix/unit-tests"
             },
-            "time": "2026-05-15T14:22:31+00:00"
+            "time": "2026-07-03T17:02:33+00:00"
         },
         {
             "name": "oat-sa/extension-tao-eventlog",
@@ -13342,6 +13342,12 @@
     ],
     "aliases": [
         {
+            "package": "oat-sa/extension-tao-delivery-rdf",
+            "version": "dev-fix/unit-tests",
+            "alias": "14.26.5",
+            "alias_normalized": "14.26.5.0"
+        },
+        {
             "package": "phpdocumentor/reflection-docblock",
             "version": "5.3.0.0",
             "alias": "2.0.5",
@@ -13349,7 +13355,9 @@
         }
     ],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": {
+        "oat-sa/extension-tao-delivery-rdf": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {},
