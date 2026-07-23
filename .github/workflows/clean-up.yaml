@@ -1,0 +1,21 @@
+name: Clean up
+
+on:
+  - push
+
+jobs:
+  clean-up:
+    concurrency: clean-up-${{ github.ref }}
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'Clean up the gh-pages')"
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: ${{ github.ref_name }}
+      - name: Remove stale directories
+        run: comm -23 <(find . -type d -name _css | sed -E "s/\.\/(.*)\/_css/\1/g" | sort) <(git branch -r | sed -E "s/^ *origin\///g" | sort) | xargs rm -rf
+      - name: Commit and push
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: Clean up the gh-pages
