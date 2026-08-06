@@ -1,5 +1,7 @@
 name: Release tao-community
 
+run-name: Release tao-community (${{ inputs.coordinator_correlation_id || format('manual-{0}', github.run_id) }})
+
 on:
   workflow_dispatch:
     inputs:
@@ -9,8 +11,9 @@ on:
         type: choice
         options: [stable, rc, lts, backport]
       source_ref:
-        description: Source branch or ref
-        required: true
+        description: Source branch
+        required: false
+        default: develop
         type: string
       release_version:
         description: Application release version
@@ -18,6 +21,10 @@ on:
         type: string
       package_manifest_run_id:
         description: ci-pipelines run containing release-package-manifest
+        required: false
+        type: string
+      coordinator_correlation_id:
+        description: Correlation ID supplied by ci-pipelines
         required: false
         type: string
       allow_stable_fallback:
@@ -56,6 +63,7 @@ jobs:
       SOURCE_REF: ${{ inputs.source_ref }}
       RELEASE_VERSION: ${{ inputs.release_version }}
       MANIFEST_RUN_ID: ${{ inputs.package_manifest_run_id }}
+      COORDINATOR_CORRELATION_ID: ${{ inputs.coordinator_correlation_id || format('manual-{0}', github.run_id) }}
       ALLOW_STABLE_FALLBACK: ${{ inputs.allow_stable_fallback }}
       ALLOW_LTS_FALLBACK: ${{ inputs.allow_lts_fallback }}
       BACKPORT_PACKAGE: ${{ inputs.backport_package }}
@@ -73,6 +81,8 @@ jobs:
             --release_type "$RELEASE_TYPE" \
             --source_ref "$SOURCE_REF" \
             --release_version "$RELEASE_VERSION" \
+            --package_manifest_run_id "$MANIFEST_RUN_ID" \
+            --coordinator_correlation_id "$COORDINATOR_CORRELATION_ID" \
             --allow_stable_fallback "$ALLOW_STABLE_FALLBACK" \
             --allow_lts_fallback "$ALLOW_LTS_FALLBACK" \
             --backport_package "$BACKPORT_PACKAGE" \
@@ -97,20 +107,29 @@ jobs:
           branch="release-$RELEASE_VERSION"
           tag="release-$RELEASE_VERSION"
           pr_url=""
-          release_url=""
-          manifest_path=""
+           release_url=""
+           manifest_path=""
+           mkdir -p .release-input
+           printf '{"release_type":"%s","source_ref":"%s","package_results":[]}' "$RELEASE_TYPE" "$SOURCE_REF" > .release-input/release-package-manifest.json
+           manifest_artifact=.release-input/release-package-manifest.json
 
           if [ "${{ steps.contract.outcome }}" != success ]; then
             status=failure
             failure_reason="normalized release contract validation failed"
           fi
-           if [ "$status" = success ]; then
-             git fetch --no-tags origin "$SOURCE_REF" || { status=failure; failure_reason="source ref could not be fetched"; }
-             git ls-remote --exit-code --heads origin "$SOURCE_REF" >/dev/null 2>&1 || { status=failure; failure_reason="source ref must be an existing branch"; }
-           fi
+            source_sha=""
+            if [ "$status" = success ]; then
+              git fetch --no-tags origin "$SOURCE_REF" || { status=failure; failure_reason="source ref could not be fetched"; }
+              git ls-remote --exit-code --heads origin "$SOURCE_REF" >/dev/null 2>&1 || { status=failure; failure_reason="source ref must be an existing branch"; }
+              source_sha="$(git rev-parse "origin/$SOURCE_REF")" || { status=failure; failure_reason="source ref SHA could not be resolved"; }
+            fi
            if [ "$status" = success ]; then
              if git ls-remote --exit-code --heads origin "$branch" >/dev/null 2>&1; then
-               git fetch --no-tags origin "$branch" && git switch -C "$branch" "origin/$branch" || { status=failure; failure_reason="existing release branch could not be reused"; }
+                git fetch --no-tags origin "$branch" && git switch -C "$branch" "origin/$branch" || { status=failure; failure_reason="existing release branch could not be reused"; }
+                if [ "$status" = success ] && [ "$(git merge-base HEAD "origin/$SOURCE_REF")" != "$source_sha" ]; then
+                  status=failure
+                  failure_reason="existing release branch has an incompatible source base SHA"
+                fi
              else
                git switch -C "$branch" "origin/$SOURCE_REF" || { status=failure; failure_reason="release branch could not be prepared"; }
              fi
@@ -239,16 +258,43 @@ jobs:
                package_release_url="https://github.com/$package_repo/releases/tag/$package_tag"
                package_run_url="https://github.com/$package_repo/actions/runs/$package_run_id"
                mkdir -p .release-input
-               jq -n --arg package "$BACKPORT_PACKAGE" --arg repository "$package_repo" --arg tag "$package_tag" --arg version "$backport_version" --arg commit "$package_commit" --arg release_url "$package_release_url" --arg workflow_run_url "$package_run_url" '{package:$package,repository:$repository,tag:$tag,version:$version,commit:$commit,release_url:$release_url,workflow_run_url:$workflow_run_url}' > .release-input/backport-package.json
-               manifest_path=.release-input/backport-package.json
+                jq -n --arg package "$BACKPORT_PACKAGE" --arg repository "$package_repo" --arg tag "$package_tag" --arg version "$backport_version" --arg commit "$package_commit" --arg release_url "$package_release_url" --arg workflow_run_url "$package_run_url" '{release_type:"backport",package_results:[{package:$package,repository:$repository,tag:$tag,version:$version,commit:$commit,release_url:$release_url,workflow_run_url:$workflow_run_url}]}' > "$manifest_artifact"
+                manifest_path="$manifest_artifact"
              fi
            fi
 
-           if [ "$status" = success ] && [ -n "$MANIFEST_RUN_ID" ]; then
+            if [ "$status" = success ] && [ -z "$MANIFEST_RUN_ID" ] && [ -z "$manifest_path" ]; then
+             mkdir -p .release-input
+             jq -r '.require | keys[]' composer.json | while IFS= read -r package; do
+                repository="$(jq -r --arg package "$package" '((.packages // []) + (."packages-dev" // []))[] | select(.name == $package) | .source.url' composer.lock | sed -E -e 's#^https://github.com/([^/]+/[^/]+)(\.git)?$#\1#' -e 's#^git@github.com:([^/]+/[^/]+)(\.git)?$#\1#' | head -n 1)"
+                [[ "$repository" =~ ^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$ ]] || { echo "Could not resolve repository for $package" >&2; exit 1; }
+                gh api --paginate "repos/$repository/branches?per_page=100" > ".release-input/$(printf '%s' "$package" | tr '/' '_')-branches.json" || exit 1
+               gh api --paginate "repos/$repository/tags?per_page=100" > ".release-input/$(printf '%s' "$package" | tr '/' '_')-tags.json" || exit 1
+                workflow_url="$(gh run list --repo "$repository" --workflow release_tao_extension.yml --limit 1 --json url --jq '.[0].url // ""' | tr -d '\n')" || exit 1
+                [[ -n "$workflow_url" ]] || { echo "No extension workflow run found for $package" >&2; exit 1; }
+                printf '%s' "$workflow_url" > ".release-input/$(printf '%s' "$package" | tr '/' '_')-workflow-url"
+             done || { status=failure; failure_reason="target-local package release data could not be read"; }
+             if [ "$status" = success ]; then
+               jq -n --slurpfile composer composer.json --arg release_type "$RELEASE_TYPE" --arg source_ref "$SOURCE_REF" \
+                 '{release_type:$release_type,source_ref:$source_ref,packages:($composer[0].require | keys | map({key:.,value:{repository:.}}) | from_entries)}' > .release-input/package-catalog.json
+               while IFS= read -r package; do
+                 safe_package="$(printf '%s' "$package" | tr '/' '_')"
+                 jq --arg package "$package" --slurpfile branches ".release-input/$safe_package-branches.json" --slurpfile tags ".release-input/$safe_package-tags.json" \
+                   --rawfile workflow_url ".release-input/$safe_package-workflow-url" \
+                   '.packages[$package].branches=($branches[0] | map({name:.name,commit:.commit.sha})) | .packages[$package].tags=($tags[0] | map({name:.name,commit:.commit.sha})) | .packages[$package].workflow_run_url=$workflow_url' \
+                   .release-input/package-catalog.json > .release-input/package-catalog.tmp && mv .release-input/package-catalog.tmp .release-input/package-catalog.json
+               done < <(jq -r '.require | keys[]' composer.json)
+               php scripts/release-community.php resolve --composer composer.json --catalog .release-input/package-catalog.json --release_type "$RELEASE_TYPE" --source_ref "$SOURCE_REF" --release_version "$RELEASE_VERSION" --allow_stable_fallback "$ALLOW_STABLE_FALLBACK" --allow_lts_fallback "$ALLOW_LTS_FALLBACK" --output "$manifest_artifact" || { status=failure; failure_reason="target-local package resolution failed"; }
+               manifest_path="$manifest_artifact"
+             fi
+           fi
+
+            if [ "$status" = success ] && [ -n "$MANIFEST_RUN_ID" ]; then
             mkdir -p .release-input
-            gh run download "$MANIFEST_RUN_ID" --repo oat-sa/ci-pipelines --name release-package-manifest --dir .release-input || { status=failure; failure_reason="package manifest could not be downloaded"; }
-            manifest_path="$(find .release-input -type f -name '*.json' -print -quit)"
-            [ -n "$manifest_path" ] || { status=failure; failure_reason="package manifest JSON is missing"; }
+             gh run download "$MANIFEST_RUN_ID" --repo oat-sa/ci-pipelines --name release-package-manifest --dir .release-input/external || { status=failure; failure_reason="package manifest could not be downloaded"; }
+             external_manifest="$(find .release-input/external -type f -name 'release-package-manifest.json' -print -quit)"
+             [ -n "$external_manifest" ] || { status=failure; failure_reason="package manifest JSON is missing"; }
+             if [ "$status" = success ]; then cp "$external_manifest" "$manifest_artifact"; manifest_path="$manifest_artifact"; fi
           fi
 
            if [ "$status" = success ] && [ -n "$manifest_path" ]; then
@@ -266,6 +312,7 @@ jobs:
             fi
             if [ "$status" = success ]; then
               composer validate --no-check-publish || { status=failure; failure_reason="Composer validation failed"; }
+              php scripts/release-community.php lock-validate --lock composer.lock --manifest "$manifest_path" || { status=failure; failure_reason="Composer lock does not match package results"; }
                php scripts/release-community.php scope \
                  --before .composer-before.json \
                  --after composer.json \
@@ -314,7 +361,8 @@ jobs:
             --output release-result.json \
             --release_type "$RELEASE_TYPE" \
             --source_ref "$SOURCE_REF" \
-            --release_version "$RELEASE_VERSION" \
+             --release_version "$RELEASE_VERSION" \
+             --coordinator_correlation_id "$COORDINATOR_CORRELATION_ID" \
             --status "$status" \
             --branch "$branch" \
             --pull_request_url "$pr_url" \
@@ -332,6 +380,14 @@ jobs:
         with:
           name: release-result
           path: release-result.json
+          if-no-files-found: error
+
+      - name: Publish release-package-manifest artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-package-manifest
+          path: .release-input/release-package-manifest.json
           if-no-files-found: error
 
       - name: Add workflow summary

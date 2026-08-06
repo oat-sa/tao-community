@@ -51,6 +51,19 @@ function releaseBackportAllocateVersion(string $current, array $tags): string
 
 function releaseBackportValidateLockScope(array $before, array $after, string $package): void
 {
+    $beforePackage = 0;
+    $afterPackage = 0;
+    foreach (['packages', 'packages-dev'] as $section) {
+        foreach (($before[$section] ?? []) as $entry) {
+            $beforePackage += (($entry['name'] ?? '') === $package) ? 1 : 0;
+        }
+        foreach (($after[$section] ?? []) as $entry) {
+            $afterPackage += (($entry['name'] ?? '') === $package) ? 1 : 0;
+        }
+    }
+    if ($beforePackage !== 1 || $afterPackage !== 1) {
+        releaseBackportError('Backport lock scope requires exactly one affected package entry');
+    }
     $normalize = static function (array $lock) use ($package): array {
         unset($lock['content-hash']);
         foreach (['packages', 'packages-dev'] as $section) {
