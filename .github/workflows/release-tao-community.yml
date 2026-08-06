@@ -1,0 +1,318 @@
+name: Release tao-community
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_type:
+        description: Release mode
+        required: true
+        type: choice
+        options: [stable, rc, lts, backport]
+      source_ref:
+        description: Source branch or ref
+        required: true
+        type: string
+      release_version:
+        description: Application release version
+        required: true
+        type: string
+      package_manifest_run_id:
+        description: ci-pipelines run containing release-package-manifest
+        required: false
+        type: string
+      allow_stable_fallback:
+        description: Allow stable package fallback
+        required: true
+        default: false
+        type: boolean
+      allow_lts_fallback:
+        description: Allow LTS package fallback
+        required: true
+        default: false
+        type: boolean
+      backport_package:
+        description: Package to backport
+        required: false
+        type: string
+      backport_source_pr:
+        description: Source package PR URL or number
+        required: false
+        type: string
+      backport_target_branch:
+        description: Target package release branch
+        required: false
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.CI_GITHUB_TOKEN || github.token }}
+      RELEASE_TYPE: ${{ inputs.release_type }}
+      SOURCE_REF: ${{ inputs.source_ref }}
+      RELEASE_VERSION: ${{ inputs.release_version }}
+      MANIFEST_RUN_ID: ${{ inputs.package_manifest_run_id }}
+      ALLOW_STABLE_FALLBACK: ${{ inputs.allow_stable_fallback }}
+      ALLOW_LTS_FALLBACK: ${{ inputs.allow_lts_fallback }}
+      BACKPORT_PACKAGE: ${{ inputs.backport_package }}
+      BACKPORT_SOURCE_PR: ${{ inputs.backport_source_pr }}
+      BACKPORT_TARGET_BRANCH: ${{ inputs.backport_target_branch }}
+    steps:
+      - name: Checkout workflow code
+        uses: actions/checkout@v4
+
+      - name: Validate normalized release contract
+        id: contract
+        continue-on-error: true
+        run: |
+          php scripts/release-community.php validate \
+            --release_type "$RELEASE_TYPE" \
+            --source_ref "$SOURCE_REF" \
+            --release_version "$RELEASE_VERSION" \
+            --allow_stable_fallback "$ALLOW_STABLE_FALLBACK" \
+            --allow_lts_fallback "$ALLOW_LTS_FALLBACK" \
+            --backport_package "$BACKPORT_PACKAGE" \
+            --backport_source_pr "$BACKPORT_SOURCE_PR" \
+            --backport_target_branch "$BACKPORT_TARGET_BRANCH"
+
+      - name: Set up PHP and Composer
+        if: always()
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          tools: composer
+
+      - name: Run release orchestration
+        id: orchestration
+        if: always()
+        continue-on-error: true
+        run: |
+          set +e
+          status=success
+          failure_reason=""
+          branch="release-$RELEASE_VERSION"
+          tag="release-$RELEASE_VERSION"
+          pr_url=""
+          release_url=""
+          manifest_path=""
+
+          if [ "${{ steps.contract.outcome }}" != success ]; then
+            status=failure
+            failure_reason="normalized release contract validation failed"
+          fi
+          if [ "$status" = success ]; then
+            git fetch --no-tags origin "$SOURCE_REF" || { status=failure; failure_reason="source ref could not be fetched"; }
+          fi
+           if [ "$status" = success ]; then
+             if git ls-remote --exit-code --heads origin "$branch" >/dev/null 2>&1; then
+               git fetch --no-tags origin "$branch" && git switch -C "$branch" "origin/$branch" || { status=failure; failure_reason="existing release branch could not be reused"; }
+             else
+               git switch -C "$branch" "origin/$SOURCE_REF" || { status=failure; failure_reason="release branch could not be prepared"; }
+             fi
+           fi
+
+           if [ "$status" = success ] && [ "$RELEASE_TYPE" = backport ]; then
+             case "$BACKPORT_PACKAGE" in
+               [a-z0-9_.-]*/[a-z0-9_.-]*) ;;
+               *) status=failure; failure_reason="invalid backport package" ;;
+             esac
+             if [ "$status" = success ]; then
+               php scripts/backport-release.php repository --lock composer.lock --package "$BACKPORT_PACKAGE" --output .backport-repository || { status=failure; failure_reason="package repository could not be resolved"; }
+               package_repo="$(tr -d '\n' < .backport-repository)"
+               case "$package_repo" in
+                 */*) ;;
+                 *) status=failure; failure_reason="package repository could not be resolved" ;;
+               esac
+             fi
+             if [ "$status" = success ]; then
+               case "$BACKPORT_SOURCE_PR" in
+                 http://github.com/*|https://github.com/*) pr_number="${BACKPORT_SOURCE_PR##*/}" ;;
+                 [0-9]*) pr_number="$BACKPORT_SOURCE_PR" ;;
+                 *) status=failure; failure_reason="invalid source pull request" ;;
+               esac
+               case "$pr_number" in
+                 ''|*[!0-9]*) status=failure; failure_reason="invalid source pull request number" ;;
+               esac
+             fi
+             if [ "$status" = success ]; then
+               pr_metadata="$(gh api "repos/$package_repo/pulls/$pr_number" --jq '[.base.repo.full_name, (.merged_at // "")] | @tsv')" || { status=failure; failure_reason="source pull request could not be read"; }
+               source_repo="${pr_metadata%%$'\t'*}"
+               merged_at="${pr_metadata#*$'\t'}"
+               if [ "$source_repo" != "$package_repo" ]; then status=failure; failure_reason="source pull request repository does not own the package"; fi
+               if [ -z "$merged_at" ]; then status=failure; failure_reason="source pull request is not merged"; fi
+             fi
+             if [ "$status" = success ]; then
+               current_version="$(php -r '$c=json_decode(file_get_contents("composer.json"), true); echo $c["require"][getenv("BACKPORT_PACKAGE")] ?? "";' )"
+               [ -n "$current_version" ] || { status=failure; failure_reason="backport package is not a direct requirement"; }
+             fi
+             if [ "$status" = success ]; then
+               gh api --paginate "repos/$package_repo/tags" --jq '.[].name' | jq -Rsc 'split("\n") | map(select(length > 0))' > .backport-tags.json || { status=failure; failure_reason="package tags could not be read"; }
+               php scripts/backport-release.php allocate --current "$current_version" --tags .backport-tags.json --output .backport-version || { status=failure; failure_reason="backport version could not be allocated"; }
+               backport_version="$(tr -d '\n' < .backport-version)"
+               backport_branch="release-$backport_version"
+             fi
+             if [ "$status" = success ]; then
+               rm -rf .backport-package
+               gh repo clone "$package_repo" .backport-package -- --no-tags || { status=failure; failure_reason="package repository could not be cloned"; }
+             fi
+             if [ "$status" = success ]; then
+               git -C .backport-package fetch origin "$BACKPORT_TARGET_BRANCH" || { status=failure; failure_reason="backport target branch does not exist"; }
+               git -C .backport-package fetch origin "$backport_branch" 2>/dev/null || true
+               target_sha="$(git -C .backport-package rev-parse "origin/$BACKPORT_TARGET_BRANCH")" || { status=failure; failure_reason="backport target branch does not exist"; }
+               if [ "$status" = success ] && git -C .backport-package show-ref --verify --quiet "refs/remotes/origin/$backport_branch"; then
+                 branch_sha="$(git -C .backport-package rev-parse "origin/$backport_branch")"
+                 git -C .backport-package merge-base --is-ancestor "$target_sha" "$branch_sha" || { status=failure; failure_reason="existing backport branch has an incompatible base"; }
+                 git -C .backport-package switch -C "$backport_branch" "origin/$backport_branch" || { status=failure; failure_reason="existing backport branch could not be reused"; }
+               elif [ "$status" = success ]; then
+                 git -C .backport-package switch -C "$backport_branch" "origin/$BACKPORT_TARGET_BRANCH" || { status=failure; failure_reason="backport branch could not be created"; }
+               fi
+             fi
+             if [ "$status" = success ]; then
+               gh api --paginate "repos/$package_repo/pulls/$pr_number/commits" --jq '.[].sha' > .backport-commits || { status=failure; failure_reason="source pull request commits could not be read"; }
+               while IFS= read -r commit_sha; do
+                 [ -n "$commit_sha" ] || continue
+                 git -C .backport-package cherry-pick "$commit_sha" || {
+                   if git -C .backport-package diff --quiet && git -C .backport-package diff --cached --quiet; then
+                     git -C .backport-package cherry-pick --skip || { status=failure; failure_reason="source pull request cherry-pick could not be resumed"; break; }
+                   else
+                     git -C .backport-package cherry-pick --abort || true; status=failure; failure_reason="source pull request cherry-pick conflicted"; break
+                   fi
+                 }
+               done < .backport-commits
+             fi
+             if [ "$status" = success ]; then
+               git -C .backport-package push origin "HEAD:$backport_branch" || { status=failure; failure_reason="backport branch push failed"; }
+             fi
+             if [ "$status" = success ]; then
+               dispatch_started="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+               gh workflow run release_tao_extension.yml --repo "$package_repo" --ref "$backport_branch" \
+                 -f release_branch="$backport_branch" -f release_version="$backport_version" -f build_fe=auto -f build_locale=auto -f backport=true \
+                 || { status=failure; failure_reason="extension backport workflow could not be dispatched"; }
+             fi
+             if [ "$status" = success ]; then
+               package_run_id=""
+               for attempt in $(seq 1 30); do
+                 package_run_id="$(gh run list --repo "$package_repo" --workflow release_tao_extension.yml --branch "$backport_branch" --event workflow_dispatch --limit 20 --json databaseId,createdAt | jq -r --arg started "$dispatch_started" 'first(.[] | select(.createdAt >= $started) | .databaseId) // empty')"
+                 [ -n "$package_run_id" ] && break
+                 sleep 10
+               done
+               [ -n "$package_run_id" ] || { status=failure; failure_reason="extension backport workflow run could not be identified"; }
+               if [ "$status" = success ]; then
+                 package_conclusion="$(gh run view "$package_run_id" --repo "$package_repo" --json status,conclusion --jq '.status + ":" + (.conclusion // "")')"
+                 while [ "${package_conclusion%%:*}" != completed ]; do sleep 10; package_conclusion="$(gh run view "$package_run_id" --repo "$package_repo" --json status,conclusion --jq '.status + ":" + (.conclusion // "")')"; done
+                 [ "${package_conclusion#*:}" = success ] || { status=failure; failure_reason="extension backport workflow failed"; }
+               fi
+             fi
+             if [ "$status" = success ]; then
+               package_tag="v$backport_version"
+               package_commit="$(gh api "repos/$package_repo/commits/$package_tag" --jq .sha)" || { status=failure; failure_reason="backport package tag is missing"; }
+               package_release_url="https://github.com/$package_repo/releases/tag/$package_tag"
+               package_run_url="https://github.com/$package_repo/actions/runs/$package_run_id"
+               mkdir -p .release-input
+               jq -n --arg package "$BACKPORT_PACKAGE" --arg repository "$package_repo" --arg tag "$package_tag" --arg version "$backport_version" --arg commit "$package_commit" --arg release_url "$package_release_url" --arg workflow_run_url "$package_run_url" '{package:$package,repository:$repository,tag:$tag,version:$version,commit:$commit,release_url:$release_url,workflow_run_url:$workflow_run_url}' > .release-input/backport-package.json
+               manifest_path=.release-input/backport-package.json
+             fi
+           fi
+
+           if [ "$status" = success ] && [ -n "$MANIFEST_RUN_ID" ]; then
+            mkdir -p .release-input
+            gh run download "$MANIFEST_RUN_ID" --repo oat-sa/ci-pipelines --name release-package-manifest --dir .release-input || { status=failure; failure_reason="package manifest could not be downloaded"; }
+            manifest_path="$(find .release-input -type f -name '*.json' -print -quit)"
+            [ -n "$manifest_path" ] || { status=failure; failure_reason="package manifest JSON is missing"; }
+          fi
+
+           if [ "$status" = success ] && [ -n "$manifest_path" ]; then
+            cp composer.json .composer-before.json
+            cp composer.lock .composer-lock-before.json
+            php scripts/release-community.php apply \
+              --manifest "$manifest_path" \
+              --release_type "$RELEASE_TYPE" \
+              --allow_stable_fallback "$ALLOW_STABLE_FALLBACK" \
+              --allow_lts_fallback "$ALLOW_LTS_FALLBACK" \
+              --backport_package "$BACKPORT_PACKAGE" \
+              --output .release-packages || { status=failure; failure_reason="package manifest validation failed"; }
+            if [ "$status" = success ] && [ -s .release-packages ]; then
+              xargs composer update --no-install --no-scripts < .release-packages || { status=failure; failure_reason="Composer update failed"; }
+            fi
+            if [ "$status" = success ]; then
+              composer validate --no-check-publish || { status=failure; failure_reason="Composer validation failed"; }
+               php scripts/release-community.php scope \
+                 --before .composer-before.json \
+                 --after composer.json \
+                 --release_type "$RELEASE_TYPE" \
+                 --backport_package "$BACKPORT_PACKAGE" || { status=failure; failure_reason="Composer scope validation failed"; }
+               if [ "$status" = success ] && [ "$RELEASE_TYPE" = backport ]; then
+                 php scripts/backport-release.php lock-scope --before .composer-lock-before.json --after composer.lock --package "$BACKPORT_PACKAGE" || { status=failure; failure_reason="Backport changed an unexpected Composer lock entry"; }
+               fi
+             fi
+          fi
+
+          if [ "$status" = success ] && git diff --quiet; then
+            failure_reason="release has no Composer changes"
+            status=failure
+          fi
+          if [ "$status" = success ]; then
+            git diff --check || { status=failure; failure_reason="whitespace validation failed"; }
+            git add composer.json composer.lock
+            git commit -m "chore: prepare tao-community $RELEASE_VERSION" || { status=failure; failure_reason="release commit failed"; }
+            git push origin "$branch" || { status=failure; failure_reason="release branch push failed"; }
+          fi
+          if [ "$status" = success ]; then
+            pr_url="$(gh pr list --repo "$GITHUB_REPOSITORY" --head "$branch" --base "$SOURCE_REF" --json url --jq '.[0].url' | tr -d '\n')"
+            if [ -z "$pr_url" ]; then
+              pr_url="$(gh pr create --repo "$GITHUB_REPOSITORY" --base "$SOURCE_REF" --head "$branch" --title "Release tao-community $RELEASE_VERSION" --body "Automated tao-community release preparation for $RELEASE_VERSION.")" || { status=failure; failure_reason="release PR could not be created"; }
+            fi
+          fi
+          if [ "$status" = success ]; then
+            existing_tag_sha="$(git ls-remote origin "refs/tags/$tag" | cut -f1)"
+            local_sha="$(git rev-parse HEAD)"
+            if [ -n "$existing_tag_sha" ] && [ "$existing_tag_sha" != "$local_sha" ]; then
+              status=failure
+              failure_reason="application tag already points to another commit"
+            elif [ -z "$existing_tag_sha" ]; then
+              git tag "$tag" HEAD
+              git push origin "refs/tags/$tag" || { status=failure; failure_reason="application tag could not be pushed"; }
+            fi
+            if [ "$status" = success ]; then
+              release_url="$(gh release view "$tag" --repo "$GITHUB_REPOSITORY" --json url --jq .url 2>/dev/null || true)"
+              if [ -z "$release_url" ]; then
+                release_url="$(gh release create "$tag" --repo "$GITHUB_REPOSITORY" --title "tao-community $RELEASE_VERSION" --generate-notes)" || { status=failure; failure_reason="GitHub release could not be created"; }
+              fi
+            fi
+          fi
+          php scripts/release-community.php result \
+            --output release-result.json \
+            --release_type "$RELEASE_TYPE" \
+            --source_ref "$SOURCE_REF" \
+            --release_version "$RELEASE_VERSION" \
+            --status "$status" \
+            --branch "$branch" \
+            --pull_request_url "$pr_url" \
+            --tag "$tag" \
+            --release_url "$release_url" \
+            --package_manifest "$manifest_path" \
+            --failure_reason "$failure_reason"
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          echo "failure_reason=$failure_reason" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Publish release-result artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-result
+          path: release-result.json
+          if-no-files-found: error
+
+      - name: Add workflow summary
+        if: always()
+        run: |
+          if [ -f release-result.json ]; then
+            printf '### tao-community release\n\n```json\n' >> "$GITHUB_STEP_SUMMARY"
+            cat release-result.json >> "$GITHUB_STEP_SUMMARY"
+            printf '\n```\n' >> "$GITHUB_STEP_SUMMARY"
+          fi
