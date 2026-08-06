@@ -68,6 +68,11 @@ function releaseCommunityValidateContract(array $input): array
     return $errors;
 }
 
+function releaseCommunityBoolean(mixed $value): bool
+{
+    return in_array($value, [true, 'true', '1', 1], true);
+}
+
 function releaseCommunityDirectRequirements(array $composer): array
 {
     $requirements = $composer['require'] ?? null;
@@ -110,11 +115,14 @@ function releaseCommunityPackageResult(array $result, string $releaseType): arra
         releaseCommunityError("Package version does not match development tag for {$result['package']}");
     }
 
-    if ($result['repository'] !== $result['package']) {
+    if (strcasecmp($result['repository'], $result['package']) !== 0) {
         releaseCommunityError("Package repository does not match {$result['package']}");
     }
     foreach (['release_url', 'workflow_run_url'] as $urlField) {
-        if ($result[$urlField] === '' || !preg_match('~^https://github\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+/(?:releases/tag|actions/runs)/[^\s]+$~', $result[$urlField])) {
+        $paths = $urlField === 'release_url' && $isDevelopment
+            ? '(?:releases/tag|tree)'
+            : ($urlField === 'release_url' ? 'releases/tag' : 'actions/runs');
+        if ($result[$urlField] === '' || !preg_match("~^https://github\\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+/{$paths}/[^\\s]+$~", $result[$urlField])) {
             releaseCommunityError("Invalid {$urlField} for {$result['package']}");
         }
     }
@@ -141,7 +149,11 @@ function releaseCommunityManifestResults(array $manifest): array
         if (!preg_match('/^[a-z0-9_.-]+\/[a-z0-9_.-]+$/', $package)) {
             releaseCommunityError("Invalid package name: {$package}");
         }
-        $normalized[$package] = releaseCommunityPackageResult($result, (string) ($manifest['release_type'] ?? 'stable'));
+        $normalizedResult = releaseCommunityPackageResult($result, (string) ($manifest['release_type'] ?? 'stable'));
+        if (isset($normalized[$package]) && $normalized[$package] !== $normalizedResult) {
+            releaseCommunityError("Conflicting package results for {$package}");
+        }
+        $normalized[$package] = $normalizedResult;
     }
 
     return $normalized;
@@ -161,8 +173,8 @@ function releaseCommunityApplyManifest(array $composer, array $manifest, string 
 
         $tag = $result['tag'];
         $isDevelopment = (bool) preg_match('/^(?:dev-|dev\/|[^0-9]*release)/i', $tag);
-        if ($releaseType === 'stable' || $releaseType === 'lts') {
-            if ($isDevelopment && !(($releaseType === 'stable' && $allowStableFallback) || ($releaseType === 'lts' && $allowLtsFallback))) {
+        if ($releaseType === 'stable') {
+            if ($isDevelopment && !$allowStableFallback) {
                 releaseCommunityError("Development tag {$tag} is not allowed for {$releaseType}");
             }
             if ($isDevelopment) {
@@ -174,6 +186,8 @@ function releaseCommunityApplyManifest(array $composer, array $manifest, string 
             } else {
                 $tag = releaseCommunityNormalizeTag($tag);
             }
+        } elseif ($releaseType === 'lts' && $isDevelopment) {
+            $tag = $result['version'];
         }
 
         if ($backportPackage !== null && $package !== $backportPackage) {
@@ -212,7 +226,7 @@ function releaseCommunityResolvePackages(array $composer, array $catalog, string
         $tags = is_array($data['tags'] ?? null) ? $data['tags'] : [];
         $branchNames = [];
         if ($releaseType === 'lts') {
-            $branchNames = ["release-{$month}-lts", "dev-release-{$month}-lts", "release-{$month}", "dev-release-{$month}"];
+            $branchNames = ["release-{$month}-lts", "dev-release-{$month}-lts"];
         } elseif ($releaseType === 'rc') {
             $branchNames = ["dev-release-{$month}", "release-{$month}"];
         }
@@ -237,6 +251,10 @@ function releaseCommunityResolvePackages(array $composer, array $catalog, string
                 releaseCommunityError("No stable package tag available for {$package}");
             }
             $tag = (string) $stable['name'];
+            $workflowUrl = (string) (($data['workflow_runs'] ?? [])[(string) $stable['commit']] ?? '');
+            if ($workflowUrl === '') {
+                releaseCommunityError("No successful extension workflow run found for {$package}");
+            }
             $results[] = [
                 'package' => $package,
                 'repository' => $repository,
@@ -244,7 +262,7 @@ function releaseCommunityResolvePackages(array $composer, array $catalog, string
                 'version' => releaseCommunityNormalizeTag($tag),
                 'commit' => (string) $stable['commit'],
                 'release_url' => "https://github.com/{$repository}/releases/tag/{$tag}",
-                'workflow_run_url' => (string) ($data['workflow_run_url'] ?? ''),
+                'workflow_run_url' => $workflowUrl,
             ];
             continue;
         }
@@ -261,28 +279,41 @@ function releaseCommunityResolvePackages(array $composer, array $catalog, string
             if (!preg_match('/^[a-f0-9]{7,64}$/i', $selected[1])) {
                 releaseCommunityError("Invalid branch commit for {$package}");
             }
+            $packageTag = str_starts_with($selected[0], 'dev-') ? $selected[0] : 'dev-' . $selected[0];
             $results[] = [
                 'package' => $package,
                 'repository' => $repository,
-                'tag' => $selected[0],
-                'version' => str_starts_with($selected[0], 'dev-') ? $selected[0] : 'dev-' . $selected[0],
+                'tag' => $packageTag,
+                'version' => $packageTag,
                 'commit' => $selected[1],
                 'release_url' => "https://github.com/{$repository}/tree/{$selected[0]}",
-                'workflow_run_url' => (string) ($data['workflow_run_url'] ?? ''),
+                'workflow_run_url' => (string) (($data['workflow_runs'] ?? [])[$selected[1]] ?? ''),
             ];
+            if ($results[array_key_last($results)]['workflow_run_url'] === '') {
+                releaseCommunityError("No successful extension workflow run found for {$package}");
+            }
             continue;
         }
         $allowFallback = $releaseType === 'lts' ? $allowLtsFallback : $allowStableFallback;
         if (!$allowFallback || $releaseType === 'stable') {
             releaseCommunityError("No matching {$releaseType} release branch for {$package}");
         }
-        $stable = null;
+        $stableCandidates = [];
         foreach ($tags as $candidate) {
             if (is_array($candidate) && isset($candidate['name'], $candidate['commit']) && !preg_match('/(?:dev|rc|alpha|beta|feature|fix|hotfix)/i', (string) $candidate['name'])) {
-                $stable = $candidate;
-                break;
+                try {
+                    releaseCommunityNormalizeTag((string) $candidate['name']);
+                    $stableCandidates[] = $candidate;
+                } catch (Throwable) {
+                    continue;
+                }
             }
         }
+        usort($stableCandidates, static fn (array $left, array $right): int => version_compare(
+            releaseCommunityNormalizeTag((string) $right['name']),
+            releaseCommunityNormalizeTag((string) $left['name'])
+        ));
+        $stable = $stableCandidates[0] ?? null;
         if (!is_array($stable) || !isset($stable['name'], $stable['commit'])) {
             releaseCommunityError("No stable fallback available for {$package}");
         }
@@ -295,8 +326,11 @@ function releaseCommunityResolvePackages(array $composer, array $catalog, string
             'version' => $version,
             'commit' => (string) $stable['commit'],
             'release_url' => "https://github.com/{$repository}/releases/tag/{$tag}",
-            'workflow_run_url' => (string) ($data['workflow_run_url'] ?? ''),
+            'workflow_run_url' => (string) (($data['workflow_runs'] ?? [])[(string) $stable['commit']] ?? ''),
         ];
+        if ($results[array_key_last($results)]['workflow_run_url'] === '') {
+            releaseCommunityError("No successful extension workflow run found for {$package}");
+        }
         $fallbacks[] = [
             'package' => $package,
             'reason' => "No matching {$releaseType} release branch; used latest stable tag",
@@ -384,8 +418,8 @@ if ($command === 'apply') {
         $composer,
         $manifest,
         $arguments['release_type'],
-        $arguments['allow_stable_fallback'] === 'true',
-        $arguments['allow_lts_fallback'] === 'true',
+        releaseCommunityBoolean($arguments['allow_stable_fallback'] ?? false),
+        releaseCommunityBoolean($arguments['allow_lts_fallback'] ?? false),
         $arguments['backport_package'] ?? null
     );
     releaseCommunityWriteJson($composerPath, $result['composer']);
@@ -402,8 +436,8 @@ if ($command === 'resolve') {
         $catalog,
         $arguments['release_type'],
         $arguments['source_ref'],
-        $arguments['allow_stable_fallback'] === 'true',
-        $arguments['allow_lts_fallback'] === 'true',
+        releaseCommunityBoolean($arguments['allow_stable_fallback'] ?? false),
+        releaseCommunityBoolean($arguments['allow_lts_fallback'] ?? false),
         $arguments['release_version'] ?? ''
     ));
     exit(0);
@@ -436,6 +470,8 @@ if ($command === 'result') {
         $manifest = json_decode((string) file_get_contents($arguments['package_manifest']), true);
         if (is_array($manifest) && is_array($manifest['package_results'] ?? null)) {
             $packageResults = $manifest['package_results'];
+        } elseif (($arguments['status'] ?? '') === 'success') {
+            releaseCommunityError("Unreadable package manifest: {$arguments['package_manifest']}");
         }
     }
     releaseCommunityWriteJson($arguments['output'], [

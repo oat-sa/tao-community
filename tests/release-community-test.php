@@ -50,7 +50,13 @@ $resolverComposer = ['require' => ['oat-sa/generis' => '15.19.2']];
 $catalog = ['packages' => [
     'oat-sa/generis' => [
         'repository' => 'oat-sa/generis',
-        'workflow_run_url' => 'https://github.com/oat-sa/generis/actions/runs/4',
+        'workflow_runs' => [
+            str_repeat('0', 40) => 'https://github.com/oat-sa/generis/actions/runs/4',
+            str_repeat('d', 40) => 'https://github.com/oat-sa/generis/actions/runs/5',
+            str_repeat('e', 40) => 'https://github.com/oat-sa/generis/actions/runs/6',
+            str_repeat('f', 40) => 'https://github.com/oat-sa/generis/actions/runs/7',
+            str_repeat('1', 40) => 'https://github.com/oat-sa/generis/actions/runs/8',
+        ],
         'branches' => [
             ['name' => 'dev-release-2026-08', 'commit' => str_repeat('0', 40)],
             ['name' => 'release-2026-08', 'commit' => str_repeat('d', 40)],
@@ -63,7 +69,9 @@ $catalog = ['packages' => [
 $rc = releaseCommunityResolvePackages($resolverComposer, $catalog, 'rc', 'release-2026-08', false, false);
 testAssert($rc['package_results'][0]['tag'] === 'dev-release-2026-08', 'RC should prefer the development release branch');
 $lts = releaseCommunityResolvePackages($resolverComposer, $catalog, 'lts', 'release-2026-08-lts', false, false);
-testAssert($lts['package_results'][0]['tag'] === 'release-2026-08-lts', 'LTS should prefer the stable LTS branch');
+testAssert($lts['package_results'][0]['tag'] === 'dev-release-2026-08-lts', 'LTS should prefer the stable LTS branch as a Composer development version');
+$ltsApplied = releaseCommunityApplyManifest($resolverComposer, $lts, 'lts', false, false);
+testAssert($ltsApplied['composer']['require']['oat-sa/generis'] === 'dev-release-2026-08-lts', 'LTS branch results should be accepted by manifest application');
 $stable = releaseCommunityResolvePackages($resolverComposer, $catalog, 'stable', 'release-2026-08', false, false);
 testAssert($stable['package_results'][0]['tag'] === 'v15.19.4', 'stable should use the latest stable tag');
 $derived = releaseCommunityResolvePackages($resolverComposer, $catalog, 'rc', 'develop', false, false, '2026.08');
@@ -72,6 +80,13 @@ releaseCommunityValidateLock(
     ['packages' => [['name' => 'oat-sa/generis', 'version' => '15.19.3', 'source' => ['reference' => 'abc123']]]],
     ['package_results' => [['package' => 'oat-sa/generis', 'version' => '15.19.3', 'commit' => 'abc123']]]
 );
+$caseSensitiveRepository = releaseCommunityManifestResults(['package_results' => [[
+    'package' => 'oat-sa/generis', 'repository' => 'OAT-SA/Generis', 'tag' => 'v15.19.3', 'version' => '15.19.3',
+    'commit' => str_repeat('a', 40), 'release_url' => 'https://github.com/OAT-SA/Generis/releases/tag/v15.19.3',
+    'workflow_run_url' => 'https://github.com/OAT-SA/Generis/actions/runs/9',
+]]]);
+testAssert($caseSensitiveRepository['oat-sa/generis']['metadata']['repository'] === 'OAT-SA/Generis', 'GitHub repository casing should be accepted');
+testAssert(releaseCommunityBoolean('1') && !releaseCommunityBoolean('0'), 'boolean CLI values should be coerced consistently');
 
 $composerPath = tempnam(sys_get_temp_dir(), 'composer-');
 $manifestPath = tempnam(sys_get_temp_dir(), 'manifest-');

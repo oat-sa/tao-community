@@ -268,20 +268,20 @@ jobs:
              jq -r '.require | keys[]' composer.json | while IFS= read -r package; do
                 repository="$(jq -r --arg package "$package" '((.packages // []) + (."packages-dev" // []))[] | select(.name == $package) | .source.url' composer.lock | sed -E -e 's#^https://github.com/([^/]+/[^/]+)(\.git)?$#\1#' -e 's#^git@github.com:([^/]+/[^/]+)(\.git)?$#\1#' | head -n 1)"
                 [[ "$repository" =~ ^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$ ]] || { echo "Could not resolve repository for $package" >&2; exit 1; }
-                gh api --paginate "repos/$repository/branches?per_page=100" > ".release-input/$(printf '%s' "$package" | tr '/' '_')-branches.json" || exit 1
-               gh api --paginate "repos/$repository/tags?per_page=100" > ".release-input/$(printf '%s' "$package" | tr '/' '_')-tags.json" || exit 1
-                workflow_url="$(gh run list --repo "$repository" --workflow release_tao_extension.yml --limit 1 --json url --jq '.[0].url // ""' | tr -d '\n')" || exit 1
-                [[ -n "$workflow_url" ]] || { echo "No extension workflow run found for $package" >&2; exit 1; }
-                printf '%s' "$workflow_url" > ".release-input/$(printf '%s' "$package" | tr '/' '_')-workflow-url"
+                 gh api --paginate "repos/$repository/branches?per_page=100" --jq '.[]' | jq -s '.' > ".release-input/$(printf '%s' "$package" | tr '/' '_')-branches.json" || exit 1
+                gh api --paginate "repos/$repository/tags?per_page=100" --jq '.[]' | jq -s '.' > ".release-input/$(printf '%s' "$package" | tr '/' '_')-tags.json" || exit 1
+                 gh run list --repo "$repository" --workflow release_tao_extension.yml --limit 100 --json headSha,url,status,conclusion \
+                   --jq '[.[] | select(.status == "completed" and .conclusion == "success") | {key:.headSha,value:.url}] | from_entries' \
+                   > ".release-input/$(printf '%s' "$package" | tr '/' '_')-workflow-runs.json" || exit 1
              done || { status=failure; failure_reason="target-local package release data could not be read"; }
              if [ "$status" = success ]; then
                jq -n --slurpfile composer composer.json --arg release_type "$RELEASE_TYPE" --arg source_ref "$SOURCE_REF" \
                  '{release_type:$release_type,source_ref:$source_ref,packages:($composer[0].require | keys | map({key:.,value:{repository:.}}) | from_entries)}' > .release-input/package-catalog.json
                while IFS= read -r package; do
                  safe_package="$(printf '%s' "$package" | tr '/' '_')"
-                 jq --arg package "$package" --slurpfile branches ".release-input/$safe_package-branches.json" --slurpfile tags ".release-input/$safe_package-tags.json" \
-                   --rawfile workflow_url ".release-input/$safe_package-workflow-url" \
-                   '.packages[$package].branches=($branches[0] | map({name:.name,commit:.commit.sha})) | .packages[$package].tags=($tags[0] | map({name:.name,commit:.commit.sha})) | .packages[$package].workflow_run_url=$workflow_url' \
+                    jq --arg package "$package" --slurpfile branches ".release-input/$safe_package-branches.json" --slurpfile tags ".release-input/$safe_package-tags.json" \
+                    --slurpfile workflow_runs ".release-input/$safe_package-workflow-runs.json" \
+                    '.packages[$package].branches=($branches[0] | map({name:.name,commit:.commit.sha})) | .packages[$package].tags=($tags[0] | map({name:.name,commit:.commit.sha})) | .packages[$package].workflow_runs=$workflow_runs[0]' \
                    .release-input/package-catalog.json > .release-input/package-catalog.tmp && mv .release-input/package-catalog.tmp .release-input/package-catalog.json
                done < <(jq -r '.require | keys[]' composer.json)
                php scripts/release-community.php resolve --composer composer.json --catalog .release-input/package-catalog.json --release_type "$RELEASE_TYPE" --source_ref "$SOURCE_REF" --release_version "$RELEASE_VERSION" --allow_stable_fallback "$ALLOW_STABLE_FALLBACK" --allow_lts_fallback "$ALLOW_LTS_FALLBACK" --output "$manifest_artifact" || { status=failure; failure_reason="target-local package resolution failed"; }
