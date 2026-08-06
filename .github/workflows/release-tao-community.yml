@@ -104,9 +104,10 @@ jobs:
             status=failure
             failure_reason="normalized release contract validation failed"
           fi
-          if [ "$status" = success ]; then
-            git fetch --no-tags origin "$SOURCE_REF" || { status=failure; failure_reason="source ref could not be fetched"; }
-          fi
+           if [ "$status" = success ]; then
+             git fetch --no-tags origin "$SOURCE_REF" || { status=failure; failure_reason="source ref could not be fetched"; }
+             git ls-remote --exit-code --heads origin "$SOURCE_REF" >/dev/null 2>&1 || { status=failure; failure_reason="source ref must be an existing branch"; }
+           fi
            if [ "$status" = success ]; then
              if git ls-remote --exit-code --heads origin "$branch" >/dev/null 2>&1; then
                git fetch --no-tags origin "$branch" && git switch -C "$branch" "origin/$branch" || { status=failure; failure_reason="existing release branch could not be reused"; }
@@ -171,8 +172,11 @@ jobs:
                  git -C .backport-package switch -C "$backport_branch" "origin/$BACKPORT_TARGET_BRANCH" || { status=failure; failure_reason="backport branch could not be created"; }
                fi
              fi
-             if [ "$status" = success ]; then
-               gh api --paginate "repos/$package_repo/pulls/$pr_number/commits" --jq '.[].sha' > .backport-commits || { status=failure; failure_reason="source pull request commits could not be read"; }
+              if [ "$status" = success ]; then
+                git -C .backport-package fetch origin "refs/pull/$pr_number/head:refs/remotes/origin/pr/$pr_number" || { status=failure; failure_reason="source pull request commits could not be fetched"; }
+              fi
+              if [ "$status" = success ]; then
+                gh api --paginate "repos/$package_repo/pulls/$pr_number/commits" --jq '.[].sha' > .backport-commits || { status=failure; failure_reason="source pull request commits could not be read"; }
                while IFS= read -r commit_sha; do
                  [ -n "$commit_sha" ] || continue
                  git -C .backport-package cherry-pick "$commit_sha" || {
@@ -193,19 +197,41 @@ jobs:
                  -f release_branch="$backport_branch" -f release_version="$backport_version" -f build_fe=auto -f build_locale=auto -f backport=true \
                  || { status=failure; failure_reason="extension backport workflow could not be dispatched"; }
              fi
-             if [ "$status" = success ]; then
-               package_run_id=""
-               for attempt in $(seq 1 30); do
-                 package_run_id="$(gh run list --repo "$package_repo" --workflow release_tao_extension.yml --branch "$backport_branch" --event workflow_dispatch --limit 20 --json databaseId,createdAt | jq -r --arg started "$dispatch_started" 'first(.[] | select(.createdAt >= $started) | .databaseId) // empty')"
-                 [ -n "$package_run_id" ] && break
-                 sleep 10
-               done
-               [ -n "$package_run_id" ] || { status=failure; failure_reason="extension backport workflow run could not be identified"; }
-               if [ "$status" = success ]; then
-                 package_conclusion="$(gh run view "$package_run_id" --repo "$package_repo" --json status,conclusion --jq '.status + ":" + (.conclusion // "")')"
-                 while [ "${package_conclusion%%:*}" != completed ]; do sleep 10; package_conclusion="$(gh run view "$package_run_id" --repo "$package_repo" --json status,conclusion --jq '.status + ":" + (.conclusion // "")')"; done
-                 [ "${package_conclusion#*:}" = success ] || { status=failure; failure_reason="extension backport workflow failed"; }
-               fi
+              if [ "$status" = success ]; then
+                package_run_id=""
+                deadline=$((SECONDS + 1800))
+                for attempt in $(seq 1 30); do
+                  if ! package_run_id="$(gh run list --repo "$package_repo" --workflow release_tao_extension.yml --branch "$backport_branch" --event workflow_dispatch --limit 20 --json databaseId,createdAt | jq -r --arg started "$dispatch_started" 'first(.[] | select(.createdAt >= $started) | .databaseId) // empty')"; then
+                    status=failure
+                    failure_reason="extension backport workflow run lookup failed"
+                    break
+                  fi
+                  [ -n "$package_run_id" ] && break
+                  sleep 10
+                done
+                [ -n "$package_run_id" ] || { status=failure; failure_reason="extension backport workflow run could not be identified"; }
+                if [ "$status" = success ]; then
+                  if ! package_conclusion="$(gh run view "$package_run_id" --repo "$package_repo" --json status,conclusion --jq '.status + ":" + (.conclusion // "")')"; then
+                    status=failure
+                    failure_reason="extension backport workflow status could not be read"
+                  fi
+                  while [ "$status" = success ] && [ "${package_conclusion%%:*}" != completed ]; do
+                    if (( SECONDS >= deadline )); then
+                      status=failure
+                      failure_reason="extension backport workflow timed out"
+                      break
+                    fi
+                    sleep 10
+                    if ! package_conclusion="$(gh run view "$package_run_id" --repo "$package_repo" --json status,conclusion --jq '.status + ":" + (.conclusion // "")')"; then
+                      status=failure
+                      failure_reason="extension backport workflow status could not be read"
+                    fi
+                  done
+                  if [ "$status" = success ] && [ "${package_conclusion#*:}" != success ]; then
+                    status=failure
+                    failure_reason="extension backport workflow failed"
+                  fi
+                fi
              fi
              if [ "$status" = success ]; then
                package_tag="v$backport_version"
