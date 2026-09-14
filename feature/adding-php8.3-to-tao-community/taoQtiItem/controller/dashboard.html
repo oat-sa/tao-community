@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /home/runner/work/tao-community/tao-community/taoQtiItem/controller</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../../_css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="../../_css/nv.d3.min.css" rel="stylesheet" type="text/css">
+  <link href="../../_css/style.css" rel="stylesheet" type="text/css">
+  <link href="../../_css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="../../index.html">/home/runner/work/tao-community/tao-community</a></li>
+         <li class="breadcrumb-item"><a href="../index.html">taoQtiItem</a></li>
+         <li class="breadcrumb-item"><a href="index.html">controller</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="AbstractPortableElementManager.php.html#32">oat\taoQtiItem\controller\AbstractPortableElementManager</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AbstractQtiItemRunner.php.html#38">oat\taoQtiItem\controller\AbstractQtiItemRunner</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AbstractRestQti.php.html#43">oat\taoQtiItem\controller\AbstractRestQti</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ItemImportSampleDownload.php.html#28">oat\taoQtiItem\controller\ItemImportSampleDownload</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Parser.php.html#37">oat\taoQtiItem\controller\Parser</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiCreator.php.html#61">oat\taoQtiItem\controller\QtiCreator</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiCssAuthoring.php.html#37">oat\taoQtiItem\controller\QtiCssAuthoring</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiItemRunner.php.html#51">oat\taoQtiItem\controller\QtiItemRunner</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiPreview.php.html#59">oat\taoQtiItem\controller\QtiPreview</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="RestQtiItem.php.html#40">oat\taoQtiItem\controller\RestQtiItem</a></td><td class="text-right">0%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="QtiCreator.php.html#61">oat\taoQtiItem\controller\QtiCreator</a></td><td class="text-right">1722</td></tr>
+       <tr><td><a href="RestQtiItem.php.html#40">oat\taoQtiItem\controller\RestQtiItem</a></td><td class="text-right">1260</td></tr>
+       <tr><td><a href="QtiPreview.php.html#59">oat\taoQtiItem\controller\QtiPreview</a></td><td class="text-right">702</td></tr>
+       <tr><td><a href="AbstractRestQti.php.html#43">oat\taoQtiItem\controller\AbstractRestQti</a></td><td class="text-right">650</td></tr>
+       <tr><td><a href="QtiItemRunner.php.html#51">oat\taoQtiItem\controller\QtiItemRunner</a></td><td class="text-right">650</td></tr>
+       <tr><td><a href="QtiCssAuthoring.php.html#37">oat\taoQtiItem\controller\QtiCssAuthoring</a></td><td class="text-right">380</td></tr>
+       <tr><td><a href="AbstractPortableElementManager.php.html#32">oat\taoQtiItem\controller\AbstractPortableElementManager</a></td><td class="text-right">90</td></tr>
+       <tr><td><a href="Parser.php.html#37">oat\taoQtiItem\controller\Parser</a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="AbstractPortableElementManager.php.html#43"><abbr title="oat\taoQtiItem\controller\AbstractPortableElementManager::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiItemRunner.php.html#89"><abbr title="oat\taoQtiItem\controller\QtiItemRunner::getPostedTraces">getPostedTraces</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiPreview.php.html#67"><abbr title="oat\taoQtiItem\controller\QtiPreview::submitResponses">submitResponses</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiPreview.php.html#61"><abbr title="oat\taoQtiItem\controller\QtiPreview::getPreviewUrl">getPreviewUrl</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiItemRunner.php.html#211"><abbr title="oat\taoQtiItem\controller\QtiItemRunner::buildOutcomeResponse">buildOutcomeResponse</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiItemRunner.php.html#192"><abbr title="oat\taoQtiItem\controller\QtiItemRunner::transmitResults">transmitResults</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiItemRunner.php.html#118"><abbr title="oat\taoQtiItem\controller\QtiItemRunner::processResponses">processResponses</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiItemRunner.php.html#99"><abbr title="oat\taoQtiItem\controller\QtiItemRunner::submitResponses">submitResponses</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiItemRunner.php.html#84"><abbr title="oat\taoQtiItem\controller\QtiItemRunner::getServiceCallId">getServiceCallId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiPreview.php.html#156"><abbr title="oat\taoQtiItem\controller\QtiPreview::getResultServer">getResultServer</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiItemRunner.php.html#79"><abbr title="oat\taoQtiItem\controller\QtiItemRunner::getTestUri">getTestUri</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiItemRunner.php.html#74"><abbr title="oat\taoQtiItem\controller\QtiItemRunner::getItemUri">getItemUri</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiItemRunner.php.html#69"><abbr title="oat\taoQtiItem\controller\QtiItemRunner::getResultServerEndpoint">getResultServerEndpoint</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiItemRunner.php.html#57"><abbr title="oat\taoQtiItem\controller\QtiItemRunner::selectView">selectView</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiCssAuthoring.php.html#131"><abbr title="oat\taoQtiItem\controller\QtiCssAuthoring::download">download</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiCssAuthoring.php.html#108"><abbr title="oat\taoQtiItem\controller\QtiCssAuthoring::getCssArray">getCssArray</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiPreview.php.html#85"><abbr title="oat\taoQtiItem\controller\QtiPreview::processResponses">processResponses</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiPreview.php.html#167"><abbr title="oat\taoQtiItem\controller\QtiPreview::buildOutcomeResponse">buildOutcomeResponse</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiCssAuthoring.php.html#44"><abbr title="oat\taoQtiItem\controller\QtiCssAuthoring::save">save</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="RestQtiItem.php.html#83"><abbr title="oat\taoQtiItem\controller\RestQtiItem::import">import</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="RestQtiItem.php.html#269"><abbr title="oat\taoQtiItem\controller\RestQtiItem::export">export</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="RestQtiItem.php.html#243"><abbr title="oat\taoQtiItem\controller\RestQtiItem::createQtiItem">createQtiItem</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="RestQtiItem.php.html#221"><abbr title="oat\taoQtiItem\controller\RestQtiItem::getUploadedPackage">getUploadedPackage</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="RestQtiItem.php.html#192"><abbr title="oat\taoQtiItem\controller\RestQtiItem::addExtraReturnData">addExtraReturnData</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="RestQtiItem.php.html#152"><abbr title="oat\taoQtiItem\controller\RestQtiItem::importDeferred">importDeferred</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="RestQtiItem.php.html#144"><abbr title="oat\taoQtiItem\controller\RestQtiItem::getTaskName">getTaskName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="RestQtiItem.php.html#74"><abbr title="oat\taoQtiItem\controller\RestQtiItem::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiPreview.php.html#183"><abbr title="oat\taoQtiItem\controller\QtiPreview::getRenderedItem">getRenderedItem</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="RestQtiItem.php.html#66"><abbr title="oat\taoQtiItem\controller\RestQtiItem::getDestinationClass">getDestinationClass</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="RestQtiItem.php.html#49"><abbr title="oat\taoQtiItem\controller\RestQtiItem::getAcceptableMimeTypes">getAcceptableMimeTypes</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiPreview.php.html#267"><abbr title="oat\taoQtiItem\controller\QtiPreview::getTemplateElements">getTemplateElements</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiPreview.php.html#254"><abbr title="oat\taoQtiItem\controller\QtiPreview::getModalFeedbacks">getModalFeedbacks</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiPreview.php.html#235"><abbr title="oat\taoQtiItem\controller\QtiPreview::getRubricBlocks">getRubricBlocks</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiPreview.php.html#224"><abbr title="oat\taoQtiItem\controller\QtiPreview::getRequestView">getRequestView</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiCssAuthoring.php.html#76"><abbr title="oat\taoQtiItem\controller\QtiCssAuthoring::load">load</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiCreator.php.html#361"><abbr title="oat\taoQtiItem\controller\QtiCreator::validateXmlInput">validateXmlInput</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AbstractPortableElementManager.php.html#58"><abbr title="oat\taoQtiItem\controller\AbstractPortableElementManager::getFile">getFile</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AbstractQtiItemRunner.php.html#79"><abbr title="oat\taoQtiItem\controller\AbstractQtiItemRunner::getFeedbacks">getFeedbacks</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AbstractRestQti.php.html#177"><abbr title="oat\taoQtiItem\controller\AbstractRestQti::isItemMustBeOverwrittenEnabled">isItemMustBeOverwrittenEnabled</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AbstractRestQti.php.html#156"><abbr title="oat\taoQtiItem\controller\AbstractRestQti::isItemMustExistEnabled">isItemMustExistEnabled</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AbstractRestQti.php.html#135"><abbr title="oat\taoQtiItem\controller\AbstractRestQti::isMetadataValidatorsEnabled">isMetadataValidatorsEnabled</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AbstractRestQti.php.html#114"><abbr title="oat\taoQtiItem\controller\AbstractRestQti::isMetadataGuardiansEnabled">isMetadataGuardiansEnabled</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AbstractRestQti.php.html#99"><abbr title="oat\taoQtiItem\controller\AbstractRestQti::getTaskStatus">getTaskStatus</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AbstractRestQti.php.html#75"><abbr title="oat\taoQtiItem\controller\AbstractRestQti::getStatus">getStatus</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AbstractQtiItemRunner.php.html#72"><abbr title="oat\taoQtiItem\controller\AbstractQtiItemRunner::getTemplateElements">getTemplateElements</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AbstractRestQti.php.html#227"><abbr title="oat\taoQtiItem\controller\AbstractRestQti::getUpdateMetadataRequestHandler">getUpdateMetadataRequestHandler</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AbstractQtiItemRunner.php.html#64"><abbr title="oat\taoQtiItem\controller\AbstractQtiItemRunner::getRubricBlocks">getRubricBlocks</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AbstractQtiItemRunner.php.html#58"><abbr title="oat\taoQtiItem\controller\AbstractQtiItemRunner::getPrivateFolder">getPrivateFolder</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AbstractQtiItemRunner.php.html#49"><abbr title="oat\taoQtiItem\controller\AbstractQtiItemRunner::getContentVariableElements">getContentVariableElements</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AbstractQtiItemRunner.php.html#42"><abbr title="oat\taoQtiItem\controller\AbstractQtiItemRunner::setInitialVariableElements">setInitialVariableElements</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AbstractPortableElementManager.php.html#87"><abbr title="oat\taoQtiItem\controller\AbstractPortableElementManager::renderFile">renderFile</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AbstractPortableElementManager.php.html#75"><abbr title="oat\taoQtiItem\controller\AbstractPortableElementManager::getImplementationDirectory">getImplementationDirectory</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AbstractRestQti.php.html#197"><abbr title="oat\taoQtiItem\controller\AbstractRestQti::updateMetadata">updateMetadata</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AbstractRestQti.php.html#232"><abbr title="oat\taoQtiItem\controller\AbstractRestQti::getMetadataService">getMetadataService</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiCreator.php.html#350"><abbr title="oat\taoQtiItem\controller\QtiCreator::getFeatureFlagConfigSwitcher">getFeatureFlagConfigSwitcher</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiCreator.php.html#190"><abbr title="oat\taoQtiItem\controller\QtiCreator::saveItem">saveItem</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiCreator.php.html#345"><abbr title="oat\taoQtiItem\controller\QtiCreator::getItemIdentifierValidator">getItemIdentifierValidator</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiCreator.php.html#340"><abbr title="oat\taoQtiItem\controller\QtiCreator::getXmlToItemParser">getXmlToItemParser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiCreator.php.html#335"><abbr title="oat\taoQtiItem\controller\QtiCreator::getUpdatedItemEventDispatcher">getUpdatedItemEventDispatcher</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiCreator.php.html#273"><abbr title="oat\taoQtiItem\controller\QtiCreator::getCreatorConfig">getCreatorConfig</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiCreator.php.html#254"><abbr title="oat\taoQtiItem\controller\QtiCreator::renderFile">renderFile</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiCreator.php.html#234"><abbr title="oat\taoQtiItem\controller\QtiCreator::getFile">getFile</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiCreator.php.html#162"><abbr title="oat\taoQtiItem\controller\QtiCreator::getItemData">getItemData</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ItemImportSampleDownload.php.html#30"><abbr title="oat\taoQtiItem\controller\ItemImportSampleDownload::downloadTemplate">downloadTemplate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiCreator.php.html#141"><abbr title="oat\taoQtiItem\controller\QtiCreator::getMediaSources">getMediaSources</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiCreator.php.html#125"><abbr title="oat\taoQtiItem\controller\QtiCreator::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiCreator.php.html#83"><abbr title="oat\taoQtiItem\controller\QtiCreator::createItem">createItem</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="QtiCreator.php.html#69"><abbr title="oat\taoQtiItem\controller\QtiCreator::getEventManager">getEventManager</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Parser.php.html#39"><abbr title="oat\taoQtiItem\controller\Parser::getJson">getJson</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ItemImportSampleDownload.php.html#35"><abbr title="oat\taoQtiItem\controller\ItemImportSampleDownload::getSampleTemplateDownload">getSampleTemplateDownload</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="RestQtiItem.php.html#319"><abbr title="oat\taoQtiItem\controller\RestQtiItem::createClass">createClass</abbr></a></td><td class="text-right">0%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="QtiPreview.php.html#85"><abbr title="oat\taoQtiItem\controller\QtiPreview::processResponses">processResponses</abbr></a></td><td class="text-right">90</td></tr>
+       <tr><td><a href="RestQtiItem.php.html#83"><abbr title="oat\taoQtiItem\controller\RestQtiItem::import">import</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="QtiItemRunner.php.html#118"><abbr title="oat\taoQtiItem\controller\QtiItemRunner::processResponses">processResponses</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="QtiCreator.php.html#273"><abbr title="oat\taoQtiItem\controller\QtiCreator::getCreatorConfig">getCreatorConfig</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="QtiCssAuthoring.php.html#44"><abbr title="oat\taoQtiItem\controller\QtiCssAuthoring::save">save</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="QtiCreator.php.html#83"><abbr title="oat\taoQtiItem\controller\QtiCreator::createItem">createItem</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="QtiCreator.php.html#141"><abbr title="oat\taoQtiItem\controller\QtiCreator::getMediaSources">getMediaSources</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="QtiCssAuthoring.php.html#76"><abbr title="oat\taoQtiItem\controller\QtiCssAuthoring::load">load</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="QtiCreator.php.html#190"><abbr title="oat\taoQtiItem\controller\QtiCreator::saveItem">saveItem</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="RestQtiItem.php.html#269"><abbr title="oat\taoQtiItem\controller\RestQtiItem::export">export</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="QtiCssAuthoring.php.html#131"><abbr title="oat\taoQtiItem\controller\QtiCssAuthoring::download">download</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="RestQtiItem.php.html#152"><abbr title="oat\taoQtiItem\controller\RestQtiItem::importDeferred">importDeferred</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="RestQtiItem.php.html#192"><abbr title="oat\taoQtiItem\controller\RestQtiItem::addExtraReturnData">addExtraReturnData</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="AbstractRestQti.php.html#197"><abbr title="oat\taoQtiItem\controller\AbstractRestQti::updateMetadata">updateMetadata</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="QtiPreview.php.html#235"><abbr title="oat\taoQtiItem\controller\QtiPreview::getRubricBlocks">getRubricBlocks</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="QtiCreator.php.html#234"><abbr title="oat\taoQtiItem\controller\QtiCreator::getFile">getFile</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="RestQtiItem.php.html#243"><abbr title="oat\taoQtiItem\controller\RestQtiItem::createQtiItem">createQtiItem</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="AbstractPortableElementManager.php.html#87"><abbr title="oat\taoQtiItem\controller\AbstractPortableElementManager::renderFile">renderFile</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="RestQtiItem.php.html#221"><abbr title="oat\taoQtiItem\controller\RestQtiItem::getUploadedPackage">getUploadedPackage</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="QtiItemRunner.php.html#192"><abbr title="oat\taoQtiItem\controller\QtiItemRunner::transmitResults">transmitResults</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="RestQtiItem.php.html#319"><abbr title="oat\taoQtiItem\controller\RestQtiItem::createClass">createClass</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="QtiCssAuthoring.php.html#108"><abbr title="oat\taoQtiItem\controller\QtiCssAuthoring::getCssArray">getCssArray</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="AbstractRestQti.php.html#75"><abbr title="oat\taoQtiItem\controller\AbstractRestQti::getStatus">getStatus</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="AbstractRestQti.php.html#99"><abbr title="oat\taoQtiItem\controller\AbstractRestQti::getTaskStatus">getTaskStatus</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="AbstractRestQti.php.html#114"><abbr title="oat\taoQtiItem\controller\AbstractRestQti::isMetadataGuardiansEnabled">isMetadataGuardiansEnabled</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="AbstractRestQti.php.html#135"><abbr title="oat\taoQtiItem\controller\AbstractRestQti::isMetadataValidatorsEnabled">isMetadataValidatorsEnabled</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="AbstractRestQti.php.html#156"><abbr title="oat\taoQtiItem\controller\AbstractRestQti::isItemMustExistEnabled">isItemMustExistEnabled</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="AbstractRestQti.php.html#177"><abbr title="oat\taoQtiItem\controller\AbstractRestQti::isItemMustBeOverwrittenEnabled">isItemMustBeOverwrittenEnabled</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="QtiCreator.php.html#162"><abbr title="oat\taoQtiItem\controller\QtiCreator::getItemData">getItemData</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="QtiPreview.php.html#183"><abbr title="oat\taoQtiItem\controller\QtiPreview::getRenderedItem">getRenderedItem</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="QtiPreview.php.html#254"><abbr title="oat\taoQtiItem\controller\QtiPreview::getModalFeedbacks">getModalFeedbacks</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Parser.php.html#39"><abbr title="oat\taoQtiItem\controller\Parser::getJson">getJson</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="QtiPreview.php.html#224"><abbr title="oat\taoQtiItem\controller\QtiPreview::getRequestView">getRequestView</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="QtiPreview.php.html#167"><abbr title="oat\taoQtiItem\controller\QtiPreview::buildOutcomeResponse">buildOutcomeResponse</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="QtiCreator.php.html#361"><abbr title="oat\taoQtiItem\controller\QtiCreator::validateXmlInput">validateXmlInput</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="QtiCreator.php.html#125"><abbr title="oat\taoQtiItem\controller\QtiCreator::index">index</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="QtiPreview.php.html#67"><abbr title="oat\taoQtiItem\controller\QtiPreview::submitResponses">submitResponses</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="QtiItemRunner.php.html#211"><abbr title="oat\taoQtiItem\controller\QtiItemRunner::buildOutcomeResponse">buildOutcomeResponse</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="QtiCreator.php.html#254"><abbr title="oat\taoQtiItem\controller\QtiCreator::renderFile">renderFile</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="QtiItemRunner.php.html#99"><abbr title="oat\taoQtiItem\controller\QtiItemRunner::submitResponses">submitResponses</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="QtiItemRunner.php.html#89"><abbr title="oat\taoQtiItem\controller\QtiItemRunner::getPostedTraces">getPostedTraces</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="QtiItemRunner.php.html#84"><abbr title="oat\taoQtiItem\controller\QtiItemRunner::getServiceCallId">getServiceCallId</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="QtiItemRunner.php.html#79"><abbr title="oat\taoQtiItem\controller\QtiItemRunner::getTestUri">getTestUri</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="QtiItemRunner.php.html#74"><abbr title="oat\taoQtiItem\controller\QtiItemRunner::getItemUri">getItemUri</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="AbstractPortableElementManager.php.html#58"><abbr title="oat\taoQtiItem\controller\AbstractPortableElementManager::getFile">getFile</abbr></a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 7.0.17</a> using <a href="https://www.php.net/" target="_top">PHP 7.4.33</a> with <a href="https://xdebug.org/">Xdebug 3.1.6</a> with <a href="https://github.com/krakjoe/pcov">PCOV 1.0.11</a> at Tue Jun 18 6:27:28 UTC 2024.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="../../_js/jquery.min.js" type="text/javascript"></script>
+  <script src="../../_js/d3.min.js" type="text/javascript"></script>
+  <script src="../../_js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([10,0,0,0,0,0,0,0,0,0,0,0], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([71,0,0,0,0,0,0,0,0,0,0,2], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[0,9,"<a href=\"AbstractPortableElementManager.php.html#32\">oat\\taoQtiItem\\controller\\AbstractPortableElementManager<\/a>"],[0,6,"<a href=\"AbstractQtiItemRunner.php.html#38\">oat\\taoQtiItem\\controller\\AbstractQtiItemRunner<\/a>"],[0,25,"<a href=\"AbstractRestQti.php.html#43\">oat\\taoQtiItem\\controller\\AbstractRestQti<\/a>"],[0,2,"<a href=\"ItemImportSampleDownload.php.html#28\">oat\\taoQtiItem\\controller\\ItemImportSampleDownload<\/a>"],[0,2,"<a href=\"Parser.php.html#37\">oat\\taoQtiItem\\controller\\Parser<\/a>"],[0,41,"<a href=\"QtiCreator.php.html#61\">oat\\taoQtiItem\\controller\\QtiCreator<\/a>"],[0,19,"<a href=\"QtiCssAuthoring.php.html#37\">oat\\taoQtiItem\\controller\\QtiCssAuthoring<\/a>"],[0,25,"<a href=\"QtiItemRunner.php.html#51\">oat\\taoQtiItem\\controller\\QtiItemRunner<\/a>"],[0,26,"<a href=\"QtiPreview.php.html#59\">oat\\taoQtiItem\\controller\\QtiPreview<\/a>"],[0,35,"<a href=\"RestQtiItem.php.html#40\">oat\\taoQtiItem\\controller\\RestQtiItem<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[0,1,"<a href=\"AbstractPortableElementManager.php.html#43\">oat\\taoQtiItem\\controller\\AbstractPortableElementManager::__construct<\/a>"],[100,1,"<a href=\"AbstractPortableElementManager.php.html#53\">oat\\taoQtiItem\\controller\\AbstractPortableElementManager::getCreatorRegistry<\/a>"],[0,2,"<a href=\"AbstractPortableElementManager.php.html#58\">oat\\taoQtiItem\\controller\\AbstractPortableElementManager::getFile<\/a>"],[0,1,"<a href=\"AbstractPortableElementManager.php.html#75\">oat\\taoQtiItem\\controller\\AbstractPortableElementManager::getImplementationDirectory<\/a>"],[0,4,"<a href=\"AbstractPortableElementManager.php.html#87\">oat\\taoQtiItem\\controller\\AbstractPortableElementManager::renderFile<\/a>"],[0,1,"<a href=\"AbstractQtiItemRunner.php.html#42\">oat\\taoQtiItem\\controller\\AbstractQtiItemRunner::setInitialVariableElements<\/a>"],[0,1,"<a href=\"AbstractQtiItemRunner.php.html#49\">oat\\taoQtiItem\\controller\\AbstractQtiItemRunner::getContentVariableElements<\/a>"],[0,1,"<a href=\"AbstractQtiItemRunner.php.html#58\">oat\\taoQtiItem\\controller\\AbstractQtiItemRunner::getPrivateFolder<\/a>"],[0,1,"<a href=\"AbstractQtiItemRunner.php.html#64\">oat\\taoQtiItem\\controller\\AbstractQtiItemRunner::getRubricBlocks<\/a>"],[0,1,"<a href=\"AbstractQtiItemRunner.php.html#72\">oat\\taoQtiItem\\controller\\AbstractQtiItemRunner::getTemplateElements<\/a>"],[0,1,"<a href=\"AbstractQtiItemRunner.php.html#79\">oat\\taoQtiItem\\controller\\AbstractQtiItemRunner::getFeedbacks<\/a>"],[100,1,"<a href=\"AbstractRestQti.php.html#70\">oat\\taoQtiItem\\controller\\AbstractRestQti::getTaskName<\/a>"],[0,3,"<a href=\"AbstractRestQti.php.html#75\">oat\\taoQtiItem\\controller\\AbstractRestQti::getStatus<\/a>"],[0,3,"<a href=\"AbstractRestQti.php.html#99\">oat\\taoQtiItem\\controller\\AbstractRestQti::getTaskStatus<\/a>"],[0,3,"<a href=\"AbstractRestQti.php.html#114\">oat\\taoQtiItem\\controller\\AbstractRestQti::isMetadataGuardiansEnabled<\/a>"],[0,3,"<a href=\"AbstractRestQti.php.html#135\">oat\\taoQtiItem\\controller\\AbstractRestQti::isMetadataValidatorsEnabled<\/a>"],[0,3,"<a href=\"AbstractRestQti.php.html#156\">oat\\taoQtiItem\\controller\\AbstractRestQti::isItemMustExistEnabled<\/a>"],[0,3,"<a href=\"AbstractRestQti.php.html#177\">oat\\taoQtiItem\\controller\\AbstractRestQti::isItemMustBeOverwrittenEnabled<\/a>"],[0,4,"<a href=\"AbstractRestQti.php.html#197\">oat\\taoQtiItem\\controller\\AbstractRestQti::updateMetadata<\/a>"],[0,1,"<a href=\"AbstractRestQti.php.html#227\">oat\\taoQtiItem\\controller\\AbstractRestQti::getUpdateMetadataRequestHandler<\/a>"],[0,1,"<a href=\"AbstractRestQti.php.html#232\">oat\\taoQtiItem\\controller\\AbstractRestQti::getMetadataService<\/a>"],[0,1,"<a href=\"ItemImportSampleDownload.php.html#30\">oat\\taoQtiItem\\controller\\ItemImportSampleDownload::downloadTemplate<\/a>"],[0,1,"<a href=\"ItemImportSampleDownload.php.html#35\">oat\\taoQtiItem\\controller\\ItemImportSampleDownload::getSampleTemplateDownload<\/a>"],[0,2,"<a href=\"Parser.php.html#39\">oat\\taoQtiItem\\controller\\Parser::getJson<\/a>"],[0,1,"<a href=\"QtiCreator.php.html#69\">oat\\taoQtiItem\\controller\\QtiCreator::getEventManager<\/a>"],[0,6,"<a href=\"QtiCreator.php.html#83\">oat\\taoQtiItem\\controller\\QtiCreator::createItem<\/a>"],[0,2,"<a href=\"QtiCreator.php.html#125\">oat\\taoQtiItem\\controller\\QtiCreator::index<\/a>"],[0,5,"<a href=\"QtiCreator.php.html#141\">oat\\taoQtiItem\\controller\\QtiCreator::getMediaSources<\/a>"],[0,3,"<a href=\"QtiCreator.php.html#162\">oat\\taoQtiItem\\controller\\QtiCreator::getItemData<\/a>"],[0,5,"<a href=\"QtiCreator.php.html#190\">oat\\taoQtiItem\\controller\\QtiCreator::saveItem<\/a>"],[0,4,"<a href=\"QtiCreator.php.html#234\">oat\\taoQtiItem\\controller\\QtiCreator::getFile<\/a>"],[0,2,"<a href=\"QtiCreator.php.html#254\">oat\\taoQtiItem\\controller\\QtiCreator::renderFile<\/a>"],[0,7,"<a href=\"QtiCreator.php.html#273\">oat\\taoQtiItem\\controller\\QtiCreator::getCreatorConfig<\/a>"],[0,1,"<a href=\"QtiCreator.php.html#335\">oat\\taoQtiItem\\controller\\QtiCreator::getUpdatedItemEventDispatcher<\/a>"],[0,1,"<a href=\"QtiCreator.php.html#340\">oat\\taoQtiItem\\controller\\QtiCreator::getXmlToItemParser<\/a>"],[0,1,"<a href=\"QtiCreator.php.html#345\">oat\\taoQtiItem\\controller\\QtiCreator::getItemIdentifierValidator<\/a>"],[0,1,"<a href=\"QtiCreator.php.html#350\">oat\\taoQtiItem\\controller\\QtiCreator::getFeatureFlagConfigSwitcher<\/a>"],[0,2,"<a href=\"QtiCreator.php.html#361\">oat\\taoQtiItem\\controller\\QtiCreator::validateXmlInput<\/a>"],[0,6,"<a href=\"QtiCssAuthoring.php.html#44\">oat\\taoQtiItem\\controller\\QtiCssAuthoring::save<\/a>"],[0,5,"<a href=\"QtiCssAuthoring.php.html#76\">oat\\taoQtiItem\\controller\\QtiCssAuthoring::load<\/a>"],[0,3,"<a href=\"QtiCssAuthoring.php.html#108\">oat\\taoQtiItem\\controller\\QtiCssAuthoring::getCssArray<\/a>"],[0,5,"<a href=\"QtiCssAuthoring.php.html#131\">oat\\taoQtiItem\\controller\\QtiCssAuthoring::download<\/a>"],[0,1,"<a href=\"QtiItemRunner.php.html#57\">oat\\taoQtiItem\\controller\\QtiItemRunner::selectView<\/a>"],[0,1,"<a href=\"QtiItemRunner.php.html#69\">oat\\taoQtiItem\\controller\\QtiItemRunner::getResultServerEndpoint<\/a>"],[0,2,"<a href=\"QtiItemRunner.php.html#74\">oat\\taoQtiItem\\controller\\QtiItemRunner::getItemUri<\/a>"],[0,2,"<a href=\"QtiItemRunner.php.html#79\">oat\\taoQtiItem\\controller\\QtiItemRunner::getTestUri<\/a>"],[0,2,"<a href=\"QtiItemRunner.php.html#84\">oat\\taoQtiItem\\controller\\QtiItemRunner::getServiceCallId<\/a>"],[0,2,"<a href=\"QtiItemRunner.php.html#89\">oat\\taoQtiItem\\controller\\QtiItemRunner::getPostedTraces<\/a>"],[0,2,"<a href=\"QtiItemRunner.php.html#99\">oat\\taoQtiItem\\controller\\QtiItemRunner::submitResponses<\/a>"],[0,8,"<a href=\"QtiItemRunner.php.html#118\">oat\\taoQtiItem\\controller\\QtiItemRunner::processResponses<\/a>"],[0,3,"<a href=\"QtiItemRunner.php.html#192\">oat\\taoQtiItem\\controller\\QtiItemRunner::transmitResults<\/a>"],[0,2,"<a href=\"QtiItemRunner.php.html#211\">oat\\taoQtiItem\\controller\\QtiItemRunner::buildOutcomeResponse<\/a>"],[0,1,"<a href=\"QtiPreview.php.html#61\">oat\\taoQtiItem\\controller\\QtiPreview::getPreviewUrl<\/a>"],[0,2,"<a href=\"QtiPreview.php.html#67\">oat\\taoQtiItem\\controller\\QtiPreview::submitResponses<\/a>"],[0,9,"<a href=\"QtiPreview.php.html#85\">oat\\taoQtiItem\\controller\\QtiPreview::processResponses<\/a>"],[0,1,"<a href=\"QtiPreview.php.html#156\">oat\\taoQtiItem\\controller\\QtiPreview::getResultServer<\/a>"],[0,2,"<a href=\"QtiPreview.php.html#167\">oat\\taoQtiItem\\controller\\QtiPreview::buildOutcomeResponse<\/a>"],[0,2,"<a href=\"QtiPreview.php.html#183\">oat\\taoQtiItem\\controller\\QtiPreview::getRenderedItem<\/a>"],[0,2,"<a href=\"QtiPreview.php.html#224\">oat\\taoQtiItem\\controller\\QtiPreview::getRequestView<\/a>"],[0,4,"<a href=\"QtiPreview.php.html#235\">oat\\taoQtiItem\\controller\\QtiPreview::getRubricBlocks<\/a>"],[0,2,"<a href=\"QtiPreview.php.html#254\">oat\\taoQtiItem\\controller\\QtiPreview::getModalFeedbacks<\/a>"],[0,1,"<a href=\"QtiPreview.php.html#267\">oat\\taoQtiItem\\controller\\QtiPreview::getTemplateElements<\/a>"],[0,1,"<a href=\"RestQtiItem.php.html#49\">oat\\taoQtiItem\\controller\\RestQtiItem::getAcceptableMimeTypes<\/a>"],[0,1,"<a href=\"RestQtiItem.php.html#66\">oat\\taoQtiItem\\controller\\RestQtiItem::getDestinationClass<\/a>"],[0,1,"<a href=\"RestQtiItem.php.html#74\">oat\\taoQtiItem\\controller\\RestQtiItem::index<\/a>"],[0,8,"<a href=\"RestQtiItem.php.html#83\">oat\\taoQtiItem\\controller\\RestQtiItem::import<\/a>"],[0,1,"<a href=\"RestQtiItem.php.html#144\">oat\\taoQtiItem\\controller\\RestQtiItem::getTaskName<\/a>"],[0,4,"<a href=\"RestQtiItem.php.html#152\">oat\\taoQtiItem\\controller\\RestQtiItem::importDeferred<\/a>"],[0,4,"<a href=\"RestQtiItem.php.html#192\">oat\\taoQtiItem\\controller\\RestQtiItem::addExtraReturnData<\/a>"],[0,3,"<a href=\"RestQtiItem.php.html#221\">oat\\taoQtiItem\\controller\\RestQtiItem::getUploadedPackage<\/a>"],[0,4,"<a href=\"RestQtiItem.php.html#243\">oat\\taoQtiItem\\controller\\RestQtiItem::createQtiItem<\/a>"],[0,5,"<a href=\"RestQtiItem.php.html#269\">oat\\taoQtiItem\\controller\\RestQtiItem::export<\/a>"],[0,3,"<a href=\"RestQtiItem.php.html#319\">oat\\taoQtiItem\\controller\\RestQtiItem::createClass<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>
