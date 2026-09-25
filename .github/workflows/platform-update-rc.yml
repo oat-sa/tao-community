@@ -27,7 +27,7 @@ permissions:
 
 jobs:
   update-rc:
-    uses: ./.github/workflows/platform-release/reusable-platform-update-rc.yml
+    uses: ./.github/workflows/reusable-platform-update-rc.yml
     with:
       rc_branch: ${{ inputs.rc_branch }}
       extensions: ${{ inputs.extensions }}

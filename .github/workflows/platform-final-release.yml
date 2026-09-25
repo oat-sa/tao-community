@@ -19,7 +19,7 @@ jobs:
       github.event.pull_request.merged == true &&
       github.event.pull_request.base.ref == 'master' &&
       startsWith(github.event.pull_request.head.ref, 'release-')
-    uses: ./.github/workflows/platform-release/reusable-platform-final-release.yml
+    uses: ./.github/workflows/reusable-platform-final-release.yml
     with:
       head_ref: ${{ github.event.pull_request.head.ref }}
       merge_commit_sha: ${{ github.event.pull_request.merge_commit_sha }}

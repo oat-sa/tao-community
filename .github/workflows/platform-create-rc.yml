@@ -27,7 +27,7 @@ permissions:
 
 jobs:
   create-rc:
-    uses: ./.github/workflows/platform-release/reusable-platform-create-rc.yml
+    uses: ./.github/workflows/reusable-platform-create-rc.yml
     with:
       release_month: ${{ inputs.release_month }}
       lts: ${{ inputs.lts }}

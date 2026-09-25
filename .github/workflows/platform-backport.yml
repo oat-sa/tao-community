@@ -23,7 +23,7 @@ permissions:
 
 jobs:
   backport:
-    uses: ./.github/workflows/platform-release/reusable-platform-backport.yml
+    uses: ./.github/workflows/reusable-platform-backport.yml
     with:
       source_release: ${{ inputs.source_release }}
       extensions: ${{ inputs.extensions }}
