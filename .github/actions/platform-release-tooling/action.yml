@@ -1,7 +1,7 @@
 name: Platform release tooling (bundled)
 description: >
-  Bundled platform-release helpers for tao-community. No external tooling repo
-  or checkout step — scripts ship next to this composite action.
+  Exposes platform-release script paths from .github/scripts/platform-release
+  in the consumer repository (must be committed with the workflows).
 
 outputs:
   scripts:
@@ -14,19 +14,42 @@ outputs:
 runs:
   using: composite
   steps:
-    - name: Export script paths
+    - name: Verify bundled platform-release scripts
       id: paths
       shell: bash
       run: |
         set -euo pipefail
-        ROOT="${{ github.action_path }}/platform-release"
+        ROOT="${{ github.workspace }}/.github/scripts/platform-release"
         SCRIPTS="${ROOT}/bin"
         LIB="${ROOT}/lib"
-        if [ ! -f "${SCRIPTS}/validate.mjs" ]; then
-          echo "::error::Bundled platform-release scripts missing at ${SCRIPTS}"
+        REQUIRED=(
+          validate.mjs
+          calculate-next-rc.mjs
+          calculate-next-backport.mjs
+          resolve-latest-versions.mjs
+          resolve-backport-updates.mjs
+          update-composer.mjs
+          update-keywords.mjs
+          detect-managed-packages.mjs
+          detect-changed-packages.mjs
+          collect-release-notes.mjs
+          update-pr-body.mjs
+          parse-package-updates.mjs
+        )
+        missing=()
+        for f in "${REQUIRED[@]}"; do
+          if [ ! -f "${SCRIPTS}/${f}" ]; then
+            missing+=("${SCRIPTS}/${f}")
+          fi
+        done
+        if [ "${#missing[@]}" -ne 0 ]; then
+          echo "::error::Platform release scripts missing in this repository."
+          echo "::error::Copy tao-community/.github/ from platform-release-action (workflows + actions + scripts)."
+          printf '%s\n' "${missing[@]}" | while read -r p; do echo "::error::  missing: ${p}"; done
           exit 1
         fi
         echo "SCRIPTS=${SCRIPTS}" >> "$GITHUB_ENV"
         echo "PLATFORM_RELEASE_LIB=${LIB}" >> "$GITHUB_ENV"
         echo "scripts=${SCRIPTS}" >> "$GITHUB_OUTPUT"
         echo "lib=${LIB}" >> "$GITHUB_OUTPUT"
+        echo "Platform release scripts OK at ${SCRIPTS}"
