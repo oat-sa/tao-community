@@ -61,8 +61,18 @@ jobs:
         with:
           node-version: '24'
 
+      - name: Pin Composer cache directory
+        run: |
+          mkdir -p "${{ runner.temp }}/composer-cache"
+          echo "COMPOSER_CACHE_DIR=${{ runner.temp }}/composer-cache" >> "$GITHUB_ENV"
+
       - name: Restore Composer cache
-        uses: ./.github/actions/cache-composer
+        uses: actions/cache@v4
+        with:
+          path: ${{ runner.temp }}/composer-cache
+          key: composer-${{ runner.os }}-${{ hashFiles('composer.lock') }}
+          restore-keys: |
+            composer-${{ runner.os }}-
 
       - name: Setup Composer
         uses: ./.github/actions/setup-composer

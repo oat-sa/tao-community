@@ -1,7 +1,7 @@
 name: Platform release tooling (bundled)
 description: >
-  Exposes platform-release script paths from .github/scripts/platform-release
-  in the consumer repository (must be committed with the workflows).
+  Copies platform-release scripts to RUNNER_TEMP so later git checkouts (e.g.
+  backport from an old tag) do not remove .github/scripts from the workspace.
 
 outputs:
   scripts:
@@ -14,14 +14,18 @@ outputs:
 runs:
   using: composite
   steps:
-    - name: Verify bundled platform-release scripts
+    - name: Verify and stage platform-release scripts
       id: paths
       shell: bash
       run: |
         set -euo pipefail
-        ROOT="${{ github.workspace }}/.github/scripts/platform-release"
-        SCRIPTS="${ROOT}/bin"
-        LIB="${ROOT}/lib"
+        SRC="${{ github.workspace }}/.github/scripts/platform-release"
+        SCRIPTS="${SRC}/bin"
+        STAGE="${RUNNER_TEMP}/platform-release-tooling"
+        rm -rf "${STAGE}"
+        cp -a "${SRC}" "${STAGE}"
+        SCRIPTS="${STAGE}/bin"
+        LIB="${STAGE}/lib"
         REQUIRED=(
           validate.mjs
           calculate-next-rc.mjs
@@ -52,4 +56,4 @@ runs:
         echo "PLATFORM_RELEASE_LIB=${LIB}" >> "$GITHUB_ENV"
         echo "scripts=${SCRIPTS}" >> "$GITHUB_OUTPUT"
         echo "lib=${LIB}" >> "$GITHUB_OUTPUT"
-        echo "Platform release scripts OK at ${SCRIPTS}"
+        echo "Platform release scripts staged at ${STAGE}"
