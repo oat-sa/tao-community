@@ -13,17 +13,430 @@ permissions:
   pull-requests: read
   actions: write
 
+concurrency:
+  group: platform-final-release-${{ github.event.pull_request.head.ref }}
+  cancel-in-progress: false
+
+env:
+  PLATFORM_MAIN_BRANCH: master
+  PLATFORM_TAG_PREFIX: ''
+  BOT_USER_NAME: oat-github-bot
+  BOT_USER_EMAIL: oat-github-bot@taotesting.com
+
 jobs:
   release:
     if: >
       github.event.pull_request.merged == true &&
-      github.event.pull_request.base.ref == 'master' &&
-      startsWith(github.event.pull_request.head.ref, 'release-')
-    uses: ./.github/workflows/reusable-platform-final-release.yml
-    with:
-      head_ref: ${{ github.event.pull_request.head.ref }}
-      merge_commit_sha: ${{ github.event.pull_request.merge_commit_sha }}
-      pr_number: ${{ format('{0}', github.event.pull_request.number) }}
-      main_branch: master
-      # slack_notification: true   # opt in; default off
-    secrets: inherit
+            github.event.pull_request.base.ref == 'master' &&
+            startsWith(github.event.pull_request.head.ref, 'release-')
+    name: Create platform release
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.meta.outputs.platform_version }}
+      release_url: ${{ steps.publish.outputs.release_url }}
+      released: ${{ steps.publish.outputs.released }}
+      package_updates: ${{ steps.updates.outputs.package_updates }}
+    steps:
+      - name: Checkout platform (caller)
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Resolve GitHub token for this repository
+        id: auth
+        uses: ./.github/actions/resolve-github-token
+        with:
+          elevated-token: ${{ secrets.SEMVER_GH_TOKEN }}
+          fallback-token: ${{ github.token }}
+
+      - name: Load bundled platform-release tooling
+        id: tooling
+        uses: ./.github/actions/platform-release-tooling
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Resolve release target
+        id: meta
+        env:
+          HEAD_REF: ${{ github.event.pull_request.head.ref }}
+          TAG_PREFIX: ''
+          MATERIALIZE_FROM: ''
+          RELEASE_MONTH: ''
+          MERGE_SHA: ${{ github.event.pull_request.merge_commit_sha }}
+          LTS_INPUT: 'false'
+        run: |
+          set -euo pipefail
+          git fetch --tags --force
+          git fetch origin 'refs/heads/*:refs/remotes/origin/*'
+          git tag -l > /tmp/tags.txt
+
+          MATERIALIZE_FROM="$(echo "${MATERIALIZE_FROM}" | xargs)"
+          HEAD_REF="$(echo "${HEAD_REF}" | xargs)"
+          MERGE_SHA="$(echo "${MERGE_SHA}" | xargs)"
+
+          if [ -n "$MATERIALIZE_FROM" ] && [ -n "$MERGE_SHA" ]; then
+            echo "::error::materialize_from_branch and merge_commit_sha are mutually exclusive"
+            exit 1
+          fi
+
+          LTS_ARGS=()
+          if [ "$LTS_INPUT" = "true" ]; then
+            LTS_ARGS+=(--lts=true)
+          fi
+
+          if [ -n "$MATERIALIZE_FROM" ]; then
+            if ! git show-ref --verify --quiet "refs/remotes/origin/${MATERIALIZE_FROM}"; then
+              echo "::error::Source branch not found: ${MATERIALIZE_FROM}"
+              exit 1
+            fi
+            GITHUB_OUTPUT=/tmp/next-rc.out node "$SCRIPTS/calculate-next-rc.mjs" \
+              --release-month="${RELEASE_MONTH}" \
+              --tags-file=/tmp/tags.txt \
+              "${LTS_ARGS[@]}"
+            RC_BRANCH=$(grep '^rc_branch=' /tmp/next-rc.out | tail -1 | cut -d= -f2-)
+            PLATFORM_VERSION=$(grep '^platform_version=' /tmp/next-rc.out | tail -1 | cut -d= -f2-)
+            LTS_FLAG=$(grep '^lts=' /tmp/next-rc.out | tail -1 | cut -d= -f2-)
+            if git show-ref --verify --quiet "refs/remotes/origin/${RC_BRANCH}" \
+              || git show-ref --verify --quiet "refs/heads/${RC_BRANCH}"; then
+              echo "::error::Release branch already exists: ${RC_BRANCH}"
+              exit 1
+            fi
+            echo "rc_branch=${RC_BRANCH}" >> "$GITHUB_OUTPUT"
+            echo "platform_version=${PLATFORM_VERSION}" >> "$GITHUB_OUTPUT"
+            echo "lts=${LTS_FLAG}" >> "$GITHUB_OUTPUT"
+            if [ "$LTS_FLAG" = "true" ]; then
+              echo "release_title=${PLATFORM_VERSION} LTS" >> "$GITHUB_OUTPUT"
+            else
+              echo "release_title=${PLATFORM_VERSION}" >> "$GITHUB_OUTPUT"
+            fi
+            echo "materialize=true" >> "$GITHUB_OUTPUT"
+            echo "source_branch=${MATERIALIZE_FROM}" >> "$GITHUB_OUTPUT"
+            echo "Materialize ${RC_BRANCH} (${PLATFORM_VERSION}) from ${MATERIALIZE_FROM}"
+          else
+            if [ -z "$HEAD_REF" ]; then
+              echo "::error::head_ref is required when materialize_from_branch is empty"
+              exit 1
+            fi
+            if [[ ! "$HEAD_REF" =~ ^release-[0-9]{4}-[0-9]{2}$ ]]; then
+              echo "::error::Not a monthly RC branch: ${HEAD_REF}"
+              exit 1
+            fi
+            YEAR="${HEAD_REF:8:4}"
+            MONTH="${HEAD_REF:13:2}"
+            MONTHLY="${YEAR}.${MONTH}"
+            # Prefer LTS from composer keywords on the RC tip when present.
+            REF_FOR_KW="${MERGE_SHA:-origin/${HEAD_REF}}"
+            if git cat-file -e "${REF_FOR_KW}:composer.json" 2>/dev/null; then
+              git show "${REF_FOR_KW}:composer.json" > /tmp/release-composer.json
+            else
+              echo '{"keywords":[]}' > /tmp/release-composer.json
+            fi
+            LTS_FLAG=$(
+              MONTHLY="$MONTHLY" LTS_INPUT="$LTS_INPUT" RELEASE_MONTH="$RELEASE_MONTH" SCRIPTS="$SCRIPTS" \
+              node --input-type=module -e '
+                import { readFileSync } from "node:fs";
+                import { pathToFileURL } from "node:url";
+                import { dirname, join } from "node:path";
+                const lib = join(dirname(process.env.SCRIPTS), "lib", "platform-version.js");
+                const PV = await import(pathToFileURL(lib).href);
+                const monthly = process.env.MONTHLY;
+                const composer = JSON.parse(readFileSync("/tmp/release-composer.json", "utf8"));
+                let fromKw = null;
+                for (const kw of composer.keywords || []) {
+                  const parsed = PV.parsePlatformVersionKeyword(String(kw));
+                  if (parsed && parsed.monthly === monthly) { fromKw = parsed.lts; break; }
+                }
+                let lts = false;
+                if (process.env.LTS_INPUT === "true") lts = true;
+                else if (fromKw === true) lts = true;
+                else lts = PV.resolveLts({ releaseMonth: process.env.RELEASE_MONTH || "", monthly });
+                process.stdout.write(lts ? "true" : "false");
+              '
+            )
+            # Tag is always YYYY.MM (+ optional prefix); LTS is title/keywords/notes only.
+            VERSION="${TAG_PREFIX}${MONTHLY}"
+            echo "rc_branch=${HEAD_REF}" >> "$GITHUB_OUTPUT"
+            echo "platform_version=${VERSION}" >> "$GITHUB_OUTPUT"
+            echo "lts=${LTS_FLAG}" >> "$GITHUB_OUTPUT"
+            if [ "$LTS_FLAG" = "true" ]; then
+              echo "release_title=${VERSION} LTS" >> "$GITHUB_OUTPUT"
+            else
+              echo "release_title=${VERSION}" >> "$GITHUB_OUTPUT"
+            fi
+            echo "materialize=false" >> "$GITHUB_OUTPUT"
+            echo "source_branch=" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Materialize release branch from source
+        if: steps.meta.outputs.materialize == 'true'
+        env:
+          SOURCE_BRANCH: ${{ steps.meta.outputs.source_branch }}
+          RC_BRANCH: ${{ steps.meta.outputs.rc_branch }}
+          LTS_FLAG: ${{ steps.meta.outputs.lts }}
+        run: |
+          set -euo pipefail
+          git config user.name "$BOT_USER_NAME"
+          git config user.email "$BOT_USER_EMAIL"
+          git checkout -B "$SOURCE_BRANCH" "origin/${SOURCE_BRANCH}"
+          git checkout -b "$RC_BRANCH"
+
+          node "$SCRIPTS/update-keywords.mjs" \
+            --composer-json=composer.json \
+            --rc-branch="$RC_BRANCH" \
+            --lts="${LTS_FLAG}"
+
+          git add composer.json
+          if git diff --cached --quiet; then
+            echo "Keywords already current; pushing ${RC_BRANCH} at source tip."
+          else
+            git commit -m "chore(release): prepare ${RC_BRANCH}"
+          fi
+          git push -u origin "$RC_BRANCH"
+
+      - name: Checkout release commit
+        if: steps.meta.outputs.materialize != 'true'
+        env:
+          MERGE_SHA: ${{ github.event.pull_request.merge_commit_sha }}
+          HEAD_REF: ${{ github.event.pull_request.head.ref }}
+        run: |
+          set -euo pipefail
+          # Prefer git switch over actions/checkout so tooling checkout stays on disk.
+          MERGE_SHA="$(echo "${MERGE_SHA}" | xargs)"
+          HEAD_REF="$(echo "${HEAD_REF}" | xargs)"
+          if [ -n "$MERGE_SHA" ]; then
+            git checkout --detach "$MERGE_SHA"
+          else
+            git checkout -B "$HEAD_REF" "origin/${HEAD_REF}"
+          fi
+
+      - name: Resolve release SHA
+        id: sha
+        run: |
+          set -euo pipefail
+          SHA=$(git rev-parse HEAD)
+          echo "release_sha=$SHA" >> "$GITHUB_OUTPUT"
+          echo "Releasing from commit ${SHA}"
+
+      - name: Guard against duplicate / mismatched tags
+        id: guard
+        env:
+          VERSION: ${{ steps.meta.outputs.platform_version }}
+          RC_BRANCH: ${{ steps.meta.outputs.rc_branch }}
+          RELEASE_SHA: ${{ steps.sha.outputs.release_sha }}
+          GH_TOKEN: ${{ steps.auth.outputs.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          git fetch --tags --force
+          node "$SCRIPTS/validate.mjs" --check=tag-matches-rc --branch="$RC_BRANCH" --tag="$VERSION"
+
+          if git rev-parse -q --verify "refs/tags/${VERSION}" >/dev/null; then
+            EXISTING_SHA=$(git rev-list -n 1 "refs/tags/${VERSION}")
+            if [ "$EXISTING_SHA" = "$RELEASE_SHA" ]; then
+              echo "::notice::Tag ${VERSION} already points at release commit ${RELEASE_SHA}."
+              echo "tag_exists=true" >> "$GITHUB_OUTPUT"
+              echo "tag_matches=true" >> "$GITHUB_OUTPUT"
+            else
+              echo "::error::Tag ${VERSION} already exists at ${EXISTING_SHA}, not release commit ${RELEASE_SHA}. Refusing to overwrite."
+              exit 1
+            fi
+          else
+            echo "tag_exists=false" >> "$GITHUB_OUTPUT"
+            echo "tag_matches=false" >> "$GITHUB_OUTPUT"
+          fi
+
+          if gh release view "$VERSION" --repo "$GH_REPO" >/dev/null 2>&1; then
+            echo "release_exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "release_exists=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Build release notes
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          VERSION: ${{ steps.meta.outputs.platform_version }}
+          LTS_FLAG: ${{ steps.meta.outputs.lts }}
+          PR_NUMBER: ${{ format('{0}', github.event.pull_request.number) }}
+          PLATFORM_TOOLING_LIB: ${{ steps.tooling.outputs.lib }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/platform-release
+          git tag -l > /tmp/tags.txt
+
+          set +e
+          GITHUB_OUTPUT=/tmp/previous.out node "$SCRIPTS/validate.mjs" \
+            --check=previous-release --target="$VERSION" --tags-file=/tmp/tags.txt
+          STATUS=$?
+          set -e
+
+          cp composer.json /tmp/platform-release/new-composer.json
+          if [ "$STATUS" -eq 0 ]; then
+            PREV=$(grep '^previous_release=' /tmp/previous.out | tail -1 | cut -d= -f2-)
+            if git rev-parse -q --verify "refs/tags/${PREV}" >/dev/null; then
+              git show "${PREV}:composer.json" > /tmp/platform-release/old-composer.json
+            else
+              echo '{"require":{}}' > /tmp/platform-release/old-composer.json
+            fi
+          else
+            echo '{"require":{}}' > /tmp/platform-release/old-composer.json
+          fi
+
+          node "$SCRIPTS/detect-changed-packages.mjs" \
+            --old-composer-json=/tmp/platform-release/old-composer.json \
+            --new-composer-json=/tmp/platform-release/new-composer.json \
+            --output=/tmp/platform-release/changes.json
+
+          LTS_ARGS=()
+          if [ "$LTS_FLAG" = "true" ]; then
+            LTS_ARGS+=(--lts=true)
+          fi
+          node "$SCRIPTS/collect-release-notes.mjs" \
+            --changes=/tmp/platform-release/changes.json \
+            --platform-version="$VERSION" \
+            --composer-lock=composer.lock \
+            --output=/tmp/platform-release/generated-notes.md \
+            "${LTS_ARGS[@]}"
+
+          # Prefer manually edited notes from the PR body when present (PR-merge path).
+          if [ -n "$(echo "${PR_NUMBER}" | tr -d '[:space:]')" ]; then
+            GH_TOKEN="${{ github.token }}" gh pr view "$PR_NUMBER" --repo "$GH_REPO" --json body -q .body \
+              > /tmp/platform-release/pr-body.md || true
+          else
+            : > /tmp/platform-release/pr-body.md
+          fi
+          LTS_FLAG="$LTS_FLAG" node --input-type=module -e '
+            import { readFileSync, writeFileSync } from "node:fs";
+            import { pathToFileURL } from "node:url";
+            const { PrBody } = await import(
+              pathToFileURL(process.env.PLATFORM_TOOLING_LIB + "/pr-body.js").href
+            );
+            const body = readFileSync("/tmp/platform-release/pr-body.md", "utf8");
+            const extracted = new PrBody().extractReleaseNotes(body);
+            const generated = readFileSync("/tmp/platform-release/generated-notes.md", "utf8");
+            let final = extracted && extracted.trim() !== "" ? extracted : generated;
+            if (process.env.LTS_FLAG === "true") {
+              const lines = final.split(/\r?\n/);
+              if (lines[0]?.startsWith("# ") && !/\bLTS\b/i.test(lines[0])) {
+                lines[0] = `${lines[0]} LTS`;
+                final = lines.join("\n");
+              }
+            }
+            writeFileSync("/tmp/platform-release/release-notes.md", final.trimEnd() + "\n");
+          '
+
+      - name: Format package updates for Slack
+        id: updates
+        run: |
+          set -euo pipefail
+          {
+            echo "package_updates<<EOF"
+            if [ -f /tmp/platform-release/changes.json ]; then
+              jq -r '.[] | "• `\(.package)` `\(.old)` → `\(.new)`"' /tmp/platform-release/changes.json
+            fi
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Create tag on release commit
+        if: steps.guard.outputs.tag_exists != 'true'
+        env:
+          VERSION: ${{ steps.meta.outputs.platform_version }}
+          RELEASE_SHA: ${{ steps.sha.outputs.release_sha }}
+        run: |
+          set -euo pipefail
+          git config user.name "$BOT_USER_NAME"
+          git config user.email "$BOT_USER_EMAIL"
+          git tag -a "$VERSION" "$RELEASE_SHA" -m "Platform ${VERSION}"
+          git push origin "refs/tags/${VERSION}"
+
+      - name: Publish GitHub Release
+        id: publish
+        env:
+          GH_TOKEN: ${{ steps.auth.outputs.token }}
+          GH_REPO: ${{ github.repository }}
+          VERSION: ${{ steps.meta.outputs.platform_version }}
+          RELEASE_TITLE: ${{ steps.meta.outputs.release_title }}
+          RELEASE_SHA: ${{ steps.sha.outputs.release_sha }}
+          RELEASE_EXISTS: ${{ steps.guard.outputs.release_exists }}
+        run: |
+          set -euo pipefail
+          TITLE="${RELEASE_TITLE:-$VERSION}"
+          if [ "$RELEASE_EXISTS" = "true" ]; then
+            echo "::notice::GitHub Release ${VERSION} already exists; leaving it unchanged."
+            URL=$(gh release view "$VERSION" --repo "$GH_REPO" --json url -q .url)
+            echo "release_url=$URL" >> "$GITHUB_OUTPUT"
+            echo "released=false" >> "$GITHUB_OUTPUT"
+          else
+            gh release create "$VERSION" \
+              --repo "$GH_REPO" \
+              --title "$TITLE" \
+              --notes-file /tmp/platform-release/release-notes.md \
+              --target "$RELEASE_SHA"
+            URL=$(gh release view "$VERSION" --repo "$GH_REPO" --json url -q .url)
+            echo "release_url=$URL" >> "$GITHUB_OUTPUT"
+            echo "released=true" >> "$GITHUB_OUTPUT"
+          fi
+
+          {
+            echo "## Platform ${TITLE}"
+            echo ""
+            echo "- Tag: \`${VERSION}\`"
+            echo "- Title: \`${TITLE}\`"
+            echo "- Commit: \`${RELEASE_SHA}\`"
+            echo "- Release URL: ${URL}"
+            echo ""
+            echo "### Release notes"
+            echo ""
+            cat /tmp/platform-release/release-notes.md
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Dispatch follow-up workflows
+        if: false
+        env:
+          GH_TOKEN: ${{ steps.auth.outputs.token }}
+          GH_REPO: ${{ github.repository }}
+          VERSION: ${{ steps.meta.outputs.platform_version }}
+          DISPATCH_WORKFLOWS: ''
+          TOKEN_SOURCE: ${{ steps.auth.outputs.source }}
+        run: |
+          set -euo pipefail
+          if [ "$TOKEN_SOURCE" = "fallback" ]; then
+            echo "::notice::Tag was pushed with GITHUB_TOKEN (no elevated SEMVER_GH_TOKEN); relying on workflow_dispatch for follow-ups."
+          fi
+          IFS=',' read -ra WORKFLOWS <<< "$DISPATCH_WORKFLOWS"
+          for wf in "${WORKFLOWS[@]}"; do
+            wf="$(echo "$wf" | xargs)"
+            [ -n "$wf" ] || continue
+            echo "Dispatching ${wf} at ref ${VERSION}"
+            gh workflow run "$wf" --repo "$GH_REPO" --ref "$VERSION"
+          done
+
+  notify-slack:
+    name: Notify Slack
+    runs-on: ubuntu-latest
+    needs: release
+    if: >
+      always() &&
+      false &&
+      needs.release.result != 'cancelled' &&
+      needs.release.outputs.version != ''
+    permissions:
+      contents: read
+    steps:
+      - name: Slack notification
+        continue-on-error: true
+        uses: ./.github/actions/notify-slack
+        env:
+          SLACK_NOTIFICATION: 'true'
+        with:
+          status: ${{ needs.release.result == 'success' && 'success' || 'failure' }}
+          version: ${{ needs.release.outputs.version }}
+          release-url: ${{ needs.release.outputs.release_url }}
+          slack-token: ${{ secrets.SEMVER_SLACK_TOKEN }}
+          slack-channel: ${{ secrets.SEMVER_SLACK_CHANNEL }}
+          repository: ${{ github.repository }}
+          run-url: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          updates: ${{ needs.release.outputs.package_updates }}
