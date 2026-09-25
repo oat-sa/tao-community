@@ -1,0 +1,32 @@
+name: Platform release tooling (bundled)
+description: >
+  Bundled platform-release helpers for tao-community. No external tooling repo
+  or checkout step — scripts ship next to this composite action.
+
+outputs:
+  scripts:
+    description: Absolute path to platform-release bin scripts
+    value: ${{ steps.paths.outputs.scripts }}
+  lib:
+    description: Absolute path to platform-release lib
+    value: ${{ steps.paths.outputs.lib }}
+
+runs:
+  using: composite
+  steps:
+    - name: Export script paths
+      id: paths
+      shell: bash
+      run: |
+        set -euo pipefail
+        ROOT="${{ github.action_path }}/platform-release"
+        SCRIPTS="${ROOT}/bin"
+        LIB="${ROOT}/lib"
+        if [ ! -f "${SCRIPTS}/validate.mjs" ]; then
+          echo "::error::Bundled platform-release scripts missing at ${SCRIPTS}"
+          exit 1
+        fi
+        echo "SCRIPTS=${SCRIPTS}" >> "$GITHUB_ENV"
+        echo "PLATFORM_RELEASE_LIB=${LIB}" >> "$GITHUB_ENV"
+        echo "scripts=${SCRIPTS}" >> "$GITHUB_OUTPUT"
+        echo "lib=${LIB}" >> "$GITHUB_OUTPUT"

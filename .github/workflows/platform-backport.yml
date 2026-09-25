@@ -1,0 +1,32 @@
+# Self-contained tao-community workflow (see tao-community/README.md).
+
+name: Platform backport release
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_release:
+        description: >
+          Monthly platform line (YYYY.MM). Latest tag on that line is the branch point.
+        required: true
+        type: string
+      extensions:
+        description: >
+          package=version and/or GitHub release URLs. Separate with commas or |
+          (e.g. oat-sa/tao-core=56.7.3).
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  backport:
+    uses: ./.github/workflows/platform-release/reusable-platform-backport.yml
+    with:
+      source_release: ${{ inputs.source_release }}
+      extensions: ${{ inputs.extensions }}
+      main_branch: master
+      # slack_notification: true   # opt in; default off
+    secrets: inherit

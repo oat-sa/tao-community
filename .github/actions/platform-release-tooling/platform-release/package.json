@@ -1,0 +1,11 @@
+{
+  "name": "platform-release-scripts",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "test": "node --test ../../tests/platform-release/run-tests.mjs"
+  }
+}

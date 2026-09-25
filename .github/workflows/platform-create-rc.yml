@@ -1,0 +1,35 @@
+# Self-contained tao-community workflow (see tao-community/README.md).
+
+name: Platform create RC
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_month:
+        description: >
+          Optional RC target. Leave blank to auto-calculate. Accepts
+          release-YYYY-MM, YYYY.MM, YYYY-MM, or …-lts / LTS.
+        required: false
+        type: string
+        default: ''
+      lts:
+        description: >
+          Force LTS (keyword "YYYY.MM LTS" + release-note marker). Tag stays
+          YYYY.MM. When false, LTS is still inferred for Feb/May/Aug/Nov or from
+          release_month …-lts.
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  create-rc:
+    uses: ./.github/workflows/platform-release/reusable-platform-create-rc.yml
+    with:
+      release_month: ${{ inputs.release_month }}
+      lts: ${{ inputs.lts }}
+      main_branch: master
+    secrets: inherit

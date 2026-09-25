@@ -1,0 +1,176 @@
+name: Reusable — Platform release PR notes
+
+on:
+  workflow_call:
+    inputs:
+      pr_number:
+        required: true
+        type: string
+      head_ref:
+        required: true
+        type: string
+      head_sha:
+        required: true
+        type: string
+      base_ref:
+        required: false
+        type: string
+        default: main
+      main_branch:
+        required: false
+        type: string
+        default: main
+      tag_prefix:
+        description: Optional git tag prefix (e.g. release- → release-YYYY.MM)
+        required: false
+        type: string
+        default: ''
+    secrets:
+      SEMVER_GH_TOKEN:
+        required: false
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: platform-release-pr-${{ inputs.pr_number }}
+  cancel-in-progress: true
+
+env:
+  PLATFORM_MAIN_BRANCH: ${{ inputs.main_branch }}
+  PLATFORM_TAG_PREFIX: ${{ inputs.tag_prefix }}
+
+jobs:
+  release-notes:
+    name: Generate platform release notes
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate RC head branch
+        id: validate
+        env:
+          HEAD_REF: ${{ inputs.head_ref }}
+          TAG_PREFIX: ${{ inputs.tag_prefix }}
+        run: |
+          set -euo pipefail
+          if [[ ! "$HEAD_REF" =~ ^release-[0-9]{4}-[0-9]{2}$ ]]; then
+            echo "Not a monthly RC branch ($HEAD_REF); skipping."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          YEAR="${HEAD_REF:8:4}"
+          MONTH="${HEAD_REF:13:2}"
+          echo "skip=false" >> "$GITHUB_OUTPUT"
+          echo "rc_branch=$HEAD_REF" >> "$GITHUB_OUTPUT"
+          echo "platform_version=${TAG_PREFIX}${YEAR}.${MONTH}" >> "$GITHUB_OUTPUT"
+
+      - name: Checkout PR head
+        if: steps.validate.outputs.skip != 'true'
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          ref: ${{ inputs.head_sha }}
+
+      - name: Load bundled platform-release tooling
+        if: steps.validate.outputs.skip != 'true'
+        id: tooling
+        uses: ./.github/actions/platform-release-tooling
+
+      - name: Setup Node.js
+        if: steps.validate.outputs.skip != 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Resolve previous platform release
+        if: steps.validate.outputs.skip != 'true'
+        id: previous
+        env:
+          PLATFORM_VERSION: ${{ steps.validate.outputs.platform_version }}
+        run: |
+          set -euo pipefail
+          git fetch --tags --force
+          git tag -l > /tmp/tags.txt
+
+          set +e
+          GITHUB_OUTPUT=/tmp/previous.out node "$SCRIPTS/validate.mjs" \
+            --check=previous-release --target="$PLATFORM_VERSION" --tags-file=/tmp/tags.txt
+          STATUS=$?
+          set -e
+
+          if [ "$STATUS" -ne 0 ]; then
+            echo "::warning::No previous platform release tag found before ${PLATFORM_VERSION}."
+            echo "previous_release=" >> "$GITHUB_OUTPUT"
+            echo "has_previous=false" >> "$GITHUB_OUTPUT"
+          else
+            PREV=$(grep '^previous_release=' /tmp/previous.out | tail -1 | cut -d= -f2-)
+            echo "previous_release=${PREV}" >> "$GITHUB_OUTPUT"
+            echo "has_previous=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Diff composer.json against previous release
+        if: steps.validate.outputs.skip != 'true'
+        env:
+          HAS_PREVIOUS: ${{ steps.previous.outputs.has_previous }}
+          PREVIOUS_RELEASE: ${{ steps.previous.outputs.previous_release }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/platform-release
+          cp composer.json /tmp/platform-release/new-composer.json
+
+          if [ "${HAS_PREVIOUS}" = "true" ] && [ -n "${PREVIOUS_RELEASE}" ]; then
+            git show "${PREVIOUS_RELEASE}:composer.json" > /tmp/platform-release/old-composer.json
+          else
+            echo '{"require":{}}' > /tmp/platform-release/old-composer.json
+            echo "::warning::Comparing against empty baseline (no previous release tag)."
+          fi
+
+          node "$SCRIPTS/detect-changed-packages.mjs" \
+            --old-composer-json=/tmp/platform-release/old-composer.json \
+            --new-composer-json=/tmp/platform-release/new-composer.json \
+            --output=/tmp/platform-release/changes.json
+
+      - name: Collect extension release notes
+        if: steps.validate.outputs.skip != 'true'
+        env:
+          # Public extension release APIs work with GITHUB_TOKEN. Do not prefer an org
+          # SEMVER_GH_TOKEN that may be invalid for API calls from this repo's workflows.
+          GH_TOKEN: ${{ github.token }}
+          PLATFORM_VERSION: ${{ steps.validate.outputs.platform_version }}
+          PREVIOUS_RELEASE: ${{ steps.previous.outputs.previous_release }}
+          RC_BRANCH: ${{ steps.validate.outputs.rc_branch }}
+        run: |
+          set -euo pipefail
+          node "$SCRIPTS/collect-release-notes.mjs" \
+            --changes=/tmp/platform-release/changes.json \
+            --platform-version="$PLATFORM_VERSION" \
+            --composer-lock=composer.lock \
+            --output=/tmp/platform-release/release-notes.md \
+            --summary-output=/tmp/platform-release/summary.md
+
+          {
+            echo "## Platform ${PLATFORM_VERSION} PR notes"
+            echo ""
+            echo "- RC branch: \`${RC_BRANCH}\`"
+            echo "- Previous release: \`${PREVIOUS_RELEASE:-none}\`"
+            echo ""
+            cat /tmp/platform-release/summary.md
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Update PR description
+        if: steps.validate.outputs.skip != 'true'
+        env:
+          # Always use GITHUB_TOKEN for PR mutations on this repo. An org SEMVER_GH_TOKEN
+          # without access here makes `gh` report "Could not resolve to a Repository".
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          PR_NUMBER: ${{ inputs.pr_number }}
+        run: |
+          set -euo pipefail
+          gh pr view "$PR_NUMBER" --repo "$GH_REPO" --json body -q .body \
+            > /tmp/platform-release/pr-body.md || echo -n "" > /tmp/platform-release/pr-body.md
+          node "$SCRIPTS/update-pr-body.mjs" \
+            --body-file=/tmp/platform-release/pr-body.md \
+            --notes-file=/tmp/platform-release/release-notes.md \
+            --output=/tmp/platform-release/pr-body-updated.md
+          gh pr edit "$PR_NUMBER" --repo "$GH_REPO" --body-file /tmp/platform-release/pr-body-updated.md

@@ -1,0 +1,35 @@
+# Self-contained tao-community workflow (see tao-community/README.md).
+
+name: Platform update RC
+
+on:
+  workflow_dispatch:
+    inputs:
+      rc_branch:
+        description: >
+          Optional branch to update (release-YYYY-MM). Leave blank for the latest
+          existing release-YYYY-MM branch.
+        required: false
+        type: string
+        default: ''
+      extensions:
+        description: >
+          Optional selective updates (blank = refresh ALL managed packages to
+          latest). package=version / URLs; separate with commas or |,
+          e.g. oat-sa/tao-core=56.7.3
+        required: false
+        type: string
+        default: ''
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  update-rc:
+    uses: ./.github/workflows/platform-release/reusable-platform-update-rc.yml
+    with:
+      rc_branch: ${{ inputs.rc_branch }}
+      extensions: ${{ inputs.extensions }}
+      main_branch: master
+    secrets: inherit

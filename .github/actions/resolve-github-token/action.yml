@@ -1,0 +1,96 @@
+name: Resolve GitHub token
+description: >
+  Resolve two tokens: one for this platform repository (push/checkout), and one
+  for reading private oat-sa packages (Composer OAuth + GitHub tags API). The
+  packages token prefers SEMVER_GH_TOKEN whenever it is set — even if that PAT
+  cannot push to the current repo (in which case git uses GITHUB_TOKEN).
+
+inputs:
+  elevated-token:
+    description: Optional elevated PAT/app token (e.g. SEMVER_GH_TOKEN)
+    required: false
+    default: ''
+  fallback-token:
+    description: Fallback token (usually github.token)
+    required: true
+  configure-git-remote:
+    description: If true, set origin push URL to use the repo token
+    required: false
+    default: 'true'
+
+outputs:
+  token:
+    description: Token that can access this repository (git push / gh to caller)
+    value: ${{ steps.resolve.outputs.token }}
+  source:
+    description: Which token was selected for this repo (elevated|fallback)
+    value: ${{ steps.resolve.outputs.source }}
+  packages-token:
+    description: Token for private package reads (Composer + GitHub tags API)
+    value: ${{ steps.resolve.outputs.packages-token }}
+  packages-source:
+    description: Which token was selected for packages (elevated|fallback)
+    value: ${{ steps.resolve.outputs.packages-source }}
+
+runs:
+  using: composite
+  steps:
+    - name: Resolve repo + packages GitHub tokens
+      id: resolve
+      shell: bash
+      env:
+        ELEVATED_TOKEN: ${{ inputs.elevated-token }}
+        FALLBACK_TOKEN: ${{ inputs.fallback-token }}
+        REPO: ${{ github.repository }}
+        CONFIGURE_GIT: ${{ inputs.configure-git-remote }}
+      run: |
+        set -euo pipefail
+
+        # Packages / cross-repo reads: always prefer elevated when present.
+        if [ -n "${ELEVATED_TOKEN}" ]; then
+          PACKAGES_TOKEN="${ELEVATED_TOKEN}"
+          PACKAGES_SOURCE=elevated
+          echo "Using elevated token for private package reads (Composer / GitHub tags)."
+        else
+          PACKAGES_TOKEN="${FALLBACK_TOKEN}"
+          PACKAGES_SOURCE=fallback
+          echo "::warning::No SEMVER_GH_TOKEN; private oat-sa package resolution may fail (GITHUB_TOKEN cannot see other private repos)."
+        fi
+        echo "packages-token=${PACKAGES_TOKEN}" >> "$GITHUB_OUTPUT"
+        echo "packages-source=${PACKAGES_SOURCE}" >> "$GITHUB_OUTPUT"
+
+        # This-repo operations: elevated only if it can see the caller repo.
+        if [ -z "${ELEVATED_TOKEN}" ]; then
+          echo "No elevated token configured; using GITHUB_TOKEN for ${REPO}."
+          REPO_TOKEN="${FALLBACK_TOKEN}"
+          REPO_SOURCE=fallback
+        else
+          set +e
+          HTTP_CODE=$(curl -sS -o /dev/null -w '%{http_code}' \
+            -H "Authorization: Bearer ${ELEVATED_TOKEN}" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/${REPO}")
+          CURL_STATUS=$?
+          set -e
+
+          if [ "$CURL_STATUS" -ne 0 ] || [ "$HTTP_CODE" != "200" ]; then
+            echo "::warning::Elevated GitHub token cannot access ${REPO}; using GITHUB_TOKEN for this-repo git/push."
+            REPO_TOKEN="${FALLBACK_TOKEN}"
+            REPO_SOURCE=fallback
+          else
+            echo "Using elevated GitHub token for ${REPO}."
+            REPO_TOKEN="${ELEVATED_TOKEN}"
+            REPO_SOURCE=elevated
+          fi
+        fi
+        echo "token=${REPO_TOKEN}" >> "$GITHUB_OUTPUT"
+        echo "source=${REPO_SOURCE}" >> "$GITHUB_OUTPUT"
+
+        # PLATFORM_GH_TOKEN = this repo; GH_TOKEN = packages (VersionResolver / gh api reads)
+        echo "PLATFORM_GH_TOKEN=${REPO_TOKEN}" >> "$GITHUB_ENV"
+        echo "GH_TOKEN=${PACKAGES_TOKEN}" >> "$GITHUB_ENV"
+
+        if [ "${CONFIGURE_GIT}" = "true" ]; then
+          git remote set-url origin "https://x-access-token:${REPO_TOKEN}@github.com/${REPO}.git"
+        fi

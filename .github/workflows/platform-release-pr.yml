@@ -1,0 +1,27 @@
+# Self-contained tao-community workflow (see tao-community/README.md).
+
+name: Platform release PR notes
+
+on:
+  pull_request:
+    # Do not listen for `edited`: the reusable updates the PR body.
+    types: [opened, synchronize, reopened]
+    branches: [master]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  release-notes:
+    if: >
+      github.event.pull_request.base.ref == 'master' &&
+      startsWith(github.event.pull_request.head.ref, 'release-')
+    uses: ./.github/workflows/platform-release/reusable-platform-release-pr.yml
+    with:
+      pr_number: ${{ format('{0}', github.event.pull_request.number) }}
+      head_ref: ${{ github.event.pull_request.head.ref }}
+      head_sha: ${{ github.event.pull_request.head.sha }}
+      base_ref: ${{ github.event.pull_request.base.ref }}
+      main_branch: master
+    secrets: inherit

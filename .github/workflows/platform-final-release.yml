@@ -1,0 +1,29 @@
+# Self-contained tao-community workflow (see tao-community/README.md).
+# Final release after PR merge to master (bare YYYY.MM tags).
+
+name: Platform final release
+
+on:
+  pull_request:
+    types: [closed]
+    branches: [master]
+
+permissions:
+  contents: write
+  pull-requests: read
+  actions: write
+
+jobs:
+  release:
+    if: >
+      github.event.pull_request.merged == true &&
+      github.event.pull_request.base.ref == 'master' &&
+      startsWith(github.event.pull_request.head.ref, 'release-')
+    uses: ./.github/workflows/platform-release/reusable-platform-final-release.yml
+    with:
+      head_ref: ${{ github.event.pull_request.head.ref }}
+      merge_commit_sha: ${{ github.event.pull_request.merge_commit_sha }}
+      pr_number: ${{ format('{0}', github.event.pull_request.number) }}
+      main_branch: master
+      # slack_notification: true   # opt in; default off
+    secrets: inherit

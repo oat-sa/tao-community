@@ -1,0 +1,149 @@
+name: Notify Slack of platform release
+description: Send a Slack notification for platform release success or failure
+
+inputs:
+  status:
+    description: success or failure
+    required: true
+  version:
+    description: Platform version tag
+    required: true
+  release-url:
+    description: GitHub Release URL (optional on failure)
+    required: false
+    default: ''
+  slack-token:
+    description: Slack bot token
+    required: true
+  slack-channel:
+    description: Slack channel ID
+    required: true
+  repository:
+    description: owner/repo
+    required: true
+  run-url:
+    description: Workflow run URL
+    required: true
+  message:
+    description: Optional extra message body (e.g. release kind)
+    required: false
+    default: ''
+  updates:
+    description: Optional multiline list of package version updates (Slack mrkdwn)
+    required: false
+    default: ''
+
+runs:
+  using: composite
+  steps:
+    - name: Send Slack notification
+      shell: bash
+      env:
+        SLACK_TOKEN: ${{ inputs.slack-token }}
+        SLACK_CHANNEL: ${{ inputs.slack-channel }}
+        STATUS: ${{ inputs.status }}
+        VERSION: ${{ inputs.version }}
+        RELEASE_URL: ${{ inputs.release-url }}
+        REPO_NAME: ${{ inputs.repository }}
+        RUN_URL: ${{ inputs.run-url }}
+        EXTRA_MESSAGE: ${{ inputs.message }}
+        PACKAGE_UPDATES: ${{ inputs.updates }}
+        SLACK_NOTIFICATION: ${{ env.SLACK_NOTIFICATION }}
+      run: |
+        set -euo pipefail
+
+        # Default off. Enable via reusable input slack_notification: true.
+        case "${SLACK_NOTIFICATION:-false}" in
+          true|TRUE|1|yes|YES)
+            ;;
+          *)
+            echo "Slack notification skipped (SLACK_NOTIFICATION=${SLACK_NOTIFICATION:-unset})."
+            exit 0
+            ;;
+        esac
+
+        if [ -z "${SLACK_TOKEN:-}" ] || [ -z "${SLACK_CHANNEL:-}" ]; then
+          echo "::warning::Slack notification skipped (SEMVER_SLACK_TOKEN or SEMVER_SLACK_CHANNEL not configured)."
+          exit 0
+        fi
+
+        append_updates() {
+          if [ -n "${PACKAGE_UPDATES}" ]; then
+            BODY="${BODY}"$'\n\n'"*Updated packages:*"$'\n'"${PACKAGE_UPDATES}"
+          fi
+        }
+
+        if [ "$STATUS" = "success" ]; then
+          HEADER_TEXT="Platform release: ${REPO_NAME} ${VERSION}"
+          BODY="Platform \`${VERSION}\` has been released successfully."
+          if [ -n "${EXTRA_MESSAGE}" ]; then
+            BODY="${BODY}"$'\n'"${EXTRA_MESSAGE}"
+          fi
+          append_updates
+          PRIMARY_URL="${RELEASE_URL:-$RUN_URL}"
+          PRIMARY_TEXT="View release"
+          if [ -z "${RELEASE_URL}" ]; then
+            PRIMARY_TEXT="View workflow run"
+          fi
+        else
+          HEADER_TEXT="Platform release failed: ${REPO_NAME}"
+          BODY="Platform release for \`${VERSION}\` failed."
+          if [ -n "${EXTRA_MESSAGE}" ]; then
+            BODY="${BODY}"$'\n'"${EXTRA_MESSAGE}"
+          fi
+          append_updates
+          BODY="${BODY}"$'\n'"*Workflow:* <${RUN_URL}|View workflow run>"
+          PRIMARY_URL="$RUN_URL"
+          PRIMARY_TEXT="View failed run"
+        fi
+
+        PAYLOAD=$(jq -n \
+          --arg channel "$SLACK_CHANNEL" \
+          --arg header_text "$HEADER_TEXT" \
+          --arg body "$BODY" \
+          --arg primary_url "$PRIMARY_URL" \
+          --arg primary_text "$PRIMARY_TEXT" \
+          --arg text_fallback "$HEADER_TEXT" \
+          '{
+            channel: $channel,
+            text: ($text_fallback + "\n" + $primary_url),
+            blocks: [
+              {
+                type: "header",
+                text: { type: "plain_text", text: $header_text, emoji: true }
+              },
+              {
+                type: "section",
+                text: { type: "mrkdwn", text: $body }
+              },
+              {
+                type: "actions",
+                elements: [
+                  {
+                    type: "button",
+                    text: { type: "plain_text", text: $primary_text, emoji: true },
+                    url: $primary_url
+                  }
+                ]
+              }
+            ]
+          }')
+
+        if ! RESPONSE=$(curl -sS -X POST https://slack.com/api/chat.postMessage \
+          --connect-timeout 10 \
+          --max-time 30 \
+          --retry 3 \
+          --retry-delay 2 \
+          --retry-connrefused \
+          -H "Authorization: Bearer $SLACK_TOKEN" \
+          -H "Content-type: application/json" \
+          --data "$PAYLOAD"); then
+          echo "::warning::Slack notification transport error"
+          exit 0
+        fi
+
+        if ! echo "$RESPONSE" | jq -e '.ok' > /dev/null 2>&1; then
+          echo "::warning::Slack notification failed: $(echo "$RESPONSE" | jq -r '.error // "unknown error"')"
+        else
+          echo "Slack notification sent."
+        fi
