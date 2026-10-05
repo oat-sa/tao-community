@@ -1,0 +1,54 @@
+name: Setup Composer for platform release
+description: Install PHP/Composer and configure GitHub OAuth for private packages
+
+inputs:
+  php-version:
+    description: PHP version
+    required: false
+    default: '8.3'
+  github-token:
+    description: GitHub token for Composer GitHub OAuth / API
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: ${{ inputs.php-version }}
+        tools: composer:v2
+        coverage: none
+
+    - name: Ensure Composer cache directory
+      shell: bash
+      run: |
+        set -euo pipefail
+        if [ -z "${COMPOSER_CACHE_DIR:-}" ]; then
+          CACHE_DIR="${RUNNER_TEMP}/composer-cache"
+          mkdir -p "$CACHE_DIR"
+          echo "COMPOSER_CACHE_DIR=${CACHE_DIR}" >> "$GITHUB_ENV"
+        fi
+
+    - name: Configure Composer GitHub access
+      shell: bash
+      env:
+        COMPOSER_TOKEN: ${{ inputs.github-token }}
+      run: |
+        set -euo pipefail
+        # Same as extension-release-action: VCS repos often use git@github.com /
+        # ssh://git@github.com. Actions has no deploy key, so SSH hangs while
+        # "Loading composer repositories". Force HTTPS + API with the OAuth token.
+        git config --global url."https://github.com/".insteadOf "git@github.com:"
+        git config --global url."https://github.com/".insteadOf "ssh://git@github.com/"
+        git config --global url."https://".insteadOf "git://"
+        composer config --global github-protocols https
+        if [ -n "${COMPOSER_TOKEN}" ]; then
+          composer config --global github-oauth.github.com "${COMPOSER_TOKEN}"
+        fi
+        # Platforms often set preferred-install oat-sa/* = source (slow clones).
+        # Lock-only updates prefer dist + --no-install (see reusable workflows).
+        echo "COMPOSER_PLATFORM_UPDATE_FLAGS=--prefer-dist --no-plugins --no-scripts --no-progress" >> "$GITHUB_ENV"
+        echo "COMPOSER_NO_AUDIT=1" >> "$GITHUB_ENV"
+        echo "Composer cache: ${COMPOSER_CACHE_DIR:-unset} ($(du -sh "${COMPOSER_CACHE_DIR:-/dev/null}" 2>/dev/null | cut -f1 || echo empty))"
+        composer --version

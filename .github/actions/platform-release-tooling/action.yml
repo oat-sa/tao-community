@@ -1,0 +1,59 @@
+name: Platform release tooling (bundled)
+description: >
+  Copies platform-release scripts to RUNNER_TEMP so later git checkouts (e.g.
+  backport from an old tag) do not remove .github/scripts from the workspace.
+
+outputs:
+  scripts:
+    description: Absolute path to platform-release bin scripts
+    value: ${{ steps.paths.outputs.scripts }}
+  lib:
+    description: Absolute path to platform-release lib
+    value: ${{ steps.paths.outputs.lib }}
+
+runs:
+  using: composite
+  steps:
+    - name: Verify and stage platform-release scripts
+      id: paths
+      shell: bash
+      run: |
+        set -euo pipefail
+        SRC="${{ github.workspace }}/.github/scripts/platform-release"
+        SCRIPTS="${SRC}/bin"
+        STAGE="${RUNNER_TEMP}/platform-release-tooling"
+        rm -rf "${STAGE}"
+        cp -a "${SRC}" "${STAGE}"
+        SCRIPTS="${STAGE}/bin"
+        LIB="${STAGE}/lib"
+        REQUIRED=(
+          validate.mjs
+          calculate-next-rc.mjs
+          calculate-next-backport.mjs
+          resolve-latest-versions.mjs
+          resolve-backport-updates.mjs
+          update-composer.mjs
+          update-keywords.mjs
+          detect-managed-packages.mjs
+          detect-changed-packages.mjs
+          collect-release-notes.mjs
+          update-pr-body.mjs
+          parse-package-updates.mjs
+        )
+        missing=()
+        for f in "${REQUIRED[@]}"; do
+          if [ ! -f "${SCRIPTS}/${f}" ]; then
+            missing+=("${SCRIPTS}/${f}")
+          fi
+        done
+        if [ "${#missing[@]}" -ne 0 ]; then
+          echo "::error::Platform release scripts missing in this repository."
+          echo "::error::Copy tao-community/.github/ from platform-release-action (workflows + actions + scripts)."
+          printf '%s\n' "${missing[@]}" | while read -r p; do echo "::error::  missing: ${p}"; done
+          exit 1
+        fi
+        echo "SCRIPTS=${SCRIPTS}" >> "$GITHUB_ENV"
+        echo "PLATFORM_RELEASE_LIB=${LIB}" >> "$GITHUB_ENV"
+        echo "scripts=${SCRIPTS}" >> "$GITHUB_OUTPUT"
+        echo "lib=${LIB}" >> "$GITHUB_OUTPUT"
+        echo "Platform release scripts staged at ${STAGE}"

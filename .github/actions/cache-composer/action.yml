@@ -1,0 +1,25 @@
+name: Cache Composer (platform)
+description: >
+  Restore/save Composer cache for platform workflows. Uses one key per repo/OS/lock
+  so update-rc, create-rc, backport, and composer-cache warm share the same cache.
+
+runs:
+  using: composite
+  steps:
+    - name: Pin Composer cache directory
+      shell: bash
+      run: |
+        set -euo pipefail
+        CACHE_DIR="${RUNNER_TEMP}/composer-cache"
+        mkdir -p "$CACHE_DIR"
+        echo "COMPOSER_CACHE_DIR=${CACHE_DIR}" >> "$GITHUB_ENV"
+        echo "dir=${CACHE_DIR}" >> "$GITHUB_OUTPUT"
+      id: composer-cache
+
+    - name: Cache Composer packages and VCS metadata
+      uses: actions/cache@v4
+      with:
+        path: ${{ steps.composer-cache.outputs.dir }}
+        key: composer-${{ runner.os }}-${{ hashFiles('composer.lock') }}
+        restore-keys: |
+          composer-${{ runner.os }}-
