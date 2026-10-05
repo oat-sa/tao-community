@@ -24,13 +24,17 @@ const input = args['release-month'] ?? args.branch ?? '';
 const releaseMonth = input === 'true' ? '' : input;
 
 try {
-  const branch = PlatformVersion.resolveRcBranchInput(releaseMonth, latestMonthly);
-  const monthly = PlatformVersion.monthlyFromRcBranch(branch);
-  const lts = PlatformVersion.resolveLts({
+  const branch = PlatformVersion.resolveRcBranchInput(releaseMonth, latestMonthly, new Date(), {
     lts: args.lts,
-    releaseMonth,
-    monthly,
   });
+  const monthly = PlatformVersion.monthlyFromRcBranch(branch);
+  const lts =
+    PlatformVersion.isLtsRcBranch(branch) ||
+    PlatformVersion.resolveLts({
+      lts: args.lts,
+      releaseMonth,
+      monthly,
+    });
   // Git tags never carry -lts; LTS is keywords + release description only.
   const platformTag = PlatformVersion.formatTag(monthly, tagPrefix);
   writeGithubOutput({

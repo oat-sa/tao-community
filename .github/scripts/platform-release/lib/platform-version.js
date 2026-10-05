@@ -1,7 +1,7 @@
 /**
  * Platform release version helpers.
  *
- * Monthly: YYYY.MM | Backport: YYYY.MM.N | RC branch: release-YYYY-MM
+ * Monthly: YYYY.MM | Backport: YYYY.MM.N | RC branch: release-YYYY-MM[-lts]
  * Backport branch: release/backport/release-YYYY-MM-N
  * LTS is recorded in composer keywords (`YYYY.MM LTS`) and release notes — not
  * in git tags. Inputs may still use a `-lts` / `LTS` hint (YYYY.MM-lts).
@@ -12,7 +12,7 @@
 
 export const MONTHLY_PATTERN = /^(\d{4})\.(\d{2})$/;
 export const ANY_RELEASE_PATTERN = /^(\d{4})\.(\d{2})(?:\.(\d+))?(-lts)?$/i;
-export const RC_BRANCH_PATTERN = /^release-(\d{4})-(\d{2})$/;
+export const RC_BRANCH_PATTERN = /^release-(\d{4})-(\d{2})(?:-lts)?$/i;
 export const BACKPORT_BRANCH_PATTERN = /^release\/backport\/release-(\d{4})-(\d{2})-(\d+)$/;
 /** composer.json keywords: YYYY.MM | YYYY.MM LTS | YYYY.MM-lts */
 export const PLATFORM_KEYWORD_PATTERN = /^(\d{4})\.(\d{2})(?:\s+LTS|-lts)?$/i;
@@ -185,10 +185,17 @@ export function isAnyRelease(version) {
 }
 
 export function isRcBranch(branch) {
-  const m = branch.match(RC_BRANCH_PATTERN);
+  const m = String(branch ?? '')
+    .trim()
+    .match(RC_BRANCH_PATTERN);
   if (!m) return false;
   const month = Number(m[2]);
   return month >= 1 && month <= 12;
+}
+
+/** @param {string} branch */
+export function isLtsRcBranch(branch) {
+  return isRcBranch(branch) && /-lts$/i.test(String(branch ?? '').trim());
 }
 
 export function isBackportBranch(branch) {
@@ -272,10 +279,15 @@ export function communityRefFromDevRelease(constraint) {
   return rcBranchFromMonthly(monthly);
 }
 
-export function rcBranchFromMonthly(version) {
+/**
+ * @param {string} version bare YYYY.MM
+ * @param {boolean} [lts]
+ */
+export function rcBranchFromMonthly(version, lts = false) {
   const m = version.match(MONTHLY_PATTERN);
   if (!m) throw new Error(`Invalid monthly platform version: ${version}`);
-  return `release-${m[1]}-${m[2]}`;
+  const base = `release-${m[1]}-${m[2]}`;
+  return lts ? `${base}-lts` : base;
 }
 
 export function monthlyBase(version) {
@@ -425,7 +437,9 @@ export function latestReleaseForMonth(monthOrRelease, tags) {
 export function resolveBackportSource(input, tags) {
   const value = input.trim();
   if (!isAnyRelease(value)) {
-    throw new Error(`Invalid source release "${value}". Use YYYY.MM (e.g. 2026.08).`);
+    throw new Error(
+      `Invalid source release "${value}". Use YYYY.MM or YYYY.MM-lts (e.g. 2026.11-lts).`,
+    );
   }
   return latestReleaseForMonth(value, tags);
 }
@@ -467,26 +481,48 @@ export function latestRcBranch(branches) {
  * @param {string|null|undefined} latestMonthly
  * @param {Date} [now]
  */
-export function resolveRcBranchInput(input, latestMonthly, now = new Date()) {
+/**
+ * @param {string|null|undefined} input
+ * @param {string|null|undefined} latestMonthly
+ * @param {Date} [now]
+ * @param {{ lts?: boolean|string|null }} [opts] workflow `lts` input (overrides calendar)
+ */
+export function resolveRcBranchInput(input, latestMonthly, now = new Date(), opts = {}) {
   const parsed = parseReleaseMonthLts(input ?? '');
   const value = parsed.value;
+  const ltsFromInput = parsed.lts;
+
   if (value === '') {
     if (!latestMonthly) {
-      // First release on a tag-less repo: use current UTC month as the RC target.
       const monthly = `${now.getUTCFullYear()}.${String(now.getUTCMonth() + 1).padStart(2, '0')}`;
-      return rcBranchFromMonthly(monthly);
+      const lts = resolveLts({ lts: opts.lts, releaseMonth: input, monthly });
+      return rcBranchFromMonthly(monthly, lts);
     }
-    return nextRcBranch(stripLtsSuffix(monthlyBase(latestMonthly)));
+    const monthly = nextMonthly(stripLtsSuffix(monthlyBase(latestMonthly)));
+    const lts = resolveLts({ lts: opts.lts, releaseMonth: input, monthly });
+    return rcBranchFromMonthly(monthly, lts);
   }
-  if (isRcBranch(value)) return value;
+  if (isRcBranch(value)) {
+    if (isLtsRcBranch(value)) return value.trim();
+    if (ltsFromInput) return rcBranchFromMonthly(monthlyFromRcBranch(value), true);
+    return value;
+  }
   const m = value.match(/^(\d{4})[.-](\d{2})$/);
   if (m) {
     const monthly = `${m[1]}.${m[2]}`;
     if (!isMonthly(monthly)) throw new Error(`Invalid release month: ${value}`);
-    return rcBranchFromMonthly(monthly);
+    /** @type {{ lts?: boolean|string|null, releaseMonth?: string|null, monthly?: string|null }} */
+    const ltsOpts = { releaseMonth: input, monthly };
+    if (opts.lts !== undefined && opts.lts !== null && String(opts.lts) !== '') {
+      ltsOpts.lts = opts.lts;
+    } else if (ltsFromInput) {
+      ltsOpts.lts = true;
+    }
+    const lts = resolveLts(ltsOpts);
+    return rcBranchFromMonthly(monthly, lts);
   }
   throw new Error(
-    `Invalid RC input "${input}". Use release-YYYY-MM, YYYY.MM, YYYY-MM, or add -lts / LTS.`,
+    `Invalid RC input "${input}". Use release-YYYY-MM[-lts], YYYY.MM, YYYY-MM, or add -lts / LTS.`,
   );
 }
 

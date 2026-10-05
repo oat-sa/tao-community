@@ -14,7 +14,7 @@ switch (check) {
     const tagPrefix =
       args['tag-prefix'] ?? process.env.PLATFORM_TAG_PREFIX ?? '';
     if (!PlatformVersion.isRcBranch(branch)) {
-      githubError(`Invalid RC branch name: ${branch} (expected release-YYYY-MM)`);
+      githubError(`Invalid RC branch name: ${branch} (expected release-YYYY-MM or release-YYYY-MM-lts)`);
       process.exit(1);
     }
     const monthly = PlatformVersion.monthlyFromRcBranch(branch);
@@ -174,14 +174,14 @@ switch (check) {
         latest = override;
       } else {
         githubError(
-          `Invalid RC branch override: ${override} (expected release-YYYY-MM or an existing branch)`,
+          `Invalid RC branch override: ${override} (expected release-YYYY-MM[-lts] or an existing branch)`,
         );
         process.exit(1);
       }
     } else {
       latest = PlatformVersion.latestRcBranch(branches);
       if (!latest) {
-        githubError('No RC branch (release-YYYY-MM) found');
+        githubError('No RC branch (release-YYYY-MM or release-YYYY-MM-lts) found');
         process.exit(1);
       }
     }
