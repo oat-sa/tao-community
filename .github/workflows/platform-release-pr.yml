@@ -35,7 +35,7 @@ jobs:
           TAG_PREFIX: ''
         run: |
           set -euo pipefail
-          if [[ ! "$HEAD_REF" =~ ^release-[0-9]{4}-[0-9]{2}$ ]]; then
+          if [[ ! "$HEAD_REF" =~ ^release-[0-9]{4}-[0-9]{2}(-lts)?$ ]]; then
             echo "Not a monthly RC branch ($HEAD_REF); skipping."
             echo "skip=true" >> "$GITHUB_OUTPUT"
             exit 0
