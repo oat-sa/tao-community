@@ -20,7 +20,6 @@ on:
 permissions:
   contents: write
   actions: write
-  workflows: write
 
 concurrency:
   group: platform-backport-${{ inputs.source_release }}-${{ github.repository }}
