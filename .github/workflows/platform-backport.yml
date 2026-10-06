@@ -51,6 +51,7 @@ jobs:
         with:
           elevated-token: ${{ secrets.SEMVER_GH_TOKEN }}
           fallback-token: ${{ github.token }}
+          git-push-via-fallback: 'true'
 
 
       - name: Load bundled platform-release tooling
@@ -226,11 +227,19 @@ jobs:
         env:
           BACKPORT_VERSION: ${{ steps.meta.outputs.backport_version }}
           BACKPORT_BRANCH: ${{ steps.meta.outputs.backport_branch }}
+          REPO_PUSH_TOKEN: ${{ steps.auth.outputs.token }}
         run: |
           set -euo pipefail
           git config user.name "$BOT_USER_NAME"
           git config user.email "$BOT_USER_EMAIL"
-          git add composer.lock
+
+          # ponytail: App/GITHUB_TOKEN can push .github/workflows only when file bytes
+          # already exist on another branch; monthly-tag backports otherwise carry tag-only
+          # workflow snapshots (see GitHub workflow OAuth scope).
+          git fetch origin "$PLATFORM_MAIN_BRANCH"
+          git checkout "origin/${PLATFORM_MAIN_BRANCH}" -- .github/workflows/
+
+          git add composer.lock .github/workflows/
           if [ "${{ steps.deps.outputs.composer_json_changed }}" = "true" ]; then
             git add composer.json
           fi
@@ -239,6 +248,9 @@ jobs:
             exit 1
           fi
           git commit -m "chore(release): prepare backport ${BACKPORT_VERSION}"
+
+          git config --local --unset-all 'http.https://github.com/.extraheader' || true
+          git remote set-url origin "https://x-access-token:${REPO_PUSH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           git push -u origin "$BACKPORT_BRANCH"
           echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
