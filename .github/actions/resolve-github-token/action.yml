@@ -17,6 +17,14 @@ inputs:
     description: If true, set origin push URL to use the repo token
     required: false
     default: 'true'
+  git-push-via-fallback:
+    description: >
+      If true, git push uses fallback-token (GITHUB_TOKEN) even when elevated-token
+      can access this repo. Required when SEMVER_GH_TOKEN is a GitHub App without
+      workflows write — backport branches from monthly tags carry .github/workflows
+      files and App pushes are rejected.
+    required: false
+    default: 'false'
 
 outputs:
   token:
@@ -43,6 +51,7 @@ runs:
         FALLBACK_TOKEN: ${{ inputs.fallback-token }}
         REPO: ${{ github.repository }}
         CONFIGURE_GIT: ${{ inputs.configure-git-remote }}
+        GIT_PUSH_VIA_FALLBACK: ${{ inputs.git-push-via-fallback }}
       run: |
         set -euo pipefail
 
@@ -83,6 +92,12 @@ runs:
             REPO_TOKEN="${ELEVATED_TOKEN}"
             REPO_SOURCE=elevated
           fi
+        fi
+
+        if [ "${GIT_PUSH_VIA_FALLBACK}" = "true" ] && [ "${REPO_SOURCE}" = "elevated" ]; then
+          echo "git-push-via-fallback: using GITHUB_TOKEN for git push (elevated token kept for gh API / releases)."
+          REPO_TOKEN="${FALLBACK_TOKEN}"
+          REPO_SOURCE=fallback
         fi
         echo "token=${REPO_TOKEN}" >> "$GITHUB_OUTPUT"
         echo "source=${REPO_SOURCE}" >> "$GITHUB_OUTPUT"
