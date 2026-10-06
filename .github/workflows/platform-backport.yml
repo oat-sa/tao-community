@@ -20,6 +20,7 @@ on:
 permissions:
   contents: write
   actions: write
+  workflows: write
 
 concurrency:
   group: platform-backport-${{ inputs.source_release }}-${{ github.repository }}
@@ -51,6 +52,7 @@ jobs:
         with:
           elevated-token: ${{ secrets.SEMVER_GH_TOKEN }}
           fallback-token: ${{ github.token }}
+          git-push-via-fallback: 'true'
 
 
       - name: Load bundled platform-release tooling
