@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /home/runner/work/tao-community/tao-community/taoQtiTest/actions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../../_css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="../../_css/nv.d3.min.css" rel="stylesheet" type="text/css">
+  <link href="../../_css/style.css" rel="stylesheet" type="text/css">
+  <link href="../../_css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="../../index.html">/home/runner/work/tao-community/tao-community</a></li>
+         <li class="breadcrumb-item"><a href="../index.html">taoQtiTest</a></li>
+         <li class="breadcrumb-item"><a href="index.html">actions</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="class.Creator.php.html#36">taoQtiTest_actions_Creator</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemRunner.php.html#5">taoQtiTest_actions_ItemRunner</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Items.php.html#32">taoQtiTest_actions_Items</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.OfflineRunner.php.html#31">taoQtiTest_actions_OfflineRunner</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.RestQtiTests.php.html#35">taoQtiTest_actions_RestQtiTests</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#70">taoQtiTest_actions_Runner</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestContent.php.html#27">taoQtiTest_actions_TestContent</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#54">taoQtiTest_actions_TestRunner</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.XmlEditor.php.html#30">taoQtiTest_actions_XmlEditor</a></td><td class="text-right">0%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="class.Runner.php.html#70">taoQtiTest_actions_Runner</a></td><td class="text-right">18906</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#54">taoQtiTest_actions_TestRunner</a></td><td class="text-right">14520</td></tr>
+       <tr><td><a href="class.RestQtiTests.php.html#35">taoQtiTest_actions_RestQtiTests</a></td><td class="text-right">1640</td></tr>
+       <tr><td><a href="class.Items.php.html#32">taoQtiTest_actions_Items</a></td><td class="text-right">992</td></tr>
+       <tr><td><a href="class.Creator.php.html#36">taoQtiTest_actions_Creator</a></td><td class="text-right">600</td></tr>
+       <tr><td><a href="class.TestContent.php.html#27">taoQtiTest_actions_TestContent</a></td><td class="text-right">306</td></tr>
+       <tr><td><a href="class.XmlEditor.php.html#30">taoQtiTest_actions_XmlEditor</a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="class.OfflineRunner.php.html#31">taoQtiTest_actions_OfflineRunner</a></td><td class="text-right">42</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="class.Creator.php.html#42"><abbr title="taoQtiTest_actions_Creator::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#1124"><abbr title="taoQtiTest_actions_Runner::setItemContextToCommand">setItemContextToCommand</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#178"><abbr title="taoQtiTest_actions_TestRunner::getPreviousError">getPreviousError</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#168"><abbr title="taoQtiTest_actions_TestRunner::setStorage">setStorage</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#158"><abbr title="taoQtiTest_actions_TestRunner::getStorage">getStorage</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#148"><abbr title="taoQtiTest_actions_TestRunner::setTestDefinition">setTestDefinition</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#138"><abbr title="taoQtiTest_actions_TestRunner::getTestDefinition">getTestDefinition</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#128"><abbr title="taoQtiTest_actions_TestRunner::setTestSession">setTestSession</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#118"><abbr title="taoQtiTest_actions_TestRunner::getTestSession">getTestSession</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestContent.php.html#109"><abbr title="taoQtiTest_actions_TestContent::download">download</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestContent.php.html#72"><abbr title="taoQtiTest_actions_TestContent::upload">upload</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestContent.php.html#35"><abbr title="taoQtiTest_actions_TestContent::files">files</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#1143"><abbr title="taoQtiTest_actions_Runner::createErrorResponseFromException">createErrorResponseFromException</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#1138"><abbr title="taoQtiTest_actions_Runner::setToolsStateContextToCommand">setToolsStateContextToCommand</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#1115"><abbr title="taoQtiTest_actions_Runner::setNavigationContextToCommand">setNavigationContextToCommand</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#198"><abbr title="taoQtiTest_actions_TestRunner::getCurrentError">getCurrentError</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#1104"><abbr title="taoQtiTest_actions_Runner::getItemResponse">getItemResponse</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#1093"><abbr title="taoQtiTest_actions_Runner::getItemState">getItemState</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#1084"><abbr title="taoQtiTest_actions_Runner::getItemDuration">getItemDuration</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#1079"><abbr title="taoQtiTest_actions_Runner::getRuntimeService">getRuntimeService</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#1074"><abbr title="taoQtiTest_actions_Runner::getDeliveryExecutionService">getDeliveryExecutionService</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#1069"><abbr title="taoQtiTest_actions_Runner::getSessionService">getSessionService</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#1057"><abbr title="taoQtiTest_actions_Runner::getInitSerializedResponse">getInitSerializedResponse</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#1034"><abbr title="taoQtiTest_actions_Runner::getClientStoreId">getClientStoreId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#1002"><abbr title="taoQtiTest_actions_Runner::getInitResponse">getInitResponse</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#982"><abbr title="taoQtiTest_actions_Runner::getRawRequestParameter">getRawRequestParameter</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#968"><abbr title="taoQtiTest_actions_Runner::getRunnerService">getRunnerService</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#956"><abbr title="taoQtiTest_actions_Runner::validateDeliveryExecutionInteractionAccessibility">validateDeliveryExecutionInteractionAccessibility</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#919"><abbr title="taoQtiTest_actions_Runner::messages">messages</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#188"><abbr title="taoQtiTest_actions_TestRunner::setCurrentError">setCurrentError</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#208"><abbr title="taoQtiTest_actions_TestRunner::setCompilationDirectory">setCompilationDirectory</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#869"><abbr title="taoQtiTest_actions_Runner::storeTraceData">storeTraceData</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#620"><abbr title="taoQtiTest_actions_TestRunner::moveBackward">moveBackward</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.XmlEditor.php.html#34"><abbr title="taoQtiTest_actions_XmlEditor::edit">edit</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#958"><abbr title="taoQtiTest_actions_TestRunner::handleAssessmentTestSessionException">handleAssessmentTestSessionException</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#942"><abbr title="taoQtiTest_actions_TestRunner::retrieveItemIndex">retrieveItemIndex</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#928"><abbr title="taoQtiTest_actions_TestRunner::retrieveTestMeta">retrieveTestMeta</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#902"><abbr title="taoQtiTest_actions_TestRunner::retrieveTestSession">retrieveTestSession</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#884"><abbr title="taoQtiTest_actions_TestRunner::retrieveTestDefinition">retrieveTestDefinition</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#847"><abbr title="taoQtiTest_actions_TestRunner::comment">comment</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#769"><abbr title="taoQtiTest_actions_TestRunner::storeItemVariableSet">storeItemVariableSet</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#733"><abbr title="taoQtiTest_actions_TestRunner::onTimeout">onTimeout</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#714"><abbr title="taoQtiTest_actions_TestRunner::endTestSession">endTestSession</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#693"><abbr title="taoQtiTest_actions_TestRunner::timeout">timeout</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#669"><abbr title="taoQtiTest_actions_TestRunner::skip">skip</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#646"><abbr title="taoQtiTest_actions_TestRunner::nextSection">nextSection</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#594"><abbr title="taoQtiTest_actions_TestRunner::moveForward">moveForward</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#218"><abbr title="taoQtiTest_actions_TestRunner::getCompilationDirectory">getCompilationDirectory</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#552"><abbr title="taoQtiTest_actions_TestRunner::endTimedSection">endTimedSection</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#530"><abbr title="taoQtiTest_actions_TestRunner::jumpTo">jumpTo</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#488"><abbr title="taoQtiTest_actions_TestRunner::markForReview">markForReview</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#461"><abbr title="taoQtiTest_actions_TestRunner::keepItemTimed">keepItemTimed</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#407"><abbr title="taoQtiTest_actions_TestRunner::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#371"><abbr title="taoQtiTest_actions_TestRunner::afterAction">afterAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#358"><abbr title="taoQtiTest_actions_TestRunner::getMetaDataHandler">getMetaDataHandler</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#296"><abbr title="taoQtiTest_actions_TestRunner::beforeAction">beforeAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#269"><abbr title="taoQtiTest_actions_TestRunner::notifyError">notifyError</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#257"><abbr title="taoQtiTest_actions_TestRunner::setItemIndex">setItemIndex</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#248"><abbr title="taoQtiTest_actions_TestRunner::getItemIndex">getItemIndex</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#240"><abbr title="taoQtiTest_actions_TestRunner::getTestMeta">getTestMeta</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#229"><abbr title="taoQtiTest_actions_TestRunner::setTestMeta">setTestMeta</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#905"><abbr title="taoQtiTest_actions_Runner::up">up</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#844"><abbr title="taoQtiTest_actions_Runner::comment">comment</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Creator.php.html#80"><abbr title="taoQtiTest_actions_Creator::getTest">getTest</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Items.php.html#209"><abbr title="taoQtiTest_actions_Items::returnSuccess">returnSuccess</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.RestQtiTests.php.html#202"><abbr title="taoQtiTest_actions_RestQtiTests::getItems">getItems</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.RestQtiTests.php.html#164"><abbr title="taoQtiTest_actions_RestQtiTests::importDeferred">importDeferred</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.RestQtiTests.php.html#155"><abbr title="taoQtiTest_actions_RestQtiTests::getTaskName">getTaskName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.RestQtiTests.php.html#135"><abbr title="taoQtiTest_actions_RestQtiTests::isOverwriteTest">isOverwriteTest</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.RestQtiTests.php.html#127"><abbr title="taoQtiTest_actions_RestQtiTests::getItemClassUri">getItemClassUri</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.RestQtiTests.php.html#86"><abbr title="taoQtiTest_actions_RestQtiTests::import">import</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.RestQtiTests.php.html#57"><abbr title="taoQtiTest_actions_RestQtiTests::exportQtiPackage">exportQtiPackage</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.RestQtiTests.php.html#46"><abbr title="taoQtiTest_actions_RestQtiTests::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.OfflineRunner.php.html#87"><abbr title="taoQtiTest_actions_OfflineRunner::getTestDefinitionSerializerService">getTestDefinitionSerializerService</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.OfflineRunner.php.html#79"><abbr title="taoQtiTest_actions_OfflineRunner::getOfflineRunnerService">getOfflineRunnerService</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.OfflineRunner.php.html#68"><abbr title="taoQtiTest_actions_OfflineRunner::attachBranchingRulesToResponse">attachBranchingRulesToResponse</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.OfflineRunner.php.html#37"><abbr title="taoQtiTest_actions_OfflineRunner::init">init</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Items.php.html#224"><abbr title="taoQtiTest_actions_Items::returnFailure">returnFailure</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Items.php.html#198"><abbr title="taoQtiTest_actions_Items::getCreatorItemsService">getCreatorItemsService</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.RestQtiTests.php.html#260"><abbr title="taoQtiTest_actions_RestQtiTests::createClass">createClass</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Items.php.html#189"><abbr title="taoQtiTest_actions_Items::getItemService">getItemService</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Items.php.html#171"><abbr title="taoQtiTest_actions_Items::getQtiItems">getQtiItems</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Items.php.html#136"><abbr title="taoQtiTest_actions_Items::getCategories">getCategories</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Items.php.html#94"><abbr title="taoQtiTest_actions_Items::getItems">getItems</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Items.php.html#76"><abbr title="taoQtiTest_actions_Items::getItemClasses">getItemClasses</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Items.php.html#45"><abbr title="taoQtiTest_actions_Items::get">get</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemRunner.php.html#30"><abbr title="taoQtiTest_actions_ItemRunner::selectView">selectView</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemRunner.php.html#21"><abbr title="taoQtiTest_actions_ItemRunner::getResultServerParams">getResultServerParams</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.ItemRunner.php.html#12"><abbr title="taoQtiTest_actions_ItemRunner::getResultServerEndpoint">getResultServerEndpoint</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Creator.php.html#178"><abbr title="taoQtiTest_actions_Creator::getRuntimeConfig">getRuntimeConfig</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Creator.php.html#166"><abbr title="taoQtiTest_actions_Creator::getCurrentTest">getCurrentTest</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Creator.php.html#138"><abbr title="taoQtiTest_actions_Creator::getIdentifier">getIdentifier</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Creator.php.html#95"><abbr title="taoQtiTest_actions_Creator::saveTest">saveTest</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.RestQtiTests.php.html#234"><abbr title="taoQtiTest_actions_RestQtiTests::addExtraReturnData">addExtraReturnData</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.RestQtiTests.php.html#287"><abbr title="taoQtiTest_actions_RestQtiTests::getUploadedPackageData">getUploadedPackageData</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#802"><abbr title="taoQtiTest_actions_Runner::flagItem">flagItem</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#375"><abbr title="taoQtiTest_actions_Runner::getItem">getItem</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#767"><abbr title="taoQtiTest_actions_Runner::resume">resume</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#743"><abbr title="taoQtiTest_actions_Runner::pause">pause</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#729"><abbr title="taoQtiTest_actions_Runner::shouldTimerStopOnPause">shouldTimerStopOnPause</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#698"><abbr title="taoQtiTest_actions_Runner::exitTest">exitTest</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#665"><abbr title="taoQtiTest_actions_Runner::timeout">timeout</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#634"><abbr title="taoQtiTest_actions_Runner::skip">skip</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#601"><abbr title="taoQtiTest_actions_Runner::move">move</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#557"><abbr title="taoQtiTest_actions_Runner::submitItem">submitItem</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#520"><abbr title="taoQtiTest_actions_Runner::saveItemResponses">saveItemResponses</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#502"><abbr title="taoQtiTest_actions_Runner::endItemTimer">endItemTimer</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#485"><abbr title="taoQtiTest_actions_Runner::saveItemState">saveItemState</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#457"><abbr title="taoQtiTest_actions_Runner::getItemData">getItemData</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#421"><abbr title="taoQtiTest_actions_Runner::getNextItemData">getNextItemData</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#352"><abbr title="taoQtiTest_actions_Runner::getTestMap">getTestMap</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.RestQtiTests.php.html#309"><abbr title="taoQtiTest_actions_RestQtiTests::getTestClass">getTestClass</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#329"><abbr title="taoQtiTest_actions_Runner::getTestContext">getTestContext</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#306"><abbr title="taoQtiTest_actions_Runner::getTestData">getTestData</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#285"><abbr title="taoQtiTest_actions_Runner::init">init</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#259"><abbr title="taoQtiTest_actions_Runner::getStatusCodeFromException">getStatusCodeFromException</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#201"><abbr title="taoQtiTest_actions_Runner::getErrorResponse">getErrorResponse</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#182"><abbr title="taoQtiTest_actions_Runner::validateSecurityToken">validateSecurityToken</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#148"><abbr title="taoQtiTest_actions_Runner::getServiceContext">getServiceContext</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#134"><abbr title="taoQtiTest_actions_Runner::getSessionId">getSessionId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#106"><abbr title="taoQtiTest_actions_Runner::returnJson">returnJson</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#95"><abbr title="taoQtiTest_actions_Runner::getStorageManager">getStorageManager</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.Runner.php.html#84"><abbr title="taoQtiTest_actions_Runner::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.RestQtiTests.php.html#322"><abbr title="taoQtiTest_actions_RestQtiTests::getQtiTestService">getQtiTestService</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.RestQtiTests.php.html#317"><abbr title="taoQtiTest_actions_RestQtiTests::getQtiPackageExporter">getQtiPackageExporter</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="class.XmlEditor.php.html#83"><abbr title="taoQtiTest_actions_XmlEditor::getXmlEditorService">getXmlEditorService</abbr></a></td><td class="text-right">0%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="class.Runner.php.html#201"><abbr title="taoQtiTest_actions_Runner::getErrorResponse">getErrorResponse</abbr></a></td><td class="text-right">156</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#769"><abbr title="taoQtiTest_actions_TestRunner::storeItemVariableSet">storeItemVariableSet</abbr></a></td><td class="text-right">132</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#552"><abbr title="taoQtiTest_actions_TestRunner::endTimedSection">endTimedSection</abbr></a></td><td class="text-right">132</td></tr>
+       <tr><td><a href="class.Creator.php.html#95"><abbr title="taoQtiTest_actions_Creator::saveTest">saveTest</abbr></a></td><td class="text-right">132</td></tr>
+       <tr><td><a href="class.Runner.php.html#259"><abbr title="taoQtiTest_actions_Runner::getStatusCodeFromException">getStatusCodeFromException</abbr></a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="class.Runner.php.html#520"><abbr title="taoQtiTest_actions_Runner::saveItemResponses">saveItemResponses</abbr></a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="class.Items.php.html#94"><abbr title="taoQtiTest_actions_Items::getItems">getItems</abbr></a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="class.XmlEditor.php.html#34"><abbr title="taoQtiTest_actions_XmlEditor::edit">edit</abbr></a></td><td class="text-right">90</td></tr>
+       <tr><td><a href="class.TestContent.php.html#35"><abbr title="taoQtiTest_actions_TestContent::files">files</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#733"><abbr title="taoQtiTest_actions_TestRunner::onTimeout">onTimeout</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#407"><abbr title="taoQtiTest_actions_TestRunner::index">index</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="class.Items.php.html#136"><abbr title="taoQtiTest_actions_Items::getCategories">getCategories</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="class.RestQtiTests.php.html#86"><abbr title="taoQtiTest_actions_RestQtiTests::import">import</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="class.Items.php.html#45"><abbr title="taoQtiTest_actions_Items::get">get</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#958"><abbr title="taoQtiTest_actions_TestRunner::handleAssessmentTestSessionException">handleAssessmentTestSessionException</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#488"><abbr title="taoQtiTest_actions_TestRunner::markForReview">markForReview</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="class.Runner.php.html#148"><abbr title="taoQtiTest_actions_Runner::getServiceContext">getServiceContext</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#296"><abbr title="taoQtiTest_actions_TestRunner::beforeAction">beforeAction</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="class.TestContent.php.html#72"><abbr title="taoQtiTest_actions_TestContent::upload">upload</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#530"><abbr title="taoQtiTest_actions_TestRunner::jumpTo">jumpTo</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="class.Runner.php.html#802"><abbr title="taoQtiTest_actions_Runner::flagItem">flagItem</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#461"><abbr title="taoQtiTest_actions_TestRunner::keepItemTimed">keepItemTimed</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#594"><abbr title="taoQtiTest_actions_TestRunner::moveForward">moveForward</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#646"><abbr title="taoQtiTest_actions_TestRunner::nextSection">nextSection</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#669"><abbr title="taoQtiTest_actions_TestRunner::skip">skip</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="class.Runner.php.html#557"><abbr title="taoQtiTest_actions_Runner::submitItem">submitItem</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="class.Creator.php.html#42"><abbr title="taoQtiTest_actions_Creator::index">index</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="class.RestQtiTests.php.html#202"><abbr title="taoQtiTest_actions_RestQtiTests::getItems">getItems</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="class.RestQtiTests.php.html#57"><abbr title="taoQtiTest_actions_RestQtiTests::exportQtiPackage">exportQtiPackage</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="class.RestQtiTests.php.html#164"><abbr title="taoQtiTest_actions_RestQtiTests::importDeferred">importDeferred</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="class.Runner.php.html#767"><abbr title="taoQtiTest_actions_Runner::resume">resume</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="class.Runner.php.html#375"><abbr title="taoQtiTest_actions_Runner::getItem">getItem</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="class.Creator.php.html#138"><abbr title="taoQtiTest_actions_Creator::getIdentifier">getIdentifier</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="class.Runner.php.html#106"><abbr title="taoQtiTest_actions_Runner::returnJson">returnJson</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#620"><abbr title="taoQtiTest_actions_TestRunner::moveBackward">moveBackward</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="class.Runner.php.html#1002"><abbr title="taoQtiTest_actions_Runner::getInitResponse">getInitResponse</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="class.RestQtiTests.php.html#234"><abbr title="taoQtiTest_actions_RestQtiTests::addExtraReturnData">addExtraReturnData</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="class.Runner.php.html#1084"><abbr title="taoQtiTest_actions_Runner::getItemDuration">getItemDuration</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="class.Runner.php.html#1093"><abbr title="taoQtiTest_actions_Runner::getItemState">getItemState</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="class.RestQtiTests.php.html#287"><abbr title="taoQtiTest_actions_RestQtiTests::getUploadedPackageData">getUploadedPackageData</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="class.TestContent.php.html#109"><abbr title="taoQtiTest_actions_TestContent::download">download</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="class.Runner.php.html#729"><abbr title="taoQtiTest_actions_Runner::shouldTimerStopOnPause">shouldTimerStopOnPause</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="class.RestQtiTests.php.html#260"><abbr title="taoQtiTest_actions_RestQtiTests::createClass">createClass</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="class.RestQtiTests.php.html#135"><abbr title="taoQtiTest_actions_RestQtiTests::isOverwriteTest">isOverwriteTest</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="class.OfflineRunner.php.html#37"><abbr title="taoQtiTest_actions_OfflineRunner::init">init</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="class.Items.php.html#171"><abbr title="taoQtiTest_actions_Items::getQtiItems">getQtiItems</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#693"><abbr title="taoQtiTest_actions_TestRunner::timeout">timeout</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#942"><abbr title="taoQtiTest_actions_TestRunner::retrieveItemIndex">retrieveItemIndex</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="class.Runner.php.html#1034"><abbr title="taoQtiTest_actions_Runner::getClientStoreId">getClientStoreId</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="class.Runner.php.html#1104"><abbr title="taoQtiTest_actions_Runner::getItemResponse">getItemResponse</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="class.Runner.php.html#919"><abbr title="taoQtiTest_actions_Runner::messages">messages</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="class.Runner.php.html#421"><abbr title="taoQtiTest_actions_Runner::getNextItemData">getNextItemData</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="class.Runner.php.html#457"><abbr title="taoQtiTest_actions_Runner::getItemData">getItemData</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="class.Runner.php.html#869"><abbr title="taoQtiTest_actions_Runner::storeTraceData">storeTraceData</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="class.Runner.php.html#485"><abbr title="taoQtiTest_actions_Runner::saveItemState">saveItemState</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="class.Runner.php.html#982"><abbr title="taoQtiTest_actions_Runner::getRawRequestParameter">getRawRequestParameter</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="class.Runner.php.html#601"><abbr title="taoQtiTest_actions_Runner::move">move</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#902"><abbr title="taoQtiTest_actions_TestRunner::retrieveTestSession">retrieveTestSession</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#847"><abbr title="taoQtiTest_actions_TestRunner::comment">comment</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="class.Creator.php.html#166"><abbr title="taoQtiTest_actions_Creator::getCurrentTest">getCurrentTest</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="class.Items.php.html#76"><abbr title="taoQtiTest_actions_Items::getItemClasses">getItemClasses</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#714"><abbr title="taoQtiTest_actions_TestRunner::endTestSession">endTestSession</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="class.Runner.php.html#502"><abbr title="taoQtiTest_actions_Runner::endItemTimer">endItemTimer</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="class.Runner.php.html#306"><abbr title="taoQtiTest_actions_Runner::getTestData">getTestData</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="class.Runner.php.html#285"><abbr title="taoQtiTest_actions_Runner::init">init</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="class.Runner.php.html#634"><abbr title="taoQtiTest_actions_Runner::skip">skip</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="class.RestQtiTests.php.html#127"><abbr title="taoQtiTest_actions_RestQtiTests::getItemClassUri">getItemClassUri</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="class.Runner.php.html#956"><abbr title="taoQtiTest_actions_Runner::validateDeliveryExecutionInteractionAccessibility">validateDeliveryExecutionInteractionAccessibility</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="class.Runner.php.html#665"><abbr title="taoQtiTest_actions_Runner::timeout">timeout</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="class.Runner.php.html#698"><abbr title="taoQtiTest_actions_Runner::exitTest">exitTest</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="class.Runner.php.html#182"><abbr title="taoQtiTest_actions_Runner::validateSecurityToken">validateSecurityToken</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#371"><abbr title="taoQtiTest_actions_TestRunner::afterAction">afterAction</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#358"><abbr title="taoQtiTest_actions_TestRunner::getMetaDataHandler">getMetaDataHandler</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="class.Runner.php.html#743"><abbr title="taoQtiTest_actions_Runner::pause">pause</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="class.TestRunner.php.html#269"><abbr title="taoQtiTest_actions_TestRunner::notifyError">notifyError</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="class.Runner.php.html#134"><abbr title="taoQtiTest_actions_Runner::getSessionId">getSessionId</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="class.Runner.php.html#844"><abbr title="taoQtiTest_actions_Runner::comment">comment</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="class.Runner.php.html#1124"><abbr title="taoQtiTest_actions_Runner::setItemContextToCommand">setItemContextToCommand</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="class.Runner.php.html#352"><abbr title="taoQtiTest_actions_Runner::getTestMap">getTestMap</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="class.Runner.php.html#329"><abbr title="taoQtiTest_actions_Runner::getTestContext">getTestContext</abbr></a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 7.0.15</a> using <a href="https://secure.php.net/" target="_top">PHP 7.4.33</a> with <a href="https://xdebug.org/">Xdebug 3.1.6</a> with <a href="https://github.com/krakjoe/pcov">PCOV 1.0.11</a> at Thu Mar 23 12:19:50 UTC 2023.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="../../_js/jquery.min.js" type="text/javascript"></script>
+  <script src="../../_js/d3.min.js" type="text/javascript"></script>
+  <script src="../../_js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([9,0,0,0,0,0,0,0,0,0,0,0], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([126,0,0,0,0,0,0,0,0,0,0,0], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[0,24,"<a href=\"class.Creator.php.html#36\">taoQtiTest_actions_Creator<\/a>"],[0,3,"<a href=\"class.ItemRunner.php.html#5\">taoQtiTest_actions_ItemRunner<\/a>"],[0,31,"<a href=\"class.Items.php.html#32\">taoQtiTest_actions_Items<\/a>"],[0,6,"<a href=\"class.OfflineRunner.php.html#31\">taoQtiTest_actions_OfflineRunner<\/a>"],[0,40,"<a href=\"class.RestQtiTests.php.html#35\">taoQtiTest_actions_RestQtiTests<\/a>"],[0,137,"<a href=\"class.Runner.php.html#70\">taoQtiTest_actions_Runner<\/a>"],[0,17,"<a href=\"class.TestContent.php.html#27\">taoQtiTest_actions_TestContent<\/a>"],[0,120,"<a href=\"class.TestRunner.php.html#54\">taoQtiTest_actions_TestRunner<\/a>"],[0,10,"<a href=\"class.XmlEditor.php.html#30\">taoQtiTest_actions_XmlEditor<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[0,5,"<a href=\"class.Creator.php.html#42\">taoQtiTest_actions_Creator::index<\/a>"],[0,1,"<a href=\"class.Creator.php.html#80\">taoQtiTest_actions_Creator::getTest<\/a>"],[0,11,"<a href=\"class.Creator.php.html#95\">taoQtiTest_actions_Creator::saveTest<\/a>"],[0,4,"<a href=\"class.Creator.php.html#138\">taoQtiTest_actions_Creator::getIdentifier<\/a>"],[0,2,"<a href=\"class.Creator.php.html#166\">taoQtiTest_actions_Creator::getCurrentTest<\/a>"],[0,1,"<a href=\"class.Creator.php.html#178\">taoQtiTest_actions_Creator::getRuntimeConfig<\/a>"],[0,1,"<a href=\"class.ItemRunner.php.html#12\">taoQtiTest_actions_ItemRunner::getResultServerEndpoint<\/a>"],[0,1,"<a href=\"class.ItemRunner.php.html#21\">taoQtiTest_actions_ItemRunner::getResultServerParams<\/a>"],[0,1,"<a href=\"class.ItemRunner.php.html#30\">taoQtiTest_actions_ItemRunner::selectView<\/a>"],[0,6,"<a href=\"class.Items.php.html#45\">taoQtiTest_actions_Items::get<\/a>"],[0,2,"<a href=\"class.Items.php.html#76\">taoQtiTest_actions_Items::getItemClasses<\/a>"],[0,10,"<a href=\"class.Items.php.html#94\">taoQtiTest_actions_Items::getItems<\/a>"],[0,6,"<a href=\"class.Items.php.html#136\">taoQtiTest_actions_Items::getCategories<\/a>"],[0,3,"<a href=\"class.Items.php.html#171\">taoQtiTest_actions_Items::getQtiItems<\/a>"],[0,1,"<a href=\"class.Items.php.html#189\">taoQtiTest_actions_Items::getItemService<\/a>"],[0,1,"<a href=\"class.Items.php.html#198\">taoQtiTest_actions_Items::getCreatorItemsService<\/a>"],[0,1,"<a href=\"class.Items.php.html#209\">taoQtiTest_actions_Items::returnSuccess<\/a>"],[0,1,"<a href=\"class.Items.php.html#224\">taoQtiTest_actions_Items::returnFailure<\/a>"],[0,3,"<a href=\"class.OfflineRunner.php.html#37\">taoQtiTest_actions_OfflineRunner::init<\/a>"],[0,1,"<a href=\"class.OfflineRunner.php.html#68\">taoQtiTest_actions_OfflineRunner::attachBranchingRulesToResponse<\/a>"],[0,1,"<a href=\"class.OfflineRunner.php.html#79\">taoQtiTest_actions_OfflineRunner::getOfflineRunnerService<\/a>"],[0,1,"<a href=\"class.OfflineRunner.php.html#87\">taoQtiTest_actions_OfflineRunner::getTestDefinitionSerializerService<\/a>"],[0,1,"<a href=\"class.RestQtiTests.php.html#46\">taoQtiTest_actions_RestQtiTests::index<\/a>"],[0,5,"<a href=\"class.RestQtiTests.php.html#57\">taoQtiTest_actions_RestQtiTests::exportQtiPackage<\/a>"],[0,6,"<a href=\"class.RestQtiTests.php.html#86\">taoQtiTest_actions_RestQtiTests::import<\/a>"],[0,2,"<a href=\"class.RestQtiTests.php.html#127\">taoQtiTest_actions_RestQtiTests::getItemClassUri<\/a>"],[0,3,"<a href=\"class.RestQtiTests.php.html#135\">taoQtiTest_actions_RestQtiTests::isOverwriteTest<\/a>"],[0,1,"<a href=\"class.RestQtiTests.php.html#155\">taoQtiTest_actions_RestQtiTests::getTaskName<\/a>"],[0,4,"<a href=\"class.RestQtiTests.php.html#164\">taoQtiTest_actions_RestQtiTests::importDeferred<\/a>"],[0,5,"<a href=\"class.RestQtiTests.php.html#202\">taoQtiTest_actions_RestQtiTests::getItems<\/a>"],[0,4,"<a href=\"class.RestQtiTests.php.html#234\">taoQtiTest_actions_RestQtiTests::addExtraReturnData<\/a>"],[0,3,"<a href=\"class.RestQtiTests.php.html#260\">taoQtiTest_actions_RestQtiTests::createClass<\/a>"],[0,3,"<a href=\"class.RestQtiTests.php.html#287\">taoQtiTest_actions_RestQtiTests::getUploadedPackageData<\/a>"],[0,1,"<a href=\"class.RestQtiTests.php.html#309\">taoQtiTest_actions_RestQtiTests::getTestClass<\/a>"],[0,1,"<a href=\"class.RestQtiTests.php.html#317\">taoQtiTest_actions_RestQtiTests::getQtiPackageExporter<\/a>"],[0,1,"<a href=\"class.RestQtiTests.php.html#322\">taoQtiTest_actions_RestQtiTests::getQtiTestService<\/a>"],[0,1,"<a href=\"class.Runner.php.html#84\">taoQtiTest_actions_Runner::__construct<\/a>"],[0,1,"<a href=\"class.Runner.php.html#95\">taoQtiTest_actions_Runner::getStorageManager<\/a>"],[0,4,"<a href=\"class.Runner.php.html#106\">taoQtiTest_actions_Runner::returnJson<\/a>"],[0,2,"<a href=\"class.Runner.php.html#134\">taoQtiTest_actions_Runner::getSessionId<\/a>"],[0,6,"<a href=\"class.Runner.php.html#148\">taoQtiTest_actions_Runner::getServiceContext<\/a>"],[0,2,"<a href=\"class.Runner.php.html#182\">taoQtiTest_actions_Runner::validateSecurityToken<\/a>"],[0,12,"<a href=\"class.Runner.php.html#201\">taoQtiTest_actions_Runner::getErrorResponse<\/a>"],[0,10,"<a href=\"class.Runner.php.html#259\">taoQtiTest_actions_Runner::getStatusCodeFromException<\/a>"],[0,2,"<a href=\"class.Runner.php.html#285\">taoQtiTest_actions_Runner::init<\/a>"],[0,2,"<a href=\"class.Runner.php.html#306\">taoQtiTest_actions_Runner::getTestData<\/a>"],[0,2,"<a href=\"class.Runner.php.html#329\">taoQtiTest_actions_Runner::getTestContext<\/a>"],[0,2,"<a href=\"class.Runner.php.html#352\">taoQtiTest_actions_Runner::getTestMap<\/a>"],[0,4,"<a href=\"class.Runner.php.html#375\">taoQtiTest_actions_Runner::getItem<\/a>"],[0,3,"<a href=\"class.Runner.php.html#421\">taoQtiTest_actions_Runner::getNextItemData<\/a>"],[0,3,"<a href=\"class.Runner.php.html#457\">taoQtiTest_actions_Runner::getItemData<\/a>"],[0,3,"<a href=\"class.Runner.php.html#485\">taoQtiTest_actions_Runner::saveItemState<\/a>"],[0,2,"<a href=\"class.Runner.php.html#502\">taoQtiTest_actions_Runner::endItemTimer<\/a>"],[0,10,"<a href=\"class.Runner.php.html#520\">taoQtiTest_actions_Runner::saveItemResponses<\/a>"],[0,5,"<a href=\"class.Runner.php.html#557\">taoQtiTest_actions_Runner::submitItem<\/a>"],[0,2,"<a href=\"class.Runner.php.html#601\">taoQtiTest_actions_Runner::move<\/a>"],[0,2,"<a href=\"class.Runner.php.html#634\">taoQtiTest_actions_Runner::skip<\/a>"],[0,2,"<a href=\"class.Runner.php.html#665\">taoQtiTest_actions_Runner::timeout<\/a>"],[0,2,"<a href=\"class.Runner.php.html#698\">taoQtiTest_actions_Runner::exitTest<\/a>"],[0,3,"<a href=\"class.Runner.php.html#729\">taoQtiTest_actions_Runner::shouldTimerStopOnPause<\/a>"],[0,2,"<a href=\"class.Runner.php.html#743\">taoQtiTest_actions_Runner::pause<\/a>"],[0,4,"<a href=\"class.Runner.php.html#767\">taoQtiTest_actions_Runner::resume<\/a>"],[0,5,"<a href=\"class.Runner.php.html#802\">taoQtiTest_actions_Runner::flagItem<\/a>"],[0,2,"<a href=\"class.Runner.php.html#844\">taoQtiTest_actions_Runner::comment<\/a>"],[0,3,"<a href=\"class.Runner.php.html#869\">taoQtiTest_actions_Runner::storeTraceData<\/a>"],[0,1,"<a href=\"class.Runner.php.html#905\">taoQtiTest_actions_Runner::up<\/a>"],[0,3,"<a href=\"class.Runner.php.html#919\">taoQtiTest_actions_Runner::messages<\/a>"],[0,2,"<a href=\"class.Runner.php.html#956\">taoQtiTest_actions_Runner::validateDeliveryExecutionInteractionAccessibility<\/a>"],[0,1,"<a href=\"class.Runner.php.html#968\">taoQtiTest_actions_Runner::getRunnerService<\/a>"],[0,2,"<a href=\"class.Runner.php.html#982\">taoQtiTest_actions_Runner::getRawRequestParameter<\/a>"],[0,4,"<a href=\"class.Runner.php.html#1002\">taoQtiTest_actions_Runner::getInitResponse<\/a>"],[0,3,"<a href=\"class.Runner.php.html#1034\">taoQtiTest_actions_Runner::getClientStoreId<\/a>"],[0,1,"<a href=\"class.Runner.php.html#1057\">taoQtiTest_actions_Runner::getInitSerializedResponse<\/a>"],[0,1,"<a href=\"class.Runner.php.html#1069\">taoQtiTest_actions_Runner::getSessionService<\/a>"],[0,1,"<a href=\"class.Runner.php.html#1074\">taoQtiTest_actions_Runner::getDeliveryExecutionService<\/a>"],[0,1,"<a href=\"class.Runner.php.html#1079\">taoQtiTest_actions_Runner::getRuntimeService<\/a>"],[0,3,"<a href=\"class.Runner.php.html#1084\">taoQtiTest_actions_Runner::getItemDuration<\/a>"],[0,3,"<a href=\"class.Runner.php.html#1093\">taoQtiTest_actions_Runner::getItemState<\/a>"],[0,3,"<a href=\"class.Runner.php.html#1104\">taoQtiTest_actions_Runner::getItemResponse<\/a>"],[0,1,"<a href=\"class.Runner.php.html#1115\">taoQtiTest_actions_Runner::setNavigationContextToCommand<\/a>"],[0,2,"<a href=\"class.Runner.php.html#1124\">taoQtiTest_actions_Runner::setItemContextToCommand<\/a>"],[0,1,"<a href=\"class.Runner.php.html#1138\">taoQtiTest_actions_Runner::setToolsStateContextToCommand<\/a>"],[0,1,"<a href=\"class.Runner.php.html#1143\">taoQtiTest_actions_Runner::createErrorResponseFromException<\/a>"],[0,8,"<a href=\"class.TestContent.php.html#35\">taoQtiTest_actions_TestContent::files<\/a>"],[0,6,"<a href=\"class.TestContent.php.html#72\">taoQtiTest_actions_TestContent::upload<\/a>"],[0,3,"<a href=\"class.TestContent.php.html#109\">taoQtiTest_actions_TestContent::download<\/a>"],[0,1,"<a href=\"class.TestRunner.php.html#118\">taoQtiTest_actions_TestRunner::getTestSession<\/a>"],[0,1,"<a href=\"class.TestRunner.php.html#128\">taoQtiTest_actions_TestRunner::setTestSession<\/a>"],[0,1,"<a href=\"class.TestRunner.php.html#138\">taoQtiTest_actions_TestRunner::getTestDefinition<\/a>"],[0,1,"<a href=\"class.TestRunner.php.html#148\">taoQtiTest_actions_TestRunner::setTestDefinition<\/a>"],[0,1,"<a href=\"class.TestRunner.php.html#158\">taoQtiTest_actions_TestRunner::getStorage<\/a>"],[0,1,"<a href=\"class.TestRunner.php.html#168\">taoQtiTest_actions_TestRunner::setStorage<\/a>"],[0,1,"<a href=\"class.TestRunner.php.html#178\">taoQtiTest_actions_TestRunner::getPreviousError<\/a>"],[0,1,"<a href=\"class.TestRunner.php.html#188\">taoQtiTest_actions_TestRunner::setCurrentError<\/a>"],[0,1,"<a href=\"class.TestRunner.php.html#198\">taoQtiTest_actions_TestRunner::getCurrentError<\/a>"],[0,1,"<a href=\"class.TestRunner.php.html#208\">taoQtiTest_actions_TestRunner::setCompilationDirectory<\/a>"],[0,1,"<a href=\"class.TestRunner.php.html#218\">taoQtiTest_actions_TestRunner::getCompilationDirectory<\/a>"],[0,1,"<a href=\"class.TestRunner.php.html#229\">taoQtiTest_actions_TestRunner::setTestMeta<\/a>"],[0,1,"<a href=\"class.TestRunner.php.html#240\">taoQtiTest_actions_TestRunner::getTestMeta<\/a>"],[0,1,"<a href=\"class.TestRunner.php.html#248\">taoQtiTest_actions_TestRunner::getItemIndex<\/a>"],[0,1,"<a href=\"class.TestRunner.php.html#257\">taoQtiTest_actions_TestRunner::setItemIndex<\/a>"],[0,2,"<a href=\"class.TestRunner.php.html#269\">taoQtiTest_actions_TestRunner::notifyError<\/a>"],[0,6,"<a href=\"class.TestRunner.php.html#296\">taoQtiTest_actions_TestRunner::beforeAction<\/a>"],[0,2,"<a href=\"class.TestRunner.php.html#358\">taoQtiTest_actions_TestRunner::getMetaDataHandler<\/a>"],[0,2,"<a href=\"class.TestRunner.php.html#371\">taoQtiTest_actions_TestRunner::afterAction<\/a>"],[0,8,"<a href=\"class.TestRunner.php.html#407\">taoQtiTest_actions_TestRunner::index<\/a>"],[0,5,"<a href=\"class.TestRunner.php.html#461\">taoQtiTest_actions_TestRunner::keepItemTimed<\/a>"],[0,6,"<a href=\"class.TestRunner.php.html#488\">taoQtiTest_actions_TestRunner::markForReview<\/a>"],[0,5,"<a href=\"class.TestRunner.php.html#530\">taoQtiTest_actions_TestRunner::jumpTo<\/a>"],[0,11,"<a href=\"class.TestRunner.php.html#552\">taoQtiTest_actions_TestRunner::endTimedSection<\/a>"],[0,5,"<a href=\"class.TestRunner.php.html#594\">taoQtiTest_actions_TestRunner::moveForward<\/a>"],[0,4,"<a href=\"class.TestRunner.php.html#620\">taoQtiTest_actions_TestRunner::moveBackward<\/a>"],[0,5,"<a href=\"class.TestRunner.php.html#646\">taoQtiTest_actions_TestRunner::nextSection<\/a>"],[0,5,"<a href=\"class.TestRunner.php.html#669\">taoQtiTest_actions_TestRunner::skip<\/a>"],[0,3,"<a href=\"class.TestRunner.php.html#693\">taoQtiTest_actions_TestRunner::timeout<\/a>"],[0,2,"<a href=\"class.TestRunner.php.html#714\">taoQtiTest_actions_TestRunner::endTestSession<\/a>"],[0,8,"<a href=\"class.TestRunner.php.html#733\">taoQtiTest_actions_TestRunner::onTimeout<\/a>"],[0,11,"<a href=\"class.TestRunner.php.html#769\">taoQtiTest_actions_TestRunner::storeItemVariableSet<\/a>"],[0,2,"<a href=\"class.TestRunner.php.html#847\">taoQtiTest_actions_TestRunner::comment<\/a>"],[0,1,"<a href=\"class.TestRunner.php.html#884\">taoQtiTest_actions_TestRunner::retrieveTestDefinition<\/a>"],[0,2,"<a href=\"class.TestRunner.php.html#902\">taoQtiTest_actions_TestRunner::retrieveTestSession<\/a>"],[0,1,"<a href=\"class.TestRunner.php.html#928\">taoQtiTest_actions_TestRunner::retrieveTestMeta<\/a>"],[0,3,"<a href=\"class.TestRunner.php.html#942\">taoQtiTest_actions_TestRunner::retrieveItemIndex<\/a>"],[0,6,"<a href=\"class.TestRunner.php.html#958\">taoQtiTest_actions_TestRunner::handleAssessmentTestSessionException<\/a>"],[0,9,"<a href=\"class.XmlEditor.php.html#34\">taoQtiTest_actions_XmlEditor::edit<\/a>"],[0,1,"<a href=\"class.XmlEditor.php.html#83\">taoQtiTest_actions_XmlEditor::getXmlEditorService<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>

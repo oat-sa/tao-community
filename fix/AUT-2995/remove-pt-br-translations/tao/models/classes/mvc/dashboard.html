@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /home/runner/work/tao-community/tao-community/tao/models/classes/mvc</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../../../../_css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="../../../../_css/nv.d3.min.css" rel="stylesheet" type="text/css">
+  <link href="../../../../_css/style.css" rel="stylesheet" type="text/css">
+  <link href="../../../../_css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="../../../../index.html">/home/runner/work/tao-community/tao-community</a></li>
+         <li class="breadcrumb-item"><a href="../../../index.html">tao</a></li>
+         <li class="breadcrumb-item"><a href="../../index.html">models</a></li>
+         <li class="breadcrumb-item"><a href="../index.html">classes</a></li>
+         <li class="breadcrumb-item"><a href="index.html">mvc</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Bootstrap.php.html#76">oat\tao\model\mvc\Bootstrap</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DefaultUrlModule/ExternalResolver.php.html#25">oat\tao\model\mvc\DefaultUrlModule\ExternalResolver</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DefaultUrlModule/TaoActionResolver.php.html#30">oat\tao\model\mvc\DefaultUrlModule\TaoActionResolver</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DefaultUrlService.php.html#25">oat\tao\model\mvc\DefaultUrlService</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DotEnvReader.php.html#27">oat\tao\model\mvc\DotEnvReader</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="error/AjaxResponse.php.html#12">oat\tao\model\mvc\error\AjaxResponse</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="error/HtmlResponse.php.html#30">oat\tao\model\mvc\error\HtmlResponse</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="error/JsonResponse.php.html#28">oat\tao\model\mvc\error\JsonResponse</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="error/LoginResponse.php.html#28">oat\tao\model\mvc\error\LoginResponse</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="error/MainResponse.php.html#28">oat\tao\model\mvc\error\MainResponse</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="error/NonAcceptable.php.html#27">oat\tao\model\mvc\error\NonAcceptable</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="error/ResponseAbstract.php.html#36">oat\tao\model\mvc\error\ResponseAbstract</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="error/ExceptionInterpretor.php.html#41">oat\tao\model\mvc\error\ExceptionInterpretor</a></td><td class="text-right">60%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Bootstrap.php.html#76">oat\tao\model\mvc\Bootstrap</a></td><td class="text-right">1482</td></tr>
+       <tr><td><a href="error/ResponseAbstract.php.html#36">oat\tao\model\mvc\error\ResponseAbstract</a></td><td class="text-right">342</td></tr>
+       <tr><td><a href="DefaultUrlService.php.html#25">oat\tao\model\mvc\DefaultUrlService</a></td><td class="text-right">272</td></tr>
+       <tr><td><a href="error/ExceptionInterpretor.php.html#41">oat\tao\model\mvc\error\ExceptionInterpretor</a></td><td class="text-right">49</td></tr>
+       <tr><td><a href="error/HtmlResponse.php.html#30">oat\tao\model\mvc\error\HtmlResponse</a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="DotEnvReader.php.html#27">oat\tao\model\mvc\DotEnvReader</a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="error/LoginResponse.php.html#28">oat\tao\model\mvc\error\LoginResponse</a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="DefaultUrlModule/TaoActionResolver.php.html#30">oat\tao\model\mvc\DefaultUrlModule\TaoActionResolver</a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="error/AjaxResponse.php.html#12">oat\tao\model\mvc\error\AjaxResponse</a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="error/JsonResponse.php.html#28">oat\tao\model\mvc\error\JsonResponse</a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Bootstrap.php.html#100"><abbr title="oat\tao\model\mvc\Bootstrap::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="error/JsonResponse.php.html#33"><abbr title="oat\tao\model\mvc\error\JsonResponse::send">send</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DefaultUrlService.php.html#92"><abbr title="oat\tao\model\mvc\DefaultUrlService::getRoutes">getRoutes</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DefaultUrlService.php.html#103"><abbr title="oat\tao\model\mvc\DefaultUrlService::setRoute">setRoute</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DefaultUrlService.php.html#112"><abbr title="oat\tao\model\mvc\DefaultUrlService::getRedirectUrl">getRedirectUrl</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DefaultUrlService.php.html#132"><abbr title="oat\tao\model\mvc\DefaultUrlService::resolveRedirect">resolveRedirect</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DotEnvReader.php.html#34"><abbr title="oat\tao\model\mvc\DotEnvReader::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="error/AjaxResponse.php.html#16"><abbr title="oat\tao\model\mvc\error\AjaxResponse::send">send</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="error/ExceptionInterpretor.php.html#157"><abbr title="oat\tao\model\mvc\error\ExceptionInterpretor::getResponse">getResponse</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="error/HtmlResponse.php.html#34"><abbr title="oat\tao\model\mvc\error\HtmlResponse::send">send</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="error/HtmlResponse.php.html#49"><abbr title="oat\tao\model\mvc\error\HtmlResponse::createTemplatePath">createTemplatePath</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="error/LoginResponse.php.html#34"><abbr title="oat\tao\model\mvc\error\LoginResponse::setHttpCode">setHttpCode</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Bootstrap.php.html#130"><abbr title="oat\tao\model\mvc\Bootstrap::isStarted">isStarted</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="error/LoginResponse.php.html#40"><abbr title="oat\tao\model\mvc\error\LoginResponse::send">send</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="error/MainResponse.php.html#35"><abbr title="oat\tao\model\mvc\error\MainResponse::sendHeaders">sendHeaders</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="error/NonAcceptable.php.html#33"><abbr title="oat\tao\model\mvc\error\NonAcceptable::setHttpCode">setHttpCode</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="error/NonAcceptable.php.html#39"><abbr title="oat\tao\model\mvc\error\NonAcceptable::send">send</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="error/ResponseAbstract.php.html#77"><abbr title="oat\tao\model\mvc\error\ResponseAbstract::chooseRenderer">chooseRenderer</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="error/ResponseAbstract.php.html#108"><abbr title="oat\tao\model\mvc\error\ResponseAbstract::sendHeaders">sendHeaders</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="error/ResponseAbstract.php.html#126"><abbr title="oat\tao\model\mvc\error\ResponseAbstract::setHttpCode">setHttpCode</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="error/ResponseAbstract.php.html#136"><abbr title="oat\tao\model\mvc\error\ResponseAbstract::setAllowedMethods">setAllowedMethods</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="error/ResponseAbstract.php.html#145"><abbr title="oat\tao\model\mvc\error\ResponseAbstract::send">send</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="error/ResponseAbstract.php.html#161"><abbr title="oat\tao\model\mvc\error\ResponseAbstract::trace">trace</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DefaultUrlService.php.html#79"><abbr title="oat\tao\model\mvc\DefaultUrlService::getRoute">getRoute</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DefaultUrlService.php.html#67"><abbr title="oat\tao\model\mvc\DefaultUrlService::getDefaultUrl">getDefaultUrl</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DefaultUrlService.php.html#58"><abbr title="oat\tao\model\mvc\DefaultUrlService::getLogoutUrl">getLogoutUrl</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Bootstrap.php.html#313"><abbr title="oat\tao\model\mvc\Bootstrap::registerErrorhandler">registerErrorhandler</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Bootstrap.php.html#139"><abbr title="oat\tao\model\mvc\Bootstrap::isDispatched">isDispatched</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Bootstrap.php.html#149"><abbr title="oat\tao\model\mvc\Bootstrap::isReady">isReady</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Bootstrap.php.html#163"><abbr title="oat\tao\model\mvc\Bootstrap::start">start</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Bootstrap.php.html#173"><abbr title="oat\tao\model\mvc\Bootstrap::dispatchHttp">dispatchHttp</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Bootstrap.php.html#208"><abbr title="oat\tao\model\mvc\Bootstrap::displayMaintenancePage">displayMaintenancePage</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Bootstrap.php.html#220"><abbr title="oat\tao\model\mvc\Bootstrap::dispatchCli">dispatchCli</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Bootstrap.php.html#243"><abbr title="oat\tao\model\mvc\Bootstrap::dispatch">dispatch</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Bootstrap.php.html#264"><abbr title="oat\tao\model\mvc\Bootstrap::catchError">catchError</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Bootstrap.php.html#274"><abbr title="oat\tao\model\mvc\Bootstrap::session">session</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Bootstrap.php.html#295"><abbr title="oat\tao\model\mvc\Bootstrap::configureSessionHandler">configureSessionHandler</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Bootstrap.php.html#322"><abbr title="oat\tao\model\mvc\Bootstrap::setDefaultTimezone">setDefaultTimezone</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DefaultUrlService.php.html#49"><abbr title="oat\tao\model\mvc\DefaultUrlService::getLoginUrl">getLoginUrl</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Bootstrap.php.html#334"><abbr title="oat\tao\model\mvc\Bootstrap::mvc">mvc</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Bootstrap.php.html#346"><abbr title="oat\tao\model\mvc\Bootstrap::scripts">scripts</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Bootstrap.php.html#365"><abbr title="oat\tao\model\mvc\Bootstrap::getMaintenanceService">getMaintenanceService</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Bootstrap.php.html#371"><abbr title="oat\tao\model\mvc\Bootstrap::getSessionCookieService">getSessionCookieService</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Bootstrap.php.html#377"><abbr title="oat\tao\model\mvc\Bootstrap::buildRequest">buildRequest</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DefaultUrlModule/ExternalResolver.php.html#33"><abbr title="oat\tao\model\mvc\DefaultUrlModule\ExternalResolver::resolve">resolve</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DefaultUrlModule/TaoActionResolver.php.html#38"><abbr title="oat\tao\model\mvc\DefaultUrlModule\TaoActionResolver::resolve">resolve</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DefaultUrlService.php.html#34"><abbr title="oat\tao\model\mvc\DefaultUrlService::getUrlRoute">getUrlRoute</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DefaultUrlService.php.html#39"><abbr title="oat\tao\model\mvc\DefaultUrlService::getUrl">getUrl</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="error/ResponseAbstract.php.html#175"><abbr title="oat\tao\model\mvc\error\ResponseAbstract::setException">setException</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="error/ExceptionInterpretor.php.html#88"><abbr title="oat\tao\model\mvc\error\ExceptionInterpretor::interpretError">interpretError</abbr></a></td><td class="text-right">69%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="error/ResponseAbstract.php.html#77"><abbr title="oat\tao\model\mvc\error\ResponseAbstract::chooseRenderer">chooseRenderer</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="DefaultUrlService.php.html#112"><abbr title="oat\tao\model\mvc\DefaultUrlService::getRedirectUrl">getRedirectUrl</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Bootstrap.php.html#173"><abbr title="oat\tao\model\mvc\Bootstrap::dispatchHttp">dispatchHttp</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="error/ExceptionInterpretor.php.html#88"><abbr title="oat\tao\model\mvc\error\ExceptionInterpretor::interpretError">interpretError</abbr></a></td><td class="text-right">21</td></tr>
+       <tr><td><a href="Bootstrap.php.html#274"><abbr title="oat\tao\model\mvc\Bootstrap::session">session</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Bootstrap.php.html#100"><abbr title="oat\tao\model\mvc\Bootstrap::__construct">__construct</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Bootstrap.php.html#243"><abbr title="oat\tao\model\mvc\Bootstrap::dispatch">dispatch</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="error/HtmlResponse.php.html#34"><abbr title="oat\tao\model\mvc\error\HtmlResponse::send">send</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Bootstrap.php.html#322"><abbr title="oat\tao\model\mvc\Bootstrap::setDefaultTimezone">setDefaultTimezone</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="error/ResponseAbstract.php.html#108"><abbr title="oat\tao\model\mvc\error\ResponseAbstract::sendHeaders">sendHeaders</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="DotEnvReader.php.html#34"><abbr title="oat\tao\model\mvc\DotEnvReader::__construct">__construct</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="error/ResponseAbstract.php.html#145"><abbr title="oat\tao\model\mvc\error\ResponseAbstract::send">send</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Bootstrap.php.html#208"><abbr title="oat\tao\model\mvc\Bootstrap::displayMaintenancePage">displayMaintenancePage</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="error/LoginResponse.php.html#40"><abbr title="oat\tao\model\mvc\error\LoginResponse::send">send</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="error/JsonResponse.php.html#33"><abbr title="oat\tao\model\mvc\error\JsonResponse::send">send</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="error/HtmlResponse.php.html#49"><abbr title="oat\tao\model\mvc\error\HtmlResponse::createTemplatePath">createTemplatePath</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="error/AjaxResponse.php.html#16"><abbr title="oat\tao\model\mvc\error\AjaxResponse::send">send</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Bootstrap.php.html#220"><abbr title="oat\tao\model\mvc\Bootstrap::dispatchCli">dispatchCli</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Bootstrap.php.html#295"><abbr title="oat\tao\model\mvc\Bootstrap::configureSessionHandler">configureSessionHandler</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="DefaultUrlService.php.html#132"><abbr title="oat\tao\model\mvc\DefaultUrlService::resolveRedirect">resolveRedirect</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Bootstrap.php.html#163"><abbr title="oat\tao\model\mvc\Bootstrap::start">start</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="DefaultUrlService.php.html#79"><abbr title="oat\tao\model\mvc\DefaultUrlService::getRoute">getRoute</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="DefaultUrlModule/TaoActionResolver.php.html#38"><abbr title="oat\tao\model\mvc\DefaultUrlModule\TaoActionResolver::resolve">resolve</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Bootstrap.php.html#346"><abbr title="oat\tao\model\mvc\Bootstrap::scripts">scripts</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="error/ResponseAbstract.php.html#161"><abbr title="oat\tao\model\mvc\error\ResponseAbstract::trace">trace</abbr></a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 7.0.15</a> using <a href="https://secure.php.net/" target="_top">PHP 7.4.33</a> with <a href="https://xdebug.org/">Xdebug 3.1.6</a> with <a href="https://github.com/krakjoe/pcov">PCOV 1.0.11</a> at Thu Jun 1 16:42:51 UTC 2023.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="../../../../_js/jquery.min.js" type="text/javascript"></script>
+  <script src="../../../../_js/d3.min.js" type="text/javascript"></script>
+  <script src="../../../../_js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([12,0,0,0,0,0,0,1,0,0,0,3], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([49,0,0,0,0,0,0,1,0,0,0,10], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[0,38,"<a href=\"Bootstrap.php.html#76\">oat\\tao\\model\\mvc\\Bootstrap<\/a>"],[0,1,"<a href=\"DefaultUrlModule\/ExternalResolver.php.html#25\">oat\\tao\\model\\mvc\\DefaultUrlModule\\ExternalResolver<\/a>"],[0,2,"<a href=\"DefaultUrlModule\/TaoActionResolver.php.html#30\">oat\\tao\\model\\mvc\\DefaultUrlModule\\TaoActionResolver<\/a>"],[0,16,"<a href=\"DefaultUrlService.php.html#25\">oat\\tao\\model\\mvc\\DefaultUrlService<\/a>"],[0,3,"<a href=\"DotEnvReader.php.html#27\">oat\\tao\\model\\mvc\\DotEnvReader<\/a>"],[0,2,"<a href=\"error\/AjaxResponse.php.html#12\">oat\\tao\\model\\mvc\\error\\AjaxResponse<\/a>"],[100,5,"<a href=\"error\/ExceptionInterpreterService.php.html#34\">oat\\tao\\model\\mvc\\error\\ExceptionInterpreterService<\/a>"],[60,21,"<a href=\"error\/ExceptionInterpretor.php.html#41\">oat\\tao\\model\\mvc\\error\\ExceptionInterpretor<\/a>"],[0,5,"<a href=\"error\/HtmlResponse.php.html#30\">oat\\tao\\model\\mvc\\error\\HtmlResponse<\/a>"],[0,2,"<a href=\"error\/JsonResponse.php.html#28\">oat\\tao\\model\\mvc\\error\\JsonResponse<\/a>"],[0,3,"<a href=\"error\/LoginResponse.php.html#28\">oat\\tao\\model\\mvc\\error\\LoginResponse<\/a>"],[0,1,"<a href=\"error\/MainResponse.php.html#28\">oat\\tao\\model\\mvc\\error\\MainResponse<\/a>"],[0,2,"<a href=\"error\/NonAcceptable.php.html#27\">oat\\tao\\model\\mvc\\error\\NonAcceptable<\/a>"],[100,0,"<a href=\"error\/RedirectResponse.php.html#27\">oat\\tao\\model\\mvc\\error\\RedirectResponse<\/a>"],[0,18,"<a href=\"error\/ResponseAbstract.php.html#36\">oat\\tao\\model\\mvc\\error\\ResponseAbstract<\/a>"],[100,6,"<a href=\"RendererTrait.php.html#26\">RendererTrait<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[0,4,"<a href=\"Bootstrap.php.html#100\">oat\\tao\\model\\mvc\\Bootstrap::__construct<\/a>"],[0,1,"<a href=\"Bootstrap.php.html#130\">oat\\tao\\model\\mvc\\Bootstrap::isStarted<\/a>"],[0,1,"<a href=\"Bootstrap.php.html#139\">oat\\tao\\model\\mvc\\Bootstrap::isDispatched<\/a>"],[0,1,"<a href=\"Bootstrap.php.html#149\">oat\\tao\\model\\mvc\\Bootstrap::isReady<\/a>"],[0,2,"<a href=\"Bootstrap.php.html#163\">oat\\tao\\model\\mvc\\Bootstrap::start<\/a>"],[0,5,"<a href=\"Bootstrap.php.html#173\">oat\\tao\\model\\mvc\\Bootstrap::dispatchHttp<\/a>"],[0,2,"<a href=\"Bootstrap.php.html#208\">oat\\tao\\model\\mvc\\Bootstrap::displayMaintenancePage<\/a>"],[0,2,"<a href=\"Bootstrap.php.html#220\">oat\\tao\\model\\mvc\\Bootstrap::dispatchCli<\/a>"],[0,3,"<a href=\"Bootstrap.php.html#243\">oat\\tao\\model\\mvc\\Bootstrap::dispatch<\/a>"],[0,1,"<a href=\"Bootstrap.php.html#264\">oat\\tao\\model\\mvc\\Bootstrap::catchError<\/a>"],[0,4,"<a href=\"Bootstrap.php.html#274\">oat\\tao\\model\\mvc\\Bootstrap::session<\/a>"],[0,2,"<a href=\"Bootstrap.php.html#295\">oat\\tao\\model\\mvc\\Bootstrap::configureSessionHandler<\/a>"],[0,1,"<a href=\"Bootstrap.php.html#313\">oat\\tao\\model\\mvc\\Bootstrap::registerErrorhandler<\/a>"],[0,3,"<a href=\"Bootstrap.php.html#322\">oat\\tao\\model\\mvc\\Bootstrap::setDefaultTimezone<\/a>"],[0,1,"<a href=\"Bootstrap.php.html#334\">oat\\tao\\model\\mvc\\Bootstrap::mvc<\/a>"],[0,2,"<a href=\"Bootstrap.php.html#346\">oat\\tao\\model\\mvc\\Bootstrap::scripts<\/a>"],[0,1,"<a href=\"Bootstrap.php.html#365\">oat\\tao\\model\\mvc\\Bootstrap::getMaintenanceService<\/a>"],[0,1,"<a href=\"Bootstrap.php.html#371\">oat\\tao\\model\\mvc\\Bootstrap::getSessionCookieService<\/a>"],[0,1,"<a href=\"Bootstrap.php.html#377\">oat\\tao\\model\\mvc\\Bootstrap::buildRequest<\/a>"],[0,1,"<a href=\"DefaultUrlModule\/ExternalResolver.php.html#33\">oat\\tao\\model\\mvc\\DefaultUrlModule\\ExternalResolver::resolve<\/a>"],[0,2,"<a href=\"DefaultUrlModule\/TaoActionResolver.php.html#38\">oat\\tao\\model\\mvc\\DefaultUrlModule\\TaoActionResolver::resolve<\/a>"],[0,1,"<a href=\"DefaultUrlService.php.html#34\">oat\\tao\\model\\mvc\\DefaultUrlService::getUrlRoute<\/a>"],[0,1,"<a href=\"DefaultUrlService.php.html#39\">oat\\tao\\model\\mvc\\DefaultUrlService::getUrl<\/a>"],[0,1,"<a href=\"DefaultUrlService.php.html#49\">oat\\tao\\model\\mvc\\DefaultUrlService::getLoginUrl<\/a>"],[0,1,"<a href=\"DefaultUrlService.php.html#58\">oat\\tao\\model\\mvc\\DefaultUrlService::getLogoutUrl<\/a>"],[0,1,"<a href=\"DefaultUrlService.php.html#67\">oat\\tao\\model\\mvc\\DefaultUrlService::getDefaultUrl<\/a>"],[0,2,"<a href=\"DefaultUrlService.php.html#79\">oat\\tao\\model\\mvc\\DefaultUrlService::getRoute<\/a>"],[0,1,"<a href=\"DefaultUrlService.php.html#92\">oat\\tao\\model\\mvc\\DefaultUrlService::getRoutes<\/a>"],[0,1,"<a href=\"DefaultUrlService.php.html#103\">oat\\tao\\model\\mvc\\DefaultUrlService::setRoute<\/a>"],[0,5,"<a href=\"DefaultUrlService.php.html#112\">oat\\tao\\model\\mvc\\DefaultUrlService::getRedirectUrl<\/a>"],[0,2,"<a href=\"DefaultUrlService.php.html#132\">oat\\tao\\model\\mvc\\DefaultUrlService::resolveRedirect<\/a>"],[0,3,"<a href=\"DotEnvReader.php.html#34\">oat\\tao\\model\\mvc\\DotEnvReader::__construct<\/a>"],[0,2,"<a href=\"error\/AjaxResponse.php.html#16\">oat\\tao\\model\\mvc\\error\\AjaxResponse::send<\/a>"],[100,4,"<a href=\"error\/ExceptionInterpreterService.php.html#44\">oat\\tao\\model\\mvc\\error\\ExceptionInterpreterService::getExceptionInterpreter<\/a>"],[100,1,"<a href=\"error\/ExceptionInterpreterService.php.html#90\">oat\\tao\\model\\mvc\\error\\ExceptionInterpreterService::getClassesHierarchy<\/a>"],[100,1,"<a href=\"error\/ExceptionInterpretor.php.html#78\">oat\\tao\\model\\mvc\\error\\ExceptionInterpretor::setException<\/a>"],[69.23076923076923,15,"<a href=\"error\/ExceptionInterpretor.php.html#88\">oat\\tao\\model\\mvc\\error\\ExceptionInterpretor::interpretError<\/a>"],[100,2,"<a href=\"error\/ExceptionInterpretor.php.html#132\">oat\\tao\\model\\mvc\\error\\ExceptionInterpretor::getTrace<\/a>"],[100,1,"<a href=\"error\/ExceptionInterpretor.php.html#140\">oat\\tao\\model\\mvc\\error\\ExceptionInterpretor::getHttpCode<\/a>"],[100,1,"<a href=\"error\/ExceptionInterpretor.php.html#147\">oat\\tao\\model\\mvc\\error\\ExceptionInterpretor::getResponseClassName<\/a>"],[0,1,"<a href=\"error\/ExceptionInterpretor.php.html#157\">oat\\tao\\model\\mvc\\error\\ExceptionInterpretor::getResponse<\/a>"],[0,3,"<a href=\"error\/HtmlResponse.php.html#34\">oat\\tao\\model\\mvc\\error\\HtmlResponse::send<\/a>"],[0,2,"<a href=\"error\/HtmlResponse.php.html#49\">oat\\tao\\model\\mvc\\error\\HtmlResponse::createTemplatePath<\/a>"],[0,2,"<a href=\"error\/JsonResponse.php.html#33\">oat\\tao\\model\\mvc\\error\\JsonResponse::send<\/a>"],[0,1,"<a href=\"error\/LoginResponse.php.html#34\">oat\\tao\\model\\mvc\\error\\LoginResponse::setHttpCode<\/a>"],[0,2,"<a href=\"error\/LoginResponse.php.html#40\">oat\\tao\\model\\mvc\\error\\LoginResponse::send<\/a>"],[0,1,"<a href=\"error\/MainResponse.php.html#35\">oat\\tao\\model\\mvc\\error\\MainResponse::sendHeaders<\/a>"],[0,1,"<a href=\"error\/NonAcceptable.php.html#33\">oat\\tao\\model\\mvc\\error\\NonAcceptable::setHttpCode<\/a>"],[0,1,"<a href=\"error\/NonAcceptable.php.html#39\">oat\\tao\\model\\mvc\\error\\NonAcceptable::send<\/a>"],[0,8,"<a href=\"error\/ResponseAbstract.php.html#77\">oat\\tao\\model\\mvc\\error\\ResponseAbstract::chooseRenderer<\/a>"],[0,3,"<a href=\"error\/ResponseAbstract.php.html#108\">oat\\tao\\model\\mvc\\error\\ResponseAbstract::sendHeaders<\/a>"],[0,1,"<a href=\"error\/ResponseAbstract.php.html#126\">oat\\tao\\model\\mvc\\error\\ResponseAbstract::setHttpCode<\/a>"],[0,1,"<a href=\"error\/ResponseAbstract.php.html#136\">oat\\tao\\model\\mvc\\error\\ResponseAbstract::setAllowedMethods<\/a>"],[0,2,"<a href=\"error\/ResponseAbstract.php.html#145\">oat\\tao\\model\\mvc\\error\\ResponseAbstract::send<\/a>"],[0,2,"<a href=\"error\/ResponseAbstract.php.html#161\">oat\\tao\\model\\mvc\\error\\ResponseAbstract::trace<\/a>"],[0,1,"<a href=\"error\/ResponseAbstract.php.html#175\">oat\\tao\\model\\mvc\\error\\ResponseAbstract::setException<\/a>"],[100,2,"<a href=\"RendererTrait.php.html#33\">RendererTrait::getRenderer<\/a>"],[100,1,"<a href=\"RendererTrait.php.html#47\">RendererTrait::setView<\/a>"],[100,1,"<a href=\"RendererTrait.php.html#61\">RendererTrait::setData<\/a>"],[100,2,"<a href=\"RendererTrait.php.html#72\">RendererTrait::hasView<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>
