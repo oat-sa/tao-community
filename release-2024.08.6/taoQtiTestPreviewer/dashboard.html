@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /home/runner/work/tao-community/tao-community/taoQtiTestPreviewer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../_css/bootstrap.min.css?v=9.2.31" rel="stylesheet" type="text/css">
+  <link href="../_css/nv.d3.min.css?v=9.2.31" rel="stylesheet" type="text/css">
+  <link href="../_css/style.css?v=9.2.31" rel="stylesheet" type="text/css">
+  <link href="../_css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="../index.html">/home/runner/work/tao-community/tao-community</a></li>
+         <li class="breadcrumb-item"><a href="index.html">taoQtiTestPreviewer</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="controller/Previewer.php.html#53">oat\taoQtiTestPreviewer\controller\Previewer</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controller/TestPreviewer.php.html#37">oat\taoQtiTestPreviewer\controller\TestPreviewer</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/ItemSessionService.php.html#37">oat\taoQtiTestPreviewer\models\ItemSessionService</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/OutcomeResponseService.php.html#27">oat\taoQtiTestPreviewer\models\OutcomeResponseService</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/QtiSmService.php.html#32">oat\taoQtiTestPreviewer\models\QtiSmService</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/ServiceProvider/QtiTestPreviewerServiceProvider.php.html#32">oat\taoQtiTestPreviewer\models\ServiceProvider\QtiTestPreviewerServiceProvider</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/test/service/TestPreviewerAssessmentTestGenerator.php.html#34">oat\taoQtiTestPreviewer\models\test\service\TestPreviewerAssessmentTestGenerator</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/ItemPreviewer.php.html#50">oat\taoQtiTestPreviewer\models\ItemPreviewer</a></td><td class="text-right">46%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="controller/Previewer.php.html#53">oat\taoQtiTestPreviewer\controller\Previewer</a></td><td class="text-right">812</td></tr>
+       <tr><td><a href="models/ItemPreviewer.php.html#50">oat\taoQtiTestPreviewer\models\ItemPreviewer</a></td><td class="text-right">298</td></tr>
+       <tr><td><a href="controller/TestPreviewer.php.html#37">oat\taoQtiTestPreviewer\controller\TestPreviewer</a></td><td class="text-right">210</td></tr>
+       <tr><td><a href="models/QtiSmService.php.html#32">oat\taoQtiTestPreviewer\models\QtiSmService</a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="models/ItemSessionService.php.html#37">oat\taoQtiTestPreviewer\models\ItemSessionService</a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="models/OutcomeResponseService.php.html#27">oat\taoQtiTestPreviewer\models\OutcomeResponseService</a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="controller/Previewer.php.html#62"><abbr title="oat\taoQtiTestPreviewer\controller\Previewer::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controller/Previewer.php.html#73"><abbr title="oat\taoQtiTestPreviewer\controller\Previewer::init">init</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controller/Previewer.php.html#99"><abbr title="oat\taoQtiTestPreviewer\controller\Previewer::getItem">getItem</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controller/Previewer.php.html#180"><abbr title="oat\taoQtiTestPreviewer\controller\Previewer::asset">asset</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controller/Previewer.php.html#205"><abbr title="oat\taoQtiTestPreviewer\controller\Previewer::submitItem">submitItem</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controller/Previewer.php.html#229"><abbr title="oat\taoQtiTestPreviewer\controller\Previewer::getErrorResponse">getErrorResponse</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controller/Previewer.php.html#262"><abbr title="oat\taoQtiTestPreviewer\controller\Previewer::getErrorCode">getErrorCode</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controller/Previewer.php.html#286"><abbr title="oat\taoQtiTestPreviewer\controller\Previewer::getItemPreviewer">getItemPreviewer</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controller/Previewer.php.html#299"><abbr title="oat\taoQtiTestPreviewer\controller\Previewer::getPayload">getPayload</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controller/TestPreviewer.php.html#41"><abbr title="oat\taoQtiTestPreviewer\controller\TestPreviewer::init">init</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controller/TestPreviewer.php.html#79"><abbr title="oat\taoQtiTestPreviewer\controller\TestPreviewer::configuration">configuration</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controller/TestPreviewer.php.html#96"><abbr title="oat\taoQtiTestPreviewer\controller\TestPreviewer::setNoCacheHeaders">setNoCacheHeaders</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controller/TestPreviewer.php.html#104"><abbr title="oat\taoQtiTestPreviewer\controller\TestPreviewer::getTestPreviewerConfigurationService">getTestPreviewerConfigurationService</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controller/TestPreviewer.php.html#109"><abbr title="oat\taoQtiTestPreviewer\controller\TestPreviewer::getTestPreviewerService">getTestPreviewerService</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controller/TestPreviewer.php.html#114"><abbr title="oat\taoQtiTestPreviewer\controller\TestPreviewer::getTestPreviewerPresetsMapService">getTestPreviewerPresetsMapService</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controller/TestPreviewer.php.html#119"><abbr title="oat\taoQtiTestPreviewer\controller\TestPreviewer::mapXmlExceptionMessage">mapXmlExceptionMessage</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/ItemPreviewer.php.html#215"><abbr title="oat\taoQtiTestPreviewer\models\ItemPreviewer::getBaseUrl">getBaseUrl</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/ItemPreviewer.php.html#229"><abbr title="oat\taoQtiTestPreviewer\models\ItemPreviewer::processResponses">processResponses</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/ItemPreviewer.php.html#254"><abbr title="oat\taoQtiTestPreviewer\models\ItemPreviewer::getItemSessionService">getItemSessionService</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/ItemPreviewer.php.html#263"><abbr title="oat\taoQtiTestPreviewer\models\ItemPreviewer::getVariableFiller">getVariableFiller</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/ItemPreviewer.php.html#272"><abbr title="oat\taoQtiTestPreviewer\models\ItemPreviewer::getQtiSmService">getQtiSmService</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/ItemPreviewer.php.html#280"><abbr title="oat\taoQtiTestPreviewer\models\ItemPreviewer::getOutcomeResponseService">getOutcomeResponseService</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/ItemPreviewer.php.html#290"><abbr title="oat\taoQtiTestPreviewer\models\ItemPreviewer::getQtiXmlDoc">getQtiXmlDoc</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/ItemPreviewer.php.html#308"><abbr title="oat\taoQtiTestPreviewer\models\ItemPreviewer::getItemPublicDir">getItemPublicDir</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/ItemPreviewer.php.html#334"><abbr title="oat\taoQtiTestPreviewer\models\ItemPreviewer::getItemUri">getItemUri</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/ItemPreviewer.php.html#347"><abbr title="oat\taoQtiTestPreviewer\models\ItemPreviewer::getItemPublicHref">getItemPublicHref</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/ItemSessionService.php.html#44"><abbr title="oat\taoQtiTestPreviewer\models\ItemSessionService::getItemSession">getItemSession</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/ItemSessionService.php.html#66"><abbr title="oat\taoQtiTestPreviewer\models\ItemSessionService::getItemSessionSubject">getItemSessionSubject</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/OutcomeResponseService.php.html#33"><abbr title="oat\taoQtiTestPreviewer\models\OutcomeResponseService::buildOutcomeResponse">buildOutcomeResponse</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/QtiSmService.php.html#41"><abbr title="oat\taoQtiTestPreviewer\models\QtiSmService::getQtiSmVariables">getQtiSmVariables</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/ServiceProvider/QtiTestPreviewerServiceProvider.php.html#34"><abbr title="oat\taoQtiTestPreviewer\models\ServiceProvider\QtiTestPreviewerServiceProvider::__invoke">__invoke</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/test/service/TestPreviewerAssessmentTestGenerator.php.html#42"><abbr title="oat\taoQtiTestPreviewer\models\test\service\TestPreviewerAssessmentTestGenerator::generate">generate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/test/service/TestPreviewerAssessmentTestGenerator.php.html#53"><abbr title="oat\taoQtiTestPreviewer\models\test\service\TestPreviewerAssessmentTestGenerator::getQtiTestService">getQtiTestService</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/test/service/TestPreviewerAssessmentTestGenerator.php.html#58"><abbr title="oat\taoQtiTestPreviewer\models\test\service\TestPreviewerAssessmentTestGenerator::getItemResolver">getItemResolver</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/ItemPreviewer.php.html#138"><abbr title="oat\taoQtiTestPreviewer\models\ItemPreviewer::validateProperties">validateProperties</abbr></a></td><td class="text-right">50%</td></tr>
+       <tr><td><a href="models/ItemPreviewer.php.html#372"><abbr title="oat\taoQtiTestPreviewer\models\ItemPreviewer::loadItemHrefs">loadItemHrefs</abbr></a></td><td class="text-right">61%</td></tr>
+       <tr><td><a href="models/ItemPreviewer.php.html#159"><abbr title="oat\taoQtiTestPreviewer\models\ItemPreviewer::loadCompiledItemData">loadCompiledItemData</abbr></a></td><td class="text-right">62%</td></tr>
+       <tr><td><a href="models/test/mapper/TestPreviewMapper.php.html#165"><abbr title="oat\taoQtiTestPreviewer\models\test\mapper\TestPreviewMapper::updateStats">updateStats</abbr></a></td><td class="text-right">80%</td></tr>
+       <tr><td><a href="models/test/mapper/TestPreviewMapper.php.html#218"><abbr title="oat\taoQtiTestPreviewer\models\test\mapper\TestPreviewMapper::getItemLabel">getItemLabel</abbr></a></td><td class="text-right">80%</td></tr>
+       <tr><td><a href="models/ItemPreviewer.php.html#195"><abbr title="oat\taoQtiTestPreviewer\models\ItemPreviewer::loadCompiledItemVariables">loadCompiledItemVariables</abbr></a></td><td class="text-right">85%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="controller/Previewer.php.html#99"><abbr title="oat\taoQtiTestPreviewer\controller\Previewer::getItem">getItem</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="controller/Previewer.php.html#262"><abbr title="oat\taoQtiTestPreviewer\controller\Previewer::getErrorCode">getErrorCode</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="controller/Previewer.php.html#229"><abbr title="oat\taoQtiTestPreviewer\controller\Previewer::getErrorResponse">getErrorResponse</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="controller/TestPreviewer.php.html#41"><abbr title="oat\taoQtiTestPreviewer\controller\TestPreviewer::init">init</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="models/QtiSmService.php.html#41"><abbr title="oat\taoQtiTestPreviewer\models\QtiSmService::getQtiSmVariables">getQtiSmVariables</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="controller/Previewer.php.html#180"><abbr title="oat\taoQtiTestPreviewer\controller\Previewer::asset">asset</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="controller/TestPreviewer.php.html#79"><abbr title="oat\taoQtiTestPreviewer\controller\TestPreviewer::configuration">configuration</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="models/ItemPreviewer.php.html#290"><abbr title="oat\taoQtiTestPreviewer\models\ItemPreviewer::getQtiXmlDoc">getQtiXmlDoc</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="models/ItemSessionService.php.html#44"><abbr title="oat\taoQtiTestPreviewer\models\ItemSessionService::getItemSession">getItemSession</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="models/ItemPreviewer.php.html#372"><abbr title="oat\taoQtiTestPreviewer\models\ItemPreviewer::loadItemHrefs">loadItemHrefs</abbr></a></td><td class="text-right">8</td></tr>
+       <tr><td><a href="models/test/mapper/TestPreviewMapper.php.html#165"><abbr title="oat\taoQtiTestPreviewer\models\test\mapper\TestPreviewMapper::updateStats">updateStats</abbr></a></td><td class="text-right">7</td></tr>
+       <tr><td><a href="controller/Previewer.php.html#73"><abbr title="oat\taoQtiTestPreviewer\controller\Previewer::init">init</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="controller/Previewer.php.html#205"><abbr title="oat\taoQtiTestPreviewer\controller\Previewer::submitItem">submitItem</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="controller/TestPreviewer.php.html#119"><abbr title="oat\taoQtiTestPreviewer\controller\TestPreviewer::mapXmlExceptionMessage">mapXmlExceptionMessage</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/ItemPreviewer.php.html#138"><abbr title="oat\taoQtiTestPreviewer\models\ItemPreviewer::validateProperties">validateProperties</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/ItemPreviewer.php.html#229"><abbr title="oat\taoQtiTestPreviewer\models\ItemPreviewer::processResponses">processResponses</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/ItemPreviewer.php.html#308"><abbr title="oat\taoQtiTestPreviewer\models\ItemPreviewer::getItemPublicDir">getItemPublicDir</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/ItemPreviewer.php.html#334"><abbr title="oat\taoQtiTestPreviewer\models\ItemPreviewer::getItemUri">getItemUri</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/ItemPreviewer.php.html#347"><abbr title="oat\taoQtiTestPreviewer\models\ItemPreviewer::getItemPublicHref">getItemPublicHref</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/OutcomeResponseService.php.html#33"><abbr title="oat\taoQtiTestPreviewer\models\OutcomeResponseService::buildOutcomeResponse">buildOutcomeResponse</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/ItemPreviewer.php.html#159"><abbr title="oat\taoQtiTestPreviewer\models\ItemPreviewer::loadCompiledItemData">loadCompiledItemData</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="models/test/mapper/TestPreviewMapper.php.html#218"><abbr title="oat\taoQtiTestPreviewer\models\test\mapper\TestPreviewMapper::getItemLabel">getItemLabel</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="models/ItemPreviewer.php.html#195"><abbr title="oat\taoQtiTestPreviewer\models\ItemPreviewer::loadCompiledItemVariables">loadCompiledItemVariables</abbr></a></td><td class="text-right">2</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 9.2.31</a> using <a href="https://secure.php.net/" target="_top">PHP 8.3.20</a> at Thu Apr 24 15:07:49 UTC 2025.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="../_js/jquery.min.js?v=9.2.31" type="text/javascript"></script>
+  <script src="../_js/d3.min.js?v=9.2.31" type="text/javascript"></script>
+  <script src="../_js/nv.d3.min.js?v=9.2.31" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([7,0,0,0,0,1,0,0,0,0,1,11], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([34,0,0,0,0,0,1,2,0,3,1,40], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[0,28,"<a href=\"controller\/Previewer.php.html#53\">oat\\taoQtiTestPreviewer\\controller\\Previewer<\/a>"],[0,14,"<a href=\"controller\/TestPreviewer.php.html#37\">oat\\taoQtiTestPreviewer\\controller\\TestPreviewer<\/a>"],[46.464646464646464,41,"<a href=\"models\/ItemPreviewer.php.html#50\">oat\\taoQtiTestPreviewer\\models\\ItemPreviewer<\/a>"],[0,4,"<a href=\"models\/ItemSessionService.php.html#37\">oat\\taoQtiTestPreviewer\\models\\ItemSessionService<\/a>"],[0,2,"<a href=\"models\/OutcomeResponseService.php.html#27\">oat\\taoQtiTestPreviewer\\models\\OutcomeResponseService<\/a>"],[100,2,"<a href=\"models\/PreviewLanguageService.php.html#30\">oat\\taoQtiTestPreviewer\\models\\PreviewLanguageService<\/a>"],[0,5,"<a href=\"models\/QtiSmService.php.html#32\">oat\\taoQtiTestPreviewer\\models\\QtiSmService<\/a>"],[0,1,"<a href=\"models\/ServiceProvider\/QtiTestPreviewerServiceProvider.php.html#32\">oat\\taoQtiTestPreviewer\\models\\ServiceProvider\\QtiTestPreviewerServiceProvider<\/a>"],[100,3,"<a href=\"models\/TestCategoryPresetMap.php.html#29\">oat\\taoQtiTestPreviewer\\models\\TestCategoryPresetMap<\/a>"],[100,2,"<a href=\"models\/test\/TestPreview.php.html#25\">oat\\taoQtiTestPreviewer\\models\\test\\TestPreview<\/a>"],[100,3,"<a href=\"models\/test\/TestPreviewConfig.php.html#25\">oat\\taoQtiTestPreviewer\\models\\test\\TestPreviewConfig<\/a>"],[100,2,"<a href=\"models\/test\/TestPreviewMap.php.html#25\">oat\\taoQtiTestPreviewer\\models\\test\\TestPreviewMap<\/a>"],[100,3,"<a href=\"models\/test\/TestPreviewRequest.php.html#25\">oat\\taoQtiTestPreviewer\\models\\test\\TestPreviewRequest<\/a>"],[100,1,"<a href=\"models\/test\/factory\/TestPreviewRouteFactory.php.html#30\">oat\\taoQtiTestPreviewer\\models\\test\\factory\\TestPreviewRouteFactory<\/a>"],[91.1504424778761,31,"<a href=\"models\/test\/mapper\/TestPreviewMapper.php.html#37\">oat\\taoQtiTestPreviewer\\models\\test\\mapper\\TestPreviewMapper<\/a>"],[100,4,"<a href=\"models\/test\/service\/TestPreviewer.php.html#33\">oat\\taoQtiTestPreviewer\\models\\test\\service\\TestPreviewer<\/a>"],[0,3,"<a href=\"models\/test\/service\/TestPreviewerAssessmentTestGenerator.php.html#34\">oat\\taoQtiTestPreviewer\\models\\test\\service\\TestPreviewerAssessmentTestGenerator<\/a>"],[100,4,"<a href=\"models\/testConfiguration\/TestPreviewerConfig.php.html#28\">oat\\taoQtiTestPreviewer\\models\\testConfiguration\\TestPreviewerConfig<\/a>"],[100,8,"<a href=\"models\/testConfiguration\/mapper\/TestPreviewerConfigurationMapper.php.html#31\">oat\\taoQtiTestPreviewer\\models\\testConfiguration\\mapper\\TestPreviewerConfigurationMapper<\/a>"],[100,5,"<a href=\"models\/testConfiguration\/service\/TestPreviewerConfigurationService.php.html#32\">oat\\taoQtiTestPreviewer\\models\\testConfiguration\\service\\TestPreviewerConfigurationService<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[0,1,"<a href=\"controller\/Previewer.php.html#62\">oat\\taoQtiTestPreviewer\\controller\\Previewer::__construct<\/a>"],[0,2,"<a href=\"controller\/Previewer.php.html#73\">oat\\taoQtiTestPreviewer\\controller\\Previewer::init<\/a>"],[0,7,"<a href=\"controller\/Previewer.php.html#99\">oat\\taoQtiTestPreviewer\\controller\\Previewer::getItem<\/a>"],[0,3,"<a href=\"controller\/Previewer.php.html#180\">oat\\taoQtiTestPreviewer\\controller\\Previewer::asset<\/a>"],[0,2,"<a href=\"controller\/Previewer.php.html#205\">oat\\taoQtiTestPreviewer\\controller\\Previewer::submitItem<\/a>"],[0,5,"<a href=\"controller\/Previewer.php.html#229\">oat\\taoQtiTestPreviewer\\controller\\Previewer::getErrorResponse<\/a>"],[0,6,"<a href=\"controller\/Previewer.php.html#262\">oat\\taoQtiTestPreviewer\\controller\\Previewer::getErrorCode<\/a>"],[0,1,"<a href=\"controller\/Previewer.php.html#286\">oat\\taoQtiTestPreviewer\\controller\\Previewer::getItemPreviewer<\/a>"],[0,1,"<a href=\"controller\/Previewer.php.html#299\">oat\\taoQtiTestPreviewer\\controller\\Previewer::getPayload<\/a>"],[0,5,"<a href=\"controller\/TestPreviewer.php.html#41\">oat\\taoQtiTestPreviewer\\controller\\TestPreviewer::init<\/a>"],[0,3,"<a href=\"controller\/TestPreviewer.php.html#79\">oat\\taoQtiTestPreviewer\\controller\\TestPreviewer::configuration<\/a>"],[0,1,"<a href=\"controller\/TestPreviewer.php.html#96\">oat\\taoQtiTestPreviewer\\controller\\TestPreviewer::setNoCacheHeaders<\/a>"],[0,1,"<a href=\"controller\/TestPreviewer.php.html#104\">oat\\taoQtiTestPreviewer\\controller\\TestPreviewer::getTestPreviewerConfigurationService<\/a>"],[0,1,"<a href=\"controller\/TestPreviewer.php.html#109\">oat\\taoQtiTestPreviewer\\controller\\TestPreviewer::getTestPreviewerService<\/a>"],[0,1,"<a href=\"controller\/TestPreviewer.php.html#114\">oat\\taoQtiTestPreviewer\\controller\\TestPreviewer::getTestPreviewerPresetsMapService<\/a>"],[0,2,"<a href=\"controller\/TestPreviewer.php.html#119\">oat\\taoQtiTestPreviewer\\controller\\TestPreviewer::mapXmlExceptionMessage<\/a>"],[100,1,"<a href=\"models\/ItemPreviewer.php.html#92\">oat\\taoQtiTestPreviewer\\models\\ItemPreviewer::getFileStorage<\/a>"],[100,1,"<a href=\"models\/ItemPreviewer.php.html#101\">oat\\taoQtiTestPreviewer\\models\\ItemPreviewer::setUserLanguage<\/a>"],[100,1,"<a href=\"models\/ItemPreviewer.php.html#112\">oat\\taoQtiTestPreviewer\\models\\ItemPreviewer::setItemDefinition<\/a>"],[100,2,"<a href=\"models\/ItemPreviewer.php.html#124\">oat\\taoQtiTestPreviewer\\models\\ItemPreviewer::setDelivery<\/a>"],[50,4,"<a href=\"models\/ItemPreviewer.php.html#138\">oat\\taoQtiTestPreviewer\\models\\ItemPreviewer::validateProperties<\/a>"],[62.5,3,"<a href=\"models\/ItemPreviewer.php.html#159\">oat\\taoQtiTestPreviewer\\models\\ItemPreviewer::loadCompiledItemData<\/a>"],[85.71428571428571,2,"<a href=\"models\/ItemPreviewer.php.html#195\">oat\\taoQtiTestPreviewer\\models\\ItemPreviewer::loadCompiledItemVariables<\/a>"],[0,1,"<a href=\"models\/ItemPreviewer.php.html#215\">oat\\taoQtiTestPreviewer\\models\\ItemPreviewer::getBaseUrl<\/a>"],[0,2,"<a href=\"models\/ItemPreviewer.php.html#229\">oat\\taoQtiTestPreviewer\\models\\ItemPreviewer::processResponses<\/a>"],[0,1,"<a href=\"models\/ItemPreviewer.php.html#254\">oat\\taoQtiTestPreviewer\\models\\ItemPreviewer::getItemSessionService<\/a>"],[0,1,"<a href=\"models\/ItemPreviewer.php.html#263\">oat\\taoQtiTestPreviewer\\models\\ItemPreviewer::getVariableFiller<\/a>"],[0,1,"<a href=\"models\/ItemPreviewer.php.html#272\">oat\\taoQtiTestPreviewer\\models\\ItemPreviewer::getQtiSmService<\/a>"],[0,1,"<a href=\"models\/ItemPreviewer.php.html#280\">oat\\taoQtiTestPreviewer\\models\\ItemPreviewer::getOutcomeResponseService<\/a>"],[0,3,"<a href=\"models\/ItemPreviewer.php.html#290\">oat\\taoQtiTestPreviewer\\models\\ItemPreviewer::getQtiXmlDoc<\/a>"],[0,2,"<a href=\"models\/ItemPreviewer.php.html#308\">oat\\taoQtiTestPreviewer\\models\\ItemPreviewer::getItemPublicDir<\/a>"],[100,2,"<a href=\"models\/ItemPreviewer.php.html#321\">oat\\taoQtiTestPreviewer\\models\\ItemPreviewer::getItemPrivateDir<\/a>"],[0,2,"<a href=\"models\/ItemPreviewer.php.html#334\">oat\\taoQtiTestPreviewer\\models\\ItemPreviewer::getItemUri<\/a>"],[0,2,"<a href=\"models\/ItemPreviewer.php.html#347\">oat\\taoQtiTestPreviewer\\models\\ItemPreviewer::getItemPublicHref<\/a>"],[100,2,"<a href=\"models\/ItemPreviewer.php.html#360\">oat\\taoQtiTestPreviewer\\models\\ItemPreviewer::getItemPrivateHref<\/a>"],[61.111111111111114,6,"<a href=\"models\/ItemPreviewer.php.html#372\">oat\\taoQtiTestPreviewer\\models\\ItemPreviewer::loadItemHrefs<\/a>"],[100,1,"<a href=\"models\/ItemPreviewer.php.html#411\">oat\\taoQtiTestPreviewer\\models\\ItemPreviewer::getUpdateItemContentReferencesService<\/a>"],[0,3,"<a href=\"models\/ItemSessionService.php.html#44\">oat\\taoQtiTestPreviewer\\models\\ItemSessionService::getItemSession<\/a>"],[0,1,"<a href=\"models\/ItemSessionService.php.html#66\">oat\\taoQtiTestPreviewer\\models\\ItemSessionService::getItemSessionSubject<\/a>"],[0,2,"<a href=\"models\/OutcomeResponseService.php.html#33\">oat\\taoQtiTestPreviewer\\models\\OutcomeResponseService::buildOutcomeResponse<\/a>"],[100,1,"<a href=\"models\/PreviewLanguageService.php.html#39\">oat\\taoQtiTestPreviewer\\models\\PreviewLanguageService::getPreviewLanguage<\/a>"],[100,1,"<a href=\"models\/PreviewLanguageService.php.html#54\">oat\\taoQtiTestPreviewer\\models\\PreviewLanguageService::findTestTaker<\/a>"],[0,5,"<a href=\"models\/QtiSmService.php.html#41\">oat\\taoQtiTestPreviewer\\models\\QtiSmService::getQtiSmVariables<\/a>"],[0,1,"<a href=\"models\/ServiceProvider\/QtiTestPreviewerServiceProvider.php.html#34\">oat\\taoQtiTestPreviewer\\models\\ServiceProvider\\QtiTestPreviewerServiceProvider::__invoke<\/a>"],[100,1,"<a href=\"models\/TestCategoryPresetMap.php.html#36\">oat\\taoQtiTestPreviewer\\models\\TestCategoryPresetMap::__construct<\/a>"],[100,2,"<a href=\"models\/TestCategoryPresetMap.php.html#41\">oat\\taoQtiTestPreviewer\\models\\TestCategoryPresetMap::getMap<\/a>"],[100,1,"<a href=\"models\/test\/TestPreview.php.html#30\">oat\\taoQtiTestPreviewer\\models\\test\\TestPreview::__construct<\/a>"],[100,1,"<a href=\"models\/test\/TestPreview.php.html#35\">oat\\taoQtiTestPreviewer\\models\\test\\TestPreview::getMap<\/a>"],[100,1,"<a href=\"models\/test\/TestPreviewConfig.php.html#34\">oat\\taoQtiTestPreviewer\\models\\test\\TestPreviewConfig::__construct<\/a>"],[100,2,"<a href=\"models\/test\/TestPreviewConfig.php.html#42\">oat\\taoQtiTestPreviewer\\models\\test\\TestPreviewConfig::get<\/a>"],[100,1,"<a href=\"models\/test\/TestPreviewMap.php.html#30\">oat\\taoQtiTestPreviewer\\models\\test\\TestPreviewMap::__construct<\/a>"],[100,1,"<a href=\"models\/test\/TestPreviewMap.php.html#35\">oat\\taoQtiTestPreviewer\\models\\test\\TestPreviewMap::getMap<\/a>"],[100,1,"<a href=\"models\/test\/TestPreviewRequest.php.html#33\">oat\\taoQtiTestPreviewer\\models\\test\\TestPreviewRequest::__construct<\/a>"],[100,1,"<a href=\"models\/test\/TestPreviewRequest.php.html#39\">oat\\taoQtiTestPreviewer\\models\\test\\TestPreviewRequest::getTestUri<\/a>"],[100,1,"<a href=\"models\/test\/TestPreviewRequest.php.html#44\">oat\\taoQtiTestPreviewer\\models\\test\\TestPreviewRequest::getConfig<\/a>"],[100,1,"<a href=\"models\/test\/factory\/TestPreviewRouteFactory.php.html#32\">oat\\taoQtiTestPreviewer\\models\\test\\factory\\TestPreviewRouteFactory::create<\/a>"],[93.58974358974359,15,"<a href=\"models\/test\/mapper\/TestPreviewMapper.php.html#44\">oat\\taoQtiTestPreviewer\\models\\test\\mapper\\TestPreviewMapper::map<\/a>"],[80,7,"<a href=\"models\/test\/mapper\/TestPreviewMapper.php.html#165\">oat\\taoQtiTestPreviewer\\models\\test\\mapper\\TestPreviewMapper::updateStats<\/a>"],[100,1,"<a href=\"models\/test\/mapper\/TestPreviewMapper.php.html#206\">oat\\taoQtiTestPreviewer\\models\\test\\mapper\\TestPreviewMapper::getRouteItemAssessmentItemRefs<\/a>"],[80,2,"<a href=\"models\/test\/mapper\/TestPreviewMapper.php.html#218\">oat\\taoQtiTestPreviewer\\models\\test\\mapper\\TestPreviewMapper::getItemLabel<\/a>"],[100,2,"<a href=\"models\/test\/mapper\/TestPreviewMapper.php.html#231\">oat\\taoQtiTestPreviewer\\models\\test\\mapper\\TestPreviewMapper::getService<\/a>"],[100,4,"<a href=\"models\/test\/mapper\/TestPreviewMapper.php.html#245\">oat\\taoQtiTestPreviewer\\models\\test\\mapper\\TestPreviewMapper::isItemInformational<\/a>"],[100,1,"<a href=\"models\/test\/service\/TestPreviewer.php.html#40\">oat\\taoQtiTestPreviewer\\models\\test\\service\\TestPreviewer::createPreview<\/a>"],[100,1,"<a href=\"models\/test\/service\/TestPreviewer.php.html#50\">oat\\taoQtiTestPreviewer\\models\\test\\service\\TestPreviewer::getAssessmentTestGenerator<\/a>"],[100,1,"<a href=\"models\/test\/service\/TestPreviewer.php.html#55\">oat\\taoQtiTestPreviewer\\models\\test\\service\\TestPreviewer::getRouteFactory<\/a>"],[100,1,"<a href=\"models\/test\/service\/TestPreviewer.php.html#60\">oat\\taoQtiTestPreviewer\\models\\test\\service\\TestPreviewer::getMapper<\/a>"],[0,1,"<a href=\"models\/test\/service\/TestPreviewerAssessmentTestGenerator.php.html#42\">oat\\taoQtiTestPreviewer\\models\\test\\service\\TestPreviewerAssessmentTestGenerator::generate<\/a>"],[0,1,"<a href=\"models\/test\/service\/TestPreviewerAssessmentTestGenerator.php.html#53\">oat\\taoQtiTestPreviewer\\models\\test\\service\\TestPreviewerAssessmentTestGenerator::getQtiTestService<\/a>"],[0,1,"<a href=\"models\/test\/service\/TestPreviewerAssessmentTestGenerator.php.html#58\">oat\\taoQtiTestPreviewer\\models\\test\\service\\TestPreviewerAssessmentTestGenerator::getItemResolver<\/a>"],[100,1,"<a href=\"models\/testConfiguration\/TestPreviewerConfig.php.html#36\">oat\\taoQtiTestPreviewer\\models\\testConfiguration\\TestPreviewerConfig::__construct<\/a>"],[100,1,"<a href=\"models\/testConfiguration\/TestPreviewerConfig.php.html#42\">oat\\taoQtiTestPreviewer\\models\\testConfiguration\\TestPreviewerConfig::jsonSerialize<\/a>"],[100,1,"<a href=\"models\/testConfiguration\/TestPreviewerConfig.php.html#50\">oat\\taoQtiTestPreviewer\\models\\testConfiguration\\TestPreviewerConfig::getProviders<\/a>"],[100,1,"<a href=\"models\/testConfiguration\/TestPreviewerConfig.php.html#55\">oat\\taoQtiTestPreviewer\\models\\testConfiguration\\TestPreviewerConfig::getOptions<\/a>"],[100,1,"<a href=\"models\/testConfiguration\/mapper\/TestPreviewerConfigurationMapper.php.html#40\">oat\\taoQtiTestPreviewer\\models\\testConfiguration\\mapper\\TestPreviewerConfigurationMapper::map<\/a>"],[100,3,"<a href=\"models\/testConfiguration\/mapper\/TestPreviewerConfigurationMapper.php.html#51\">oat\\taoQtiTestPreviewer\\models\\testConfiguration\\mapper\\TestPreviewerConfigurationMapper::getActiveProviders<\/a>"],[100,4,"<a href=\"models\/testConfiguration\/mapper\/TestPreviewerConfigurationMapper.php.html#75\">oat\\taoQtiTestPreviewer\\models\\testConfiguration\\mapper\\TestPreviewerConfigurationMapper::getActivePlugins<\/a>"],[100,1,"<a href=\"models\/testConfiguration\/service\/TestPreviewerConfigurationService.php.html#34\">oat\\taoQtiTestPreviewer\\models\\testConfiguration\\service\\TestPreviewerConfigurationService::getConfiguration<\/a>"],[100,1,"<a href=\"models\/testConfiguration\/service\/TestPreviewerConfigurationService.php.html#43\">oat\\taoQtiTestPreviewer\\models\\testConfiguration\\service\\TestPreviewerConfigurationService::getProviderService<\/a>"],[100,1,"<a href=\"models\/testConfiguration\/service\/TestPreviewerConfigurationService.php.html#48\">oat\\taoQtiTestPreviewer\\models\\testConfiguration\\service\\TestPreviewerConfigurationService::getTestRunnerPluginService<\/a>"],[100,1,"<a href=\"models\/testConfiguration\/service\/TestPreviewerConfigurationService.php.html#53\">oat\\taoQtiTestPreviewer\\models\\testConfiguration\\service\\TestPreviewerConfigurationService::getTestRunnerConfigurationService<\/a>"],[100,1,"<a href=\"models\/testConfiguration\/service\/TestPreviewerConfigurationService.php.html#58\">oat\\taoQtiTestPreviewer\\models\\testConfiguration\\service\\TestPreviewerConfigurationService::getMapper<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>
