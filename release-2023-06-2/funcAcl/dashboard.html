@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /home/runner/work/tao-community/tao-community/funcAcl</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../_css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="../_css/nv.d3.min.css" rel="stylesheet" type="text/css">
+  <link href="../_css/style.css" rel="stylesheet" type="text/css">
+  <link href="../_css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="../index.html">/home/runner/work/tao-community/tao-community</a></li>
+         <li class="breadcrumb-item"><a href="index.html">funcAcl</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="helpers/CacheHelper.php.html#45">oat\funcAcl\helpers\CacheHelper</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="helpers/MapHelper.php.html#40">oat\funcAcl\helpers\MapHelper</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="helpers/ModelHelper.php.html#41">oat\funcAcl\helpers\ModelHelper</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/AccessService.php.html#36">oat\funcAcl\models\AccessService</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/ActionAccessService.php.html#44">oat\funcAcl\models\ActionAccessService</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/ExtensionAccessService.php.html#42">oat\funcAcl\models\ExtensionAccessService</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/FuncAcl.php.html#38">oat\funcAcl\models\FuncAcl</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/FuncAclInitialisation.php.html#38">oat\funcAcl\models\FuncAclInitialisation</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/ModuleAccessService.php.html#43">oat\funcAcl\models\ModuleAccessService</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/event/AccessRightAddedEvent.php.html#26">oat\funcAcl\models\event\AccessRightAddedEvent</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/event/AccessRightRemovedEvent.php.html#26">oat\funcAcl\models\event\AccessRightRemovedEvent</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controller/Admin.php.html#60">oat\funcAcl\controller\Admin</a></td><td class="text-right">40%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="models/FuncAcl.php.html#38">oat\funcAcl\models\FuncAcl</a></td><td class="text-right">992</td></tr>
+       <tr><td><a href="controller/Admin.php.html#60">oat\funcAcl\controller\Admin</a></td><td class="text-right">312</td></tr>
+       <tr><td><a href="helpers/CacheHelper.php.html#45">oat\funcAcl\helpers\CacheHelper</a></td><td class="text-right">306</td></tr>
+       <tr><td><a href="helpers/MapHelper.php.html#40">oat\funcAcl\helpers\MapHelper</a></td><td class="text-right">306</td></tr>
+       <tr><td><a href="models/AccessService.php.html#36">oat\funcAcl\models\AccessService</a></td><td class="text-right">132</td></tr>
+       <tr><td><a href="models/FuncAclInitialisation.php.html#38">oat\funcAcl\models\FuncAclInitialisation</a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="models/ActionAccessService.php.html#44">oat\funcAcl\models\ActionAccessService</a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="models/ModuleAccessService.php.html#43">oat\funcAcl\models\ModuleAccessService</a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="helpers/ModelHelper.php.html#41">oat\funcAcl\helpers\ModelHelper</a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="models/ExtensionAccessService.php.html#42">oat\funcAcl\models\ExtensionAccessService</a></td><td class="text-right">30</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="controller/Admin.php.html#97"><abbr title="oat\funcAcl\controller\Admin::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/FuncAcl.php.html#84"><abbr title="oat\funcAcl\models\FuncAcl::applyRule">applyRule</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/AccessService.php.html#68"><abbr title="oat\funcAcl\models\AccessService::revokeModuleAccess">revokeModuleAccess</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/AccessService.php.html#74"><abbr title="oat\funcAcl\models\AccessService::revokeActionAccess">revokeActionAccess</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/AccessService.php.html#93"><abbr title="oat\funcAcl\models\AccessService::makeEMAUri">makeEMAUri</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/ActionAccessService.php.html#58"><abbr title="oat\funcAcl\models\ActionAccessService::add">add</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/ActionAccessService.php.html#92"><abbr title="oat\funcAcl\models\ActionAccessService::remove">remove</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/ExtensionAccessService.php.html#62"><abbr title="oat\funcAcl\models\ExtensionAccessService::add">add</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/ExtensionAccessService.php.html#94"><abbr title="oat\funcAcl\models\ExtensionAccessService::remove">remove</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/FuncAcl.php.html#43"><abbr title="oat\funcAcl\models\FuncAcl::accessPossible">accessPossible</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/FuncAcl.php.html#79"><abbr title="oat\funcAcl\models\FuncAcl::hasAccess">hasAccess</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/FuncAcl.php.html#120"><abbr title="oat\funcAcl\models\FuncAcl::revokeRule">revokeRule</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/AccessService.php.html#56"><abbr title="oat\funcAcl\models\AccessService::grantActionAccess">grantActionAccess</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/FuncAcl.php.html#162"><abbr title="oat\funcAcl\models\FuncAcl::evalFilterMask">evalFilterMask</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/FuncAcl.php.html#244"><abbr title="oat\funcAcl\models\FuncAcl::getAdvancedLogger">getAdvancedLogger</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/FuncAclInitialisation.php.html#40"><abbr title="oat\funcAcl\models\FuncAclInitialisation::run">run</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/ModuleAccessService.php.html#57"><abbr title="oat\funcAcl\models\ModuleAccessService::add">add</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/ModuleAccessService.php.html#86"><abbr title="oat\funcAcl\models\ModuleAccessService::remove">remove</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/event/AccessRightAddedEvent.php.html#36"><abbr title="oat\funcAcl\models\event\AccessRightAddedEvent::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/event/AccessRightAddedEvent.php.html#47"><abbr title="oat\funcAcl\models\event\AccessRightAddedEvent::getName">getName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/event/AccessRightAddedEvent.php.html#62"><abbr title="oat\funcAcl\models\event\AccessRightAddedEvent::jsonSerialize">jsonSerialize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/event/AccessRightRemovedEvent.php.html#36"><abbr title="oat\funcAcl\models\event\AccessRightRemovedEvent::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/event/AccessRightRemovedEvent.php.html#47"><abbr title="oat\funcAcl\models\event\AccessRightRemovedEvent::getName">getName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/AccessService.php.html#62"><abbr title="oat\funcAcl\models\AccessService::revokeExtensionAccess">revokeExtensionAccess</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/AccessService.php.html#50"><abbr title="oat\funcAcl\models\AccessService::grantModuleAccess">grantModuleAccess</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controller/Admin.php.html#119"><abbr title="oat\funcAcl\controller\Admin::getModules">getModules</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/AccessService.php.html#44"><abbr title="oat\funcAcl\models\AccessService::grantExtensionAccess">grantExtensionAccess</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controller/Admin.php.html#151"><abbr title="oat\funcAcl\controller\Admin::buildExtensionData">buildExtensionData</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controller/Admin.php.html#183"><abbr title="oat\funcAcl\controller\Admin::buildControllerData">buildControllerData</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controller/Admin.php.html#256"><abbr title="oat\funcAcl\controller\Admin::getActions">getActions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="helpers/CacheHelper.php.html#73"><abbr title="oat\funcAcl\helpers\CacheHelper::getCacheImplementation">getCacheImplementation</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="helpers/CacheHelper.php.html#89"><abbr title="oat\funcAcl\helpers\CacheHelper::cacheModule">cacheModule</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="helpers/CacheHelper.php.html#104"><abbr title="oat\funcAcl\helpers\CacheHelper::getControllerAccess">getControllerAccess</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="helpers/CacheHelper.php.html#162"><abbr title="oat\funcAcl\helpers\CacheHelper::getExtensionAccess">getExtensionAccess</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="helpers/CacheHelper.php.html#186"><abbr title="oat\funcAcl\helpers\CacheHelper::flushExtensionAccess">flushExtensionAccess</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="helpers/CacheHelper.php.html#195"><abbr title="oat\funcAcl\helpers\CacheHelper::flushControllerAccess">flushControllerAccess</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="helpers/CacheHelper.php.html#211"><abbr title="oat\funcAcl\helpers\CacheHelper::buildModuleSerial">buildModuleSerial</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="helpers/CacheHelper.php.html#233"><abbr title="oat\funcAcl\helpers\CacheHelper::removeModule">removeModule</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="helpers/MapHelper.php.html#42"><abbr title="oat\funcAcl\helpers\MapHelper::getUriForExtension">getUriForExtension</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="helpers/MapHelper.php.html#47"><abbr title="oat\funcAcl\helpers\MapHelper::getUriForController">getUriForController</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="helpers/MapHelper.php.html#58"><abbr title="oat\funcAcl\helpers\MapHelper::getUriForAction">getUriForAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="helpers/MapHelper.php.html#69"><abbr title="oat\funcAcl\helpers\MapHelper::getControllerFromUri">getControllerFromUri</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="helpers/MapHelper.php.html#76"><abbr title="oat\funcAcl\helpers\MapHelper::getActionFromUri">getActionFromUri</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="helpers/MapHelper.php.html#90"><abbr title="oat\funcAcl\helpers\MapHelper::getExtensionFromController">getExtensionFromController</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="helpers/ModelHelper.php.html#55"><abbr title="oat\funcAcl\helpers\ModelHelper::getModules">getModules</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="helpers/ModelHelper.php.html#82"><abbr title="oat\funcAcl\helpers\ModelHelper::getActions">getActions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="models/event/AccessRightRemovedEvent.php.html#62"><abbr title="oat\funcAcl\models\event\AccessRightRemovedEvent::jsonSerialize">jsonSerialize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="controller/Admin.php.html#242"><abbr title="oat\funcAcl\controller\Admin::prodLocker">prodLocker</abbr></a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="controller/Admin.php.html#219"><abbr title="oat\funcAcl\controller\Admin::beforeAction">beforeAction</abbr></a></td><td class="text-right">75%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="models/FuncAcl.php.html#162"><abbr title="oat\funcAcl\models\FuncAcl::evalFilterMask">evalFilterMask</abbr></a></td><td class="text-right">240</td></tr>
+       <tr><td><a href="models/FuncAclInitialisation.php.html#40"><abbr title="oat\funcAcl\models\FuncAclInitialisation::run">run</abbr></a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="helpers/MapHelper.php.html#90"><abbr title="oat\funcAcl\helpers\MapHelper::getExtensionFromController">getExtensionFromController</abbr></a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="helpers/CacheHelper.php.html#104"><abbr title="oat\funcAcl\helpers\CacheHelper::getControllerAccess">getControllerAccess</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="controller/Admin.php.html#151"><abbr title="oat\funcAcl\controller\Admin::buildExtensionData">buildExtensionData</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="controller/Admin.php.html#183"><abbr title="oat\funcAcl\controller\Admin::buildControllerData">buildControllerData</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="controller/Admin.php.html#256"><abbr title="oat\funcAcl\controller\Admin::getActions">getActions</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="models/ActionAccessService.php.html#92"><abbr title="oat\funcAcl\models\ActionAccessService::remove">remove</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="models/ModuleAccessService.php.html#86"><abbr title="oat\funcAcl\models\ModuleAccessService::remove">remove</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="models/AccessService.php.html#93"><abbr title="oat\funcAcl\models\AccessService::makeEMAUri">makeEMAUri</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="models/FuncAcl.php.html#120"><abbr title="oat\funcAcl\models\FuncAcl::revokeRule">revokeRule</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="models/FuncAcl.php.html#84"><abbr title="oat\funcAcl\models\FuncAcl::applyRule">applyRule</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="models/FuncAcl.php.html#43"><abbr title="oat\funcAcl\models\FuncAcl::accessPossible">accessPossible</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="controller/Admin.php.html#119"><abbr title="oat\funcAcl\controller\Admin::getModules">getModules</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="models/ExtensionAccessService.php.html#94"><abbr title="oat\funcAcl\models\ExtensionAccessService::remove">remove</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="helpers/ModelHelper.php.html#55"><abbr title="oat\funcAcl\helpers\ModelHelper::getModules">getModules</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="helpers/CacheHelper.php.html#162"><abbr title="oat\funcAcl\helpers\CacheHelper::getExtensionAccess">getExtensionAccess</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="helpers/ModelHelper.php.html#82"><abbr title="oat\funcAcl\helpers\ModelHelper::getActions">getActions</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="models/ActionAccessService.php.html#58"><abbr title="oat\funcAcl\models\ActionAccessService::add">add</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/ExtensionAccessService.php.html#62"><abbr title="oat\funcAcl\models\ExtensionAccessService::add">add</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="helpers/MapHelper.php.html#58"><abbr title="oat\funcAcl\helpers\MapHelper::getUriForAction">getUriForAction</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="helpers/MapHelper.php.html#47"><abbr title="oat\funcAcl\helpers\MapHelper::getUriForController">getUriForController</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="helpers/CacheHelper.php.html#186"><abbr title="oat\funcAcl\helpers\CacheHelper::flushExtensionAccess">flushExtensionAccess</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="models/ModuleAccessService.php.html#57"><abbr title="oat\funcAcl\models\ModuleAccessService::add">add</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="controller/Admin.php.html#97"><abbr title="oat\funcAcl\controller\Admin::index">index</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="controller/Admin.php.html#242"><abbr title="oat\funcAcl\controller\Admin::prodLocker">prodLocker</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="controller/Admin.php.html#219"><abbr title="oat\funcAcl\controller\Admin::beforeAction">beforeAction</abbr></a></td><td class="text-right">2</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 7.0.15</a> using <a href="https://secure.php.net/" target="_top">PHP 7.4.33</a> with <a href="https://xdebug.org/">Xdebug 3.1.6</a> with <a href="https://github.com/krakjoe/pcov">PCOV 1.0.11</a> at Fri Jul 7 7:29:12 UTC 2023.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="../_js/jquery.min.js" type="text/javascript"></script>
+  <script src="../_js/d3.min.js" type="text/javascript"></script>
+  <script src="../_js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([11,0,0,0,0,1,0,0,0,0,0,1], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([47,0,0,0,0,0,0,1,1,0,0,7], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[40.25974025974026,36,"<a href=\"controller\/Admin.php.html#60\">oat\\funcAcl\\controller\\Admin<\/a>"],[0,17,"<a href=\"helpers\/CacheHelper.php.html#45\">oat\\funcAcl\\helpers\\CacheHelper<\/a>"],[0,17,"<a href=\"helpers\/MapHelper.php.html#40\">oat\\funcAcl\\helpers\\MapHelper<\/a>"],[0,6,"<a href=\"helpers\/ModelHelper.php.html#41\">oat\\funcAcl\\helpers\\ModelHelper<\/a>"],[0,11,"<a href=\"models\/AccessService.php.html#36\">oat\\funcAcl\\models\\AccessService<\/a>"],[0,8,"<a href=\"models\/ActionAccessService.php.html#44\">oat\\funcAcl\\models\\ActionAccessService<\/a>"],[0,5,"<a href=\"models\/ExtensionAccessService.php.html#42\">oat\\funcAcl\\models\\ExtensionAccessService<\/a>"],[0,31,"<a href=\"models\/FuncAcl.php.html#38\">oat\\funcAcl\\models\\FuncAcl<\/a>"],[0,10,"<a href=\"models\/FuncAclInitialisation.php.html#38\">oat\\funcAcl\\models\\FuncAclInitialisation<\/a>"],[0,7,"<a href=\"models\/ModuleAccessService.php.html#43\">oat\\funcAcl\\models\\ModuleAccessService<\/a>"],[100,0,"<a href=\"models\/classes\/class.FuncAcl.php.html#34\">funcAcl_models_classes_FuncAcl<\/a>"],[0,3,"<a href=\"models\/event\/AccessRightAddedEvent.php.html#26\">oat\\funcAcl\\models\\event\\AccessRightAddedEvent<\/a>"],[0,3,"<a href=\"models\/event\/AccessRightRemovedEvent.php.html#26\">oat\\funcAcl\\models\\event\\AccessRightRemovedEvent<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[0,2,"<a href=\"controller\/Admin.php.html#97\">oat\\funcAcl\\controller\\Admin::index<\/a>"],[0,4,"<a href=\"controller\/Admin.php.html#119\">oat\\funcAcl\\controller\\Admin::getModules<\/a>"],[0,6,"<a href=\"controller\/Admin.php.html#151\">oat\\funcAcl\\controller\\Admin::buildExtensionData<\/a>"],[0,6,"<a href=\"controller\/Admin.php.html#183\">oat\\funcAcl\\controller\\Admin::buildControllerData<\/a>"],[75,2,"<a href=\"controller\/Admin.php.html#219\">oat\\funcAcl\\controller\\Admin::beforeAction<\/a>"],[100,2,"<a href=\"controller\/Admin.php.html#231\">oat\\funcAcl\\controller\\Admin::isLocked<\/a>"],[66.66666666666666,2,"<a href=\"controller\/Admin.php.html#242\">oat\\funcAcl\\controller\\Admin::prodLocker<\/a>"],[0,6,"<a href=\"controller\/Admin.php.html#256\">oat\\funcAcl\\controller\\Admin::getActions<\/a>"],[100,1,"<a href=\"controller\/Admin.php.html#304\">oat\\funcAcl\\controller\\Admin::removeExtensionAccess<\/a>"],[100,1,"<a href=\"controller\/Admin.php.html#323\">oat\\funcAcl\\controller\\Admin::addExtensionAccess<\/a>"],[100,1,"<a href=\"controller\/Admin.php.html#342\">oat\\funcAcl\\controller\\Admin::removeModuleAccess<\/a>"],[100,1,"<a href=\"controller\/Admin.php.html#361\">oat\\funcAcl\\controller\\Admin::addModuleAccess<\/a>"],[100,1,"<a href=\"controller\/Admin.php.html#380\">oat\\funcAcl\\controller\\Admin::removeActionAccess<\/a>"],[100,1,"<a href=\"controller\/Admin.php.html#399\">oat\\funcAcl\\controller\\Admin::addActionAccess<\/a>"],[0,1,"<a href=\"helpers\/CacheHelper.php.html#73\">oat\\funcAcl\\helpers\\CacheHelper::getCacheImplementation<\/a>"],[0,1,"<a href=\"helpers\/CacheHelper.php.html#89\">oat\\funcAcl\\helpers\\CacheHelper::cacheModule<\/a>"],[0,7,"<a href=\"helpers\/CacheHelper.php.html#104\">oat\\funcAcl\\helpers\\CacheHelper::getControllerAccess<\/a>"],[0,3,"<a href=\"helpers\/CacheHelper.php.html#162\">oat\\funcAcl\\helpers\\CacheHelper::getExtensionAccess<\/a>"],[0,2,"<a href=\"helpers\/CacheHelper.php.html#186\">oat\\funcAcl\\helpers\\CacheHelper::flushExtensionAccess<\/a>"],[0,1,"<a href=\"helpers\/CacheHelper.php.html#195\">oat\\funcAcl\\helpers\\CacheHelper::flushControllerAccess<\/a>"],[0,1,"<a href=\"helpers\/CacheHelper.php.html#211\">oat\\funcAcl\\helpers\\CacheHelper::buildModuleSerial<\/a>"],[0,1,"<a href=\"helpers\/CacheHelper.php.html#233\">oat\\funcAcl\\helpers\\CacheHelper::removeModule<\/a>"],[0,1,"<a href=\"helpers\/MapHelper.php.html#42\">oat\\funcAcl\\helpers\\MapHelper::getUriForExtension<\/a>"],[0,2,"<a href=\"helpers\/MapHelper.php.html#47\">oat\\funcAcl\\helpers\\MapHelper::getUriForController<\/a>"],[0,2,"<a href=\"helpers\/MapHelper.php.html#58\">oat\\funcAcl\\helpers\\MapHelper::getUriForAction<\/a>"],[0,1,"<a href=\"helpers\/MapHelper.php.html#69\">oat\\funcAcl\\helpers\\MapHelper::getControllerFromUri<\/a>"],[0,1,"<a href=\"helpers\/MapHelper.php.html#76\">oat\\funcAcl\\helpers\\MapHelper::getActionFromUri<\/a>"],[0,10,"<a href=\"helpers\/MapHelper.php.html#90\">oat\\funcAcl\\helpers\\MapHelper::getExtensionFromController<\/a>"],[0,3,"<a href=\"helpers\/ModelHelper.php.html#55\">oat\\funcAcl\\helpers\\ModelHelper::getModules<\/a>"],[0,3,"<a href=\"helpers\/ModelHelper.php.html#82\">oat\\funcAcl\\helpers\\ModelHelper::getActions<\/a>"],[0,1,"<a href=\"models\/AccessService.php.html#44\">oat\\funcAcl\\models\\AccessService::grantExtensionAccess<\/a>"],[0,1,"<a href=\"models\/AccessService.php.html#50\">oat\\funcAcl\\models\\AccessService::grantModuleAccess<\/a>"],[0,1,"<a href=\"models\/AccessService.php.html#56\">oat\\funcAcl\\models\\AccessService::grantActionAccess<\/a>"],[0,1,"<a href=\"models\/AccessService.php.html#62\">oat\\funcAcl\\models\\AccessService::revokeExtensionAccess<\/a>"],[0,1,"<a href=\"models\/AccessService.php.html#68\">oat\\funcAcl\\models\\AccessService::revokeModuleAccess<\/a>"],[0,1,"<a href=\"models\/AccessService.php.html#74\">oat\\funcAcl\\models\\AccessService::revokeActionAccess<\/a>"],[0,5,"<a href=\"models\/AccessService.php.html#93\">oat\\funcAcl\\models\\AccessService::makeEMAUri<\/a>"],[0,2,"<a href=\"models\/ActionAccessService.php.html#58\">oat\\funcAcl\\models\\ActionAccessService::add<\/a>"],[0,6,"<a href=\"models\/ActionAccessService.php.html#92\">oat\\funcAcl\\models\\ActionAccessService::remove<\/a>"],[0,2,"<a href=\"models\/ExtensionAccessService.php.html#62\">oat\\funcAcl\\models\\ExtensionAccessService::add<\/a>"],[0,3,"<a href=\"models\/ExtensionAccessService.php.html#94\">oat\\funcAcl\\models\\ExtensionAccessService::remove<\/a>"],[0,4,"<a href=\"models\/FuncAcl.php.html#43\">oat\\funcAcl\\models\\FuncAcl::accessPossible<\/a>"],[0,1,"<a href=\"models\/FuncAcl.php.html#79\">oat\\funcAcl\\models\\FuncAcl::hasAccess<\/a>"],[0,5,"<a href=\"models\/FuncAcl.php.html#84\">oat\\funcAcl\\models\\FuncAcl::applyRule<\/a>"],[0,5,"<a href=\"models\/FuncAcl.php.html#120\">oat\\funcAcl\\models\\FuncAcl::revokeRule<\/a>"],[0,15,"<a href=\"models\/FuncAcl.php.html#162\">oat\\funcAcl\\models\\FuncAcl::evalFilterMask<\/a>"],[0,1,"<a href=\"models\/FuncAcl.php.html#244\">oat\\funcAcl\\models\\FuncAcl::getAdvancedLogger<\/a>"],[0,10,"<a href=\"models\/FuncAclInitialisation.php.html#40\">oat\\funcAcl\\models\\FuncAclInitialisation::run<\/a>"],[0,2,"<a href=\"models\/ModuleAccessService.php.html#57\">oat\\funcAcl\\models\\ModuleAccessService::add<\/a>"],[0,5,"<a href=\"models\/ModuleAccessService.php.html#86\">oat\\funcAcl\\models\\ModuleAccessService::remove<\/a>"],[0,1,"<a href=\"models\/event\/AccessRightAddedEvent.php.html#36\">oat\\funcAcl\\models\\event\\AccessRightAddedEvent::__construct<\/a>"],[0,1,"<a href=\"models\/event\/AccessRightAddedEvent.php.html#47\">oat\\funcAcl\\models\\event\\AccessRightAddedEvent::getName<\/a>"],[0,1,"<a href=\"models\/event\/AccessRightAddedEvent.php.html#62\">oat\\funcAcl\\models\\event\\AccessRightAddedEvent::jsonSerialize<\/a>"],[0,1,"<a href=\"models\/event\/AccessRightRemovedEvent.php.html#36\">oat\\funcAcl\\models\\event\\AccessRightRemovedEvent::__construct<\/a>"],[0,1,"<a href=\"models\/event\/AccessRightRemovedEvent.php.html#47\">oat\\funcAcl\\models\\event\\AccessRightRemovedEvent::getName<\/a>"],[0,1,"<a href=\"models\/event\/AccessRightRemovedEvent.php.html#62\">oat\\funcAcl\\models\\event\\AccessRightRemovedEvent::jsonSerialize<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>
